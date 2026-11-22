@@ -27,11 +27,6 @@ OreburghGate_1F_EventScript_Curtis::
 	msgbox OreburghGate_1F_Text_CurtisAfter, MSGBOX_AUTOCLOSE
 	end
 
-@ Oreburgh City is built in milestone 8. Until then a worker keeps the east exit shut.
-OreburghGate_1F_EventScript_Worker::
-	msgbox OreburghGate_1F_Text_Worker, MSGBOX_NPC
-	end
-
 OreburghGate_1F_EventScript_WayDown::
 	msgbox OreburghGate_1F_Text_WayDown, MSGBOX_SIGN
 	end
@@ -65,13 +60,8 @@ OreburghGate_1F_Text_CurtisDefeat:
 	.string "First to battle, first to lose.$"
 
 OreburghGate_1F_Text_CurtisAfter:
-	.string "OREBURGH is right through there,\n"
-	.string "once they open the way.$"
-
-OreburghGate_1F_Text_Worker:
-	.string "Sorry, the way into OREBURGH CITY\n"
-	.string "is closed while we clear rubble.\p"
-	.string "Come back a little later!$"
+	.string "OREBURGH is right through there.\n"
+	.string "Mind the soot on your shoes!$"
 
 OreburghGate_1F_Text_WayDown:
 	.string "A slope leads down to a lower\n"

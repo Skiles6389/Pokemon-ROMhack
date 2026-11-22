@@ -3071,25 +3071,21 @@ Gyarados
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DUDLEY ===
-Name: DUDLEY
-Class: Swimmer M
-Pic: Swimmer M
+=== TRAINER_WORKER_COLIN ===
+Name: COLIN
+Class: Worker
+Pic: Engineer Frlg
 Gender: Male
-Music: Swimmer
+Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Tentacool
-Level: 33
+Geodude
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wingull
-Level: 33
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Tentacruel
-Level: 33
+Machop
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CHAD ===
@@ -10702,17 +10698,17 @@ Sharpedo
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TERRY ===
-Name: TERRY
-Class: Psychic
-Pic: Psychic F
-Gender: Female
-Music: Intense
+=== TRAINER_WORKER_MASON ===
+Name: MASON
+Class: Worker
+Pic: Engineer Frlg
+Gender: Male
+Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Girafarig
-Level: 37
+Geodude
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NATE ===

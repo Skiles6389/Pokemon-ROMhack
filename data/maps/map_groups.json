@@ -77,7 +77,8 @@
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
     "gMapGroup_IndoorTwinleaf",
     "gMapGroup_IndoorSandgem",
-    "gMapGroup_IndoorJubilife"
+    "gMapGroup_IndoorJubilife",
+    "gMapGroup_IndoorOreburgh"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -143,7 +144,8 @@
     "SandgemTown",
     "Route202",
     "JubilifeCity",
-    "Route203"
+    "Route203",
+    "OreburghCity"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -481,7 +483,9 @@
     "TerraCave_End",
     "AlteringCave",
     "MeteorFalls_StevensCave",
-    "OreburghGate_1F"
+    "OreburghGate_1F",
+    "OreburghMine_B1F",
+    "OreburghMine_B2F"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
@@ -1192,5 +1196,13 @@
     "JubilifeCity_Mart",
     "JubilifeCity_TrainersSchool",
     "JubilifeCity_PoketchCompany"
+  ],
+  "gMapGroup_IndoorOreburgh": [
+    "OreburghCity_PokemonCenter_1F",
+    "OreburghCity_PokemonCenter_2F",
+    "OreburghCity_Mart",
+    "OreburghCity_House1",
+    "OreburghCity_House2",
+    "OreburghCity_MiningMuseum"
   ]
 }
