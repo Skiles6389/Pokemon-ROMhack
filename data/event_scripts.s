@@ -198,6 +198,7 @@ gStdScripts_End::
 	.include "data/maps/TwinleafTown_RivalsHouse_1F/scripts.inc"
 	.include "data/maps/TwinleafTown_RivalsHouse_2F/scripts.inc"
 	.include "data/maps/Route201/scripts.inc"
+	.include "data/maps/LakeVerity/scripts.inc"
 	.include "data/maps/OldaleTown_House1/scripts.inc"
 	.include "data/maps/OldaleTown_House2/scripts.inc"
 	.include "data/maps/OldaleTown_PokemonCenter_1F/scripts.inc"

@@ -18,6 +18,11 @@
       "map": "MAP_TWINLEAF_TOWN",
       "offset": 0,
       "direction": "down"
+    },
+    {
+      "map": "MAP_LAKE_VERITY",
+      "offset": 0,
+      "direction": "left"
     }
   ],
   "object_events": [
@@ -32,11 +37,627 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route201_EventScript_GrassWarning",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ROUTE201_TRAVELER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_3",
+      "x": 15,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route201_EventScript_Barry",
+      "flag": "FLAG_HIDE_ROUTE201_BARRY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
+      "x": 5,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route201_EventScript_Rowan",
+      "flag": "FLAG_HIDE_ROUTE201_ROWAN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_1",
+      "x": 5,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route201_EventScript_Assistant",
+      "flag": "FLAG_HIDE_ROUTE201_ASSISTANT"
     }
   ],
   "warp_events": [],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_STATE",
+      "var_value": "0",
+      "script": "Route201_EventScript_BarryMeet"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_STATE",
+      "var_value": "0",
+      "script": "Route201_EventScript_BarryMeet"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_ROUTE201_GRASS",
+      "var_value": "0",
+      "script": "Route201_EventScript_Grass"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

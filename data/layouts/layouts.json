@@ -9347,6 +9347,17 @@
       "layout_version": "emerald"
     },
     {
+      "id": "LAYOUT_LAKE_VERITY",
+      "name": "LakeVerity_Layout",
+      "width": 28,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/LakeVerity/border.bin",
+      "blockdata_filepath": "data/layouts/LakeVerity/map.bin",
+      "layout_version": "emerald"
+    },
+    {
       "id": "LAYOUT_TWINLEAF_TOWN_PLAYERSHOUSE_1F",
       "name": "TwinleafTown_PlayersHouse_1F_Layout",
       "width": 11,
