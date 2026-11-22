@@ -16955,3 +16955,30 @@ AI: Check Bad Move
 Burmy (M)
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_GALACTIC_GRUNT_JUBILIFE ===
+Name: GRUNT
+Class: Team Galactic
+Pic: Magma Grunt M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Zubat (M)
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Poison Sting
+
+=== TRAINER_SCHOOL_KID_CARTER ===
+Name: CARTER
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Starly (M)
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe

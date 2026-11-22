@@ -76,7 +76,8 @@
     "gMapGroup_IndoorSixIslandRoute_Frlg",
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
     "gMapGroup_IndoorTwinleaf",
-    "gMapGroup_IndoorSandgem"
+    "gMapGroup_IndoorSandgem",
+    "gMapGroup_IndoorJubilife"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -140,7 +141,8 @@
     "Route201",
     "LakeVerity",
     "SandgemTown",
-    "Route202"
+    "Route202",
+    "JubilifeCity"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1181,5 +1183,12 @@
     "SandgemTown_PokemonLab",
     "SandgemTown_House1",
     "SandgemTown_House2"
+  ],
+  "gMapGroup_IndoorJubilife": [
+    "JubilifeCity_PokemonCenter_1F",
+    "JubilifeCity_PokemonCenter_2F",
+    "JubilifeCity_Mart",
+    "JubilifeCity_TrainersSchool",
+    "JubilifeCity_PoketchCompany"
   ]
 }
