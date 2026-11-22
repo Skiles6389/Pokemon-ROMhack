@@ -282,14 +282,16 @@ void WallyBufferExecCompleted(enum BattlerId battler)
 
 static void WallyHandleDrawTrainerPic(enum BattlerId battler)
 {
-    BtlController_HandleDrawTrainerPic(battler, TRAINER_PIC_WALLY, FALSE,
-                                       80, 80 + 4 * (8 - GetTrainerBackPicCoords(TRAINER_PIC_WALLY)->size),
+    u16 picId = GetCatchTutorialTrainerPic();
+
+    BtlController_HandleDrawTrainerPic(battler, picId, FALSE,
+                                       80, 80 + 4 * (8 - GetTrainerBackPicCoords(picId)->size),
                                        30);
 }
 
 static void WallyHandleTrainerSlide(enum BattlerId battler)
 {
-    BtlController_HandleTrainerSlide(battler, TRAINER_PIC_WALLY);
+    BtlController_HandleTrainerSlide(battler, GetCatchTutorialTrainerPic());
 }
 
 #undef sSpeedX
@@ -315,7 +317,7 @@ static void WallyHandleChooseAction(enum BattlerId battler)
         ActionSelectionDestroyCursorAt(i);
 
     ActionSelectionCreateCursorAt(gActionSelectionCursor[battler], 0);
-    BattleStringExpandPlaceholdersToDisplayedString(gText_WhatWillWallyDo);
+    BattleStringExpandPlaceholdersToDisplayedString(GetCatchTutorialActionPrompt());
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_ACTION_PROMPT);
 }
 

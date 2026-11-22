@@ -6,6 +6,7 @@
 #include "battle_pike.h"
 #include "battle_pyramid.h"
 #include "battle_setup.h"
+#include "battle_message.h"
 #include "battle_special.h"
 #include "battle_partner.h"
 #include "battle_tower.h"
@@ -518,6 +519,47 @@ void StartWallyTutorialBattle(void)
     gMain.savedCallback = CB2_ReturnToFieldContinueScriptPlayMapMusic;
     gBattleTypeFlags = BATTLE_TYPE_CATCH_TUTORIAL;
     CreateBattleStartTask(B_TRANSITION_SLICE, 0);
+}
+
+void StartRoute202CatchTutorial(void)
+{
+    CreateMaleMon(&gParties[B_TRAINER_OPPONENT_A][0], SPECIES_BIDOOF, 2);
+    LockPlayerFieldControls();
+    gMain.savedCallback = CB2_ReturnToFieldContinueScriptPlayMapMusic;
+    gBattleTypeFlags = BATTLE_TYPE_CATCH_TUTORIAL;
+    CreateBattleStartTask(B_TRANSITION_SLICE, 0);
+}
+
+static const u8 sText_CatchTutorialDawn[] = _("DAWN");
+static const u8 sText_CatchTutorialLucas[] = _("LUCAS");
+static const u8 sText_CatchTutorialOldMan[] = _("The old man");
+static const u8 sText_WhatWillDawnDo[] = _("What will\nDAWN do?");
+static const u8 sText_WhatWillLucasDo[] = _("What will\nLUCAS do?");
+
+static bool8 IsRoute202CatchTutorial(void)
+{
+    return VarGet(VAR_ROUTE202_STATE) == 1;
+}
+
+u16 GetCatchTutorialTrainerPic(void)
+{
+    if (IsRoute202CatchTutorial())
+        return (gSaveBlock2Ptr->playerGender == MALE) ? TRAINER_PIC_MAY : TRAINER_PIC_BRENDAN;
+    return IS_FRLG ? TRAINER_PIC_OLD_MAN : TRAINER_PIC_WALLY;
+}
+
+const u8 *GetCatchTutorialTrainerName(void)
+{
+    if (IsRoute202CatchTutorial())
+        return (gSaveBlock2Ptr->playerGender == MALE) ? sText_CatchTutorialDawn : sText_CatchTutorialLucas;
+    return IS_FRLG ? sText_CatchTutorialOldMan : gText_BattleWallyName;
+}
+
+const u8 *GetCatchTutorialActionPrompt(void)
+{
+    if (IsRoute202CatchTutorial())
+        return (gSaveBlock2Ptr->playerGender == MALE) ? sText_WhatWillDawnDo : sText_WhatWillLucasDo;
+    return gText_WhatWillWallyDo;
 }
 
 void StartOldManTutorialBattle(void)

@@ -9411,6 +9411,17 @@
       "border_filepath": "data/layouts/TwinleafTown_RivalsHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/TwinleafTown_RivalsHouse_2F/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE202",
+      "name": "Route202_Layout",
+      "width": 20,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route202/border.bin",
+      "blockdata_filepath": "data/layouts/Route202/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

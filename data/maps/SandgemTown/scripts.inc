@@ -262,13 +262,13 @@ SandgemTown_Text_LucasMart:
 
 SandgemTown_Text_BarryBump:
 	.string "BARRY: Whoa! {PLAYER}!\p"
-	.string "I was going to tear up ROUTE 202,\n"
-	.string "but the north road is still shut.\p"
+	.string "I'm heading up ROUTE 202. The city\n"
+	.string "past it is still shut.\p"
 	.string "Don't get comfortable. Next time\n"
 	.string "I see you, we're battling again!$"
 
 SandgemTown_Text_BarryLater:
-	.string "BARRY: Route 202. Soon.$"
+	.string "BARRY: Route 202. I'm taking it.$"
 
 SandgemTown_Text_DawnFree:
 	.string "DAWN: I'll be around the lab.\n"
@@ -283,8 +283,8 @@ SandgemTown_Text_Boy:
 	.string "lab sooner or later.$"
 
 SandgemTown_Text_Woman:
-	.string "The north road leads to the next\n"
-	.string "route, once someone opens it.$"
+	.string "The north road is ROUTE 202.\n"
+	.string "It runs toward the next city.$"
 
 SandgemTown_Text_CenterSign:
 	.string "SANDGEM TOWN POKéMON CENTER\n"
@@ -300,7 +300,7 @@ SandgemTown_Text_LabSign:
 
 SandgemTown_Text_Route202Sign:
 	.string "NORTH: ROUTE 202\n"
-	.string "The path is closed for now.$"
+	.string "A short path toward the next city.$"
 
 SandgemTown_Text_Route219Sign:
 	.string "SOUTH: ROUTE 219\n"
