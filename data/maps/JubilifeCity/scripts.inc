@@ -216,8 +216,8 @@ JubilifeCity_Text_Barry:
 	.string "BARRY: {PLAYER}! JUBILIFE!\p"
 	.string "I'm cutting through the school,\n"
 	.string "then heading east out of town.\p"
-	.string "The east road is still shut, so\n"
-	.string "don't you beat me to it!$"
+	.string "ROUTE 203 is wide open now, so\n"
+	.string "don't you fall behind!$"
 
 JubilifeCity_Text_DawnWait:
 	.string "DAWN: Stay close. They won't\n"
@@ -232,8 +232,8 @@ JubilifeCity_Text_GruntWait:
 	.string "Keep walking.$"
 
 JubilifeCity_Text_BarryLater:
-	.string "BARRY: East. As soon as the\n"
-	.string "road opens.$"
+	.string "BARRY: East to ROUTE 203.\n"
+	.string "Hurry up!$"
 
 JubilifeCity_Text_PoketchIntro:
 	.string "The costume is the campaign.\n"
@@ -264,7 +264,7 @@ JubilifeCity_Text_CitySign:
 
 JubilifeCity_Text_Route203Sign:
 	.string "EAST: ROUTE 203\n"
-	.string "The road toward OREBURGH is shut.$"
+	.string "The road toward OREBURGH.$"
 
 JubilifeCity_Text_Route218Sign:
 	.string "WEST: ROUTE 218\n"

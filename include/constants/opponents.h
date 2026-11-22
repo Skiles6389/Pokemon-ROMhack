@@ -121,7 +121,7 @@
 #define TRAINER_CINDY_1                     114
 #define TRAINER_DAPHNE                      115
 #define TRAINER_GRUNT_SPACE_CENTER_2        116
-#define TRAINER_CINDY_2                     117
+#define TRAINER_BARRY_2_CHIMCHAR            117 // Sinnoh: reuses unused Hoenn slot TRAINER_CINDY_2
 #define TRAINER_BRIANNA                     118
 #define TRAINER_NAOMI                       119
 #define TRAINER_CINDY_3                     120
@@ -466,7 +466,7 @@
 #define TRAINER_SIENNA                      459
 #define TRAINER_DEBRA                       460
 #define TRAINER_LINDA                       461
-#define TRAINER_KAYLEE                      462
+#define TRAINER_BARRY_2_PIPLUP              462 // Sinnoh: reuses unused Hoenn slot TRAINER_KAYLEE
 #define TRAINER_LAUREL                      463
 #define TRAINER_CARLEE                      464
 #define TRAINER_JENNY_2                     465
@@ -489,8 +489,8 @@
 #define TRAINER_AMY_AND_LIV_2               482
 #define TRAINER_GINA_AND_MIA_1              483
 #define TRAINER_MIU_AND_YUKI                484
-#define TRAINER_AMY_AND_LIV_3               485
-#define TRAINER_GINA_AND_MIA_2              486
+#define TRAINER_BARRY_2_TURTWIG             485 // Sinnoh: reuses unused Hoenn slot TRAINER_AMY_AND_LIV_3
+#define TRAINER_YOUNGSTER_MICHAEL           486 // Sinnoh: reuses unused Hoenn slot TRAINER_GINA_AND_MIA_2
 #define TRAINER_AMY_AND_LIV_4               487
 #define TRAINER_AMY_AND_LIV_5               488
 #define TRAINER_AMY_AND_LIV_6               489
@@ -572,7 +572,7 @@
 #define TRAINER_CATHERINE_5                 565
 #define TRAINER_JULIO                       566
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_5     567
-#define TRAINER_GRUNT_UNUSED                568
+#define TRAINER_YOUNGSTER_DALLAS            568 // Sinnoh: reuses unused Hoenn slot TRAINER_GRUNT_UNUSED
 #define TRAINER_GRUNT_MT_PYRE_4             569
 #define TRAINER_GRUNT_JAGGED_PASS           570
 #define TRAINER_MARC                        571
@@ -637,8 +637,8 @@
 #define TRAINER_ALAN                        630
 #define TRAINER_CLARK                       631
 #define TRAINER_ERIC                        632
-#define TRAINER_LUCAS_2                     633
-#define TRAINER_MIKE_1                      634
+#define TRAINER_YOUNGSTER_SEBASTIAN         633 // Sinnoh: reuses unused Hoenn slot TRAINER_LUCAS_2
+#define TRAINER_LASS_KAITLIN                634 // Sinnoh: reuses unused Hoenn slot TRAINER_MIKE_1
 #define TRAINER_MIKE_2                      635
 #define TRAINER_TRENT_2                     636
 #define TRAINER_TRENT_3                     637
@@ -857,8 +857,8 @@
 #define TRAINER_EVERETT                     850
 #define TRAINER_RED                         851
 #define TRAINER_LEAF                        852
-#define TRAINER_BRENDAN_PLACEHOLDER         853
-#define TRAINER_MAY_PLACEHOLDER             854
+#define TRAINER_LASS_MADELINE               853 // Sinnoh: reuses unused Hoenn slot TRAINER_BRENDAN_PLACEHOLDER
+#define TRAINER_CAMPER_CURTIS               854 // Sinnoh: reuses unused Hoenn slot TRAINER_MAY_PLACEHOLDER
 #define TRAINER_BARRY_1_CHIMCHAR            855
 #define TRAINER_BARRY_1_PIPLUP              856
 #define TRAINER_BARRY_1_TURTWIG             857
@@ -867,12 +867,15 @@
 #define TRAINER_YOUNGSTER_LOGAN             860
 #define TRAINER_GALACTIC_GRUNT_JUBILIFE     861
 #define TRAINER_SCHOOL_KID_CARTER           862
+#define TRAINER_PICNICKER_DIANA_GATE        863
 
-// NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 1 additional trainer before trainer flag space overflows
+// Sinnoh demo: when the slots run out, reuse a Hoenn trainer ID that no script references
+//       (see the "reuses unused Hoenn slot" notes above) instead of raising the count.
+// NOTE: Because each Trainer uses a flag to determine when they are defeated, there is no space for additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     863
+#define TRAINERS_COUNT_EMERALD     864
 #define MAX_TRAINERS_COUNT_EMERALD 864
 
 #if IS_FRLG

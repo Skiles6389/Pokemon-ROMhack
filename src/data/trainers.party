@@ -2176,21 +2176,26 @@ Numel
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_CINDY_2 ===
-Name: CINDY
-Class: Lady
-Pic: Lady
-Gender: Female
-Music: Female
-Items: Full Restore
+=== TRAINER_BARRY_2_CHIMCHAR ===
+Name: BARRY
+Class: Rival
+Pic: Youngster
+Gender: Male
+Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Zigzagoon @ Nugget
-Level: 11
+Starly (M)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Tail Whip
+- Quick Attack
+- Growl
+
+Chimchar (M)
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Scratch
+- Leer
 
 === TRAINER_BRIANNA ===
 Name: BRIANNA
@@ -8414,22 +8419,26 @@ Seadra
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_KAYLEE ===
-Name: KAYLEE
-Class: Swimmer F
-Pic: Swimmer F
-Gender: Female
-Music: Swimmer
+=== TRAINER_BARRY_2_PIPLUP ===
+Name: BARRY
+Class: Rival
+Pic: Youngster
+Gender: Male
+Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Lanturn
-Level: 34
+Starly (M)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Quick Attack
+- Growl
 
-Pelipper
-Level: 34
+Piplup (M)
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Pound
+- Growl
 
 === TRAINER_LAUREL ===
 Name: LAUREL
@@ -8833,43 +8842,42 @@ Dustox
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_AMY_AND_LIV_3 ===
-Name: AMY & LIV
-Class: Twins
-Pic: Twins
+=== TRAINER_BARRY_2_TURTWIG ===
+Name: BARRY
+Class: Rival
+Pic: Youngster
 Gender: Male
-Music: Twins
-Double Battle: Yes
-AI: Check Bad Move
+Music: Male
+Double Battle: No
+AI: Basic Trainer
 
-Plusle
+Starly (M)
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Quick Attack
+- Growl
+
+Turtwig (M)
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
 
-Minun
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GINA_AND_MIA_2 ===
-Name: GINA & MIA
-Class: Twins
-Pic: Twins
+=== TRAINER_YOUNGSTER_MICHAEL ===
+Name: MICHAEL
+Class: Youngster
+Pic: Youngster
 Gender: Male
-Music: Twins
-Double Battle: Yes
+Music: Male
+Double Battle: No
 AI: Check Bad Move
 
-Duskull
-Level: 10
+Kricketot (M)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Night Shade
-- Disable
 
-Shroomish
-Level: 10
+Zubat (M)
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Absorb
-- Leech Seed
 
 === TRAINER_AMY_AND_LIV_4 ===
 Name: AMY & LIV
@@ -10503,21 +10511,17 @@ Golbat
 Level: 35
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_GRUNT_UNUSED ===
-Name: GRUNT
-Class: Team Magma
-Pic: Aqua Grunt F
-Gender: Female
-Music: Aqua
+=== TRAINER_YOUNGSTER_DALLAS ===
+Name: DALLAS
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Wailmer
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Zubat
-Level: 31
+Shinx (M)
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_PYRE_4 ===
@@ -11573,41 +11577,43 @@ Baltoy
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_LUCAS_2 ===
-Name: LUCAS
-Class: Hiker
-Pic: Hiker
+=== TRAINER_YOUNGSTER_SEBASTIAN ===
+Name: SEBASTIAN
+Class: Youngster
+Pic: Youngster
 Gender: Male
-Music: Hiker
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Wailmer
-Level: 9
+Machop (M)
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Splash
-- Water Gun
 
-=== TRAINER_MIKE_1 ===
-Name: MIKE
-Class: Hiker
-Pic: Hiker
-Gender: Male
-Music: Hiker
+=== TRAINER_LASS_KAITLIN ===
+Name: KAITLIN
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Pelipper
-Level: 10
+Bidoof (F)
+Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Gust
-- Growl
 
-Poochyena
-Level: 10
+Budew (F)
+Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Bite
-- Scary Face
+
+Starly (F)
+Level: 4
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Abra (M)
+Level: 4
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MIKE_2 ===
 Name: MIKE
@@ -16854,28 +16860,34 @@ Bulbasaur
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_BRENDAN_PLACEHOLDER ===
-Name: BRENDAN
-Class: RS Protag
-Pic: RS Brendan
+=== TRAINER_LASS_MADELINE ===
+Name: MADELINE
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Psyduck (F)
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_CAMPER_CURTIS ===
+Name: CURTIS
+Class: Camper
+Pic: Camper
 Gender: Male
 Music: Male
 Double Battle: No
+AI: Check Bad Move
 
-Groudon
-Level: 5
+Starly (M)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MAY_PLACEHOLDER ===
-Name: MAY
-Class: RS Protag
-Pic: RS May
-Gender: Female
-Music: Male
-Double Battle: No
-
-Kyogre
-Level: 5
+Shinx (M)
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BARRY_1_CHIMCHAR ===
@@ -16981,4 +16993,17 @@ AI: Check Bad Move
 
 Starly (M)
 Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PICNICKER_DIANA_GATE ===
+Name: DIANA
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Bidoof (F)
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
