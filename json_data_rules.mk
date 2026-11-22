@@ -16,11 +16,13 @@ include/constants/region_map_sections.h: $(DATA_SRC_SUBDIR)/region_map/region_ma
 	$(JSONPROC) $^ $@
 
 AUTO_GEN_TARGETS += $(DATA_SRC_SUBDIR)/heal_locations.h
-$(DATA_SRC_SUBDIR)/heal_locations.h: $(DATA_SRC_SUBDIR)/heal_locations.json $(DATA_SRC_SUBDIR)/heal_locations.json.txt
-	$(JSONPROC) $^ $@
+# mapjson rewrites heal_locations.json while it builds map_groups.h.
+# jsonproc has to wait for that rewrite, or a parallel build can read a truncated file.
+$(DATA_SRC_SUBDIR)/heal_locations.h: $(DATA_SRC_SUBDIR)/heal_locations.json $(DATA_SRC_SUBDIR)/heal_locations.json.txt $(INCLUDECONSTS_OUTDIR)/map_groups.h
+	$(JSONPROC) $(DATA_SRC_SUBDIR)/heal_locations.json $(DATA_SRC_SUBDIR)/heal_locations.json.txt $@
 
 $(C_BUILDDIR)/heal_location.o: c_dep += $(DATA_SRC_SUBDIR)/heal_locations.h
 
 AUTO_GEN_TARGETS += include/constants/heal_locations.h
-include/constants/heal_locations.h: $(DATA_SRC_SUBDIR)/heal_locations.json $(DATA_SRC_SUBDIR)/heal_locations.constants.json.txt
-	$(JSONPROC) $^ $@
+include/constants/heal_locations.h: $(DATA_SRC_SUBDIR)/heal_locations.json $(DATA_SRC_SUBDIR)/heal_locations.constants.json.txt $(INCLUDECONSTS_OUTDIR)/map_groups.h
+	$(JSONPROC) $(DATA_SRC_SUBDIR)/heal_locations.json $(DATA_SRC_SUBDIR)/heal_locations.constants.json.txt $@
