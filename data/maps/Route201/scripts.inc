@@ -448,7 +448,7 @@ Route201_Text_SandgemSign:
 
 Route201_Text_SandgemOpen:
 	.string "EAST: SANDGEM TOWN\n"
-	.string "The road is open. The town is not.$"
+	.string "A quiet town and a professor's lab.$"
 
 Route201_Text_BarryBusy:
 	.string "BARRY: Come on, pick one already!$"

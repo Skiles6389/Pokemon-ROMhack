@@ -58,6 +58,8 @@
 #define FLAG_HIDE_ROUTE201_TRAVELER 0x24 // Set once the player may head toward Sandgem
 #define FLAG_HIDE_LAKE_VERITY_CYRUS 0x25
 #define FLAG_HIDE_LAKE_VERITY_BARRY 0x26
+#define FLAG_HIDE_SANDGEM_BARRY 0x27
+#define FLAG_HIDE_SANDGEM_LAB_ASSISTANT 0x28
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag

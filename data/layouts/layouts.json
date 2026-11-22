@@ -9347,6 +9347,17 @@
       "layout_version": "emerald"
     },
     {
+      "id": "LAYOUT_SANDGEM_TOWN",
+      "name": "SandgemTown_Layout",
+      "width": 30,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/SandgemTown/border.bin",
+      "blockdata_filepath": "data/layouts/SandgemTown/map.bin",
+      "layout_version": "emerald"
+    },
+    {
       "id": "LAYOUT_LAKE_VERITY",
       "name": "LakeVerity_Layout",
       "width": 28,

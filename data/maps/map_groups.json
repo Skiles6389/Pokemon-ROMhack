@@ -75,7 +75,8 @@
     "gMapGroup_IndoorTwoIslandRoute_Frlg",
     "gMapGroup_IndoorSixIslandRoute_Frlg",
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
-    "gMapGroup_IndoorTwinleaf"
+    "gMapGroup_IndoorTwinleaf",
+    "gMapGroup_IndoorSandgem"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -137,7 +138,8 @@
     "Underwater_Route125",
     "TwinleafTown",
     "Route201",
-    "LakeVerity"
+    "LakeVerity",
+    "SandgemTown"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1170,5 +1172,13 @@
     "TwinleafTown_PlayersHouse_2F",
     "TwinleafTown_RivalsHouse_1F",
     "TwinleafTown_RivalsHouse_2F"
+  ],
+  "gMapGroup_IndoorSandgem": [
+    "SandgemTown_PokemonCenter_1F",
+    "SandgemTown_PokemonCenter_2F",
+    "SandgemTown_Mart",
+    "SandgemTown_PokemonLab",
+    "SandgemTown_House1",
+    "SandgemTown_House2"
   ]
 }
