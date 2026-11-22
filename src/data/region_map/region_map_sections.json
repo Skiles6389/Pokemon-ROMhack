@@ -1650,6 +1650,10 @@
     {
       "id": "MAPSEC_ROUTE_202",
       "name": "ROUTE 202"
+    },
+    {
+      "id": "MAPSEC_JUBILIFE_CITY",
+      "name": "JUBILIFE CITY"
     }
   ]
 }

@@ -161,4 +161,4 @@ Route202_Text_LoganAfter:
 
 Route202_Text_JubilifeSign:
 	.string "NORTH: JUBILIFE CITY\n"
-	.string "The gate is still shut.$"
+	.string "A city that stays up late.$"

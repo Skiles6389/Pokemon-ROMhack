@@ -865,12 +865,14 @@
 #define TRAINER_YOUNGSTER_TRISTAN           858
 #define TRAINER_LASS_NATALIE                859
 #define TRAINER_YOUNGSTER_LOGAN             860
+#define TRAINER_GALACTIC_GRUNT_JUBILIFE     861
+#define TRAINER_SCHOOL_KID_CARTER           862
 
-// NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 3 additional trainers before trainer flag space overflows
+// NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 1 additional trainer before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     861
+#define TRAINERS_COUNT_EMERALD     863
 #define MAX_TRAINERS_COUNT_EMERALD 864
 
 #if IS_FRLG

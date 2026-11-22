@@ -9422,6 +9422,17 @@
       "border_filepath": "data/layouts/Route202/border.bin",
       "blockdata_filepath": "data/layouts/Route202/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY",
+      "name": "JubilifeCity_Layout",
+      "width": 40,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/JubilifeCity/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCity/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }
