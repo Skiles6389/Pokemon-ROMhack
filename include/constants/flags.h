@@ -60,8 +60,6 @@
 #define FLAG_HIDE_LAKE_VERITY_BARRY 0x26
 #define FLAG_HIDE_SANDGEM_BARRY 0x27
 #define FLAG_HIDE_SANDGEM_LAB_ASSISTANT 0x28
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag

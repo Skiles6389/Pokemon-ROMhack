@@ -200,6 +200,7 @@ gStdScripts_End::
 	.include "data/maps/Route201/scripts.inc"
 	.include "data/maps/LakeVerity/scripts.inc"
 	.include "data/maps/SandgemTown/scripts.inc"
+	.include "data/maps/Route202/scripts.inc"
 	.include "data/maps/SandgemTown_PokemonLab/scripts.inc"
 	.include "data/maps/SandgemTown_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/SandgemTown_PokemonCenter_2F/scripts.inc"
