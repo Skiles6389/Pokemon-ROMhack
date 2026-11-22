@@ -274,6 +274,11 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL
 	@ Skip the Hoenn truck, clock, and Birch intro if those maps are reached.
 	setflag FLAG_HIDE_TWINLEAF_BARRY
+	setflag FLAG_HIDE_ROUTE201_BARRY
+	setflag FLAG_HIDE_ROUTE201_ROWAN
+	setflag FLAG_HIDE_ROUTE201_ASSISTANT
+	setflag FLAG_HIDE_LAKE_VERITY_CYRUS
+	setflag FLAG_HIDE_LAKE_VERITY_BARRY
 	setvar VAR_LITTLEROOT_INTRO_STATE, 7
 	setvar VAR_LITTLEROOT_TOWN_STATE, 4
 	setvar VAR_ROUTE101_STATE, 3
