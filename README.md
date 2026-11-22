@@ -1,53 +1,35 @@
-# About `pokeemerald-expansion`
+# Sinnoh Remake (fan project)
 
-![Gif that shows debugging functionality that is unique to pokeemerald-expansion such as rerolling Trainer ID, Cheat Start, PC from Debug Menu, Debug PC Fill, Pokémon Sprite Visualizer, Debug Warp to Map, and Battle Debug Menu](https://github.com/user-attachments/assets/cf9dfbee-4c6b-4bca-8e0a-07f116ef891c) ![Gif that shows overworld functionality that is unique to pokeemerald-expansion such as indoor running, BW2 style map popups, overworld followers, DNA Splicers, Gen 1 style fishing, OW Item descriptions, Quick Run from Battle, Use Last Ball, Wild Double Battles, and Catch from EXP](https://github.com/user-attachments/assets/383af243-0904-4d41-bced-721492fbc48e) ![Gif that shows off a number of modern Pokémon battle mechanics happening in the pokeemerald-expansion engine: 2 vs 1 battles, modern Pokémon, items, moves, abilities, fully customizable opponents and partners, Trainer Slides, and generational gimmicks](https://github.com/user-attachments/assets/50c576bc-415e-4d66-a38f-ad712f3316be)
+Non-commercial fan hack that rebuilds the Sinnoh region on the pokeemerald-expansion engine. The first milestone is a Twinleaf-to-Oreburgh demo with a Platinum-style story.
 
-<!-- If you want to re-record or change these gifs, here are some notes that I used: https://files.catbox.moe/05001g.md -->
+This repository is not affiliated with Nintendo, Game Freak, The Pokémon Company, or ROM Hacking Hideout.
 
-**`pokeemerald-expansion`** is a GBA ROM hack base that equips developers with a comprehensive toolkit for creating Pokémon ROM hacks. **`pokeemerald-expansion`** is built on top of [pret's `pokeemerald`](https://github.com/pret/pokeemerald) decompilation project. **It is not a playable Pokémon game on its own.**
+## Engine
 
-# [Features](FEATURES.md)
+Built on [pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion) tag [`expansion/1.17.2`](https://github.com/rh-hideout/pokeemerald-expansion/tree/expansion/1.17.2) (commit `79dd436920845ebc145577649de624f65298c209`). That project is maintained by ROM Hacking Hideout (RHH) and is based on [pret/pokeemerald](https://github.com/pret/pokeemerald).
 
-**`pokeemerald-expansion`** offers hundreds of features from various [core series Pokémon games](https://bulbapedia.bulbagarden.net/wiki/Core_series), along with popular quality-of-life enhancements designed to streamline development and improve the player experience. A full list of those features can be found in [`FEATURES.md`](FEATURES.md).
+Credit RHH when describing the engine:
 
-# [Credits](CREDITS.md)
+> Based off RHH's pokeemerald-expansion 1.17.2 https://github.com/rh-hideout/pokeemerald-expansion/
 
- [![](https://img.shields.io/github/all-contributors/rh-hideout/pokeemerald-expansion/upcoming)](CREDITS.md)
+`expansion/1.17.2` does not include a single project-wide license file. The license files shipped with the bundled tools are kept in this tree (for example [`tools/gbagfx/LICENSE`](tools/gbagfx/LICENSE) and [`tools/gbafix/COPYING`](tools/gbafix/COPYING)). See the upstream repository for how the project is published.
 
-If you use **`pokeemerald-expansion`**, please credit **RHH (Rom Hacking Hideout)**. Optionally, include the version number for clarity.
+Hack development happens on the `chris-hack` branch. `main` holds this imported engine plus these project notes.
 
+## Building
+
+Install dependencies and build from source by following [INSTALL.md](INSTALL.md). Linux package lists are under [docs/install/linux/](docs/install/linux/).
+
+From the repository root, after the toolchain is installed:
+
+```console
+make -j$(nproc)
 ```
-Based off RHH's pokeemerald-expansion 1.17.2 https://github.com/rh-hideout/pokeemerald-expansion/
-```
 
-Please consider [crediting all contributors](CREDITS.md) involved in the project!
+A successful build writes `pokeemerald.gba` in the repository root. That file is a local build output. Do not commit it.
 
-# Choosing `pokeemerald` or **`pokeemerald-expansion`**
+## Legal
 
-- **`pokeemerald-expansion`** supports multiplayer functionality with other games built on **`pokeemerald-expansion`**. It is not compatible with official Pokémon games.
-- If compatibility with official games is important, use [`pokeemerald`](https://github.com/pret/pokeemerald). Otherwise, we recommend using **`pokeemerald-expansion`**.
-- **`pokeemerald-expansion`** incorporates regular updates from `pokeemerald`, including bug fixes and documentation improvements.
+No Nintendo ROMs, BIOS files, or ripped copyrighted assets are included. The hack is distributed only as a `.bps` or `.ips` patch, or as source. Players must use their own legally obtained copy. There are no sales or paid access.
 
-# [Getting Started](INSTALL.md)
-
-❗❗ **Important**: Do not use GitHub's "Download Zip" option as it will not include commit history. This is necessary if you want to update or merge other feature branches.
-
-If you're new to git and GitHub, [Team Aqua's Asset Repo](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/) has a [guide to forking and cloning the repository](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/wiki/The-Basics-of-GitHub). Then you can follow one of the following guides:
-
-## 📥 [Installing **`pokeemerald-expansion`**](INSTALL.md)
-## 🏗️ [Building **`pokeemerald-expansion`**](INSTALL.md#Building-pokeemerald-expansion)
-## 🚚 [Migrating from **`pokeemerald`**](INSTALL.md#Migrating-from-pokeemerald)
-## 🚀 [Updating **`pokeemerald-expansion`**](INSTALL.md#Updating-pokeemerald-expansion)
-
-# [Documentation](https://rh-hideout.github.io/pokeemerald-expansion/)
-
-For detailed documentation, visit the [pokeemerald-expansion documentation page](https://rh-hideout.github.io/pokeemerald-expansion/).
-
-# [Contributions](CONTRIBUTING.md)
-If you are looking to [report a bug](CONTRIBUTING.md#Bug-Report), [open a pull request](CONTRIBUTING.md#Pull-Requests), or [request a feature](CONTRIBUTING.md#Feature-Request), our [`CONTRIBUTING.md`](CONTRIBUTING.md) has guides for each.
-
-# [Community](https://discord.gg/6CzjAG6GZk)
-
-[![](https://dcbadge.limes.pink/api/server/6CzjAG6GZk)](https://discord.gg/6CzjAG6GZk)
-
-Our community uses the [ROM Hacking Hideout (RHH) Discord server](https://discord.gg/6CzjAG6GZk) to communicate and organize. Most of our discussions take place there, and we welcome anybody to join us!
+This project does not use official Pokémon logos or branding.

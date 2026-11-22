@@ -66,3 +66,13 @@ tools/aif2pcm/aif2pcm
 *.smolTM
 __pycache__
 .map_version
+
+# Local ROM inputs and patch outputs.
+# *.gba above ignores built ROMs such as pokeemerald.gba.
+# !data/*.gba keeps the upstream multiboot images tracked.
+*.sav
+*.bps
+*.ips
+baserom.gba
+baserom*.gba
+baserom.bin
