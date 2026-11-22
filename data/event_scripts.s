@@ -207,6 +207,8 @@ gStdScripts_End::
 	.include "data/maps/JubilifeCity_Mart/scripts.inc"
 	.include "data/maps/JubilifeCity_TrainersSchool/scripts.inc"
 	.include "data/maps/JubilifeCity_PoketchCompany/scripts.inc"
+	.include "data/maps/Route203/scripts.inc"
+	.include "data/maps/OreburghGate_1F/scripts.inc"
 	.include "data/maps/SandgemTown_PokemonLab/scripts.inc"
 	.include "data/maps/SandgemTown_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/SandgemTown_PokemonCenter_2F/scripts.inc"
