@@ -9323,6 +9323,72 @@
       "border_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/map.bin",
       "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_TWINLEAF_TOWN",
+      "name": "TwinleafTown_Layout",
+      "width": 28,
+      "height": 22,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/TwinleafTown/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE201",
+      "name": "Route201_Layout",
+      "width": 40,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route201/border.bin",
+      "blockdata_filepath": "data/layouts/Route201/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_TWINLEAF_TOWN_PLAYERSHOUSE_1F",
+      "name": "TwinleafTown_PlayersHouse_1F_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/TwinleafTown_PlayersHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown_PlayersHouse_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_TWINLEAF_TOWN_PLAYERSHOUSE_2F",
+      "name": "TwinleafTown_PlayersHouse_2F_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/TwinleafTown_PlayersHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown_PlayersHouse_2F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_TWINLEAF_TOWN_RIVALSHOUSE_1F",
+      "name": "TwinleafTown_RivalsHouse_1F_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/TwinleafTown_RivalsHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown_RivalsHouse_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_TWINLEAF_TOWN_RIVALSHOUSE_2F",
+      "name": "TwinleafTown_RivalsHouse_2F_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/TwinleafTown_RivalsHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown_RivalsHouse_2F/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

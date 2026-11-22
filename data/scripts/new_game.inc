@@ -272,6 +272,10 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_EVER_GRANDE_POKEMON_CENTER_1F_SCOTT
 	setflag FLAG_HIDE_SKY_PILLAR_WALLACE
 	setflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL
+	@ Skip the Hoenn truck, clock, and Birch intro if those maps are reached.
+	setvar VAR_LITTLEROOT_INTRO_STATE, 7
+	setvar VAR_LITTLEROOT_TOWN_STATE, 4
+	setvar VAR_ROUTE101_STATE, 3
 	call EventScript_ResetAllBerries
 	end
 
