@@ -71,7 +71,7 @@ const struct FieldMoveInfo gFieldMoveInfo[FIELD_MOVES_COUNT] =
         .unlockType = BADGE_UNLOCK,
         .moveID = MOVE_ROCK_SMASH,
         .partyMsgID = PARTY_MSG_CANT_USE_HERE,
-        .arg = IS_FRLG ? FLAG_TO_BADGE(FLAG_BADGE06_GET) : FLAG_TO_BADGE(FLAG_BADGE03_GET),
+        .arg = IS_FRLG ? FLAG_TO_BADGE(FLAG_BADGE06_GET) : FLAG_TO_BADGE(FLAG_BADGE01_GET), // Sinnoh: Coal Badge
     },
 
     [FIELD_MOVE_STRENGTH] =

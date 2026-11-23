@@ -216,6 +216,7 @@ gStdScripts_End::
 	.include "data/maps/OreburghCity_House1/scripts.inc"
 	.include "data/maps/OreburghCity_House2/scripts.inc"
 	.include "data/maps/OreburghCity_MiningMuseum/scripts.inc"
+	.include "data/maps/OreburghCity_Gym/scripts.inc"
 	.include "data/maps/OreburghMine_B1F/scripts.inc"
 	.include "data/maps/OreburghMine_B2F/scripts.inc"
 	.include "data/maps/SandgemTown_PokemonLab/scripts.inc"

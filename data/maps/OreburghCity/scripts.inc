@@ -1,5 +1,29 @@
 OreburghCity_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, OreburghCity_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, OreburghCity_OnFrame
 	.byte 0
+
+@ Once the player has met Roark in the mine, the guide steps aside from the Gym door.
+OreburghCity_OnTransition:
+	call_if_ge VAR_OREBURGH_STATE, 2, OreburghCity_EventScript_GuideStepAside
+	end
+
+OreburghCity_EventScript_GuideStepAside::
+	setobjectxyperm LOCALID_OREBURGH_GYM_GUIDE, 15, 22
+	setobjectmovementtype LOCALID_OREBURGH_GYM_GUIDE, MOVEMENT_TYPE_FACE_LEFT
+	return
+
+@ State 3 is set when Roark is beaten. Stepping out of the Gym ends the demo.
+OreburghCity_OnFrame:
+	map_script_2 VAR_OREBURGH_STATE, 3, OreburghCity_EventScript_DemoEnd
+	.2byte 0
+
+OreburghCity_EventScript_DemoEnd::
+	lockall
+	msgbox OreburghCity_Text_DemoEnd, MSGBOX_DEFAULT
+	setvar VAR_OREBURGH_STATE, 4
+	releaseall
+	end
 
 @ Platinum's arrival beat: Barry runs into the player and says Roark is at the
 @ mine. The path out of Oreburgh Gate is two tiles wide, so the trigger can't be skirted.
@@ -136,10 +160,10 @@ OreburghCity_Text_GymGuideMine:
 	.string "rock hill in the south-east.$"
 
 OreburghCity_Text_GymGuideLater:
-	.string "ROARK's on his way back up, but\n"
-	.string "the GYM's still being set up for\l"
-	.string "challengers.\p"
-	.string "Check back soon, okay?$"
+	.string "ROARK's back! Go on in.\p"
+	.string "He uses Rock types. Water, Grass\n"
+	.string "and Fighting moves hit them hard,\l"
+	.string "and Normal moves barely scratch!$"
 
 OreburghCity_Text_Route207Closed:
 	.string "Sorry, ROUTE 207 is closed while\n"
@@ -191,3 +215,7 @@ OreburghCity_Text_MineSign:
 
 OreburghCity_Text_Route207Sign:
 	.string "North: ROUTE 207$"
+
+OreburghCity_Text_DemoEnd:
+	.string "Thanks for playing the demo!\n"
+	.string "More of Sinnoh is coming.$"
