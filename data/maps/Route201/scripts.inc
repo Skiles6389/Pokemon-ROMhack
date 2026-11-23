@@ -72,15 +72,14 @@ Route201_EventScript_RowanArrives::
 	@ State 2: player walked back from Lake Verity; Rowan notes the connection, then Barry battles.
 	lockall
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	@ Place the group east of the player (Sandgem side), then walk them over.
+	@ Place the group east of the player on the same path row, then walk them over.
 	copyvar VAR_TEMP_2, VAR_TEMP_0
 	addvar VAR_TEMP_2, 5
-	copyvar VAR_TEMP_3, VAR_TEMP_1
-	setobjectxyperm LOCALID_ROUTE201_ROWAN, VAR_TEMP_2, VAR_TEMP_3
-	addvar VAR_TEMP_3, 1
-	setobjectxyperm LOCALID_ROUTE201_ASSISTANT, VAR_TEMP_2, VAR_TEMP_3
-	subvar VAR_TEMP_3, 2
-	setobjectxyperm LOCALID_ROUTE201_BARRY, VAR_TEMP_2, VAR_TEMP_3
+	setobjectxyperm LOCALID_ROUTE201_ROWAN, VAR_TEMP_2, VAR_TEMP_1
+	addvar VAR_TEMP_2, 1
+	setobjectxyperm LOCALID_ROUTE201_ASSISTANT, VAR_TEMP_2, VAR_TEMP_1
+	addvar VAR_TEMP_2, 1
+	setobjectxyperm LOCALID_ROUTE201_BARRY, VAR_TEMP_2, VAR_TEMP_1
 	clearflag FLAG_HIDE_ROUTE201_ROWAN
 	clearflag FLAG_HIDE_ROUTE201_ASSISTANT
 	clearflag FLAG_HIDE_ROUTE201_BARRY
