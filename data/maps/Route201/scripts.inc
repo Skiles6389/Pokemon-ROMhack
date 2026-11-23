@@ -54,7 +54,9 @@ Route201_EventScript_BarryMeet::
 	removeobject LOCALID_ROUTE201_BARRY
 	setflag FLAG_HIDE_ROUTE201_BARRY
 	clearflag FLAG_HIDE_LAKE_VERITY_BARRY
-	clearflag FLAG_HIDE_LAKE_VERITY_CYRUS
+	clearflag FLAG_HIDE_LAKE_VERITY_ROWAN
+	clearflag FLAG_HIDE_LAKE_VERITY_ASSISTANT
+	clearflag FLAG_HIDE_LAKE_VERITY_BRIEFCASE
 	setvar VAR_ROUTE201_STATE, 1
 	warpsilent MAP_LAKE_VERITY, 46, 20
 	waitstate
@@ -67,96 +69,20 @@ Route201_EventScript_PlayerStepLeft:
 	return
 
 Route201_EventScript_RowanArrives::
+	@ State 2: return from Lake Verity; Barry challenges the player.
 	lockall
-	call Route201_EventScript_SetAssistantGfx
 	setobjectxyperm LOCALID_ROUTE201_BARRY, 15, 22
 	clearflag FLAG_HIDE_ROUTE201_BARRY
 	addobject LOCALID_ROUTE201_BARRY
-	clearflag FLAG_HIDE_ROUTE201_ROWAN
-	addobject LOCALID_ROUTE201_ROWAN
-	clearflag FLAG_HIDE_ROUTE201_ASSISTANT
-	addobject LOCALID_ROUTE201_ASSISTANT
-	applymovement LOCALID_ROUTE201_ROWAN, Route201_Movement_Approach
-	applymovement LOCALID_ROUTE201_ASSISTANT, Route201_Movement_Approach
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	applymovement LOCALID_ROUTE201_BARRY, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
-	checkplayergender
-	goto_if_eq VAR_RESULT, FEMALE, Route201_EventScript_RowanLucas
-	msgbox Route201_Text_RowanDawn, MSGBOX_DEFAULT
-	goto Route201_EventScript_ChooseStarter
-	end
-
-Route201_EventScript_RowanLucas::
-	msgbox Route201_Text_RowanLucas, MSGBOX_DEFAULT
-	goto Route201_EventScript_ChooseStarter
-	end
-
-Route201_EventScript_ChooseStarter::
-	dynmultichoice 0, 0, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, Route201_Text_MenuTurtwig, Route201_Text_MenuChimchar, Route201_Text_MenuPiplup
-	switch VAR_RESULT
-	case 0, Route201_EventScript_ConfirmTurtwig
-	case 1, Route201_EventScript_ConfirmChimchar
-	case 2, Route201_EventScript_ConfirmPiplup
-	goto Route201_EventScript_ChooseStarter
-	end
-
-Route201_EventScript_ConfirmTurtwig::
-	showmonpic SPECIES_TURTWIG, 10, 3
-	msgbox Route201_Text_ConfirmTurtwig, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Route201_EventScript_DeclineStarter
-	hidemonpic
-	bufferspeciesname STR_VAR_1, SPECIES_TURTWIG
-	givemon SPECIES_TURTWIG, 5, ITEM_NONE
-	setvar VAR_ROUTE201_BARRY_MON, BARRY_MON_CHIMCHAR
-	goto Route201_EventScript_GotStarter
-	end
-
-Route201_EventScript_ConfirmChimchar::
-	showmonpic SPECIES_CHIMCHAR, 10, 3
-	msgbox Route201_Text_ConfirmChimchar, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Route201_EventScript_DeclineStarter
-	hidemonpic
-	bufferspeciesname STR_VAR_1, SPECIES_CHIMCHAR
-	givemon SPECIES_CHIMCHAR, 5, ITEM_NONE
-	setvar VAR_ROUTE201_BARRY_MON, BARRY_MON_PIPLUP
-	goto Route201_EventScript_GotStarter
-	end
-
-Route201_EventScript_ConfirmPiplup::
-	showmonpic SPECIES_PIPLUP, 10, 3
-	msgbox Route201_Text_ConfirmPiplup, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Route201_EventScript_DeclineStarter
-	hidemonpic
-	bufferspeciesname STR_VAR_1, SPECIES_PIPLUP
-	givemon SPECIES_PIPLUP, 5, ITEM_NONE
-	setvar VAR_ROUTE201_BARRY_MON, BARRY_MON_TURTWIG
-	goto Route201_EventScript_GotStarter
-	end
-
-Route201_EventScript_DeclineStarter::
-	hidemonpic
-	msgbox Route201_Text_TakeYourTime, MSGBOX_DEFAULT
-	goto Route201_EventScript_ChooseStarter
-	end
-
-Route201_EventScript_GotStarter::
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, Route201_EventScript_StarterInParty
-	goto Common_EventScript_NoMoreRoomForPokemon
-	end
-
-Route201_EventScript_StarterInParty::
-	setflag FLAG_SYS_POKEMON_GET
-	setvar VAR_ROUTE201_GRASS, 1
-	setvar VAR_ROUTE201_STATE, 3
-	playfanfare MUS_OBTAIN_ITEM
-	message Route201_Text_ReceivedMon
-	waitmessage
-	waitfanfare
 	msgbox Route201_Text_BarryAdvantage, MSGBOX_DEFAULT
 	closemessage
+	setvar VAR_ROUTE201_STATE, 3
 	goto Route201_EventScript_StartBattle
 	end
 
@@ -188,7 +114,6 @@ Route201_EventScript_BattleTurtwig::
 
 Route201_EventScript_AfterBattle::
 	msgbox Route201_Text_BarryAfter, MSGBOX_DEFAULT
-	msgbox Route201_Text_RowanAfter, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_ROUTE201_STATE, 4
 	setflag FLAG_HIDE_ROUTE201_TRAVELER
@@ -323,56 +248,9 @@ Route201_Text_BarryMeet:
 	.string "Come on, I'll go with you.\n"
 	.string "Don't fall behind!$"
 
-Route201_Text_RowanDawn:
-	.string "ROWAN: So the two of you did\n"
-	.string "make it out here.\p"
-	.string "I am Rowan. This is Dawn,\n"
-	.string "my assistant.\p"
-	.string "DAWN: We were heading for the lake\n"
-	.string "when a man in a grey coat passed us.\p"
-	.string "ROWAN: I brought three POKéMON in\n"
-	.string "this case. Choose the one you want.$"
-
-Route201_Text_RowanLucas:
-	.string "ROWAN: So the two of you did\n"
-	.string "make it out here.\p"
-	.string "I am Rowan. This is Lucas,\n"
-	.string "my assistant.\p"
-	.string "LUCAS: We were heading for the lake\n"
-	.string "when a man in a grey coat passed us.\p"
-	.string "ROWAN: I brought three POKéMON in\n"
-	.string "this case. Choose the one you want.$"
-
-Route201_Text_MenuTurtwig:
-	.string "TURTWIG$"
-
-Route201_Text_MenuChimchar:
-	.string "CHIMCHAR$"
-
-Route201_Text_MenuPiplup:
-	.string "PIPLUP$"
-
-Route201_Text_ConfirmTurtwig:
-	.string "ROWAN: Turtwig. Grass type, small,\n"
-	.string "and steady. Will you take this one?$"
-
-Route201_Text_ConfirmChimchar:
-	.string "ROWAN: Chimchar. Fire type, and it\n"
-	.string "won't sit still. Will you take it?$"
-
-Route201_Text_ConfirmPiplup:
-	.string "ROWAN: Piplup. Water type, proud\n"
-	.string "already. Will you take this one?$"
-
-Route201_Text_TakeYourTime:
-	.string "ROWAN: Look again, then decide.$"
-
-Route201_Text_ReceivedMon:
-	.string "{PLAYER} received {STR_VAR_1}!$"
-
 Route201_Text_BarryAdvantage:
-	.string "BARRY: Then this one's mine!\p"
-	.string "It has the advantage over yours.\n"
+	.string "BARRY: Alright--no more waiting!\p"
+	.string "My POKéMON has the advantage.\n"
 	.string "We're battling, right now!$"
 
 Route201_Text_BarryIntro:
@@ -389,12 +267,7 @@ Route201_Text_BarryAfter:
 	.string "BARRY: Augh! Fine! Next time I'll\n"
 	.string "be way stronger.\p"
 	.string "Sandgem is east of here.\n"
-	.string "Race you when the town's finished!$"
-
-Route201_Text_RowanAfter:
-	.string "ROWAN: A solid first battle.\p"
-	.string "When Sandgem Town is ready, visit\n"
-	.string "my lab. The road east is open now.$"
+	.string "Visit the lab--and race you there!$"
 
 Route201_Text_GrassUnsafe:
 	.string "The tall grass rustles.\p"
@@ -423,24 +296,23 @@ Route201_Text_SandgemOpen:
 	.string "A quiet town and a professor's lab.$"
 
 Route201_Text_BarryBusy:
-	.string "BARRY: Come on, pick one already!$"
+	.string "BARRY: Quit stalling--battle me!$"
 
 Route201_Text_BarryLater:
 	.string "BARRY: Sandgem's east. Don't you\n"
 	.string "dare get there before I do!$"
 
 Route201_Text_RowanBusy:
-	.string "ROWAN: The case is open.\n"
-	.string "Take your time, then choose.$"
+	.string "ROWAN: ...$"
 
 Route201_Text_RowanLater:
 	.string "ROWAN: I'll be at the lab in\n"
-	.string "Sandgem, once that town exists.$"
+	.string "Sandgem Town.$"
 
 Route201_Text_DawnLater:
-	.string "DAWN: Turtwig, Chimchar, or Piplup.\n"
-	.string "Whichever you left, I'll look after.$"
+	.string "DAWN: The lab is east of here.\n"
+	.string "The Professor is expecting you.$"
 
 Route201_Text_LucasLater:
-	.string "LUCAS: Any of those three would\n"
-	.string "have been glad to travel with you.$"
+	.string "LUCAS: The lab is east of here.\n"
+	.string "The Professor is expecting you.$"
