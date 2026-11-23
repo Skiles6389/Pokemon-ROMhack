@@ -64,9 +64,9 @@
 #define FLAG_HIDE_JUBILIFE_ASSISTANT 0x2A
 #define FLAG_HIDE_JUBILIFE_BARRY 0x2B
 #define FLAG_RECEIVED_POKETCH 0x2C
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
+#define FLAG_HIDE_ROUTE203_BARRY 0x2D
+#define FLAG_ITEM_OREBURGH_GATE_POKE_BALL 0x2E
+#define FLAG_ITEM_OREBURGH_GATE_POTION 0x2F
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag

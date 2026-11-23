@@ -216,8 +216,8 @@ JubilifeCity_Text_Barry:
 	.string "BARRY: {PLAYER}! JUBILIFE!\p"
 	.string "I'm cutting through the school,\n"
 	.string "then heading east out of town.\p"
-	.string "The east road is still shut, so\n"
-	.string "don't you beat me to it!$"
+	.string "The east road is open. Don't you\n"
+	.string "beat me to the cave!$"
 
 JubilifeCity_Text_DawnWait:
 	.string "DAWN: Stay close. They won't\n"
@@ -264,7 +264,7 @@ JubilifeCity_Text_CitySign:
 
 JubilifeCity_Text_Route203Sign:
 	.string "EAST: ROUTE 203\n"
-	.string "The road toward OREBURGH is shut.$"
+	.string "A grass road to the cave.$"
 
 JubilifeCity_Text_Route218Sign:
 	.string "WEST: ROUTE 218\n"
