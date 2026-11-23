@@ -863,9 +863,10 @@ static void UpdateLegendaryMarkingColor(u8 frameNum)
     if ((frameNum % 4) == 0) // Change color every 4th frame
     {
         s32 intensity = Cos(frameNum, Q_8_8(0.5)) + Q_8_8(0.5);
-        u32 r = 31 - Q_8_8_TO_INT(intensity * 31);
-        u32 g = 31 - Q_8_8_TO_INT(intensity * 22);
-        u32 b = 12;
+        // Giratina's red stripes pulse between a dull and a bright red.
+        u32 r = 31 - Q_8_8_TO_INT(intensity * 14);
+        u32 g = 8 - Q_8_8_TO_INT(intensity * 6);
+        u32 b = 10 - Q_8_8_TO_INT(intensity * 6);
 
         u16 color = RGB(r, g, b);
         LoadPalette(&color, BG_PLTT_ID(14) + 15, sizeof(color));

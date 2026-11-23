@@ -145,7 +145,8 @@
     "Route202",
     "JubilifeCity",
     "Route203",
-    "OreburghCity"
+    "OreburghCity",
+    "VerityLakefront"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1181,7 +1182,9 @@
     "TwinleafTown_PlayersHouse_1F",
     "TwinleafTown_PlayersHouse_2F",
     "TwinleafTown_RivalsHouse_1F",
-    "TwinleafTown_RivalsHouse_2F"
+    "TwinleafTown_RivalsHouse_2F",
+    "TwinleafTown_House1",
+    "TwinleafTown_House2"
   ],
   "gMapGroup_IndoorSandgem": [
     "SandgemTown_PokemonCenter_1F",

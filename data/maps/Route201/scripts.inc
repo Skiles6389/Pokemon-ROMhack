@@ -34,12 +34,13 @@ Route201_OnFrame:
 Route201_EventScript_BarryMeet::
 	lockall
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	call_if_eq VAR_TEMP_0, 13, Route201_EventScript_PlayerStepLeft
+	subvar VAR_TEMP_1, 3
+	setobjectxyperm LOCALID_ROUTE201_BARRY, VAR_TEMP_0, VAR_TEMP_1
 	clearflag FLAG_HIDE_ROUTE201_BARRY
 	addobject LOCALID_ROUTE201_BARRY
 	applymovement LOCALID_ROUTE201_BARRY, Route201_Movement_BarryBesidePlayer
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
@@ -55,7 +56,7 @@ Route201_EventScript_BarryMeet::
 	clearflag FLAG_HIDE_LAKE_VERITY_BARRY
 	clearflag FLAG_HIDE_LAKE_VERITY_CYRUS
 	setvar VAR_ROUTE201_STATE, 1
-	warpsilent MAP_LAKE_VERITY, 24, 11
+	warpsilent MAP_LAKE_VERITY, 46, 20
 	waitstate
 	releaseall
 	end
@@ -68,7 +69,7 @@ Route201_EventScript_PlayerStepLeft:
 Route201_EventScript_RowanArrives::
 	lockall
 	call Route201_EventScript_SetAssistantGfx
-	setobjectxyperm LOCALID_ROUTE201_BARRY, 10, 11
+	setobjectxyperm LOCALID_ROUTE201_BARRY, 15, 22
 	clearflag FLAG_HIDE_ROUTE201_BARRY
 	addobject LOCALID_ROUTE201_BARRY
 	clearflag FLAG_HIDE_ROUTE201_ROWAN
@@ -293,49 +294,20 @@ Route201_EventScript_LucasTalk::
 	end
 
 Route201_Movement_BarryBesidePlayer:
-	walk_fast_left
-	walk_fast_left
-	face_left
+	walk_fast_down
+	walk_fast_down
+	face_down
 	step_end
 
 Route201_Movement_BarryLeads:
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
 	step_end
 
 Route201_Movement_PlayerFollows:
 	walk_fast_up
 	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
 	step_end
 
 Route201_Movement_Approach:

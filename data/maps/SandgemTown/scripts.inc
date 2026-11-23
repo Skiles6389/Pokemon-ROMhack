@@ -83,7 +83,7 @@ SandgemTown_EventScript_LucasFree::
 SandgemTown_EventScript_Tour::
 	lockall
 	call SandgemTown_EventScript_SetAssistantGfx
-	setobjectxy LOCALID_SANDGEM_ASSISTANT, 4, 10
+	setobjectxy LOCALID_SANDGEM_ASSISTANT, 7, 11
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	applymovement LOCALID_SANDGEM_ASSISTANT, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
@@ -116,7 +116,7 @@ SandgemTown_EventScript_LucasMart::
 
 SandgemTown_EventScript_BarryBump::
 	closemessage
-	setobjectxyperm LOCALID_SANDGEM_BARRY, 11, 11
+	setobjectxyperm LOCALID_SANDGEM_BARRY, 26, 12
 	clearflag FLAG_HIDE_SANDGEM_BARRY
 	addobject LOCALID_SANDGEM_BARRY
 	applymovement LOCALID_SANDGEM_BARRY, SandgemTown_Movement_BarryIn
@@ -168,27 +168,23 @@ SandgemTown_EventScript_Route219Sign::
 
 SandgemTown_Movement_AssistantToLab:
 	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 SandgemTown_Movement_ToMart:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	walk_right
 	walk_right
 	walk_right

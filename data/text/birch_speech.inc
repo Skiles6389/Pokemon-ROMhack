@@ -1,61 +1,57 @@
+@ M11: the new-game talk is given by PROF. ROWAN (stand-in sprite) with a PACHIRISU.
+@ Lines are original, written in the spirit of the Sinnoh intro.
 gText_Birch_Welcome::
-	.string "Hi! Sorry to keep you waiting!\p"
-	.string "Welcome to the world of POKéMON!\p"
-	.string "My name is BIRCH.\p"
-	.string "But everyone calls me the POKéMON\n"
-	.string "PROFESSOR.\p"
+	.string "Ah, there you are.\p"
+	.string "Welcome. This is the world of\n"
+	.string "POKéMON.\p"
+	.string "I am ROWAN. I study POKéMON\n"
+	.string "here in the SINNOH region.\p"
 	.string "$"
 
 gText_Birch_Pokemon::
-	.string "This is what we call a “POKéMON.”\p"
+	.string "This little one is a POKéMON.\p"
 	.string "\n"
 	.string "$"
 
 gText_Birch_MainSpeech::
-	.string "This world is widely inhabited by\n"
-	.string "creatures known as POKéMON.\p"
-	.string "We humans live alongside POKéMON,\n"
-	.string "at times as friendly playmates, and\l"
-	.string "at times as cooperative workmates.\p"
-	.string "And sometimes, we band together\n"
-	.string "and battle others like us.\p"
-	.string "But despite our closeness, we don't\n"
-	.string "know everything about POKéMON.\p"
-	.string "In fact, there are many, many\n"
-	.string "secrets surrounding POKéMON.\p"
-	.string "To unravel POKéMON mysteries,\n"
-	.string "I've been undertaking research.\l"
-	.string "That's what I do.\p"
+	.string "Creatures like this PACHIRISU live\n"
+	.string "in every corner of this world.\p"
+	.string "People keep them as friends and\n"
+	.string "partners, and some test their bond\l"
+	.string "in battle.\p"
+	.string "Even so, much about POKéMON\n"
+	.string "remains a mystery to us.\p"
+	.string "I have spent many long years\n"
+	.string "chasing their secrets, and I am\l"
+	.string "far from finished.\p"
 	.string "$"
 
 gText_Birch_AndYouAre::
-	.string "And you are?$"
+	.string "Now, tell me about yourself.$"
 
 gText_Birch_BoyOrGirl::
 	.string "Are you a boy?\n"
 	.string "Or are you a girl?$"
 
 gText_Birch_WhatsYourName::
-	.string "All right.\n"
-	.string "What's your name?$"
+	.string "Very well.\n"
+	.string "And what is your name?$"
 
 gText_Birch_SoItsPlayer::
-	.string "So it's {PLAYER}{KUN}?$"
+	.string "{PLAYER}, is it?$"
 
 gText_Birch_YourePlayer::
-	.string "Ah, okay!\p"
-	.string "You're {PLAYER}{KUN} who's moving to my\n"
-	.string "hometown of LITTLEROOT.\l"
-	.string "I get it now!\p"
+	.string "{PLAYER}. A fine name.\p"
+	.string "You live in TWINLEAF TOWN, out\n"
+	.string "on the southern edge of SINNOH.\p"
 	.string "$"
 
 gText_Birch_AreYouReady::
-	.string "All right, are you ready?\p"
-	.string "Your very own adventure is about\n"
-	.string "to unfold.\p"
-	.string "Take courage, and leap into the\n"
-	.string "world of POKéMON where dreams,\l"
-	.string "adventure, and friendships await!\p"
-	.string "Well, I'll be expecting you later.\n"
-	.string "Come see me in my POKéMON LAB.\p"
+	.string "Then your story begins now.\p"
+	.string "You will meet many POKéMON and\n"
+	.string "many people on the road ahead.\p"
+	.string "Some will test you. Some will\n"
+	.string "stand beside you.\p"
+	.string "Go on, {PLAYER}. The world of\n"
+	.string "POKéMON is waiting!\p"
 	.string "$"

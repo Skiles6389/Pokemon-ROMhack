@@ -30,7 +30,7 @@ LakeVerity_EventScript_CyrusScene::
 	removeobject LOCALID_LAKE_BARRY
 	setflag FLAG_HIDE_LAKE_VERITY_BARRY
 	setvar VAR_ROUTE201_STATE, 2
-	warpsilent MAP_ROUTE201, 8, 11
+	warpsilent MAP_ROUTE201, 14, 22
 	waitstate
 	releaseall
 	end
@@ -48,19 +48,10 @@ LakeVerity_EventScript_Sign::
 	end
 
 LakeVerity_Movement_PlayerToShore:
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
 	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	face_up
 	step_end
 
 LakeVerity_Movement_BarryToShore:
@@ -69,12 +60,13 @@ LakeVerity_Movement_BarryToShore:
 	step_end
 
 LakeVerity_Movement_CyrusLeaves:
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 LakeVerity_Text_Cyrus:
