@@ -5987,8 +5987,8 @@ Level: 10
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Tackle
 
-=== TRAINER_TOMMY ===
-Name: TOMMY
+=== TRAINER_YOUNGSTER_DARIUS ===
+Name: DARIUS
 Class: Youngster
 Pic: Youngster
 Gender: Male
@@ -5997,12 +5997,17 @@ Double Battle: No
 AI: Check Bad Move
 
 Geodude
-Level: 8
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Defense Curl
 
-Geodude
-Level: 8
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Onix
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Rock Throw
+- Tackle
+- Harden
 
 === TRAINER_JOEY ===
 Name: JOEY
@@ -16832,29 +16837,50 @@ Wobbuffet
 Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_RED ===
-Name: RED
-Class: Rival
-Pic: Red
+=== TRAINER_LEADER_ROARK ===
+Name: ROARK
+Class: Leader
+Pic: Hiker
+Gender: Male
+Music: Male
+Items: Potion / Potion
+Double Battle: No
+AI: Basic Trainer
+
+Geodude
+Level: 12
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Stealth Rock
+- Rock Throw
+
+Onix
+Level: 12
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Stealth Rock
+- Rock Throw
+- Screech
+
+Cranidos
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Headbutt
+- Pursuit
+- Leer
+
+=== TRAINER_YOUNGSTER_JONATHON ===
+Name: JONATHON
+Class: Youngster
+Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
+AI: Check Bad Move
 
-Charmander
-Level: 5
+Geodude
+Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_LEAF ===
-Name: LEAF
-Class: Rival
-Pic: Leaf
-Gender: Female
-Music: Male
-Double Battle: No
-
-Bulbasaur
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Defense Curl
 
 === TRAINER_LASS_MADELINE ===
 Name: MADELINE

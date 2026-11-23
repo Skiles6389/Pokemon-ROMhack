@@ -325,7 +325,8 @@
 #define TRAINER_CALVIN_1                    318
 #define TRAINER_BILLY                       319
 #define TRAINER_JOSH                        320
-#define TRAINER_TOMMY                       321
+#define TRAINER_YOUNGSTER_DARIUS            321 // Sinnoh: takes over Rustboro Gym TOMMY (no unused slots left)
+#define TRAINER_TOMMY                       TRAINER_YOUNGSTER_DARIUS
 #define TRAINER_JOEY                        322
 #define TRAINER_BEN                         323
 #define TRAINER_QUINCY                      324
@@ -855,8 +856,8 @@
 #define TRAINER_MARIELA                     848
 #define TRAINER_ALVARO                      849
 #define TRAINER_EVERETT                     850
-#define TRAINER_RED                         851
-#define TRAINER_LEAF                        852
+#define TRAINER_LEADER_ROARK                851 // Sinnoh: reuses unused Hoenn slot RED
+#define TRAINER_YOUNGSTER_JONATHON          852 // Sinnoh: reuses unused Hoenn slot LEAF
 #define TRAINER_LASS_MADELINE               853 // Sinnoh: reuses unused Hoenn slot TRAINER_BRENDAN_PLACEHOLDER
 #define TRAINER_CAMPER_CURTIS               854 // Sinnoh: reuses unused Hoenn slot TRAINER_MAY_PLACEHOLDER
 #define TRAINER_BARRY_1_CHIMCHAR            855
