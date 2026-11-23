@@ -47,7 +47,7 @@ SandgemTown_PokemonLab_EventScript_Leave::
 	removeobject LOCALID_SANDGEM_LAB_ASSISTANT
 	setflag FLAG_HIDE_SANDGEM_LAB_ASSISTANT
 	setvar VAR_SANDGEM_STATE, 3
-	warpsilent MAP_SANDGEM_TOWN, 6, 10
+	warpsilent MAP_SANDGEM_TOWN, 8, 11
 	waitstate
 	releaseall
 	end

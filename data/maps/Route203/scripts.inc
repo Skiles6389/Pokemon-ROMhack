@@ -13,17 +13,24 @@ Route203_EventScript_BarryTrigger::
 	applymovement LOCALID_ROUTE203_BARRY, Common_Movement_ExclamationMark
 	waitmovement 0
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	goto_if_eq VAR_TEMP_1, 15, Route203_EventScript_BarryApproachLow
+	call_if_eq VAR_TEMP_1, 22, Route203_EventScript_BarryDown1
+	call_if_eq VAR_TEMP_1, 23, Route203_EventScript_BarryDown2
+	call_if_eq VAR_TEMP_1, 24, Route203_EventScript_BarryDown3
 	applymovement LOCALID_ROUTE203_BARRY, Route203_Movement_BarryApproach
 	waitmovement 0
 	goto Route203_EventScript_BarryTalk
 	end
 
-Route203_EventScript_BarryApproachLow::
-	applymovement LOCALID_ROUTE203_BARRY, Route203_Movement_BarryApproachLow
+Route203_EventScript_BarryDown3::
+	applymovement LOCALID_ROUTE203_BARRY, Common_Movement_WalkDown
 	waitmovement 0
-	goto Route203_EventScript_BarryTalk
-	end
+Route203_EventScript_BarryDown2::
+	applymovement LOCALID_ROUTE203_BARRY, Common_Movement_WalkDown
+	waitmovement 0
+Route203_EventScript_BarryDown1::
+	applymovement LOCALID_ROUTE203_BARRY, Common_Movement_WalkDown
+	waitmovement 0
+	return
 
 Route203_EventScript_BarryTalk::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
@@ -50,15 +57,7 @@ Route203_EventScript_BattleTurtwig::
 Route203_EventScript_AfterBattle::
 	msgbox Route203_Text_BarryAfter, MSGBOX_DEFAULT
 	closemessage
-	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	goto_if_eq VAR_TEMP_1, 15, Route203_EventScript_BarryLeaveHigh
 	applymovement LOCALID_ROUTE203_BARRY, Route203_Movement_BarryLeaveLow
-	waitmovement 0
-	goto Route203_EventScript_BarryGone
-	end
-
-Route203_EventScript_BarryLeaveHigh::
-	applymovement LOCALID_ROUTE203_BARRY, Route203_Movement_BarryLeaveHigh
 	waitmovement 0
 	goto Route203_EventScript_BarryGone
 	end
@@ -81,31 +80,8 @@ Route203_Movement_BarryApproach:
 	walk_fast_left
 	step_end
 
-Route203_Movement_BarryApproachLow:
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	step_end
-
 @ Barry leaves along whichever road row the player is not standing on.
 Route203_Movement_BarryLeaveLow:
-	walk_fast_down
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	step_end
-
-Route203_Movement_BarryLeaveHigh:
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right

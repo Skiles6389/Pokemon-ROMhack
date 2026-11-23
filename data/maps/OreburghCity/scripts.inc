@@ -9,7 +9,7 @@ OreburghCity_OnTransition:
 	end
 
 OreburghCity_EventScript_GuideStepAside::
-	setobjectxyperm LOCALID_OREBURGH_GYM_GUIDE, 15, 22
+	setobjectxyperm LOCALID_OREBURGH_GYM_GUIDE, 27, 21
 	setobjectmovementtype LOCALID_OREBURGH_GYM_GUIDE, MOVEMENT_TYPE_FACE_LEFT
 	return
 
@@ -26,20 +26,19 @@ OreburghCity_EventScript_DemoEnd::
 	end
 
 @ Platinum's arrival beat: Barry runs into the player and says Roark is at the
-@ mine. The path out of Oreburgh Gate is two tiles wide, so the trigger can't be skirted.
+@ mine. The trigger spans the full width of the path out of Oreburgh Gate.
 OreburghCity_EventScript_BarryTrigger::
 	lockall
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	goto_if_ne VAR_TEMP_0, 7, OreburghCity_EventScript_BarryAppear
-	setobjectxyperm LOCALID_OREBURGH_BARRY, 7, 15
-OreburghCity_EventScript_BarryAppear::
+	addvar VAR_TEMP_0, 3
+	setobjectxyperm LOCALID_OREBURGH_BARRY, VAR_TEMP_0, VAR_TEMP_1
 	addobject LOCALID_OREBURGH_BARRY
 	applymovement LOCALID_OREBURGH_BARRY, OreburghCity_Movement_BarryRunUp
 	waitmovement 0
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox OreburghCity_Text_BarryBump, MSGBOX_DEFAULT
 	closemessage
@@ -56,16 +55,15 @@ OreburghCity_EventScript_Barry::
 	end
 
 OreburghCity_Movement_BarryRunUp:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
+	walk_fast_left
+	walk_fast_left
 	step_end
 
 OreburghCity_Movement_BarryRunOff:
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
 	step_end
 
 @ The Gym opens in milestone 9. Until then its guide stands in the doorway.

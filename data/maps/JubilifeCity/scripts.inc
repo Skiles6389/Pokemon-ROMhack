@@ -141,33 +141,37 @@ JubilifeCity_EventScript_LockedHouse::
 	end
 
 JubilifeCity_Movement_GruntLeave:
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 JubilifeCity_Movement_Grunt2Leave:
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 JubilifeCity_Movement_AssistantLeave:
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 JubilifeCity_Movement_BarryIn:
-	walk_fast_right
-	walk_fast_right
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 JubilifeCity_Movement_BarryLeave:
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
 	step_end
 
 JubilifeCity_Text_DawnIntro:
