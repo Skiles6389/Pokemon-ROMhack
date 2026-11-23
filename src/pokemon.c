@@ -5135,6 +5135,10 @@ u16 GetBattleBGM(void)
             return MUS_VS_AQUA_MAGMA;
         case TRAINER_CLASS_LEADER:
             return MUS_VS_GYM_LEADER;
+        case TRAINER_CLASS_TEAM_GALACTIC:
+            if (IsPlayerInSinnoh())
+                return MUS_PL_VS_GALACTIC;
+            return MUS_VS_AQUA_MAGMA;
         case TRAINER_CLASS_CHAMPION:
             return MUS_VS_CHAMPION;
         case TRAINER_CLASS_RIVAL:

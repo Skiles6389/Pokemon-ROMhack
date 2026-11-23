@@ -13,6 +13,17 @@ static inline enum Region GetRegionForSectionId(u32 sectionId)
     return REGION_HOENN;
 }
 
+// The Sinnoh demo maps (Twinleaf Town -> Oreburgh Mine) use the Platinum soundtrack.
+static inline bool32 IsSinnohMapSec(u32 sectionId)
+{
+    return sectionId >= MAPSEC_TWINLEAF_TOWN && sectionId <= MAPSEC_OREBURGH_MINE;
+}
+
+static inline bool32 IsPlayerInSinnoh(void)
+{
+    return IsSinnohMapSec(gMapHeader.regionMapSectionId);
+}
+
 static inline enum Region GetCurrentRegion(void)
 {
     return GetRegionForSectionId(gMapHeader.regionMapSectionId);

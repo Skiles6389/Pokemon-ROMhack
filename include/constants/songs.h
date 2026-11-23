@@ -547,6 +547,50 @@
 #define PH_NURSE_HELD               608
 #define PH_NURSE_SOLO               609
 
+// Pokemon Platinum soundtrack (converted from the user's own SDAT by tools/platinum_music)
+#define START_PL_MUS MUS_PL_TITLE
+#define MUS_PL_TITLE                       610
+#define MUS_PL_ROWAN                       611
+#define MUS_PL_TWINLEAF                    612
+#define MUS_PL_TWINLEAF_NIGHT              613
+#define MUS_PL_ROUTE201                    614
+#define MUS_PL_ROUTE201_NIGHT              615
+#define MUS_PL_ROUTE203                    616
+#define MUS_PL_ROUTE203_NIGHT              617
+#define MUS_PL_LAKE                        618
+#define MUS_PL_SANDGEM                     619
+#define MUS_PL_SANDGEM_NIGHT               620
+#define MUS_PL_ROWAN_LAB                   621
+#define MUS_PL_JUBILIFE                    622
+#define MUS_PL_JUBILIFE_NIGHT              623
+#define MUS_PL_OREBURGH_GATE               624
+#define MUS_PL_OREBURGH_MINE               625
+#define MUS_PL_OREBURGH                    626
+#define MUS_PL_OREBURGH_NIGHT              627
+#define MUS_PL_GYM                         628
+#define MUS_PL_POKE_CENTER                 629
+#define MUS_PL_POKE_CENTER_NIGHT           630
+#define MUS_PL_POKE_MART                   631
+#define MUS_PL_ENCOUNTER_BARRY             632
+#define MUS_PL_ENCOUNTER_GALACTIC          633
+#define MUS_PL_ENCOUNTER_BOY               634
+#define MUS_PL_ENCOUNTER_GIRL              635
+#define MUS_PL_VS_WILD                     636
+#define MUS_PL_VS_TRAINER                  637
+#define MUS_PL_VS_BARRY                    638
+#define MUS_PL_VS_GYM_LEADER               639
+#define MUS_PL_VS_GALACTIC                 640
+#define MUS_PL_VICTORY_WILD                641
+#define MUS_PL_VICTORY_TRAINER             642
+#define MUS_PL_VICTORY_GYM_LEADER          643
+#define MUS_PL_HEAL                        644
+#define MUS_PL_OBTAIN_BADGE                645
+#define MUS_PL_OBTAIN_ITEM                 646
+#define MUS_PL_LEVEL_UP                    647
+#define MUS_PL_EVOLUTION                   648
+#define MUS_PL_EVOLVED                     649
+#define END_PL_MUS   MUS_PL_EVOLVED
+
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
 #define MUS_NONE                    0xFFFF

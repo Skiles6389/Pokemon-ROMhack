@@ -1,4 +1,5 @@
 #include "global.h"
+#include "regions.h"
 #include "data.h"
 #include "main.h"
 #include "battle.h"
@@ -1778,6 +1779,20 @@ void PlayTrainerEncounterMusic(void)
 
     enum TrainerApproachMusic musicStyle = GetTrainerEncounterMusicId(trainerId);
     music = gTrainerApproachMusicStyles[musicStyle];
+    if (IsPlayerInSinnoh())
+    {
+        switch (GetTrainerClassFromId(trainerId))
+        {
+        case TRAINER_CLASS_RIVAL:
+            music = MUS_PL_ENCOUNTER_BARRY;
+            break;
+        case TRAINER_CLASS_TEAM_GALACTIC:
+            music = MUS_PL_ENCOUNTER_GALACTIC;
+            break;
+        default:
+            break;
+        }
+    }
     PlayNewMapMusic(music);
 
 }

@@ -8,6 +8,7 @@
 #include "pokemon.h"
 #include "constants/cries.h"
 #include "constants/songs.h"
+#include "regions.h"
 #include "task.h"
 #include "test_runner.h"
 
@@ -57,7 +58,69 @@ static const struct Fanfare sFanfares[] = {
     [FANFARE_OBTAIN_B_POINTS]     = { MUS_OBTAIN_B_POINTS,     313 },
     [FANFARE_OBTAIN_SYMBOL]       = { MUS_OBTAIN_SYMBOL,       318 },
     [FANFARE_REGISTER_MATCH_CALL] = { MUS_REGISTER_MATCH_CALL, 135 },
+    // Platinum fanfares: MIDI length + ~8 frames of release tail
+    [FANFARE_PL_LEVEL_UP]         = { MUS_PL_LEVEL_UP,          53 },
+    [FANFARE_PL_OBTAIN_ITEM]      = { MUS_PL_OBTAIN_ITEM,      122 },
+    [FANFARE_PL_EVOLVED]          = { MUS_PL_EVOLVED,          250 },
+    [FANFARE_PL_HEAL]             = { MUS_PL_HEAL,             123 },
+    [FANFARE_PL_OBTAIN_BADGE]     = { MUS_PL_OBTAIN_BADGE,     282 },
 };
+
+// While the player is in the Sinnoh demo maps, swap Emerald's generic
+// battle/encounter/jingle songs for their Pokemon Platinum counterparts.
+// Everywhere else the original Emerald songs are untouched.
+u16 GetRegionalSongOverride(u16 songNum)
+{
+    if (!IsPlayerInSinnoh())
+        return songNum;
+
+    switch (songNum)
+    {
+    case MUS_VS_WILD:            return MUS_PL_VS_WILD;
+    case MUS_VS_TRAINER:         return MUS_PL_VS_TRAINER;
+    case MUS_VS_RIVAL:           return MUS_PL_VS_BARRY;
+    case MUS_VS_GYM_LEADER:      return MUS_PL_VS_GYM_LEADER;
+    case MUS_VS_AQUA_MAGMA:      return MUS_PL_VS_GALACTIC;
+    case MUS_VICTORY_AQUA_MAGMA: return MUS_PL_VICTORY_TRAINER;
+    case MUS_VICTORY_WILD:       return MUS_PL_VICTORY_WILD;
+    case MUS_VICTORY_TRAINER:    return MUS_PL_VICTORY_TRAINER;
+    case MUS_VICTORY_GYM_LEADER: return MUS_PL_VICTORY_GYM_LEADER;
+    case MUS_ENCOUNTER_MALE:
+    case MUS_ENCOUNTER_INTENSE:
+    case MUS_ENCOUNTER_COOL:
+    case MUS_ENCOUNTER_HIKER:
+    case MUS_ENCOUNTER_SWIMMER:
+    case MUS_ENCOUNTER_RICH:
+    case MUS_ENCOUNTER_SUSPICIOUS:
+                                 return MUS_PL_ENCOUNTER_BOY;
+    case MUS_ENCOUNTER_FEMALE:
+    case MUS_ENCOUNTER_GIRL:
+    case MUS_ENCOUNTER_TWINS:
+                                 return MUS_PL_ENCOUNTER_GIRL;
+    case MUS_ENCOUNTER_MAY:
+    case MUS_ENCOUNTER_BRENDAN:  return MUS_PL_ENCOUNTER_BARRY;
+    case MUS_ENCOUNTER_AQUA:
+    case MUS_ENCOUNTER_MAGMA:    return MUS_PL_ENCOUNTER_GALACTIC;
+    case MUS_EVOLUTION:          return MUS_PL_EVOLUTION;
+    }
+    return songNum;
+}
+
+static u8 GetRegionalFanfareOverride(u8 fanfareNum)
+{
+    if (!IsPlayerInSinnoh())
+        return fanfareNum;
+
+    switch (fanfareNum)
+    {
+    case FANFARE_LEVEL_UP:     return FANFARE_PL_LEVEL_UP;
+    case FANFARE_OBTAIN_ITEM:  return FANFARE_PL_OBTAIN_ITEM;
+    case FANFARE_EVOLVED:      return FANFARE_PL_EVOLVED;
+    case FANFARE_HEAL:         return FANFARE_PL_HEAL;
+    case FANFARE_OBTAIN_BADGE: return FANFARE_PL_OBTAIN_BADGE;
+    }
+    return fanfareNum;
+}
 
 void InitMapMusic(void)
 {
@@ -123,6 +186,7 @@ u16 GetCurrentMapMusic(void)
 
 void PlayNewMapMusic(u16 songNum)
 {
+    songNum = GetRegionalSongOverride(songNum);
     sCurrentMapMusic = songNum;
     sNextMapMusic = 0;
     sMapMusicState = 1;
@@ -146,6 +210,7 @@ void FadeOutMapMusic(u8 speed)
 
 void FadeOutAndPlayNewMapMusic(u16 songNum, u8 speed)
 {
+    songNum = GetRegionalSongOverride(songNum);
     FadeOutMapMusic(speed);
     sCurrentMapMusic = 0;
     sNextMapMusic = songNum;
@@ -154,6 +219,7 @@ void FadeOutAndPlayNewMapMusic(u16 songNum, u8 speed)
 
 void FadeOutAndFadeInNewMapMusic(u16 songNum, u8 fadeOutSpeed, u8 fadeInSpeed)
 {
+    songNum = GetRegionalSongOverride(songNum);
     FadeOutMapMusic(fadeOutSpeed);
     sCurrentMapMusic = 0;
     sNextMapMusic = songNum;
@@ -184,6 +250,7 @@ bool8 IsNotWaitingForBGMStop(void)
 void PlayFanfareByFanfareNum(u8 fanfareNum)
 {
     u16 songNum;
+    fanfareNum = GetRegionalFanfareOverride(fanfareNum);
     m4aMPlayStop(&gMPlayInfo_BGM);
     songNum = sFanfares[fanfareNum].songNum;
     sFanfareCounter = sFanfares[fanfareNum].duration;
@@ -266,6 +333,8 @@ void FadeInNewBGM(u16 songNum, u8 speed)
         songNum = 0;
     if (songNum == MUS_NONE)
         songNum = 0;
+    else
+        songNum = GetRegionalSongOverride(songNum);
     m4aSongNumStart(songNum);
     m4aMPlayImmInit(&gMPlayInfo_BGM);
     m4aMPlayVolumeControl(&gMPlayInfo_BGM, TRACKS_ALL, 0);
@@ -555,6 +624,8 @@ void PlayBGM(u16 songNum)
         songNum = 0;
     if (songNum == MUS_NONE)
         songNum = 0;
+    else
+        songNum = GetRegionalSongOverride(songNum);
     m4aSongNumStart(songNum);
 }
 
