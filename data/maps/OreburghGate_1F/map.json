@@ -157,6 +157,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
       "flag": "FLAG_TEMP_18"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "x": 20,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_19"
     }
   ],
   "warp_events": [
@@ -173,17 +186,15 @@
       "elevation": 3,
       "dest_map": "MAP_OREBURGH_CITY",
       "dest_warp_id": "0"
-    }
-  ],
-  "coord_events": [],
-  "bg_events": [
+    },
     {
-      "type": "sign",
       "x": 20,
       "y": 2,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "OreburghGate_1F_EventScript_WayDown"
+      "dest_map": "MAP_OREBURGH_GATE_B1F",
+      "dest_warp_id": "0"
     }
-  ]
+  ],
+  "coord_events": [],
+  "bg_events": []
 }

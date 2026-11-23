@@ -9457,6 +9457,17 @@
       "layout_version": "emerald"
     },
     {
+      "id": "LAYOUT_OREBURGH_GATE_B1F",
+      "name": "OreburghGate_B1F_Layout",
+      "width": 40,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/OreburghGate_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghGate_B1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
       "id": "LAYOUT_OREBURGH_CITY",
       "name": "OreburghCity_Layout",
       "width": 44,
