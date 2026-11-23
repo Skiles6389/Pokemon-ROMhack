@@ -9455,6 +9455,39 @@
       "border_filepath": "data/layouts/OreburghGate_1F/border.bin",
       "blockdata_filepath": "data/layouts/OreburghGate_1F/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY",
+      "name": "OreburghCity_Layout",
+      "width": 44,
+      "height": 42,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/OreburghCity/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCity/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_MINE_B1F",
+      "name": "OreburghMine_B1F_Layout",
+      "width": 28,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/OreburghMine_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghMine_B1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_MINE_B2F",
+      "name": "OreburghMine_B2F_Layout",
+      "width": 32,
+      "height": 31,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/OreburghMine_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghMine_B2F/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

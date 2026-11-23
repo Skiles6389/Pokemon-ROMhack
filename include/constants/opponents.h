@@ -177,7 +177,7 @@
 #define TRAINER_FRANKLIN                    170
 #define TRAINER_KEVIN                       171
 #define TRAINER_JACK                        172
-#define TRAINER_DUDLEY                      173
+#define TRAINER_WORKER_COLIN                173 // Sinnoh: reuses unused Hoenn slot DUDLEY
 #define TRAINER_CHAD                        174
 #define TRAINER_TONY_2                      175
 #define TRAINER_TONY_3                      176
@@ -585,7 +585,7 @@
 #define TRAINER_HARRISON                    578
 #define TRAINER_GRUNT_MT_CHIMNEY_2          579
 #define TRAINER_CLARENCE                    580
-#define TRAINER_TERRY                       581
+#define TRAINER_WORKER_MASON                581 // Sinnoh: reuses unused Hoenn slot TERRY
 #define TRAINER_NATE                        582
 #define TRAINER_KATHLEEN                    583
 #define TRAINER_CLIFFORD                    584

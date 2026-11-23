@@ -68,13 +68,13 @@
 #define FLAG_ITEM_ROUTE203_POKE_BALL 0x2E
 #define FLAG_ITEM_ROUTE203_REPEL 0x2F
 #define FLAG_ITEM_ROUTE203_X_DEFEND 0x30
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
-#define FLAG_UNUSED_0x034    0x34 // Unused Flag
-#define FLAG_UNUSED_0x035    0x35 // Unused Flag
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
+#define FLAG_HIDE_OREBURGH_BARRY 0x31
+#define FLAG_HIDE_OREBURGH_MINE_ROARK 0x32
+#define FLAG_ITEM_OREBURGH_DIRE_HIT 0x33
+#define FLAG_ITEM_OREBURGH_YELLOW_SHARD 0x34
+#define FLAG_ITEM_OREBURGH_MINE_B1F_POKE_BALL 0x35
+#define FLAG_ITEM_OREBURGH_MINE_B2F_ESCAPE_ROPE 0x36
+#define FLAG_ITEM_OREBURGH_MINE_B2F_POTION 0x37
 #define FLAG_UNUSED_0x038    0x38 // Unused Flag
 #define FLAG_UNUSED_0x039    0x39 // Unused Flag
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag

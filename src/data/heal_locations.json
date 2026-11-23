@@ -375,6 +375,14 @@
       "y": 22,
       "respawn_map": "MAP_JUBILIFE_CITY_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_JUBILIFE_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_OREBURGH_CITY",
+      "map": "MAP_OREBURGH_CITY",
+      "x": 31,
+      "y": 22,
+      "respawn_map": "MAP_OREBURGH_CITY_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_OREBURGH_NURSE"
     }
   ]
 }
