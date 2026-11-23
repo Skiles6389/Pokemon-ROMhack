@@ -209,6 +209,8 @@ gStdScripts_End::
 	.include "data/maps/JubilifeCity_PoketchCompany/scripts.inc"
 	.include "data/maps/Route203/scripts.inc"
 	.include "data/maps/OreburghGate_1F/scripts.inc"
+	.include "data/maps/OreburghGate_B1F/scripts.inc"
+	.include "data/scripts/poketch.inc"
 	.include "data/maps/OreburghCity/scripts.inc"
 	.include "data/maps/OreburghCity_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/OreburghCity_PokemonCenter_2F/scripts.inc"

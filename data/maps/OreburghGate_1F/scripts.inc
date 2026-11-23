@@ -27,10 +27,6 @@ OreburghGate_1F_EventScript_Curtis::
 	msgbox OreburghGate_1F_Text_CurtisAfter, MSGBOX_AUTOCLOSE
 	end
 
-OreburghGate_1F_EventScript_WayDown::
-	msgbox OreburghGate_1F_Text_WayDown, MSGBOX_SIGN
-	end
-
 OreburghGate_1F_Text_HikerGive:
 	.string "Breaking rocks is what I do best.\n"
 	.string "Here, you take this too.$"
@@ -63,6 +59,3 @@ OreburghGate_1F_Text_CurtisAfter:
 	.string "OREBURGH is right through there.\n"
 	.string "Mind the soot on your shoes!$"
 
-OreburghGate_1F_Text_WayDown:
-	.string "A slope leads down to a lower\n"
-	.string "floor, but fallen rock blocks it.$"

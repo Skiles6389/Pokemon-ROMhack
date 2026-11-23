@@ -243,12 +243,12 @@ JubilifeCity_Text_ReceivedPoketch:
 	.string "{PLAYER} received the POKéTCH.$"
 
 JubilifeCity_Text_PoketchApps:
-	.string "The little apps are still on the\n"
-	.string "workbench. Today it keeps the time.$"
+	.string "Open it from the START menu. It has\n"
+	.string "a clock and a PARTY checker so far.$"
 
 JubilifeCity_Text_PoketchDone:
-	.string "Come back when the apps are ready.\n"
-	.string "The watch already works.$"
+	.string "More apps are on the workbench.\n"
+	.string "Enjoy the clock for now!$"
 
 JubilifeCity_Text_Woman:
 	.string "The Center is west. The Mart is\n"
