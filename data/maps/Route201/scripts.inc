@@ -69,16 +69,48 @@ Route201_EventScript_PlayerStepLeft:
 	return
 
 Route201_EventScript_RowanArrives::
-	@ State 2: return from Lake Verity; Barry challenges the player.
+	@ State 2: player walked back from Lake Verity; Rowan notes the connection, then Barry battles.
 	lockall
-	setobjectxyperm LOCALID_ROUTE201_BARRY, 15, 22
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	@ Place the group east of the player (Sandgem side), then walk them over.
+	copyvar VAR_TEMP_2, VAR_TEMP_0
+	addvar VAR_TEMP_2, 5
+	copyvar VAR_TEMP_3, VAR_TEMP_1
+	setobjectxyperm LOCALID_ROUTE201_ROWAN, VAR_TEMP_2, VAR_TEMP_3
+	addvar VAR_TEMP_3, 1
+	setobjectxyperm LOCALID_ROUTE201_ASSISTANT, VAR_TEMP_2, VAR_TEMP_3
+	subvar VAR_TEMP_3, 2
+	setobjectxyperm LOCALID_ROUTE201_BARRY, VAR_TEMP_2, VAR_TEMP_3
+	clearflag FLAG_HIDE_ROUTE201_ROWAN
+	clearflag FLAG_HIDE_ROUTE201_ASSISTANT
 	clearflag FLAG_HIDE_ROUTE201_BARRY
+	addobject LOCALID_ROUTE201_ROWAN
+	addobject LOCALID_ROUTE201_ASSISTANT
 	addobject LOCALID_ROUTE201_BARRY
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-	applymovement LOCALID_ROUTE201_BARRY, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_ROUTE201_ROWAN, Route201_Movement_RowanApproach
+	applymovement LOCALID_ROUTE201_ASSISTANT, Route201_Movement_AssistantApproach
+	applymovement LOCALID_ROUTE201_BARRY, Route201_Movement_BarryApproachMeetup
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	checkplayergender
+	goto_if_eq VAR_RESULT, FEMALE, Route201_EventScript_RowanConnectionLucas
+	msgbox Route201_Text_RowanConnectionDawn, MSGBOX_DEFAULT
+	goto Route201_EventScript_BarryChallenges
+	end
+
+Route201_EventScript_RowanConnectionLucas::
+	msgbox Route201_Text_RowanConnectionLucas, MSGBOX_DEFAULT
+	goto Route201_EventScript_BarryChallenges
+	end
+
+Route201_EventScript_BarryChallenges::
+	closemessage
+	applymovement LOCALID_ROUTE201_BARRY, Common_Movement_WalkInPlaceFasterLeft
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	msgbox Route201_Text_BarryAdvantage, MSGBOX_DEFAULT
 	closemessage
@@ -241,12 +273,53 @@ Route201_Movement_Approach:
 	face_right
 	step_end
 
+Route201_Movement_RowanApproach:
+	walk_left
+	walk_left
+	walk_left
+	face_left
+	step_end
+
+Route201_Movement_AssistantApproach:
+	delay_8
+	walk_left
+	walk_left
+	walk_left
+	face_left
+	step_end
+
+Route201_Movement_BarryApproachMeetup:
+	delay_16
+	walk_left
+	walk_left
+	walk_left
+	face_left
+	step_end
+
 Route201_Text_BarryMeet:
 	.string "BARRY: {PLAYER}! You made it!\p"
 	.string "The lake is just west of here.\n"
 	.string "I saw the Professor go that way.\p"
 	.string "Come on, I'll go with you.\n"
 	.string "Don't fall behind!$"
+
+Route201_Text_RowanConnectionDawn:
+	.string "ROWAN: Ah, {PLAYER}.\p"
+	.string "Dawn told me what happened at the\n"
+	.string "lake--and about the POKéMON you chose.\p"
+	.string "That POKéMON already has a strong\n"
+	.string "connection with you.\p"
+	.string "Come see me at my lab in Sandgem Town.\n"
+	.string "There is more I would like to ask.$"
+
+Route201_Text_RowanConnectionLucas:
+	.string "ROWAN: Ah, {PLAYER}.\p"
+	.string "Lucas told me what happened at the\n"
+	.string "lake--and about the POKéMON you chose.\p"
+	.string "That POKéMON already has a strong\n"
+	.string "connection with you.\p"
+	.string "Come see me at my lab in Sandgem Town.\n"
+	.string "There is more I would like to ask.$"
 
 Route201_Text_BarryAdvantage:
 	.string "BARRY: Alright--no more waiting!\p"

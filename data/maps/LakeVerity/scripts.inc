@@ -185,7 +185,11 @@ LakeVerity_EventScript_LostToStarly::
 LakeVerity_EventScript_AfterStarly::
 	msgbox LakeVerity_Text_BarryAfterStarly, MSGBOX_DEFAULT
 	closemessage
-	setobjectxyperm LOCALID_LAKE_ASSISTANT, 47, 21
+	@ Clear the tile south of the briefcase so Dawn/Lucas can walk up to it.
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	applymovement LOCALID_LAKE_BARRY, Common_Movement_WalkRight
+	waitmovement 0
+	setobjectxyperm LOCALID_LAKE_ASSISTANT, 48, 21
 	clearflag FLAG_HIDE_LAKE_VERITY_ASSISTANT
 	addobject LOCALID_LAKE_ASSISTANT
 	applymovement LOCALID_LAKE_ASSISTANT, LakeVerity_Movement_AssistantReturns
@@ -231,23 +235,25 @@ LakeVerity_EventScript_AssistantLeavesAgain::
 	end
 
 LakeVerity_EventScript_CyrusScene::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-	applymovement LOCALID_LAKE_BARRY, Common_Movement_WalkInPlaceFasterUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_LAKE_BARRY, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	applymovement LOCALID_LAKE_BARRY, Common_Movement_ExclamationMark
 	waitmovement 0
-	setobjectxyperm LOCALID_LAKE_CYRUS, 45, 13
+	@ Spawn Cyrus off-screen south of the clearing, then walk him into view.
+	setobjectxyperm LOCALID_LAKE_CYRUS, 47, 22
+	setobjectmovementtype LOCALID_LAKE_CYRUS, MOVEMENT_TYPE_FACE_UP
 	clearflag FLAG_HIDE_LAKE_VERITY_CYRUS
 	addobject LOCALID_LAKE_CYRUS
-	applymovement LOCALID_LAKE_CYRUS, LakeVerity_Movement_CyrusStepsIn
+	applymovement LOCALID_LAKE_CYRUS, LakeVerity_Movement_CyrusWalkIn
 	waitmovement 0
-	applymovement LOCALID_LAKE_CYRUS, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_LAKE_CYRUS, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox LakeVerity_Text_Cyrus, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_LAKE_CYRUS, LakeVerity_Movement_CyrusLeaves
+	applymovement LOCALID_LAKE_CYRUS, LakeVerity_Movement_CyrusWalkOut
 	waitmovement 0
 	removeobject LOCALID_LAKE_CYRUS
 	setflag FLAG_HIDE_LAKE_VERITY_CYRUS
@@ -255,9 +261,8 @@ LakeVerity_EventScript_CyrusScene::
 	closemessage
 	removeobject LOCALID_LAKE_BARRY
 	setflag FLAG_HIDE_LAKE_VERITY_BARRY
+	@ Lake opening complete — player keeps control and walks out on their own.
 	setvar VAR_ROUTE201_STATE, 2
-	warpsilent MAP_ROUTE201, 14, 22
-	waitstate
 	releaseall
 	end
 
@@ -326,17 +331,24 @@ LakeVerity_Movement_AssistantLeaves:
 	step_end
 
 LakeVerity_Movement_PlayerToCase:
+	walk_right
+	walk_right
+	walk_up
+	walk_up
 	walk_up
 	face_up
 	step_end
 
 LakeVerity_Movement_BarryToCase:
-	walk_left
+	walk_right
+	walk_right
+	walk_up
 	walk_up
 	face_up
 	step_end
 
 LakeVerity_Movement_AssistantReturns:
+	walk_up
 	walk_up
 	walk_up
 	walk_up
@@ -357,13 +369,22 @@ LakeVerity_Movement_AssistantLeavesFinal:
 	walk_down
 	walk_down
 	walk_down
-	step_end
-
-LakeVerity_Movement_CyrusStepsIn:
 	walk_down
 	step_end
 
-LakeVerity_Movement_CyrusLeaves:
+LakeVerity_Movement_CyrusWalkIn:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	face_up
+	step_end
+
+LakeVerity_Movement_CyrusWalkOut:
+	walk_down
 	walk_down
 	walk_down
 	walk_down
@@ -488,8 +509,8 @@ LakeVerity_Text_Cyrus:
 
 LakeVerity_Text_BarryAfterCyrus:
 	.string "BARRY: That guy gave me the creeps.\p"
-	.string "Anyway--Sandgem is east of the\n"
-	.string "route. Race you once we get back!\p"
+	.string "Anyway--let's head back to the route.\n"
+	.string "Sandgem is east from there.\p"
 	.string "And don't think you're skipping\n"
 	.string "a battle with me!$"
 
