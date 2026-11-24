@@ -1,0 +1,50 @@
+{
+  "id": "MAP_VEILSTONE_CITY_GALACTIC_HQ_CYRUS",
+  "name": "VeilstoneCity_GalacticHQ_Cyrus",
+  "layout": "LAYOUT_VEILSTONE_CITY_GALACTIC_HQ_CYRUS",
+  "music": "MUS_AQUA_MAGMA_HIDEOUT",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_VEILSTONE_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAXIE",
+      "x": 8,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VeilstoneCity_GalacticHQ_Cyrus_EventScript_Cyrus",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_GALACTIC_HQ_2F",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 8,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_GALACTIC_HQ_2F",
+      "dest_warp_id": "3"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

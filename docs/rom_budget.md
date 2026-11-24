@@ -57,6 +57,7 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 | After M23 | 6,080,464 (5.799 MiB) | ~4.37 MiB | Used ~20 KiB from M22 (under 320 KiB) |
 | After M24 | 6,036,264 (5.757 MiB) | ~4.26 MiB | Used ~43 KiB from M23 (under 350 KiB) |
 | After M25 | 6,008,756 (5.730 MiB) | ~4.23 MiB | Used ~27 KiB from M24 (under 350 KiB) |
+| After M26 | 5,991,004 (5.713 MiB) | ~4.21 MiB | Used ~17 KiB from M25 (under 400 KiB) |
 
 ## Large assets log
 
@@ -92,3 +93,8 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 
 - Free trailing 0xFF: **6,008,756 bytes (5.730 MiB)**
 - SnowpointCity, AcuityLakefront, LakeAcuity EXACT; Candice Icicle Badge + TM Avalanche; Jupiter at Lake Acuity.
+
+### Measured after M26
+
+- Free trailing 0xFF: **5,991,004 bytes (5.713 MiB)**
+- Galactic HQ rematch path + SpearPillar EXACT; Distortion gate closed for M27.

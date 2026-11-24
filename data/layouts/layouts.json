@@ -10357,6 +10357,61 @@
       "border_filepath": "data/layouts/AcuityCavern_Stub/border.bin",
       "blockdata_filepath": "data/layouts/AcuityCavern_Stub/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VEILSTONE_CITY_GALACTIC_HQ_1F",
+      "name": "VeilstoneCity_GalacticHQ_1F_Layout",
+      "width": 64,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/VeilstoneCity_GalacticHQ_1F/border.bin",
+      "blockdata_filepath": "data/layouts/VeilstoneCity_GalacticHQ_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VEILSTONE_CITY_GALACTIC_HQ_2F",
+      "name": "VeilstoneCity_GalacticHQ_2F_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/VeilstoneCity_GalacticHQ_2F/border.bin",
+      "blockdata_filepath": "data/layouts/VeilstoneCity_GalacticHQ_2F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VEILSTONE_CITY_GALACTIC_HQ_CYRUS",
+      "name": "VeilstoneCity_GalacticHQ_Cyrus_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/VeilstoneCity_GalacticHQ_Cyrus/border.bin",
+      "blockdata_filepath": "data/layouts/VeilstoneCity_GalacticHQ_Cyrus/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_MT_CORONET_UPPER_STUB",
+      "name": "MtCoronet_UpperStub_Layout",
+      "width": 20,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtCoronet_UpperStub/border.bin",
+      "blockdata_filepath": "data/layouts/MtCoronet_UpperStub/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SPEAR_PILLAR",
+      "name": "SpearPillar_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/SpearPillar/border.bin",
+      "blockdata_filepath": "data/layouts/SpearPillar/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

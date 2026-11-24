@@ -35,8 +35,8 @@
       "x": 20,
       "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE207",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_MT_CORONET_UPPER_STUB",
+      "dest_warp_id": "0"
     },
     {
       "x": 21,
