@@ -193,11 +193,13 @@ def render(
 
 def main():
     out = Path("/opt/cursor/artifacts")
-    # M19 verification shots (Emerald tiles only — no live ROM dump / DS assets)
-    render("VeilstoneCity", out / "m19_veilstone_city.png", cam_x=8, cam_y=20, view_w=24, view_h=18)
-    render("LilycoveCity_DepartmentStore_1F", out / "m19_veilstone_dept_store.png", cam_x=0, cam_y=0, view_w=18, view_h=8, scale=3)
-    render("VeilstoneCity_Gym", out / "m19_veilstone_gym_maylene.png", cam_x=4, cam_y=0, view_w=16, view_h=14, scale=2)
-    render("VeilstoneCity_GalacticWarehouse", out / "m19_galactic_warehouse_hm02.png", cam_x=0, cam_y=0, view_w=16, view_h=14, scale=3)
+    # M20 verification shots (Emerald tiles only — no live ROM dump / DS assets)
+    render("Route214", out / "m20_route214_valor_lakefront.png", cam_x=8, cam_y=0, view_w=20, view_h=16, scale=2)
+    # Composite-ish Valor plaza view
+    render("ValorLakefront", out / "m20_valor_lakefront_resort.png", cam_x=16, cam_y=36, view_w=24, view_h=18, scale=2)
+    render("PastoriaCity", out / "m20_pastoria_city.png", cam_x=8, cam_y=8, view_w=24, view_h=18, scale=2)
+    render("PastoriaCity_Gym", out / "m20_pastoria_gym_crasher_wake.png", cam_x=4, cam_y=0, view_w=16, view_h=16, scale=2)
+    render("PastoriaCity", out / "m20_galactic_chase_trigger.png", cam_x=28, cam_y=4, view_w=20, view_h=14, scale=2)
 
 
 if __name__ == "__main__":

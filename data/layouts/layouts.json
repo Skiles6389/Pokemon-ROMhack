@@ -9895,6 +9895,72 @@
       "border_filepath": "data/layouts/VeilstoneCity_GalacticWarehouse/border.bin",
       "blockdata_filepath": "data/layouts/VeilstoneCity_GalacticWarehouse/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE214",
+      "name": "Route214_Layout",
+      "width": 32,
+      "height": 96,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route214/border.bin",
+      "blockdata_filepath": "data/layouts/Route214/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VALOR_LAKEFRONT",
+      "name": "ValorLakefront_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ValorLakefront/border.bin",
+      "blockdata_filepath": "data/layouts/ValorLakefront/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE213",
+      "name": "Route213_Layout",
+      "width": 96,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route213/border.bin",
+      "blockdata_filepath": "data/layouts/Route213/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_PASTORIA_CITY",
+      "name": "PastoriaCity_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/PastoriaCity/border.bin",
+      "blockdata_filepath": "data/layouts/PastoriaCity/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_PASTORIA_CITY_GYM",
+      "name": "PastoriaCity_Gym_Layout",
+      "width": 24,
+      "height": 40,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_DewfordGym",
+      "border_filepath": "data/layouts/PastoriaCity_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/PastoriaCity_Gym/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_PASTORIA_CITY_GREAT_MARSH_GATE",
+      "name": "PastoriaCity_GreatMarshGate_Layout",
+      "width": 14,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/PastoriaCity_GreatMarshGate/border.bin",
+      "blockdata_filepath": "data/layouts/PastoriaCity_GreatMarshGate/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

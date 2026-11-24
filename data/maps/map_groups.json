@@ -84,7 +84,8 @@
     "gMapGroup_IndoorM16",
     "gMapGroup_IndoorHearthome",
     "gMapGroup_IndoorM18",
-    "gMapGroup_IndoorVeilstone"
+    "gMapGroup_IndoorVeilstone",
+    "gMapGroup_IndoorM20"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -170,7 +171,11 @@
     "SolaceonTown",
     "Route210_South",
     "Route215",
-    "VeilstoneCity"
+    "VeilstoneCity",
+    "Route214",
+    "ValorLakefront",
+    "Route213",
+    "PastoriaCity"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1320,5 +1325,23 @@
     "VeilstoneCity_PrizeExchange",
     "VeilstoneCity_GalacticWarehouse",
     "VeilstoneCity_Route214Gate"
+  ],
+  "gMapGroup_IndoorM20": [
+    "PastoriaCity_PokemonCenter_1F",
+    "PastoriaCity_PokemonCenter_2F",
+    "PastoriaCity_Mart",
+    "PastoriaCity_Gym",
+    "PastoriaCity_GreatMarshGate",
+    "PastoriaCity_MoveReminderHouse",
+    "PastoriaCity_NorthHouse",
+    "PastoriaCity_EastHouse",
+    "PastoriaCity_NortheastHouse",
+    "PastoriaCity_SouthwestHouse",
+    "ValorLakefront_Restaurant",
+    "ValorLakefront_EastCottage",
+    "ValorLakefront_WestCottage",
+    "ValorLakefront_HotelLobby",
+    "Route213_DrFootstepHouse",
+    "Route213_HotelLobby"
   ]
 }

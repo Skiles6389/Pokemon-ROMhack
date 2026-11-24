@@ -48,46 +48,18 @@
       "x": 12,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_VEILSTONE_CITY",
-      "dest_warp_id": "13"
+      "dest_map": "MAP_ROUTE214",
+      "dest_warp_id": "0"
     },
     {
       "x": 13,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_VEILSTONE_CITY",
-      "dest_warp_id": "14"
+      "dest_map": "MAP_ROUTE214",
+      "dest_warp_id": "1"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 4,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "VeilstoneCity_Route214Gate_EventScript_ComingSoon"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 4,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "VeilstoneCity_Route214Gate_EventScript_ComingSoon"
-    },
-    {
-      "type": "trigger",
-      "x": 12,
-      "y": 4,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "VeilstoneCity_Route214Gate_EventScript_ComingSoon"
-    }
-  ],
+  "coord_events": [],
   "bg_events": [],
   "night_music": "MUS_PL_JUBILIFE_NIGHT"
 }

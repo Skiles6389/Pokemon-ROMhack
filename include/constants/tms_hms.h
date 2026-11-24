@@ -53,7 +53,8 @@
     F(SNATCH) \
     F(OVERHEAT) \
     F(PAYBACK) \
-    F(DRAIN_PUNCH)
+    F(DRAIN_PUNCH) \
+    F(BRINE)
 
 #define FOREACH_HM(F) \
     F(CUT) \

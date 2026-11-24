@@ -423,6 +423,14 @@
       "y": 36,
       "respawn_map": "MAP_VEILSTONE_CITY_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_VEILSTONE_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_PASTORIA_CITY",
+      "map": "MAP_PASTORIA_CITY",
+      "x": 24,
+      "y": 16,
+      "respawn_map": "MAP_PASTORIA_CITY_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_PASTORIA_NURSE"
     }
   ]
 }

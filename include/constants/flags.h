@@ -731,13 +731,13 @@
 #define FLAG_VISITED_ETERNA_CITY  0x2A2 // Sinnoh M19; Fly
 #define FLAG_VISITED_HEARTHOME_CITY  0x2A3 // Sinnoh M19; Fly
 #define FLAG_VISITED_SOLACEON_TOWN  0x2A4 // Sinnoh M19; Fly
-#define FLAG_UNUSED_0x2A5  0x2A5 // Unused Flag
-#define FLAG_UNUSED_0x2A6  0x2A6 // Unused Flag
-#define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag
-#define FLAG_UNUSED_0x2A8  0x2A8 // Unused Flag
-#define FLAG_UNUSED_0x2A9  0x2A9 // Unused Flag
-#define FLAG_UNUSED_0x2AA  0x2AA // Unused Flag
-#define FLAG_UNUSED_0x2AB  0x2AB // Unused Flag
+#define FLAG_RECEIVED_PASTORIA_GYM_TM  0x2A5 // Sinnoh M20
+#define FLAG_HIDE_PASTORIA_BARRY  0x2A6 // Sinnoh M20; set after rival battle
+#define FLAG_HIDE_PASTORIA_GALACTIC_GRUNT  0x2A7 // Sinnoh M20; cleared after Fen Badge
+#define FLAG_HIDE_PASTORIA_WAKE_CAMEO  0x2A8 // Sinnoh M20; cleared after Fen Badge
+#define FLAG_PASTORIA_GALACTIC_CHASE  0x2A9 // Sinnoh M20; set when grunt flees
+#define FLAG_VISITED_PASTORIA_CITY  0x2AA // Sinnoh M20; Fly
+#define FLAG_GOT_PASTORIA_HM_DEFOG  0x2AB // Sinnoh M20; reserved for Defog NPC
 #define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag
 #define FLAG_UNUSED_0x2AD  0x2AD // Unused Flag
 #define FLAG_UNUSED_0x2AE  0x2AE // Unused Flag

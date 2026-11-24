@@ -13079,11 +13079,14 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM53] =
+    [ITEM_TM_BRINE] =
     {
-        .name = ITEM_NAME("TM53"),
+        .name = ITEM_NAME("TM55"),
         .price = 3000,
-        .description = COMPOUND_STRING("?????"), // Todo
+        .description = COMPOUND_STRING(
+            "A Water move that\n"
+            "hits harder when\n"
+            "the foe has low HP."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
