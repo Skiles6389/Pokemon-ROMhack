@@ -19,6 +19,11 @@
       "map": "MAP_ROUTE204_NORTH",
       "offset": 0,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE205_SOUTH",
+      "offset": -32,
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -99,20 +104,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FloaromaTown_EventScript_Camper",
       "flag": "0"
-    },
-    {
-      "local_id": "LOCALID_FLOAROMA_EAST_GATE",
-      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 30,
-      "y": 50,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "FloaromaTown_EventScript_EastGate",
-      "flag": "0"
     }
   ],
   "warp_events": [
@@ -180,35 +171,7 @@
       "dest_warp_id": "4"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 31,
-      "y": 49,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "FloaromaTown_EventScript_EastGateTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 31,
-      "y": 50,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "FloaromaTown_EventScript_EastGateTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 31,
-      "y": 51,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "FloaromaTown_EventScript_EastGateTrigger"
-    }
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

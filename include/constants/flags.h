@@ -94,13 +94,13 @@
 #define FLAG_ITEM_RAVAGED_PATH_TM39 0x48
 #define FLAG_ITEM_RAVAGED_PATH_LUCK_INCENSE 0x49
 #define FLAG_HIDE_ROUTE204_CUT_TREE 0x4A
+#define FLAG_HIDE_ROUTE205_FOREST_GRUNTS 0x4B
+#define FLAG_HIDE_ROUTE205_LITTLE_GIRL 0x4C
+#define FLAG_HIDE_WINDWORKS_DOOR_GRUNT 0x4D
+#define FLAG_WINDWORKS_DOOR_LOCKED 0x4E
+#define FLAG_WINDWORKS_DOOR_UNLOCKED 0x4F
 // Ravaged Path smashable rocks: reuse map-local FLAG_TEMP_11..FLAG_TEMP_18
 // (same pattern as OreburghGate_1F rocks; TEMP flags clear on map change).
-#define FLAG_UNUSED_0x04B    0x4B // Unused Flag
-#define FLAG_UNUSED_0x04C    0x4C // Unused Flag
-#define FLAG_UNUSED_0x04D    0x4D // Unused Flag
-#define FLAG_UNUSED_0x04E    0x4E // Unused Flag
-#define FLAG_UNUSED_0x04F    0x4F // Unused Flag
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
@@ -108,8 +108,8 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
-#define FLAG_UNUSED_0x055                    0x55  // Unused Flag
+#define FLAG_HIDE_WINDWORKS_INTERIOR_GALACTIC 0x54 // Sinnoh M14
+#define FLAG_HIDE_WINDWORKS_DAUGHTER          0x55 // Sinnoh M14; set by default until reunion
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_MET_RIVAL_MOM                   0x57
@@ -130,7 +130,7 @@
 #define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 //
 #define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 //
 
-#define FLAG_UNUSED_0x068                    0x68  // Unused Flag
+#define FLAG_VALLEY_WINDWORKS_CLEARED        0x68 // Sinnoh M14
 
 #define FLAG_OCEANIC_MUSEUM_MET_REPORTER     0x69
 #define FLAG_RECEIVED_HM_STRENGTH            0x6A
@@ -666,12 +666,12 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
-#define FLAG_UNUSED_0x264  0x264 // Unused Flag
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
+#define FLAG_WINDWORKS_ENTRY_GRUNT_DONE  0x264 // Sinnoh M14
+#define FLAG_ITEM_ROUTE205_HEAL_BALL     0x265
+#define FLAG_ITEM_ROUTE205_X_SP_DEF      0x266
+#define FLAG_ITEM_ROUTE205_SUPER_POTION  0x267
+#define FLAG_ITEM_ROUTE205_REPEL         0x268
+#define FLAG_ITEM_WINDWORKS_POTION       0x269
 #define FLAG_UNUSED_0x26A  0x26A // Unused Flag
 #define FLAG_UNUSED_0x26B  0x26B // Unused Flag
 #define FLAG_UNUSED_0x26C  0x26C // Unused Flag

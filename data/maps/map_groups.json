@@ -151,6 +151,8 @@
     "Route204_South",
     "Route204_North",
     "FloaromaTown",
+    "Route205_South",
+    "ValleyWindworks_Exterior",
     "FloaromaMeadow"
   ],
   "gMapGroup_IndoorLittleroot": [
@@ -1223,6 +1225,8 @@
     "FloaromaTown_FlowerShop",
     "FloaromaTown_House1",
     "FloaromaTown_House2",
-    "FloaromaMeadow_House"
+    "FloaromaMeadow_House",
+    "Route205_South_House",
+    "ValleyWindworks_Interior"
   ]
 }

@@ -1,0 +1,91 @@
+{
+  "id": "MAP_VALLEY_WINDWORKS_EXTERIOR",
+  "name": "ValleyWindworks_Exterior",
+  "layout": "LAYOUT_VALLEY_WINDWORKS_EXTERIOR",
+  "music": "MUS_PL_ROUTE203",
+  "night_music": "MUS_PL_ROUTE203_NIGHT",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_VALLEY_WINDWORKS",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE205_SOUTH",
+      "offset": -64,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_WINDWORKS_DOOR_GRUNT",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "x": 19,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ValleyWindworks_Exterior_EventScript_DoorGrunt",
+      "flag": "FLAG_HIDE_WINDWORKS_DOOR_GRUNT"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 18,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ValleyWindworks_Exterior_EventScript_Potion",
+      "flag": "FLAG_ITEM_WINDWORKS_POTION"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 19,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_VALLEY_WINDWORKS_INTERIOR",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "ValleyWindworks_Exterior_EventScript_DoorGuard"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ValleyWindworks_Exterior_EventScript_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ValleyWindworks_Exterior_EventScript_Door"
+    }
+  ]
+}
