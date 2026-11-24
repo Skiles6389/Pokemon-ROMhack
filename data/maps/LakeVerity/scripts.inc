@@ -542,3 +542,67 @@ LakeVerity_Text_BriefcaseIdle:
 LakeVerity_Text_Sign:
 	.string "LAKE VERITY\n"
 	.string "The water keeps its own counsel.$"
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_1::
+	trainerbattle_single TRAINER_GALACTIC_GRUNT_LAKE_VERITY_1, LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_1_Intro, LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_1_Defeat
+	msgbox LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_1_After, MSGBOX_AUTOCLOSE
+	end
+
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_1_Intro:
+	.string "Stay out of this lake! This place\n"
+	.string "belongs to our crew now.$"
+
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_1_Defeat:
+	.string "The boss will not like this.$"
+
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_1_After:
+	.string "Keep walking if you dare. The lake\n"
+	.string "is not finished with surprises.$"
+
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_2::
+	trainerbattle_single TRAINER_GALACTIC_GRUNT_LAKE_VERITY_2, LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_2_Intro, LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_2_Defeat
+	msgbox LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_2_After, MSGBOX_AUTOCLOSE
+	end
+
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_2_Intro:
+	.string "Stay out of this lake! This place\n"
+	.string "belongs to our crew now.$"
+
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_2_Defeat:
+	.string "The boss will not like this.$"
+
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_2_After:
+	.string "Keep walking if you dare. The lake\n"
+	.string "is not finished with surprises.$"
+
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_3::
+	trainerbattle_single TRAINER_GALACTIC_GRUNT_LAKE_VERITY_3, LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_3_Intro, LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_3_Defeat
+	msgbox LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_3_After, MSGBOX_AUTOCLOSE
+	end
+
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_3_Intro:
+	.string "Stay out of this lake! This place\n"
+	.string "belongs to our crew now.$"
+
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_3_Defeat:
+	.string "The boss will not like this.$"
+
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_3_After:
+	.string "Keep walking if you dare. The lake\n"
+	.string "is not finished with surprises.$"
+
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_4::
+	trainerbattle_single TRAINER_GALACTIC_GRUNT_LAKE_VERITY_4, LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_4_Intro, LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_4_Defeat
+	msgbox LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_4_After, MSGBOX_AUTOCLOSE
+	end
+
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_4_Intro:
+	.string "Stay out of this lake! This place\n"
+	.string "belongs to our crew now.$"
+
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_4_Defeat:
+	.string "The boss will not like this.$"
+
+LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_4_After:
+	.string "Keep walking if you dare. The lake\n"
+	.string "is not finished with surprises.$"
+

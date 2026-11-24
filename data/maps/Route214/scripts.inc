@@ -217,3 +217,19 @@ Route214_EventScript_PlatNpc9_Text:
 	.string "These roads keep surprising me.\n"
 	.string "Every corner hides another path.$"
 
+Route214_EventScript_PiCarlos::
+	trainerbattle_single TRAINER_PI_CARLOS, Route214_EventScript_PiCarlos_Intro, Route214_EventScript_PiCarlos_Defeat
+	msgbox Route214_EventScript_PiCarlos_After, MSGBOX_AUTOCLOSE
+	end
+
+Route214_EventScript_PiCarlos_Intro:
+	.string "A quiet route is the best place to\n"
+	.string "test a sharp eye.$"
+
+Route214_EventScript_PiCarlos_Defeat:
+	.string "Case closed. You win.$"
+
+Route214_EventScript_PiCarlos_After:
+	.string "I will file this under lessons\n"
+	.string "learned the hard way.$"
+

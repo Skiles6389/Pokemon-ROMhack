@@ -235,13 +235,6 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 18,
-      "y": 25,
-      "elevation": 0,
-      "dest_map": "MAP_HEARTHOME_CITY_POKEMON_CENTER_1F",
-      "dest_warp_id": "1"
-    },
-    {
       "x": 22,
       "y": 25,
       "elevation": 0,
@@ -369,6 +362,13 @@
     },
     {
       "x": 38,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_HEARTHOME_CITY_NORTHEAST_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 39,
       "y": 25,
       "elevation": 0,
       "dest_map": "MAP_HEARTHOME_CITY_NORTHEAST_HOUSE",

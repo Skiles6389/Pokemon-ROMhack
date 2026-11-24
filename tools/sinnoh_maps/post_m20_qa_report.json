@@ -61,18 +61,12 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 2840,
-      "walkable_blocked": 1,
+      "mismatch": 2839,
+      "walkable_blocked": 0,
       "notes": [
-        "collision diverge 2840/4096 (69.3%) [informational]"
+        "collision diverge 2839/4096 (69.3%) [informational]"
       ],
-      "samples": [
-        [
-          50,
-          20,
-          538
-        ]
-      ]
+      "samples": []
     },
     "OreburghGate_1F": {
       "status": "PASS",
@@ -195,21 +189,10 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 258,
-      "walkable_blocked": 2,
+      "mismatch": 256,
+      "walkable_blocked": 0,
       "notes": [],
-      "samples": [
-        [
-          20,
-          5,
-          538
-        ],
-        [
-          20,
-          6,
-          538
-        ]
-      ]
+      "samples": []
     },
     "Route206": {
       "status": "PASS",
@@ -251,21 +234,10 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 419,
-      "walkable_blocked": 2,
+      "mismatch": 417,
+      "walkable_blocked": 0,
       "notes": [],
-      "samples": [
-        [
-          8,
-          53,
-          538
-        ],
-        [
-          12,
-          56,
-          538
-        ]
-      ]
+      "samples": []
     },
     "Route209": {
       "status": "PASS",
@@ -307,31 +279,10 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 547,
-      "walkable_blocked": 4,
+      "mismatch": 543,
+      "walkable_blocked": 0,
       "notes": [],
-      "samples": [
-        [
-          8,
-          21,
-          538
-        ],
-        [
-          32,
-          25,
-          538
-        ],
-        [
-          32,
-          26,
-          538
-        ],
-        [
-          48,
-          61,
-          538
-        ]
-      ]
+      "samples": []
     },
     "Route214": {
       "status": "PASS",
@@ -346,56 +297,28 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 908,
-      "walkable_blocked": 1,
+      "mismatch": 907,
+      "walkable_blocked": 0,
       "notes": [],
-      "samples": [
-        [
-          37,
-          53,
-          538
-        ]
-      ]
+      "samples": []
     },
     "Route213": {
       "status": "PASS",
       "size": "96x64",
       "plat_size": "96x64",
-      "mismatch": 1047,
-      "walkable_blocked": 3,
+      "mismatch": 1044,
+      "walkable_blocked": 0,
       "notes": [],
-      "samples": [
-        [
-          8,
-          11,
-          538
-        ],
-        [
-          69,
-          16,
-          538
-        ],
-        [
-          69,
-          17,
-          538
-        ]
-      ]
+      "samples": []
     },
     "PastoriaCity": {
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 807,
-      "walkable_blocked": 1,
+      "mismatch": 806,
+      "walkable_blocked": 0,
       "notes": [],
-      "samples": [
-        [
-          4,
-          45,
-          538
-        ]
-      ]
+      "samples": []
     }
   }
 }

@@ -1243,7 +1243,7 @@
 #define FLAG_ITEM_ROUTE213_V06_3  0x4A3 // was FLAG_UNUSED_0x4A3 // Unused Flag
 #define FLAG_ITEM_ROUTE213_V06_4  0x4A4 // was FLAG_UNUSED_0x4A4 // Unused Flag
 #define FLAG_ITEM_PASTORIACITY_V06_0  0x4A5 // was FLAG_UNUSED_0x4A5 // Unused Flag
-#define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
+#define FLAG_LAKE_VALOR_DRAINED                                    0x4A6 // Sinnoh: Lake Valor drained state
 #define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
 #define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
 #define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
@@ -1339,17 +1339,20 @@
 #define FLAG_UNUSED_0x4FF                                           0x4FF // Unused Flag
 
 // Trainer Flags
-// Trainer flags occupy 0x500 - 0x85F, the last 9 of which are unused
-// See constants/opponents.h. The values there + FLAG_TRAINER_FLAG_START are the flag IDs
+// Trainer flags occupy TRAINER_FLAGS_START .. TRAINER_FLAGS_END.
+// See constants/opponents.h (MAX_TRAINERS_COUNT). Values there + TRAINER_FLAGS_START
+ // are the defeated-flag IDs. Raising MAX_TRAINERS_COUNT widens this range and
+ // shifts SYSTEM_FLAGS / DAILY_FLAGS; FLAGS_COUNT / NUM_FLAG_BYTES grow with it.
+ // v0.7: MAX=1024 → TRAINER_FLAGS_END=0x8FF, SYSTEM_FLAGS=0x900 (was 0x85F / 0x860).
 
 #define TRAINER_FLAGS_START                                         0x500
-#define TRAINER_FLAGS_END                                           (TRAINER_FLAGS_START + MAX_TRAINERS_COUNT - 1) // 0x85F
+#define TRAINER_FLAGS_END                                           (TRAINER_FLAGS_START + MAX_TRAINERS_COUNT - 1) // 0x8FF when MAX=1024
 
 // System Flags
 
-#define SYSTEM_FLAGS                                   (TRAINER_FLAGS_END + 1) // 0x860
+#define SYSTEM_FLAGS                                   (TRAINER_FLAGS_END + 1) // 0x900 when MAX=1024
 
-#define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
+#define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // was FLAG_0x860 at MAX=864
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
 #define FLAG_UNUSED_0x863                            (SYSTEM_FLAGS + 0x3) // Unused Flag

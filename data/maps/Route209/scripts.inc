@@ -235,19 +235,37 @@ Route209_EventScript_PlatNpc11_Text:
 	.string "These roads keep surprising me.\n"
 	.string "Every corner hides another path.$"
 
-Route209_EventScript_V06Traveler4::
-	msgbox Route209_EventScript_V06Traveler4_Text, MSGBOX_NPC
+
+
+Route209_EventScript_JoggerRaul::
+	trainerbattle_single TRAINER_JOGGER_RAUL, Route209_EventScript_JoggerRaul_Intro, Route209_EventScript_JoggerRaul_Defeat
+	msgbox Route209_EventScript_JoggerRaul_After, MSGBOX_AUTOCLOSE
 	end
 
-Route209_EventScript_V06Traveler4_Text:
-	.string "I was hoping for a battle, but I\n"
-	.string "will save my strength for later.$"
+Route209_EventScript_JoggerRaul_Intro:
+	.string "Hold up! A battle will tell me how\n"
+	.string "far you have come.$"
 
-Route209_EventScript_V06Traveler5::
-	msgbox Route209_EventScript_V06Traveler5_Text, MSGBOX_NPC
+Route209_EventScript_JoggerRaul_Defeat:
+	.string "That was cleaner than I expected.$"
+
+Route209_EventScript_JoggerRaul_After:
+	.string "Keep moving. Every route has a\n"
+	.string "lesson if you look for it.$"
+
+Route209_EventScript_PokeKidDanielle::
+	trainerbattle_single TRAINER_POKE_KID_DANIELLE, Route209_EventScript_PokeKidDanielle_Intro, Route209_EventScript_PokeKidDanielle_Defeat
+	msgbox Route209_EventScript_PokeKidDanielle_After, MSGBOX_AUTOCLOSE
 	end
 
-Route209_EventScript_V06Traveler5_Text:
-	.string "I was hoping for a battle, but I\n"
-	.string "will save my strength for later.$"
+Route209_EventScript_PokeKidDanielle_Intro:
+	.string "Hold up! A battle will tell me how\n"
+	.string "far you have come.$"
+
+Route209_EventScript_PokeKidDanielle_Defeat:
+	.string "That was cleaner than I expected.$"
+
+Route209_EventScript_PokeKidDanielle_After:
+	.string "Keep moving. Every route has a\n"
+	.string "lesson if you look for it.$"
 

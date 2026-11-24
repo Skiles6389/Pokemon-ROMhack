@@ -246,3 +246,19 @@ Route215_EventScript_PlatNpc12_Text:
 	.string "These roads keep surprising me.\n"
 	.string "Every corner hides another path.$"
 
+Route215_EventScript_AceMaya::
+	trainerbattle_single TRAINER_ACE_TRAINER_MAYA, Route215_EventScript_AceMaya_Intro, Route215_EventScript_AceMaya_Defeat
+	msgbox Route215_EventScript_AceMaya_After, MSGBOX_AUTOCLOSE
+	end
+
+Route215_EventScript_AceMaya_Intro:
+	.string "Hold up! A battle will tell me how\n"
+	.string "far you have come.$"
+
+Route215_EventScript_AceMaya_Defeat:
+	.string "That was cleaner than I expected.$"
+
+Route215_EventScript_AceMaya_After:
+	.string "Keep moving. Every route has a\n"
+	.string "lesson if you look for it.$"
+

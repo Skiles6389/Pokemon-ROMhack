@@ -985,14 +985,52 @@
 #define TRAINER_SCHOOL_KID_CARTER           862
 #define TRAINER_PICNICKER_DIANA_GATE        863
 
-// Sinnoh demo: when the slots run out, reuse a Hoenn trainer ID that no script references
-//       (see the "reuses unused Hoenn slot" notes above) instead of raising the count.
-// NOTE: Because each Trainer uses a flag to determine when they are defeated, there is no space for additional trainers before trainer flag space overflows
-//       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
-//       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
+// Trainer flag / save-block notes (v0.7):
+ // Each trainer ID consumes one bit in SaveBlock1.flags via
+ //   TRAINER_FLAGS_START (0x500) .. TRAINER_FLAGS_END
+ //   SYSTEM_FLAGS = TRAINER_FLAGS_END + 1  (all later flags shift with the cap)
+ // SaveBlock1 must fit in 4 * SECTOR_DATA_SIZE (15872) bytes.
+ // At MAX=864: sizeof(SaveBlock1)=15568, free=304 bytes.
+ // Raising MAX by N grows NUM_FLAG_BYTES by ~N/8.
+ // MAX=1024 uses +20 flag bytes (free remains ~284) — well under the static assert.
+ // TRAINERS_COUNT is the live party/table length (max defined ID + 1).
+ // MAX_TRAINERS_COUNT is the flag allocation ceiling (may be > TRAINERS_COUNT).
+ // Rematch / Vs. Seeker / Trainer Hill tables are separate enums and unaffected.
+ // Partner IDs use TRAINER_PARTNER(p) = MAX_TRAINERS_COUNT + p (still u16-safe).
 
-#define TRAINERS_COUNT_EMERALD     864
-#define MAX_TRAINERS_COUNT_EMERALD 864
+#define TRAINER_VETERAN_GRANT                    864 // Sinnoh v0.7
+
+#define TRAINER_HIKER_ALEXANDER                    865 // Sinnoh v0.7
+
+#define TRAINER_JOGGER_RAUL                    866 // Sinnoh v0.7
+
+#define TRAINER_POKE_KID_DANIELLE                    867 // Sinnoh v0.7
+
+
+
+#define TRAINER_NINJA_BOY_FABIAN                    870 // Sinnoh v0.7
+
+#define TRAINER_NINJA_BOY_BRENNAN                    871 // Sinnoh v0.7
+
+
+#define TRAINER_NINJA_BOY_BRUCE                    873 // Sinnoh v0.7
+
+
+#define TRAINER_ACE_TRAINER_MAYA                    875 // Sinnoh v0.7
+
+#define TRAINER_PI_CARLOS                    876 // Sinnoh v0.7
+
+
+#define TRAINER_GALACTIC_GRUNT_LAKE_VERITY_1                    878 // Sinnoh v0.7
+
+#define TRAINER_GALACTIC_GRUNT_LAKE_VERITY_3                    879 // Sinnoh v0.7
+
+#define TRAINER_GALACTIC_GRUNT_LAKE_VERITY_2                    880 // Sinnoh v0.7
+
+#define TRAINER_GALACTIC_GRUNT_LAKE_VERITY_4                    881 // Sinnoh v0.7
+
+#define TRAINERS_COUNT_EMERALD     882
+#define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG
 #define TRAINERS_COUNT                      TRAINERS_COUNT_FRLG
