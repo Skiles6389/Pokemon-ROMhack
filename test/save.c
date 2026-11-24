@@ -4,7 +4,7 @@
 
 // If you would like to ensure save compatibility, update the values below with those for your hack. You can find these through the debug menu.
 // Please note that this simple check is not 100% foolproof, but should be able to catch most unintended shifts.
-#define T_SAVEBLOCK1_SIZE 15568
+#define T_SAVEBLOCK1_SIZE 15588 // v0.7: MAX_TRAINERS_COUNT 864→1024 grew NUM_FLAG_BYTES 300→320
 #define T_SAVEBLOCK2_SIZE 3884
 #define T_SAVEBLOCK3_SIZE 28 // grew with FNPC_ENABLE_NPC_FOLLOWERS for Cheryl (M15)
 #define T_POKEMONSTORAGE_SIZE 34144

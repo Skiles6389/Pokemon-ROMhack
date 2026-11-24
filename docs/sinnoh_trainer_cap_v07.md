@@ -39,3 +39,7 @@ Do not raise the cap without re-checking `sizeof(struct SaveBlock1)` against `SE
 - `TRAINER_GALACTIC_GRUNT_LAKE_VERITY_4` = 881
 
 Holes in 868–877 are unused reserved slots under TRAINERS_COUNT=882; safe for flags.
+
+## Tests
+
+- `test/save.c` `T_SAVEBLOCK1_SIZE` must match `sizeof(SaveBlock1)` after any cap change (currently **15588**).
