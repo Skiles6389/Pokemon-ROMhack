@@ -76,3 +76,17 @@ __pycache__
 baserom.gba
 baserom*.gba
 baserom.bin
+# Nintendo DS sources used by tools/platinum_music must never be committed
+*.nds
+*.sdat
+*.sseq
+*.sbnk
+*.swar
+*.swav
+*.strm
+*.7z
+*.bps
+*.ips
+*.mp3
+tools/platinum_music/**/__pycache__/
+tools/platinum_music/**/*.wav

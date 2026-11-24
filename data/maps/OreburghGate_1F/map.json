@@ -2,7 +2,7 @@
   "id": "MAP_OREBURGH_GATE_1F",
   "name": "OreburghGate_1F",
   "layout": "LAYOUT_OREBURGH_GATE_1F",
-  "music": "MUS_PETALBURG_WOODS",
+  "music": "MUS_PL_OREBURGH_GATE",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_OREBURGH_GATE",
   "requires_flash": false,

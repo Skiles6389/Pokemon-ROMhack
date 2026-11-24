@@ -2,7 +2,7 @@
   "id": "MAP_LAKE_VERITY",
   "name": "LakeVerity",
   "layout": "LAYOUT_LAKE_VERITY",
-  "music": "MUS_PETALBURG_WOODS",
+  "music": "MUS_PL_LAKE",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_LAKE_VERITY",
   "requires_flash": false,

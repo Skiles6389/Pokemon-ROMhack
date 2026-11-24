@@ -1216,6 +1216,8 @@ static u16 GetNightMusicFromTrack(u16 track)
 {
     if (GetTimeOfDay() != TIME_NIGHT)
         return track;
+    if (track < START_MUS || track >= END_MUS)
+        return track;
     if (sNightMusicTable[track - START_MUS] >= START_MUS && sNightMusicTable[track - START_MUS] <= END_MUS)
         return sNightMusicTable[track - START_MUS];
     return track;

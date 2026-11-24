@@ -2,7 +2,7 @@
   "id": "MAP_OREBURGH_CITY_GYM",
   "name": "OreburghCity_Gym",
   "layout": "LAYOUT_RUSTBORO_CITY_GYM",
-  "music": "MUS_GYM",
+  "music": "MUS_PL_GYM",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_OREBURGH_CITY",
   "requires_flash": false,

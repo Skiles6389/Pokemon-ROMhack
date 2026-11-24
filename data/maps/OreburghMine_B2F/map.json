@@ -2,7 +2,7 @@
   "id": "MAP_OREBURGH_MINE_B2F",
   "name": "OreburghMine_B2F",
   "layout": "LAYOUT_OREBURGH_MINE_B2F",
-  "music": "MUS_PETALBURG_WOODS",
+  "music": "MUS_PL_OREBURGH_MINE",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_OREBURGH_MINE",
   "requires_flash": false,

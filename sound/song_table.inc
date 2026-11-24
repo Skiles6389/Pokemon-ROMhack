@@ -616,6 +616,46 @@ gSongTable::
 	song ph_nurse_blend, MUSIC_PLAYER_SE2, 2
 	song ph_nurse_held, MUSIC_PLAYER_SE2, 2
 	song ph_nurse_solo, MUSIC_PLAYER_SE2, 2
+	song mus_pl_title, MUSIC_PLAYER_BGM, 0
+	song mus_pl_rowan, MUSIC_PLAYER_BGM, 0
+	song mus_pl_twinleaf, MUSIC_PLAYER_BGM, 0
+	song mus_pl_twinleaf_night, MUSIC_PLAYER_BGM, 0
+	song mus_pl_route201, MUSIC_PLAYER_BGM, 0
+	song mus_pl_route201_night, MUSIC_PLAYER_BGM, 0
+	song mus_pl_route203, MUSIC_PLAYER_BGM, 0
+	song mus_pl_route203_night, MUSIC_PLAYER_BGM, 0
+	song mus_pl_lake, MUSIC_PLAYER_BGM, 0
+	song mus_pl_sandgem, MUSIC_PLAYER_BGM, 0
+	song mus_pl_sandgem_night, MUSIC_PLAYER_BGM, 0
+	song mus_pl_rowan_lab, MUSIC_PLAYER_BGM, 0
+	song mus_pl_jubilife, MUSIC_PLAYER_BGM, 0
+	song mus_pl_jubilife_night, MUSIC_PLAYER_BGM, 0
+	song mus_pl_oreburgh_gate, MUSIC_PLAYER_BGM, 0
+	song mus_pl_oreburgh_mine, MUSIC_PLAYER_BGM, 0
+	song mus_pl_oreburgh, MUSIC_PLAYER_BGM, 0
+	song mus_pl_oreburgh_night, MUSIC_PLAYER_BGM, 0
+	song mus_pl_gym, MUSIC_PLAYER_BGM, 0
+	song mus_pl_poke_center, MUSIC_PLAYER_BGM, 0
+	song mus_pl_poke_center_night, MUSIC_PLAYER_BGM, 0
+	song mus_pl_poke_mart, MUSIC_PLAYER_BGM, 0
+	song mus_pl_encounter_barry, MUSIC_PLAYER_BGM, 0
+	song mus_pl_encounter_galactic, MUSIC_PLAYER_BGM, 0
+	song mus_pl_encounter_boy, MUSIC_PLAYER_BGM, 0
+	song mus_pl_encounter_girl, MUSIC_PLAYER_BGM, 0
+	song mus_pl_vs_wild, MUSIC_PLAYER_BGM, 0
+	song mus_pl_vs_trainer, MUSIC_PLAYER_BGM, 0
+	song mus_pl_vs_barry, MUSIC_PLAYER_BGM, 0
+	song mus_pl_vs_gym_leader, MUSIC_PLAYER_BGM, 0
+	song mus_pl_vs_galactic, MUSIC_PLAYER_BGM, 0
+	song mus_pl_victory_wild, MUSIC_PLAYER_BGM, 0
+	song mus_pl_victory_trainer, MUSIC_PLAYER_BGM, 0
+	song mus_pl_victory_gym_leader, MUSIC_PLAYER_BGM, 0
+	song mus_pl_heal, MUSIC_PLAYER_SE2, 2
+	song mus_pl_obtain_badge, MUSIC_PLAYER_SE2, 2
+	song mus_pl_obtain_item, MUSIC_PLAYER_SE2, 2
+	song mus_pl_level_up, MUSIC_PLAYER_SE2, 2
+	song mus_pl_evolution, MUSIC_PLAYER_BGM, 0
+	song mus_pl_evolved, MUSIC_PLAYER_SE2, 2
 
 	.align 2
 dummy_song_header:
