@@ -265,7 +265,7 @@ LakeVerity_EventScript_CyrusScene::
 	closemessage
 	removeobject LOCALID_LAKE_BARRY
 	setflag FLAG_HIDE_LAKE_VERITY_BARRY
-	@ Lake opening complete — player keeps control and walks out on their own.
+	@ Lake opening complete - player keeps control and walks out on their own.
 	setvar VAR_ROUTE201_STATE, 2
 	releaseall
 	end

@@ -126,7 +126,7 @@
 #define TRAINER_NAOMI                       119
 #define TRAINER_LASS_SARAH                  120 // Sinnoh: reuses unused Hoenn slot TRAINER_CINDY_3
 #define TRAINER_LASS_SAMANTHA               121 // Sinnoh: reuses unused Hoenn slot TRAINER_CINDY_4
-#define TRAINER_YOUNGSTER_TYLER             122 // Sinnoh: reuses unused Hoenn slot TRAINER_CINDY_5
+#define TRAINER_YOUNGSTER_TYLER_R204         122 // Sinnoh: reuses unused Hoenn slot TRAINER_CINDY_5
 #define TRAINER_CINDY_6                     123
 #define TRAINER_MELISSA                     124
 #define TRAINER_SHEILA                      125
