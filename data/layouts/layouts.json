@@ -10269,6 +10269,94 @@
       "border_filepath": "data/layouts/LakeValor_Drained/border.bin",
       "blockdata_filepath": "data/layouts/LakeValor_Drained/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SNOWPOINT_CITY",
+      "name": "SnowpointCity_Layout",
+      "width": 32,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/SnowpointCity/border.bin",
+      "blockdata_filepath": "data/layouts/SnowpointCity/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ACUITY_LAKEFRONT",
+      "name": "AcuityLakefront_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/AcuityLakefront/border.bin",
+      "blockdata_filepath": "data/layouts/AcuityLakefront/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_LAKE_ACUITY",
+      "name": "LakeAcuity_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/LakeAcuity/border.bin",
+      "blockdata_filepath": "data/layouts/LakeAcuity/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SNOWPOINT_CITY_HOUSE1",
+      "name": "SnowpointCity_House1_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SnowpointCity_House1/border.bin",
+      "blockdata_filepath": "data/layouts/SnowpointCity_House1/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SNOWPOINT_CITY_HOUSE2",
+      "name": "SnowpointCity_House2_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SnowpointCity_House2/border.bin",
+      "blockdata_filepath": "data/layouts/SnowpointCity_House2/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SNOWPOINT_CITY_MART",
+      "name": "SnowpointCity_Mart_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SnowpointCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/SnowpointCity_Mart/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SNOWPOINT_TEMPLE_STUB",
+      "name": "SnowpointTemple_Stub_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SnowpointTemple_Stub/border.bin",
+      "blockdata_filepath": "data/layouts/SnowpointTemple_Stub/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ACUITY_CAVERN_STUB",
+      "name": "AcuityCavern_Stub_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/AcuityCavern_Stub/border.bin",
+      "blockdata_filepath": "data/layouts/AcuityCavern_Stub/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

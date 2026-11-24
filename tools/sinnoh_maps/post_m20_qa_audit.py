@@ -121,6 +121,9 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "Route216": [[110, 111, 112]],
     "Route217": [[106], [107], [108], [109]],
     "LakeValor_Drained": [[544, 545], [546, 547]],
+    "SnowpointCity": [[104], [105]],
+    "AcuityLakefront": [[100, 101], [102, 103]],
+    "LakeAcuity": [[553, 554], [555, 556]],
 }
 
 # Collision-like Emerald metatiles used as solid stand-ins

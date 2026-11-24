@@ -226,10 +226,18 @@ Route217_EventScript_PlatNpc18_Text:
 	.string "Pack warm clothes and warmer POK-MON.$"
 
 Route217_EventScript_SnowpointClosed::
-	msgbox Route217_Text_SnowpointClosed, MSGBOX_NPC
+	goto Route217_EventScript_SnowpointOpen
 	end
 
 Route217_Text_SnowpointClosed:
 	.string "Blizzard buried the road into Snowpoint.\n"
 	.string "Come back when the next storm clears.$"
 
+
+Route217_EventScript_SnowpointOpen::
+	msgbox Route217_Text_SnowpointOpen, MSGBOX_NPC
+	end
+
+Route217_Text_SnowpointOpen:
+	.string "The drift cleared!\n"
+	.string "Snowpoint City is just ahead.$"
