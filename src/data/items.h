@@ -13056,11 +13056,9 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("TM66"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "An attack that is
-"
-            "boosted if user is
-"
-            "hit first."),
+            "An attack that is\n"
+            "powered up if the\n"
+            "user was hit first."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

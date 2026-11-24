@@ -2174,6 +2174,40 @@ def patch_items_payback():
     print("patched items.h for PAYBACK TM")
 
 
+
+def patch_event_scripts():
+    path = REPO / "data" / "event_scripts.s"
+    text = path.read_text()
+    marker = '\t.include "data/maps/HearthomeCity_Route212Gate/scripts.inc"\n'
+    block = marker + """\t.include "data/maps/Route209/scripts.inc"
+\t.include "data/maps/LostTower_1F/scripts.inc"
+\t.include "data/maps/LostTower_2F/scripts.inc"
+\t.include "data/maps/LostTower_3F/scripts.inc"
+\t.include "data/maps/LostTower_4F/scripts.inc"
+\t.include "data/maps/LostTower_5F/scripts.inc"
+\t.include "data/maps/SolaceonTown/scripts.inc"
+\t.include "data/maps/SolaceonTown_PokemonCenter_1F/scripts.inc"
+\t.include "data/maps/SolaceonTown_PokemonCenter_2F/scripts.inc"
+\t.include "data/maps/SolaceonTown_Mart/scripts.inc"
+\t.include "data/maps/SolaceonTown_PokemonDayCare/scripts.inc"
+\t.include "data/maps/SolaceonTown_NewsPress/scripts.inc"
+\t.include "data/maps/SolaceonTown_NorthHouse/scripts.inc"
+\t.include "data/maps/SolaceonTown_NortheastHouse/scripts.inc"
+\t.include "data/maps/SolaceonTown_EastHouse/scripts.inc"
+\t.include "data/maps/SolaceonRuins_ExteriorGate/scripts.inc"
+\t.include "data/maps/Route210_South/scripts.inc"
+\t.include "data/maps/Route210_CafeCabin/scripts.inc"
+\t.include "data/maps/Route215/scripts.inc"
+\t.include "data/maps/Route215_VeilstoneGate/scripts.inc"
+"""
+    if 'data/maps/Route209/scripts.inc' not in text and marker in text:
+        text = text.replace(marker, block, 1)
+        path.write_text(text)
+        print("patched event_scripts.s")
+    else:
+        print("event_scripts.s already has M18 includes or marker missing")
+
+
 def main():
     scaffold_route209()
     scaffold_solaceon_town()
