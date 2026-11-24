@@ -158,6 +158,13 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "PokemonLeague_Sinnoh_CynthiasRoom": [[264]],
     "PokemonLeague_Sinnoh_HallOfFame": [[265]],
     "PokemonLeague_Sinnoh_HallwayToHoF": [[309]],
+    "Route224": [[None, 115], [116, 117], [118, None]],
+    "Route225": [[163, 166], [164, None], [165, None]],
+    "FightArea": [[132, 133]],
+    "VictoryRoad_Sinnoh_Room1": [[425]],
+    "VictoryRoad_Sinnoh_Room2": [[421, 422], [423, 424]],
+    "VictoryRoad_Sinnoh_Room3": [[426]],
+
 
 }
 

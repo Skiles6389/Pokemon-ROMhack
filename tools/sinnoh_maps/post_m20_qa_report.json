@@ -742,6 +742,60 @@
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
+    },
+    "Route224": {
+      "status": "PASS",
+      "size": "64x96",
+      "plat_size": "64x96",
+      "mismatch": 2048,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "Route225": {
+      "status": "PASS",
+      "size": "64x96",
+      "plat_size": "64x96",
+      "mismatch": 2060,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "FightArea": {
+      "status": "PASS",
+      "size": "64x32",
+      "plat_size": "64x32",
+      "mismatch": 2,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "VictoryRoad_Sinnoh_Room1": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "VictoryRoad_Sinnoh_Room2": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "VictoryRoad_Sinnoh_Room3": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
     }
   }
 }

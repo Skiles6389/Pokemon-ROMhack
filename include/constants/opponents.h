@@ -1269,7 +1269,67 @@
 
 #define TRAINER_CHAMPION_CYNTHIA                    1001 // Sinnoh Champion
 
-#define TRAINERS_COUNT_EMERALD     1002
+#define TRAINER_ACE_TRAINER_MICAH                    1002 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_BRANDI                    1003 // Sinnoh Postgame
+
+#define TRAINER_PSYCHIC_DESIREE                    1004 // Sinnoh Postgame
+
+#define TRAINER_PSYCHIC_LANDON                    1005 // Sinnoh Postgame
+
+#define TRAINER_BLACK_BELT_EDDIE                    1006 // Sinnoh Postgame
+
+#define TRAINER_VETERAN_TERRELL                    1007 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_ARTHUR                    1008 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_CLARICE                    1009 // Sinnoh Postgame
+
+#define TRAINER_PSYCHIC_DEANDRE                    1010 // Sinnoh Postgame
+
+#define TRAINER_PSYCHIC_KENDRA                    1011 // Sinnoh Postgame
+
+#define TRAINER_BIRD_KEEPER_AUTUMN                    1012 // Sinnoh Postgame
+
+#define TRAINER_DRAGON_TAMER_JOE                    1013 // Sinnoh Postgame
+
+#define TRAINER_BLACK_BELT_WILLIE                    1014 // Sinnoh Postgame
+
+#define TRAINER_VETERAN_BRENDEN                    1015 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_RUBEN                    1016 // Sinnoh Postgame
+
+#define TRAINER_PSYCHIC_MAXWELL                    1017 // Sinnoh Postgame
+
+#define TRAINER_BLACK_BELT_CARL                    1018 // Sinnoh Postgame
+
+#define TRAINER_VETERAN_ARMANDO                    1019 // Sinnoh Postgame
+
+#define TRAINER_PSYCHIC_BRITTNEY                    1020 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_JAMIE                    1021 // Sinnoh Postgame
+
+#define TRAINER_RUIN_MANIAC_LARRY_R224                    1022 // Sinnoh Postgame
+
+#define TRAINER_DRAGON_TAMER_HAYDEN                    1023 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_RODOLFO                    1024 // Sinnoh Postgame
+
+#define TRAINER_RANGER_ASHLEE                    1025 // Sinnoh Postgame
+
+#define TRAINER_BIRD_KEEPER_AUDREY                    1026 // Sinnoh Postgame
+
+#define TRAINER_PSYCHIC_DAISY                    1027 // Sinnoh Postgame
+
+#define TRAINER_DRAGON_TAMER_GEOFFREY                    1028 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_DEANNA                    1029 // Sinnoh Postgame
+
+#define TRAINER_RANGER_DWAYNE                    1030 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_QUINN                    1031 // Sinnoh Postgame
+
+#define TRAINERS_COUNT_EMERALD     1032
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG

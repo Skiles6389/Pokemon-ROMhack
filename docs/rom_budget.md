@@ -64,6 +64,7 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 | After M28 (Victory Road) | 5,819,644 (5.550 MiB) | ~4.05 MiB | Used ~54 KiB from Sunyshore (under 400 KiB) |
 | After M29 (Elite Four) | 5,794,280 (5.526 MiB) | ~4.09 MiB | Used ~25 KiB from M28 (under 350 KiB) |
 | After M30 (Champion) | 5,786,568 (5.519 MiB) | ~4.09 MiB | Used ~8 KiB from M29 (under 250 KiB) |
+| After postgame Fight Area | 5,724,356 (5.459 MiB) | ~4.03 MiB | Used ~61 KiB from M30 (R224/225/Fight Area) |
 
 ## Large assets log
 
@@ -114,3 +115,8 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 
 - Free trailing 0xFF: **5,786,568 bytes (5.519 MiB)**
 - Cynthia (Platinum team/levels, IVs 0), Sinnoh Hallway + Hall of Fame EXACT; `FLAG_DEFEATED_CHAMPION_CYNTHIA` + `FLAG_SYS_GAME_CLEAR` + `GameClear` credits.
+
+### Measured after postgame Fight Area
+
+- Free trailing 0xFF: **5,724,356 bytes (5.459 MiB)**
+- VR backside rooms 1–3, Route 224/225, Fight Area (+ PC/mart/houses) EXACT; Survival soft-closed on R225; Battle Frontier gate soft-looped.
