@@ -47,6 +47,7 @@
 #include "mirage_tower.h"
 #include "money.h"
 #include "new_game.h"
+#include "randomizer.h"
 #include "oras_dowse.h"
 #include "palette.h"
 #include "play_time.h"
@@ -1936,6 +1937,13 @@ void CB2_NewGame(void)
     StopMapMusic();
     ResetSafariZoneFlag_();
     NewGameInitData();
+    Randomizer_InitNewGameDefaults();
+    gMain.state = 0;
+    SetMainCallback2(CB2_InitRandomizerMenu);
+}
+
+void CB2_ContinueNewGameFromRandomizer(void)
+{
     ResetInitialPlayerAvatarState();
     PlayTimeCounter_Start();
     ScriptContext_Init();
@@ -1943,6 +1951,7 @@ void CB2_NewGame(void)
     // Skip the moving-truck intro. A new game fades in at the Twinleaf bedroom.
     gFieldCallback = FieldCB_WarpExitFadeFromBlack;
     gFieldCallback2 = NULL;
+    gMain.state = 0;
     DoMapLoadLoop(&gMain.state);
     SetFieldVBlankCallback();
     SetMainCallback1(CB1_Overworld);

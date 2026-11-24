@@ -6,6 +6,7 @@
 #include "string_util.h"
 #include "trainer_util.h"
 #include "text.h"
+#include "randomizer.h"
 
 #include "constants/battle_ai.h"
 #include "constants/pokeball.h"
@@ -100,6 +101,8 @@ void MakeTrainerGenerator(struct TrainerGenerator *trainerGen, const struct Trai
     if (trainer->aiFlags & AI_FLAG_SMART_TERA)
         trainerGen->smartTera = TRUE;
     trainerGen->isFrontier = FALSE;
+    trainerGen->monsGenerated = 0;
+    trainerGen->trainerId = (u16)(Crc32B((const u8 *)trainer, sizeof(struct Trainer)) & 0xFFFF);
     StringCopyN(trainerGen->name, trainer->trainerName, TRAINER_NAME_LENGTH + 1);
     trainerGen->trainerClass = trainer->trainerClass;
     trainerGen->otID = OTID_STRUCT_RANDOM_NO_SHINY;
@@ -113,6 +116,8 @@ void MakePartnerGenerator(struct TrainerGenerator *trainerGen, const struct Trai
     if (partner->aiFlags & AI_FLAG_SMART_TERA)
         trainerGen->smartTera = TRUE;
     trainerGen->isFrontier = FALSE;
+    trainerGen->monsGenerated = 0;
+    trainerGen->trainerId = (u16)(Crc32B((const u8 *)partner, sizeof(struct Trainer)) & 0xFFFF);
     StringCopyN(trainerGen->name, partner->trainerName, TRAINER_NAME_LENGTH + 1);
     trainerGen->trainerClass = partner->trainerClass;
     otID = Crc32B((const u8 *)partner, sizeof(struct Trainer));
@@ -123,20 +128,23 @@ void MakePartnerGenerator(struct TrainerGenerator *trainerGen, const struct Trai
 void GenerateMonFromTrainerMon(struct Pokemon *mon, const struct TrainerMon *trainerMon, struct TrainerGenerator *trainer)
 {
     u32 data;
+    // Runtime species remap keeps party size/levels; moves fall back to level-up set when randomized.
+    enum Species species = Randomizer_RemapTrainerSpecies(trainerMon->species, trainer->trainerId, trainer->monsGenerated++);
+    bool32 remapped = (species != trainerMon->species);
     u32 personality = (LocalRandom32(&trainer->localRngState) & 0xFFFFDF00) + 0x1000;
     u32 genderValue = LocalRandom32(&trainer->localRngState);
     if (trainerMon->gender == TRAINER_MON_RANDOM_GENDER)
         genderValue = genderValue & 0x000000FF;
     else if (trainerMon->gender == TRAINER_MON_MALE)
-        genderValue = GeneratePersonalityForGender(MON_MALE, trainerMon->species, genderValue);
+        genderValue = GeneratePersonalityForGender(MON_MALE, species, genderValue);
     else if (trainerMon->gender == TRAINER_MON_FEMALE)
-        genderValue = GeneratePersonalityForGender(MON_FEMALE, trainerMon->species, genderValue);
+        genderValue = GeneratePersonalityForGender(MON_FEMALE, species, genderValue);
     else
         errorf("Unkwown trainer mon gender value %d", trainerMon->gender);
     personality |= genderValue;
     ModifyPersonalityForNature(&personality, trainerMon->nature);
-    CreateMon(mon, trainerMon->species, trainerMon->lvl, personality, trainer->otID);
-    if (trainerMon->nickname != NULL)
+    CreateMon(mon, species, trainerMon->lvl, personality, trainer->otID);
+    if (trainerMon->nickname != NULL && !remapped)
         SetMonData(mon, MON_DATA_NICKNAME, trainerMon->nickname);
     if (trainerMon->ev) //ev in struct TrainerMon are stored in Showdown order not vanilla Emerald order
     {
@@ -149,13 +157,16 @@ void GenerateMonFromTrainerMon(struct Pokemon *mon, const struct TrainerMon *tra
     }
 
     SetMonData(mon, MON_DATA_IVS, &trainerMon->iv);
-    CustomTrainerPartyAssignMoves(mon, trainerMon);
+    if (remapped)
+        GiveMonInitialMoveset(mon);
+    else
+        CustomTrainerPartyAssignMoves(mon, trainerMon);
     SetMonData(mon, MON_DATA_HELD_ITEM, &trainerMon->heldItem);
 
     bool32 abilitySet = FALSE;
-    if (trainerMon->ability)
+    if (trainerMon->ability && !remapped)
     {
-        abilitySet = SetCorrectAbilityNum(mon, trainerMon->species, trainerMon->ability);
+        abilitySet = SetCorrectAbilityNum(mon, species, trainerMon->ability);
     }
 
     if (!abilitySet)
@@ -164,7 +175,7 @@ void GenerateMonFromTrainerMon(struct Pokemon *mon, const struct TrainerMon *tra
         {
             do {
                 data = Random() % NUM_ABILITY_SLOTS; // includes hidden abilities
-            } while (GetAbilityBySpecies(trainerMon->species, data) == ABILITY_NONE);
+            } while (GetAbilityBySpecies(species, data) == ABILITY_NONE);
             SetMonData(mon, MON_DATA_ABILITY_NUM, &data);
         }
         else if (B_TRAINER_MON_RANDOM_ABILITY == 0)

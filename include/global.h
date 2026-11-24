@@ -25,7 +25,15 @@
 #include "constants/trainer_tower.h"
 #include "constants/items.h"
 #include "constants/moves.h"
+#include "constants/randomizer.h"
 #include "config/save.h"
+
+// Saved with each file; see include/randomizer.h for the runtime API.
+struct RandomizerSaveData
+{
+    u32 seed;
+    u8 options;
+};
 
 // Prevent cross-jump optimization.
 #define BLOCK_CROSS_JUMP asm("");
@@ -272,6 +280,8 @@ struct SaveBlock3
 #if APRICORN_TREE_COUNT > 0
     u8 apricornTrees[NUM_APRICORN_TREE_BYTES];
 #endif
+    // In-game randomizer (runtime remap; almost no ROM cost)
+    struct RandomizerSaveData randomizer;
 }; /* max size 1624 bytes */
 
 extern struct SaveBlock3 *gSaveBlock3Ptr;

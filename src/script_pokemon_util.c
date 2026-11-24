@@ -22,6 +22,7 @@
 #include "pokemon_storage_system.h"
 #include "random.h"
 #include "random_mon_generation.h"
+#include "randomizer.h"
 #include "script.h"
 #include "sprite.h"
 #include "string_util.h"
@@ -410,7 +411,7 @@ void ScrCmd_createmon(struct ScriptContext *ctx)
     u8 slot                   = ScriptReadByte(ctx);
 
     struct PokemonTemplate monTemplate = {0};
-    monTemplate.species      = VarGet(ScriptReadHalfword(ctx));
+    monTemplate.species      = Randomizer_RemapStarterSpecies(VarGet(ScriptReadHalfword(ctx)));
     monTemplate.level        = VarGet(ScriptReadHalfword(ctx));
 
     u32 flags                 = ScriptReadWord(ctx);
