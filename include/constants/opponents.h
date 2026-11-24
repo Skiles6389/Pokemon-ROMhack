@@ -136,10 +136,10 @@
 #define TRAINER_BRIDGET                     129
 #define TRAINER_OLIVIA                      130
 #define TRAINER_TIFFANY                     131
-#define TRAINER_JESSICA_2                   132
-#define TRAINER_JESSICA_3                   133
-#define TRAINER_JESSICA_4                   134
-#define TRAINER_JESSICA_5                   135
+#define TRAINER_PICNICKER_SIENA             132 // Sinnoh: reuses unused Hoenn slot TRAINER_JESSICA_2
+#define TRAINER_HIKER_NICHOLAS              133 // Sinnoh: reuses unused Hoenn slot TRAINER_JESSICA_3
+#define TRAINER_BATTLE_GIRL_KELSEY          134 // Sinnoh: reuses unused Hoenn slot TRAINER_JESSICA_4
+#define TRAINER_PICNICKER_KARINA            135 // Sinnoh: reuses unused Hoenn slot TRAINER_JESSICA_5
 #define TRAINER_WINSTON_1                   136
 #define TRAINER_MOLLIE                      137
 #define TRAINER_GARRET                      138
@@ -312,13 +312,13 @@
 #define TRAINER_ISABEL_4                    305
 #define TRAINER_ISABEL_5                    306
 #define TRAINER_TIMOTHY_1                   307
-#define TRAINER_TIMOTHY_2                   308
-#define TRAINER_TIMOTHY_3                   309
-#define TRAINER_TIMOTHY_4                   310
-#define TRAINER_TIMOTHY_5                   311
+#define TRAINER_CAMPER_ZACKARY              308 // Sinnoh: reuses unused Hoenn slot TRAINER_TIMOTHY_2
+#define TRAINER_GALACTIC_GRUNT_WINDWORKS_DOOR 309 // Sinnoh: reuses unused Hoenn slot TRAINER_TIMOTHY_3
+#define TRAINER_GALACTIC_GRUNT_WINDWORKS_1  310 // Sinnoh: reuses unused Hoenn slot TRAINER_TIMOTHY_4
+#define TRAINER_GALACTIC_GRUNT_WINDWORKS_2  311 // Sinnoh: reuses unused Hoenn slot TRAINER_TIMOTHY_5
 #define TRAINER_VICKY                       312
 #define TRAINER_SHELBY_1                    313
-#define TRAINER_SHELBY_2                    314
+#define TRAINER_COMMANDER_MARS              314 // Sinnoh: reuses unused Hoenn slot TRAINER_SHELBY_2
 #define TRAINER_SHELBY_3                    315
 #define TRAINER_SHELBY_4                    316
 #define TRAINER_SHELBY_5                    317
@@ -850,9 +850,9 @@
 #define TRAINER_GABRIELLE_4                 842
 #define TRAINER_GABRIELLE_5                 843
 #define TRAINER_GALACTIC_GRUNT_FLOAROMA_2   844 // Sinnoh: reuses unused Hoenn slot TRAINER_THALIA_2
-#define TRAINER_THALIA_3                    845
-#define TRAINER_THALIA_4                    846
-#define TRAINER_THALIA_5                    847
+#define TRAINER_HIKER_DANIEL                845 // Sinnoh: reuses unused Hoenn slot TRAINER_THALIA_3
+#define TRAINER_AROMA_ELIZABETH             846 // Sinnoh: reuses unused Hoenn slot TRAINER_THALIA_4
+#define TRAINER_CAMPER_JACOB                847 // Sinnoh: reuses unused Hoenn slot TRAINER_THALIA_5
 #define TRAINER_MARIELA                     848
 #define TRAINER_ALVARO                      849
 #define TRAINER_EVERETT                     850

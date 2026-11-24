@@ -9565,6 +9565,39 @@
       "border_filepath": "data/layouts/FloaromaMeadow/border.bin",
       "blockdata_filepath": "data/layouts/FloaromaMeadow/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE205_SOUTH",
+      "name": "Route205_South_Layout",
+      "width": 32,
+      "height": 96,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route205_South/border.bin",
+      "blockdata_filepath": "data/layouts/Route205_South/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VALLEY_WINDWORKS_EXTERIOR",
+      "name": "ValleyWindworks_Exterior_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ValleyWindworks_Exterior/border.bin",
+      "blockdata_filepath": "data/layouts/ValleyWindworks_Exterior/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VALLEY_WINDWORKS_INTERIOR",
+      "name": "ValleyWindworks_Interior_Layout",
+      "width": 24,
+      "height": 18,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/ValleyWindworks_Interior/border.bin",
+      "blockdata_filepath": "data/layouts/ValleyWindworks_Interior/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

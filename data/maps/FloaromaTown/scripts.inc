@@ -25,23 +25,6 @@ FloaromaTown_EventScript_Camper::
 	msgbox FloaromaTown_Text_Camper, MSGBOX_NPC
 	end
 
-FloaromaTown_EventScript_EastGate::
-	msgbox FloaromaTown_Text_EastGate, MSGBOX_NPC
-	end
-
-FloaromaTown_EventScript_EastGateTrigger::
-	lockall
-	msgbox FloaromaTown_Text_EastGateBlock, MSGBOX_DEFAULT
-	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, FloaromaTown_Movement_PushBack
-	waitmovement 0
-	releaseall
-	end
-
-FloaromaTown_Movement_PushBack:
-	walk_left
-	step_end
-
 FloaromaTown_EventScript_TownSign::
 	msgbox FloaromaTown_Text_TownSign, MSGBOX_SIGN
 	end
@@ -77,14 +60,6 @@ FloaromaTown_Text_LassEast:
 FloaromaTown_Text_Camper:
 	.string "Some shady characters headed for\n"
 	.string "the meadow. They smelled like trouble.$"
-
-FloaromaTown_Text_EastGate:
-	.string "Valley Windworks is that way, but\n"
-	.string "the path isn't ready yet.$"
-
-FloaromaTown_Text_EastGateBlock:
-	.string "Valley Windworks is coming in the\n"
-	.string "next milestone. Turn back for now.$"
 
 FloaromaTown_Text_TownSign:
 	.string "FLOAROMA TOWN\n"

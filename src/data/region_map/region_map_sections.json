@@ -1686,6 +1686,14 @@
     {
       "id": "MAPSEC_FLOAROMA_MEADOW",
       "name": "FLOAROMA MEADOW"
+    },
+    {
+      "id": "MAPSEC_ROUTE_205",
+      "name": "ROUTE 205"
+    },
+    {
+      "id": "MAPSEC_VALLEY_WINDWORKS",
+      "name": "VALLEY WINDWORKS"
     }
   ]
 }
