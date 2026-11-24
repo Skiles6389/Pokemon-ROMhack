@@ -1103,7 +1103,59 @@
 
 #define TRAINER_SAILOR_JONAH_CANALAVE                    918 // Sinnoh M23
 
-#define TRAINERS_COUNT_EMERALD     919
+#define TRAINER_BIRD_KEEPER_KATHERINE                    919 // Sinnoh M24
+
+#define TRAINER_NINJA_BOY_NICK                    920 // Sinnoh M24
+
+#define TRAINER_BLACK_BELT_SEAN                    921 // Sinnoh M24
+
+#define TRAINER_RUIN_MANIAC_HARRY                    922 // Sinnoh M24
+
+#define TRAINER_ACE_TRAINER_BLAKE                    923 // Sinnoh M24
+
+#define TRAINER_ACE_TRAINER_LAURA                    924 // Sinnoh M24
+
+#define TRAINER_BLACK_BELT_PHILIP                    925 // Sinnoh M24
+
+#define TRAINER_SKIER_BRADLEY                    926 // Sinnoh M24
+
+#define TRAINER_ACE_TRAINER_GARRETT                    927 // Sinnoh M24
+
+#define TRAINER_ACE_TRAINER_MARIA                    928 // Sinnoh M24
+
+#define TRAINER_SKIER_KAITLYN                    929 // Sinnoh M24
+
+#define TRAINER_SKIER_EDWARD                    930 // Sinnoh M24
+
+#define TRAINER_SKIER_ANDREA                    931 // Sinnoh M24
+
+#define TRAINER_SKIER_SHAWN                    932 // Sinnoh M24
+
+#define TRAINER_SKIER_LEXIE                    933 // Sinnoh M24
+
+#define TRAINER_SKIER_BJORN                    934 // Sinnoh M24
+
+#define TRAINER_SKIER_MADISON                    935 // Sinnoh M24
+
+#define TRAINER_NINJA_BOY_MATTHEW                    936 // Sinnoh M24
+
+#define TRAINER_NINJA_BOY_ETHAN                    937 // Sinnoh M24
+
+#define TRAINER_BLACK_BELT_LUKE                    938 // Sinnoh M24
+
+#define TRAINER_ACE_TRAINER_DALTON                    939 // Sinnoh M24
+
+#define TRAINER_ACE_TRAINER_OLIVIA                    940 // Sinnoh M24
+
+#define TRAINER_GALACTIC_GRUNT_LAKE_VALOR_1                    941 // Sinnoh M24
+
+#define TRAINER_GALACTIC_GRUNT_LAKE_VALOR_3                    942 // Sinnoh M24
+
+#define TRAINER_GALACTIC_GRUNT_LAKE_VALOR_2                    943 // Sinnoh M24
+
+#define TRAINER_COMMANDER_SATURN_VALOR                    944 // Sinnoh M24
+
+#define TRAINERS_COUNT_EMERALD     945
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG

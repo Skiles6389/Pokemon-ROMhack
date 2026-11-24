@@ -89,7 +89,8 @@
     "gMapGroup_IndoorV06",
     "gMapGroup_IndoorM21",
     "gMapGroup_IndoorM22",
-    "gMapGroup_IndoorM23"
+    "gMapGroup_IndoorM23",
+    "gMapGroup_IndoorM24"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -187,7 +188,10 @@
     "CelesticTown",
     "Route218",
     "CanalaveCity",
-    "IronIsland"
+    "IronIsland",
+    "Route211_East",
+    "Route216",
+    "Route217"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1407,5 +1411,10 @@
     "CanalaveCity_House1",
     "IronIsland_House",
     "IronIsland_1F_Stub"
+  ],
+  "gMapGroup_IndoorM24": [
+    "MtCoronet_NorthStub",
+    "Route216_House",
+    "Route217_House"
   ]
 }

@@ -60,6 +60,10 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "Route218": [[50, 51]],
     "CanalaveCity": [[48], [49]],
     "IronIsland": [[54]],
+    "Route211_East": [[61]],
+    "Route216": [[110, 111, 112]],
+    "Route217": [[106], [107], [108], [109]],
+    "LakeValor_Drained": [[544, 545], [546, 547]],
 }
 
 # Documented world origins (tile). Missing entries derived from warp fit.
@@ -87,6 +91,10 @@ DOCUMENTED_ORIGIN = {
     "Route218": (2 * 32, 23 * 32),
     "CanalaveCity": (1 * 32, 22 * 32),
     "IronIsland": (3 * 32, 15 * 32),
+    "Route211_East": (13 * 32, 16 * 32),
+    "Route216": (9 * 32, 12 * 32),
+    "Route217": (9 * 32, 8 * 32),
+    "LakeValor_Drained": (0, 0),
     "Route206": (288, 576),
     "Route207": (288, 704),
     "JubilifeCity": (128, 736),
@@ -143,6 +151,10 @@ PLAT_NAME = {
     "Route218": "route_218",
     "CanalaveCity": "canalave_city",
     "IronIsland": "iron_island",
+    "Route211_East": "route_211_east",
+    "Route216": "route_216",
+    "Route217": "route_217",
+    "LakeValor_Drained": "lake_valor_drained",
     "GreatMarsh": "great_marsh_1",  # events sample; geometry from GreatMarsh_DP lands
     "VerityLakefront": "verity_lakefront",
     "LakeVerity": "lake_verity_low_water",  # guess; resolve later
