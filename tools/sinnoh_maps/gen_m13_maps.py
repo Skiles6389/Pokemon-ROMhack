@@ -127,7 +127,7 @@ def convert_grid(attr_grid: list[list[int]], cave: bool = False) -> bytes:
         for x in range(w):
             v = attr_grid[y][x]
             mt = attr_to_cave(v, x, y) if cave else attr_to_outdoor(v, x, y)
-            # map.bin stores metatile id in low 10 bits; elevation/collision in engine via behavior
+            # map.bin stores metatile id + collision (bits 10-11) + elevation (bits 12-15)
             struct.pack_into("<H", out, (y * w + x) * 2, mt)
     return bytes(out)
 
@@ -190,7 +190,7 @@ def pack(grid: list[list[int]]) -> bytes:
     out = bytearray(w * h * 2)
     for y in range(h):
         for x in range(w):
-            struct.pack_into("<H", out, (y * w + x) * 2, grid[y][x] & 0x3FF)
+            struct.pack_into("<H", out, (y * w + x) * 2, __import__("tools.sinnoh_maps.sinnoh_build_lib", fromlist=["encode_map_cell"]).encode_map_cell(grid[y][x]))
     return bytes(out)
 
 

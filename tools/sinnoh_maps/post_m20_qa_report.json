@@ -7,7 +7,7 @@
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 80,
+      "mismatch": 47,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -16,7 +16,7 @@
       "status": "PASS",
       "size": "64x32",
       "plat_size": "64x32",
-      "mismatch": 49,
+      "mismatch": 33,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -25,7 +25,7 @@
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 205,
+      "mismatch": 68,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -43,7 +43,7 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 556,
+      "mismatch": 514,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -52,7 +52,7 @@
       "status": "PASS",
       "size": "64x32",
       "plat_size": "64x32",
-      "mismatch": 20,
+      "mismatch": 16,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -61,7 +61,7 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 48,
+      "mismatch": 1034,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -106,7 +106,7 @@
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 11,
+      "mismatch": 0,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -115,7 +115,7 @@
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 16,
+      "mismatch": 3,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -133,7 +133,7 @@
       "status": "PASS",
       "size": "32x64",
       "plat_size": "32x64",
-      "mismatch": 125,
+      "mismatch": 37,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -142,7 +142,7 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 555,
+      "mismatch": 54,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -151,7 +151,7 @@
       "status": "PASS",
       "size": "32x96",
       "plat_size": "32x96",
-      "mismatch": 42,
+      "mismatch": 29,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -160,7 +160,7 @@
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 37,
+      "mismatch": 26,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -169,7 +169,7 @@
       "status": "PASS",
       "size": "96x96",
       "plat_size": "96x96",
-      "mismatch": 101,
+      "mismatch": 0,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -178,7 +178,7 @@
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 37,
+      "mismatch": 0,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -187,7 +187,7 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 256,
+      "mismatch": 1139,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -196,7 +196,7 @@
       "status": "PASS",
       "size": "32x128",
       "plat_size": "32x128",
-      "mismatch": 147,
+      "mismatch": 0,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -205,7 +205,7 @@
       "status": "PASS",
       "size": "64x32",
       "plat_size": "64x32",
-      "mismatch": 137,
+      "mismatch": 16,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -223,7 +223,7 @@
       "status": "PASS",
       "size": "64x32",
       "plat_size": "64x32",
-      "mismatch": 194,
+      "mismatch": 16,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -232,7 +232,7 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 417,
+      "mismatch": 170,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -241,7 +241,7 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 452,
+      "mismatch": 1037,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -250,7 +250,7 @@
       "status": "PASS",
       "size": "64x32",
       "plat_size": "64x32",
-      "mismatch": 277,
+      "mismatch": 104,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -259,7 +259,7 @@
       "status": "PASS",
       "size": "32x96",
       "plat_size": "32x96",
-      "mismatch": 150,
+      "mismatch": 11,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -268,7 +268,7 @@
       "status": "PASS",
       "size": "96x32",
       "plat_size": "96x32",
-      "mismatch": 504,
+      "mismatch": 34,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -277,7 +277,7 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 543,
+      "mismatch": 199,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -286,7 +286,7 @@
       "status": "PASS",
       "size": "32x96",
       "plat_size": "32x96",
-      "mismatch": 518,
+      "mismatch": 9,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -295,7 +295,7 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 907,
+      "mismatch": 72,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -304,7 +304,7 @@
       "status": "PASS",
       "size": "96x64",
       "plat_size": "96x64",
-      "mismatch": 1044,
+      "mismatch": 87,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -313,7 +313,7 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 806,
+      "mismatch": 123,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -322,7 +322,7 @@
       "status": "PASS",
       "size": "32x96",
       "plat_size": "32x96",
-      "mismatch": 482,
+      "mismatch": 10,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -331,7 +331,7 @@
       "status": "PASS",
       "size": "128x32",
       "plat_size": "128x32",
-      "mismatch": 934,
+      "mismatch": 13,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -340,7 +340,7 @@
       "status": "PASS",
       "size": "64x96",
       "plat_size": "64x96",
-      "mismatch": 1458,
+      "mismatch": 91,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -349,7 +349,7 @@
       "status": "PASS",
       "size": "96x32",
       "plat_size": "96x32",
-      "mismatch": 662,
+      "mismatch": 24,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -358,7 +358,7 @@
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 197,
+      "mismatch": 44,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -367,7 +367,7 @@
       "status": "PASS",
       "size": "64x32",
       "plat_size": "64x32",
-      "mismatch": 264,
+      "mismatch": 0,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -376,7 +376,7 @@
       "status": "PASS",
       "size": "32x64",
       "plat_size": "32x64",
-      "mismatch": 287,
+      "mismatch": 54,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -385,7 +385,7 @@
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 174,
+      "mismatch": 23,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -403,7 +403,7 @@
       "status": "PASS",
       "size": "96x32",
       "plat_size": "96x32",
-      "mismatch": 580,
+      "mismatch": 10,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -412,7 +412,7 @@
       "status": "PASS",
       "size": "32x128",
       "plat_size": "32x128",
-      "mismatch": 347,
+      "mismatch": 8,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -421,7 +421,7 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 533,
+      "mismatch": 0,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -430,7 +430,7 @@
       "status": "PASS",
       "size": "32x64",
       "plat_size": "32x64",
-      "mismatch": 538,
+      "mismatch": 44,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -439,7 +439,7 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 130,
+      "mismatch": 0,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -448,7 +448,7 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 292,
+      "mismatch": 0,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -457,7 +457,7 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 748,
+      "mismatch": 0,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -466,7 +466,7 @@
       "status": "PASS",
       "size": "96x32",
       "plat_size": "96x32",
-      "mismatch": 47,
+      "mismatch": 45,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -475,7 +475,7 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 80,
+      "mismatch": 71,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []

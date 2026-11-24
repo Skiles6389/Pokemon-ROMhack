@@ -38,9 +38,9 @@ HALLWAY = [[309]]
 
 
 def stitch(name, chunks):
-    grid, w, h = grid_from_chunks(chunks)
+    grid, w, h, coll = grid_from_chunks(chunks)
     clear_plat_walkables(grid, chunks)
-    write_layout(name, w, h, "gTileset_Building", "gTileset_Facility", pack(grid))
+    write_layout(name, w, h, "gTileset_Building", "gTileset_Facility", pack(grid, coll))
     return w, h
 
 

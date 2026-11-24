@@ -68,8 +68,8 @@ def densify_gate(em, plat, w, h):
 
 def main() -> int:
     name, chunks, plat, mid, layout = GATE
-    grid, w, h = grid_from_chunks(chunks, cave=False)
-    write_layout(name, w, h, "gTileset_Building", "gTileset_Facility", pack(grid), lid=layout)
+    grid, w, h, coll = grid_from_chunks(chunks, cave=False)
+    write_layout(name, w, h, "gTileset_Building", "gTileset_Facility", pack(grid, coll), lid=layout)
     objs, scripts, warps = densify_gate(name, plat, w, h)
     if not warps:
         sx, sy = find_walkable(grid, prefer=(w // 2, h - 2))

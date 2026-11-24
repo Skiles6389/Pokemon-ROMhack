@@ -95,7 +95,7 @@ def pack(grid: list[list[int]]) -> bytes:
     out = bytearray(w * h * 2)
     for y in range(h):
         for x in range(w):
-            struct.pack_into("<H", out, (y * w + x) * 2, grid[y][x] & 0x3FF)
+            struct.pack_into("<H", out, (y * w + x) * 2, __import__("tools.sinnoh_maps.sinnoh_build_lib", fromlist=["encode_map_cell"]).encode_map_cell(grid[y][x]))
     return bytes(out)
 
 

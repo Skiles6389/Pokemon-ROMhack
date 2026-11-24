@@ -254,9 +254,9 @@ def stub_pc(name, mid, layout, exit_map, exit_wid):
 
 
 def write_outdoor(name, mid, layout, chunks, origin, plat, level, connections, music="MUS_RG_ROUTE1", extra_objs=None, extra_scripts=""):
-    grid, w, h = grid_from_chunks(chunks)
+    grid, w, h, coll = grid_from_chunks(chunks)
     clear_plat_walkables(grid, chunks)
-    write_layout(name, w, h, "gTileset_General", "gTileset_Petalburg", pack(grid))
+    write_layout(name, w, h, "gTileset_General", "gTileset_Petalburg", pack(grid, coll))
     objs, scripts, vwarps = densify(name, plat, origin, w, h, level)
     if extra_objs:
         objs.extend(extra_objs)
@@ -391,9 +391,9 @@ def main() -> int:
     indoor.append(stub_indoor("Route226_House", "MAP_ROUTE226_HOUSE", "LAYOUT_ROUTE226_HOUSE", "MAP_ROUTE226", 0, "Waves crash below the cliff houses."))
 
     # Route 227 — soft-close Stark north
-    grid, w, h = grid_from_chunks(R227)
+    grid, w, h, coll = grid_from_chunks(R227)
     clear_plat_walkables(grid, R227)
-    write_layout("Route227", w, h, "gTileset_General", "gTileset_Petalburg", pack(grid))
+    write_layout("Route227", w, h, "gTileset_General", "gTileset_Petalburg", pack(grid, coll))
     objs, scripts, vwarps = densify("Route227", "route_227", R227_ORIGIN, w, h, 53)
     nx, ny = find_walkable(grid, prefer=(w // 2, 1))
     objs.append(obj("OBJ_EVENT_GFX_MAN_2", nx, ny, "Route227_EventScript_StarkClosed", movement="MOVEMENT_TYPE_FACE_DOWN"))

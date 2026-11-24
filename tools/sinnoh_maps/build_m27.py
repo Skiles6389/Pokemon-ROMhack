@@ -137,11 +137,11 @@ def main():
     built = {}  # name -> (grid, w, h, entry_xy, exit_xy)
 
     for name, chunks, plat, cave in FLOORS:
-        grid, w, h = grid_from_chunks(chunks, cave=cave)
+        grid, w, h, coll = grid_from_chunks(chunks, cave=cave)
         clear_plat_walkables(grid, chunks, cave=cave)
         primary = "gTileset_General"
         secondary = "gTileset_Cave" if cave else "gTileset_Fortree"
-        write_layout(name, w, h, primary, secondary, pack(grid), layout_id(name))
+        write_layout(name, w, h, primary, secondary, pack(grid, coll), layout_id(name))
         entry = find_walkable(grid, prefer=(w // 2, h - 3))
         exit_ = find_walkable(grid, prefer=(w // 2, 3))
         if entry == exit_:

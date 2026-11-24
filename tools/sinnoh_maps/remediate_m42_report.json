@@ -1,0 +1,994 @@
+{
+  "results": [
+    {
+      "name": "AcuityLakefront",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "CanalaveCity",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 56,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "CanalaveCity_Gym",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "CelesticTown",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 25,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "DistortionWorld_1F",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "DistortionWorld_B1F",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "DistortionWorld_B2F",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "DistortionWorld_B3F",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "DistortionWorld_B4F",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "DistortionWorld_B5F",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "DistortionWorld_B6F",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "DistortionWorld_B7F",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "DistortionWorld_GiratinaRoom",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "DistortionWorld_TurnbackCaveRoom",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "EternaCity",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 50,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "EternaForest",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "FightArea",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "FloaromaMeadow",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 2,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "FloaromaTown",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 2,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "GreatMarsh",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "HearthomeCity",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 63,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "IronIsland",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 27,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "JubilifeCity",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 69,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "LakeAcuity",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "LakeValor_Drained",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "MtCoronet_1F_South",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "OreburghCity",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "OreburghGate_1F",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "OreburghGate_B1F",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "OreburghMine_B1F",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "OreburghMine_B2F",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "PastoriaCity",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 32,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "PokemonLeague_AaronsRoom",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "PokemonLeague_BerthasRoom",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToAaron",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToBertha",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToCynthia",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToFlint",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToLucian",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "PokemonLeague_Exterior",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "PokemonLeague_FlintsRoom",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "PokemonLeague_LuciansRoom",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "PokemonLeague_Sinnoh_CynthiasRoom",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "PokemonLeague_Sinnoh_HallOfFame",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "PokemonLeague_Sinnoh_HallwayToHoF",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "RavagedPath",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "ResortArea",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route201",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route202",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route203",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route204_North",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route204_South",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route205_North",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route205_South",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route206",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route207",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route208",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 10,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route209",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 7,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route210_North",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route210_South",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 7,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route211_East",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route212_North",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route212_South",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route213",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 19,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route214",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 12,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route215",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route216",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 7,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route217",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 2,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route218",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route222",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 8,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route223",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route224",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route225",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route226",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route227",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 2,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route228",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route229",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "Route230",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "SandgemTown",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 13,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "SnowpointCity",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 28,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "SolaceonTown",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 21,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "SpearPillar",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "SpearPillar_Distorted",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "StarkMountain_HeatranRoom",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "StarkMountain_Outside",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "StarkMountain_Room1",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "StarkMountain_Room2",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "SunyshoreCity",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 42,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "SurvivalArea",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "TwinleafTown",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 4,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "ValleyWindworks_Exterior",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 11,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "ValorLakefront",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 25,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "VeilstoneCity",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 48,
+      "tree_cells_changed": -1,
+      "regen_plat": true
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_1F",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_2F",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_B1F",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_Room1",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_Room2",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_Room3",
+      "status": "OK",
+      "before_strip": 0.0,
+      "after_strip": 0.0,
+      "before_incomplete_trees": 0,
+      "after_incomplete_trees": 0,
+      "tree_cells_changed": 0,
+      "regen_plat": true
+    }
+  ]
+}

@@ -158,8 +158,8 @@ def link_reciprocal(names):
 def main() -> int:
     indoor = []
     for name, chunks, plat, mid, layout, level in FLOORS:
-        grid, w, h = grid_from_chunks(chunks, cave=True)
-        write_layout(name, w, h, "gTileset_General", "gTileset_Cave", pack(grid), lid=layout)
+        grid, w, h, coll = grid_from_chunks(chunks, cave=True)
+        write_layout(name, w, h, "gTileset_General", "gTileset_Cave", pack(grid, coll), lid=layout)
         objs, scripts, vwarps = densify_local(name, plat, w, h, level)
         warps = [warp(lx, ly, resolve(dest), 0) for lx, ly, dest in vwarps]
         if not warps:

@@ -38,6 +38,19 @@ def run_audit() -> None:
     if r.returncode != 0:
         raise SystemExit("FAIL: static QA audit reported failures")
     print("PASS static QA audit")
+    for name in (
+        "collision_audit.py",
+        "visual_object_audit.py",
+        "script_npc_exit_audit.py",
+    ):
+        script = REPO / "tools" / "sinnoh_maps" / name
+        if not script.exists():
+            continue
+        r = subprocess.run([sys.executable, str(script)], cwd=REPO)
+        # script_npc_exit_audit is advisory for residual story polish; collision/visual are hard gates
+        if name != "script_npc_exit_audit.py" and r.returncode != 0:
+            raise SystemExit(f"FAIL: {name}")
+        print(f"PASS {name}" if r.returncode == 0 else f"WARN {name} (advisory)")
 
 
 def try_mgba_boot() -> None:

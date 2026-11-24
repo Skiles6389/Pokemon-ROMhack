@@ -233,10 +233,10 @@ def main():
     ensure_flag("FLAG_REACHED_POKEMON_LEAGUE_DOOR", "0x2B6", "Sinnoh VR reached League door")
 
     # --- Route 223 ---
-    grid, w, h = grid_from_chunks(ROUTE223)
+    grid, w, h, coll = grid_from_chunks(ROUTE223)
     clear_plat_walkables(grid, ROUTE223)
     # Mostly water route — paint water already done
-    write_layout("Route223", w, h, "gTileset_General", "gTileset_Dewford", pack(grid))
+    write_layout("Route223", w, h, "gTileset_General", "gTileset_Dewford", pack(grid, coll))
     objs, scripts, _ = densify("Route223", "route_223", R223_ORIGIN, w, h, 45)
     write_map(
         "Route223",
@@ -268,9 +268,9 @@ def main():
     )
 
     # --- Pokemon League exterior ---
-    grid, w, h = grid_from_chunks(LEAGUE)
+    grid, w, h, coll = grid_from_chunks(LEAGUE)
     clear_plat_walkables(grid, LEAGUE)
-    write_layout("PokemonLeague_Exterior", w, h, "gTileset_General", "gTileset_Fortree", pack(grid))
+    write_layout("PokemonLeague_Exterior", w, h, "gTileset_General", "gTileset_Fortree", pack(grid, coll))
     objs, scripts, plat_warps = densify("PokemonLeague_Exterior", "pokemon_league", LEAGUE_ORIGIN, w, h, 48)
     # Soft-close Elite Four door
     door_x, door_y = find_walkable(grid, prefer=(w // 2, 8))
@@ -349,9 +349,9 @@ def main():
 
     # --- Victory Road floors ---
     # 1F
-    grid, w, h = grid_from_chunks(VR1, cave=True)
+    grid, w, h, coll = grid_from_chunks(VR1, cave=True)
     clear_plat_walkables(grid, VR1, cave=True)
-    write_layout("VictoryRoad_Sinnoh_1F", w, h, "gTileset_General", "gTileset_Cave", pack(grid))
+    write_layout("VictoryRoad_Sinnoh_1F", w, h, "gTileset_General", "gTileset_Cave", pack(grid, coll))
     objs, scripts, vwarps = densify_local("VictoryRoad_Sinnoh_1F", "victory_road_1f", w, h, 46)
     warps = []
     for lx, ly, dest, wid in vwarps:
@@ -392,9 +392,9 @@ def main():
     )
 
     # 2F
-    grid, w, h = grid_from_chunks(VR2, cave=True)
+    grid, w, h, coll = grid_from_chunks(VR2, cave=True)
     clear_plat_walkables(grid, VR2, cave=True)
-    write_layout("VictoryRoad_Sinnoh_2F", w, h, "gTileset_General", "gTileset_Cave", pack(grid))
+    write_layout("VictoryRoad_Sinnoh_2F", w, h, "gTileset_General", "gTileset_Cave", pack(grid, coll))
     objs, scripts, vwarps = densify_local("VictoryRoad_Sinnoh_2F", "victory_road_2f", w, h, 47)
     warps = [warp(lx, ly, "MAP_VICTORY_ROAD_SINNOH_1F", 0) for lx, ly, dest, wid in vwarps]
     write_map(
@@ -424,9 +424,9 @@ def main():
     )
 
     # B1F
-    grid, w, h = grid_from_chunks(VRB, cave=True)
+    grid, w, h, coll = grid_from_chunks(VRB, cave=True)
     clear_plat_walkables(grid, VRB, cave=True)
-    write_layout("VictoryRoad_Sinnoh_B1F", w, h, "gTileset_General", "gTileset_Cave", pack(grid))
+    write_layout("VictoryRoad_Sinnoh_B1F", w, h, "gTileset_General", "gTileset_Cave", pack(grid, coll))
     objs, scripts, vwarps = densify_local("VictoryRoad_Sinnoh_B1F", "victory_road_b1f", w, h, 47)
     warps = [warp(lx, ly, "MAP_VICTORY_ROAD_SINNOH_1F", 0) for lx, ly, dest, wid in vwarps]
     write_map(

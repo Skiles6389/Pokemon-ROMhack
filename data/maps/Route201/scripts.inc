@@ -146,6 +146,16 @@ Route201_EventScript_BattleTurtwig::
 Route201_EventScript_AfterBattle::
 	msgbox Route201_Text_BarryAfter, MSGBOX_DEFAULT
 	closemessage
+	applymovement LOCALID_ROUTE201_BARRY, Route201_Movement_PartyLeavesEast
+	applymovement LOCALID_ROUTE201_ASSISTANT, Route201_Movement_PartyLeavesEast
+	applymovement LOCALID_ROUTE201_ROWAN, Route201_Movement_PartyLeavesEast
+	waitmovement 0
+	removeobject LOCALID_ROUTE201_BARRY
+	removeobject LOCALID_ROUTE201_ASSISTANT
+	removeobject LOCALID_ROUTE201_ROWAN
+	setflag FLAG_HIDE_ROUTE201_BARRY
+	setflag FLAG_HIDE_ROUTE201_ASSISTANT
+	setflag FLAG_HIDE_ROUTE201_ROWAN
 	setvar VAR_ROUTE201_STATE, 4
 	setflag FLAG_HIDE_ROUTE201_TRAVELER
 	removeobject LOCALID_ROUTE201_TRAVELER
@@ -293,6 +303,15 @@ Route201_Movement_BarryApproachMeetup:
 	walk_left
 	walk_left
 	face_left
+	step_end
+
+Route201_Movement_PartyLeavesEast:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 Route201_Text_BarryMeet:

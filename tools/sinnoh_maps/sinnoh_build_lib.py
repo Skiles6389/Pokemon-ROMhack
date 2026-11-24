@@ -20,13 +20,35 @@ PARTY = REPO / "src" / "data" / "trainers.party"
 FLAGS = REPO / "include" / "constants" / "flags.h"
 
 MT_GRASS, MT_TALL, MT_WATER, MT_SAND = 0x001, 0x00D, 0x170, 0x121
-MT_TREE = (0x1D4, 0x1D5, 0x1DC, 0x1DD)
+MT_TREE_TL, MT_TREE_TR, MT_TREE_BL, MT_TREE_BR = 0x1D4, 0x1D5, 0x1DC, 0x1DD
+MT_TREE = (MT_TREE_TL, MT_TREE_TR, MT_TREE_BL, MT_TREE_BR)
 MT_ROCK, MT_LEDGE_A, MT_LEDGE_B = 0x079, 0x0D5, 0x0D6
+# Emerald General jump metatiles (south pair used by converter; E/W approx as rock edge)
+MT_LEDGE_S_A, MT_LEDGE_S_B = MT_LEDGE_A, MT_LEDGE_B
 IN_FLOOR, IN_WALL, IN_DOOR = 0x201, 0x21A, 0x20E
 MT_CAVE_FLOOR = 0x1A1
 # Fallarbor cave floor often 0x1A1; if missing in tileset, grass still walks
 CAVE_FLOOR = 0x001
 CAVE_WALL = 0x079
+
+# Metatile IDs that must be impassable when packing map.bin (bits 10-11).
+# Building facade IDs from stamp_building also belong here.
+SOLID_METATILES = set(MT_TREE) | {
+    MT_ROCK,
+    CAVE_WALL,
+    IN_WALL,
+    0x139,  # cliff / wall stand-in used on early routes
+    # Twinleaf/Sandgem/Petalburg house + gym facade tiles (secondary)
+    0x208, 0x20A, 0x210, 0x211, 0x212, 0x218, 0x219, 0x21A,
+    0x221, 0x222, 0x229, 0x22A, 0x230, 0x231, 0x232, 0x238, 0x23A,
+    0x240, 0x241, 0x242, 0x248, 0x282, 0x283,
+    0x29A, 0x2A2, 0x2F9,
+}
+WALKABLE_METATILES = {
+    MT_GRASS, MT_TALL, MT_WATER, MT_SAND, CAVE_FLOOR, IN_FLOOR, IN_DOOR,
+    MT_LEDGE_A, MT_LEDGE_B, 0x00E, 0x015, 0x048, 0x049, 0x201, 0x209, 0x20E,
+}
+WATER_METATILES = {MT_WATER}
 
 
 def load_attrs(land_id: int) -> list[int]:
@@ -48,10 +70,23 @@ def stitch(chunks):
     return out
 
 
-def attr_to_mt(v, x, y, *, cave=False, snow=False):
-    col, beh = (v >> 15) & 1, v & 0xFF
+def plat_collision(v: int) -> int:
+    return (v >> 15) & 1
+
+
+def plat_behavior(v: int) -> int:
+    return v & 0xFF
+
+
+def attr_to_mt(v, x, y, *, cave=False, snow=False, indoor=False):
+    """Legacy single-cell mapper. Prefer grid_from_chunks (2x2 trees)."""
+    col, beh = plat_collision(v), plat_behavior(v)
     if col:
-        return CAVE_WALL if cave else MT_TREE[(y & 1) * 2 + (x & 1)]
+        if indoor:
+            return IN_WALL
+        if cave:
+            return CAVE_WALL
+        return MT_TREE[(y & 1) * 2 + (x & 1)]
     if beh in (0x02, 0x03):
         return MT_TALL
     if beh in (0x10, 0x15) or 0x11 <= beh <= 0x17:
@@ -62,6 +97,8 @@ def attr_to_mt(v, x, y, *, cave=False, snow=False):
         return MT_LEDGE_A if (x & 1) == 0 else MT_LEDGE_B
     if beh in (0x38, 0x39, 0x3A):
         return MT_ROCK
+    if indoor:
+        return IN_FLOOR
     if cave:
         return CAVE_FLOOR
     if snow:
@@ -69,13 +106,96 @@ def attr_to_mt(v, x, y, *, cave=False, snow=False):
     return MT_GRASS
 
 
-def pack(grid):
+def is_solid_metatile(mt: int) -> bool:
+    mt &= 0x3FF
+    if mt in WALKABLE_METATILES:
+        return False
+    if mt in SOLID_METATILES:
+        return True
+    # Building / cave secondary bodies: treat unknown 0x200+ as solid unless walkable.
+    if mt >= 0x200:
+        return True
+    return False
+
+
+def encode_map_cell(mt: int, *, collision: int | None = None) -> int:
+    """Pack Emerald map.bin cell: metatile | (collision<<10) | (elevation<<12).
+
+    Engine reads collision from these bits (MapGridGetCollisionAt), NOT from
+    metatile_attributes. Older converters wrote mt&0x3FF only → walk-through walls.
+    """
+    mt = mt & 0x3FF
+    if collision is None:
+        collision = 1 if is_solid_metatile(mt) else 0
+    collision = 1 if collision else 0
+    if mt in WATER_METATILES:
+        elev = 3
+        collision = 0  # Surf handles water; keep walk-block off for Surfing
+    elif collision:
+        elev = 0
+    else:
+        elev = 3
+    return mt | (collision << 10) | (elev << 12)
+
+
+def pack(grid, collision_grid=None):
+    """Write map.bin bytes with collision + elevation bits set.
+
+    If collision_grid is provided (0/1 per cell from Platinum), use it.
+    Otherwise infer solidity from metatile ID.
+    """
     h, w = len(grid), len(grid[0])
     out = bytearray(w * h * 2)
     for y in range(h):
         for x in range(w):
-            struct.pack_into("<H", out, (y * w + x) * 2, grid[y][x] & 0x3FF)
+            mt = grid[y][x]
+            coll = None if collision_grid is None else collision_grid[y][x]
+            struct.pack_into("<H", out, (y * w + x) * 2, encode_map_cell(mt, collision=coll))
     return bytes(out)
+
+
+def pack_reencode(blob: bytes) -> bytes:
+    """Re-encode an existing map.bin that had collision/elevation stripped."""
+    out = bytearray(len(blob))
+    for i in range(0, len(blob), 2):
+        mt = struct.unpack_from("<H", blob, i)[0] & 0x3FF
+        struct.pack_into("<H", out, i, encode_map_cell(mt))
+    return bytes(out)
+
+
+def place_complete_trees(solid: list[list[bool]], *, cave=False, indoor=False):
+    """Place full 2x2 Emerald trees on even-aligned solid blocks; rocks elsewhere.
+
+    Parity tiling of every solid cell produced unfinished tree halves wherever
+    Platinum solids were not a complete 2x2 (cliffs, fences, building footprints).
+    """
+    h, w = len(solid), len(solid[0])
+    grid = [[0] * w for _ in range(h)]
+    used = [[False] * w for _ in range(h)]
+    wall = IN_WALL if indoor else (CAVE_WALL if cave else MT_ROCK)
+
+    for y in range(0, h - 1, 2):
+        for x in range(0, w - 1, 2):
+            if solid[y][x] and solid[y][x + 1] and solid[y + 1][x] and solid[y + 1][x + 1]:
+                if indoor or cave:
+                    for dy in range(2):
+                        for dx in range(2):
+                            grid[y + dy][x + dx] = wall
+                            used[y + dy][x + dx] = True
+                else:
+                    grid[y][x] = MT_TREE_TL
+                    grid[y][x + 1] = MT_TREE_TR
+                    grid[y + 1][x] = MT_TREE_BL
+                    grid[y + 1][x + 1] = MT_TREE_BR
+                    for dy in range(2):
+                        for dx in range(2):
+                            used[y + dy][x + dx] = True
+
+    for y in range(h):
+        for x in range(w):
+            if solid[y][x] and not used[y][x]:
+                grid[y][x] = wall
+    return grid
 
 
 def paint_water(grid, chunks):
@@ -108,7 +228,7 @@ def paint_ledges(grid, chunks):
 
 def clear_plat_walkables(grid, chunks, *, cave=False, snow=False):
     """Force Emerald walkables wherever Platinum collision bit is clear (EXACT corridors)."""
-    blocked = set(MT_TREE) | {MT_ROCK, CAVE_WALL, IN_WALL}
+    blocked = set(MT_TREE) | {MT_ROCK, CAVE_WALL, IN_WALL, 0x139}
     for cy, row in enumerate(chunks):
         for cx, lid in enumerate(row):
             if lid is None:
@@ -131,15 +251,56 @@ def clear_plat_walkables(grid, chunks, *, cave=False, snow=False):
                         grid[y][x] = CAVE_FLOOR if cave else (MT_SAND if snow else MT_GRASS)
 
 
-def grid_from_chunks(chunks, *, cave=False, snow=False):
+def grid_from_chunks(chunks, *, cave=False, snow=False, indoor=False):
+    """Build Emerald metatile grid from Platinum land chunks.
+
+    Returns (grid, w, h, collision_grid) where collision_grid mirrors Platinum bit15.
+    """
     attr = stitch(chunks)
     h, w = len(attr), len(attr[0])
-    grid = [[attr_to_mt(attr[y][x], x, y, cave=cave, snow=snow) for x in range(w)] for y in range(h)]
+    solid = [[plat_collision(attr[y][x]) == 1 for x in range(w)] for y in range(h)]
+    collision = [[1 if solid[y][x] else 0 for x in range(w)] for y in range(h)]
+    grid = place_complete_trees(solid, cave=cave, indoor=indoor)
+
+    for y in range(h):
+        for x in range(w):
+            if solid[y][x]:
+                continue
+            beh = plat_behavior(attr[y][x])
+            if beh in (0x02, 0x03):
+                grid[y][x] = MT_TALL
+            elif beh in (0x10, 0x15) or 0x11 <= beh <= 0x17:
+                grid[y][x] = MT_WATER
+            elif beh == 0x21:
+                grid[y][x] = MT_SAND
+            elif beh == 0x3B:
+                grid[y][x] = MT_LEDGE_A if (x & 1) == 0 else MT_LEDGE_B
+            elif beh in (0x38, 0x39, 0x3A):
+                # Side/north jump: rock edge stand-in (Emerald lacks 1:1 ledge tiles)
+                grid[y][x] = MT_ROCK
+                collision[y][x] = 1
+            elif indoor:
+                grid[y][x] = IN_FLOOR
+            elif cave:
+                grid[y][x] = CAVE_FLOOR
+            elif snow:
+                grid[y][x] = MT_SAND
+            else:
+                grid[y][x] = MT_GRASS
+
     paint_water(grid, chunks)
     paint_ledges(grid, chunks)
     clear_plat_walkables(grid, chunks, cave=cave, snow=snow)
     paint_water(grid, chunks)
-    return grid, w, h
+    # Re-sync collision after paint/clear helpers
+    for y in range(h):
+        for x in range(w):
+            mt = grid[y][x]
+            if mt in WATER_METATILES or mt in (MT_LEDGE_A, MT_LEDGE_B, MT_TALL, MT_GRASS, MT_SAND, CAVE_FLOOR, IN_FLOOR, IN_DOOR):
+                collision[y][x] = 0
+            elif is_solid_metatile(mt):
+                collision[y][x] = 1
+    return grid, w, h, collision
 
 
 def write_layout(name, w, h, primary, secondary, blob, lid=None):

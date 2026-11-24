@@ -170,9 +170,9 @@ def scaffold_house(name, mid, plat, text):
 def main() -> int:
     indoor = []
     for name, chunks, plat, mid, layout in LIBRARY:
-        grid, w, h = grid_from_chunks(chunks, cave=False)
+        grid, w, h, coll = grid_from_chunks(chunks, cave=False)
         # libraries are indoor — force building tiles if stitch looks outdoor
-        write_layout(name, w, h, "gTileset_Building", "gTileset_GenericBuilding", pack(grid), lid=layout)
+        write_layout(name, w, h, "gTileset_Building", "gTileset_GenericBuilding", pack(grid, coll), lid=layout)
         objs, scripts, vwarps = densify_local(name, plat, w, h)
         warps = [warp(lx, ly, resolve(dest), 0) for lx, ly, dest in vwarps]
         if not warps:
