@@ -79,7 +79,8 @@
     "gMapGroup_IndoorSandgem",
     "gMapGroup_IndoorJubilife",
     "gMapGroup_IndoorOreburgh",
-    "gMapGroup_IndoorFloaroma"
+    "gMapGroup_IndoorFloaroma",
+    "gMapGroup_IndoorEterna"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -153,7 +154,10 @@
     "FloaromaTown",
     "Route205_South",
     "ValleyWindworks_Exterior",
-    "FloaromaMeadow"
+    "FloaromaMeadow",
+    "EternaForest",
+    "Route205_North",
+    "EternaCity"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1228,5 +1232,21 @@
     "FloaromaMeadow_House",
     "Route205_South_House",
     "ValleyWindworks_Interior"
+  ],
+  "gMapGroup_IndoorEterna": [
+    "EternaCity_PokemonCenter_1F",
+    "EternaCity_PokemonCenter_2F",
+    "EternaCity_Mart",
+    "EternaCity_BikeShop",
+    "EternaCity_UndergroundManHouse",
+    "EternaCity_Condo",
+    "EternaCity_SouthHouse",
+    "EternaCity_EastHouse",
+    "EternaCity_HerbShop",
+    "EternaCity_Gym",
+    "TeamGalacticEternaBuilding_1F",
+    "TeamGalacticEternaBuilding_2F",
+    "TeamGalacticEternaBuilding_3F",
+    "TeamGalacticEternaBuilding_4F"
   ]
 }

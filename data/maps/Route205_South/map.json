@@ -187,20 +187,6 @@
       "flag": "FLAG_HIDE_ROUTE205_FOREST_GRUNTS"
     },
     {
-      "local_id": "LOCALID_R205_ETERNA_GATE",
-      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 15,
-      "y": 5,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route205_South_EventScript_EternaGate",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 12,
       "y": 42,
@@ -265,36 +251,18 @@
       "x": 14,
       "y": 4,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE205_SOUTH",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_ETERNA_FOREST",
+      "dest_warp_id": "0"
     },
     {
       "x": 15,
       "y": 4,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE205_SOUTH",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_ETERNA_FOREST",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 14,
-      "y": 6,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Route205_South_EventScript_EternaGateTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 6,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Route205_South_EventScript_EternaGateTrigger"
-    },
     {
       "type": "trigger",
       "x": 14,
