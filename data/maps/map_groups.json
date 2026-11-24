@@ -93,7 +93,8 @@
     "gMapGroup_IndoorM24",
     "gMapGroup_IndoorM25",
     "gMapGroup_IndoorM26",
-    "gMapGroup_IndoorM27"
+    "gMapGroup_IndoorM27",
+    "gMapGroup_IndoorM28Sunyshore"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -199,7 +200,9 @@
     "AcuityLakefront",
     "LakeAcuity",
     "SpearPillar",
-    "SpearPillar_Distorted"
+    "SpearPillar_Distorted",
+    "Route222",
+    "SunyshoreCity"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1451,5 +1454,24 @@
     "DistortionWorld_B7F",
     "DistortionWorld_GiratinaRoom",
     "DistortionWorld_TurnbackCaveRoom"
+  ],
+  "gMapGroup_IndoorM28Sunyshore": [
+    "SunyshoreCity_Market",
+    "SunyshoreCity_NortheastHouse",
+    "SunyshoreCity_WestHouse",
+    "SunyshoreCity_NorthwestHouse",
+    "SunyshoreCity_Mart",
+    "SunyshoreCity_UnusedHouse1",
+    "SunyshoreCity_UnusedHouse2",
+    "SunyshoreCity_EastHouse",
+    "SunyshoreCity_LighthouseElevator",
+    "SunyshoreCity_PokemonCenter_1F",
+    "SunyshoreCity_MarketB",
+    "Route222_WestHouse",
+    "Route222_EastHouse",
+    "Route222_Gate_ToSunyshore",
+    "SunyshoreCity_Gym_Room1",
+    "SunyshoreCity_Gym_Room2",
+    "SunyshoreCity_Gym_VolknersRoom"
   ]
 }

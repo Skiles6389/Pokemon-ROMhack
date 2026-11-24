@@ -56,7 +56,8 @@
     F(DRAIN_PUNCH) \
     F(BRINE) \
     F(FLASH_CANNON) \
-    F(AVALANCHE)
+    F(AVALANCHE) \
+    F(DISCHARGE)
 
 #define FOREACH_HM(F) \
     F(CUT) \

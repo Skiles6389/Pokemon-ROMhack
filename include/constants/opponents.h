@@ -1177,7 +1177,35 @@
 
 #define TRAINER_LEADER_CYRUS_DISTORTED                    955 // Sinnoh M27
 
-#define TRAINERS_COUNT_EMERALD     956
+#define TRAINER_FISHERMAN_BRETT                    956 // Sinnoh Sunyshore
+
+#define TRAINER_FISHERMAN_ALEC                    957 // Sinnoh Sunyshore
+
+#define TRAINER_FISHERMAN_GEORGE                    958 // Sinnoh Sunyshore
+
+#define TRAINER_FISHERMAN_COLE                    959 // Sinnoh Sunyshore
+
+#define TRAINER_BEAUTY_NICOLA                    960 // Sinnoh Sunyshore
+
+#define TRAINER_TUBER_CONNER                    961 // Sinnoh Sunyshore
+
+#define TRAINER_RICH_BOY_TREY                    962 // Sinnoh Sunyshore
+
+#define TRAINER_SAILOR_LUTHER                    963 // Sinnoh Sunyshore
+
+#define TRAINER_POLICEMAN_THOMAS                    964 // Sinnoh Sunyshore
+
+#define TRAINER_TUBER_HOLLY                    965 // Sinnoh Sunyshore
+
+#define TRAINER_SAILOR_MARC                    966 // Sinnoh Sunyshore
+
+#define TRAINER_LEADER_VOLKNER                    967 // Sinnoh Sunyshore
+
+#define TRAINER_GUITARIST_SUNY_A                    968 // Sinnoh Sunyshore
+
+#define TRAINER_GUITARIST_SUNY_B                    969 // Sinnoh Sunyshore
+
+#define TRAINERS_COUNT_EMERALD     970
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG

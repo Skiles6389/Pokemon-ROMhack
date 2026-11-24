@@ -10533,6 +10533,215 @@
       "border_filepath": "data/layouts/DistortionWorld_TurnbackCaveRoom/border.bin",
       "blockdata_filepath": "data/layouts/DistortionWorld_TurnbackCaveRoom/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE222",
+      "name": "Route222_Layout",
+      "width": 96,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/Route222/border.bin",
+      "blockdata_filepath": "data/layouts/Route222/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE222_WEST_HOUSE",
+      "name": "Route222_WestHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route222_WestHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Route222_WestHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE222_EAST_HOUSE",
+      "name": "Route222_EastHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route222_EastHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Route222_EastHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE222_GATE_TO_SUNYSHORE",
+      "name": "Route222_Gate_ToSunyshore_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Route222_Gate_ToSunyshore/border.bin",
+      "blockdata_filepath": "data/layouts/Route222_Gate_ToSunyshore/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY",
+      "name": "SunyshoreCity_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/SunyshoreCity/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_MARKET",
+      "name": "SunyshoreCity_Market_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SunyshoreCity_Market/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_Market/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_NORTHEAST_HOUSE",
+      "name": "SunyshoreCity_NortheastHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SunyshoreCity_NortheastHouse/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_NortheastHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_WEST_HOUSE",
+      "name": "SunyshoreCity_WestHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SunyshoreCity_WestHouse/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_WestHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_NORTHWEST_HOUSE",
+      "name": "SunyshoreCity_NorthwestHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SunyshoreCity_NorthwestHouse/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_NorthwestHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_MART",
+      "name": "SunyshoreCity_Mart_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SunyshoreCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_Mart/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_UNUSED_HOUSE1",
+      "name": "SunyshoreCity_UnusedHouse1_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SunyshoreCity_UnusedHouse1/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_UnusedHouse1/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_UNUSED_HOUSE2",
+      "name": "SunyshoreCity_UnusedHouse2_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SunyshoreCity_UnusedHouse2/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_UnusedHouse2/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_EAST_HOUSE",
+      "name": "SunyshoreCity_EastHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SunyshoreCity_EastHouse/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_EastHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_LIGHTHOUSE_ELEVATOR",
+      "name": "SunyshoreCity_LighthouseElevator_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SunyshoreCity_LighthouseElevator/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_LighthouseElevator/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_POKEMON_CENTER_1_F",
+      "name": "SunyshoreCity_PokemonCenter_1F_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SunyshoreCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_PokemonCenter_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_MARKET_B",
+      "name": "SunyshoreCity_MarketB_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SunyshoreCity_MarketB/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_MarketB/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_GYM_ROOM1",
+      "name": "SunyshoreCity_Gym_Room1_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/SunyshoreCity_Gym_Room1/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_Gym_Room1/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_GYM_ROOM2",
+      "name": "SunyshoreCity_Gym_Room2_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/SunyshoreCity_Gym_Room2/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_Gym_Room2/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SUNYSHORE_CITY_GYM_VOLKNERS_ROOM",
+      "name": "SunyshoreCity_Gym_VolknersRoom_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/SunyshoreCity_Gym_VolknersRoom/border.bin",
+      "blockdata_filepath": "data/layouts/SunyshoreCity_Gym_VolknersRoom/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

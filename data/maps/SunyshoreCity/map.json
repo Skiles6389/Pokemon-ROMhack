@@ -1,0 +1,413 @@
+{
+  "id": "MAP_SUNYSHORE_CITY",
+  "name": "SunyshoreCity",
+  "layout": "LAYOUT_SUNYSHORE_CITY",
+  "music": "MUS_PL_JUBILIFE",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_ROUTE_213",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE222",
+      "offset": 32,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 51,
+      "y": 34,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc0",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 24,
+      "y": 46,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 16,
+      "y": 49,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc2",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 49,
+      "y": 57,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc3",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 16,
+      "y": 27,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc4",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 9,
+      "y": 52,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc5",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 15,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc6",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 22,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc7",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 50,
+      "y": 54,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc8",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 25,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc9",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 21,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc10",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 21,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc11",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 21,
+      "y": 19,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc12",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 53,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc13",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 53,
+      "y": 34,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc14",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 26,
+      "y": 23,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc15",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 52,
+      "y": 58,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc16",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 49,
+      "y": 43,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc17",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 13,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc18",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 46,
+      "y": 58,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc19",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 23,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Npc20",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 40,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SunyshoreCity_EventScript_Route223Closed",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 17,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_SUNYSHORE_CITY_MARKET",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 51,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_SUNYSHORE_CITY_NORTHEAST_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_SUNYSHORE_CITY_WEST_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 54,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE222_GATE_TO_SUNYSHORE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 43,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_SUNYSHORE_CITY_NORTHWEST_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_SUNYSHORE_CITY_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 55,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE222_GATE_TO_SUNYSHORE",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 0,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_SUNYSHORE_CITY_UNUSED_HOUSE1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_SUNYSHORE_CITY_UNUSED_HOUSE2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 56,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_SUNYSHORE_CITY_EAST_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 54,
+      "y": 54,
+      "elevation": 0,
+      "dest_map": "MAP_SUNYSHORE_CITY_LIGHTHOUSE_ELEVATOR",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 28,
+      "y": 48,
+      "elevation": 0,
+      "dest_map": "MAP_SUNYSHORE_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_SUNYSHORE_CITY_GYM_ROOM1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 18,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_SUNYSHORE_CITY_MARKET_B",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}
