@@ -140,7 +140,8 @@ PastoriaCity_Text_GruntChase:
 PastoriaCity_Text_ChaseAftermath:
 	.string "He bolted east toward the lake\n"
 	.string "road. Whatever they're building,\l"
-	.string "Lake Valor is the next stop.$"
+	.string "Lake Valor would be the next stop--\l"
+	.string "but that path isn't open yet.$"
 
 PastoriaCity_Text_GruntIdle:
 	.string "Buzz off. I'm waiting for a\n"
@@ -170,7 +171,10 @@ PastoriaCity_Text_WakeAfterChase:
 	.string "CRASHER WAKE: He ran for the lake?\n"
 	.string "Hah! Waves always push troublemakers\l"
 	.string "where the current wants them.\p"
-	.string "When the road opens, ride it!$"
+	.string "The lake road isn't open yet, so\n"
+	.string "this is as far as the demo goes.\l"
+	.string "Thanks for playing--more of Sinnoh\l"
+	.string "is coming!$"
 
 PastoriaCity_EventScript_WestWorker::
 	msgbox PastoriaCity_Text_WestWorker, MSGBOX_NPC
@@ -178,7 +182,7 @@ PastoriaCity_EventScript_WestWorker::
 
 PastoriaCity_Text_WestWorker:
 	.string "Route 212 and the Trophy Garden\n"
-	.string "coming in the next milestone!\p"
+	.string "aren't open yet.\p"
 	.string "This gate stays shut for now.$"
 
 PastoriaCity_EventScript_Woman::

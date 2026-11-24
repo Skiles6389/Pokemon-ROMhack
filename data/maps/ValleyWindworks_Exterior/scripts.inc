@@ -120,7 +120,7 @@ ValleyWindworks_Exterior_Text_DoorGruntIntro:
 	.string "GRUNT: Nobody gets into Valley Windworks\n"
 	.string "unless they wear Galactic colors!\p"
 	.string "That look says you're going to try.\n"
-	.string "Fine-earn your way past me!$"
+	.string "Fine--earn your way past me!$"
 
 ValleyWindworks_Exterior_Text_DoorGruntDefeat:
 	.string "Beaten by some kid...?$"

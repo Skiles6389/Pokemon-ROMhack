@@ -1,6 +1,5 @@
 OreburghCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, OreburghCity_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, OreburghCity_OnFrame
 	.byte 0
 
 @ Once the player has met Roark in the mine, the guide steps aside from the Gym door.
@@ -13,18 +12,6 @@ OreburghCity_EventScript_GuideStepAside::
 	setobjectxyperm LOCALID_OREBURGH_GYM_GUIDE, 27, 21
 	setobjectmovementtype LOCALID_OREBURGH_GYM_GUIDE, MOVEMENT_TYPE_FACE_LEFT
 	return
-
-@ State 3 is set when Roark is beaten. Stepping out of the Gym ends the demo.
-OreburghCity_OnFrame:
-	map_script_2 VAR_OREBURGH_STATE, 3, OreburghCity_EventScript_DemoEnd
-	.2byte 0
-
-OreburghCity_EventScript_DemoEnd::
-	lockall
-	msgbox OreburghCity_Text_DemoEnd, MSGBOX_DEFAULT
-	setvar VAR_OREBURGH_STATE, 4
-	releaseall
-	end
 
 @ Platinum's arrival beat: Barry runs into the player and says Roark is at the
 @ mine. The trigger spans the full width of the path out of Oreburgh Gate.
@@ -67,7 +54,7 @@ OreburghCity_Movement_BarryRunOff:
 	walk_fast_right
 	step_end
 
-@ The Gym opens in milestone 9. Until then its guide stands in the doorway.
+@ The Gym guide steps aside once the player has met Roark in the mine.
 OreburghCity_EventScript_GymGuide::
 	lock
 	faceplayer
@@ -81,7 +68,6 @@ OreburghCity_EventScript_GymGuideLater::
 	release
 	end
 
-@ Route 207 stays closed until a later milestone.
 OreburghCity_EventScript_Route207Closed::
 	lockall
 	msgbox OreburghCity_Text_Route207Closed, MSGBOX_DEFAULT
@@ -223,6 +209,3 @@ OreburghCity_Text_MineSign:
 OreburghCity_Text_Route207Sign:
 	.string "North: ROUTE 207$"
 
-OreburghCity_Text_DemoEnd:
-	.string "Thanks for playing the demo!\n"
-	.string "More of Sinnoh is coming.$"

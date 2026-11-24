@@ -216,11 +216,11 @@ Route205_South_Text_LittleGirlPleaseHurry:
 Route205_South_Text_ForestGruntBlock:
 	.string "GRUNT: Team Galactic's busy ahead.\n"
 	.string "Eterna Forest is off-limits, brat!\p"
-	.string "Clear out-unless you fancy a beating.$"
+	.string "Clear out--unless you fancy a beating.$"
 
 Route205_South_Text_EternaGate:
-	.string "Eterna Forest is coming in the next\n"
-	.string "milestone. Turn back for now.$"
+	.string "Eterna Forest lies ahead.\n"
+	.string "Watch your step in the shade.$"
 
 Route205_South_Text_SignFloaroma:
 	.string "ROUTE 205\n"

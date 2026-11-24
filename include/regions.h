@@ -13,7 +13,7 @@ static inline enum Region GetRegionForSectionId(u32 sectionId)
     return REGION_HOENN;
 }
 
-// The Sinnoh demo maps (Twinleaf Town -> Valley Windworks) use the Platinum soundtrack.
+// The Sinnoh demo maps (Twinleaf Town -> Pastoria City) use the Platinum soundtrack.
 static inline bool32 IsSinnohMapSec(u32 sectionId)
 {
     return sectionId >= MAPSEC_TWINLEAF_TOWN && sectionId <= MAPSEC_GREAT_MARSH_GATE;

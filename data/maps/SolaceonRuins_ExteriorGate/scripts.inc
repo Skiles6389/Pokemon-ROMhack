@@ -23,5 +23,5 @@ SolaceonRuins_ExteriorGate_Text_Guard:
 	.string "Researchers only, for now.$"
 
 SolaceonRuins_ExteriorGate_Text_ComingSoon:
-	.string "Solaceon Ruins interior coming in\n"
-	.string "a later milestone!$"
+	.string "The ruins are closed to visitors\n"
+	.string "for now.$"

@@ -23,5 +23,5 @@ HearthomeCity_Route212Gate_Text_Guard:
 	.string "It's not open in this demo yet.$"
 
 HearthomeCity_Route212Gate_Text_Closed:
-	.string "Route 212 is coming in a later\n"
-	.string "milestone!$"
+	.string "Route 212 isn't open yet.\n"
+	.string "Please come back another time.$"
