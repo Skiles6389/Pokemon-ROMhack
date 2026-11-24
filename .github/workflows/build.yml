@@ -16,7 +16,7 @@ env:
 
 jobs:
   build-emerald:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, romhack]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -52,7 +52,7 @@ jobs:
         run: make -j$(nproc) -O all
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, romhack]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -91,7 +91,7 @@ jobs:
         run: make -j$(nproc) check
 
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, romhack]
     needs: [build-emerald, test]
     steps:
       - name: Emerald build and tests passed
