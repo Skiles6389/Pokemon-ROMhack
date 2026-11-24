@@ -2,7 +2,6 @@ OreburghMine_B2F_MapScripts::
 	.byte 0
 
 @ Roark waits at the bottom of the mine, tells the player to come to the Gym,
-@ and heads back up. His Gym battle is milestone 9.
 OreburghMine_B2F_EventScript_Roark::
 	lock
 	faceplayer

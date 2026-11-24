@@ -76,7 +76,7 @@
 #define FLAG_ITEM_OREBURGH_MINE_B2F_ESCAPE_ROPE 0x36
 #define FLAG_ITEM_OREBURGH_MINE_B2F_POTION 0x37
 #define FLAG_RECEIVED_OREBURGH_GYM_TM 0x38
-#define FLAG_ITEM_OREBURGH_GATE_B1F_FLASH 0x39
+#define FLAG_ITEM_OREBURGH_GATE_B1F_TM70 0x39
 #define FLAG_ITEM_OREBURGH_GATE_B1F_BIG_PEARL 0x3A
 #define FLAG_HIDE_LAKE_VERITY_ROWAN 0x3B
 #define FLAG_HIDE_LAKE_VERITY_ASSISTANT 0x3C
@@ -137,7 +137,7 @@
 #define FLAG_RECEIVED_HM_ROCK_SMASH          0x6B
 #define FLAG_WHITEOUT_TO_LAVARIDGE           0x6C // Set after defeating Flannery, so the player can't white out from poison before receiving Go Goggles
 #define FLAG_RECEIVED_HM_FLASH               0x6D
-#define FLAG_RECEIVED_HM_FLY                 0x6E
+#define FLAG_RECEIVED_HM_FLY                 0x6E // Hoenn Route 119; Sinnoh warehouse uses FLAG_GOT_HM_FLY_VEILSTONE
 #define FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT  0x6F
 #define FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE  0x70
 #define FLAG_UNUSED_RS_LEGENDARY_BATTLE_DONE 0x71 // Unused Flag. Used in R/S to indicate whether player defeated or caught Groudon/Kyogre in Cave of Origin.
@@ -722,7 +722,7 @@
 #define FLAG_GOT_HM_FLY_VEILSTONE  0x299 // Sinnoh M19; HM02 item ball in the Galactic Warehouse
 #define FLAG_GOT_VEILSTONE_PORYGON  0x29A // Sinnoh M19
 #define FLAG_VISITED_VEILSTONE_CITY  0x29B // Sinnoh M19; Fly
-#define FLAG_DEFEATED_VEILSTONE_WAREHOUSE_GRUNTS  0x29C // Sinnoh M19
+#define FLAG_UNUSED_0x29C                        0x29C // Was FLAG_DEFEATED_VEILSTONE_WAREHOUSE_GRUNTS (unused)
 #define FLAG_VISITED_TWINLEAF_TOWN  0x29D // Sinnoh M19; Fly
 #define FLAG_VISITED_SANDGEM_TOWN  0x29E // Sinnoh M19; Fly
 #define FLAG_VISITED_JUBILIFE_CITY  0x29F // Sinnoh M19; Fly

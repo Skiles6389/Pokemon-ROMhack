@@ -150,7 +150,6 @@ VeilstoneCity_EventScript_WarehouseTeamUp::
 	msgbox VeilstoneCity_Text_GruntsWarn, MSGBOX_DEFAULT
 	closemessage
 	trainerbattle_two_trainers TRAINER_GALACTIC_GRUNT_VEILSTONE_1, VeilstoneCity_Text_Grunt1Defeat, TRAINER_GALACTIC_GRUNT_VEILSTONE_2, VeilstoneCity_Text_Grunt2Defeat
-	setflag FLAG_DEFEATED_VEILSTONE_WAREHOUSE_GRUNTS
 	msgbox VeilstoneCity_Text_GruntsRetreat, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_VEILSTONE_GRUNT_1, VeilstoneCity_Movement_GruntFleeWest
