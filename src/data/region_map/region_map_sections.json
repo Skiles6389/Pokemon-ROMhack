@@ -1706,6 +1706,30 @@
     {
       "id": "MAPSEC_GALACTIC_ETERNA",
       "name": "GALACTIC ETERNA BLDG."
+    },
+    {
+      "id": "MAPSEC_ROUTE_206",
+      "name": "ROUTE 206"
+    },
+    {
+      "id": "MAPSEC_WAYWARD_CAVE",
+      "name": "WAYWARD CAVE"
+    },
+    {
+      "id": "MAPSEC_ROUTE_207",
+      "name": "ROUTE 207"
+    },
+    {
+      "id": "MAPSEC_MT_CORONET",
+      "name": "MT. CORONET"
+    },
+    {
+      "id": "MAPSEC_ROUTE_208",
+      "name": "ROUTE 208"
+    },
+    {
+      "id": "MAPSEC_HEARTHOME_GATE",
+      "name": "HEARTHOME GATE"
     }
   ]
 }
