@@ -56,6 +56,20 @@
       "elevation": 0,
       "dest_map": "MAP_PASTORIA_CITY",
       "dest_warp_id": "8"
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_GREAT_MARSH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_GREAT_MARSH",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -64,18 +78,18 @@
       "x": 6,
       "y": 3,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_TEMP_1",
       "var_value": "0",
-      "script": "PastoriaCity_GreatMarshGate_EventScript_SafariComingSoon"
+      "script": "PastoriaCity_GreatMarshGate_EventScript_EnterCheck"
     },
     {
       "type": "trigger",
       "x": 7,
       "y": 3,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_TEMP_1",
       "var_value": "0",
-      "script": "PastoriaCity_GreatMarshGate_EventScript_SafariComingSoon"
+      "script": "PastoriaCity_GreatMarshGate_EventScript_EnterCheck"
     }
   ],
   "bg_events": [],

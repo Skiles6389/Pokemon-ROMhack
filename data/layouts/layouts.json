@@ -9961,6 +9961,61 @@
       "border_filepath": "data/layouts/PastoriaCity_GreatMarshGate/border.bin",
       "blockdata_filepath": "data/layouts/PastoriaCity_GreatMarshGate/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE212_NORTH",
+      "name": "Route212_North_Layout",
+      "width": 32,
+      "height": 96,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route212_North/border.bin",
+      "blockdata_filepath": "data/layouts/Route212_North/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE212_SOUTH",
+      "name": "Route212_South_Layout",
+      "width": 128,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route212_South/border.bin",
+      "blockdata_filepath": "data/layouts/Route212_South/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_GREAT_MARSH",
+      "name": "GreatMarsh_Layout",
+      "width": 64,
+      "height": 96,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/GreatMarsh/border.bin",
+      "blockdata_filepath": "data/layouts/GreatMarsh/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_POKEMON_MANSION_STUB",
+      "name": "PokemonMansion_Stub_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/PokemonMansion_Stub/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonMansion_Stub/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE212_HOUSE",
+      "name": "Route212_House_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route212_House/border.bin",
+      "blockdata_filepath": "data/layouts/Route212_House/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

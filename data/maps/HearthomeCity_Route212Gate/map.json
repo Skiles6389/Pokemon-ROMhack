@@ -48,15 +48,15 @@
       "x": 12,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_HEARTHOME_CITY",
-      "dest_warp_id": "16"
+      "dest_map": "MAP_ROUTE212_NORTH",
+      "dest_warp_id": "0"
     },
     {
       "x": 13,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_HEARTHOME_CITY",
-      "dest_warp_id": "16"
+      "dest_map": "MAP_ROUTE212_NORTH",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
@@ -65,27 +65,27 @@
       "x": 10,
       "y": 4,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_TEMP_1",
       "var_value": "0",
-      "script": "HearthomeCity_Route212Gate_EventScript_Closed"
+      "script": "HearthomeCity_Route212Gate_EventScript_NeedFen"
     },
     {
       "type": "trigger",
       "x": 11,
       "y": 4,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_TEMP_1",
       "var_value": "0",
-      "script": "HearthomeCity_Route212Gate_EventScript_Closed"
+      "script": "HearthomeCity_Route212Gate_EventScript_NeedFen"
     },
     {
       "type": "trigger",
       "x": 12,
       "y": 4,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_TEMP_1",
       "var_value": "0",
-      "script": "HearthomeCity_Route212Gate_EventScript_Closed"
+      "script": "HearthomeCity_Route212Gate_EventScript_NeedFen"
     }
   ],
   "bg_events": [],

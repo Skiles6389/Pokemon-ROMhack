@@ -86,7 +86,8 @@
     "gMapGroup_IndoorM18",
     "gMapGroup_IndoorVeilstone",
     "gMapGroup_IndoorM20",
-    "gMapGroup_IndoorV06"
+    "gMapGroup_IndoorV06",
+    "gMapGroup_IndoorM21"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -176,7 +177,10 @@
     "Route214",
     "ValorLakefront",
     "Route213",
-    "PastoriaCity"
+    "PastoriaCity",
+    "Route212_North",
+    "Route212_South",
+    "GreatMarsh"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1373,5 +1377,9 @@
     "ManiacTunnel",
     "LakeValor_Normal",
     "LakeValor_Drained"
+  ],
+  "gMapGroup_IndoorM21": [
+    "PokemonMansion_Stub",
+    "Route212_House"
   ]
 }
