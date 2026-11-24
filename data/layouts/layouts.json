@@ -11490,6 +11490,94 @@
       "border_filepath": "data/layouts/IronIsland_B3F/border.bin",
       "blockdata_filepath": "data/layouts/IronIsland_B3F/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CANALAVE_CITY_LIBRARY_1F",
+      "name": "CanalaveCity_Library_1F_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/CanalaveCity_Library_1F/border.bin",
+      "blockdata_filepath": "data/layouts/CanalaveCity_Library_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CANALAVE_CITY_LIBRARY_2F",
+      "name": "CanalaveCity_Library_2F_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/CanalaveCity_Library_2F/border.bin",
+      "blockdata_filepath": "data/layouts/CanalaveCity_Library_2F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CANALAVE_CITY_LIBRARY_3F",
+      "name": "CanalaveCity_Library_3F_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/CanalaveCity_Library_3F/border.bin",
+      "blockdata_filepath": "data/layouts/CanalaveCity_Library_3F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CANALAVE_CITY_HOUSE2",
+      "name": "CanalaveCity_House2_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/CanalaveCity_House2/border.bin",
+      "blockdata_filepath": "data/layouts/CanalaveCity_House2/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CANALAVE_CITY_HOUSE3",
+      "name": "CanalaveCity_House3_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/CanalaveCity_House3/border.bin",
+      "blockdata_filepath": "data/layouts/CanalaveCity_House3/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CANALAVE_CITY_HOUSE4",
+      "name": "CanalaveCity_House4_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/CanalaveCity_House4/border.bin",
+      "blockdata_filepath": "data/layouts/CanalaveCity_House4/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CANALAVE_CITY_HARBOR_INN",
+      "name": "CanalaveCity_HarborInn_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/CanalaveCity_HarborInn/border.bin",
+      "blockdata_filepath": "data/layouts/CanalaveCity_HarborInn/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CANALAVE_CITY_ELDRITCH_HOUSE",
+      "name": "CanalaveCity_EldritchHouse_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/CanalaveCity_EldritchHouse/border.bin",
+      "blockdata_filepath": "data/layouts/CanalaveCity_EldritchHouse/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

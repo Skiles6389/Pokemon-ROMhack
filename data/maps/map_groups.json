@@ -102,7 +102,8 @@
     "gMapGroup_IndoorM33SurvivalResort",
     "gMapGroup_IndoorM34Stark",
     "gMapGroup_IndoorM35Temple",
-    "gMapGroup_IndoorM36IronIsland"
+    "gMapGroup_IndoorM36IronIsland",
+    "gMapGroup_IndoorM37Canalave"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1564,5 +1565,15 @@
     "IronIsland_B2F_East",
     "IronIsland_B2F_West",
     "IronIsland_B3F"
+  ],
+  "gMapGroup_IndoorM37Canalave": [
+    "CanalaveCity_Library_1F",
+    "CanalaveCity_Library_2F",
+    "CanalaveCity_Library_3F",
+    "CanalaveCity_House2",
+    "CanalaveCity_House3",
+    "CanalaveCity_House4",
+    "CanalaveCity_HarborInn",
+    "CanalaveCity_EldritchHouse"
   ]
 }

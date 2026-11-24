@@ -302,28 +302,28 @@
       "x": 5,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_CANALAVE_CITY_LIBRARY",
+      "dest_map": "MAP_CANALAVE_CITY_LIBRARY_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 22,
       "y": 44,
       "elevation": 0,
-      "dest_map": "MAP_CANALAVE_CITY_HOUSE1",
+      "dest_map": "MAP_CANALAVE_CITY_HOUSE4",
       "dest_warp_id": "0"
     },
     {
       "x": 26,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_CANALAVE_CITY_HOUSE1",
+      "dest_map": "MAP_CANALAVE_CITY_HARBOR_INN",
       "dest_warp_id": "0"
     },
     {
       "x": 7,
       "y": 44,
       "elevation": 0,
-      "dest_map": "MAP_CANALAVE_CITY_HOUSE1",
+      "dest_map": "MAP_CANALAVE_CITY_ELDRITCH_HOUSE",
       "dest_warp_id": "0"
     },
     {
@@ -344,14 +344,14 @@
       "x": 21,
       "y": 28,
       "elevation": 0,
-      "dest_map": "MAP_CANALAVE_CITY_HOUSE1",
+      "dest_map": "MAP_CANALAVE_CITY_HOUSE3",
       "dest_warp_id": "0"
     },
     {
       "x": 6,
       "y": 36,
       "elevation": 0,
-      "dest_map": "MAP_CANALAVE_CITY_HOUSE1",
+      "dest_map": "MAP_CANALAVE_CITY_HOUSE2",
       "dest_warp_id": "0"
     }
   ],
