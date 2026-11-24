@@ -10742,6 +10742,94 @@
       "border_filepath": "data/layouts/SunyshoreCity_Gym_VolknersRoom/border.bin",
       "blockdata_filepath": "data/layouts/SunyshoreCity_Gym_VolknersRoom/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE223",
+      "name": "Route223_Layout",
+      "width": 32,
+      "height": 128,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/Route223/border.bin",
+      "blockdata_filepath": "data/layouts/Route223/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_EXTERIOR",
+      "name": "PokemonLeague_Exterior_Layout",
+      "width": 32,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/PokemonLeague_Exterior/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_Exterior/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_SOUTH_P_C",
+      "name": "PokemonLeague_SouthPC_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/PokemonLeague_SouthPC/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_SouthPC/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_NORTH_P_C",
+      "name": "PokemonLeague_NorthPC_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/PokemonLeague_NorthPC/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_NorthPC/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_SINNOH_1_F",
+      "name": "VictoryRoad_Sinnoh_1F_Layout",
+      "width": 64,
+      "height": 96,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/VictoryRoad_Sinnoh_1F/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_Sinnoh_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_SINNOH_2_F",
+      "name": "VictoryRoad_Sinnoh_2F_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/VictoryRoad_Sinnoh_2F/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_Sinnoh_2F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_SINNOH_B1_F",
+      "name": "VictoryRoad_Sinnoh_B1F_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/VictoryRoad_Sinnoh_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_Sinnoh_B1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_SINNOH_ROOM1",
+      "name": "VictoryRoad_Sinnoh_Room1_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/VictoryRoad_Sinnoh_Room1/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_Sinnoh_Room1/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

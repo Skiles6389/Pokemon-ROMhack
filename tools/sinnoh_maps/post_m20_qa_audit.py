@@ -140,6 +140,12 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "DistortionWorld_B7F": [[628], [629]],
     "DistortionWorld_GiratinaRoom": [[630]],
     "DistortionWorld_TurnbackCaveRoom": [[631, 632], [633, 634]],
+    "Route223": [[92], [93], [94], [95]],
+    "PokemonLeague_Exterior": [[114], [113]],
+    "VictoryRoad_Sinnoh_1F": [[407, 408], [409, 410], [411, 412]],
+    "VictoryRoad_Sinnoh_2F": [[413, 414], [415, 416]],
+    "VictoryRoad_Sinnoh_B1F": [[417, 418], [419, 420]],
+
 
 }
 

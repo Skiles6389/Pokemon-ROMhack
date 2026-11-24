@@ -81,6 +81,12 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "DistortionWorld_B7F": [[628], [629]],
     "DistortionWorld_GiratinaRoom": [[630]],
     "DistortionWorld_TurnbackCaveRoom": [[631, 632], [633, 634]],
+    "Route223": [[92], [93], [94], [95]],
+    "PokemonLeague_Exterior": [[114], [113]],
+    "VictoryRoad_Sinnoh_1F": [[407, 408], [409, 410], [411, 412]],
+    "VictoryRoad_Sinnoh_2F": [[413, 414], [415, 416]],
+    "VictoryRoad_Sinnoh_B1F": [[417, 418], [419, 420]],
+
 
 }
 
@@ -130,6 +136,12 @@ DOCUMENTED_ORIGIN = {
     "DistortionWorld_B7F": (0, 0),
     "DistortionWorld_GiratinaRoom": (0, 0),
     "DistortionWorld_TurnbackCaveRoom": (0, 0),
+    "Route223": (832, 608),
+    "PokemonLeague_Exterior": (832, 544),
+    "VictoryRoad_Sinnoh_1F": (0, 0),
+    "VictoryRoad_Sinnoh_2F": (0, 0),
+    "VictoryRoad_Sinnoh_B1F": (0, 0),
+
     "Route206": (288, 576),
     "Route207": (288, 704),
     "JubilifeCity": (128, 736),
@@ -207,6 +219,12 @@ PLAT_NAME = {
     "DistortionWorld_B7F": "distortion_world_b7f",
     "DistortionWorld_GiratinaRoom": "distortion_world_giratina_room",
     "DistortionWorld_TurnbackCaveRoom": "distortion_world_turnback_cave_room",
+    "Route223": "route_223",
+    "PokemonLeague_Exterior": "pokemon_league",
+    "VictoryRoad_Sinnoh_1F": "victory_road_1f",
+    "VictoryRoad_Sinnoh_2F": "victory_road_2f",
+    "VictoryRoad_Sinnoh_B1F": "victory_road_b1f",
+
     "GreatMarsh": "great_marsh_1",  # events sample; geometry from GreatMarsh_DP lands
     "VerityLakefront": "verity_lakefront",
     "LakeVerity": "lake_verity_low_water",  # guess; resolve later

@@ -1205,7 +1205,61 @@
 
 #define TRAINER_GUITARIST_SUNY_B                    969 // Sinnoh Sunyshore
 
-#define TRAINERS_COUNT_EMERALD     970
+#define TRAINER_SWIMMER_WESLEY                    970 // Sinnoh VR
+
+#define TRAINER_SWIMMER_RICARDO                    971 // Sinnoh VR
+
+#define TRAINER_SWIMMER_FRANCISCO                    972 // Sinnoh VR
+
+#define TRAINER_SWIMMER_COLTON                    973 // Sinnoh VR
+
+#define TRAINER_SWIMMER_TROY                    974 // Sinnoh VR
+
+#define TRAINER_SWIMMER_OSCAR                    975 // Sinnoh VR
+
+#define TRAINER_SWIMMER_MIRANDA                    976 // Sinnoh VR
+
+#define TRAINER_SWIMMER_AUBREE                    977 // Sinnoh VR
+
+#define TRAINER_SWIMMER_PAIGE                    978 // Sinnoh VR
+
+#define TRAINER_SWIMMER_CRYSTAL                    979 // Sinnoh VR
+
+#define TRAINER_SWIMMER_CASSANDRA                    980 // Sinnoh VR
+
+#define TRAINER_SWIMMER_GABRIELLE                    981 // Sinnoh VR
+
+#define TRAINER_SAILOR_ZACHARIAH                    982 // Sinnoh VR
+
+#define TRAINER_PSYCHIC_BRYCE                    983 // Sinnoh VR
+
+#define TRAINER_BLACK_BELT_MILES                    984 // Sinnoh VR
+
+#define TRAINER_BIRD_KEEPER_HANA                    985 // Sinnoh VR
+
+#define TRAINER_ACE_TRAINER_MARIAH                    986 // Sinnoh VR
+
+#define TRAINER_VETERAN_EDGAR                    987 // Sinnoh VR
+
+#define TRAINER_DRAGON_TAMER_CLINTON                    988 // Sinnoh VR
+
+#define TRAINER_ACE_TRAINER_OMAR                    989 // Sinnoh VR
+
+#define TRAINER_ACE_TRAINER_SYDNEY                    990 // Sinnoh VR
+
+#define TRAINER_VETERAN_CLAYTON                    991 // Sinnoh VR
+
+#define TRAINER_DOUBLE_TEAM_AL_AND_KAY                    992 // Sinnoh VR
+
+#define TRAINER_DOUBLE_TEAM_JO_AND_PAT                    993 // Sinnoh VR
+
+#define TRAINER_DRAGON_TAMER_ONDREJ                    994 // Sinnoh VR
+
+#define TRAINER_PSYCHIC_VALENCIA                    995 // Sinnoh VR
+
+#define TRAINER_ACE_TRAINER_HENRY                    996 // Sinnoh VR
+
+#define TRAINERS_COUNT_EMERALD     997
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG
