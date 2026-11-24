@@ -796,6 +796,69 @@
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
+    },
+    "SurvivalArea": {
+      "status": "PASS",
+      "size": "64x32",
+      "plat_size": "64x32",
+      "mismatch": 12,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "Route226": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 1052,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "Route227": {
+      "status": "PASS",
+      "size": "32x96",
+      "plat_size": "32x96",
+      "mismatch": 62,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "Route228": {
+      "status": "PASS",
+      "size": "32x96",
+      "plat_size": "32x96",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "Route229": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 1024,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "Route230": {
+      "status": "PASS",
+      "size": "96x32",
+      "plat_size": "96x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "ResortArea": {
+      "status": "PASS",
+      "size": "32x64",
+      "plat_size": "32x64",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
     }
   }
 }

@@ -11083,6 +11083,226 @@
       "border_filepath": "data/layouts/FightArea_Mart/border.bin",
       "blockdata_filepath": "data/layouts/FightArea_Mart/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SURVIVAL_AREA",
+      "name": "SurvivalArea_Layout",
+      "width": 64,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/SurvivalArea/border.bin",
+      "blockdata_filepath": "data/layouts/SurvivalArea/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SURVIVAL_AREA_POKEMON_CENTER_1_F",
+      "name": "SurvivalArea_PokemonCenter_1F_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/SurvivalArea_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SurvivalArea_PokemonCenter_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SURVIVAL_AREA_MART",
+      "name": "SurvivalArea_Mart_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/SurvivalArea_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/SurvivalArea_Mart/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SURVIVAL_AREA_SOUTH_HOUSE",
+      "name": "SurvivalArea_SouthHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/SurvivalArea_SouthHouse/border.bin",
+      "blockdata_filepath": "data/layouts/SurvivalArea_SouthHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SURVIVAL_AREA_NORTH_HOUSE",
+      "name": "SurvivalArea_NorthHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/SurvivalArea_NorthHouse/border.bin",
+      "blockdata_filepath": "data/layouts/SurvivalArea_NorthHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE226",
+      "name": "Route226_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route226/border.bin",
+      "blockdata_filepath": "data/layouts/Route226/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE226_HOUSE",
+      "name": "Route226_House_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Route226_House/border.bin",
+      "blockdata_filepath": "data/layouts/Route226_House/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE227",
+      "name": "Route227_Layout",
+      "width": 32,
+      "height": 96,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route227/border.bin",
+      "blockdata_filepath": "data/layouts/Route227/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE227_HOUSE",
+      "name": "Route227_House_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Route227_House/border.bin",
+      "blockdata_filepath": "data/layouts/Route227_House/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE228",
+      "name": "Route228_Layout",
+      "width": 32,
+      "height": 96,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route228/border.bin",
+      "blockdata_filepath": "data/layouts/Route228/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE228_NORTH_HOUSE",
+      "name": "Route228_NorthHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Route228_NorthHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Route228_NorthHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE228_SOUTH_HOUSE",
+      "name": "Route228_SouthHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Route228_SouthHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Route228_SouthHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE229",
+      "name": "Route229_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route229/border.bin",
+      "blockdata_filepath": "data/layouts/Route229/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE230",
+      "name": "Route230_Layout",
+      "width": 96,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route230/border.bin",
+      "blockdata_filepath": "data/layouts/Route230/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RESORT_AREA",
+      "name": "ResortArea_Layout",
+      "width": 32,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ResortArea/border.bin",
+      "blockdata_filepath": "data/layouts/ResortArea/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RESORT_AREA_POKEMON_CENTER_1_F",
+      "name": "ResortArea_PokemonCenter_1F_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/ResortArea_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/ResortArea_PokemonCenter_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RESORT_AREA_HOUSE",
+      "name": "ResortArea_House_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/ResortArea_House/border.bin",
+      "blockdata_filepath": "data/layouts/ResortArea_House/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RESORT_AREA_VILLA",
+      "name": "ResortArea_Villa_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/ResortArea_Villa/border.bin",
+      "blockdata_filepath": "data/layouts/ResortArea_Villa/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RESORT_AREA_RIBBON_SYNDICATE",
+      "name": "ResortArea_RibbonSyndicate_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/ResortArea_RibbonSyndicate/border.bin",
+      "blockdata_filepath": "data/layouts/ResortArea_RibbonSyndicate/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE228_ROCK_PEAK_RUINS",
+      "name": "Route228_RockPeakRuins_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Route228_RockPeakRuins/border.bin",
+      "blockdata_filepath": "data/layouts/Route228_RockPeakRuins/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

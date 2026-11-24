@@ -275,13 +275,13 @@ Route225_EventScript_Npc30_Text:
 	.string "The Fight Area draws champions from every region.$"
 
 
-Route225_EventScript_SurvivalClosed::
+Route225_EventScript_SurvivalGuide::
 	lock
 	faceplayer
-	msgbox Route225_Text_SurvivalClosed, MSGBOX_DEFAULT
+	msgbox Route225_Text_SurvivalGuide, MSGBOX_DEFAULT
 	release
 	end
 
-Route225_Text_SurvivalClosed:
-	.string "Survival Area opens in a later postgame\n"
-	.string "build. Train in the Fight Area for now.$"
+Route225_Text_SurvivalGuide:
+	.string "Survival Area is east of here.\n"
+	.string "Routes 226-230 weave through the Battle Zone.$"

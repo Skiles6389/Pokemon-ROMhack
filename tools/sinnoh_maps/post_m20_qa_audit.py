@@ -164,6 +164,14 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "VictoryRoad_Sinnoh_Room1": [[425]],
     "VictoryRoad_Sinnoh_Room2": [[421, 422], [423, 424]],
     "VictoryRoad_Sinnoh_Room3": [[426]],
+    "SurvivalArea": [[166, 167]],
+    "Route226": [[None, 171], [168, 169]],
+    "Route227": [[170], [171], [169]],
+    "Route228": [[139], [140], [141]],
+    "Route229": [[134, 135], [None, 142]],
+    "Route230": [[136, 137, 138]],
+    "ResortArea": [[135], [142]],
+
 
 
 }

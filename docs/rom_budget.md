@@ -65,6 +65,7 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 | After M29 (Elite Four) | 5,794,280 (5.526 MiB) | ~4.09 MiB | Used ~25 KiB from M28 (under 350 KiB) |
 | After M30 (Champion) | 5,786,568 (5.519 MiB) | ~4.09 MiB | Used ~8 KiB from M29 (under 250 KiB) |
 | After postgame Fight Area | 5,724,356 (5.459 MiB) | ~4.03 MiB | Used ~61 KiB from M30 (R224/225/Fight Area) |
+| After M33 Survival/Resort | 5,658,676 (5.397 MiB) | ~3.97 MiB | Used ~66 KiB (R226–230, Survival, Resort) |
 
 ## Large assets log
 
@@ -115,6 +116,11 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 
 - Free trailing 0xFF: **5,786,568 bytes (5.519 MiB)**
 - Cynthia (Platinum team/levels, IVs 0), Sinnoh Hallway + Hall of Fame EXACT; `FLAG_DEFEATED_CHAMPION_CYNTHIA` + `FLAG_SYS_GAME_CLEAR` + `GameClear` credits.
+
+### Measured after M33 Survival/Resort
+
+- Free trailing 0xFF: **5,658,676 bytes (5.397 MiB)**
+- Survival/Resort + R226–230 EXACT; Stark soft-closed on R227.
 
 ### Measured after postgame Fight Area
 
