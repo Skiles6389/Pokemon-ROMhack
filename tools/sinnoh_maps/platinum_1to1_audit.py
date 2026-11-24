@@ -106,6 +106,14 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "VictoryRoad_Sinnoh_Room1": [[425]],
     "VictoryRoad_Sinnoh_Room2": [[421, 422], [423, 424]],
     "VictoryRoad_Sinnoh_Room3": [[426]],
+    "SurvivalArea": [[166, 167]],
+    "Route226": [[None, 171], [168, 169]],
+    "Route227": [[170], [171], [169]],
+    "Route228": [[139], [140], [141]],
+    "Route229": [[134, 135], [None, 142]],
+    "Route230": [[136, 137, 138]],
+    "ResortArea": [[135], [142]],
+
 
 
 }
@@ -177,6 +185,14 @@ DOCUMENTED_ORIGIN = {
     "VictoryRoad_Sinnoh_Room1": (0, 0),
     "VictoryRoad_Sinnoh_Room2": (0, 0),
     "VictoryRoad_Sinnoh_Room3": (0, 0),
+    "SurvivalArea": (640, 320),
+    "Route226": (704, 288),
+    "Route227": (736, 256),
+    "Route228": (768, 320),
+    "Route229": (768, 416),
+    "Route230": (672, 416),
+    "ResortArea": (800, 416),
+
     "PokemonLeague_Sinnoh_CynthiasRoom": (0, 0),
     "PokemonLeague_Sinnoh_HallOfFame": (0, 0),
     "PokemonLeague_Sinnoh_HallwayToHoF": (0, 0),
@@ -279,6 +295,14 @@ PLAT_NAME = {
     "VictoryRoad_Sinnoh_Room1": "victory_road_1f_room_1",
     "VictoryRoad_Sinnoh_Room2": "victory_road_1f_room_2",
     "VictoryRoad_Sinnoh_Room3": "victory_road_1f_room_3",
+    "SurvivalArea": "survival_area",
+    "Route226": "route_226",
+    "Route227": "route_227",
+    "Route228": "route_228",
+    "Route229": "route_229",
+    "Route230": "route_230",
+    "ResortArea": "resort_area",
+
     "PokemonLeague_Sinnoh_CynthiasRoom": "pokemon_league_champion_room",
     "PokemonLeague_Sinnoh_HallOfFame": "pokemon_league_hall_of_fame",
     "PokemonLeague_Sinnoh_HallwayToHoF": "pokemon_league_hallway_to_hall_of_fame",

@@ -98,7 +98,8 @@
     "gMapGroup_IndoorM29VictoryRoad",
     "gMapGroup_IndoorM30EliteFour",
     "gMapGroup_IndoorM31Champion",
-    "gMapGroup_IndoorM32PostgameFight"
+    "gMapGroup_IndoorM32PostgameFight",
+    "gMapGroup_IndoorM33SurvivalResort"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -214,7 +215,14 @@
     "VictoryRoad_Sinnoh_B1F",
     "Route224",
     "Route225",
-    "FightArea"
+    "FightArea",
+    "SurvivalArea",
+    "Route226",
+    "Route227",
+    "Route228",
+    "Route229",
+    "Route230",
+    "ResortArea"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1515,5 +1523,20 @@
     "FightArea_MiddleHouse",
     "FightArea_SouthHouse",
     "FightArea_Mart"
+  ],
+  "gMapGroup_IndoorM33SurvivalResort": [
+    "SurvivalArea_PokemonCenter_1F",
+    "SurvivalArea_Mart",
+    "SurvivalArea_SouthHouse",
+    "SurvivalArea_NorthHouse",
+    "Route226_House",
+    "Route227_House",
+    "Route228_NorthHouse",
+    "Route228_SouthHouse",
+    "ResortArea_PokemonCenter_1F",
+    "ResortArea_House",
+    "ResortArea_Villa",
+    "ResortArea_RibbonSyndicate",
+    "Route228_RockPeakRuins"
   ]
 }

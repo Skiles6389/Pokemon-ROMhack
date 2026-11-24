@@ -1329,7 +1329,59 @@
 
 #define TRAINER_ACE_TRAINER_QUINN                    1031 // Sinnoh Postgame
 
-#define TRAINERS_COUNT_EMERALD     1032
+#define TRAINER_SWIMMER_LYDIA_PG                    1032 // Sinnoh Postgame
+
+#define TRAINER_BIRD_KEEPER_GENEVA_PG                    1033 // Sinnoh Postgame
+
+#define TRAINER_DRAGON_TAMER_STANLEY_PG                    1034 // Sinnoh Postgame
+
+#define TRAINER_SWIMMER_WADE_PG                    1035 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_SAUL_PG                    1036 // Sinnoh Postgame
+
+#define TRAINER_RANGER_FELICIA_PG                    1037 // Sinnoh Postgame
+
+#define TRAINER_BLACK_BELT_GRIFFIN_PG                    1038 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_MIKAYLA_PG                    1039 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_JOSE_PG                    1040 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_MOIRA_PG                    1041 // Sinnoh Postgame
+
+#define TRAINER_RANGER_KYLER_PG                    1042 // Sinnoh Postgame
+
+#define TRAINER_RANGER_KRISTA_PG                    1043 // Sinnoh Postgame
+
+#define TRAINER_DRAGON_TAMER_KEEGAN_PG                    1044 // Sinnoh Postgame
+
+#define TRAINER_PSYCHIC_CORBIN_PG                    1045 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_MEAGAN_PG                    1046 // Sinnoh Postgame
+
+#define TRAINER_BLACK_BELT_DAVON_PG                    1047 // Sinnoh Postgame
+
+#define TRAINER_RANGER_DESHAWN_PG                    1048 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_FELIX_PG                    1049 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_DANA_PG                    1050 // Sinnoh Postgame
+
+#define TRAINER_ACE_TRAINER_SANDRA_PG                    1051 // Sinnoh Postgame
+
+#define TRAINER_SWIMMER_GLENN_PG                    1052 // Sinnoh Postgame
+
+#define TRAINER_SWIMMER_JOANNA_PG                    1053 // Sinnoh Postgame
+
+#define TRAINER_SWIMMER_KURT_PG                    1054 // Sinnoh Postgame
+
+#define TRAINER_SWIMMER_SOPHIA_PG                    1055 // Sinnoh Postgame
+
+#define TRAINER_SWIMMER_SAM_PG                    1056 // Sinnoh Postgame
+
+#define TRAINER_SWIMMER_MALLORY_PG                    1057 // Sinnoh Postgame
+
+#define TRAINERS_COUNT_EMERALD     1058
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG
