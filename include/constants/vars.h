@@ -270,7 +270,7 @@
 #define VAR_MT_CORONET_SOUTH_STATE                       0x40F8 // Sinnoh M16: 0 = Cyrus pending, 1 = done
 #define VAR_HEARTHOME_CITY_STATE                         0x40F9 // Sinnoh M17: 0 Barry pending, 1 Barry done
 #define VAR_ROUTE210_STATE                               0x40FA // Sinnoh M18: Psyduck blockade (0 blocked)
-#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
+#define VAR_VEILSTONE_CITY_STATE                         0x40FB // Sinnoh M19: 0 counterpart pending, 1 warehouse standoff, 2 grunts beaten
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var

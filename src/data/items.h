@@ -13065,11 +13065,14 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM52] =
+    [ITEM_TM_DRAIN_PUNCH] =
     {
-        .name = ITEM_NAME("TM52"),
+        .name = ITEM_NAME("TM60"),
         .price = 3000,
-        .description = COMPOUND_STRING("?????"), // Todo
+        .description = COMPOUND_STRING(
+            "A punch that drains\n"
+            "half the damage it\n"
+            "inflicts to heal HP."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

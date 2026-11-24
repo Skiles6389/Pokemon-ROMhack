@@ -1,0 +1,634 @@
+{
+  "id": "MAP_VEILSTONE_CITY",
+  "name": "VeilstoneCity",
+  "layout": "LAYOUT_VEILSTONE_CITY",
+  "music": "MUS_PL_JUBILIFE",
+  "night_music": "MUS_PL_JUBILIFE_NIGHT",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_VEILSTONE_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_1",
+      "x": 14,
+      "y": 36,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VeilstoneCity_EventScript_Counterpart",
+      "flag": "FLAG_HIDE_VEILSTONE_COUNTERPART",
+      "local_id": "LOCALID_VEILSTONE_COUNTERPART"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "x": 28,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseGrunt",
+      "flag": "FLAG_HIDE_VEILSTONE_WAREHOUSE_GRUNTS",
+      "local_id": "LOCALID_VEILSTONE_GRUNT_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "x": 30,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseGrunt",
+      "flag": "FLAG_HIDE_VEILSTONE_WAREHOUSE_GRUNTS",
+      "local_id": "LOCALID_VEILSTONE_GRUNT_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LEAF",
+      "x": 10,
+      "y": 37,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VeilstoneCity_EventScript_MayleneCameo",
+      "flag": "FLAG_HIDE_VEILSTONE_MAYLENE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "x": 42,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VeilstoneCity_EventScript_HQGuard",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "x": 48,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VeilstoneCity_EventScript_HQGuard",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 22,
+      "y": 34,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VeilstoneCity_EventScript_Woman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "x": 36,
+      "y": 37,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VeilstoneCity_EventScript_Man",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
+      "x": 30,
+      "y": 29,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 2,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VeilstoneCity_EventScript_Boy",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 20,
+      "y": 28,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VeilstoneCity_EventScript_OldMan",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 53,
+      "y": 40,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VeilstoneCity_EventScript_Researcher",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
+      "x": 39,
+      "y": 49,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VeilstoneCity_EventScript_LittleGirl",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 45,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 46,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 12,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_GYM",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_DEPARTMENT_STORE_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_GALACTIC_WAREHOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 34,
+      "y": 47,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_GAME_CORNER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 44,
+      "y": 47,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_PRIZE_EXCHANGE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 18,
+      "y": 47,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_MASSAGE_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 24,
+      "y": 47,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_SOUTHEAST_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 39,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_NORTHWEST_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 45,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_NORTHEAST_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE215_VEILSTONE_GATE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 6,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE215_VEILSTONE_GATE",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 46,
+      "y": 62,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_ROUTE214_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 47,
+      "y": 62,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_ROUTE214_GATE",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_GymExitScene"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 37,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_GymExitScene"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseBlocked"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseBlocked"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseBlocked"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseBlocked"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseBlocked"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseBlocked"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseBlocked"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseBlocked"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseBlocked"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseBlocked"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseBlocked"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseBlocked"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseBlocked"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseBlocked"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "0",
+      "script": "VeilstoneCity_EventScript_WarehouseBlocked"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "1",
+      "script": "VeilstoneCity_EventScript_WarehouseTeamUp"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "1",
+      "script": "VeilstoneCity_EventScript_WarehouseTeamUp"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "1",
+      "script": "VeilstoneCity_EventScript_WarehouseTeamUp"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "1",
+      "script": "VeilstoneCity_EventScript_WarehouseTeamUp"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "1",
+      "script": "VeilstoneCity_EventScript_WarehouseTeamUp"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "1",
+      "script": "VeilstoneCity_EventScript_WarehouseTeamUp"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "1",
+      "script": "VeilstoneCity_EventScript_WarehouseTeamUp"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "1",
+      "script": "VeilstoneCity_EventScript_WarehouseTeamUp"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "1",
+      "script": "VeilstoneCity_EventScript_WarehouseTeamUp"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "1",
+      "script": "VeilstoneCity_EventScript_WarehouseTeamUp"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "1",
+      "script": "VeilstoneCity_EventScript_WarehouseTeamUp"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "1",
+      "script": "VeilstoneCity_EventScript_WarehouseTeamUp"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "1",
+      "script": "VeilstoneCity_EventScript_WarehouseTeamUp"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "1",
+      "script": "VeilstoneCity_EventScript_WarehouseTeamUp"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_VEILSTONE_CITY_STATE",
+      "var_value": "1",
+      "script": "VeilstoneCity_EventScript_WarehouseTeamUp"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 36,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VeilstoneCity_EventScript_GymSign"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 23,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VeilstoneCity_EventScript_CitySign"
+    },
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 28,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VeilstoneCity_EventScript_DeptStoreSign"
+    },
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VeilstoneCity_EventScript_WarehouseSign"
+    },
+    {
+      "type": "sign",
+      "x": 36,
+      "y": 48,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VeilstoneCity_EventScript_GameCornerSign"
+    },
+    {
+      "type": "sign",
+      "x": 45,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VeilstoneCity_EventScript_HQSign"
+    },
+    {
+      "type": "sign",
+      "x": 54,
+      "y": 41,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VeilstoneCity_EventScript_CraterSign"
+    }
+  ]
+}

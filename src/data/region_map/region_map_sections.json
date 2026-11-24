@@ -1633,7 +1633,11 @@
     },
     {
       "id": "MAPSEC_TWINLEAF_TOWN",
-      "name": "TWINLEAF TOWN"
+      "name": "TWINLEAF TOWN",
+      "x": 17,
+      "y": 0,
+      "width": 1,
+      "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_201",
@@ -1645,7 +1649,11 @@
     },
     {
       "id": "MAPSEC_SANDGEM_TOWN",
-      "name": "SANDGEM TOWN"
+      "name": "SANDGEM TOWN",
+      "x": 18,
+      "y": 0,
+      "width": 1,
+      "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_202",
@@ -1653,7 +1661,11 @@
     },
     {
       "id": "MAPSEC_JUBILIFE_CITY",
-      "name": "JUBILIFE CITY"
+      "name": "JUBILIFE CITY",
+      "x": 19,
+      "y": 0,
+      "width": 1,
+      "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_203",
@@ -1665,7 +1677,11 @@
     },
     {
       "id": "MAPSEC_OREBURGH_CITY",
-      "name": "OREBURGH CITY"
+      "name": "OREBURGH CITY",
+      "x": 20,
+      "y": 0,
+      "width": 1,
+      "height": 1
     },
     {
       "id": "MAPSEC_OREBURGH_MINE",
@@ -1681,7 +1697,11 @@
     },
     {
       "id": "MAPSEC_FLOAROMA_TOWN",
-      "name": "FLOAROMA TOWN"
+      "name": "FLOAROMA TOWN",
+      "x": 21,
+      "y": 0,
+      "width": 1,
+      "height": 1
     },
     {
       "id": "MAPSEC_FLOAROMA_MEADOW",
@@ -1701,7 +1721,11 @@
     },
     {
       "id": "MAPSEC_ETERNA_CITY",
-      "name": "ETERNA CITY"
+      "name": "ETERNA CITY",
+      "x": 22,
+      "y": 0,
+      "width": 1,
+      "height": 1
     },
     {
       "id": "MAPSEC_GALACTIC_ETERNA",
@@ -1733,7 +1757,11 @@
     },
     {
       "id": "MAPSEC_HEARTHOME_CITY",
-      "name": "HEARTHOME CITY"
+      "name": "HEARTHOME CITY",
+      "x": 23,
+      "y": 0,
+      "width": 1,
+      "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_209_GATE",
@@ -1749,7 +1777,11 @@
     },
     {
       "id": "MAPSEC_SOLACEON_TOWN",
-      "name": "SOLACEON TOWN"
+      "name": "SOLACEON TOWN",
+      "x": 24,
+      "y": 0,
+      "width": 1,
+      "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_210",
@@ -1762,6 +1794,22 @@
     {
       "id": "MAPSEC_VEILSTONE_GATE",
       "name": "VEILSTONE GATE"
+    },
+    {
+      "id": "MAPSEC_VEILSTONE_CITY",
+      "name": "VEILSTONE CITY",
+      "x": 25,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_VEILSTONE_GYM",
+      "name": "VEILSTONE GYM"
+    },
+    {
+      "id": "MAPSEC_GALACTIC_WAREHOUSE",
+      "name": "GALACTIC WAREHOUSE"
     }
   ]
 }

@@ -1,5 +1,10 @@
 TwinleafTown_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, TwinleafTown_OnTransition
 	.byte 0
+
+TwinleafTown_OnTransition:
+	setflag FLAG_VISITED_TWINLEAF_TOWN
+	end
 
 TwinleafTown_EventScript_Boy::
 	msgbox TwinleafTown_Text_Boy, MSGBOX_NPC

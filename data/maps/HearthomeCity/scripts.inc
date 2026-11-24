@@ -1,5 +1,10 @@
 HearthomeCity_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HearthomeCity_OnTransition
 	.byte 0
+
+HearthomeCity_OnTransition:
+	setflag FLAG_VISITED_HEARTHOME_CITY
+	end
 
 HearthomeCity_EventScript_BarryTrigger::
 	lockall

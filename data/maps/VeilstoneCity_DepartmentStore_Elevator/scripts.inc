@@ -1,0 +1,110 @@
+VeilstoneCity_DepartmentStore_Elevator_MapScripts::
+	.byte 0
+
+VeilstoneCity_DepartmentStore_Elevator_EventScript_Attendant::
+	lock
+	faceplayer
+	message gText_WhichFloorWouldYouLike
+	waitmessage
+	switch VAR_DEPT_STORE_FLOOR
+	case DEPT_STORE_FLOORNUM_5F, VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFrom5F
+	case DEPT_STORE_FLOORNUM_4F, VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFrom4F
+	case DEPT_STORE_FLOORNUM_3F, VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFrom3F
+	case DEPT_STORE_FLOORNUM_2F, VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFrom2F
+	case DEPT_STORE_FLOORNUM_1F, VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFrom1F
+	goto VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFrom1F
+	end
+
+VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFrom5F::
+	multichoicedefault 0, 0, MULTI_FLOORS, 0, FALSE
+	goto VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFloor
+	end
+
+VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFrom4F::
+	multichoicedefault 0, 0, MULTI_FLOORS, 1, FALSE
+	goto VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFloor
+	end
+
+VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFrom3F::
+	multichoicedefault 0, 0, MULTI_FLOORS, 2, FALSE
+	goto VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFloor
+	end
+
+VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFrom2F::
+	multichoicedefault 0, 0, MULTI_FLOORS, 3, FALSE
+	goto VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFloor
+	end
+
+VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFrom1F::
+	multichoicedefault 0, 0, MULTI_FLOORS, 4, FALSE
+	goto VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFloor
+	end
+
+VeilstoneCity_DepartmentStore_Elevator_EventScript_ChooseFloor::
+	switch VAR_RESULT
+	case 0, VeilstoneCity_DepartmentStore_Elevator_EventScript_Go5F
+	case 1, VeilstoneCity_DepartmentStore_Elevator_EventScript_Go4F
+	case 2, VeilstoneCity_DepartmentStore_Elevator_EventScript_Go3F
+	case 3, VeilstoneCity_DepartmentStore_Elevator_EventScript_Go2F
+	case 4, VeilstoneCity_DepartmentStore_Elevator_EventScript_Go1F
+	case 5, VeilstoneCity_DepartmentStore_Elevator_EventScript_ExitFloorSelect
+	case MULTI_B_PRESSED, VeilstoneCity_DepartmentStore_Elevator_EventScript_ExitFloorSelect
+	end
+
+VeilstoneCity_DepartmentStore_Elevator_EventScript_Go5F::
+	setvar VAR_0x8006, DEPT_STORE_FLOORNUM_5F
+	setdynamicwarp MAP_VEILSTONE_CITY_DEPARTMENT_STORE_5F, 2, 1
+	goto_if_eq VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_5F, VeilstoneCity_DepartmentStore_Elevator_EventScript_ExitFloorSelect
+	call VeilstoneCity_DepartmentStore_Elevator_EventScript_MoveElevator
+	setvar VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_5F
+	goto VeilstoneCity_DepartmentStore_Elevator_EventScript_ExitFloorSelect
+	end
+
+VeilstoneCity_DepartmentStore_Elevator_EventScript_Go4F::
+	setvar VAR_0x8006, DEPT_STORE_FLOORNUM_4F
+	setdynamicwarp MAP_VEILSTONE_CITY_DEPARTMENT_STORE_4F, 2, 1
+	goto_if_eq VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_4F, VeilstoneCity_DepartmentStore_Elevator_EventScript_ExitFloorSelect
+	call VeilstoneCity_DepartmentStore_Elevator_EventScript_MoveElevator
+	setvar VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_4F
+	goto VeilstoneCity_DepartmentStore_Elevator_EventScript_ExitFloorSelect
+	end
+
+VeilstoneCity_DepartmentStore_Elevator_EventScript_Go3F::
+	setvar VAR_0x8006, DEPT_STORE_FLOORNUM_3F
+	setdynamicwarp MAP_VEILSTONE_CITY_DEPARTMENT_STORE_3F, 2, 1
+	goto_if_eq VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_3F, VeilstoneCity_DepartmentStore_Elevator_EventScript_ExitFloorSelect
+	call VeilstoneCity_DepartmentStore_Elevator_EventScript_MoveElevator
+	setvar VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_3F
+	goto VeilstoneCity_DepartmentStore_Elevator_EventScript_ExitFloorSelect
+	end
+
+VeilstoneCity_DepartmentStore_Elevator_EventScript_Go2F::
+	setvar VAR_0x8006, DEPT_STORE_FLOORNUM_2F
+	setdynamicwarp MAP_VEILSTONE_CITY_DEPARTMENT_STORE_2F, 2, 1
+	goto_if_eq VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_2F, VeilstoneCity_DepartmentStore_Elevator_EventScript_ExitFloorSelect
+	call VeilstoneCity_DepartmentStore_Elevator_EventScript_MoveElevator
+	setvar VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_2F
+	goto VeilstoneCity_DepartmentStore_Elevator_EventScript_ExitFloorSelect
+	end
+
+VeilstoneCity_DepartmentStore_Elevator_EventScript_Go1F::
+	setvar VAR_0x8006, DEPT_STORE_FLOORNUM_1F
+	setdynamicwarp MAP_VEILSTONE_CITY_DEPARTMENT_STORE_1F, 2, 1
+	goto_if_eq VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_1F, VeilstoneCity_DepartmentStore_Elevator_EventScript_ExitFloorSelect
+	call VeilstoneCity_DepartmentStore_Elevator_EventScript_MoveElevator
+	setvar VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_1F
+	goto VeilstoneCity_DepartmentStore_Elevator_EventScript_ExitFloorSelect
+	end
+
+VeilstoneCity_DepartmentStore_Elevator_EventScript_ExitFloorSelect::
+	release
+	end
+
+VeilstoneCity_DepartmentStore_Elevator_EventScript_MoveElevator::
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	waitse
+	copyvar VAR_0x8005, VAR_DEPT_STORE_FLOOR
+	special MoveElevator
+	return

@@ -715,22 +715,22 @@
 #define FLAG_ITEM_ROUTE210_HYPER_POTION  0x292 // Sinnoh M18
 #define FLAG_ITEM_ROUTE215_ETHER  0x293 // Sinnoh M18
 #define FLAG_ITEM_ROUTE215_HYPER_POTION  0x294 // Sinnoh M18
-#define FLAG_UNUSED_0x295  0x295 // Unused Flag
-#define FLAG_UNUSED_0x296  0x296 // Unused Flag
-#define FLAG_UNUSED_0x297  0x297 // Unused Flag
-#define FLAG_UNUSED_0x298  0x298 // Unused Flag
-#define FLAG_UNUSED_0x299  0x299 // Unused Flag
-#define FLAG_UNUSED_0x29A  0x29A // Unused Flag
-#define FLAG_UNUSED_0x29B  0x29B // Unused Flag
-#define FLAG_UNUSED_0x29C  0x29C // Unused Flag
-#define FLAG_UNUSED_0x29D  0x29D // Unused Flag
-#define FLAG_UNUSED_0x29E  0x29E // Unused Flag
-#define FLAG_UNUSED_0x29F  0x29F // Unused Flag
-#define FLAG_UNUSED_0x2A0  0x2A0 // Unused Flag
-#define FLAG_UNUSED_0x2A1  0x2A1 // Unused Flag
-#define FLAG_UNUSED_0x2A2  0x2A2 // Unused Flag
-#define FLAG_UNUSED_0x2A3  0x2A3 // Unused Flag
-#define FLAG_UNUSED_0x2A4  0x2A4 // Unused Flag
+#define FLAG_RECEIVED_VEILSTONE_GYM_TM  0x295 // Sinnoh M19
+#define FLAG_HIDE_VEILSTONE_MAYLENE  0x296 // Sinnoh M19; cameo outside the Gym, cleared after badge
+#define FLAG_HIDE_VEILSTONE_COUNTERPART  0x297 // Sinnoh M19; Dawn/Lucas, cleared after badge
+#define FLAG_HIDE_VEILSTONE_WAREHOUSE_GRUNTS  0x298 // Sinnoh M19; set once the grunts are beaten
+#define FLAG_GOT_HM_FLY_VEILSTONE  0x299 // Sinnoh M19; HM02 item ball in the Galactic Warehouse
+#define FLAG_GOT_VEILSTONE_PORYGON  0x29A // Sinnoh M19
+#define FLAG_VISITED_VEILSTONE_CITY  0x29B // Sinnoh M19; Fly
+#define FLAG_DEFEATED_VEILSTONE_WAREHOUSE_GRUNTS  0x29C // Sinnoh M19
+#define FLAG_VISITED_TWINLEAF_TOWN  0x29D // Sinnoh M19; Fly
+#define FLAG_VISITED_SANDGEM_TOWN  0x29E // Sinnoh M19; Fly
+#define FLAG_VISITED_JUBILIFE_CITY  0x29F // Sinnoh M19; Fly
+#define FLAG_VISITED_OREBURGH_CITY  0x2A0 // Sinnoh M19; Fly
+#define FLAG_VISITED_FLOAROMA_TOWN  0x2A1 // Sinnoh M19; Fly
+#define FLAG_VISITED_ETERNA_CITY  0x2A2 // Sinnoh M19; Fly
+#define FLAG_VISITED_HEARTHOME_CITY  0x2A3 // Sinnoh M19; Fly
+#define FLAG_VISITED_SOLACEON_TOWN  0x2A4 // Sinnoh M19; Fly
 #define FLAG_UNUSED_0x2A5  0x2A5 // Unused Flag
 #define FLAG_UNUSED_0x2A6  0x2A6 // Unused Flag
 #define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag

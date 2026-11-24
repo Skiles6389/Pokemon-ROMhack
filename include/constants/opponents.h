@@ -359,15 +359,22 @@
 #define TRAINER_JERRY_1                     273
 #define TRAINER_TED                         274
 #define TRAINER_PAUL                        275
-#define TRAINER_JERRY_2                     276
-#define TRAINER_JERRY_3                     277
-#define TRAINER_JERRY_4                     278
-#define TRAINER_JERRY_5                     279
+#define TRAINER_LEADER_MAYLENE                       276 // Sinnoh M19: was TRAINER_JERRY_2
+#define TRAINER_JERRY_2 TRAINER_LEADER_MAYLENE
+#define TRAINER_BLACK_BELT_COLBY_VEILSTONE                       277 // Sinnoh M19: was TRAINER_JERRY_3
+#define TRAINER_JERRY_3 TRAINER_BLACK_BELT_COLBY_VEILSTONE
+#define TRAINER_BLACK_BELT_DARREN_VEILSTONE                       278 // Sinnoh M19: was TRAINER_JERRY_4
+#define TRAINER_JERRY_4 TRAINER_BLACK_BELT_DARREN_VEILSTONE
+#define TRAINER_BLACK_BELT_JEFFERY_VEILSTONE                       279 // Sinnoh M19: was TRAINER_JERRY_5
+#define TRAINER_JERRY_5 TRAINER_BLACK_BELT_JEFFERY_VEILSTONE
 #define TRAINER_KAREN_1                     280
 #define TRAINER_GEORGIA                     281
-#define TRAINER_KAREN_2                     282
-#define TRAINER_KAREN_3                     283
-#define TRAINER_KAREN_4                     284
+#define TRAINER_BLACK_BELT_RAFAEL_VEILSTONE                       282 // Sinnoh M19: was TRAINER_KAREN_2
+#define TRAINER_KAREN_2 TRAINER_BLACK_BELT_RAFAEL_VEILSTONE
+#define TRAINER_GALACTIC_GRUNT_VEILSTONE_1                       283 // Sinnoh M19: was TRAINER_KAREN_3
+#define TRAINER_KAREN_3 TRAINER_GALACTIC_GRUNT_VEILSTONE_1
+#define TRAINER_GALACTIC_GRUNT_VEILSTONE_2                       284 // Sinnoh M19: was TRAINER_KAREN_4
+#define TRAINER_KAREN_4 TRAINER_GALACTIC_GRUNT_VEILSTONE_2
 #define TRAINER_KAREN_5                     285
 #define TRAINER_KATE_AND_JOY                286
 #define TRAINER_ANNA_AND_MEG_1              287
