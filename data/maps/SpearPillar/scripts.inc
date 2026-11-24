@@ -86,3 +86,11 @@ SpearPillar_EventScript_PlatNpc5::
 SpearPillar_EventScript_PlatNpc5_Text:
 	.string "The pillars hum with wrong silence.\n"
 	.string "Cyrus stands at the center.$"
+
+SpearPillar_EventScript_DistortionOpen::
+	msgbox SpearPillar_Text_DistortionOpen, MSGBOX_NPC
+	end
+
+SpearPillar_Text_DistortionOpen:
+	.string "The rift yawns open.\n"
+	.string "Beyond it lies the Distortion World.$"

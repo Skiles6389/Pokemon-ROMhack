@@ -109,14 +109,14 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 32,
-      "y": 20,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SpearPillar_EventScript_DistortionClosed",
+      "script": "SpearPillar_EventScript_DistortionOpen",
       "flag": "0"
     }
   ],
@@ -127,6 +127,20 @@
       "elevation": 0,
       "dest_map": "MAP_MT_CORONET_UPPER_STUB",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 32,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_SPEAR_PILLAR_DISTORTED",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 33,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_SPEAR_PILLAR_DISTORTED",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

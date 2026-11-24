@@ -10412,6 +10412,127 @@
       "border_filepath": "data/layouts/SpearPillar/border.bin",
       "blockdata_filepath": "data/layouts/SpearPillar/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SPEAR_PILLAR_DISTORTED",
+      "name": "SpearPillar_Distorted_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/SpearPillar_Distorted/border.bin",
+      "blockdata_filepath": "data/layouts/SpearPillar_Distorted/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_DISTORTION_WORLD_1F",
+      "name": "DistortionWorld_1F_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DistortionWorld_1F/border.bin",
+      "blockdata_filepath": "data/layouts/DistortionWorld_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_DISTORTION_WORLD_B1F",
+      "name": "DistortionWorld_B1F_Layout",
+      "width": 64,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DistortionWorld_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/DistortionWorld_B1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_DISTORTION_WORLD_B2F",
+      "name": "DistortionWorld_B2F_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DistortionWorld_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/DistortionWorld_B2F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_DISTORTION_WORLD_B3F",
+      "name": "DistortionWorld_B3F_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DistortionWorld_B3F/border.bin",
+      "blockdata_filepath": "data/layouts/DistortionWorld_B3F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_DISTORTION_WORLD_B4F",
+      "name": "DistortionWorld_B4F_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DistortionWorld_B4F/border.bin",
+      "blockdata_filepath": "data/layouts/DistortionWorld_B4F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_DISTORTION_WORLD_B5F",
+      "name": "DistortionWorld_B5F_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DistortionWorld_B5F/border.bin",
+      "blockdata_filepath": "data/layouts/DistortionWorld_B5F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_DISTORTION_WORLD_B6F",
+      "name": "DistortionWorld_B6F_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DistortionWorld_B6F/border.bin",
+      "blockdata_filepath": "data/layouts/DistortionWorld_B6F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_DISTORTION_WORLD_B7F",
+      "name": "DistortionWorld_B7F_Layout",
+      "width": 32,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DistortionWorld_B7F/border.bin",
+      "blockdata_filepath": "data/layouts/DistortionWorld_B7F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_DISTORTION_WORLD_GIRATINA_ROOM",
+      "name": "DistortionWorld_GiratinaRoom_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DistortionWorld_GiratinaRoom/border.bin",
+      "blockdata_filepath": "data/layouts/DistortionWorld_GiratinaRoom/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_DISTORTION_WORLD_TURNBACK_CAVE_ROOM",
+      "name": "DistortionWorld_TurnbackCaveRoom_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DistortionWorld_TurnbackCaveRoom/border.bin",
+      "blockdata_filepath": "data/layouts/DistortionWorld_TurnbackCaveRoom/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

@@ -68,6 +68,18 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "AcuityLakefront": [[100, 101], [102, 103]],
     "LakeAcuity": [[553, 554], [555, 556]],
     "SpearPillar": [[375, 376], [377, 378]],
+    "SpearPillar_Distorted": [[379, 380], [381, 382]],
+    "DistortionWorld_1F": [[598, 599], [600, 601]],
+    "DistortionWorld_B1F": [[602, 603]],
+    "DistortionWorld_B2F": [[604, 605], [606, 607]],
+    "DistortionWorld_B3F": [[608, 609], [610, 611]],
+    "DistortionWorld_B4F": [[612, 613], [614, 615]],
+    "DistortionWorld_B5F": [[620, 621], [622, 623]],
+    "DistortionWorld_B6F": [[624, 625], [626, 627]],
+    "DistortionWorld_B7F": [[628], [629]],
+    "DistortionWorld_GiratinaRoom": [[630]],
+    "DistortionWorld_TurnbackCaveRoom": [[631, 632], [633, 634]],
+
 }
 
 # Documented world origins (tile). Missing entries derived from warp fit.
