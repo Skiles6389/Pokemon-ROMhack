@@ -2069,3 +2069,4 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/CanalaveCity_House4/scripts.inc"
 	.include "data/maps/CanalaveCity_HarborInn/scripts.inc"
 	.include "data/maps/CanalaveCity_EldritchHouse/scripts.inc"
+	.include "data/maps/BattleFrontier_Gate_Sinnoh/scripts.inc"

@@ -11578,6 +11578,17 @@
       "border_filepath": "data/layouts/CanalaveCity_EldritchHouse/border.bin",
       "blockdata_filepath": "data/layouts/CanalaveCity_EldritchHouse/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_BATTLE_FRONTIER_GATE_SINNOH",
+      "name": "BattleFrontier_Gate_Sinnoh_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/BattleFrontier_Gate_Sinnoh/border.bin",
+      "blockdata_filepath": "data/layouts/BattleFrontier_Gate_Sinnoh/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }
