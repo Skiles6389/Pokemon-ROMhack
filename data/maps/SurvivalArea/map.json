@@ -188,8 +188,8 @@
       "x": 12,
       "y": 18,
       "elevation": 0,
-      "dest_map": "MAP_SURVIVAL_AREA",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_BATTLE_FRONTIER_GATE_SINNOH",
+      "dest_warp_id": "3"
     },
     {
       "x": 15,
