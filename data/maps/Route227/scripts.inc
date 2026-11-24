@@ -121,13 +121,3 @@ Route227_EventScript_Npc12_Text:
 	.string "The Battle Zone stretches across these routes.$"
 
 
-Route227_EventScript_StarkClosed::
-	lock
-	faceplayer
-	msgbox Route227_Text_StarkClosed, MSGBOX_DEFAULT
-	release
-	end
-
-Route227_Text_StarkClosed:
-	.string "Stark Mountain opens in the next build.\n"
-	.string "Ashfall already marks the path.$"

@@ -2044,3 +2044,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/ResortArea_Villa/scripts.inc"
 	.include "data/maps/ResortArea_RibbonSyndicate/scripts.inc"
 	.include "data/maps/Route228_RockPeakRuins/scripts.inc"
+	.include "data/maps/StarkMountain_Outside/scripts.inc"
+	.include "data/maps/StarkMountain_Room1/scripts.inc"
+	.include "data/maps/StarkMountain_Room2/scripts.inc"
+	.include "data/maps/StarkMountain_HeatranRoom/scripts.inc"

@@ -1381,7 +1381,41 @@
 
 #define TRAINER_SWIMMER_MALLORY_PG                    1057 // Sinnoh Postgame
 
-#define TRAINERS_COUNT_EMERALD     1058
+#define TRAINER_DRAGON_TAMER_DARIEN_PG                    1058 // Sinnoh Stark
+
+#define TRAINER_ACE_TRAINER_KEENAN_PG                    1059 // Sinnoh Stark
+
+#define TRAINER_ACE_TRAINER_KASSANDRA_PG                    1060 // Sinnoh Stark
+
+#define TRAINER_ACE_TRAINER_SKYLAR_PG                    1061 // Sinnoh Stark
+
+#define TRAINER_ACE_TRAINER_NATASHA_PG                    1062 // Sinnoh Stark
+
+#define TRAINER_PSYCHIC_CHELSEY_PG                    1063 // Sinnoh Stark
+
+#define TRAINER_PSYCHIC_STERLING_PG                    1064 // Sinnoh Stark
+
+#define TRAINER_BIRD_KEEPER_KRYSTAL_PG                    1065 // Sinnoh Stark
+
+#define TRAINER_BLACK_BELT_RAY_PG                    1066 // Sinnoh Stark
+
+#define TRAINER_ACE_TRAINER_STEFAN_PG                    1067 // Sinnoh Stark
+
+#define TRAINER_ACE_TRAINER_JASMIN_PG                    1068 // Sinnoh Stark
+
+#define TRAINER_DRAGON_TAMER_DRAKE_PG                    1069 // Sinnoh Stark
+
+#define TRAINER_BLACK_BELT_JARRETT_PG                    1070 // Sinnoh Stark
+
+#define TRAINER_ACE_TRAINER_ABEL_PG                    1071 // Sinnoh Stark
+
+#define TRAINER_ACE_TRAINER_MONIQUE_PG                    1072 // Sinnoh Stark
+
+#define TRAINER_VETERAN_HARLAN_PG                    1073 // Sinnoh Stark
+
+#define TRAINER_DRAGON_TAMER_KENNY_PG                    1074 // Sinnoh Stark
+
+#define TRAINERS_COUNT_EMERALD     1075
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG
