@@ -248,15 +248,15 @@
       "x": 87,
       "y": 19,
       "elevation": 0,
-      "dest_map": "MAP_MT_CORONET_NORTH_STUB",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_MT_CORONET_UPPER_STUB",
+      "dest_warp_id": "0"
     },
     {
       "x": 88,
       "y": 19,
       "elevation": 0,
-      "dest_map": "MAP_MT_CORONET_NORTH_STUB",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_MT_CORONET_UPPER_STUB",
+      "dest_warp_id": "0"
     },
     {
       "x": 15,

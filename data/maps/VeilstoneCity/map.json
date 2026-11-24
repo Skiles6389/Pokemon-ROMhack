@@ -429,21 +429,21 @@
       "x": 42,
       "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_VEILSTONE_CITY_GALACTIC_HQ_STUB",
+      "dest_map": "MAP_VEILSTONE_CITY_GALACTIC_HQ_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 45,
       "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_VEILSTONE_CITY_GALACTIC_HQ_STUB",
+      "dest_map": "MAP_VEILSTONE_CITY_GALACTIC_HQ_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 48,
       "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_VEILSTONE_CITY_GALACTIC_HQ_STUB",
+      "dest_map": "MAP_VEILSTONE_CITY_GALACTIC_HQ_1F",
       "dest_warp_id": "0"
     }
   ],

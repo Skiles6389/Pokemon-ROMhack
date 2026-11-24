@@ -91,7 +91,8 @@
     "gMapGroup_IndoorM22",
     "gMapGroup_IndoorM23",
     "gMapGroup_IndoorM24",
-    "gMapGroup_IndoorM25"
+    "gMapGroup_IndoorM25",
+    "gMapGroup_IndoorM26"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -195,7 +196,8 @@
     "Route217",
     "SnowpointCity",
     "AcuityLakefront",
-    "LakeAcuity"
+    "LakeAcuity",
+    "SpearPillar"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1429,5 +1431,11 @@
     "SnowpointCity_House2",
     "SnowpointTemple_Stub",
     "AcuityCavern_Stub"
+  ],
+  "gMapGroup_IndoorM26": [
+    "VeilstoneCity_GalacticHQ_1F",
+    "VeilstoneCity_GalacticHQ_2F",
+    "VeilstoneCity_GalacticHQ_Cyrus",
+    "MtCoronet_UpperStub"
   ]
 }

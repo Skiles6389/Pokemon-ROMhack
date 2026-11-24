@@ -737,6 +737,8 @@
 #define FLAG_HIDE_PASTORIA_WAKE_CAMEO  0x2A8 // Sinnoh M20; cleared after Fen Badge
 #define FLAG_PASTORIA_GALACTIC_CHASE  0x2A9 // Sinnoh M20; set when grunt flees
 #define FLAG_VISITED_PASTORIA_CITY  0x2AA // Sinnoh M20; Fly
+#define FLAG_DEFEATED_CYRUS_GALACTIC_HQ  0x2B0 // Sinnoh M26 Cyrus at HQ
+#define FLAG_DEFEATED_CYRUS_SPEAR_PILLAR  0x2B1 // Sinnoh M26 Cyrus at Spear Pillar
 #define FLAG_DEFEATED_JUPITER_LAKE_ACUITY  0x2AF // Sinnoh M25 Jupiter at Lake Acuity
 #define FLAG_RECEIVED_SNOWPOINT_GYM_TM  0x2AE // Sinnoh M25 Candice TM
 #define FLAG_DEFEATED_SATURN_LAKE_VALOR  0x2AD // Sinnoh M24 Saturn at drained lake

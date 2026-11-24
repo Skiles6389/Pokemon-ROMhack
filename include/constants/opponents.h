@@ -1163,7 +1163,19 @@
 
 #define TRAINER_ACE_SNOWPOINT_B                    948 // Sinnoh M25
 
-#define TRAINERS_COUNT_EMERALD     949
+#define TRAINER_GALACTIC_HQ_GRUNT_A                    949 // Sinnoh M26
+
+#define TRAINER_GALACTIC_HQ_GRUNT_B                    950 // Sinnoh M26
+
+#define TRAINER_COMMANDER_MARS_HQ                    951 // Sinnoh M26
+
+#define TRAINER_GALACTIC_HQ_GRUNT_C                    952 // Sinnoh M26
+
+#define TRAINER_LEADER_CYRUS_HQ                    953 // Sinnoh M26
+
+#define TRAINER_LEADER_CYRUS_SPEAR                    954 // Sinnoh M26
+
+#define TRAINERS_COUNT_EMERALD     955
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG

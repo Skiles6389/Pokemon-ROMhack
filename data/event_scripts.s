@@ -1959,3 +1959,8 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/SnowpointCity_House2/scripts.inc"
 	.include "data/maps/SnowpointTemple_Stub/scripts.inc"
 	.include "data/maps/AcuityCavern_Stub/scripts.inc"
+	.include "data/maps/SpearPillar/scripts.inc"
+	.include "data/maps/VeilstoneCity_GalacticHQ_1F/scripts.inc"
+	.include "data/maps/VeilstoneCity_GalacticHQ_2F/scripts.inc"
+	.include "data/maps/VeilstoneCity_GalacticHQ_Cyrus/scripts.inc"
+	.include "data/maps/MtCoronet_UpperStub/scripts.inc"
