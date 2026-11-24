@@ -928,6 +928,10 @@ static const struct SpriteFrameImage sPicTable_Maxie[] = {
     overworld_ascending_frames(gObjectEventPic_Maxie, 2, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_Cyrus[] = {
+    overworld_ascending_frames(gObjectEventPic_Cyrus, 2, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_KyogreFront[] = {
     overworld_frame(gObjectEventPic_KyogreOld, 4, 4, 0),
     overworld_frame(gObjectEventPic_KyogreOld, 4, 4, 0),

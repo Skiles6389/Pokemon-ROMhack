@@ -1124,7 +1124,9 @@ EventScript_AfterWhiteOutHealMsg::
 EventScript_AfterWhiteOutMomHeal::
 	lockall
 	textcolor NPC_TEXT_COLOR_FEMALE
-	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, Common_Movement_WalkInPlaceFasterDown
+	@ Healer localId was stored by SetWhiteoutRespawnWarpAndHealerNpc
+	@ (Twinleaf Mom uses LOCALID_TWINLEAF_MOM; Littleroot/Pallet use LOCALID_PLAYERS_HOUSE_1F_MOM).
+	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	msgbox gText_HadQuiteAnExperienceTakeRest
 	call Common_EventScript_OutOfCenterPartyHeal
