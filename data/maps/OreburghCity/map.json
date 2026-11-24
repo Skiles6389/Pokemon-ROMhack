@@ -287,13 +287,6 @@
   ],
   "warp_events": [
     {
-      "x": 1,
-      "y": 13,
-      "elevation": 0,
-      "dest_map": "MAP_OREBURGH_GATE_1F",
-      "dest_warp_id": "4"
-    },
-    {
       "x": 29,
       "y": 10,
       "elevation": 0,
@@ -329,7 +322,7 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 46,
+      "x": 45,
       "y": 59,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_MINE_B1F",
@@ -351,7 +344,7 @@
     },
     {
       "x": 46,
-      "y": 58,
+      "y": 59,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_MINE_B1F",
       "dest_warp_id": "0"
@@ -386,6 +379,13 @@
     },
     {
       "x": 44,
+      "y": 59,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_MINE_B1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 47,
       "y": 59,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_MINE_B1F",

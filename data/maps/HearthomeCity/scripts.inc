@@ -250,3 +250,241 @@ HearthomeCity_EventScript_PlatNpc8_Text:
 	.string "These roads keep surprising me.\n"
 	.string "Every corner hides another path.$"
 
+HearthomeCity_EventScript_DensifyNpc0::
+	msgbox HearthomeCity_EventScript_DensifyNpc0_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc0_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc1::
+	msgbox HearthomeCity_EventScript_DensifyNpc1_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc1_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc2::
+	msgbox HearthomeCity_EventScript_DensifyNpc2_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc2_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc3::
+	msgbox HearthomeCity_EventScript_DensifyNpc3_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc3_Text:
+	.string "What a lovely day for a stroll.$"
+
+HearthomeCity_EventScript_DensifyNpc4::
+	msgbox HearthomeCity_EventScript_DensifyNpc4_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc4_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc5::
+	msgbox HearthomeCity_EventScript_DensifyNpc5_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc5_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc6::
+	msgbox HearthomeCity_EventScript_DensifyNpc6_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc6_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc7::
+	msgbox HearthomeCity_EventScript_DensifyNpc7_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc7_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc8::
+	msgbox HearthomeCity_EventScript_DensifyNpc8_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc8_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc9::
+	msgbox HearthomeCity_EventScript_DensifyNpc9_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc9_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc10::
+	msgbox HearthomeCity_EventScript_DensifyNpc10_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc10_Text:
+	.string "Pachi!$"
+
+HearthomeCity_EventScript_DensifySign11::
+	msgbox HearthomeCity_EventScript_DensifySign11_Text, MSGBOX_SIGN
+	end
+
+HearthomeCity_EventScript_DensifySign11_Text:
+	.string "Hearthome City$"
+
+HearthomeCity_EventScript_DensifySign12::
+	msgbox HearthomeCity_EventScript_DensifySign12_Text, MSGBOX_SIGN
+	end
+
+HearthomeCity_EventScript_DensifySign12_Text:
+	.string "Hearthome City$"
+
+HearthomeCity_EventScript_DensifySign13::
+	msgbox HearthomeCity_EventScript_DensifySign13_Text, MSGBOX_SIGN
+	end
+
+HearthomeCity_EventScript_DensifySign13_Text:
+	.string "Hearthome City$"
+
+HearthomeCity_EventScript_DensifySign14::
+	msgbox HearthomeCity_EventScript_DensifySign14_Text, MSGBOX_SIGN
+	end
+
+HearthomeCity_EventScript_DensifySign14_Text:
+	.string "Hearthome City$"
+
+HearthomeCity_EventScript_DensifySign15::
+	msgbox HearthomeCity_EventScript_DensifySign15_Text, MSGBOX_SIGN
+	end
+
+HearthomeCity_EventScript_DensifySign15_Text:
+	.string "Hearthome City$"
+
+HearthomeCity_EventScript_DensifySign16::
+	msgbox HearthomeCity_EventScript_DensifySign16_Text, MSGBOX_SIGN
+	end
+
+HearthomeCity_EventScript_DensifySign16_Text:
+	.string "Hearthome City$"
+
+HearthomeCity_EventScript_DensifySign17::
+	msgbox HearthomeCity_EventScript_DensifySign17_Text, MSGBOX_SIGN
+	end
+
+HearthomeCity_EventScript_DensifySign17_Text:
+	.string "Hearthome City$"
+
+HearthomeCity_EventScript_DensifySign18::
+	msgbox HearthomeCity_EventScript_DensifySign18_Text, MSGBOX_SIGN
+	end
+
+HearthomeCity_EventScript_DensifySign18_Text:
+	.string "Hearthome City$"
+
+HearthomeCity_EventScript_DensifyNpc19::
+	msgbox HearthomeCity_EventScript_DensifyNpc19_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc19_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc20::
+	msgbox HearthomeCity_EventScript_DensifyNpc20_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc20_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc21::
+	msgbox HearthomeCity_EventScript_DensifyNpc21_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc21_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc22::
+	msgbox HearthomeCity_EventScript_DensifyNpc22_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc22_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc23::
+	msgbox HearthomeCity_EventScript_DensifyNpc23_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc23_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc24::
+	msgbox HearthomeCity_EventScript_DensifyNpc24_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc24_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc25::
+	msgbox HearthomeCity_EventScript_DensifyNpc25_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc25_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc26::
+	msgbox HearthomeCity_EventScript_DensifyNpc26_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc26_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc27::
+	msgbox HearthomeCity_EventScript_DensifyNpc27_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc27_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc28::
+	msgbox HearthomeCity_EventScript_DensifyNpc28_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc28_Text:
+	.string "What a lovely day for a stroll.$"
+
+HearthomeCity_EventScript_DensifyNpc29::
+	msgbox HearthomeCity_EventScript_DensifyNpc29_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc29_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifySign30::
+	msgbox HearthomeCity_EventScript_DensifySign30_Text, MSGBOX_SIGN
+	end
+
+HearthomeCity_EventScript_DensifySign30_Text:
+	.string "Hearthome City$"
+
+HearthomeCity_EventScript_DensifyNpc31::
+	msgbox HearthomeCity_EventScript_DensifyNpc31_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc31_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc32::
+	msgbox HearthomeCity_EventScript_DensifyNpc32_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc32_Text:
+	.string "Welcome to Hearthome!$"
+
+HearthomeCity_EventScript_DensifyNpc33::
+	msgbox HearthomeCity_EventScript_DensifyNpc33_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_DensifyNpc33_Text:
+	.string "Welcome to Hearthome!$"
+
