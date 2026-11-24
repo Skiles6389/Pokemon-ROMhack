@@ -5,6 +5,7 @@ OreburghCity_MapScripts::
 
 @ Once the player has met Roark in the mine, the guide steps aside from the Gym door.
 OreburghCity_OnTransition:
+	setflag FLAG_VISITED_OREBURGH_CITY
 	call_if_ge VAR_OREBURGH_STATE, 2, OreburghCity_EventScript_GuideStepAside
 	end
 

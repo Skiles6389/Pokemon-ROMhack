@@ -83,7 +83,8 @@
     "gMapGroup_IndoorEterna",
     "gMapGroup_IndoorM16",
     "gMapGroup_IndoorHearthome",
-    "gMapGroup_IndoorM18"
+    "gMapGroup_IndoorM18",
+    "gMapGroup_IndoorVeilstone"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -168,7 +169,8 @@
     "Route209",
     "SolaceonTown",
     "Route210_South",
-    "Route215"
+    "Route215",
+    "VeilstoneCity"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1299,5 +1301,24 @@
     "SolaceonRuins_ExteriorGate",
     "Route210_CafeCabin",
     "Route215_VeilstoneGate"
+  ],
+  "gMapGroup_IndoorVeilstone": [
+    "VeilstoneCity_PokemonCenter_1F",
+    "VeilstoneCity_PokemonCenter_2F",
+    "VeilstoneCity_Gym",
+    "VeilstoneCity_DepartmentStore_1F",
+    "VeilstoneCity_DepartmentStore_2F",
+    "VeilstoneCity_DepartmentStore_3F",
+    "VeilstoneCity_DepartmentStore_4F",
+    "VeilstoneCity_DepartmentStore_5F",
+    "VeilstoneCity_DepartmentStore_Elevator",
+    "VeilstoneCity_MassageHouse",
+    "VeilstoneCity_SoutheastHouse",
+    "VeilstoneCity_NorthwestHouse",
+    "VeilstoneCity_NortheastHouse",
+    "VeilstoneCity_GameCorner",
+    "VeilstoneCity_PrizeExchange",
+    "VeilstoneCity_GalacticWarehouse",
+    "VeilstoneCity_Route214Gate"
   ]
 }

@@ -1,5 +1,10 @@
 SolaceonTown_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SolaceonTown_OnTransition
 	.byte 0
+
+SolaceonTown_OnTransition:
+	setflag FLAG_VISITED_SOLACEON_TOWN
+	end
 
 SolaceonTown_EventScript_Cowgirl::
 	msgbox SolaceonTown_Text_Cowgirl, MSGBOX_NPC

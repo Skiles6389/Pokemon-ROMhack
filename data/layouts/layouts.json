@@ -9862,6 +9862,39 @@
       "border_filepath": "data/layouts/Route210_CafeCabin/border.bin",
       "blockdata_filepath": "data/layouts/Route210_CafeCabin/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VEILSTONE_CITY",
+      "name": "VeilstoneCity_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/VeilstoneCity/border.bin",
+      "blockdata_filepath": "data/layouts/VeilstoneCity/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VEILSTONE_CITY_GYM",
+      "name": "VeilstoneCity_Gym_Layout",
+      "width": 24,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_RustboroGym",
+      "border_filepath": "data/layouts/VeilstoneCity_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/VeilstoneCity_Gym/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VEILSTONE_CITY_GALACTIC_WAREHOUSE",
+      "name": "VeilstoneCity_GalacticWarehouse_Layout",
+      "width": 16,
+      "height": 14,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/VeilstoneCity_GalacticWarehouse/border.bin",
+      "blockdata_filepath": "data/layouts/VeilstoneCity_GalacticWarehouse/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

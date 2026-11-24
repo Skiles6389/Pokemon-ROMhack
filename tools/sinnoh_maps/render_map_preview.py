@@ -193,11 +193,11 @@ def render(
 
 def main():
     out = Path("/opt/cursor/artifacts")
-    # M18 verification shots (Emerald tiles only — no live ROM dump / DS assets)
-    render("Route209", out / "m18_route209_lost_tower.png", cam_x=48, cam_y=0, view_w=16, view_h=14)
-    render("SolaceonTown", out / "m18_solaceon_town.png", cam_x=12, cam_y=4, view_w=20, view_h=14)
-    render("Route210_South", out / "m18_route210_psyduck_blockade.png", cam_x=10, cam_y=36, view_w=16, view_h=14)
-    render("Route215", out / "m18_route215_rainy_approach.png", cam_x=80, cam_y=14, view_w=16, view_h=12)
+    # M19 verification shots (Emerald tiles only — no live ROM dump / DS assets)
+    render("VeilstoneCity", out / "m19_veilstone_city.png", cam_x=8, cam_y=20, view_w=24, view_h=18)
+    render("LilycoveCity_DepartmentStore_1F", out / "m19_veilstone_dept_store.png", cam_x=0, cam_y=0, view_w=18, view_h=8, scale=3)
+    render("VeilstoneCity_Gym", out / "m19_veilstone_gym_maylene.png", cam_x=4, cam_y=0, view_w=16, view_h=14, scale=2)
+    render("VeilstoneCity_GalacticWarehouse", out / "m19_galactic_warehouse_hm02.png", cam_x=0, cam_y=0, view_w=16, view_h=14, scale=3)
 
 
 if __name__ == "__main__":

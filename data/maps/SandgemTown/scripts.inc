@@ -4,6 +4,7 @@ SandgemTown_MapScripts::
 	.byte 0
 
 SandgemTown_OnTransition:
+	setflag FLAG_VISITED_SANDGEM_TOWN
 	call SandgemTown_EventScript_SetAssistantGfx
 	end
 

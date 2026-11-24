@@ -415,6 +415,14 @@
       "y": 17,
       "respawn_map": "MAP_SOLACEON_TOWN_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_SOLACEON_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_VEILSTONE_CITY",
+      "map": "MAP_VEILSTONE_CITY",
+      "x": 45,
+      "y": 36,
+      "respawn_map": "MAP_VEILSTONE_CITY_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_VEILSTONE_NURSE"
     }
   ]
 }

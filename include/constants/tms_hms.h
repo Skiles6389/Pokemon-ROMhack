@@ -52,7 +52,8 @@
     F(SKILL_SWAP) \
     F(SNATCH) \
     F(OVERHEAT) \
-    F(PAYBACK)
+    F(PAYBACK) \
+    F(DRAIN_PUNCH)
 
 #define FOREACH_HM(F) \
     F(CUT) \

@@ -3,6 +3,7 @@ JubilifeCity_MapScripts::
 	.byte 0
 
 JubilifeCity_OnTransition:
+	setflag FLAG_VISITED_JUBILIFE_CITY
 	call SandgemTown_EventScript_SetAssistantGfx
 	end
 

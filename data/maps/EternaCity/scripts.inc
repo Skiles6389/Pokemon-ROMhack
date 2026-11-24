@@ -1,5 +1,10 @@
 EternaCity_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, EternaCity_OnTransition
 	.byte 0
+
+EternaCity_OnTransition:
+	setflag FLAG_VISITED_ETERNA_CITY
+	end
 
 EternaCity_EventScript_Cynthia::
 	lock
