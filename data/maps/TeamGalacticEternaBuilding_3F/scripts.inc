@@ -28,4 +28,4 @@ TeamGalacticEternaBuilding_3F_Text_GruntDefeat:
 	.string "Experiment failed!$"
 
 TeamGalacticEternaBuilding_3F_Text_GruntAfter:
-	.string "Hurry up-finish this kid!$"
+	.string "Hurry up--finish this kid!$"

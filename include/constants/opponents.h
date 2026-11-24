@@ -469,7 +469,8 @@
 #define TRAINER_JACOB                       351
 #define TRAINER_ANTHONY                     352
 #define TRAINER_BENJAMIN_1                  353
-#define TRAINER_BENJAMIN_2                  354
+#define TRAINER_LASS_CAROLINE_FOREST        354 // Sinnoh: was TRAINER_BENJAMIN_2 (shared ID with gym Caroline)
+#define TRAINER_BENJAMIN_2 TRAINER_LASS_CAROLINE_FOREST
 #define TRAINER_BENJAMIN_3                  355
 #define TRAINER_BENJAMIN_4                  356
 #define TRAINER_BENJAMIN_5                  357

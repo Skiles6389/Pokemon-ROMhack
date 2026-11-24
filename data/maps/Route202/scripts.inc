@@ -26,7 +26,6 @@ Route202_EventScript_DoCatch::
 	closemessage
 	setvar VAR_ROUTE202_STATE, 1
 	special StartRoute202CatchTutorial
-	waitstate
 	lock
 	faceplayer
 	checkplayergender

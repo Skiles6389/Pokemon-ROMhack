@@ -129,7 +129,7 @@ ValleyWindworks_Interior_EventScript_Daughter::
 ValleyWindworks_Interior_Text_EntryGruntPanic:
 	.string "GRUNT: You have the key?!\n"
 	.string "Locking the door was pointless!\p"
-	.string "No time to sulk-I've got to warn\n"
+	.string "No time to sulk--I've got to warn\n"
 	.string "the Commander!$"
 
 ValleyWindworks_Interior_Text_EntryGruntIdle:
@@ -157,7 +157,7 @@ ValleyWindworks_Interior_Text_Grunt3After:
 	.string "Honestly, neither do the grunts...$"
 
 ValleyWindworks_Interior_Text_MarsIntro:
-	.string "MARS: I'm Mars-one of Team Galactic's\n"
+	.string "MARS: I'm Mars--one of Team Galactic's\n"
 	.string "Commanders.\p"
 	.string "We're building a world better than this\n"
 	.string "one. Few people understand that.\p"
@@ -171,7 +171,7 @@ ValleyWindworks_Interior_Text_MarsDefeat:
 
 ValleyWindworks_Interior_Text_MarsAfter:
 	.string "MARS: Hmph. That one got away from me.\n"
-	.string "Still-the fight was fun.\p"
+	.string "Still--the fight was fun.\p"
 	.string "We've taken enough electricity.\n"
 	.string "Team Galactic is done here... for now!$"
 
@@ -183,11 +183,11 @@ ValleyWindworks_Interior_Text_ScientistThanks:
 	.string "SCIENTIST: Team Galactic wanted POKéMON\n"
 	.string "and energy for some “new universe.”\p"
 	.string "None of it made sense. Thank you for\n"
-	.string "saving me-I can see my daughter again!$"
+	.string "saving me--I can see my daughter again!$"
 
 ValleyWindworks_Interior_Text_DaughterReunion:
 	.string "GIRL: Papa!\n"
-	.string "You're all dusty-go wash up!$"
+	.string "You're all dusty--go wash up!$"
 
 ValleyWindworks_Interior_Text_DaughterThanks:
 	.string "GIRL: Thank you, Trainer!\n"
@@ -195,5 +195,5 @@ ValleyWindworks_Interior_Text_DaughterThanks:
 
 ValleyWindworks_Interior_Text_ScientistAfter:
 	.string "These turbines catch canyon winds.\n"
-	.string "Nature's power is wonderful-when it\l"
+	.string "Nature's power is wonderful--when it\l"
 	.string "isn't stolen.$"

@@ -20,8 +20,8 @@ HearthomeCity_Route212Gate_Movement_Push:
 
 HearthomeCity_Route212Gate_Text_Guard:
 	.string "Route 212 stretches south from here.\n"
-	.string "It's not open in this demo yet.$"
+	.string "It isn't open yet.$"
 
 HearthomeCity_Route212Gate_Text_Closed:
-	.string "Route 212 is coming in a later\n"
-	.string "milestone!$"
+	.string "Route 212 isn't open yet.\n"
+	.string "Please come back another time.$"

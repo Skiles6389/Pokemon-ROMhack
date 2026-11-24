@@ -38,16 +38,16 @@ EternaCity_BikeShop_EventScript_Customer::
 	end
 
 EternaCity_BikeShop_Text_Closed:
-	.string "OWNER: Can't open-shop's a mess while\n"
+	.string "OWNER: Can't open--shop's a mess while\n"
 	.string "Galactic's upstairs!$"
 
 EternaCity_BikeShop_Text_GiveBike:
 	.string "OWNER: Jupiter's gone! You saved us.\n"
-	.string "Take this Bicycle-free of charge!$"
+	.string "Take this Bicycle, free of charge!$"
 
 EternaCity_BikeShop_Text_EnjoyBike:
 	.string "OWNER: Pedal to the Cycling Road\n"
-	.string "south of town-show them your Bike!$"
+	.string "south of town. Show them your Bike!$"
 
 EternaCity_BikeShop_Text_AlreadyBike:
 	.string "OWNER: Treat that bike well!$"

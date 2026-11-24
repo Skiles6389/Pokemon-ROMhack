@@ -48,13 +48,15 @@ FloaromaMeadow_EventScript_GruntTrigger::
 	fadedefaultbgm
 	applymovement LOCALID_FLOAROMA_HONEY_MAN, FloaromaMeadow_Movement_HoneyManApproach
 	waitmovement 0
-	removeobject LOCALID_FLOAROMA_WORKS_KEY
-	setflag FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY
 	msgbox FloaromaMeadow_Text_KeyForWindworks, MSGBOX_DEFAULT
 	giveitem ITEM_WORKS_KEY
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	removeobject LOCALID_FLOAROMA_WORKS_KEY
+	setflag FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY
 	setflag FLAG_GOT_WORKS_KEY
 	msgbox FloaromaMeadow_Text_ThankYouHoney, MSGBOX_DEFAULT
 	giveitem ITEM_HONEY, 10
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_GOT_FLOAROMA_HONEY
 	msgbox FloaromaMeadow_Text_SlatherHoney, MSGBOX_DEFAULT
 	closemessage
@@ -79,12 +81,26 @@ FloaromaMeadow_EventScript_HoneyMan::
 	end
 
 FloaromaMeadow_EventScript_HoneyManAfter::
+	goto_if_unset FLAG_GOT_FLOAROMA_HONEY, FloaromaMeadow_EventScript_RetryHoney
 	msgbox FloaromaMeadow_Text_HoneyManAfter, MSGBOX_NPC
+	end
+
+FloaromaMeadow_EventScript_RetryHoney::
+	lock
+	faceplayer
+	msgbox FloaromaMeadow_Text_ThankYouHoney, MSGBOX_DEFAULT
+	giveitem ITEM_HONEY, 10
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_GOT_FLOAROMA_HONEY
+	msgbox FloaromaMeadow_Text_SlatherHoney, MSGBOX_DEFAULT
+	release
 	end
 
 FloaromaMeadow_EventScript_WorksKey::
 	finditem ITEM_WORKS_KEY
+	goto_if_eq VAR_0x8007, FALSE, FloaromaMeadow_EventScript_WorksKeyDone
 	setflag FLAG_GOT_WORKS_KEY
+FloaromaMeadow_EventScript_WorksKeyDone::
 	end
 
 FloaromaMeadow_Text_HandOverHoney:

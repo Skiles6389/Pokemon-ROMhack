@@ -195,7 +195,7 @@ Route206_Text_WaywardHiker:
 	.string "caves on Route 206.\pBut I can only find one entrance.$"
 Route206_Text_WaywardCaveClosed:
 	.string "WAYWARD CAVE\n"
-	.string "Coming in a later milestone!$"
+	.string "The entrance is sealed for now.$"
 Route206_Text_SignEterna:
 	.string "Rt. 206\n"
 	.string "Eterna City$"

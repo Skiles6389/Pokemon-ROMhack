@@ -47,7 +47,7 @@ Route204_South_Text_SarahAfter:
 	.string "I'm still learning. Don't rub it in!$"
 
 Route204_South_Text_SamanthaIntro:
-	.string "Excuse me-would you spare a battle?$"
+	.string "Excuse me--would you spare a battle?$"
 
 Route204_South_Text_SamanthaDefeat:
 	.string "You're stronger than you look...$"

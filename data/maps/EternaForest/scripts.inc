@@ -100,7 +100,7 @@ EternaForest_EventScript_Briana::
 	end
 
 EternaForest_EventScript_Caroline::
-	trainerbattle_single TRAINER_LASS_CAROLINE, EternaForest_Text_CarolineIntro, EternaForest_Text_CarolineDefeat
+	trainerbattle_single TRAINER_LASS_CAROLINE_FOREST, EternaForest_Text_CarolineIntro, EternaForest_Text_CarolineDefeat
 	msgbox EternaForest_Text_CarolineAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -173,7 +173,7 @@ EternaForest_Text_JackAfter:
 	.string "Eterna Forest hides rare bugs.$"
 
 EternaForest_Text_PhillipIntro:
-	.string "My net's ready-catch this battle!$"
+	.string "My net's ready--catch this battle!$"
 
 EternaForest_Text_PhillipDefeat:
 	.string "They flew away...$"
@@ -210,7 +210,7 @@ EternaForest_Text_LindseyAfter:
 	.string "Don't linger by the Old Chateau.$"
 
 EternaForest_Text_ElijahIntro:
-	.string "Focus your aura-or lose!$"
+	.string "Focus your aura--or lose!$"
 
 EternaForest_Text_ElijahDefeat:
 	.string "Unbalanced...$"
@@ -228,7 +228,7 @@ EternaForest_Text_RachaelAfter:
 	.string "Eterna City is east of the far side.$"
 
 EternaForest_Text_BrianaIntro:
-	.string "Don't get lost-let's fight instead!$"
+	.string "Don't get lost--let's fight instead!$"
 
 EternaForest_Text_BrianaDefeat:
 	.string "Now I'm dizzy too...$"
@@ -247,9 +247,8 @@ EternaForest_Text_CarolineAfter:
 
 EternaForest_Text_SignSouth:
 	.string "ETERNA FOREST\n"
-	.string "Route 205-$"
+	.string "Route 205$"
 
 EternaForest_Text_OldChateauLocked:
 	.string "The Old Chateau's doors are sealed.\n"
-	.string "More of Sinnoh comes in the next\n"
-	.string "milestone!$"
+	.string "This path isn't open yet.$"

@@ -45,7 +45,7 @@ Route205_North_Text_JosephAfter:
 	.string "Magikarp evolve if you stay patient.$"
 
 Route205_North_Text_ZacharyIntro:
-	.string "Reel 'em in-Trainer style!$"
+	.string "Reel 'em in--Trainer style!$"
 
 Route205_North_Text_ZacharyDefeat:
 	.string "The big one got away...$"

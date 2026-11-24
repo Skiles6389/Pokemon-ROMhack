@@ -15,9 +15,10 @@ ValorLakefront_Movement_PushSouth:
 	step_end
 
 ValorLakefront_Text_LakeComingSoon:
-	.string "Lake Valor and the Galactic\n"
-	.string "storyline coming in a later\l"
-	.string "milestone!$"
+	.string "The path to Lake Valor is closed\n"
+	.string "for now. Head back to Pastoria--\l"
+	.string "you've gone as far as this stretch\l"
+	.string "of Sinnoh opens!$"
 
 ValorLakefront_EventScript_EastWorker::
 	msgbox ValorLakefront_Text_EastWorker, MSGBOX_NPC
@@ -25,7 +26,7 @@ ValorLakefront_EventScript_EastWorker::
 
 ValorLakefront_Text_EastWorker:
 	.string "Route 222 and Sunyshore City\n"
-	.string "coming in a later milestone!\p"
+	.string "aren't open yet.\p"
 	.string "For now, the east path is closed.$"
 
 ValorLakefront_EventScript_Tourist::

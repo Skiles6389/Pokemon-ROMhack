@@ -128,13 +128,13 @@ EternaCity_Text_GalacticBlock:
 
 EternaCity_Text_CyclingRoadClosed:
 	.string "CYCLING ROAD AHEAD\n"
-	.string "More of Sinnoh coming in the next\n"
-	.string "milestone!$"
+	.string "The gate is open. Grab a Bicycle\n"
+	.string "from the Bike Shop if you need one.$"
 
 EternaCity_Text_Route211Closed:
 	.string "ROUTE 211\n"
-	.string "More of Sinnoh coming in the next\n"
-	.string "milestone!$"
+	.string "This path isn't open yet.\n"
+	.string "Please come back another time.$"
 
 EternaCity_Text_GymSign:
 	.string "ETERNA CITY POKéMON GYM\n"

@@ -30,7 +30,7 @@ PastoriaCity_GreatMarshGate_Text_Reception:
 	.string "field move for clearing fog.$"
 
 PastoriaCity_GreatMarshGate_Text_SafariComingSoon:
-	.string "Safari coming later!\n"
+	.string "Safari tours aren't open yet.\n"
 	.string "The marsh trails stay closed.$"
 
 PastoriaCity_GreatMarshGate_EventScript_Camper::

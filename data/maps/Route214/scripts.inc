@@ -160,7 +160,7 @@ Route214_Movement_PushSouth:
 
 Route214_Text_CaveComingSoon:
 	.string "Ruin Maniac Cave and Spring Path\n"
-	.string "coming in a later milestone!$"
+	.string "aren't open yet.$"
 
 Route214_EventScript_RouteSign::
 	msgbox Route214_Text_RouteSign, MSGBOX_SIGN

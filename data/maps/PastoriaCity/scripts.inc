@@ -140,7 +140,8 @@ PastoriaCity_Text_GruntChase:
 PastoriaCity_Text_ChaseAftermath:
 	.string "He bolted east toward the lake\n"
 	.string "road. Whatever they're building,\l"
-	.string "Lake Valor is the next stop.$"
+	.string "Lake Valor would be the next stop--\l"
+	.string "but that path isn't open yet.$"
 
 PastoriaCity_Text_GruntIdle:
 	.string "Buzz off. I'm waiting for a\n"
@@ -170,7 +171,9 @@ PastoriaCity_Text_WakeAfterChase:
 	.string "CRASHER WAKE: He ran for the lake?\n"
 	.string "Hah! Waves always push troublemakers\l"
 	.string "where the current wants them.\p"
-	.string "When the road opens, ride it!$"
+	.string "The lake road isn't open yet.\n"
+	.string "You've ridden this stretch as far\l"
+	.string "as the tide will take you for now!$"
 
 PastoriaCity_EventScript_WestWorker::
 	msgbox PastoriaCity_Text_WestWorker, MSGBOX_NPC
@@ -178,7 +181,7 @@ PastoriaCity_EventScript_WestWorker::
 
 PastoriaCity_Text_WestWorker:
 	.string "Route 212 and the Trophy Garden\n"
-	.string "coming in the next milestone!\p"
+	.string "aren't open yet.\p"
 	.string "This gate stays shut for now.$"
 
 PastoriaCity_EventScript_Woman::
@@ -196,7 +199,7 @@ PastoriaCity_EventScript_Boy::
 
 PastoriaCity_Text_Boy:
 	.string "I want to tour the Great Marsh,\n"
-	.string "but the desk says “coming soon.”$"
+	.string "but the desk says it isn't open yet.$"
 
 PastoriaCity_EventScript_OldMan::
 	msgbox PastoriaCity_Text_OldMan, MSGBOX_NPC
@@ -221,7 +224,7 @@ PastoriaCity_EventScript_Fisherman::
 	end
 
 PastoriaCity_Text_Fisherman:
-	.string "Marsh, lake, sea--Pastoria's a\n"
+	.string "Marsh, lake, sea--Pastoria's an\n"
 	.string "angler paradise. Cast wisely.$"
 
 PastoriaCity_EventScript_GymSign::
