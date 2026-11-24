@@ -48,14 +48,14 @@
       "y": 15,
       "elevation": 0,
       "dest_map": "MAP_TEAM_GALACTIC_ETERNA_BUILDING_1F",
-      "dest_warp_id": "1"
+      "dest_warp_id": "3"
     },
     {
       "x": 12,
       "y": 0,
       "elevation": 0,
       "dest_map": "MAP_TEAM_GALACTIC_ETERNA_BUILDING_3F",
-      "dest_warp_id": "1"
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
