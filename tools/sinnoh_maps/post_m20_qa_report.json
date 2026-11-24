@@ -463,6 +463,105 @@
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
+    },
+    "SpearPillar_Distorted": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "DistortionWorld_1F": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "DistortionWorld_B1F": {
+      "status": "PASS",
+      "size": "64x32",
+      "plat_size": "64x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "DistortionWorld_B2F": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "DistortionWorld_B3F": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "DistortionWorld_B4F": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "DistortionWorld_B5F": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 2,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "DistortionWorld_B6F": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "DistortionWorld_B7F": {
+      "status": "PASS",
+      "size": "32x64",
+      "plat_size": "32x64",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "DistortionWorld_GiratinaRoom": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "DistortionWorld_TurnbackCaveRoom": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
     }
   }
 }

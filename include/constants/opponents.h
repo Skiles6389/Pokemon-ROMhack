@@ -1175,7 +1175,9 @@
 
 #define TRAINER_LEADER_CYRUS_SPEAR                    954 // Sinnoh M26
 
-#define TRAINERS_COUNT_EMERALD     955
+#define TRAINER_LEADER_CYRUS_DISTORTED                    955 // Sinnoh M27
+
+#define TRAINERS_COUNT_EMERALD     956
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG

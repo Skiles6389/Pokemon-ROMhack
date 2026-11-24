@@ -738,6 +738,9 @@
 #define FLAG_PASTORIA_GALACTIC_CHASE  0x2A9 // Sinnoh M20; set when grunt flees
 #define FLAG_VISITED_PASTORIA_CITY  0x2AA // Sinnoh M20; Fly
 #define FLAG_DEFEATED_CYRUS_GALACTIC_HQ  0x2B0 // Sinnoh M26 Cyrus at HQ
+#define FLAG_DEFEATED_GIRATINA_DISTORTION  0x2B2 // Sinnoh M27 Giratina
+#define FLAG_ENTERED_DISTORTION_WORLD  0x2B3 // Sinnoh M27 entered Distortion
+#define FLAG_DISTORTION_WORLD_CLEAR  0x2B4 // Sinnoh M27 cleared Distortion path
 #define FLAG_DEFEATED_CYRUS_SPEAR_PILLAR  0x2B1 // Sinnoh M26 Cyrus at Spear Pillar
 #define FLAG_DEFEATED_JUPITER_LAKE_ACUITY  0x2AF // Sinnoh M25 Jupiter at Lake Acuity
 #define FLAG_RECEIVED_SNOWPOINT_GYM_TM  0x2AE // Sinnoh M25 Candice TM

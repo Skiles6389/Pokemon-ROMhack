@@ -92,7 +92,8 @@
     "gMapGroup_IndoorM23",
     "gMapGroup_IndoorM24",
     "gMapGroup_IndoorM25",
-    "gMapGroup_IndoorM26"
+    "gMapGroup_IndoorM26",
+    "gMapGroup_IndoorM27"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -197,7 +198,8 @@
     "SnowpointCity",
     "AcuityLakefront",
     "LakeAcuity",
-    "SpearPillar"
+    "SpearPillar",
+    "SpearPillar_Distorted"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1437,5 +1439,17 @@
     "VeilstoneCity_GalacticHQ_2F",
     "VeilstoneCity_GalacticHQ_Cyrus",
     "MtCoronet_UpperStub"
+  ],
+  "gMapGroup_IndoorM27": [
+    "DistortionWorld_1F",
+    "DistortionWorld_B1F",
+    "DistortionWorld_B2F",
+    "DistortionWorld_B3F",
+    "DistortionWorld_B4F",
+    "DistortionWorld_B5F",
+    "DistortionWorld_B6F",
+    "DistortionWorld_B7F",
+    "DistortionWorld_GiratinaRoom",
+    "DistortionWorld_TurnbackCaveRoom"
   ]
 }
