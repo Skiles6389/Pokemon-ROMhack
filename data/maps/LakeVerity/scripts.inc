@@ -33,6 +33,7 @@ LakeVerity_OnFrame:
 
 LakeVerity_EventScript_OpeningScene::
 	lockall
+	playbgm MUS_PL_ENCOUNTER_BARRY, FALSE
 	call LakeVerity_EventScript_SetAssistantGfx
 	goto_if_set FLAG_SYS_POKEMON_GET, LakeVerity_EventScript_ResumeAfterStarter
 	applymovement OBJ_EVENT_ID_PLAYER, LakeVerity_Movement_PlayerApproach
@@ -235,6 +236,7 @@ LakeVerity_EventScript_AssistantLeavesAgain::
 	end
 
 LakeVerity_EventScript_CyrusScene::
+	fadedefaultbgm
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	applymovement LOCALID_LAKE_BARRY, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
@@ -242,6 +244,7 @@ LakeVerity_EventScript_CyrusScene::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	applymovement LOCALID_LAKE_BARRY, Common_Movement_ExclamationMark
 	waitmovement 0
+	playbgm MUS_PL_ENCOUNTER_GALACTIC, FALSE
 	@ Spawn Cyrus off-screen south of the clearing, then walk him into view.
 	setobjectxyperm LOCALID_LAKE_CYRUS, 47, 22
 	setobjectmovementtype LOCALID_LAKE_CYRUS, MOVEMENT_TYPE_FACE_UP
@@ -257,11 +260,12 @@ LakeVerity_EventScript_CyrusScene::
 	waitmovement 0
 	removeobject LOCALID_LAKE_CYRUS
 	setflag FLAG_HIDE_LAKE_VERITY_CYRUS
+	fadedefaultbgm
 	msgbox LakeVerity_Text_BarryAfterCyrus, MSGBOX_DEFAULT
 	closemessage
 	removeobject LOCALID_LAKE_BARRY
 	setflag FLAG_HIDE_LAKE_VERITY_BARRY
-	@ Lake opening complete — player keeps control and walks out on their own.
+	@ Lake opening complete - player keeps control and walks out on their own.
 	setvar VAR_ROUTE201_STATE, 2
 	releaseall
 	end

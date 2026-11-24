@@ -1670,6 +1670,22 @@
     {
       "id": "MAPSEC_OREBURGH_MINE",
       "name": "OREBURGH MINE"
+    },
+    {
+      "id": "MAPSEC_ROUTE_204",
+      "name": "ROUTE 204"
+    },
+    {
+      "id": "MAPSEC_RAVAGED_PATH",
+      "name": "RAVAGED PATH"
+    },
+    {
+      "id": "MAPSEC_FLOAROMA_TOWN",
+      "name": "FLOAROMA TOWN"
+    },
+    {
+      "id": "MAPSEC_FLOAROMA_MEADOW",
+      "name": "FLOAROMA MEADOW"
     }
   ]
 }

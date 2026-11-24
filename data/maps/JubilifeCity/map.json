@@ -24,6 +24,11 @@
       "map": "MAP_ROUTE203",
       "offset": 0,
       "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE204_SOUTH",
+      "offset": 32,
+      "direction": "up"
     }
   ],
   "object_events": [

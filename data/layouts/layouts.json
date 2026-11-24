@@ -9510,6 +9510,61 @@
       "border_filepath": "data/layouts/VerityLakefront/border.bin",
       "blockdata_filepath": "data/layouts/VerityLakefront/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE204_SOUTH",
+      "name": "Route204_South_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route204_South/border.bin",
+      "blockdata_filepath": "data/layouts/Route204_South/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE204_NORTH",
+      "name": "Route204_North_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route204_North/border.bin",
+      "blockdata_filepath": "data/layouts/Route204_North/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RAVAGED_PATH",
+      "name": "RavagedPath_Layout",
+      "width": 32,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/RavagedPath/border.bin",
+      "blockdata_filepath": "data/layouts/RavagedPath/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_FLOAROMA_TOWN",
+      "name": "FloaromaTown_Layout",
+      "width": 32,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/FloaromaTown/border.bin",
+      "blockdata_filepath": "data/layouts/FloaromaTown/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_FLOAROMA_MEADOW",
+      "name": "FloaromaMeadow_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/FloaromaMeadow/border.bin",
+      "blockdata_filepath": "data/layouts/FloaromaMeadow/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

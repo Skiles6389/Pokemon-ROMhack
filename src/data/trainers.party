@@ -2225,47 +2225,44 @@ Roselia @ Nugget
 Level: 45
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_CINDY_3 ===
-Name: CINDY
-Class: Lady
-Pic: Lady
+=== TRAINER_LASS_SARAH ===
+Name: SARAH
+Class: Lass
+Pic: Lass
 Gender: Female
 Music: Female
-Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Linoone @ Nugget
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Shinx (F)
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_CINDY_4 ===
-Name: CINDY
-Class: Lady
-Pic: Lady
+=== TRAINER_LASS_SAMANTHA ===
+Name: SAMANTHA
+Class: Lass
+Pic: Lass
 Gender: Female
 Music: Female
-Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Linoone @ Nugget
-Level: 30
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Budew (F)
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_CINDY_5 ===
-Name: CINDY
-Class: Lady
-Pic: Lady
-Gender: Female
-Music: Female
-Items: Full Restore
+=== TRAINER_YOUNGSTER_TYLER_R204 ===
+Name: TYLER
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Linoone @ Nugget
-Level: 33
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Magikarp (M)
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CINDY_6 ===
 Name: CINDY
@@ -8792,22 +8789,22 @@ Minun
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_AMY_AND_LIV_2 ===
-Name: AMY & LIV
-Class: Twins
-Pic: Twins
+=== TRAINER_BUG_CATCHER_BRANDON ===
+Name: BRANDON
+Class: Bug Catcher
+Pic: Bug Catcher
 Gender: Male
-Music: Twins
-Double Battle: Yes
+Music: Male
+Double Battle: No
 AI: Check Bad Move
 
-Plusle
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Wurmple (M)
+Level: 10
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Minun
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Kricketot (M)
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GINA_AND_MIA_1 ===
 Name: GINA & MIA
@@ -8880,8 +8877,25 @@ Zubat (M)
 Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_AMY_AND_LIV_4 ===
-Name: AMY & LIV
+=== TRAINER_AROMA_LADY_TAYLOR ===
+Name: TAYLOR
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Budew (F)
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Cherubi (F)
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_TWINS_LIV_AND_LIZ ===
+Name: LIV & LIZ
 Class: Twins
 Pic: Twins
 Gender: Male
@@ -8889,38 +8903,13 @@ Music: Twins
 Double Battle: Yes
 AI: Check Bad Move
 
-Plusle
-Level: 30
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Pachirisu (F)
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Minun
-Level: 30
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-=== TRAINER_AMY_AND_LIV_5 ===
-Name: AMY & LIV
-Class: Twins
-Pic: Twins
-Gender: Male
-Music: Twins
-Double Battle: Yes
-AI: Check Bad Move
-
-Plusle
-Level: 33
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Spark
-- Charge
-- Fake Tears
-- Helping Hand
-
-Minun
-Level: 33
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Spark
-- Charge
-- Charm
-- Helping Hand
+Pachirisu (F)
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_AMY_AND_LIV_6 ===
 Name: AMY & LIV
@@ -11616,25 +11605,21 @@ Abra (M)
 Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MIKE_2 ===
-Name: MIKE
-Class: Hiker
-Pic: Hiker
+=== TRAINER_GALACTIC_GRUNT_FLOAROMA_1 ===
+Name: GRUNT
+Class: Team Galactic
+Pic: Magma Grunt M
 Gender: Male
-Music: Hiker
+Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
-Level: 16
+Wurmple (M)
+Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Geodude
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Machop
-Level: 16
+Silcoon (M)
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TRENT_2 ===
@@ -16717,22 +16702,22 @@ Swellow
 Level: 37
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_THALIA_2 ===
-Name: THALIA
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
+=== TRAINER_GALACTIC_GRUNT_FLOAROMA_2 ===
+Name: GRUNT
+Class: Team Galactic
+Pic: Magma Grunt M
+Gender: Male
+Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Wailmer
-Level: 34
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Zubat (M)
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Horsea
-Level: 34
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Zubat (M)
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_THALIA_3 ===
 Name: THALIA

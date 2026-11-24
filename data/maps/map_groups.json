@@ -78,7 +78,8 @@
     "gMapGroup_IndoorTwinleaf",
     "gMapGroup_IndoorSandgem",
     "gMapGroup_IndoorJubilife",
-    "gMapGroup_IndoorOreburgh"
+    "gMapGroup_IndoorOreburgh",
+    "gMapGroup_IndoorFloaroma"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -146,7 +147,11 @@
     "JubilifeCity",
     "Route203",
     "OreburghCity",
-    "VerityLakefront"
+    "VerityLakefront",
+    "Route204_South",
+    "Route204_North",
+    "FloaromaTown",
+    "FloaromaMeadow"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -487,7 +492,8 @@
     "OreburghGate_1F",
     "OreburghGate_B1F",
     "OreburghMine_B1F",
-    "OreburghMine_B2F"
+    "OreburghMine_B2F",
+    "RavagedPath"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
@@ -1209,5 +1215,14 @@
     "OreburghCity_House2",
     "OreburghCity_MiningMuseum",
     "OreburghCity_Gym"
+  ],
+  "gMapGroup_IndoorFloaroma": [
+    "FloaromaTown_PokemonCenter_1F",
+    "FloaromaTown_PokemonCenter_2F",
+    "FloaromaTown_Mart",
+    "FloaromaTown_FlowerShop",
+    "FloaromaTown_House1",
+    "FloaromaTown_House2",
+    "FloaromaMeadow_House"
   ]
 }
