@@ -125,6 +125,10 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "AcuityLakefront": [[100, 101], [102, 103]],
     "LakeAcuity": [[553, 554], [555, 556]],
     "SpearPillar": [[375, 376], [377, 378]],
+    
+    "Route222": [[149, 150, 151]],
+    "SunyshoreCity": [[96, 97], [98, 99]],
+
     "SpearPillar_Distorted": [[379, 380], [381, 382]],
     "DistortionWorld_1F": [[598, 599], [600, 601]],
     "DistortionWorld_B1F": [[602, 603]],

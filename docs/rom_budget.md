@@ -39,6 +39,7 @@ Update the “after milestone” rows below whenever `rom_space.py` is run.
 | **M25** | Snowpoint / Candice (Icicle Badge), Lake Acuity | **350 KiB** | Badge 7 |
 | **M26** | Veilstone Galactic HQ rematch path, Spear Pillar approach | **400 KiB** | Story denser |
 | **M27** | Distortion World | **450 KiB** | Large unique layout; keep lean |
+| **Sunyshore** | Route 222, Sunyshore, Volkner (Beacon Badge) | **300 KiB** | Inserted per story order; from contingency |
 | **M28** | Victory Road + League approach | **400 KiB** | |
 | **M29** | Elite Four | **350 KiB** | Reuse League interiors |
 | **M30** | Champion | **250 KiB** | |
@@ -59,6 +60,7 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 | After M25 | 6,008,756 (5.730 MiB) | ~4.23 MiB | Used ~27 KiB from M24 (under 350 KiB) |
 | After M26 | 5,991,004 (5.713 MiB) | ~4.21 MiB | Used ~17 KiB from M25 (under 400 KiB) |
 | After M27 | 5,911,792 (5.638 MiB) | ~4.14 MiB | Used ~77 KiB from M26 (under 450 KiB) |
+| After Sunyshore/Volkner | 5,874,864 (5.603 MiB) | ~4.10 MiB | Used ~36 KiB from M27 (contingency) |
 
 ## Large assets log
 

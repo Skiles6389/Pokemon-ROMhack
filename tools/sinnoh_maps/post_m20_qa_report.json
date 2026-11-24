@@ -464,6 +464,24 @@
       "notes": [],
       "samples": []
     },
+    "Route222": {
+      "status": "PASS",
+      "size": "96x32",
+      "plat_size": "96x32",
+      "mismatch": 47,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "SunyshoreCity": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 80,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
     "SpearPillar_Distorted": {
       "status": "PASS",
       "size": "64x64",
