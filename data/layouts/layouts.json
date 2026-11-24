@@ -11424,6 +11424,72 @@
       "border_filepath": "data/layouts/AcuityCavern/border.bin",
       "blockdata_filepath": "data/layouts/AcuityCavern/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_IRON_ISLAND_1F",
+      "name": "IronIsland_1F_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/IronIsland_1F/border.bin",
+      "blockdata_filepath": "data/layouts/IronIsland_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_IRON_ISLAND_B1F_WEST",
+      "name": "IronIsland_B1F_West_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/IronIsland_B1F_West/border.bin",
+      "blockdata_filepath": "data/layouts/IronIsland_B1F_West/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_IRON_ISLAND_B1F_EAST",
+      "name": "IronIsland_B1F_East_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/IronIsland_B1F_East/border.bin",
+      "blockdata_filepath": "data/layouts/IronIsland_B1F_East/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_IRON_ISLAND_B2F_EAST",
+      "name": "IronIsland_B2F_East_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/IronIsland_B2F_East/border.bin",
+      "blockdata_filepath": "data/layouts/IronIsland_B2F_East/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_IRON_ISLAND_B2F_WEST",
+      "name": "IronIsland_B2F_West_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/IronIsland_B2F_West/border.bin",
+      "blockdata_filepath": "data/layouts/IronIsland_B2F_West/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_IRON_ISLAND_B3F",
+      "name": "IronIsland_B3F_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/IronIsland_B3F/border.bin",
+      "blockdata_filepath": "data/layouts/IronIsland_B3F/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

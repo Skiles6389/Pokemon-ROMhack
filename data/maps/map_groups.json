@@ -101,7 +101,8 @@
     "gMapGroup_IndoorM32PostgameFight",
     "gMapGroup_IndoorM33SurvivalResort",
     "gMapGroup_IndoorM34Stark",
-    "gMapGroup_IndoorM35Temple"
+    "gMapGroup_IndoorM35Temple",
+    "gMapGroup_IndoorM36IronIsland"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1555,5 +1556,13 @@
     "SnowpointTemple_B4F",
     "SnowpointTemple_B5F",
     "AcuityCavern"
+  ],
+  "gMapGroup_IndoorM36IronIsland": [
+    "IronIsland_1F",
+    "IronIsland_B1F_West",
+    "IronIsland_B1F_East",
+    "IronIsland_B2F_East",
+    "IronIsland_B2F_West",
+    "IronIsland_B3F"
   ]
 }

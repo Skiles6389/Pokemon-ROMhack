@@ -1415,7 +1415,31 @@
 
 #define TRAINER_DRAGON_TAMER_KENNY_PG                    1074 // Sinnoh Stark
 
-#define TRAINERS_COUNT_EMERALD     1075
+#define TRAINER_CAMPER_LAWRENCE_II                    1075 // Sinnoh Iron Island
+
+#define TRAINER_PICNICKER_SUMMER_II                    1076 // Sinnoh Iron Island
+
+#define TRAINER_WORKER_NOEL_II                    1077 // Sinnoh Iron Island
+
+#define TRAINER_WORKER_BRADEN_II                    1078 // Sinnoh Iron Island
+
+#define TRAINER_HIKER_DAMON_II                    1079 // Sinnoh Iron Island
+
+#define TRAINER_HIKER_MAURICE_II                    1080 // Sinnoh Iron Island
+
+#define TRAINER_BLACK_BELT_KENDAL_II                    1081 // Sinnoh Iron Island
+
+#define TRAINER_BATTLE_GIRL_TYLER_II                    1082 // Sinnoh Iron Island
+
+#define TRAINER_WORKER_BRENDON_II                    1083 // Sinnoh Iron Island
+
+#define TRAINER_WORKER_QUENTIN_II                    1084 // Sinnoh Iron Island
+
+#define TRAINER_ACE_TRAINER_JONAH_II                    1085 // Sinnoh Iron Island
+
+#define TRAINER_ACE_TRAINER_BRENDA_II                    1086 // Sinnoh Iron Island
+
+#define TRAINERS_COUNT_EMERALD     1087
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG
