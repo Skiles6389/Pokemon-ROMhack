@@ -98,7 +98,7 @@ def attr_to_cave(v: int, x: int, y: int) -> int:
     if col:
         return CAVE_WALL
     if beh in (BEH_WATER_RIVER, BEH_WATER_SEA):
-        return MT_WATER
+        return 0x201  # dark cave water/void tile (secondary)
     return CAVE_FLOOR
 
 
