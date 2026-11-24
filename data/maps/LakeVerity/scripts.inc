@@ -263,6 +263,8 @@ LakeVerity_EventScript_CyrusScene::
 	fadedefaultbgm
 	msgbox LakeVerity_Text_BarryAfterCyrus, MSGBOX_DEFAULT
 	closemessage
+	applymovement LOCALID_LAKE_BARRY, LakeVerity_Movement_BarryLeaves
+	waitmovement 0
 	removeobject LOCALID_LAKE_BARRY
 	setflag FLAG_HIDE_LAKE_VERITY_BARRY
 	@ Lake opening complete - player keeps control and walks out on their own.
@@ -349,6 +351,15 @@ LakeVerity_Movement_BarryToCase:
 	walk_up
 	walk_up
 	face_up
+	step_end
+
+LakeVerity_Movement_BarryLeaves:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 LakeVerity_Movement_AssistantReturns:

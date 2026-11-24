@@ -113,6 +113,13 @@
       "status": "PASS"
     },
     {
+      "map": "FloaromaMeadow",
+      "role": "Galactic",
+      "flag": "FLAG_HIDE_FLOAROMA_MEADOW_GRUNTS",
+      "local_id": "LOCALID_FLOAROMA_GRUNT_EAST",
+      "status": "PASS"
+    },
+    {
       "map": "ValleyWindworks_Exterior",
       "role": "Galactic",
       "flag": "FLAG_HIDE_WINDWORKS_DOOR_GRUNT",
@@ -215,6 +222,34 @@
       "role": "Cynthia",
       "flag": "FLAG_HIDE_ROUTE210_CYNTHIA",
       "local_id": "LOCALID_R210_CYNTHIA",
+      "status": "PASS"
+    },
+    {
+      "map": "Route210_South",
+      "role": "path_blocker",
+      "flag": "FLAG_HIDE_ROUTE210_PSYDUCKS",
+      "local_id": "LOCALID_R210_PSYDUCK_1",
+      "status": "PASS"
+    },
+    {
+      "map": "Route210_South",
+      "role": "path_blocker",
+      "flag": "FLAG_HIDE_ROUTE210_PSYDUCKS",
+      "local_id": "LOCALID_R210_PSYDUCK_2",
+      "status": "PASS"
+    },
+    {
+      "map": "Route210_South",
+      "role": "path_blocker",
+      "flag": "FLAG_HIDE_ROUTE210_PSYDUCKS",
+      "local_id": "LOCALID_R210_PSYDUCK_3",
+      "status": "PASS"
+    },
+    {
+      "map": "Route210_South",
+      "role": "path_blocker",
+      "flag": "FLAG_HIDE_ROUTE210_PSYDUCKS",
+      "local_id": "LOCALID_R210_PSYDUCK_4",
       "status": "PASS"
     },
     {
@@ -372,7 +407,7 @@
       "reason": "map is PlatNpc stub"
     }
   ],
-  "pass": 48,
+  "pass": 53,
   "fail": 0,
   "deferred": 5,
   "count_fail": 0

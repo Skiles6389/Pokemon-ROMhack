@@ -294,7 +294,8 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_ETERNA_BUILDING_RICKSHAW
 	setflag FLAG_HIDE_ETERNA_CITY_GARDENIA
 	setflag FLAG_HIDE_HEARTHOME_FANTINA
-	setflag FLAG_HIDE_ROUTE210_CYNTHIA
+	@ Cynthia starts visible on Route 210 South (hint NPC while Psyduck block);
+	@ her script walks her off and sets FLAG_HIDE_ROUTE210_CYNTHIA.
 	setflag FLAG_HIDE_VEILSTONE_MAYLENE
 	setflag FLAG_HIDE_VEILSTONE_COUNTERPART
 	setflag FLAG_HIDE_PASTORIA_GALACTIC_GRUNT

@@ -1270,8 +1270,8 @@
 #define FLAG_HIDE_LAKE_ACUITY_JUPITER                               0x4BE // Sinnoh: Jupiter leaves Lake Acuity after defeat
 #define FLAG_HIDE_SPEAR_PILLAR_CYRUS                                0x4BF // Sinnoh: Cyrus leaves Spear Pillar after defeat
 #define FLAG_HIDE_SPEAR_PILLAR_DISTORTED_CYRUS                      0x4C0 // Sinnoh: Cyrus leaves Distorted Spear Pillar
-#define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag
-#define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
+#define FLAG_GOT_ROUTE210_SECRET_POTION                             0x4C1 // Sinnoh: Cafe Cabin tonic for Route 210 Psyduck
+#define FLAG_HIDE_ROUTE210_PSYDUCKS                                 0x4C2 // Sinnoh: Psyduck leave after Secret Potion
 #define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
 #define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag
 #define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
