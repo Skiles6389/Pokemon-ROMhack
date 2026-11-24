@@ -19033,3 +19033,84 @@ Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
 
+=== TRAINER_COMMANDER_JUPITER_ACUITY ===
+Name: Jupiter
+Class: Team Aqua
+Pic: Aqua Admin F
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Tangela
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+Skuntank
+Level: 38
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+Golbat
+Level: 39
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+=== TRAINER_LEADER_CANDICE ===
+Name: Candice
+Class: Leader
+Pic: Leader Winona
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+Sneasel
+Level: 38
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+Medicham
+Level: 38
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+Abomasnow
+Level: 40
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+Froslass
+Level: 40
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+=== TRAINER_SKIER_SNOWPOINT_A ===
+Name: Mia
+Class: Ninja Boy
+Pic: Ninja Boy
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Snorunt
+Level: 35
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+=== TRAINER_ACE_SNOWPOINT_B ===
+Name: Trina
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Sneasel
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+

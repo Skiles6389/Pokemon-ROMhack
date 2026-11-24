@@ -90,7 +90,8 @@
     "gMapGroup_IndoorM21",
     "gMapGroup_IndoorM22",
     "gMapGroup_IndoorM23",
-    "gMapGroup_IndoorM24"
+    "gMapGroup_IndoorM24",
+    "gMapGroup_IndoorM25"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -191,7 +192,10 @@
     "IronIsland",
     "Route211_East",
     "Route216",
-    "Route217"
+    "Route217",
+    "SnowpointCity",
+    "AcuityLakefront",
+    "LakeAcuity"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1416,5 +1420,14 @@
     "MtCoronet_NorthStub",
     "Route216_House",
     "Route217_House"
+  ],
+  "gMapGroup_IndoorM25": [
+    "SnowpointCity_Gym",
+    "SnowpointCity_PokemonCenter_1F",
+    "SnowpointCity_Mart",
+    "SnowpointCity_House1",
+    "SnowpointCity_House2",
+    "SnowpointTemple_Stub",
+    "AcuityCavern_Stub"
   ]
 }

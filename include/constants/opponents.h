@@ -1155,7 +1155,15 @@
 
 #define TRAINER_COMMANDER_SATURN_VALOR                    944 // Sinnoh M24
 
-#define TRAINERS_COUNT_EMERALD     945
+#define TRAINER_COMMANDER_JUPITER_ACUITY                    945 // Sinnoh M25
+
+#define TRAINER_LEADER_CANDICE                    946 // Sinnoh M25
+
+#define TRAINER_SKIER_SNOWPOINT_A                    947 // Sinnoh M25
+
+#define TRAINER_ACE_SNOWPOINT_B                    948 // Sinnoh M25
+
+#define TRAINERS_COUNT_EMERALD     949
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG
