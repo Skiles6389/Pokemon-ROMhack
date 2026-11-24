@@ -63,6 +63,7 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 | After Sunyshore/Volkner | 5,874,864 (5.603 MiB) | ~4.10 MiB | Used ~36 KiB from M27 (contingency) |
 | After M28 (Victory Road) | 5,819,644 (5.550 MiB) | ~4.05 MiB | Used ~54 KiB from Sunyshore (under 400 KiB) |
 | After M29 (Elite Four) | 5,794,280 (5.526 MiB) | ~4.09 MiB | Used ~25 KiB from M28 (under 350 KiB) |
+| After M30 (Champion) | 5,786,568 (5.519 MiB) | ~4.09 MiB | Used ~8 KiB from M29 (under 250 KiB) |
 
 ## Large assets log
 
@@ -108,3 +109,8 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 
 - Free trailing 0xFF: **5,794,280 bytes (5.526 MiB)**
 - Elite Four Aaron/Bertha/Flint/Lucian EXACT (Platinum teams/levels, IVs 0); elevators 306–308; League door open; Canalave Gym real land-225 layout (was Pastoria reuse); Champion elevator soft-closed for M30.
+
+### Measured after M30
+
+- Free trailing 0xFF: **5,786,568 bytes (5.519 MiB)**
+- Cynthia (Platinum team/levels, IVs 0), Sinnoh Hallway + Hall of Fame EXACT; `FLAG_DEFEATED_CHAMPION_CYNTHIA` + `FLAG_SYS_GAME_CLEAR` + `GameClear` credits.

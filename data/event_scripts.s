@@ -2011,3 +2011,6 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/PokemonLeague_Elevator_ToBertha/scripts.inc"
 	.include "data/maps/PokemonLeague_Elevator_ToFlint/scripts.inc"
 	.include "data/maps/PokemonLeague_Elevator_ToLucian/scripts.inc"
+	.include "data/maps/PokemonLeague_Sinnoh_CynthiasRoom/scripts.inc"
+	.include "data/maps/PokemonLeague_Sinnoh_HallwayToHoF/scripts.inc"
+	.include "data/maps/PokemonLeague_Sinnoh_HallOfFame/scripts.inc"

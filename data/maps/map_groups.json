@@ -96,7 +96,8 @@
     "gMapGroup_IndoorM27",
     "gMapGroup_IndoorM28Sunyshore",
     "gMapGroup_IndoorM29VictoryRoad",
-    "gMapGroup_IndoorM30EliteFour"
+    "gMapGroup_IndoorM30EliteFour",
+    "gMapGroup_IndoorM31Champion"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1496,5 +1497,10 @@
     "PokemonLeague_Elevator_ToLucian",
     "PokemonLeague_LuciansRoom",
     "PokemonLeague_Elevator_ToCynthia"
+  ],
+  "gMapGroup_IndoorM31Champion": [
+    "PokemonLeague_Sinnoh_CynthiasRoom",
+    "PokemonLeague_Sinnoh_HallwayToHoF",
+    "PokemonLeague_Sinnoh_HallOfFame"
   ]
 }

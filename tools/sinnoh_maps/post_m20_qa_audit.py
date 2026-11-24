@@ -155,6 +155,9 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "PokemonLeague_Elevator_ToLucian": [[307]],
     "PokemonLeague_Elevator_ToCynthia": [[308]],
     "CanalaveCity_Gym": [[225]],
+    "PokemonLeague_Sinnoh_CynthiasRoom": [[264]],
+    "PokemonLeague_Sinnoh_HallOfFame": [[265]],
+    "PokemonLeague_Sinnoh_HallwayToHoF": [[309]],
 
 }
 
