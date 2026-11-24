@@ -743,6 +743,10 @@
 #define FLAG_DISTORTION_WORLD_CLEAR  0x2B4 // Sinnoh M27 cleared Distortion path
 #define FLAG_RECEIVED_SUNYSHORE_GYM_TM  0x2B5 // Sinnoh Sunyshore Volkner TM
 #define FLAG_REACHED_POKEMON_LEAGUE_DOOR  0x2B6 // Sinnoh VR reached League door
+#define FLAG_DEFEATED_ELITE_FOUR_AARON  0x2B7 // Sinnoh M29 Elite Four Aaron
+#define FLAG_DEFEATED_ELITE_FOUR_BERTHA  0x2B8 // Sinnoh M29 Elite Four Bertha
+#define FLAG_DEFEATED_ELITE_FOUR_FLINT  0x2B9 // Sinnoh M29 Elite Four Flint
+#define FLAG_DEFEATED_ELITE_FOUR_LUCIAN  0x2BA // Sinnoh M29 Elite Four Lucian
 #define FLAG_DEFEATED_CYRUS_SPEAR_PILLAR  0x2B1 // Sinnoh M26 Cyrus at Spear Pillar
 #define FLAG_DEFEATED_JUPITER_LAKE_ACUITY  0x2AF // Sinnoh M25 Jupiter at Lake Acuity
 #define FLAG_RECEIVED_SNOWPOINT_GYM_TM  0x2AE // Sinnoh M25 Candice TM

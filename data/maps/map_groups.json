@@ -95,7 +95,8 @@
     "gMapGroup_IndoorM26",
     "gMapGroup_IndoorM27",
     "gMapGroup_IndoorM28Sunyshore",
-    "gMapGroup_IndoorM29VictoryRoad"
+    "gMapGroup_IndoorM29VictoryRoad",
+    "gMapGroup_IndoorM30EliteFour"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1484,5 +1485,16 @@
     "PokemonLeague_SouthPC",
     "PokemonLeague_NorthPC",
     "VictoryRoad_Sinnoh_Room1"
+  ],
+  "gMapGroup_IndoorM30EliteFour": [
+    "PokemonLeague_Elevator_ToAaron",
+    "PokemonLeague_AaronsRoom",
+    "PokemonLeague_Elevator_ToBertha",
+    "PokemonLeague_BerthasRoom",
+    "PokemonLeague_Elevator_ToFlint",
+    "PokemonLeague_FlintsRoom",
+    "PokemonLeague_Elevator_ToLucian",
+    "PokemonLeague_LuciansRoom",
+    "PokemonLeague_Elevator_ToCynthia"
   ]
 }

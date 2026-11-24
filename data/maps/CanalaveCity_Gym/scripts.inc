@@ -120,3 +120,31 @@ CanalaveCity_Gym_Text_JonahDefeat:
 CanalaveCity_Gym_Text_JonahAfter:
 	.string "Take the ferry to Iron Island\n"
 	.string "if you want raw ore practice.$"
+
+CanalaveCity_Gym_EventScript_WorkerFlavor::
+	msgbox CanalaveCity_Gym_Text_WorkerFlavor, MSGBOX_NPC
+	end
+
+CanalaveCity_Gym_EventScript_WorkerFlavor2::
+	msgbox CanalaveCity_Gym_Text_WorkerFlavor, MSGBOX_NPC
+	end
+
+CanalaveCity_Gym_EventScript_BlackBeltFlavor::
+	msgbox CanalaveCity_Gym_Text_BlackBeltFlavor, MSGBOX_NPC
+	end
+
+CanalaveCity_Gym_EventScript_AceFlavor::
+	msgbox CanalaveCity_Gym_Text_AceFlavor, MSGBOX_NPC
+	end
+
+CanalaveCity_Gym_Text_WorkerFlavor:
+	.string "Steel floors, steel wills.\n"
+	.string "Byron forged this gym himself.$"
+
+CanalaveCity_Gym_Text_BlackBeltFlavor:
+	.string "Hit the beams hard enough and they\n"
+	.string "still do not bend.$"
+
+CanalaveCity_Gym_Text_AceFlavor:
+	.string "Canalave's ore ships out daily.\n"
+	.string "Trainers ship out after Byron.$"

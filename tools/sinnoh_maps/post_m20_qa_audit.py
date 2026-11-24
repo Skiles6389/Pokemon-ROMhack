@@ -145,7 +145,16 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "VictoryRoad_Sinnoh_1F": [[407, 408], [409, 410], [411, 412]],
     "VictoryRoad_Sinnoh_2F": [[413, 414], [415, 416]],
     "VictoryRoad_Sinnoh_B1F": [[417, 418], [419, 420]],
-
+    "PokemonLeague_AaronsRoom": [[260]],
+    "PokemonLeague_BerthasRoom": [[261]],
+    "PokemonLeague_FlintsRoom": [[262]],
+    "PokemonLeague_LuciansRoom": [[263]],
+    "PokemonLeague_Elevator_ToAaron": [[306]],
+    "PokemonLeague_Elevator_ToBertha": [[307]],
+    "PokemonLeague_Elevator_ToFlint": [[307]],
+    "PokemonLeague_Elevator_ToLucian": [[307]],
+    "PokemonLeague_Elevator_ToCynthia": [[308]],
+    "CanalaveCity_Gym": [[225]],
 
 }
 

@@ -10830,6 +10830,116 @@
       "border_filepath": "data/layouts/VictoryRoad_Sinnoh_Room1/border.bin",
       "blockdata_filepath": "data/layouts/VictoryRoad_Sinnoh_Room1/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_ELEVATOR_TO_AARON",
+      "name": "PokemonLeague_Elevator_ToAaron_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/PokemonLeague_Elevator_ToAaron/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_Elevator_ToAaron/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_AARONS_ROOM",
+      "name": "PokemonLeague_AaronsRoom_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/PokemonLeague_AaronsRoom/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_AaronsRoom/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_BERTHAS_ROOM",
+      "name": "PokemonLeague_BerthasRoom_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/PokemonLeague_BerthasRoom/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_BerthasRoom/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_FLINTS_ROOM",
+      "name": "PokemonLeague_FlintsRoom_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/PokemonLeague_FlintsRoom/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_FlintsRoom/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_LUCIANS_ROOM",
+      "name": "PokemonLeague_LuciansRoom_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/PokemonLeague_LuciansRoom/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_LuciansRoom/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_ELEVATOR_TO_CYNTHIA",
+      "name": "PokemonLeague_Elevator_ToCynthia_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/PokemonLeague_Elevator_ToCynthia/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_Elevator_ToCynthia/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CANALAVE_CITY_GYM",
+      "name": "CanalaveCity_Gym_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/CanalaveCity_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/CanalaveCity_Gym/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_ELEVATOR_TO_BERTHA",
+      "name": "PokemonLeague_Elevator_ToBertha_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/PokemonLeague_Elevator_ToBertha/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_Elevator_ToBertha/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_ELEVATOR_TO_FLINT",
+      "name": "PokemonLeague_Elevator_ToFlint_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/PokemonLeague_Elevator_ToFlint/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_Elevator_ToFlint/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_ELEVATOR_TO_LUCIAN",
+      "name": "PokemonLeague_Elevator_ToLucian_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/PokemonLeague_Elevator_ToLucian/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_Elevator_ToLucian/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }
