@@ -209,3 +209,67 @@ OreburghCity_Text_MineSign:
 OreburghCity_Text_Route207Sign:
 	.string "North: ROUTE 207$"
 
+OreburghCity_EventScript_PlatNpc4::
+	msgbox OreburghCity_EventScript_PlatNpc4_Text, MSGBOX_NPC
+	end
+
+OreburghCity_EventScript_PlatNpc4_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+OreburghCity_EventScript_PlatNpc5::
+	msgbox OreburghCity_EventScript_PlatNpc5_Text, MSGBOX_NPC
+	end
+
+OreburghCity_EventScript_PlatNpc5_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+OreburghCity_EventScript_PlatNpc6::
+	msgbox OreburghCity_EventScript_PlatNpc6_Text, MSGBOX_NPC
+	end
+
+OreburghCity_EventScript_PlatNpc6_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+OreburghCity_EventScript_PlatNpc7::
+	msgbox OreburghCity_EventScript_PlatNpc7_Text, MSGBOX_NPC
+	end
+
+OreburghCity_EventScript_PlatNpc7_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+OreburghCity_EventScript_PlatNpc8::
+	msgbox OreburghCity_EventScript_PlatNpc8_Text, MSGBOX_NPC
+	end
+
+OreburghCity_EventScript_PlatNpc8_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+OreburghCity_EventScript_PlatNpc9::
+	msgbox OreburghCity_EventScript_PlatNpc9_Text, MSGBOX_NPC
+	end
+
+OreburghCity_EventScript_PlatNpc9_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+OreburghCity_EventScript_PlatNpc10::
+	msgbox OreburghCity_EventScript_PlatNpc10_Text, MSGBOX_NPC
+	end
+
+OreburghCity_EventScript_PlatNpc10_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+OreburghCity_EventScript_PlatNpc13::
+	msgbox OreburghCity_EventScript_PlatNpc13_Text, MSGBOX_NPC
+	end
+
+OreburghCity_EventScript_PlatNpc13_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

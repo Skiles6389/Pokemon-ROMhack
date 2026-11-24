@@ -92,3 +92,19 @@ Route204_North_Text_Ace:
 Route204_North_Text_Sign:
 	.string "ROUTE 204\n"
 	.string "North: Floaroma Town$"
+Route204_North_EventScript_PlatNpc0::
+	msgbox Route204_North_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+Route204_North_EventScript_PlatNpc0_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route204_North_EventScript_PlatNpc1::
+	msgbox Route204_North_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+Route204_North_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

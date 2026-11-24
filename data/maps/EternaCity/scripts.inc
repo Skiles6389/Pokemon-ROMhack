@@ -144,3 +144,67 @@ EternaCity_Text_GymSign:
 EternaCity_Text_CitySign:
 	.string "ETERNA CITY\n"
 	.string "History Blooming$"
+EternaCity_EventScript_PlatNpc0::
+	msgbox EternaCity_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+EternaCity_EventScript_PlatNpc0_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+EternaCity_EventScript_PlatNpc1::
+	msgbox EternaCity_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+EternaCity_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+EternaCity_EventScript_PlatNpc2::
+	msgbox EternaCity_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+EternaCity_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+EternaCity_EventScript_PlatNpc3::
+	msgbox EternaCity_EventScript_PlatNpc3_Text, MSGBOX_NPC
+	end
+
+EternaCity_EventScript_PlatNpc3_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+EternaCity_EventScript_PlatNpc4::
+	msgbox EternaCity_EventScript_PlatNpc4_Text, MSGBOX_NPC
+	end
+
+EternaCity_EventScript_PlatNpc4_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+EternaCity_EventScript_PlatNpc5::
+	msgbox EternaCity_EventScript_PlatNpc5_Text, MSGBOX_NPC
+	end
+
+EternaCity_EventScript_PlatNpc5_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+EternaCity_EventScript_PlatNpc6::
+	msgbox EternaCity_EventScript_PlatNpc6_Text, MSGBOX_NPC
+	end
+
+EternaCity_EventScript_PlatNpc6_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+EternaCity_EventScript_PlatNpc7::
+	msgbox EternaCity_EventScript_PlatNpc7_Text, MSGBOX_NPC
+	end
+
+EternaCity_EventScript_PlatNpc7_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

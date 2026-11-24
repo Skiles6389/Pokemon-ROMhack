@@ -51,3 +51,35 @@ TwinleafTown_Text_PlayersHouseSign:
 
 TwinleafTown_Text_RivalsHouseSign:
 	.string "A neighbor's house$"
+TwinleafTown_EventScript_PlatNpc2::
+	msgbox TwinleafTown_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+TwinleafTown_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+TwinleafTown_EventScript_PlatNpc4::
+	msgbox TwinleafTown_EventScript_PlatNpc4_Text, MSGBOX_NPC
+	end
+
+TwinleafTown_EventScript_PlatNpc4_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+TwinleafTown_EventScript_PlatNpc5::
+	msgbox TwinleafTown_EventScript_PlatNpc5_Text, MSGBOX_NPC
+	end
+
+TwinleafTown_EventScript_PlatNpc5_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+TwinleafTown_EventScript_PlatNpc6::
+	msgbox TwinleafTown_EventScript_PlatNpc6_Text, MSGBOX_NPC
+	end
+
+TwinleafTown_EventScript_PlatNpc6_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

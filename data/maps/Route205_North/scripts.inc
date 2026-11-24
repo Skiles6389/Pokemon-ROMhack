@@ -56,3 +56,43 @@ Route205_North_Text_ZacharyAfter:
 Route205_North_Text_Sign:
 	.string "ROUTE 205\n"
 	.string "Eterna City - Eterna Forest$"
+Route205_North_EventScript_PlatNpc0::
+	msgbox Route205_North_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+Route205_North_EventScript_PlatNpc0_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route205_North_EventScript_PlatNpc1::
+	msgbox Route205_North_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+Route205_North_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route205_North_EventScript_PlatNpc2::
+	msgbox Route205_North_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+Route205_North_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route205_North_EventScript_PlatNpc3::
+	msgbox Route205_North_EventScript_PlatNpc3_Text, MSGBOX_NPC
+	end
+
+Route205_North_EventScript_PlatNpc3_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route205_North_EventScript_PlatNpc6::
+	msgbox Route205_North_EventScript_PlatNpc6_Text, MSGBOX_NPC
+	end
+
+Route205_North_EventScript_PlatNpc6_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

@@ -234,3 +234,67 @@ Route205_South_Text_TrainerTips:
 	.string "TRAINER TIPS!\p"
 	.string "Items in your BAG sort themselves into\n"
 	.string "the right pockets. Handy on long walks!$"
+Route205_South_EventScript_PlatNpc0::
+	msgbox Route205_South_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+Route205_South_EventScript_PlatNpc0_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route205_South_EventScript_PlatNpc3::
+	msgbox Route205_South_EventScript_PlatNpc3_Text, MSGBOX_NPC
+	end
+
+Route205_South_EventScript_PlatNpc3_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route205_South_EventScript_PlatNpc4::
+	msgbox Route205_South_EventScript_PlatNpc4_Text, MSGBOX_NPC
+	end
+
+Route205_South_EventScript_PlatNpc4_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route205_South_EventScript_PlatNpc6::
+	msgbox Route205_South_EventScript_PlatNpc6_Text, MSGBOX_NPC
+	end
+
+Route205_South_EventScript_PlatNpc6_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route205_South_EventScript_PlatNpc8::
+	msgbox Route205_South_EventScript_PlatNpc8_Text, MSGBOX_NPC
+	end
+
+Route205_South_EventScript_PlatNpc8_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route205_South_EventScript_PlatNpc12::
+	msgbox Route205_South_EventScript_PlatNpc12_Text, MSGBOX_NPC
+	end
+
+Route205_South_EventScript_PlatNpc12_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route205_South_EventScript_PlatNpc13::
+	msgbox Route205_South_EventScript_PlatNpc13_Text, MSGBOX_NPC
+	end
+
+Route205_South_EventScript_PlatNpc13_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route205_South_EventScript_PlatNpc15::
+	msgbox Route205_South_EventScript_PlatNpc15_Text, MSGBOX_NPC
+	end
+
+Route205_South_EventScript_PlatNpc15_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

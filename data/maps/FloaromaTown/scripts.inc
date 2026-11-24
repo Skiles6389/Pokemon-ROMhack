@@ -77,3 +77,35 @@ FloaromaTown_Text_FlowerShopSign:
 FloaromaTown_Text_MeadowSign:
 	.string "FLOAROMA MEADOW\n"
 	.string "Honey trees ahead$"
+FloaromaTown_EventScript_PlatNpc5::
+	msgbox FloaromaTown_EventScript_PlatNpc5_Text, MSGBOX_NPC
+	end
+
+FloaromaTown_EventScript_PlatNpc5_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+FloaromaTown_EventScript_PlatNpc7::
+	msgbox FloaromaTown_EventScript_PlatNpc7_Text, MSGBOX_NPC
+	end
+
+FloaromaTown_EventScript_PlatNpc7_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+FloaromaTown_EventScript_PlatNpc9::
+	msgbox FloaromaTown_EventScript_PlatNpc9_Text, MSGBOX_NPC
+	end
+
+FloaromaTown_EventScript_PlatNpc9_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+FloaromaTown_EventScript_PlatNpc11::
+	msgbox FloaromaTown_EventScript_PlatNpc11_Text, MSGBOX_NPC
+	end
+
+FloaromaTown_EventScript_PlatNpc11_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

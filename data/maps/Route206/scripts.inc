@@ -202,3 +202,43 @@ Route206_Text_SignEterna:
 Route206_Text_SignOreburgh:
 	.string "Rt. 206\n"
 	.string "Oreburgh City$"
+Route206_EventScript_PlatNpc0::
+	msgbox Route206_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+Route206_EventScript_PlatNpc0_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route206_EventScript_PlatNpc1::
+	msgbox Route206_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+Route206_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route206_EventScript_PlatNpc2::
+	msgbox Route206_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+Route206_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route206_EventScript_PlatNpc5::
+	msgbox Route206_EventScript_PlatNpc5_Text, MSGBOX_NPC
+	end
+
+Route206_EventScript_PlatNpc5_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route206_EventScript_PlatNpc7::
+	msgbox Route206_EventScript_PlatNpc7_Text, MSGBOX_NPC
+	end
+
+Route206_EventScript_PlatNpc7_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

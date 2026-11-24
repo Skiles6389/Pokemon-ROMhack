@@ -64,3 +64,19 @@ OreburghMine_B2F_Text_MasonAfter:
 OreburghMine_B2F_Text_Worker:
 	.string "We're digging a new tunnel this\n"
 	.string "way. Mind the loose rocks!$"
+OreburghMine_B2F_EventScript_PlatNpc2::
+	msgbox OreburghMine_B2F_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+OreburghMine_B2F_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+OreburghMine_B2F_EventScript_PlatNpc4::
+	msgbox OreburghMine_B2F_EventScript_PlatNpc4_Text, MSGBOX_NPC
+	end
+
+OreburghMine_B2F_EventScript_PlatNpc4_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

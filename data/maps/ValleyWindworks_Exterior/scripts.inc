@@ -152,3 +152,11 @@ ValleyWindworks_Exterior_Text_DoorOpenedShort:
 ValleyWindworks_Exterior_Text_Sign:
 	.string "VALLEY WINDWORKS\n"
 	.string "Clean power from canyon winds$"
+ValleyWindworks_Exterior_EventScript_PlatNpc1::
+	msgbox ValleyWindworks_Exterior_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+ValleyWindworks_Exterior_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

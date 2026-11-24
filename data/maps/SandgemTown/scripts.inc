@@ -302,3 +302,59 @@ SandgemTown_Text_Route202Sign:
 SandgemTown_Text_Route219Sign:
 	.string "SOUTH: ROUTE 219\n"
 	.string "The beach path is closed for now.$"
+SandgemTown_EventScript_PlatNpc1::
+	msgbox SandgemTown_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+SandgemTown_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+SandgemTown_EventScript_PlatNpc3::
+	msgbox SandgemTown_EventScript_PlatNpc3_Text, MSGBOX_NPC
+	end
+
+SandgemTown_EventScript_PlatNpc3_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+SandgemTown_EventScript_PlatNpc5::
+	msgbox SandgemTown_EventScript_PlatNpc5_Text, MSGBOX_NPC
+	end
+
+SandgemTown_EventScript_PlatNpc5_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+SandgemTown_EventScript_PlatNpc6::
+	msgbox SandgemTown_EventScript_PlatNpc6_Text, MSGBOX_NPC
+	end
+
+SandgemTown_EventScript_PlatNpc6_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+SandgemTown_EventScript_PlatNpc7::
+	msgbox SandgemTown_EventScript_PlatNpc7_Text, MSGBOX_NPC
+	end
+
+SandgemTown_EventScript_PlatNpc7_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+SandgemTown_EventScript_PlatNpc12::
+	msgbox SandgemTown_EventScript_PlatNpc12_Text, MSGBOX_NPC
+	end
+
+SandgemTown_EventScript_PlatNpc12_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+SandgemTown_EventScript_PlatNpc13::
+	msgbox SandgemTown_EventScript_PlatNpc13_Text, MSGBOX_NPC
+	end
+
+SandgemTown_EventScript_PlatNpc13_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

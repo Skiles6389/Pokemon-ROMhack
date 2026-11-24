@@ -182,3 +182,67 @@ Route215_Text_RouteSign:
 Route215_Text_VeilstoneSign:
 	.string "East: VEILSTONE CITY\n"
 	.string "Gate ahead$"
+Route215_EventScript_PlatNpc0::
+	msgbox Route215_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+Route215_EventScript_PlatNpc0_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route215_EventScript_PlatNpc1::
+	msgbox Route215_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+Route215_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route215_EventScript_PlatNpc2::
+	msgbox Route215_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+Route215_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route215_EventScript_PlatNpc4::
+	msgbox Route215_EventScript_PlatNpc4_Text, MSGBOX_NPC
+	end
+
+Route215_EventScript_PlatNpc4_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route215_EventScript_PlatNpc5::
+	msgbox Route215_EventScript_PlatNpc5_Text, MSGBOX_NPC
+	end
+
+Route215_EventScript_PlatNpc5_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route215_EventScript_PlatNpc7::
+	msgbox Route215_EventScript_PlatNpc7_Text, MSGBOX_NPC
+	end
+
+Route215_EventScript_PlatNpc7_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route215_EventScript_PlatNpc9::
+	msgbox Route215_EventScript_PlatNpc9_Text, MSGBOX_NPC
+	end
+
+Route215_EventScript_PlatNpc9_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route215_EventScript_PlatNpc12::
+	msgbox Route215_EventScript_PlatNpc12_Text, MSGBOX_NPC
+	end
+
+Route215_EventScript_PlatNpc12_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

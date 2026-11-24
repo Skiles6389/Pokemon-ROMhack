@@ -169,3 +169,51 @@ Route214_EventScript_RouteSign::
 Route214_Text_RouteSign:
 	.string "ROUTE 214\n"
 	.string "Veilstone City - Valor Lakefront$"
+Route214_EventScript_PlatNpc0::
+	msgbox Route214_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+Route214_EventScript_PlatNpc0_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route214_EventScript_PlatNpc1::
+	msgbox Route214_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+Route214_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route214_EventScript_PlatNpc2::
+	msgbox Route214_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+Route214_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route214_EventScript_PlatNpc5::
+	msgbox Route214_EventScript_PlatNpc5_Text, MSGBOX_NPC
+	end
+
+Route214_EventScript_PlatNpc5_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route214_EventScript_PlatNpc6::
+	msgbox Route214_EventScript_PlatNpc6_Text, MSGBOX_NPC
+	end
+
+Route214_EventScript_PlatNpc6_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route214_EventScript_PlatNpc9::
+	msgbox Route214_EventScript_PlatNpc9_Text, MSGBOX_NPC
+	end
+
+Route214_EventScript_PlatNpc9_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

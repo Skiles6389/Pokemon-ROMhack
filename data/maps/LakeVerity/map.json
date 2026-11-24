@@ -87,7 +87,29 @@
       "flag": "FLAG_HIDE_LAKE_VERITY_BRIEFCASE"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 46,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_VERITY_LAKEFRONT",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 47,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_VERITY_LAKEFRONT",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 32,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_VERITY_CAVERN_STUB",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
   "bg_events": [
     {

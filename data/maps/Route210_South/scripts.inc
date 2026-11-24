@@ -196,3 +196,89 @@ Route210_South_Text_CafeSign:
 Route210_South_Text_RouteSign:
 	.string "ROUTE 210\n"
 	.string "Solaceon Town - Celestic Town$"
+Route210_South_EventScript_PlatNpc0::
+	msgbox Route210_South_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+Route210_South_EventScript_PlatNpc0_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route210_South_EventScript_PlatNpc1::
+	msgbox Route210_South_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+Route210_South_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route210_South_EventScript_PlatNpc2::
+	msgbox Route210_South_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+Route210_South_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route210_South_EventScript_PlatNpc5::
+	msgbox Route210_South_EventScript_PlatNpc5_Text, MSGBOX_NPC
+	end
+
+Route210_South_EventScript_PlatNpc5_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route210_South_EventScript_PlatNpc7::
+	msgbox Route210_South_EventScript_PlatNpc7_Text, MSGBOX_NPC
+	end
+
+Route210_South_EventScript_PlatNpc7_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route210_South_EventScript_PlatNpc8::
+	msgbox Route210_South_EventScript_PlatNpc8_Text, MSGBOX_NPC
+	end
+
+Route210_South_EventScript_PlatNpc8_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route210_South_EventScript_PlatNpc15::
+	msgbox Route210_South_EventScript_PlatNpc15_Text, MSGBOX_NPC
+	end
+
+Route210_South_EventScript_PlatNpc15_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route210_South_EventScript_V06Trainer0::
+	trainerbattle_single TRAINER_ROUTE210_SOUTH_V06_0, Route210_South_EventScript_V06Trainer0_Intro, Route210_South_EventScript_V06Trainer0_Defeat
+	msgbox Route210_South_EventScript_V06Trainer0_After, MSGBOX_AUTOCLOSE
+	end
+
+Route210_South_EventScript_V06Trainer0_Intro:
+	.string "A quick match will wake us both up!$"
+
+Route210_South_EventScript_V06Trainer0_Defeat:
+	.string "You were ready for that.$"
+
+Route210_South_EventScript_V06Trainer0_After:
+	.string "Keep going. The next landmark is\n"
+	.string "closer than it looks.$"
+
+Route210_South_EventScript_V06Trainer1::
+	trainerbattle_single TRAINER_ROUTE210_SOUTH_V06_1, Route210_South_EventScript_V06Trainer1_Intro, Route210_South_EventScript_V06Trainer1_Defeat
+	msgbox Route210_South_EventScript_V06Trainer1_After, MSGBOX_AUTOCLOSE
+	end
+
+Route210_South_EventScript_V06Trainer1_Intro:
+	.string "A quick match will wake us both up!$"
+
+Route210_South_EventScript_V06Trainer1_Defeat:
+	.string "You were ready for that.$"
+
+Route210_South_EventScript_V06Trainer1_After:
+	.string "Keep going. The next landmark is\n"
+	.string "closer than it looks.$"
+
