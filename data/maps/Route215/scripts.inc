@@ -149,7 +149,8 @@ Route215_Text_AlexiaDefeat:
 	.string "Outplayed...$"
 
 Route215_Text_AlexiaAfter:
-	.string "Veilstone City isn't open yet.$"
+	.string "Veilstone's Fighting Gym is next.\n"
+	.string "Pack something that can take a hit.$"
 
 Route215_Text_ErnestIntro:
 	.string "Final exam before the gate!$"
@@ -158,7 +159,8 @@ Route215_Text_ErnestDefeat:
 	.string "You pass with honors.$"
 
 Route215_Text_ErnestAfter:
-	.string "Come back when Veilstone opens.$"
+	.string "Rain softens Fire, but Fighting\n"
+	.string "still hits hard--stay sharp!$"
 
 Route215_Text_PaybackOffer:
 	.string "Took a cheap shot in the rain once.\n"

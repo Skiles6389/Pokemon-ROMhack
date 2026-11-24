@@ -7215,18 +7215,30 @@ Magnemite
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_BENJAMIN_2 ===
-Name: BENJAMIN
-Class: Triathlete
-Pic: Cycling Triathlete M
-Gender: Male
-Music: Male
+=== TRAINER_LASS_CAROLINE_FOREST ===
+Name: CAROLINE
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Magnemite
-Level: 30
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Budew (F)
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Absorb
+- Growth
+- Water Sport
+- Stun Spore
+
+Cherubi (F)
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Magical Leaf
+- Growth
+- Leech Seed
+- Tackle
 
 === TRAINER_BENJAMIN_3 ===
 Name: BENJAMIN

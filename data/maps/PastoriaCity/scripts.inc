@@ -171,10 +171,9 @@ PastoriaCity_Text_WakeAfterChase:
 	.string "CRASHER WAKE: He ran for the lake?\n"
 	.string "Hah! Waves always push troublemakers\l"
 	.string "where the current wants them.\p"
-	.string "The lake road isn't open yet, so\n"
-	.string "this is as far as the demo goes.\l"
-	.string "Thanks for playing--more of Sinnoh\l"
-	.string "is coming!$"
+	.string "The lake road isn't open yet.\n"
+	.string "You've ridden this stretch as far\l"
+	.string "as the tide will take you for now!$"
 
 PastoriaCity_EventScript_WestWorker::
 	msgbox PastoriaCity_Text_WestWorker, MSGBOX_NPC
@@ -200,7 +199,7 @@ PastoriaCity_EventScript_Boy::
 
 PastoriaCity_Text_Boy:
 	.string "I want to tour the Great Marsh,\n"
-	.string "but the desk says “coming soon.”$"
+	.string "but the desk says it isn't open yet.$"
 
 PastoriaCity_EventScript_OldMan::
 	msgbox PastoriaCity_Text_OldMan, MSGBOX_NPC
@@ -225,7 +224,7 @@ PastoriaCity_EventScript_Fisherman::
 	end
 
 PastoriaCity_Text_Fisherman:
-	.string "Marsh, lake, sea--Pastoria's a\n"
+	.string "Marsh, lake, sea--Pastoria's an\n"
 	.string "angler paradise. Cast wisely.$"
 
 PastoriaCity_EventScript_GymSign::

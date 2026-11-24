@@ -100,7 +100,7 @@ EternaForest_EventScript_Briana::
 	end
 
 EternaForest_EventScript_Caroline::
-	trainerbattle_single TRAINER_LASS_CAROLINE, EternaForest_Text_CarolineIntro, EternaForest_Text_CarolineDefeat
+	trainerbattle_single TRAINER_LASS_CAROLINE_FOREST, EternaForest_Text_CarolineIntro, EternaForest_Text_CarolineDefeat
 	msgbox EternaForest_Text_CarolineAfter, MSGBOX_AUTOCLOSE
 	end
 

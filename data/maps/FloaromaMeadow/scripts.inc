@@ -48,13 +48,15 @@ FloaromaMeadow_EventScript_GruntTrigger::
 	fadedefaultbgm
 	applymovement LOCALID_FLOAROMA_HONEY_MAN, FloaromaMeadow_Movement_HoneyManApproach
 	waitmovement 0
-	removeobject LOCALID_FLOAROMA_WORKS_KEY
-	setflag FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY
 	msgbox FloaromaMeadow_Text_KeyForWindworks, MSGBOX_DEFAULT
 	giveitem ITEM_WORKS_KEY
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	removeobject LOCALID_FLOAROMA_WORKS_KEY
+	setflag FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY
 	setflag FLAG_GOT_WORKS_KEY
 	msgbox FloaromaMeadow_Text_ThankYouHoney, MSGBOX_DEFAULT
 	giveitem ITEM_HONEY, 10
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_GOT_FLOAROMA_HONEY
 	msgbox FloaromaMeadow_Text_SlatherHoney, MSGBOX_DEFAULT
 	closemessage
