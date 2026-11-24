@@ -77,7 +77,7 @@ Route204_North_Text_LizIntro:
 	.string "LIZ: We're the strongest in class!$"
 
 Route204_North_Text_LizDefeat:
-	.string "LIZ: Wait-hold on!$"
+	.string "LIZ: Wait--hold on!$"
 
 Route204_North_Text_LizAfter:
 	.string "LIZ: They're really happy they won...$"

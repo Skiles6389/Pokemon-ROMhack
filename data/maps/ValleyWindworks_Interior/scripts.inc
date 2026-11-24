@@ -157,7 +157,7 @@ ValleyWindworks_Interior_Text_Grunt3After:
 	.string "Honestly, neither do the grunts...$"
 
 ValleyWindworks_Interior_Text_MarsIntro:
-	.string "MARS: I'm Mars-one of Team Galactic's\n"
+	.string "MARS: I'm Mars--one of Team Galactic's\n"
 	.string "Commanders.\p"
 	.string "We're building a world better than this\n"
 	.string "one. Few people understand that.\p"
@@ -171,7 +171,7 @@ ValleyWindworks_Interior_Text_MarsDefeat:
 
 ValleyWindworks_Interior_Text_MarsAfter:
 	.string "MARS: Hmph. That one got away from me.\n"
-	.string "Still-the fight was fun.\p"
+	.string "Still--the fight was fun.\p"
 	.string "We've taken enough electricity.\n"
 	.string "Team Galactic is done here... for now!$"
 

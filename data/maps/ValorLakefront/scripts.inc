@@ -16,9 +16,9 @@ ValorLakefront_Movement_PushSouth:
 
 ValorLakefront_Text_LakeComingSoon:
 	.string "The path to Lake Valor is closed\n"
-	.string "for now. This demo ends with the\l"
-	.string "Fen Badge in Pastoria--thanks\l"
-	.string "for playing!$"
+	.string "for now. Head back to Pastoria--\l"
+	.string "you've gone as far as this stretch\l"
+	.string "of Sinnoh opens!$"
 
 ValorLakefront_EventScript_EastWorker::
 	msgbox ValorLakefront_Text_EastWorker, MSGBOX_NPC

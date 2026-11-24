@@ -7,6 +7,7 @@ OreburghGate_1F_EventScript_Hiker::
 	goto_if_set FLAG_RECEIVED_HM_ROCK_SMASH, OreburghGate_1F_EventScript_HikerAfter
 	msgbox OreburghGate_1F_Text_HikerGive, MSGBOX_DEFAULT
 	giveitem ITEM_HM_ROCK_SMASH
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	msgbox OreburghGate_1F_Text_HikerExplain, MSGBOX_DEFAULT
 	release
