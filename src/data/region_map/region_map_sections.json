@@ -1810,6 +1810,34 @@
     {
       "id": "MAPSEC_GALACTIC_WAREHOUSE",
       "name": "GALACTIC WAREHOUSE"
+    },
+    {
+      "id": "MAPSEC_ROUTE_214",
+      "name": "ROUTE 214"
+    },
+    {
+      "id": "MAPSEC_VALOR_LAKEFRONT",
+      "name": "VALOR LAKEFRONT"
+    },
+    {
+      "id": "MAPSEC_ROUTE_213",
+      "name": "ROUTE 213"
+    },
+    {
+      "id": "MAPSEC_PASTORIA_CITY",
+      "name": "PASTORIA CITY",
+      "x": 26,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_PASTORIA_GYM",
+      "name": "PASTORIA GYM"
+    },
+    {
+      "id": "MAPSEC_GREAT_MARSH_GATE",
+      "name": "GREAT MARSH GATE"
     }
   ]
 }

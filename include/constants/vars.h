@@ -271,7 +271,7 @@
 #define VAR_HEARTHOME_CITY_STATE                         0x40F9 // Sinnoh M17: 0 Barry pending, 1 Barry done
 #define VAR_ROUTE210_STATE                               0x40FA // Sinnoh M18: Psyduck blockade (0 blocked)
 #define VAR_VEILSTONE_CITY_STATE                         0x40FB // Sinnoh M19: 0 counterpart pending, 1 warehouse standoff, 2 grunts beaten
-#define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
+#define VAR_PASTORIA_CITY_STATE                          0x40FC // Sinnoh M20: 0 Barry, 1 gym open, 2 chase ready, 3 chase done
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
