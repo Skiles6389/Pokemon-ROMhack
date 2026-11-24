@@ -94,7 +94,8 @@
     "gMapGroup_IndoorM25",
     "gMapGroup_IndoorM26",
     "gMapGroup_IndoorM27",
-    "gMapGroup_IndoorM28Sunyshore"
+    "gMapGroup_IndoorM28Sunyshore",
+    "gMapGroup_IndoorM29VictoryRoad"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -202,7 +203,12 @@
     "SpearPillar",
     "SpearPillar_Distorted",
     "Route222",
-    "SunyshoreCity"
+    "SunyshoreCity",
+    "Route223",
+    "PokemonLeague_Exterior",
+    "VictoryRoad_Sinnoh_1F",
+    "VictoryRoad_Sinnoh_2F",
+    "VictoryRoad_Sinnoh_B1F"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1473,5 +1479,10 @@
     "SunyshoreCity_Gym_Room1",
     "SunyshoreCity_Gym_Room2",
     "SunyshoreCity_Gym_VolknersRoom"
+  ],
+  "gMapGroup_IndoorM29VictoryRoad": [
+    "PokemonLeague_SouthPC",
+    "PokemonLeague_NorthPC",
+    "VictoryRoad_Sinnoh_Room1"
   ]
 }

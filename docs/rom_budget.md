@@ -61,6 +61,7 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 | After M26 | 5,991,004 (5.713 MiB) | ~4.21 MiB | Used ~17 KiB from M25 (under 400 KiB) |
 | After M27 | 5,911,792 (5.638 MiB) | ~4.14 MiB | Used ~77 KiB from M26 (under 450 KiB) |
 | After Sunyshore/Volkner | 5,874,864 (5.603 MiB) | ~4.10 MiB | Used ~36 KiB from M27 (contingency) |
+| After M28 (Victory Road) | 5,819,644 (5.550 MiB) | ~4.05 MiB | Used ~54 KiB from Sunyshore (under 400 KiB) |
 
 ## Large assets log
 

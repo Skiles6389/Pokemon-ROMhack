@@ -580,6 +580,51 @@
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
+    },
+    "Route223": {
+      "status": "PASS",
+      "size": "32x128",
+      "plat_size": "32x128",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "PokemonLeague_Exterior": {
+      "status": "PASS",
+      "size": "32x64",
+      "plat_size": "32x64",
+      "mismatch": 27,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "VictoryRoad_Sinnoh_1F": {
+      "status": "PASS",
+      "size": "64x96",
+      "plat_size": "64x96",
+      "mismatch": 36,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "VictoryRoad_Sinnoh_2F": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 12,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "VictoryRoad_Sinnoh_B1F": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 13,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
     }
   }
 }

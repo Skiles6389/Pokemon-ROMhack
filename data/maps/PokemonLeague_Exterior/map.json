@@ -1,0 +1,124 @@
+{
+  "id": "MAP_POKEMON_LEAGUE_EXTERIOR",
+  "name": "PokemonLeague_Exterior",
+  "layout": "LAYOUT_POKEMON_LEAGUE_EXTERIOR",
+  "music": "MUS_VICTORY_ROAD",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_ROUTE_213",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE223",
+      "offset": 0,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 16,
+      "y": 54,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PokemonLeague_Exterior_EventScript_Npc0",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 17,
+      "y": 36,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PokemonLeague_Exterior_EventScript_Npc1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 15,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PokemonLeague_Exterior_EventScript_E4Closed",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 10,
+      "y": 54,
+      "elevation": 0,
+      "dest_map": "MAP_POKEMON_LEAGUE_SOUTH_PC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_POKEMON_LEAGUE_NORTH_PC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 19,
+      "y": 53,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_SINNOH_1F",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 21,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_SINNOH_1F",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 18,
+      "y": 53,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_SINNOH_1F",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 20,
+      "y": 53,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_SINNOH_1F",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 21,
+      "y": 37,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_SINNOH_1F",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 21,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_SINNOH_1F",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}
