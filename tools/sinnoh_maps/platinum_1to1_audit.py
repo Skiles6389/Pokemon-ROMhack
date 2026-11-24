@@ -51,6 +51,10 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "ValorLakefront": [[155, 156], [157, 158]],
     "Route213": [[143, 144, 145], [146, 147, 148]],
     "PastoriaCity": [[81, 82], [83, 84]],
+    # M21
+    "Route212_North": [[85], [86], [87]],
+    "Route212_South": [[88, 89, 90, 91]],
+    "GreatMarsh": [[383, 384], [385, 386], [387, 388]],
 }
 
 # Documented world origins (tile). Missing entries derived from warp fit.
@@ -70,6 +74,9 @@ DOCUMENTED_ORIGIN = {
     "ValorLakefront": (21 * 32, 23 * 32),
     "Route213": (20 * 32, 25 * 32),
     "PastoriaCity": (18 * 32, 25 * 32),
+    "Route212_North": (14 * 32, 23 * 32),
+    "Route212_South": (14 * 32, 26 * 32),
+    "GreatMarsh": (0, 0),  # GreatMarsh_DP local matrix
     "Route206": (288, 576),
     "Route207": (288, 704),
     "JubilifeCity": (128, 736),
@@ -119,6 +126,9 @@ PLAT_NAME = {
     "ValorLakefront": "valor_lakefront",
     "Route213": "route_213",
     "PastoriaCity": "pastoria_city",
+    "Route212_North": "route_212_north",
+    "Route212_South": "route_212_south",
+    "GreatMarsh": "great_marsh_1",  # events sample; geometry from GreatMarsh_DP lands
     "VerityLakefront": "verity_lakefront",
     "LakeVerity": "lake_verity_low_water",  # guess; resolve later
 }

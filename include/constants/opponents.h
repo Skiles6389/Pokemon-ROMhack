@@ -1029,7 +1029,47 @@
 
 #define TRAINER_GALACTIC_GRUNT_LAKE_VERITY_4                    881 // Sinnoh v0.7
 
-#define TRAINERS_COUNT_EMERALD     882
+#define TRAINER_RICH_BOY_JASON                    882 // Sinnoh M21
+
+#define TRAINER_LADY_MELISSA                    883 // Sinnoh M21
+
+#define TRAINER_GENTLEMAN_JEREMY                    884 // Sinnoh M21
+
+#define TRAINER_SOCIALITE_REINA                    885 // Sinnoh M21
+
+#define TRAINER_POLICEMAN_BOBBY                    886 // Sinnoh M21
+
+#define TRAINER_POLICEMAN_ALEX                    887 // Sinnoh M21
+
+#define TRAINER_POLICEMAN_DYLAN                    888 // Sinnoh M21
+
+#define TRAINER_POLICEMAN_CALEB                    889 // Sinnoh M21
+
+#define TRAINER_FISHERMAN_JUAN                    890 // Sinnoh M21
+
+#define TRAINER_FISHERMAN_JOSH                    891 // Sinnoh M21
+
+#define TRAINER_FISHERMAN_TRAVIS                    892 // Sinnoh M21
+
+#define TRAINER_RANGER_TAYLOR                    893 // Sinnoh M21
+
+#define TRAINER_RANGER_ALLISON                    894 // Sinnoh M21
+
+#define TRAINER_RANGER_JEFFREY                    895 // Sinnoh M21
+
+#define TRAINER_POLICEMAN_DANNY                    896 // Sinnoh M21
+
+#define TRAINER_SCIENTIST_STEFANO                    897 // Sinnoh M21
+
+#define TRAINER_COLLECTOR_DEAN                    898 // Sinnoh M21
+
+#define TRAINER_SCIENTIST_SHAUN                    899 // Sinnoh M21
+
+#define TRAINER_PARASOL_LADY_ALEXA                    900 // Sinnoh M21
+
+#define TRAINER_PARASOL_LADY_SABRINA                    901 // Sinnoh M21
+
+#define TRAINERS_COUNT_EMERALD     902
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG

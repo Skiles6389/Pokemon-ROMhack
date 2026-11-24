@@ -1918,3 +1918,8 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
 	.include "data/scripts/wild_encounter.inc"
+	.include "data/maps/Route212_North/scripts.inc"
+	.include "data/maps/Route212_South/scripts.inc"
+	.include "data/maps/GreatMarsh/scripts.inc"
+	.include "data/maps/PokemonMansion_Stub/scripts.inc"
+	.include "data/maps/Route212_House/scripts.inc"

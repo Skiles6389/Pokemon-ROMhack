@@ -182,12 +182,13 @@ const struct FieldMoveInfo gFieldMoveInfo[FIELD_MOVES_COUNT] =
     {
         .fieldMoveFunc = SetUpFieldMove_Defog,
 #if OW_DEFOG_FIELD_MOVE
-        .unlockType = ALWAYS_UNLOCKED,
+        .unlockType = BADGE_UNLOCK,
 #else
         .unlockType = CANT_UNLOCK,
 #endif
         .moveID = MOVE_DEFOG,
         .partyMsgID = PARTY_MSG_CANT_USE_HERE,
+        .arg = FLAG_TO_BADGE(FLAG_BADGE05_GET), // Sinnoh: Fen Badge
         .hideIfLocked = TRUE,
     },
 };
