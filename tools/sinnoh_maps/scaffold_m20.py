@@ -1185,7 +1185,7 @@ def scaffold_route213_interiors():
 def patch_route214_gate():
     p = "VeilstoneCity_Route214Gate"
     data = indoor_base("MAP_VEILSTONE_CITY_ROUTE214_GATE", p, "LAYOUT_ROUTE110_SEASIDE_CYCLING_ROAD_ENTRANCE",
-                       "MUS_PL_JUBILIFE", night="MUS_PL_JUBILIFE_NIGHT")
+                       "MUS_PL_JUBILIFE", mapsec="MAPSEC_VEILSTONE_CITY", night="MUS_PL_JUBILIFE_NIGHT")
     data["allow_cycling"] = True
     data["allow_running"] = True
     data["object_events"] = [obj("OBJ_EVENT_GFX_MART_EMPLOYEE", 7, 2, f"{p}_EventScript_Guard")]
@@ -1426,7 +1426,7 @@ def patch_flags_vars():
 
 # --------------------------------------------------------------------------- Patches: trainers
 M20_TRAINERS = [
-    ("TRAINER_KAREN_5", "TRAINER_LEADER_CRASHER_WAKE", "CRASHER WAKE", "Leader", "Sailor", "Male", "Male", [
+    ("TRAINER_KAREN_5", "TRAINER_LEADER_CRASHER_WAKE", "WAKE", "Leader", "Sailor", "Male", "Male", [
         ("Gyarados (M)", 33, ["Bite", "Twister", "Aqua Tail", "Ice Fang"]),
         ("Quagsire (M)", 34, ["Mud Shot", "Water Pulse", "Yawn", "Slam"]),
         ("Floatzel (M) @ Sitrus Berry", 37, ["Aqua Jet", "Pursuit", "Swift", "Brine"]),
@@ -1648,9 +1648,9 @@ def patch_items_brine():
         .name = ITEM_NAME("TM55"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "A water attack that\\n"
-            "grows stronger if\\n"
-            "the foe's HP is low."),
+            "A Water move that\\n"
+            "hits harder when\\n"
+            "the foe has low HP."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

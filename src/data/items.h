@@ -13084,9 +13084,9 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("TM55"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "A water attack that\n"
-            "grows stronger if\n"
-            "the foe's HP is low."),
+            "A Water move that\n"
+            "hits harder when\n"
+            "the foe has low HP."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
