@@ -87,7 +87,8 @@
     "gMapGroup_IndoorVeilstone",
     "gMapGroup_IndoorM20",
     "gMapGroup_IndoorV06",
-    "gMapGroup_IndoorM21"
+    "gMapGroup_IndoorM21",
+    "gMapGroup_IndoorM22"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -180,7 +181,9 @@
     "PastoriaCity",
     "Route212_North",
     "Route212_South",
-    "GreatMarsh"
+    "GreatMarsh",
+    "Route210_North",
+    "CelesticTown"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1381,5 +1384,14 @@
   "gMapGroup_IndoorM21": [
     "PokemonMansion_Stub",
     "Route212_House"
+  ],
+  "gMapGroup_IndoorM22": [
+    "Celestic_NorthHouse",
+    "Celestic_NorthwestHouse",
+    "Celestic_NortheastHouse",
+    "Celestic_SouthwestHouse",
+    "Route210_WilmaHouse",
+    "Celestic_Cave_Stub",
+    "Celestic_PokemonCenter_1F"
   ]
 }

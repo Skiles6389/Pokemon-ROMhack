@@ -1069,7 +1069,27 @@
 
 #define TRAINER_PARASOL_LADY_SABRINA                    901 // Sinnoh M21
 
-#define TRAINERS_COUNT_EMERALD     902
+#define TRAINER_ACE_TRAINER_ERNEST                    902 // Sinnoh M22
+
+#define TRAINER_ACE_TRAINER_ALYSSA                    903 // Sinnoh M22
+
+#define TRAINER_NINJA_BOY_JOEL                    904 // Sinnoh M22
+
+#define TRAINER_NINJA_BOY_NATHAN                    905 // Sinnoh M22
+
+#define TRAINER_NINJA_BOY_DAVIDO                    906 // Sinnoh M22
+
+#define TRAINER_DRAGON_TAMER_PATRICK                    907 // Sinnoh M22
+
+#define TRAINER_BIRD_KEEPER_BRIANNA                    908 // Sinnoh M22
+
+#define TRAINER_DOUBLE_TEAM_ZAC_AND_JEN                    909 // Sinnoh M22
+
+#define TRAINER_VETERAN_BRIAN                    910 // Sinnoh M22
+
+#define TRAINER_BLACK_BELT_ADAM                    911 // Sinnoh M22
+
+#define TRAINERS_COUNT_EMERALD     912
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG

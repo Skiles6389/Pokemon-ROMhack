@@ -10016,6 +10016,94 @@
       "border_filepath": "data/layouts/Route212_House/border.bin",
       "blockdata_filepath": "data/layouts/Route212_House/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE210_NORTH",
+      "name": "Route210_North_Layout",
+      "width": 96,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route210_North/border.bin",
+      "blockdata_filepath": "data/layouts/Route210_North/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CELESTIC_TOWN",
+      "name": "CelesticTown_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/CelesticTown/border.bin",
+      "blockdata_filepath": "data/layouts/CelesticTown/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CELESTIC_NORTH_HOUSE",
+      "name": "Celestic_NorthHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Celestic_NorthHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Celestic_NorthHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CELESTIC_NORTHWEST_HOUSE",
+      "name": "Celestic_NorthwestHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Celestic_NorthwestHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Celestic_NorthwestHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CELESTIC_NORTHEAST_HOUSE",
+      "name": "Celestic_NortheastHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Celestic_NortheastHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Celestic_NortheastHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CELESTIC_SOUTHWEST_HOUSE",
+      "name": "Celestic_SouthwestHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Celestic_SouthwestHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Celestic_SouthwestHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE210_WILMA_HOUSE",
+      "name": "Route210_WilmaHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route210_WilmaHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Route210_WilmaHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CELESTIC_CAVE_STUB",
+      "name": "Celestic_Cave_Stub_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Celestic_Cave_Stub/border.bin",
+      "blockdata_filepath": "data/layouts/Celestic_Cave_Stub/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }
