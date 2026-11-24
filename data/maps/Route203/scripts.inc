@@ -235,3 +235,27 @@ Route203_Text_TipsEast:
 Route203_Text_GateSign:
 	.string "OREBURGH GATE\n"
 	.string "The tunnel leads to OREBURGH CITY.$"
+Route203_EventScript_PlatNpc2::
+	msgbox Route203_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+Route203_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route203_EventScript_PlatNpc3::
+	msgbox Route203_EventScript_PlatNpc3_Text, MSGBOX_NPC
+	end
+
+Route203_EventScript_PlatNpc3_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route203_EventScript_PlatNpc4::
+	msgbox Route203_EventScript_PlatNpc4_Text, MSGBOX_NPC
+	end
+
+Route203_EventScript_PlatNpc4_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

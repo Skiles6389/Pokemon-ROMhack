@@ -85,7 +85,8 @@
     "gMapGroup_IndoorHearthome",
     "gMapGroup_IndoorM18",
     "gMapGroup_IndoorVeilstone",
-    "gMapGroup_IndoorM20"
+    "gMapGroup_IndoorM20",
+    "gMapGroup_IndoorV06"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1343,5 +1344,30 @@
     "ValorLakefront_HotelLobby",
     "Route213_DrFootstepHouse",
     "Route213_HotelLobby"
+  ],
+  "gMapGroup_IndoorV06": [
+    "JubilifeCity_Condo_1F",
+    "JubilifeCity_GlobalTerminal_1F",
+    "JubilifeTV_1F",
+    "JubilifeCity_SouthHouse",
+    "JubilifeCity_SouthwestHouse",
+    "Route218_JubilifeGate",
+    "OreburghCity_MiddleHouse",
+    "OreburghCity_EastHouse",
+    "OreburghCity_NorthHouse",
+    "OreburghCity_SouthHouse",
+    "WaywardCave_1F",
+    "MtCoronet_2F_Stub",
+    "RuinManiacCave",
+    "LakeValor_Stub",
+    "Route213_PastoriaGate",
+    "Route213_EastHouse",
+    "Route213_NorthwestHouse",
+    "Route213_NortheastHouse",
+    "VerityCavern_Stub",
+    "OldChateau_Stub",
+    "HearthomeCity_SoutheastHouse",
+    "HearthomeCity_NortheastHouse",
+    "VeilstoneCity_GalacticHQ_Stub"
   ]
 }

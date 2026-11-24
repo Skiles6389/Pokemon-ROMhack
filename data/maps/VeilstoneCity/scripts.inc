@@ -150,7 +150,6 @@ VeilstoneCity_EventScript_WarehouseTeamUp::
 	msgbox VeilstoneCity_Text_GruntsWarn, MSGBOX_DEFAULT
 	closemessage
 	trainerbattle_two_trainers TRAINER_GALACTIC_GRUNT_VEILSTONE_1, VeilstoneCity_Text_Grunt1Defeat, TRAINER_GALACTIC_GRUNT_VEILSTONE_2, VeilstoneCity_Text_Grunt2Defeat
-	setflag FLAG_DEFEATED_VEILSTONE_WAREHOUSE_GRUNTS
 	msgbox VeilstoneCity_Text_GruntsRetreat, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_VEILSTONE_GRUNT_1, VeilstoneCity_Movement_GruntFleeWest
@@ -407,3 +406,67 @@ VeilstoneCity_Text_CraterSign:
 	.string "VEILSTONE METEORITE CRATER\n"
 	.string "A hollow left by a fallen star.\p"
 	.string "Please stay off the rim.$"
+VeilstoneCity_EventScript_PlatNpc0::
+	msgbox VeilstoneCity_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+VeilstoneCity_EventScript_PlatNpc0_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+VeilstoneCity_EventScript_PlatNpc1::
+	msgbox VeilstoneCity_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+VeilstoneCity_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+VeilstoneCity_EventScript_PlatNpc2::
+	msgbox VeilstoneCity_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+VeilstoneCity_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+VeilstoneCity_EventScript_PlatNpc3::
+	msgbox VeilstoneCity_EventScript_PlatNpc3_Text, MSGBOX_NPC
+	end
+
+VeilstoneCity_EventScript_PlatNpc3_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+VeilstoneCity_EventScript_PlatNpc4::
+	msgbox VeilstoneCity_EventScript_PlatNpc4_Text, MSGBOX_NPC
+	end
+
+VeilstoneCity_EventScript_PlatNpc4_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+VeilstoneCity_EventScript_PlatNpc7::
+	msgbox VeilstoneCity_EventScript_PlatNpc7_Text, MSGBOX_NPC
+	end
+
+VeilstoneCity_EventScript_PlatNpc7_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+VeilstoneCity_EventScript_PlatNpc8::
+	msgbox VeilstoneCity_EventScript_PlatNpc8_Text, MSGBOX_NPC
+	end
+
+VeilstoneCity_EventScript_PlatNpc8_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+VeilstoneCity_EventScript_PlatNpc10::
+	msgbox VeilstoneCity_EventScript_PlatNpc10_Text, MSGBOX_NPC
+	end
+
+VeilstoneCity_EventScript_PlatNpc10_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

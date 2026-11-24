@@ -11,3 +11,11 @@ OreburghGate_B1F_Text_Cyclist:
 	.string "with a BIKE on the far side.\p"
 	.string "I can't get across without a\n"
 	.string "POKéMON that can SURF, though.$"
+OreburghGate_B1F_EventScript_V06Traveler0::
+	msgbox OreburghGate_B1F_EventScript_V06Traveler0_Text, MSGBOX_NPC
+	end
+
+OreburghGate_B1F_EventScript_V06Traveler0_Text:
+	.string "I was hoping for a battle, but I\n"
+	.string "will save my strength for later.$"
+

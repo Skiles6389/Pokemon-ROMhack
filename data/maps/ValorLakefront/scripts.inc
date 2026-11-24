@@ -84,3 +84,27 @@ ValorLakefront_EventScript_HotelSign::
 ValorLakefront_Text_HotelSign:
 	.string "VALOR LAKEFRONT HOTEL\n"
 	.string "Stamp your journey here!$"
+ValorLakefront_EventScript_PlatNpc0::
+	msgbox ValorLakefront_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+ValorLakefront_EventScript_PlatNpc0_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+ValorLakefront_EventScript_PlatNpc1::
+	msgbox ValorLakefront_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+ValorLakefront_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+ValorLakefront_EventScript_PlatNpc3::
+	msgbox ValorLakefront_EventScript_PlatNpc3_Text, MSGBOX_NPC
+	end
+
+ValorLakefront_EventScript_PlatNpc3_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

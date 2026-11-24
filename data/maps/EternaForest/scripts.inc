@@ -252,3 +252,43 @@ EternaForest_Text_SignSouth:
 EternaForest_Text_OldChateauLocked:
 	.string "The Old Chateau's doors are sealed.\n"
 	.string "This path isn't open yet.$"
+EternaForest_EventScript_PlatNpc1::
+	msgbox EternaForest_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+EternaForest_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+EternaForest_EventScript_PlatNpc3::
+	msgbox EternaForest_EventScript_PlatNpc3_Text, MSGBOX_NPC
+	end
+
+EternaForest_EventScript_PlatNpc3_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+EternaForest_EventScript_PlatNpc5::
+	msgbox EternaForest_EventScript_PlatNpc5_Text, MSGBOX_NPC
+	end
+
+EternaForest_EventScript_PlatNpc5_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+EternaForest_EventScript_PlatNpc7::
+	msgbox EternaForest_EventScript_PlatNpc7_Text, MSGBOX_NPC
+	end
+
+EternaForest_EventScript_PlatNpc7_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+EternaForest_EventScript_PlatNpc8::
+	msgbox EternaForest_EventScript_PlatNpc8_Text, MSGBOX_NPC
+	end
+
+EternaForest_EventScript_PlatNpc8_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

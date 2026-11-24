@@ -168,3 +168,67 @@ Route213_EventScript_HotelSign::
 Route213_Text_HotelSign:
 	.string "ROUTE 213 HOTEL\n"
 	.string "Ocean views and soft pillows$"
+Route213_EventScript_PlatNpc0::
+	msgbox Route213_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+Route213_EventScript_PlatNpc0_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route213_EventScript_PlatNpc1::
+	msgbox Route213_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+Route213_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route213_EventScript_PlatNpc2::
+	msgbox Route213_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+Route213_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route213_EventScript_PlatNpc3::
+	msgbox Route213_EventScript_PlatNpc3_Text, MSGBOX_NPC
+	end
+
+Route213_EventScript_PlatNpc3_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route213_EventScript_PlatNpc6::
+	msgbox Route213_EventScript_PlatNpc6_Text, MSGBOX_NPC
+	end
+
+Route213_EventScript_PlatNpc6_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route213_EventScript_PlatNpc7::
+	msgbox Route213_EventScript_PlatNpc7_Text, MSGBOX_NPC
+	end
+
+Route213_EventScript_PlatNpc7_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route213_EventScript_PlatNpc8::
+	msgbox Route213_EventScript_PlatNpc8_Text, MSGBOX_NPC
+	end
+
+Route213_EventScript_PlatNpc8_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route213_EventScript_PlatNpc9::
+	msgbox Route213_EventScript_PlatNpc9_Text, MSGBOX_NPC
+	end
+
+Route213_EventScript_PlatNpc9_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

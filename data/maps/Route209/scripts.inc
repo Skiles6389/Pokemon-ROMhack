@@ -171,3 +171,83 @@ Route209_Text_HallowedTower:
 Route209_Text_RouteSign:
 	.string "ROUTE 209\n"
 	.string "Hearthome City - Solaceon Town$"
+Route209_EventScript_PlatNpc0::
+	msgbox Route209_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+Route209_EventScript_PlatNpc0_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route209_EventScript_PlatNpc1::
+	msgbox Route209_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+Route209_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route209_EventScript_PlatNpc2::
+	msgbox Route209_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+Route209_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route209_EventScript_PlatNpc3::
+	msgbox Route209_EventScript_PlatNpc3_Text, MSGBOX_NPC
+	end
+
+Route209_EventScript_PlatNpc3_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route209_EventScript_PlatNpc5::
+	msgbox Route209_EventScript_PlatNpc5_Text, MSGBOX_NPC
+	end
+
+Route209_EventScript_PlatNpc5_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route209_EventScript_PlatNpc7::
+	msgbox Route209_EventScript_PlatNpc7_Text, MSGBOX_NPC
+	end
+
+Route209_EventScript_PlatNpc7_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route209_EventScript_PlatNpc9::
+	msgbox Route209_EventScript_PlatNpc9_Text, MSGBOX_NPC
+	end
+
+Route209_EventScript_PlatNpc9_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route209_EventScript_PlatNpc11::
+	msgbox Route209_EventScript_PlatNpc11_Text, MSGBOX_NPC
+	end
+
+Route209_EventScript_PlatNpc11_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route209_EventScript_V06Traveler4::
+	msgbox Route209_EventScript_V06Traveler4_Text, MSGBOX_NPC
+	end
+
+Route209_EventScript_V06Traveler4_Text:
+	.string "I was hoping for a battle, but I\n"
+	.string "will save my strength for later.$"
+
+Route209_EventScript_V06Traveler5::
+	msgbox Route209_EventScript_V06Traveler5_Text, MSGBOX_NPC
+	end
+
+Route209_EventScript_V06Traveler5_Text:
+	.string "I was hoping for a battle, but I\n"
+	.string "will save my strength for later.$"
+

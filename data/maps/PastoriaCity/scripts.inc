@@ -251,3 +251,67 @@ PastoriaCity_EventScript_MarshSign::
 PastoriaCity_Text_MarshSign:
 	.string "GREAT MARSH GATE\n"
 	.string "Safari tours temporarily closed$"
+PastoriaCity_EventScript_PlatNpc0::
+	msgbox PastoriaCity_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+PastoriaCity_EventScript_PlatNpc0_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+PastoriaCity_EventScript_PlatNpc1::
+	msgbox PastoriaCity_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+PastoriaCity_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+PastoriaCity_EventScript_PlatNpc2::
+	msgbox PastoriaCity_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+PastoriaCity_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+PastoriaCity_EventScript_PlatNpc5::
+	msgbox PastoriaCity_EventScript_PlatNpc5_Text, MSGBOX_NPC
+	end
+
+PastoriaCity_EventScript_PlatNpc5_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+PastoriaCity_EventScript_PlatNpc7::
+	msgbox PastoriaCity_EventScript_PlatNpc7_Text, MSGBOX_NPC
+	end
+
+PastoriaCity_EventScript_PlatNpc7_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+PastoriaCity_EventScript_PlatNpc9::
+	msgbox PastoriaCity_EventScript_PlatNpc9_Text, MSGBOX_NPC
+	end
+
+PastoriaCity_EventScript_PlatNpc9_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+PastoriaCity_EventScript_PlatNpc12::
+	msgbox PastoriaCity_EventScript_PlatNpc12_Text, MSGBOX_NPC
+	end
+
+PastoriaCity_EventScript_PlatNpc12_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+PastoriaCity_EventScript_PlatNpc13::
+	msgbox PastoriaCity_EventScript_PlatNpc13_Text, MSGBOX_NPC
+	end
+
+PastoriaCity_EventScript_PlatNpc13_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

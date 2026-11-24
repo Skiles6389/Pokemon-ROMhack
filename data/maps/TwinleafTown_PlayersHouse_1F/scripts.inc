@@ -44,6 +44,7 @@ TwinleafTown_PlayersHouse_1F_EventScript_BarryArrives::
 
 TwinleafTown_PlayersHouse_1F_EventScript_MomGivesShoes::
 	lockall
+	goto_if_set FLAG_RECEIVED_RUNNING_SHOES, TwinleafTown_PlayersHouse_1F_EventScript_MomShoesAlready
 	applymovement LOCALID_TWINLEAF_MOM, TwinleafTown_PlayersHouse_1F_Movement_MomToPlayer
 	waitmovement 0
 	msgbox TwinleafTown_PlayersHouse_1F_Text_MomShoes, MSGBOX_DEFAULT
@@ -56,6 +57,12 @@ TwinleafTown_PlayersHouse_1F_EventScript_MomGivesShoes::
 	closemessage
 	applymovement LOCALID_TWINLEAF_MOM, TwinleafTown_PlayersHouse_1F_Movement_MomReturn
 	waitmovement 0
+	setvar VAR_TWINLEAF_STATE, 2
+	releaseall
+	end
+
+TwinleafTown_PlayersHouse_1F_EventScript_MomShoesAlready::
+	msgbox TwinleafTown_PlayersHouse_1F_Text_MomAfterShoes, MSGBOX_DEFAULT
 	setvar VAR_TWINLEAF_STATE, 2
 	releaseall
 	end

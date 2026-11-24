@@ -7,51 +7,10 @@
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 96,
-      "walkable_blocked": 16,
+      "mismatch": 80,
+      "walkable_blocked": 0,
       "notes": [],
-      "samples": [
-        [
-          7,
-          1,
-          477
-        ],
-        [
-          8,
-          1,
-          476
-        ],
-        [
-          9,
-          1,
-          477
-        ],
-        [
-          10,
-          1,
-          476
-        ],
-        [
-          21,
-          1,
-          477
-        ],
-        [
-          22,
-          1,
-          476
-        ],
-        [
-          23,
-          1,
-          477
-        ],
-        [
-          24,
-          1,
-          476
-        ]
-      ]
+      "samples": []
     },
     "Route201": {
       "status": "PASS",
@@ -84,36 +43,10 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 561,
-      "walkable_blocked": 5,
+      "mismatch": 556,
+      "walkable_blocked": 0,
       "notes": [],
-      "samples": [
-        [
-          61,
-          53,
-          477
-        ],
-        [
-          61,
-          54,
-          469
-        ],
-        [
-          61,
-          55,
-          477
-        ],
-        [
-          61,
-          56,
-          469
-        ],
-        [
-          61,
-          57,
-          477
-        ]
-      ]
+      "samples": []
     },
     "Route203": {
       "status": "PASS",
@@ -145,44 +78,36 @@
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 870,
+      "mismatch": 0,
       "walkable_blocked": 0,
-      "notes": [
-        "collision diverge 870/1024 (85.0%) [informational]"
-      ],
+      "notes": [],
       "samples": []
     },
     "OreburghGate_B1F": {
       "status": "PASS",
       "size": "64x32",
       "plat_size": "64x32",
-      "mismatch": 1369,
+      "mismatch": 0,
       "walkable_blocked": 0,
-      "notes": [
-        "collision diverge 1369/2048 (66.8%) [informational]"
-      ],
+      "notes": [],
       "samples": []
     },
     "OreburghMine_B1F": {
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 809,
+      "mismatch": 0,
       "walkable_blocked": 0,
-      "notes": [
-        "collision diverge 809/1024 (79.0%) [informational]"
-      ],
+      "notes": [],
       "samples": []
     },
     "OreburghMine_B2F": {
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 671,
+      "mismatch": 0,
       "walkable_blocked": 0,
-      "notes": [
-        "collision diverge 671/1024 (65.5%) [informational]"
-      ],
+      "notes": [],
       "samples": []
     },
     "Route204_South": {
@@ -299,36 +224,18 @@
       "status": "PASS",
       "size": "64x32",
       "plat_size": "64x32",
-      "mismatch": 140,
-      "walkable_blocked": 3,
+      "mismatch": 137,
+      "walkable_blocked": 0,
       "notes": [],
-      "samples": [
-        [
-          59,
-          12,
-          121
-        ],
-        [
-          60,
-          12,
-          121
-        ],
-        [
-          60,
-          13,
-          121
-        ]
-      ]
+      "samples": []
     },
     "MtCoronet_1F_South": {
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 649,
+      "mismatch": 0,
       "walkable_blocked": 0,
-      "notes": [
-        "collision diverge 649/1024 (63.4%) [informational]"
-      ],
+      "notes": [],
       "samples": []
     },
     "Route208": {
@@ -400,8 +307,8 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 558,
-      "walkable_blocked": 15,
+      "mismatch": 547,
+      "walkable_blocked": 4,
       "notes": [],
       "samples": [
         [
@@ -420,29 +327,9 @@
           538
         ],
         [
-          55,
-          38,
-          121
-        ],
-        [
-          59,
-          38,
-          121
-        ],
-        [
-          55,
-          42,
-          121
-        ],
-        [
-          57,
-          42,
-          121
-        ],
-        [
-          58,
-          42,
-          121
+          48,
+          61,
+          538
         ]
       ]
     },

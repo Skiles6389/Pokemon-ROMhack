@@ -186,3 +186,67 @@ HearthomeCity_Text_CitySign:
 HearthomeCity_Text_ContestSign:
 	.string "HEARTHOME SUPER CONTEST HALL\n"
 	.string "Show the world your POKéMON's charm!$"
+HearthomeCity_EventScript_PlatNpc0::
+	msgbox HearthomeCity_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_PlatNpc0_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+HearthomeCity_EventScript_PlatNpc1::
+	msgbox HearthomeCity_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+HearthomeCity_EventScript_PlatNpc2::
+	msgbox HearthomeCity_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+HearthomeCity_EventScript_PlatNpc4::
+	msgbox HearthomeCity_EventScript_PlatNpc4_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_PlatNpc4_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+HearthomeCity_EventScript_PlatNpc5::
+	msgbox HearthomeCity_EventScript_PlatNpc5_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_PlatNpc5_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+HearthomeCity_EventScript_PlatNpc6::
+	msgbox HearthomeCity_EventScript_PlatNpc6_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_PlatNpc6_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+HearthomeCity_EventScript_PlatNpc7::
+	msgbox HearthomeCity_EventScript_PlatNpc7_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_PlatNpc7_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+HearthomeCity_EventScript_PlatNpc8::
+	msgbox HearthomeCity_EventScript_PlatNpc8_Text, MSGBOX_NPC
+	end
+
+HearthomeCity_EventScript_PlatNpc8_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

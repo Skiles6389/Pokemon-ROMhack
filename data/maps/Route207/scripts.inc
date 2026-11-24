@@ -303,3 +303,59 @@ Route207_Text_TrainerTips:
 	.string "TRAINER TIPS\pPOKéMON may become immobilized if\n"
 	.string "they are asleep or paralyzed.\pIf it happens to your POKéMON,\p"
 	.string "heal them right away!$"
+Route207_EventScript_PlatNpc0::
+	msgbox Route207_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+Route207_EventScript_PlatNpc0_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route207_EventScript_PlatNpc1::
+	msgbox Route207_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+Route207_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route207_EventScript_PlatNpc2::
+	msgbox Route207_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+Route207_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route207_EventScript_PlatNpc3::
+	msgbox Route207_EventScript_PlatNpc3_Text, MSGBOX_NPC
+	end
+
+Route207_EventScript_PlatNpc3_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route207_EventScript_PlatNpc6::
+	msgbox Route207_EventScript_PlatNpc6_Text, MSGBOX_NPC
+	end
+
+Route207_EventScript_PlatNpc6_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route207_EventScript_PlatNpc10::
+	msgbox Route207_EventScript_PlatNpc10_Text, MSGBOX_NPC
+	end
+
+Route207_EventScript_PlatNpc10_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route207_EventScript_PlatNpc13::
+	msgbox Route207_EventScript_PlatNpc13_Text, MSGBOX_NPC
+	end
+
+Route207_EventScript_PlatNpc13_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+

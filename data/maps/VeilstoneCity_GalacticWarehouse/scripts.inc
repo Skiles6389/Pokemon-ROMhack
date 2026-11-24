@@ -7,7 +7,6 @@ VeilstoneCity_GalacticWarehouse_EventScript_ItemHMFly::
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	removeobject VAR_LAST_TALKED
 	setflag FLAG_GOT_HM_FLY_VEILSTONE
-	setflag FLAG_RECEIVED_HM_FLY
 	msgbox VeilstoneCity_GalacticWarehouse_Text_ExplainFly, MSGBOX_DEFAULT
 	release
 	end

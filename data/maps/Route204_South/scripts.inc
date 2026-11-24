@@ -73,3 +73,19 @@ Route204_South_Text_Youngster:
 Route204_South_Text_Sign:
 	.string "ROUTE 204\n"
 	.string "North to Floaroma via Ravaged Path$"
+Route204_South_EventScript_PlatNpc1::
+	msgbox Route204_South_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+Route204_South_EventScript_PlatNpc1_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
+Route204_South_EventScript_PlatNpc2::
+	msgbox Route204_South_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+Route204_South_EventScript_PlatNpc2_Text:
+	.string "These roads keep surprising me.\n"
+	.string "Every corner hides another path.$"
+
