@@ -36,7 +36,7 @@
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
       "plat_opened": 0,
-      "plat_blocked": 4,
+      "plat_blocked": 1,
       "plat_total": 1024,
       "issues": []
     },
@@ -146,7 +146,7 @@
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
       "plat_opened": 0,
-      "plat_blocked": 22,
+      "plat_blocked": 0,
       "plat_total": 3072,
       "issues": []
     },
@@ -186,7 +186,7 @@
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
       "plat_opened": 0,
-      "plat_blocked": 21,
+      "plat_blocked": 1,
       "plat_total": 2048,
       "issues": []
     },
@@ -206,7 +206,7 @@
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
       "plat_opened": 0,
-      "plat_blocked": 36,
+      "plat_blocked": 3,
       "plat_total": 4096,
       "issues": []
     },
@@ -226,7 +226,7 @@
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
       "plat_opened": 0,
-      "plat_blocked": 1565,
+      "plat_blocked": 4,
       "plat_total": 4096,
       "issues": []
     },
@@ -316,7 +316,7 @@
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
       "plat_opened": 0,
-      "plat_blocked": 15,
+      "plat_blocked": 3,
       "plat_total": 4096,
       "issues": []
     },
@@ -616,7 +616,7 @@
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
       "plat_opened": 0,
-      "plat_blocked": 1,
+      "plat_blocked": 0,
       "plat_total": 3072,
       "issues": []
     },
@@ -636,7 +636,7 @@
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
       "plat_opened": 0,
-      "plat_blocked": 20,
+      "plat_blocked": 4,
       "plat_total": 6144,
       "issues": []
     },
@@ -666,7 +666,7 @@
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
       "plat_opened": 0,
-      "plat_blocked": 6,
+      "plat_blocked": 1,
       "plat_total": 3072,
       "issues": []
     },
@@ -696,7 +696,7 @@
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
       "plat_opened": 28,
-      "plat_blocked": 7,
+      "plat_blocked": 1,
       "plat_total": 3072,
       "issues": []
     },
@@ -786,7 +786,7 @@
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
       "plat_opened": 0,
-      "plat_blocked": 10,
+      "plat_blocked": 0,
       "plat_total": 1024,
       "issues": []
     },
@@ -806,7 +806,7 @@
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
       "plat_opened": 36,
-      "plat_blocked": 23,
+      "plat_blocked": 0,
       "plat_total": 2048,
       "issues": []
     },
@@ -896,7 +896,7 @@
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
       "plat_opened": 0,
-      "plat_blocked": 37,
+      "plat_blocked": 29,
       "plat_total": 1024,
       "issues": []
     },
@@ -916,7 +916,7 @@
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
       "plat_opened": 0,
-      "plat_blocked": 5,
+      "plat_blocked": 0,
       "plat_total": 4096,
       "issues": []
     },
@@ -926,7 +926,7 @@
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
       "plat_opened": 0,
-      "plat_blocked": 32,
+      "plat_blocked": 1,
       "plat_total": 4096,
       "issues": []
     },

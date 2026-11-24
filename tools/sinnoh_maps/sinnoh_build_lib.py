@@ -31,6 +31,29 @@ MT_CAVE_FLOOR = 0x1A1
 CAVE_FLOOR = 0x001
 CAVE_WALL = 0x079
 
+# Emerald General dirt-path 3x3 (Oldale / Route101 style) + soft grass corners
+#   1D0 1D1 1D2
+#   1D8 1D9 1DA
+#   1E0 1E1 1E2
+MT_PATH_TL, MT_PATH_T, MT_PATH_TR = 0x1D0, 0x1D1, 0x1D2
+MT_PATH_L, MT_PATH_C, MT_PATH_R = 0x1D8, 0x1D9, 0x1DA
+MT_PATH_BL, MT_PATH_B, MT_PATH_BR = 0x1E0, 0x1E1, 0x1E2
+MT_PATH_TABLE = (
+    (MT_PATH_TL, MT_PATH_T, MT_PATH_TR),
+    (MT_PATH_L, MT_PATH_C, MT_PATH_R),
+    (MT_PATH_BL, MT_PATH_B, MT_PATH_BR),
+)
+PATH_METATILES = {mt for row in MT_PATH_TABLE for mt in row} | {0x1E4, 0x1E5, 0x1E6, 0x1E7, 0x003, 0x004}
+
+# Platinum terrain behaviors that are dirt / bike / town walkways (not plain grass).
+# 0xA9 = Twinleaf walkways; 0x70/0x71/… = route bike & dirt trails; 0xA4/0xA5 = marsh boardwalk-ish.
+PLAT_PATH_BEHAVIORS = {
+    0x70, 0x71, 0x73, 0x75, 0x76, 0x79, 0x7A, 0x7C, 0x7D,
+    0xA4, 0xA5, 0xA9,
+}
+# Snow route/town packed snow used as path stand-in (sand metatile keeps elev walkable).
+PLAT_SNOW_PATH_BEHAVIORS = {0xA1, 0xA2, 0xA3, 0xA8}
+
 # Metatile IDs that must be impassable when packing map.bin (bits 10-11).
 # Building facade IDs from stamp_building also belong here.
 SOLID_METATILES = set(MT_TREE) | {
@@ -47,8 +70,133 @@ SOLID_METATILES = set(MT_TREE) | {
 WALKABLE_METATILES = {
     MT_GRASS, MT_TALL, MT_WATER, MT_SAND, CAVE_FLOOR, IN_FLOOR, IN_DOOR,
     MT_LEDGE_A, MT_LEDGE_B, 0x00E, 0x015, 0x048, 0x049, 0x201, 0x209, 0x20E,
-}
+} | PATH_METATILES
 WATER_METATILES = {MT_WATER}
+
+
+def is_plat_path_behavior(beh: int) -> bool:
+    return beh in PLAT_PATH_BEHAVIORS
+
+
+def path_metatile_for_neighbors(n: bool, s: bool, w: bool, e: bool) -> int:
+    """Pick Emerald dirt-path metatile from 4-neighbor path connectivity."""
+    # Thin strips use the center row/col so 1-wide trails aren't all edge tiles.
+    if not n and not s:
+        row = 1
+    elif not n:
+        row = 0
+    elif not s:
+        row = 2
+    else:
+        row = 1
+    if not w and not e:
+        col = 1
+    elif not w:
+        col = 0
+    elif not e:
+        col = 2
+    else:
+        col = 1
+    return MT_PATH_TABLE[row][col]
+
+
+# Outdoor settlements/routes where beh-0 ground is the visible dirt trail when
+# Platinum omits path behaviors (NSBMD-only nsand). Forests/caves/indoors excluded.
+_PATH_FALLBACK_HINTS = (
+    "Town", "City", "Route", "Lakefront", "Valor", "Survival", "Fight",
+    "Resort", "League_Exterior", "ValleyWindworks", "StarkMountain_Outside",
+    "IronIsland", "PokemonLeague_Exterior",
+)
+
+
+def map_allows_path_fallback(name: str) -> bool:
+    if not name:
+        return False
+    if any(bad in name for bad in (
+        "Forest", "Cave", "Mine", "Gym", "Gate", "Distortion", "Room", "Elevator",
+        "Hall", "Interior", "Library", "Temple", "Ruins", "Chateau", "Manor",
+        "Gallery", "Shop", "Center", "House", "Apartment", "Dept", "Museum",
+    )):
+        return False
+    return any(h in name for h in _PATH_FALLBACK_HINTS)
+
+
+def paint_paths_from_attrs(grid, attr, *, snow=False, fallback_plain=True, map_name: str = ""):
+    """Overlay Emerald path metatiles wherever Platinum marks dirt/bike/walkway behaviors.
+
+    Many early towns/routes (Sandgem, Jubilife, Route201) store dirt trails only in the
+    NSBMD (`nsand`) with land-attr behavior 0. When path-behavior coverage is sparse,
+    treat walkable plain ground (beh 0) as path so trails/walkways are not lost to grass.
+    """
+    h, w = len(grid), len(grid[0])
+    path = [[False] * w for _ in range(h)]
+    marked = 0
+    for y in range(h):
+        for x in range(w):
+            if plat_collision(attr[y][x]):
+                continue
+            beh = plat_behavior(attr[y][x])
+            if is_plat_path_behavior(beh):
+                path[y][x] = True
+                marked += 1
+            elif snow and beh in PLAT_SNOW_PATH_BEHAVIORS:
+                path[y][x] = True
+                marked += 1
+
+    # Fallback: no/few explicit path attrs → plain walkable ground is the trail/walkway.
+    # Skip when Twinleaf-style maps already encode walkways (0xA9 etc.).
+    if (
+        fallback_plain
+        and not snow
+        and marked < 8
+        and map_allows_path_fallback(map_name)
+    ):
+        for y in range(h):
+            for x in range(w):
+                if plat_collision(attr[y][x]):
+                    continue
+                beh = plat_behavior(attr[y][x])
+                if beh == 0:
+                    path[y][x] = True
+
+    for y in range(h):
+        for x in range(w):
+            if not path[y][x]:
+                continue
+            cur = grid[y][x] & 0x3FF
+            # Platinum walkable path cells are ground truth — overwrite grass/trees/filler.
+            # Keep water & ledges (surf/jump); keep door mats already on walkable cells.
+            if cur in WATER_METATILES or cur in (MT_LEDGE_A, MT_LEDGE_B):
+                continue
+            if cur in (IN_DOOR, 0x209, 0x20E):
+                continue
+            if snow and plat_behavior(attr[y][x]) in PLAT_SNOW_PATH_BEHAVIORS:
+                grid[y][x] = MT_SAND
+                continue
+            n = y > 0 and path[y - 1][x]
+            s = y + 1 < h and path[y + 1][x]
+            ww = x > 0 and path[y][x - 1]
+            e = x + 1 < w and path[y][x + 1]
+            grid[y][x] = path_metatile_for_neighbors(n, s, ww, e)
+
+    # Soft grass-corner accents beside path edges (optional polish, Emerald 1E4-1E7)
+    for y in range(h):
+        for x in range(w):
+            if path[y][x] or plat_collision(attr[y][x]):
+                continue
+            if grid[y][x] not in (MT_GRASS, MT_TALL):
+                continue
+            # Only decorate plain grass next to a path cardinally
+            neigh = []
+            for dy, dx, bit in ((-1, 0, 1), (1, 0, 2), (0, -1, 4), (0, 1, 8)):
+                ny, nx = y + dy, x + dx
+                if 0 <= ny < h and 0 <= nx < w and path[ny][nx]:
+                    neigh.append(bit)
+            if len(neigh) == 1:
+                # Map single-side contact to a grass-path transition tile
+                grid[y][x] = {1: 0x1E4, 2: 0x1E5, 4: 0x1E6, 8: 0x1E7}[neigh[0]]
+
+    return sum(sum(1 for v in row if v) for row in path)
 
 
 def load_attrs(land_id: int) -> list[int]:
@@ -93,6 +241,8 @@ def attr_to_mt(v, x, y, *, cave=False, snow=False, indoor=False):
         return MT_WATER
     if beh == 0x21:
         return MT_SAND
+    if is_plat_path_behavior(beh):
+        return MT_PATH_C  # edges applied by paint_paths_from_attrs
     if beh == 0x3B:
         return MT_LEDGE_A if (x & 1) == 0 else MT_LEDGE_B
     if beh in (0x38, 0x39, 0x3A):
@@ -101,7 +251,7 @@ def attr_to_mt(v, x, y, *, cave=False, snow=False, indoor=False):
         return IN_FLOOR
     if cave:
         return CAVE_FLOOR
-    if snow:
+    if snow or beh in PLAT_SNOW_PATH_BEHAVIORS:
         return MT_SAND
     return MT_GRASS
 
@@ -247,6 +397,8 @@ def clear_plat_walkables(grid, chunks, *, cave=False, snow=False):
                         grid[y][x] = MT_LEDGE_A if (x & 1) == 0 else MT_LEDGE_B
                     elif beh in (0x02, 0x03):
                         grid[y][x] = MT_TALL
+                    elif is_plat_path_behavior(beh) or (snow and beh in PLAT_SNOW_PATH_BEHAVIORS):
+                        continue  # paint_paths_from_attrs owns these
                     elif grid[y][x] in blocked:
                         grid[y][x] = CAVE_FLOOR if cave else (MT_SAND if snow else MT_GRASS)
 
@@ -292,11 +444,17 @@ def grid_from_chunks(chunks, *, cave=False, snow=False, indoor=False):
     paint_ledges(grid, chunks)
     clear_plat_walkables(grid, chunks, cave=cave, snow=snow)
     paint_water(grid, chunks)
+    if not indoor and not cave:
+        # map_name optional; callers that know the layout name should prefer
+        # paint_paths_from_attrs(..., map_name=...) after this for fallback trails.
+        paint_paths_from_attrs(grid, attr, snow=snow, fallback_plain=False)
     # Re-sync collision after paint/clear helpers
     for y in range(h):
         for x in range(w):
             mt = grid[y][x]
-            if mt in WATER_METATILES or mt in (MT_LEDGE_A, MT_LEDGE_B, MT_TALL, MT_GRASS, MT_SAND, CAVE_FLOOR, IN_FLOOR, IN_DOOR):
+            if mt in WATER_METATILES or mt in PATH_METATILES or mt in (
+                MT_LEDGE_A, MT_LEDGE_B, MT_TALL, MT_GRASS, MT_SAND, CAVE_FLOOR, IN_FLOOR, IN_DOOR
+            ):
                 collision[y][x] = 0
             elif is_solid_metatile(mt):
                 collision[y][x] = 1

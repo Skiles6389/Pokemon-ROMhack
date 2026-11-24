@@ -1,0 +1,698 @@
+{
+  "results": [
+    {
+      "name": "AcuityLakefront",
+      "status": "OK",
+      "plat_path_cells": 311,
+      "path_metatiles_before": 54,
+      "path_metatiles_after": 54
+    },
+    {
+      "name": "CanalaveCity",
+      "status": "OK",
+      "plat_path_cells": 30,
+      "path_metatiles_before": 41,
+      "path_metatiles_after": 41
+    },
+    {
+      "name": "CanalaveCity_Gym",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "CelesticTown",
+      "status": "OK",
+      "plat_path_cells": 566,
+      "path_metatiles_before": 566,
+      "path_metatiles_after": 566
+    },
+    {
+      "name": "DistortionWorld_1F",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "DistortionWorld_B1F",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "DistortionWorld_B2F",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "DistortionWorld_B3F",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "DistortionWorld_B4F",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "DistortionWorld_B5F",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "DistortionWorld_B6F",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "DistortionWorld_B7F",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "DistortionWorld_GiratinaRoom",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "DistortionWorld_TurnbackCaveRoom",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "EternaCity",
+      "status": "OK",
+      "plat_path_cells": 2254,
+      "path_metatiles_before": 2254,
+      "path_metatiles_after": 2254
+    },
+    {
+      "name": "EternaForest",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "FightArea",
+      "status": "OK",
+      "plat_path_cells": 14,
+      "path_metatiles_before": 16,
+      "path_metatiles_after": 16
+    },
+    {
+      "name": "FloaromaMeadow",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "FloaromaTown",
+      "status": "OK",
+      "plat_path_cells": 1486,
+      "path_metatiles_before": 1491,
+      "path_metatiles_after": 1491
+    },
+    {
+      "name": "GreatMarsh",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "HearthomeCity",
+      "status": "OK",
+      "plat_path_cells": 1657,
+      "path_metatiles_before": 1660,
+      "path_metatiles_after": 1660
+    },
+    {
+      "name": "IronIsland",
+      "status": "OK",
+      "plat_path_cells": 8,
+      "path_metatiles_before": 10,
+      "path_metatiles_after": 10
+    },
+    {
+      "name": "JubilifeCity",
+      "status": "OK",
+      "plat_path_cells": 1585,
+      "path_metatiles_before": 1585,
+      "path_metatiles_after": 1585
+    },
+    {
+      "name": "LakeAcuity",
+      "status": "OK",
+      "plat_path_cells": 62,
+      "path_metatiles_before": 11,
+      "path_metatiles_after": 11
+    },
+    {
+      "name": "LakeValor_Drained",
+      "status": "OK",
+      "plat_path_cells": 718,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 736
+    },
+    {
+      "name": "MtCoronet_1F_South",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "OreburghCity",
+      "status": "OK",
+      "plat_path_cells": 2273,
+      "path_metatiles_before": 2279,
+      "path_metatiles_after": 2279
+    },
+    {
+      "name": "OreburghGate_1F",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "OreburghGate_B1F",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "OreburghMine_B1F",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "OreburghMine_B2F",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "PastoriaCity",
+      "status": "OK",
+      "plat_path_cells": 1046,
+      "path_metatiles_before": 1048,
+      "path_metatiles_after": 1048
+    },
+    {
+      "name": "PokemonLeague_AaronsRoom",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "PokemonLeague_BerthasRoom",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToAaron",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToBertha",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToCynthia",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToFlint",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToLucian",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "PokemonLeague_Exterior",
+      "status": "OK",
+      "plat_path_cells": 408,
+      "path_metatiles_before": 413,
+      "path_metatiles_after": 413
+    },
+    {
+      "name": "PokemonLeague_FlintsRoom",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "PokemonLeague_LuciansRoom",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "PokemonLeague_Sinnoh_CynthiasRoom",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "PokemonLeague_Sinnoh_HallOfFame",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "PokemonLeague_Sinnoh_HallwayToHoF",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "RavagedPath",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "ResortArea",
+      "status": "OK",
+      "plat_path_cells": 21,
+      "path_metatiles_before": 27,
+      "path_metatiles_after": 27
+    },
+    {
+      "name": "Route201",
+      "status": "OK",
+      "plat_path_cells": 529,
+      "path_metatiles_before": 569,
+      "path_metatiles_after": 569
+    },
+    {
+      "name": "Route202",
+      "status": "OK",
+      "plat_path_cells": 423,
+      "path_metatiles_before": 473,
+      "path_metatiles_after": 473
+    },
+    {
+      "name": "Route203",
+      "status": "OK",
+      "plat_path_cells": 460,
+      "path_metatiles_before": 516,
+      "path_metatiles_after": 516
+    },
+    {
+      "name": "Route204_North",
+      "status": "OK",
+      "plat_path_cells": 293,
+      "path_metatiles_before": 310,
+      "path_metatiles_after": 310
+    },
+    {
+      "name": "Route204_South",
+      "status": "OK",
+      "plat_path_cells": 153,
+      "path_metatiles_before": 174,
+      "path_metatiles_after": 174
+    },
+    {
+      "name": "Route205_North",
+      "status": "OK",
+      "plat_path_cells": 57,
+      "path_metatiles_before": 63,
+      "path_metatiles_after": 63
+    },
+    {
+      "name": "Route205_South",
+      "status": "OK",
+      "plat_path_cells": 39,
+      "path_metatiles_before": 61,
+      "path_metatiles_after": 61
+    },
+    {
+      "name": "Route206",
+      "status": "OK",
+      "plat_path_cells": 647,
+      "path_metatiles_before": 722,
+      "path_metatiles_after": 722
+    },
+    {
+      "name": "Route207",
+      "status": "OK",
+      "plat_path_cells": 16,
+      "path_metatiles_before": 28,
+      "path_metatiles_after": 28
+    },
+    {
+      "name": "Route208",
+      "status": "OK",
+      "plat_path_cells": 56,
+      "path_metatiles_before": 68,
+      "path_metatiles_after": 68
+    },
+    {
+      "name": "Route209",
+      "status": "OK",
+      "plat_path_cells": 56,
+      "path_metatiles_before": 78,
+      "path_metatiles_after": 78
+    },
+    {
+      "name": "Route210_North",
+      "status": "OK",
+      "plat_path_cells": 103,
+      "path_metatiles_before": 136,
+      "path_metatiles_after": 136
+    },
+    {
+      "name": "Route210_South",
+      "status": "OK",
+      "plat_path_cells": 719,
+      "path_metatiles_before": 946,
+      "path_metatiles_after": 946
+    },
+    {
+      "name": "Route211_East",
+      "status": "OK",
+      "plat_path_cells": 254,
+      "path_metatiles_before": 277,
+      "path_metatiles_after": 277
+    },
+    {
+      "name": "Route212_North",
+      "status": "OK",
+      "plat_path_cells": 1245,
+      "path_metatiles_before": 1262,
+      "path_metatiles_after": 1262
+    },
+    {
+      "name": "Route212_South",
+      "status": "OK",
+      "plat_path_cells": 499,
+      "path_metatiles_before": 607,
+      "path_metatiles_after": 607
+    },
+    {
+      "name": "Route213",
+      "status": "OK",
+      "plat_path_cells": 541,
+      "path_metatiles_before": 567,
+      "path_metatiles_after": 567
+    },
+    {
+      "name": "Route214",
+      "status": "OK",
+      "plat_path_cells": 778,
+      "path_metatiles_before": 844,
+      "path_metatiles_after": 844
+    },
+    {
+      "name": "Route215",
+      "status": "OK",
+      "plat_path_cells": 100,
+      "path_metatiles_before": 158,
+      "path_metatiles_after": 158
+    },
+    {
+      "name": "Route216",
+      "status": "OK",
+      "plat_path_cells": 936,
+      "path_metatiles_before": 108,
+      "path_metatiles_after": 108
+    },
+    {
+      "name": "Route217",
+      "status": "OK",
+      "plat_path_cells": 2685,
+      "path_metatiles_before": 19,
+      "path_metatiles_after": 19
+    },
+    {
+      "name": "Route218",
+      "status": "OK",
+      "plat_path_cells": 36,
+      "path_metatiles_before": 45,
+      "path_metatiles_after": 45
+    },
+    {
+      "name": "Route222",
+      "status": "OK",
+      "plat_path_cells": 816,
+      "path_metatiles_before": 866,
+      "path_metatiles_after": 866
+    },
+    {
+      "name": "Route223",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "Route224",
+      "status": "OK",
+      "plat_path_cells": 2631,
+      "path_metatiles_before": 2687,
+      "path_metatiles_after": 2687
+    },
+    {
+      "name": "Route225",
+      "status": "OK",
+      "plat_path_cells": 100,
+      "path_metatiles_before": 166,
+      "path_metatiles_after": 166
+    },
+    {
+      "name": "Route226",
+      "status": "OK",
+      "plat_path_cells": 15,
+      "path_metatiles_before": 29,
+      "path_metatiles_after": 29
+    },
+    {
+      "name": "Route227",
+      "status": "OK",
+      "plat_path_cells": 40,
+      "path_metatiles_before": 89,
+      "path_metatiles_after": 89
+    },
+    {
+      "name": "Route228",
+      "status": "OK",
+      "plat_path_cells": 86,
+      "path_metatiles_before": 95,
+      "path_metatiles_after": 95
+    },
+    {
+      "name": "Route229",
+      "status": "OK",
+      "plat_path_cells": 21,
+      "path_metatiles_before": 27,
+      "path_metatiles_after": 27
+    },
+    {
+      "name": "Route230",
+      "status": "OK",
+      "plat_path_cells": 192,
+      "path_metatiles_before": 206,
+      "path_metatiles_after": 206
+    },
+    {
+      "name": "SandgemTown",
+      "status": "OK",
+      "plat_path_cells": 378,
+      "path_metatiles_before": 378,
+      "path_metatiles_after": 378
+    },
+    {
+      "name": "SnowpointCity",
+      "status": "OK",
+      "plat_path_cells": 693,
+      "path_metatiles_before": 11,
+      "path_metatiles_after": 11
+    },
+    {
+      "name": "SolaceonTown",
+      "status": "OK",
+      "plat_path_cells": 1084,
+      "path_metatiles_before": 1086,
+      "path_metatiles_after": 1086
+    },
+    {
+      "name": "SpearPillar",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "SpearPillar_Distorted",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "StarkMountain_HeatranRoom",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "StarkMountain_Outside",
+      "status": "OK",
+      "plat_path_cells": 150,
+      "path_metatiles_before": 162,
+      "path_metatiles_after": 162
+    },
+    {
+      "name": "StarkMountain_Room1",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "StarkMountain_Room2",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "SunyshoreCity",
+      "status": "OK",
+      "plat_path_cells": 330,
+      "path_metatiles_before": 366,
+      "path_metatiles_after": 366
+    },
+    {
+      "name": "SurvivalArea",
+      "status": "OK",
+      "plat_path_cells": 543,
+      "path_metatiles_before": 557,
+      "path_metatiles_after": 557
+    },
+    {
+      "name": "TwinleafTown",
+      "status": "OK",
+      "plat_path_cells": 44,
+      "path_metatiles_before": 64,
+      "path_metatiles_after": 64
+    },
+    {
+      "name": "ValleyWindworks_Exterior",
+      "status": "OK",
+      "plat_path_cells": 116,
+      "path_metatiles_before": 131,
+      "path_metatiles_after": 131
+    },
+    {
+      "name": "ValorLakefront",
+      "status": "OK",
+      "plat_path_cells": 800,
+      "path_metatiles_before": 831,
+      "path_metatiles_after": 831
+    },
+    {
+      "name": "VeilstoneCity",
+      "status": "OK",
+      "plat_path_cells": 1769,
+      "path_metatiles_before": 1771,
+      "path_metatiles_after": 1771
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_1F",
+      "status": "OK",
+      "plat_path_cells": 36,
+      "path_metatiles_before": 126,
+      "path_metatiles_after": 126
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_2F",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_B1F",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_Room1",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_Room2",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_Room3",
+      "status": "OK",
+      "plat_path_cells": 0,
+      "path_metatiles_before": 0,
+      "path_metatiles_after": 0
+    }
+  ],
+  "painted_cells": 32908
+}
