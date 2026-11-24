@@ -878,6 +878,7 @@ enum __attribute__((packed)) Item
     ITEM_COIN_CASE = 718,
     ITEM_POWDER_JAR = 719,
     ITEM_WAILMER_PAIL = 720,
+    ITEM_SPRAYDUCK = ITEM_WAILMER_PAIL, // Sinnoh: Sprayduck (alias)
     ITEM_POKE_RADAR = 721,
     ITEM_POKEBLOCK_CASE = 722,
     ITEM_SOOT_SACK = 723,
@@ -897,6 +898,7 @@ enum __attribute__((packed)) Item
     ITEM_GO_GOGGLES = 734,
     ITEM_DEVON_SCOPE = 735,
     ITEM_BASEMENT_KEY = 736,
+    ITEM_WORKS_KEY = ITEM_BASEMENT_KEY, // Sinnoh: Valley Windworks key (alias)
     ITEM_SCANNER = 737,
     ITEM_STORAGE_KEY = 738,
     ITEM_KEY_TO_ROOM_1 = 739,

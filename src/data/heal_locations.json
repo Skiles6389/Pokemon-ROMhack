@@ -383,6 +383,14 @@
       "y": 21,
       "respawn_map": "MAP_OREBURGH_CITY_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_OREBURGH_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_FLOAROMA_TOWN",
+      "map": "MAP_FLOAROMA_TOWN",
+      "x": 16,
+      "y": 59,
+      "respawn_map": "MAP_FLOAROMA_TOWN_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_FLOAROMA_NURSE"
     }
   ]
 }

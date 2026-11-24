@@ -81,19 +81,21 @@
 #define FLAG_HIDE_LAKE_VERITY_ROWAN 0x3B
 #define FLAG_HIDE_LAKE_VERITY_ASSISTANT 0x3C
 #define FLAG_HIDE_LAKE_VERITY_BRIEFCASE 0x3D
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
-#define FLAG_UNUSED_0x043    0x43 // Unused Flag
-#define FLAG_UNUSED_0x044    0x44 // Unused Flag
-#define FLAG_UNUSED_0x045    0x45 // Unused Flag
-#define FLAG_UNUSED_0x046    0x46 // Unused Flag
-#define FLAG_UNUSED_0x047    0x47 // Unused Flag
-#define FLAG_UNUSED_0x048    0x48 // Unused Flag
-#define FLAG_UNUSED_0x049    0x49 // Unused Flag
-#define FLAG_UNUSED_0x04A    0x4A // Unused Flag
+#define FLAG_HIDE_FLOAROMA_MEADOW_GRUNTS 0x3E
+#define FLAG_HIDE_FLOAROMA_MEADOW_WORKS_KEY 0x3F // Set by default; cleared after grunt battle so key appears
+#define FLAG_GOT_WORKS_KEY 0x40
+#define FLAG_GOT_FLOAROMA_HONEY 0x41
+#define FLAG_ITEM_ROUTE204_SOUTH_SEA_INCENSE 0x42
+#define FLAG_ITEM_ROUTE204_SOUTH_HP_UP 0x43
+#define FLAG_ITEM_ROUTE204_SOUTH_PARLYZ_HEAL 0x44
+#define FLAG_ITEM_ROUTE204_NORTH_AWAKENING 0x45
+#define FLAG_ITEM_ROUTE204_NORTH_TM09 0x46
+#define FLAG_ITEM_RAVAGED_PATH_POTION 0x47
+#define FLAG_ITEM_RAVAGED_PATH_TM39 0x48
+#define FLAG_ITEM_RAVAGED_PATH_LUCK_INCENSE 0x49
+#define FLAG_HIDE_ROUTE204_CUT_TREE 0x4A
+// Ravaged Path smashable rocks: reuse map-local FLAG_TEMP_11..FLAG_TEMP_18
+// (same pattern as OreburghGate_1F rocks; TEMP flags clear on map change).
 #define FLAG_UNUSED_0x04B    0x4B // Unused Flag
 #define FLAG_UNUSED_0x04C    0x4C // Unused Flag
 #define FLAG_UNUSED_0x04D    0x4D // Unused Flag
