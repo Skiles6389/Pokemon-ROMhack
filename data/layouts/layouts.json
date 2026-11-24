@@ -10834,10 +10834,10 @@
     {
       "id": "LAYOUT_VICTORY_ROAD_SINNOH_ROOM1",
       "name": "VictoryRoad_Sinnoh_Room1_Layout",
-      "width": 10,
-      "height": 8,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/VictoryRoad_Sinnoh_Room1/border.bin",
       "blockdata_filepath": "data/layouts/VictoryRoad_Sinnoh_Room1/map.bin",
       "layout_version": "emerald"
@@ -10972,6 +10972,116 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/PokemonLeague_Sinnoh_HallwayToHoF/border.bin",
       "blockdata_filepath": "data/layouts/PokemonLeague_Sinnoh_HallwayToHoF/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_SINNOH_ROOM2",
+      "name": "VictoryRoad_Sinnoh_Room2_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/VictoryRoad_Sinnoh_Room2/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_Sinnoh_Room2/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_SINNOH_ROOM3",
+      "name": "VictoryRoad_Sinnoh_Room3_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/VictoryRoad_Sinnoh_Room3/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_Sinnoh_Room3/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE224",
+      "name": "Route224_Layout",
+      "width": 64,
+      "height": 96,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route224/border.bin",
+      "blockdata_filepath": "data/layouts/Route224/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE225",
+      "name": "Route225_Layout",
+      "width": 64,
+      "height": 96,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route225/border.bin",
+      "blockdata_filepath": "data/layouts/Route225/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_FIGHT_AREA",
+      "name": "FightArea_Layout",
+      "width": 64,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/FightArea/border.bin",
+      "blockdata_filepath": "data/layouts/FightArea/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_FIGHT_AREA_POKEMON_CENTER_1_F",
+      "name": "FightArea_PokemonCenter_1F_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/FightArea_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/FightArea_PokemonCenter_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE225_HOUSE",
+      "name": "Route225_House_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Route225_House/border.bin",
+      "blockdata_filepath": "data/layouts/Route225_House/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_FIGHT_AREA_MIDDLE_HOUSE",
+      "name": "FightArea_MiddleHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/FightArea_MiddleHouse/border.bin",
+      "blockdata_filepath": "data/layouts/FightArea_MiddleHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_FIGHT_AREA_SOUTH_HOUSE",
+      "name": "FightArea_SouthHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/FightArea_SouthHouse/border.bin",
+      "blockdata_filepath": "data/layouts/FightArea_SouthHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_FIGHT_AREA_MART",
+      "name": "FightArea_Mart_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/FightArea_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/FightArea_Mart/map.bin",
       "layout_version": "emerald"
     }
   ]

@@ -97,7 +97,8 @@
     "gMapGroup_IndoorM28Sunyshore",
     "gMapGroup_IndoorM29VictoryRoad",
     "gMapGroup_IndoorM30EliteFour",
-    "gMapGroup_IndoorM31Champion"
+    "gMapGroup_IndoorM31Champion",
+    "gMapGroup_IndoorM32PostgameFight"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -210,7 +211,10 @@
     "PokemonLeague_Exterior",
     "VictoryRoad_Sinnoh_1F",
     "VictoryRoad_Sinnoh_2F",
-    "VictoryRoad_Sinnoh_B1F"
+    "VictoryRoad_Sinnoh_B1F",
+    "Route224",
+    "Route225",
+    "FightArea"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1502,5 +1506,14 @@
     "PokemonLeague_Sinnoh_CynthiasRoom",
     "PokemonLeague_Sinnoh_HallwayToHoF",
     "PokemonLeague_Sinnoh_HallOfFame"
+  ],
+  "gMapGroup_IndoorM32PostgameFight": [
+    "VictoryRoad_Sinnoh_Room2",
+    "VictoryRoad_Sinnoh_Room3",
+    "FightArea_PokemonCenter_1F",
+    "Route225_House",
+    "FightArea_MiddleHouse",
+    "FightArea_SouthHouse",
+    "FightArea_Mart"
   ]
 }
