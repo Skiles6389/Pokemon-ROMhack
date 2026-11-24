@@ -1272,13 +1272,13 @@
 #define FLAG_HIDE_SPEAR_PILLAR_DISTORTED_CYRUS                      0x4C0 // Sinnoh: Cyrus leaves Distorted Spear Pillar
 #define FLAG_GOT_ROUTE210_SECRET_POTION                             0x4C1 // Sinnoh: Cafe Cabin tonic for Route 210 Psyduck
 #define FLAG_HIDE_ROUTE210_PSYDUCKS                                 0x4C2 // Sinnoh: Psyduck leave after Secret Potion
-#define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
-#define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag
-#define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
-#define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
-#define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
-#define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
-#define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
+#define FLAG_HIDE_CELESTIC_TOWN_CYNTHIA                             0x4C3 // Sinnoh: Cynthia after Celestic cave/ruins
+#define FLAG_HIDE_CELESTIC_TOWN_GRUNT_M                             0x4C4 // Sinnoh: Galactic grunt leaves Celestic ruins
+#define FLAG_HIDE_CANALAVE_CITY_RIVAL_BRIDGE                        0x4C5 // Sinnoh: Barry leaves Canalave bridge
+#define FLAG_HIDE_CANALAVE_CITY_COUNTERPART                         0x4C6 // Sinnoh: Dawn/Lucas leave Canalave street
+#define FLAG_HIDE_CANALAVE_CITY_PROF_ROWAN                          0x4C7 // Sinnoh: Rowan leaves Canalave street
+#define FLAG_HIDE_SPEAR_PILLAR_SUPPORT                              0x4C8 // Sinnoh: Mars/Jupiter/Barry/grunts leave with Cyrus
+#define FLAG_HIDE_SPEAR_PILLAR_LOOKER                               0x4C9 // Sinnoh: Looker leaves after Distorted scene
 #define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
 #define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
 #define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag

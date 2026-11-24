@@ -1,6 +1,90 @@
 CelesticTown_MapScripts::
 	.byte 0
 
+CelesticTown_EventScript_GalacticGrunt::
+	lock
+	faceplayer
+	msgbox CelesticTown_Text_GruntChallenge, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CelesticTown_EventScript_GruntRefuse
+	msgbox CelesticTown_Text_GruntBattle, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_GALACTIC_GRUNT_JUBILIFE, CelesticTown_Text_GruntDefeat
+	msgbox CelesticTown_Text_GruntLeave, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_CELESTIC_TOWN_GRUNT_M, CelesticTown_Movement_GruntLeave
+	waitmovement 0
+	removeobject LOCALID_CELESTIC_TOWN_GRUNT_M
+	setflag FLAG_HIDE_CELESTIC_TOWN_GRUNT_M
+	clearflag FLAG_HIDE_CELESTIC_TOWN_CYNTHIA
+	addobject LOCALID_CELESTIC_TOWN_CYNTHIA
+	release
+	end
+
+CelesticTown_EventScript_GruntRefuse::
+	msgbox CelesticTown_Text_GruntRefuse, MSGBOX_DEFAULT
+	release
+	end
+
+CelesticTown_Movement_GruntLeave:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+CelesticTown_EventScript_Cynthia::
+	lock
+	faceplayer
+	msgbox CelesticTown_Text_CynthiaRuins, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_CELESTIC_TOWN_CYNTHIA, CelesticTown_Movement_CynthiaLeave
+	waitmovement 0
+	removeobject LOCALID_CELESTIC_TOWN_CYNTHIA
+	setflag FLAG_HIDE_CELESTIC_TOWN_CYNTHIA
+	release
+	end
+
+CelesticTown_Movement_CynthiaLeave:
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+CelesticTown_Text_GruntChallenge:
+	.string "TEAM GALACTIC: These ruins are ours.\n"
+	.string "You looking for a beating?$"
+
+CelesticTown_Text_GruntRefuse:
+	.string "Smart. Stay out of Galactic business.$"
+
+CelesticTown_Text_GruntBattle:
+	.string "Fine! Taste the stars of TEAM GALACTIC!$"
+
+CelesticTown_Text_GruntDefeat:
+	.string "Urk... too much to handle...$"
+
+CelesticTown_Text_GruntLeave:
+	.string "Boss will hear about this!\n"
+	.string "The ruins can wait--I'm out!$"
+
+CelesticTown_Text_CynthiaRuins:
+	.string "CYNTHIA: Thank you for clearing that\n"
+	.string "Galactic grunt away from the ruins.\p"
+	.string "Celestic's murals speak of Dialga and\n"
+	.string "Palkia--space and time itself.\p"
+	.string "I'll study the cave etchings next.\n"
+	.string "Meet me again when the lakes stir.$"
+
 CelesticTown_EventScript_PlatNpc0::
 	msgbox CelesticTown_EventScript_PlatNpc0_Text, MSGBOX_NPC
 	end

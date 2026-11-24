@@ -152,13 +152,32 @@ PastoriaCity_EventScript_WakeCameo::
 	faceplayer
 	goto_if_set FLAG_PASTORIA_GALACTIC_CHASE, PastoriaCity_EventScript_WakeAfterChase
 	msgbox PastoriaCity_Text_WakeCameo, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PASTORIA_WAKE, PastoriaCity_Movement_WakeLeave
+	waitmovement 0
+	removeobject LOCALID_PASTORIA_WAKE
+	setflag FLAG_HIDE_PASTORIA_WAKE_CAMEO
 	release
 	end
 
 PastoriaCity_EventScript_WakeAfterChase::
 	msgbox PastoriaCity_Text_WakeAfterChase, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PASTORIA_WAKE, PastoriaCity_Movement_WakeLeave
+	waitmovement 0
+	removeobject LOCALID_PASTORIA_WAKE
+	setflag FLAG_HIDE_PASTORIA_WAKE_CAMEO
 	release
 	end
+
+PastoriaCity_Movement_WakeLeave:
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
 
 PastoriaCity_Text_WakeCameo:
 	.string "CRASHER WAKE: That badge looks\n"

@@ -71,8 +71,45 @@ SpearPillar_Distorted_EventScript_CyrusDefeated::
 	waitmovement 0
 	removeobject LOCALID_SPEAR_PILLAR_DIST_CYRUS
 	setflag FLAG_HIDE_SPEAR_PILLAR_DISTORTED_CYRUS
+	clearflag FLAG_HIDE_SPEAR_PILLAR_LOOKER
+	addobject LOCALID_SPEAR_PILLAR_DIST_LOOKER
+	applymovement LOCALID_SPEAR_PILLAR_DIST_LOOKER, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	msgbox SpearPillar_Distorted_Text_Looker, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SPEAR_PILLAR_DIST_LOOKER, SpearPillar_Distorted_Movement_LookerLeave
+	waitmovement 0
+	removeobject LOCALID_SPEAR_PILLAR_DIST_LOOKER
+	setflag FLAG_HIDE_SPEAR_PILLAR_LOOKER
 	release
 	end
+
+SpearPillar_Distorted_Movement_LookerLeave:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+SpearPillar_Distorted_EventScript_Looker::
+	lock
+	faceplayer
+	msgbox SpearPillar_Distorted_Text_Looker, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SPEAR_PILLAR_DIST_LOOKER, SpearPillar_Distorted_Movement_LookerLeave
+	waitmovement 0
+	removeobject LOCALID_SPEAR_PILLAR_DIST_LOOKER
+	setflag FLAG_HIDE_SPEAR_PILLAR_LOOKER
+	release
+	end
+
+SpearPillar_Distorted_Text_Looker:
+	.string "LOOKER: Even here, Cyrus slips away.\n"
+	.string "Giratina's world is not finished with us.\p"
+	.string "I will file my report. You--keep\n"
+	.string "pressing into Distortion.$"
 
 SpearPillar_Distorted_Movement_CyrusLeave:
 	walk_down

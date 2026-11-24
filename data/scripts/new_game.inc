@@ -300,6 +300,11 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_VEILSTONE_COUNTERPART
 	setflag FLAG_HIDE_PASTORIA_GALACTIC_GRUNT
 	setflag FLAG_HIDE_PASTORIA_WAKE_CAMEO
+	setflag FLAG_HIDE_CELESTIC_TOWN_CYNTHIA
+	@ Celestic grunt starts visible until defeated.
+	@ Canalave Barry / Dawn-Lucas / Rowan start visible for bridge+library stubs.
+	setflag FLAG_HIDE_SPEAR_PILLAR_LOOKER
+	@ Spear Pillar Mars/Jupiter/Barry/grunts start visible until Cyrus falls.
 	setvar VAR_LITTLEROOT_INTRO_STATE, 7
 	setvar VAR_LITTLEROOT_TOWN_STATE, 4
 	setvar VAR_ROUTE101_STATE, 3

@@ -375,40 +375,40 @@
       "map": "CelesticTown",
       "role": "Cynthia",
       "flag": "FLAG_HIDE_CELESTIC_TOWN_CYNTHIA",
-      "status": "DEFERRED",
-      "reason": "map is PlatNpc stub; no story NPCs yet"
+      "local_id": "LOCALID_CELESTIC_TOWN_CYNTHIA",
+      "status": "PASS"
     },
     {
       "map": "CelesticTown",
       "role": "Galactic",
       "flag": "FLAG_HIDE_CELESTIC_TOWN_GRUNT_M",
-      "status": "DEFERRED",
-      "reason": "map is PlatNpc stub"
+      "local_id": "LOCALID_CELESTIC_TOWN_GRUNT_M",
+      "status": "PASS"
     },
     {
       "map": "CanalaveCity",
       "role": "Barry",
       "flag": "FLAG_HIDE_CANALAVE_CITY_RIVAL_BRIDGE",
-      "status": "DEFERRED",
-      "reason": "map is PlatNpc stub"
+      "local_id": "LOCALID_CANALAVE_CITY_RIVAL_BRIDGE",
+      "status": "PASS"
     },
     {
       "map": "CanalaveCity",
       "role": "Dawn/Lucas",
       "flag": "FLAG_HIDE_CANALAVE_CITY_COUNTERPART",
-      "status": "DEFERRED",
-      "reason": "map is PlatNpc stub"
+      "local_id": "LOCALID_CANALAVE_CITY_COUNTERPART",
+      "status": "PASS"
     },
     {
       "map": "CanalaveCity",
       "role": "Rowan",
       "flag": "FLAG_HIDE_CANALAVE_CITY_PROF_ROWAN",
-      "status": "DEFERRED",
-      "reason": "map is PlatNpc stub"
+      "local_id": "LOCALID_CANALAVE_CITY_PROF_ROWAN",
+      "status": "PASS"
     }
   ],
-  "pass": 53,
+  "pass": 58,
   "fail": 0,
-  "deferred": 5,
+  "deferred": 0,
   "count_fail": 0
 }

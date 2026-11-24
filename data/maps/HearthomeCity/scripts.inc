@@ -77,8 +77,26 @@ HearthomeCity_Movement_BarryLeave:
 	step_end
 
 HearthomeCity_EventScript_FantinaCameo::
-	msgbox HearthomeCity_Text_FantinaCameo, MSGBOX_NPC
+	lock
+	faceplayer
+	msgbox HearthomeCity_Text_FantinaCameo, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_HEARTHOME_FANTINA, HearthomeCity_Movement_FantinaLeave
+	waitmovement 0
+	removeobject LOCALID_HEARTHOME_FANTINA
+	setflag FLAG_HIDE_HEARTHOME_FANTINA
+	release
 	end
+
+HearthomeCity_Movement_FantinaLeave:
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 HearthomeCity_EventScript_Woman::
 	msgbox HearthomeCity_Text_Woman, MSGBOX_NPC
