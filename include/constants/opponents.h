@@ -129,17 +129,23 @@
 #define TRAINER_BROOKE_2 TRAINER_GALACTIC_GRUNT_ETERNA_2F_2
 #define TRAINER_GALACTIC_GRUNT_ETERNA_3F                    102 // Sinnoh M15: was TRAINER_BROOKE_3
 #define TRAINER_BROOKE_3 TRAINER_GALACTIC_GRUNT_ETERNA_3F
-#define TRAINER_BROOKE_4                    103
-#define TRAINER_BROOKE_5                    104
+#define TRAINER_CYCLIST_AXEL_R206                    103 // Sinnoh M16: was TRAINER_BROOKE_4
+#define TRAINER_BROOKE_4 TRAINER_CYCLIST_AXEL_R206
+#define TRAINER_CYCLIST_MEGAN_R206                    104 // Sinnoh M16: was TRAINER_BROOKE_5
+#define TRAINER_BROOKE_5 TRAINER_CYCLIST_MEGAN_R206
 #define TRAINER_PATRICIA                    105
 #define TRAINER_KINDRA                      106
 #define TRAINER_TAMMY                       107
 #define TRAINER_VALERIE_1                   108
 #define TRAINER_TASHA                       109
-#define TRAINER_VALERIE_2                   110
-#define TRAINER_VALERIE_3                   111
-#define TRAINER_VALERIE_4                   112
-#define TRAINER_VALERIE_5                   113
+#define TRAINER_CYCLIST_JAMES_R206                    110 // Sinnoh M16: was TRAINER_VALERIE_2
+#define TRAINER_VALERIE_2 TRAINER_CYCLIST_JAMES_R206
+#define TRAINER_CYCLIST_NICOLE_R206                    111 // Sinnoh M16: was TRAINER_VALERIE_3
+#define TRAINER_VALERIE_3 TRAINER_CYCLIST_NICOLE_R206
+#define TRAINER_CYCLIST_JOHN_R206                    112 // Sinnoh M16: was TRAINER_VALERIE_4
+#define TRAINER_VALERIE_4 TRAINER_CYCLIST_JOHN_R206
+#define TRAINER_CYCLIST_KAYLA_R206                    113 // Sinnoh M16: was TRAINER_VALERIE_5
+#define TRAINER_VALERIE_5 TRAINER_CYCLIST_KAYLA_R206
 #define TRAINER_CINDY_1                     114
 #define TRAINER_DAPHNE                      115
 #define TRAINER_GRUNT_SPACE_CENTER_2        116
@@ -149,7 +155,8 @@
 #define TRAINER_LASS_SARAH                  120 // Sinnoh: reuses unused Hoenn slot TRAINER_CINDY_3
 #define TRAINER_LASS_SAMANTHA               121 // Sinnoh: reuses unused Hoenn slot TRAINER_CINDY_4
 #define TRAINER_YOUNGSTER_TYLER_R204         122 // Sinnoh: reuses unused Hoenn slot TRAINER_CINDY_5
-#define TRAINER_CINDY_6                     123
+#define TRAINER_CYCLIST_RYAN_R206                    123 // Sinnoh M16: was TRAINER_CINDY_6
+#define TRAINER_CINDY_6 TRAINER_CYCLIST_RYAN_R206
 #define TRAINER_MELISSA                     124
 #define TRAINER_SHEILA                      125
 #define TRAINER_SHIRLEY                     126
@@ -165,18 +172,26 @@
 #define TRAINER_WINSTON_1                   136
 #define TRAINER_MOLLIE                      137
 #define TRAINER_GARRET                      138
-#define TRAINER_WINSTON_2                   139
-#define TRAINER_WINSTON_3                   140
-#define TRAINER_WINSTON_4                   141
-#define TRAINER_WINSTON_5                   142
+#define TRAINER_CYCLIST_RACHEL_R206                    139 // Sinnoh M16: was TRAINER_WINSTON_2
+#define TRAINER_WINSTON_2 TRAINER_CYCLIST_RACHEL_R206
+#define TRAINER_HIKER_THEODORE_R206                    140 // Sinnoh M16: was TRAINER_WINSTON_3
+#define TRAINER_WINSTON_3 TRAINER_HIKER_THEODORE_R206
+#define TRAINER_CAMPER_ANTHONY_R207                    141 // Sinnoh M16: was TRAINER_WINSTON_4
+#define TRAINER_WINSTON_4 TRAINER_CAMPER_ANTHONY_R207
+#define TRAINER_PICNICKER_LAUREN_R207                    142 // Sinnoh M16: was TRAINER_WINSTON_5
+#define TRAINER_WINSTON_5 TRAINER_PICNICKER_LAUREN_R207
 #define TRAINER_STEVE_1                     143
 #define TRAINER_THALIA_1                    144
 #define TRAINER_MARK                        145
 #define TRAINER_GRUNT_MT_CHIMNEY_1          146
-#define TRAINER_STEVE_2                     147
-#define TRAINER_STEVE_3                     148
-#define TRAINER_STEVE_4                     149
-#define TRAINER_STEVE_5                     150
+#define TRAINER_YOUNGSTER_AUSTIN_R207                    147 // Sinnoh M16: was TRAINER_STEVE_2
+#define TRAINER_STEVE_2 TRAINER_YOUNGSTER_AUSTIN_R207
+#define TRAINER_HIKER_JUSTIN_R207                    148 // Sinnoh M16: was TRAINER_STEVE_3
+#define TRAINER_STEVE_3 TRAINER_HIKER_JUSTIN_R207
+#define TRAINER_HIKER_KEVIN_R207                    149 // Sinnoh M16: was TRAINER_STEVE_4
+#define TRAINER_STEVE_4 TRAINER_HIKER_KEVIN_R207
+#define TRAINER_BATTLE_GIRL_HELEN_R207                    150 // Sinnoh M16: was TRAINER_STEVE_5
+#define TRAINER_STEVE_5 TRAINER_BATTLE_GIRL_HELEN_R207
 #define TRAINER_LUIS                        151
 #define TRAINER_DOMINIK                     152
 #define TRAINER_DOUGLAS                     153
@@ -201,17 +216,23 @@
 #define TRAINER_JACK                        172
 #define TRAINER_WORKER_COLIN                173 // Sinnoh: reuses unused Hoenn slot DUDLEY
 #define TRAINER_CHAD                        174
-#define TRAINER_TONY_2                      175
-#define TRAINER_TONY_3                      176
-#define TRAINER_TONY_4                      177
-#define TRAINER_TONY_5                      178
+#define TRAINER_HIKER_ROBERT_R208                    175 // Sinnoh M16: was TRAINER_TONY_2
+#define TRAINER_TONY_2 TRAINER_HIKER_ROBERT_R208
+#define TRAINER_HIKER_JONATHAN_R208                    176 // Sinnoh M16: was TRAINER_TONY_3
+#define TRAINER_TONY_3 TRAINER_HIKER_JONATHAN_R208
+#define TRAINER_BLACK_BELT_KYLE_R208                    177 // Sinnoh M16: was TRAINER_TONY_4
+#define TRAINER_TONY_4 TRAINER_BLACK_BELT_KYLE_R208
+#define TRAINER_FISHERMAN_CODY_R208                    178 // Sinnoh M16: was TRAINER_TONY_5
+#define TRAINER_TONY_5 TRAINER_FISHERMAN_CODY_R208
 #define TRAINER_TAKAO                       179
 #define TRAINER_HITOSHI                     180
 #define TRAINER_KIYO                        181
 #define TRAINER_KOICHI                      182
 #define TRAINER_NOB_1                       183
-#define TRAINER_NOB_2                       184
-#define TRAINER_NOB_3                       185
+#define TRAINER_AROMA_LADY_HANNAH_R208                    184 // Sinnoh M16: was TRAINER_NOB_2
+#define TRAINER_NOB_2 TRAINER_AROMA_LADY_HANNAH_R208
+#define TRAINER_ARTIST_WILLIAM_R208                    185 // Sinnoh M16: was TRAINER_NOB_3
+#define TRAINER_NOB_3 TRAINER_ARTIST_WILLIAM_R208
 #define TRAINER_NOB_4                       186
 #define TRAINER_NOB_5                       187
 #define TRAINER_YUJI                        188

@@ -193,17 +193,11 @@ def render(
 
 def main():
     out = Path("/opt/cursor/artifacts")
-    render("EternaForest", out / "m15_eterna_forest_cheryl.png", cam_x=15, cam_y=63, view_w=16, view_h=12)
-    render("EternaCity", out / "m15_eterna_city.png", cam_x=12, cam_y=6, view_w=16, view_h=12)
-    render("EternaCity_Gym", out / "m15_eterna_gym_gardenia.png", cam_x=0, cam_y=0, view_w=22, view_h=14)
-    render(
-        "TeamGalacticEternaBuilding_4F",
-        out / "m15_galactic_eterna_jupiter.png",
-        cam_x=0,
-        cam_y=0,
-        view_w=24,
-        view_h=14,
-    )
+    # M16 verification shots (Emerald tiles only — no live ROM dump / DS assets)
+    render("Route206", out / "m16_route206_cycling_road.png", cam_x=8, cam_y=20, view_w=16, view_h=12)
+    render("Route207", out / "m16_route207_dawn_lucas.png", cam_x=44, cam_y=2, view_w=16, view_h=12)
+    render("MtCoronet_1F_South", out / "m16_mt_coronet_cyrus.png", cam_x=8, cam_y=12, view_w=16, view_h=12)
+    render("Route208", out / "m16_route208_berry_master.png", cam_x=48, cam_y=6, view_w=16, view_h=12)
 
 
 if __name__ == "__main__":

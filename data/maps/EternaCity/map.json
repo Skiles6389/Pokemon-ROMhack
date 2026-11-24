@@ -205,27 +205,23 @@
       "elevation": 0,
       "dest_map": "MAP_ETERNA_CITY_GYM",
       "dest_warp_id": "0"
-    }
-  ],
-  "coord_events": [
+    },
     {
-      "type": "trigger",
       "x": 16,
       "y": 57,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "EternaCity_EventScript_CyclingRoadGate"
+      "dest_map": "MAP_ROUTE206_CYCLING_ROAD_NORTH_GATE",
+      "dest_warp_id": "0"
     },
     {
-      "type": "trigger",
       "x": 17,
       "y": 57,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "EternaCity_EventScript_CyclingRoadGate"
-    },
+      "dest_map": "MAP_ROUTE206_CYCLING_ROAD_NORTH_GATE",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
     {
       "type": "trigger",
       "x": 60,

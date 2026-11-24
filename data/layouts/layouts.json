@@ -9686,6 +9686,50 @@
       "border_filepath": "data/layouts/TeamGalacticEternaBuilding_4F/border.bin",
       "blockdata_filepath": "data/layouts/TeamGalacticEternaBuilding_4F/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE206",
+      "name": "Route206_Layout",
+      "width": 32,
+      "height": 128,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route206/border.bin",
+      "blockdata_filepath": "data/layouts/Route206/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE207",
+      "name": "Route207_Layout",
+      "width": 64,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route207/border.bin",
+      "blockdata_filepath": "data/layouts/Route207/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_MT_CORONET_1F_SOUTH",
+      "name": "MtCoronet_1F_South_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtCoronet_1F_South/border.bin",
+      "blockdata_filepath": "data/layouts/MtCoronet_1F_South/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE208",
+      "name": "Route208_Layout",
+      "width": 64,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route208/border.bin",
+      "blockdata_filepath": "data/layouts/Route208/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

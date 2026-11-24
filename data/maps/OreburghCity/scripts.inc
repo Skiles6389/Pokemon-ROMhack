@@ -94,6 +94,10 @@ OreburghCity_EventScript_Route207Worker::
 	msgbox OreburghCity_Text_Route207Closed, MSGBOX_NPC
 	end
 
+OreburghCity_EventScript_Route207Open::
+	msgbox OreburghCity_Text_Route207Open, MSGBOX_NPC
+	end
+
 OreburghCity_EventScript_Hiker::
 	msgbox OreburghCity_Text_Hiker, MSGBOX_NPC
 	end
@@ -166,6 +170,10 @@ OreburghCity_Text_GymGuideLater:
 OreburghCity_Text_Route207Closed:
 	.string "Sorry, ROUTE 207 is closed while\n"
 	.string "we shore up the hillside.$"
+
+OreburghCity_Text_Route207Open:
+	.string "ROUTE 207 is open again!\n"
+	.string "Watch your step on the slope.$"
 
 OreburghCity_Text_Hiker:
 	.string "Coal from the mine keeps the\n"

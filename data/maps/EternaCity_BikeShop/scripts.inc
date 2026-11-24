@@ -47,7 +47,7 @@ EternaCity_BikeShop_Text_GiveBike:
 
 EternaCity_BikeShop_Text_EnjoyBike:
 	.string "OWNER: Pedal to the Cycling Road\n"
-	.string "south of town when it opens!$"
+	.string "south of town-show them your Bike!$"
 
 EternaCity_BikeShop_Text_AlreadyBike:
 	.string "OWNER: Treat that bike well!$"

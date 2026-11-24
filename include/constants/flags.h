@@ -690,16 +690,16 @@
 #define FLAG_ITEM_ETERNA_FOREST_ANTIDOTE  0x279 // Sinnoh M15
 #define FLAG_ITEM_ETERNA_CITY_SUPER_REPEL  0x27A // Sinnoh M15
 #define FLAG_ITEM_ROUTE205_NORTH_POTION  0x27B // Sinnoh M15
-#define FLAG_UNUSED_0x27C  0x27C // Unused Flag
-#define FLAG_UNUSED_0x27D  0x27D // Unused Flag
-#define FLAG_UNUSED_0x27E  0x27E // Unused Flag
-#define FLAG_UNUSED_0x27F  0x27F // Unused Flag
-#define FLAG_UNUSED_0x280  0x280 // Unused Flag
-#define FLAG_UNUSED_0x281  0x281 // Unused Flag
-#define FLAG_UNUSED_0x282  0x282 // Unused Flag
-#define FLAG_UNUSED_0x283  0x283 // Unused Flag
-#define FLAG_UNUSED_0x284  0x284 // Unused Flag
-#define FLAG_UNUSED_0x285  0x285 // Unused Flag
+#define FLAG_GOT_VS_SEEKER_SINNOH  0x27C // Sinnoh M16: Vs. Seeker from Dawn/Lucas
+#define FLAG_HIDE_ROUTE207_COUNTERPART  0x27D // Sinnoh M16
+#define FLAG_HIDE_MT_CORONET_CYRUS  0x27E // Sinnoh M16; set by default until scene
+#define FLAG_MT_CORONET_CYRUS_DONE  0x27F // Sinnoh M16
+#define FLAG_GOT_ODD_KEYSTONE_R208  0x280 // Sinnoh M16
+#define FLAG_ITEM_ROUTE206_POISON_BARB  0x281 // Sinnoh M16
+#define FLAG_ITEM_ROUTE206_PP_UP  0x282 // Sinnoh M16
+#define FLAG_ITEM_ROUTE207_POKE_BALL  0x283 // Sinnoh M16
+#define FLAG_ITEM_ROUTE208_ETHER  0x284 // Sinnoh M16
+#define FLAG_ITEM_MT_CORONET_PROTEIN  0x285 // Sinnoh M16
 #define FLAG_UNUSED_0x286  0x286 // Unused Flag
 #define FLAG_UNUSED_0x287  0x287 // Unused Flag
 #define FLAG_UNUSED_0x288  0x288 // Unused Flag
@@ -2068,7 +2068,7 @@
 #define FLAG_0x28F                                       0
 #define FLAG_MET_STICKER_MAN                             0
 #define FLAG_PALLET_LADY_NOT_BLOCKING_SIGN               0
-#define FLAG_GOT_VS_SEEKER                               0
+#define FLAG_GOT_VS_SEEKER                               FLAG_GOT_VS_SEEKER_SINNOH
 #define FLAG_GOT_TM19_FROM_ERIKA                         0
 #define FLAG_GOT_TM33_FROM_THIRSTY_GIRL                  0
 #define FLAG_GOT_TM20_FROM_THIRSTY_GIRL                  0

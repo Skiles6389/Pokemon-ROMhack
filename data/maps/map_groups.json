@@ -80,7 +80,8 @@
     "gMapGroup_IndoorJubilife",
     "gMapGroup_IndoorOreburgh",
     "gMapGroup_IndoorFloaroma",
-    "gMapGroup_IndoorEterna"
+    "gMapGroup_IndoorEterna",
+    "gMapGroup_IndoorM16"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -157,7 +158,10 @@
     "FloaromaMeadow",
     "EternaForest",
     "Route205_North",
-    "EternaCity"
+    "EternaCity",
+    "Route206",
+    "Route207",
+    "Route208"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -499,7 +503,8 @@
     "OreburghGate_B1F",
     "OreburghMine_B1F",
     "OreburghMine_B2F",
-    "RavagedPath"
+    "RavagedPath",
+    "MtCoronet_1F_South"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
@@ -1248,5 +1253,11 @@
     "TeamGalacticEternaBuilding_2F",
     "TeamGalacticEternaBuilding_3F",
     "TeamGalacticEternaBuilding_4F"
+  ],
+  "gMapGroup_IndoorM16": [
+    "Route206_CyclingRoadNorthGate",
+    "Route206_CyclingRoadSouthGate",
+    "Route208_BerryMastersHouse",
+    "Route208_HearthomeGate"
   ]
 }
