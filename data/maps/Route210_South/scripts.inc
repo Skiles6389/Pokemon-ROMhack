@@ -67,8 +67,26 @@ Route210_South_Movement_PushSouth:
 	step_end
 
 Route210_South_EventScript_Cynthia::
-	msgbox Route210_South_Text_CynthiaHint, MSGBOX_NPC
+	lock
+	faceplayer
+	msgbox Route210_South_Text_CynthiaHint, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_R210_CYNTHIA, Route210_South_Movement_CynthiaLeaves
+	waitmovement 0
+	removeobject LOCALID_R210_CYNTHIA
+	setflag FLAG_HIDE_ROUTE210_CYNTHIA
+	release
 	end
+
+Route210_South_Movement_CynthiaLeaves:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	step_end
 
 Route210_South_EventScript_ItemHyperPotion::
 	finditem ITEM_HYPER_POTION

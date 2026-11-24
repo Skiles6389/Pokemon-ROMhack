@@ -176,9 +176,9 @@ def build_gym():
         ("SunyshoreCity_Gym_Room2", [[297]], "MAP_SUNYSHORE_CITY_GYM_ROOM2"),
         ("SunyshoreCity_Gym_VolknersRoom", [[298]], "MAP_SUNYSHORE_CITY_GYM_VOLKNERS_ROOM"),
     ]:
-        grid, w, h = grid_from_chunks(chunks, cave=False)
+        grid, w, h, coll = grid_from_chunks(chunks, cave=False)
         clear_plat_walkables(grid, chunks)
-        write_layout(name, w, h, "gTileset_Building", "gTileset_Facility", pack(grid))
+        write_layout(name, w, h, "gTileset_Building", "gTileset_Facility", pack(grid, coll))
 
     ensure_trainer(
         "TRAINER_LEADER_VOLKNER",
@@ -422,7 +422,7 @@ def main():
     ensure_flag("FLAG_RECEIVED_SUNYSHORE_GYM_TM", "0x2B5", "Sinnoh Sunyshore Volkner TM")
 
     # --- Route 222 ---
-    grid, w, h = grid_from_chunks(ROUTE222)
+    grid, w, h, coll = grid_from_chunks(ROUTE222)
     clear_plat_walkables(grid, ROUTE222)
     objs, scripts, plat_warps, _ = densify("Route222", "route_222", R222_ORIGIN, w, h, 42)
     warps = []
@@ -432,7 +432,7 @@ def main():
     # For now collect positions; stamp doors
     for lx, ly, dest, wid in plat_warps:
         stamp_door(grid, lx, ly)
-    write_layout("Route222", w, h, "gTileset_General", "gTileset_Dewford", pack(grid))
+    write_layout("Route222", w, h, "gTileset_General", "gTileset_Dewford", pack(grid, coll))
 
     # Soft-close NPC toward water / league for later
     sx, sy = find_walkable(grid, prefer=(w - 3, h // 2))
@@ -553,7 +553,7 @@ def main():
     )
 
     # --- Sunyshore City ---
-    grid, w, h = grid_from_chunks(SUNYSHORE)
+    grid, w, h, coll = grid_from_chunks(SUNYSHORE)
     clear_plat_walkables(grid, SUNYSHORE)
     objs, scripts, plat_warps, pe = densify("SunyshoreCity", "sunyshore_city", SUNY_ORIGIN, w, h, 44)
     for lx, ly, dest, wid in plat_warps:
@@ -576,7 +576,7 @@ def main():
         '\t.string "opens past Route 223. Pack plenty of Repels.$"\n\n'
     )
 
-    write_layout("SunyshoreCity", w, h, "gTileset_General", "gTileset_Dewford", pack(grid))
+    write_layout("SunyshoreCity", w, h, "gTileset_General", "gTileset_Dewford", pack(grid, coll))
 
     # Build interiors matching warp count; index warps to match plat order
     # From earlier: market, NE house, west house, gate, NW house, mart, gate, unused1, unused2, east house, lighthouse, PC, gym, market

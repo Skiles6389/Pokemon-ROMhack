@@ -168,9 +168,9 @@ def densify_local(em, plat, w, h, level):
 
 
 def map_outdoor(name, mid, layout, chunks, origin, plat, level, connections, music="MUS_RG_ROUTE1"):
-    grid, w, h = grid_from_chunks(chunks)
+    grid, w, h, coll = grid_from_chunks(chunks)
     clear_plat_walkables(grid, chunks)
-    write_layout(name, w, h, "gTileset_General", "gTileset_Petalburg", pack(grid))
+    write_layout(name, w, h, "gTileset_General", "gTileset_Petalburg", pack(grid, coll))
     objs, scripts, vwarps = densify_world(name, plat, origin, w, h, level)
     # Resolve warps to known dests where possible
     warps = []
@@ -230,9 +230,9 @@ def main() -> int:
         ("VictoryRoad_Sinnoh_Room2", VR2, "victory_road_1f_room_2", "MAP_VICTORY_ROAD_SINNOH_ROOM2", "LAYOUT_VICTORY_ROAD_SINNOH_ROOM2"),
         ("VictoryRoad_Sinnoh_Room3", VR3, "victory_road_1f_room_3", "MAP_VICTORY_ROAD_SINNOH_ROOM3", "LAYOUT_VICTORY_ROAD_SINNOH_ROOM3"),
     ]:
-        grid, w, h = grid_from_chunks(chunks, cave=True)
+        grid, w, h, coll = grid_from_chunks(chunks, cave=True)
         clear_plat_walkables(grid, chunks, cave=True)
-        write_layout(name, w, h, "gTileset_General", "gTileset_Cave", pack(grid))
+        write_layout(name, w, h, "gTileset_General", "gTileset_Cave", pack(grid, coll))
         objs, scripts, vwarps = densify_local(name, plat, w, h, 48)
         warps = []
         for lx, ly, dest, wid in vwarps:
@@ -294,9 +294,9 @@ def main() -> int:
 
     # --- Route 225 ---
     # Soft-close Survival to the north
-    grid, w, h = grid_from_chunks(R225)
+    grid, w, h, coll = grid_from_chunks(R225)
     clear_plat_walkables(grid, R225)
-    write_layout("Route225", w, h, "gTileset_General", "gTileset_Petalburg", pack(grid))
+    write_layout("Route225", w, h, "gTileset_General", "gTileset_Petalburg", pack(grid, coll))
     objs, scripts, vwarps = densify_world("Route225", "route_225", R225_ORIGIN, w, h, 50)
     # Soft-close north toward Survival
     nx, ny = find_walkable(grid, prefer=(w // 2, 1))
@@ -353,9 +353,9 @@ Route225_Text_SurvivalClosed:
     )
 
     # --- Fight Area ---
-    grid, w, h = grid_from_chunks(FIGHT)
+    grid, w, h, coll = grid_from_chunks(FIGHT)
     clear_plat_walkables(grid, FIGHT)
-    write_layout("FightArea", w, h, "gTileset_General", "gTileset_Petalburg", pack(grid))
+    write_layout("FightArea", w, h, "gTileset_General", "gTileset_Petalburg", pack(grid, coll))
     objs, scripts, vwarps = densify_world("FightArea", "fight_area", FIGHT_ORIGIN, w, h, 50)
     # Game-clear gated sailor / clerk
     sx, sy = find_walkable(grid, prefer=(w // 2, h - 3))

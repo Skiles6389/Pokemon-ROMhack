@@ -1,0 +1,996 @@
+{
+  "results": [
+    {
+      "name": "AcuityLakefront",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "CanalaveCity",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 18,
+      "plat_blocked": 3,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "CanalaveCity_Gym",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "CelesticTown",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 1,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_1F",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_B1F",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_B2F",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_B3F",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_B4F",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_B5F",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 2,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_B6F",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_B7F",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_GiratinaRoom",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_TurnbackCaveRoom",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "EternaCity",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "EternaForest",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 9216,
+      "issues": []
+    },
+    {
+      "name": "FightArea",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 2,
+      "plat_blocked": 0,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "FloaromaMeadow",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 42,
+      "plat_blocked": 7,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "FloaromaTown",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 1,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "GreatMarsh",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 91,
+      "plat_blocked": 0,
+      "plat_total": 6144,
+      "issues": []
+    },
+    {
+      "name": "HearthomeCity",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 3,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "IronIsland",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 12,
+      "plat_blocked": 1,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "JubilifeCity",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 4,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "LakeAcuity",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "LakeValor_Drained",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "MtCoronet_1F_South",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "OreburghCity",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 10,
+      "plat_blocked": 0,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "OreburghGate_1F",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "OreburghGate_B1F",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "OreburghMine_B1F",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "OreburghMine_B2F",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "PastoriaCity",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 3,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_AaronsRoom",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_BerthasRoom",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToAaron",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToBertha",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToCynthia",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToFlint",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToLucian",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Exterior",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 27,
+      "plat_blocked": 0,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_FlintsRoom",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_LuciansRoom",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Sinnoh_CynthiasRoom",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Sinnoh_HallOfFame",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Sinnoh_HallwayToHoF",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "RavagedPath",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 1197,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "ResortArea",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "Route201",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 33,
+      "plat_blocked": 0,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "Route202",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 25,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "Route203",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 16,
+      "plat_blocked": 0,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "Route204_North",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 3,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "Route204_South",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "Route205_North",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "Route205_South",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 18,
+      "plat_blocked": 8,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "Route206",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "Route207",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 16,
+      "plat_blocked": 0,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "Route208",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 3,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "Route209",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 5,
+      "plat_blocked": 0,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "Route210_North",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 16,
+      "plat_blocked": 0,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "Route210_South",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "Route211_East",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "Route212_North",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "Route212_South",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 4,
+      "plat_blocked": 2,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "Route213",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 4,
+      "plat_total": 6144,
+      "issues": []
+    },
+    {
+      "name": "Route214",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "Route215",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 34,
+      "plat_blocked": 0,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "Route216",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 1,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "Route217",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "Route218",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "Route222",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 28,
+      "plat_blocked": 1,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "Route223",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "Route224",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "Route225",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 12,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "Route226",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 28,
+      "plat_blocked": 0,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "Route227",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 62,
+      "plat_blocked": 0,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "Route228",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "Route229",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "Route230",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 3072,
+      "issues": []
+    },
+    {
+      "name": "SandgemTown",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "SnowpointCity",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 1,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "SolaceonTown",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 36,
+      "plat_blocked": 0,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "SpearPillar",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "SpearPillar_Distorted",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "StarkMountain_HeatranRoom",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "StarkMountain_Outside",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "StarkMountain_Room1",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "StarkMountain_Room2",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 9216,
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 6,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "SurvivalArea",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 12,
+      "plat_blocked": 0,
+      "plat_total": 2048,
+      "issues": []
+    },
+    {
+      "name": "TwinleafTown",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 29,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "ValleyWindworks_Exterior",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "ValorLakefront",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "VeilstoneCity",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 1,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_1F",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 36,
+      "plat_blocked": 0,
+      "plat_total": 6144,
+      "issues": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_2F",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 12,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_B1F",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 13,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_Room1",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_Room2",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 4096,
+      "issues": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_Room3",
+      "status": "PASS",
+      "strip_rate": 0.0,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 0,
+      "plat_blocked": 0,
+      "plat_total": 1024,
+      "issues": []
+    }
+  ],
+  "fail": 0,
+  "warn": 0
+}

@@ -69,13 +69,18 @@ def stitch(chunks):
     return out
 
 
-def pack(grid):
+def pack(grid, collision_grid=None):
+    """Encode metatile + collision + elevation (see sinnoh_build_lib.encode_map_cell)."""
+    from tools.sinnoh_maps.sinnoh_build_lib import encode_map_cell
+    import struct
     h, w = len(grid), len(grid[0])
     out = bytearray(w * h * 2)
     for y in range(h):
         for x in range(w):
-            struct.pack_into("<H", out, (y * w + x) * 2, grid[y][x] & 0x3FF)
+            coll = None if collision_grid is None else collision_grid[y][x]
+            struct.pack_into("<H", out, (y * w + x) * 2, encode_map_cell(grid[y][x], collision=coll))
     return bytes(out)
+
 
 
 def open_path(grid, pts, mt=MT_GRASS):

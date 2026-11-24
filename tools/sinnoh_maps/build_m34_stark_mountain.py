@@ -238,9 +238,9 @@ def main() -> int:
     open_route227()
 
     # Outside
-    grid, w, h = grid_from_chunks(OUTSIDE, snow=False)
+    grid, w, h, coll = grid_from_chunks(OUTSIDE, snow=False)
     clear_plat_walkables(grid, OUTSIDE)
-    write_layout("StarkMountain_Outside", w, h, "gTileset_General", "gTileset_Petalburg", pack(grid))
+    write_layout("StarkMountain_Outside", w, h, "gTileset_General", "gTileset_Petalburg", pack(grid, coll))
     objs, scripts, vwarps = densify_world("StarkMountain_Outside", "stark_mountain_outside", OUT_ORIGIN, w, h, 54)
     # Platinum Outside only has the cave mouth warp; R227 is a matrix connection (south).
     warps = [warp(lx, ly, resolve(dest), 0) for lx, ly, dest in vwarps if "ROUTE_227" not in (dest or "").upper()]
@@ -276,9 +276,9 @@ def main() -> int:
         ("StarkMountain_Room2", ROOM2, "stark_mountain_room_2", "MAP_STARK_MOUNTAIN_ROOM2", "LAYOUT_STARK_MOUNTAIN_ROOM2", 56),
         ("StarkMountain_HeatranRoom", HEATRAN, "stark_mountain_room_3", "MAP_STARK_MOUNTAIN_HEATRAN_ROOM", "LAYOUT_STARK_MOUNTAIN_HEATRAN_ROOM", 57),
     ]:
-        grid, w, h = grid_from_chunks(chunks, cave=True)
+        grid, w, h, coll = grid_from_chunks(chunks, cave=True)
         clear_plat_walkables(grid, chunks, cave=True)
-        write_layout(name, w, h, "gTileset_General", "gTileset_Cave", pack(grid))
+        write_layout(name, w, h, "gTileset_General", "gTileset_Cave", pack(grid, coll))
         objs, scripts, vwarps = densify_local(name, plat, w, h, level)
         warps = [warp(lx, ly, resolve(dest), 0) for lx, ly, dest in vwarps]
         if name.endswith("HeatranRoom"):

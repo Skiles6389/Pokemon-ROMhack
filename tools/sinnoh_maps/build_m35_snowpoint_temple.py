@@ -203,8 +203,8 @@ def link_reciprocal(names: list[str]):
 
 
 def build_one(name, chunks, plat, mid, layout, *, snow=True):
-    grid, w, h = grid_from_chunks(chunks, cave=True, snow=snow)
-    write_layout(name, w, h, "gTileset_General", "gTileset_Cave", pack(grid), lid=layout)
+    grid, w, h, coll = grid_from_chunks(chunks, cave=True, snow=snow)
+    write_layout(name, w, h, "gTileset_General", "gTileset_Cave", pack(grid, coll), lid=layout)
     objs, scripts, vwarps = densify_local(name, plat, w, h)
     warps = [warp(lx, ly, resolve(dest), 0) for lx, ly, dest in vwarps]
     if not warps:
