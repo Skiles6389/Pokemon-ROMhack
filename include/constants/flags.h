@@ -754,22 +754,22 @@
 #define FLAG_DEFEATED_SATURN_LAKE_VALOR  0x2AD // Sinnoh M24 Saturn at drained lake
 #define FLAG_RECEIVED_CANALAVE_GYM_TM  0x2AC // Sinnoh M23 Byron TM
 #define FLAG_GOT_PASTORIA_HM_DEFOG  0x2AB // Sinnoh M20; reserved for Defog NPC
-#define FLAG_ITEM_ETERNAFOREST_V06_0  0x2AC // was FLAG_UNUSED_0x2AC // Unused Flag
-#define FLAG_ITEM_ETERNAFOREST_V06_1  0x2AD // was FLAG_UNUSED_0x2AD // Unused Flag
-#define FLAG_ITEM_ETERNAFOREST_V06_2  0x2AE // was FLAG_UNUSED_0x2AE // Unused Flag
-#define FLAG_ITEM_ETERNACITY_V06_0  0x2AF // was FLAG_UNUSED_0x2AF // Unused Flag
-#define FLAG_ITEM_ROUTE206_V06_2  0x2B0 // was FLAG_UNUSED_0x2B0 // Unused Flag
-#define FLAG_ITEM_ROUTE206_V06_3  0x2B1 // was FLAG_UNUSED_0x2B1 // Unused Flag
-#define FLAG_ITEM_ROUTE207_V06_1  0x2B2 // was FLAG_UNUSED_0x2B2 // Unused Flag
-#define FLAG_ITEM_ROUTE207_V06_2  0x2B3 // was FLAG_UNUSED_0x2B3 // Unused Flag
-#define FLAG_ITEM_ROUTE207_V06_4  0x2B4 // was FLAG_UNUSED_0x2B4 // Unused Flag
-#define FLAG_ITEM_MTCORONET_1F_SOUTH_V06_1  0x2B5 // was FLAG_UNUSED_0x2B5 // Unused Flag
-#define FLAG_ITEM_ROUTE208_V06_1  0x2B6 // was FLAG_UNUSED_0x2B6 // Unused Flag
-#define FLAG_ITEM_ROUTE208_V06_2  0x2B7 // was FLAG_UNUSED_0x2B7 // Unused Flag
-#define FLAG_ITEM_ROUTE209_V06_0  0x2B8 // was FLAG_UNUSED_0x2B8 // Unused Flag
-#define FLAG_ITEM_ROUTE209_V06_1  0x2B9 // was FLAG_UNUSED_0x2B9 // Unused Flag
-#define FLAG_ITEM_SOLACEONTOWN_V06_0  0x2BA // was FLAG_UNUSED_0x2BA // Unused Flag
-#define FLAG_ITEM_SOLACEONTOWN_V06_1  0x2BB // was FLAG_UNUSED_0x2BB // Unused Flag
+#define FLAG_ITEM_ETERNAFOREST_V06_0  0x4AA // was FLAG_UNUSED_0x2AC // Unused Flag
+#define FLAG_ITEM_ETERNAFOREST_V06_1  0x4AB // was FLAG_UNUSED_0x2AD // Unused Flag
+#define FLAG_ITEM_ETERNAFOREST_V06_2  0x4AC // was FLAG_UNUSED_0x2AE // Unused Flag
+#define FLAG_ITEM_ETERNACITY_V06_0  0x4AD // was FLAG_UNUSED_0x2AF // Unused Flag
+#define FLAG_ITEM_ROUTE206_V06_2  0x4AE // was FLAG_UNUSED_0x2B0 // Unused Flag
+#define FLAG_ITEM_ROUTE206_V06_3  0x4AF // was FLAG_UNUSED_0x2B1 // Unused Flag
+#define FLAG_ITEM_ROUTE207_V06_1  0x4B0 // was FLAG_UNUSED_0x2B2 // Unused Flag
+#define FLAG_ITEM_ROUTE207_V06_2  0x4B1 // was FLAG_UNUSED_0x2B3 // Unused Flag
+#define FLAG_ITEM_ROUTE207_V06_4  0x4B2 // was FLAG_UNUSED_0x2B4 // Unused Flag
+#define FLAG_ITEM_MTCORONET_1F_SOUTH_V06_1  0x4B3 // was FLAG_UNUSED_0x2B5 // Unused Flag
+#define FLAG_ITEM_ROUTE208_V06_1  0x4B4 // was FLAG_UNUSED_0x2B6 // Unused Flag
+#define FLAG_ITEM_ROUTE208_V06_2  0x4B5 // was FLAG_UNUSED_0x2B7 // Unused Flag
+#define FLAG_ITEM_ROUTE209_V06_0  0x4B6 // was FLAG_UNUSED_0x2B8 // Unused Flag
+#define FLAG_ITEM_ROUTE209_V06_1  0x4B7 // was FLAG_UNUSED_0x2B9 // Unused Flag
+#define FLAG_ITEM_SOLACEONTOWN_V06_0  0x4B8 // was FLAG_UNUSED_0x2BA // Unused Flag
+#define FLAG_ITEM_SOLACEONTOWN_V06_1  0x4B9 // was FLAG_UNUSED_0x2BB // Unused Flag
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
@@ -1263,22 +1263,6 @@
 #define FLAG_DEFEATED_HEATRAN_STARK  0x4A7 // Sinnoh M34 Heatran at Stark
 #define FLAG_DEFEATED_REGIGIGAS_TEMPLE  0x4A8 // Sinnoh M35 Regigigas at Snowpoint Temple
 #define FLAG_DEFEATED_UXIE_ACUITY  0x4A9 // Sinnoh M35 Uxie at Acuity Cavern
-#define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
-#define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
-#define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
-#define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
-#define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
-#define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
-#define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
-#define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag
-#define FLAG_UNUSED_0x4B2                                           0x4B2 // Unused Flag
-#define FLAG_UNUSED_0x4B3                                           0x4B3 // Unused Flag
-#define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag
-#define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag
-#define FLAG_UNUSED_0x4B6                                           0x4B6 // Unused Flag
-#define FLAG_UNUSED_0x4B7                                           0x4B7 // Unused Flag
-#define FLAG_UNUSED_0x4B8                                           0x4B8 // Unused Flag
-#define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
 #define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
 #define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
 #define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag

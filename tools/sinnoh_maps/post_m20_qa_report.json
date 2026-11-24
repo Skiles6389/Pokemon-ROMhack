@@ -61,11 +61,9 @@
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 2839,
+      "mismatch": 48,
       "walkable_blocked": 0,
-      "notes": [
-        "collision diverge 2839/4096 (69.3%) [informational]"
-      ],
+      "notes": [],
       "samples": []
     },
     "OreburghGate_1F": {
