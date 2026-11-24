@@ -62,6 +62,7 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 | After M27 | 5,911,792 (5.638 MiB) | ~4.14 MiB | Used ~77 KiB from M26 (under 450 KiB) |
 | After Sunyshore/Volkner | 5,874,864 (5.603 MiB) | ~4.10 MiB | Used ~36 KiB from M27 (contingency) |
 | After M28 (Victory Road) | 5,819,644 (5.550 MiB) | ~4.05 MiB | Used ~54 KiB from Sunyshore (under 400 KiB) |
+| After M29 (Elite Four) | 5,794,280 (5.526 MiB) | ~4.09 MiB | Used ~25 KiB from M28 (under 350 KiB) |
 
 ## Large assets log
 
@@ -102,3 +103,8 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 
 - Free trailing 0xFF: **5,991,004 bytes (5.713 MiB)**
 - Galactic HQ rematch path + SpearPillar EXACT; Distortion gate closed for M27.
+
+### Measured after M29
+
+- Free trailing 0xFF: **5,794,280 bytes (5.526 MiB)**
+- Elite Four Aaron/Bertha/Flint/Lucian EXACT (Platinum teams/levels, IVs 0); elevators 306–308; League door open; Canalave Gym real land-225 layout (was Pastoria reuse); Champion elevator soft-closed for M30.

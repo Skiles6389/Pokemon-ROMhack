@@ -1259,7 +1259,15 @@
 
 #define TRAINER_ACE_TRAINER_HENRY                    996 // Sinnoh VR
 
-#define TRAINERS_COUNT_EMERALD     997
+#define TRAINER_ELITE_FOUR_AARON                    997 // Sinnoh E4
+
+#define TRAINER_ELITE_FOUR_BERTHA                    998 // Sinnoh E4
+
+#define TRAINER_ELITE_FOUR_FLINT                    999 // Sinnoh E4
+
+#define TRAINER_ELITE_FOUR_LUCIAN                    1000 // Sinnoh E4
+
+#define TRAINERS_COUNT_EMERALD     1001
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG

@@ -86,7 +86,17 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "VictoryRoad_Sinnoh_1F": [[407, 408], [409, 410], [411, 412]],
     "VictoryRoad_Sinnoh_2F": [[413, 414], [415, 416]],
     "VictoryRoad_Sinnoh_B1F": [[417, 418], [419, 420]],
-
+    # M29 Elite Four + Canalave Gym real layout
+    "PokemonLeague_AaronsRoom": [[260]],
+    "PokemonLeague_BerthasRoom": [[261]],
+    "PokemonLeague_FlintsRoom": [[262]],
+    "PokemonLeague_LuciansRoom": [[263]],
+    "PokemonLeague_Elevator_ToAaron": [[306]],
+    "PokemonLeague_Elevator_ToBertha": [[307]],
+    "PokemonLeague_Elevator_ToFlint": [[307]],
+    "PokemonLeague_Elevator_ToLucian": [[307]],
+    "PokemonLeague_Elevator_ToCynthia": [[308]],
+    "CanalaveCity_Gym": [[225]],
 
 }
 
@@ -141,6 +151,16 @@ DOCUMENTED_ORIGIN = {
     "VictoryRoad_Sinnoh_1F": (0, 0),
     "VictoryRoad_Sinnoh_2F": (0, 0),
     "VictoryRoad_Sinnoh_B1F": (0, 0),
+    "PokemonLeague_AaronsRoom": (0, 0),
+    "PokemonLeague_BerthasRoom": (0, 0),
+    "PokemonLeague_FlintsRoom": (0, 0),
+    "PokemonLeague_LuciansRoom": (0, 0),
+    "PokemonLeague_Elevator_ToAaron": (0, 0),
+    "PokemonLeague_Elevator_ToBertha": (0, 0),
+    "PokemonLeague_Elevator_ToFlint": (0, 0),
+    "PokemonLeague_Elevator_ToLucian": (0, 0),
+    "PokemonLeague_Elevator_ToCynthia": (0, 0),
+    "CanalaveCity_Gym": (0, 0),
 
     "Route206": (288, 576),
     "Route207": (288, 704),
@@ -224,6 +244,16 @@ PLAT_NAME = {
     "VictoryRoad_Sinnoh_1F": "victory_road_1f",
     "VictoryRoad_Sinnoh_2F": "victory_road_2f",
     "VictoryRoad_Sinnoh_B1F": "victory_road_b1f",
+    "PokemonLeague_AaronsRoom": "pokemon_league_aaron_room",
+    "PokemonLeague_BerthasRoom": "pokemon_league_bertha_room",
+    "PokemonLeague_FlintsRoom": "pokemon_league_flint_room",
+    "PokemonLeague_LuciansRoom": "pokemon_league_lucian_room",
+    "PokemonLeague_Elevator_ToAaron": "pokemon_league_elevator_to_aaron_room",
+    "PokemonLeague_Elevator_ToBertha": "pokemon_league_elevator_to_bertha_room",
+    "PokemonLeague_Elevator_ToFlint": "pokemon_league_elevator_to_flint_room",
+    "PokemonLeague_Elevator_ToLucian": "pokemon_league_elevator_to_lucian_room",
+    "PokemonLeague_Elevator_ToCynthia": "pokemon_league_elevator_to_champion_room",
+    "CanalaveCity_Gym": "canalave_city_gym",
 
     "GreatMarsh": "great_marsh_1",  # events sample; geometry from GreatMarsh_DP lands
     "VerityLakefront": "verity_lakefront",

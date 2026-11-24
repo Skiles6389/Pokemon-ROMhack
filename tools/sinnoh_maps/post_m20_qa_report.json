@@ -625,6 +625,96 @@
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
+    },
+    "PokemonLeague_AaronsRoom": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "PokemonLeague_BerthasRoom": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "PokemonLeague_FlintsRoom": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "PokemonLeague_LuciansRoom": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "PokemonLeague_Elevator_ToAaron": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "PokemonLeague_Elevator_ToBertha": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "PokemonLeague_Elevator_ToFlint": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "PokemonLeague_Elevator_ToLucian": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "PokemonLeague_Elevator_ToCynthia": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "CanalaveCity_Gym": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
     }
   }
 }
