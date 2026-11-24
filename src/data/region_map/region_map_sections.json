@@ -1738,6 +1738,30 @@
     {
       "id": "MAPSEC_ROUTE_209_GATE",
       "name": "ROUTE 209 GATE"
+    },
+    {
+      "id": "MAPSEC_ROUTE_209",
+      "name": "ROUTE 209"
+    },
+    {
+      "id": "MAPSEC_LOST_TOWER",
+      "name": "LOST TOWER"
+    },
+    {
+      "id": "MAPSEC_SOLACEON_TOWN",
+      "name": "SOLACEON TOWN"
+    },
+    {
+      "id": "MAPSEC_ROUTE_210",
+      "name": "ROUTE 210"
+    },
+    {
+      "id": "MAPSEC_ROUTE_215",
+      "name": "ROUTE 215"
+    },
+    {
+      "id": "MAPSEC_VEILSTONE_GATE",
+      "name": "VEILSTONE GATE"
     }
   ]
 }

@@ -13051,11 +13051,14 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM51] =
+    [ITEM_TM_PAYBACK] =
     {
-        .name = ITEM_NAME("TM51"),
+        .name = ITEM_NAME("TM66"),
         .price = 3000,
-        .description = COMPOUND_STRING("?????"), // Todo
+        .description = COMPOUND_STRING(
+            "An attack that is\n"
+            "powered up if the\n"
+            "user was hit first."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

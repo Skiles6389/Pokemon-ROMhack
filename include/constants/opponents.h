@@ -246,20 +246,28 @@
 #define TRAINER_SHAWN                       194
 #define TRAINER_FERNANDO_1                  195
 #define TRAINER_DALTON_1                    196
-#define TRAINER_DALTON_2                    197
-#define TRAINER_DALTON_3                    198
-#define TRAINER_DALTON_4                    199
-#define TRAINER_DALTON_5                    200
+#define TRAINER_JOGGER_RICHARD_R209                    197 // Sinnoh M18: was TRAINER_DALTON_2
+#define TRAINER_DALTON_2 TRAINER_JOGGER_RICHARD_R209
+#define TRAINER_TWINS_EMMA_LIL_R209                    198 // Sinnoh M18: was TRAINER_DALTON_3
+#define TRAINER_DALTON_3 TRAINER_TWINS_EMMA_LIL_R209
+#define TRAINER_YOUNG_COUPLE_R209                    199 // Sinnoh M18: was TRAINER_DALTON_4
+#define TRAINER_DALTON_4 TRAINER_YOUNG_COUPLE_R209
+#define TRAINER_TWINS_TERI_TIA_R210                    200 // Sinnoh M18: was TRAINER_DALTON_5
+#define TRAINER_DALTON_5 TRAINER_TWINS_TERI_TIA_R210
 #define TRAINER_COLE                        201
 #define TRAINER_JEFF                        202
 #define TRAINER_AXLE                        203
 #define TRAINER_JACE                        204
 #define TRAINER_KEEGAN                      205
 #define TRAINER_BERNIE_1                    206
-#define TRAINER_BERNIE_2                    207
-#define TRAINER_BERNIE_3                    208
-#define TRAINER_BERNIE_4                    209
-#define TRAINER_BERNIE_5                    210
+#define TRAINER_BREEDER_KAHLIL_R210                    207 // Sinnoh M18: was TRAINER_BERNIE_2
+#define TRAINER_BERNIE_2 TRAINER_BREEDER_KAHLIL_R210
+#define TRAINER_BREEDER_AMBER_R210                    208 // Sinnoh M18: was TRAINER_BERNIE_3
+#define TRAINER_BERNIE_3 TRAINER_BREEDER_AMBER_R210
+#define TRAINER_BELLE_AND_PA_R210                    209 // Sinnoh M18: was TRAINER_BERNIE_4
+#define TRAINER_BERNIE_4 TRAINER_BELLE_AND_PA_R210
+#define TRAINER_RANCHER_MARCO_R210                    210 // Sinnoh M18: was TRAINER_BERNIE_5
+#define TRAINER_BERNIE_5 TRAINER_RANCHER_MARCO_R210
 #define TRAINER_DREW                        211
 #define TRAINER_BEAU                        212
 #define TRAINER_LARRY                       213
@@ -276,27 +284,40 @@
 #define TRAINER_ETHAN_4 TRAINER_BARRY_3_CHIMCHAR
 #define TRAINER_BARRY_3_PIPLUP                     222 // Sinnoh M17: was TRAINER_ETHAN_5
 #define TRAINER_ETHAN_5 TRAINER_BARRY_3_PIPLUP
-#define TRAINER_BRENT                       223
-#define TRAINER_DONALD                      224
-#define TRAINER_TAYLOR                      225
+#define TRAINER_PSYCHIC_VALERIUS_LT                       223 // Sinnoh M18: was TRAINER_BRENT
+#define TRAINER_BRENT TRAINER_PSYCHIC_VALERIUS_LT
+#define TRAINER_CHANNELER_MOLLY_LT                      224 // Sinnoh M18: was TRAINER_DONALD
+#define TRAINER_DONALD TRAINER_CHANNELER_MOLLY_LT
+#define TRAINER_LASS_CATHERINE_LT                      225 // Sinnoh M18: was TRAINER_TAYLOR
+#define TRAINER_TAYLOR TRAINER_LASS_CATHERINE_LT
 #define TRAINER_JEFFREY_1                   226
-#define TRAINER_DEREK                       227
+#define TRAINER_CHANNELER_REINA_LT                       227 // Sinnoh M18: was TRAINER_DEREK
+#define TRAINER_DEREK TRAINER_CHANNELER_REINA_LT
 #define TRAINER_BARRY_3_TURTWIG                   228 // Sinnoh M17: was TRAINER_JEFFREY_2
 #define TRAINER_JEFFREY_2 TRAINER_BARRY_3_TURTWIG
-#define TRAINER_JEFFREY_3                   229
-#define TRAINER_JEFFREY_4                   230
-#define TRAINER_JEFFREY_5                   231
-#define TRAINER_EDWARD                      232
-#define TRAINER_PRESTON                     233
+#define TRAINER_BREEDER_ALBERT_R209                   229 // Sinnoh M18: was TRAINER_JEFFREY_3
+#define TRAINER_JEFFREY_3 TRAINER_BREEDER_ALBERT_R209
+#define TRAINER_BREEDER_JENNIFER_R209                   230 // Sinnoh M18: was TRAINER_JEFFREY_4
+#define TRAINER_JEFFREY_4 TRAINER_BREEDER_JENNIFER_R209
+#define TRAINER_COWGIRL_SHELLEY_R209                   231 // Sinnoh M18: was TRAINER_JEFFREY_5
+#define TRAINER_JEFFREY_5 TRAINER_COWGIRL_SHELLEY_R209
+#define TRAINER_PSYCHIC_LINDSAY_LT                      232 // Sinnoh M18: was TRAINER_EDWARD
+#define TRAINER_EDWARD TRAINER_PSYCHIC_LINDSAY_LT
+#define TRAINER_CAFE_COLLECTOR_R210                     233 // Sinnoh M18: was TRAINER_PRESTON
+#define TRAINER_PRESTON TRAINER_CAFE_COLLECTOR_R210
 #define TRAINER_VIRGIL                      234
 #define TRAINER_BLAKE                       235
 #define TRAINER_WILLIAM                     236
 #define TRAINER_JOSHUA                      237
 #define TRAINER_CAMERON_1                   238
-#define TRAINER_CAMERON_2                   239
-#define TRAINER_CAMERON_3                   240
-#define TRAINER_CAMERON_4                   241
-#define TRAINER_CAMERON_5                   242
+#define TRAINER_JOGGER_WYATT_R210                   239 // Sinnoh M18: was TRAINER_CAMERON_2
+#define TRAINER_CAMERON_2 TRAINER_JOGGER_WYATT_R210
+#define TRAINER_BOY_GRASS_R210                   240 // Sinnoh M18: was TRAINER_CAMERON_3
+#define TRAINER_CAMERON_3 TRAINER_BOY_GRASS_R210
+#define TRAINER_BLACK_BELT_DEREK_R215                   241 // Sinnoh M18: was TRAINER_CAMERON_4
+#define TRAINER_CAMERON_4 TRAINER_BLACK_BELT_DEREK_R215
+#define TRAINER_BLACK_BELT_GREGORY_R215                   242 // Sinnoh M18: was TRAINER_CAMERON_5
+#define TRAINER_CAMERON_5 TRAINER_BLACK_BELT_GREGORY_R215
 #define TRAINER_JACLYN                      243
 #define TRAINER_HANNAH                      244
 #define TRAINER_SAMANTHA                    245
@@ -304,17 +325,25 @@
 #define TRAINER_KAYLA                       247
 #define TRAINER_ALEXIS                      248
 #define TRAINER_JACKI_1                     249
-#define TRAINER_JACKI_2                     250
-#define TRAINER_JACKI_3                     251
-#define TRAINER_JACKI_4                     252
-#define TRAINER_JACKI_5                     253
+#define TRAINER_BLACK_BELT_NATHANIEL_R215                     250 // Sinnoh M18: was TRAINER_JACKI_2
+#define TRAINER_JACKI_2 TRAINER_BLACK_BELT_NATHANIEL_R215
+#define TRAINER_RUIN_MANIAC_CALVIN_R215                     251 // Sinnoh M18: was TRAINER_JACKI_3
+#define TRAINER_JACKI_3 TRAINER_RUIN_MANIAC_CALVIN_R215
+#define TRAINER_JOGGER_CRAIG_R215                     252 // Sinnoh M18: was TRAINER_JACKI_4
+#define TRAINER_JACKI_4 TRAINER_JOGGER_CRAIG_R215
+#define TRAINER_JOGGER_SCOTT_R215                     253 // Sinnoh M18: was TRAINER_JACKI_5
+#define TRAINER_JACKI_5 TRAINER_JOGGER_SCOTT_R215
 #define TRAINER_WALTER_1                    254
 #define TRAINER_MICAH                       255
 #define TRAINER_THOMAS                      256
-#define TRAINER_WALTER_2                    257
-#define TRAINER_WALTER_3                    258
-#define TRAINER_WALTER_4                    259
-#define TRAINER_WALTER_5                    260
+#define TRAINER_ACE_TRAINER_DENNIS_R215                    257 // Sinnoh M18: was TRAINER_WALTER_2
+#define TRAINER_WALTER_2 TRAINER_ACE_TRAINER_DENNIS_R215
+#define TRAINER_ACE_TRAINER_ALEXIA_R215                    258 // Sinnoh M18: was TRAINER_WALTER_3
+#define TRAINER_WALTER_3 TRAINER_ACE_TRAINER_ALEXIA_R215
+#define TRAINER_ACE_TRAINER_ERNEST_R215                    259 // Sinnoh M18: was TRAINER_WALTER_4
+#define TRAINER_WALTER_4 TRAINER_ACE_TRAINER_ERNEST_R215
+#define TRAINER_CHANNELER_KARINA_LT                    260 // Sinnoh M18: was TRAINER_WALTER_5
+#define TRAINER_WALTER_5 TRAINER_CHANNELER_KARINA_LT
 #define TRAINER_SIDNEY                      261
 #define TRAINER_PHOEBE                      262
 #define TRAINER_GLACIA                      263

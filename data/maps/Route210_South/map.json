@@ -1,0 +1,300 @@
+{
+  "id": "MAP_ROUTE210_SOUTH",
+  "name": "Route210_South",
+  "layout": "LAYOUT_ROUTE210_SOUTH",
+  "music": "MUS_PL_ROUTE203",
+  "night_music": "MUS_PL_ROUTE203_NIGHT",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_ROUTE_210",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_SOLACEON_TOWN",
+      "offset": 0,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE215",
+      "offset": 32,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 18,
+      "y": 70,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Route210_South_EventScript_Teri",
+      "flag": "0",
+      "local_id": "LOCALID_R210_TERI"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 19,
+      "y": 70,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Route210_South_EventScript_Tia",
+      "flag": "0",
+      "local_id": "LOCALID_R210_TIA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 14,
+      "y": 60,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Route210_South_EventScript_Kahlil",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "x": 24,
+      "y": 55,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Route210_South_EventScript_Amber",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "x": 16,
+      "y": 50,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Route210_South_EventScript_Belle",
+      "flag": "0",
+      "local_id": "LOCALID_R210_BELLE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "x": 17,
+      "y": 50,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Route210_South_EventScript_Pa",
+      "flag": "0",
+      "local_id": "LOCALID_R210_PA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 20,
+      "y": 62,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "Route210_South_EventScript_Marco",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
+      "x": 12,
+      "y": 75,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_UP_LEFT",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "Route210_South_EventScript_Wyatt",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
+      "x": 26,
+      "y": 58,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "Route210_South_EventScript_GrassBoy",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PSYDUCK",
+      "x": 17,
+      "y": 43,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route210_South_EventScript_Psyduck",
+      "flag": "0",
+      "local_id": "LOCALID_R210_PSYDUCK_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PSYDUCK",
+      "x": 16,
+      "y": 43,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route210_South_EventScript_Psyduck",
+      "flag": "0",
+      "local_id": "LOCALID_R210_PSYDUCK_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PSYDUCK",
+      "x": 17,
+      "y": 41,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route210_South_EventScript_Psyduck",
+      "flag": "0",
+      "local_id": "LOCALID_R210_PSYDUCK_3"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PSYDUCK",
+      "x": 16,
+      "y": 42,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route210_South_EventScript_Psyduck",
+      "flag": "0",
+      "local_id": "LOCALID_R210_PSYDUCK_4"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 20,
+      "y": 48,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route210_South_EventScript_Cynthia",
+      "flag": "FLAG_HIDE_ROUTE210_CYNTHIA",
+      "local_id": "LOCALID_R210_CYNTHIA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 28,
+      "y": 66,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route210_South_EventScript_ItemHyperPotion",
+      "flag": "FLAG_ITEM_ROUTE210_HYPER_POTION"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 22,
+      "y": 47,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE210_CAFE_CABIN",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_ROUTE210_STATE",
+      "var_value": "0",
+      "script": "Route210_South_EventScript_PsyduckBlock"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_ROUTE210_STATE",
+      "var_value": "0",
+      "script": "Route210_South_EventScript_PsyduckBlock"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_ROUTE210_STATE",
+      "var_value": "0",
+      "script": "Route210_South_EventScript_PsyduckBlock"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_ROUTE210_STATE",
+      "var_value": "0",
+      "script": "Route210_South_EventScript_PsyduckBlock"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 48,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route210_South_EventScript_CafeSign"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 90,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route210_South_EventScript_RouteSign"
+    }
+  ]
+}

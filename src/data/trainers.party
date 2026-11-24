@@ -3544,89 +3544,101 @@ Whismur
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DALTON_2 ===
-Name: DALTON
-Class: Guitarist
-Pic: Guitarist
+=== TRAINER_JOGGER_RICHARD_R209 ===
+Name: RICHARD
+Class: Triathlete
+Pic: Running Triathlete M
 Gender: Male
-Music: Intense
+Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Magnemite
-Level: 25
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Staravia
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Quick Attack
+- Wing Attack
+- Double Team
+- Endeavor
 
-Whismur
-Level: 25
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Magnemite
-Level: 25
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+=== TRAINER_TWINS_EMMA_LIL_R209 ===
+Name: EMMA & LIL
+Class: Twins
+Pic: Twins
+Gender: Female
+Music: Twins
+Double Battle: Yes
+AI: Basic Trainer
 
-=== TRAINER_DALTON_3 ===
-Name: DALTON
-Class: Guitarist
-Pic: Guitarist
+Cleffa
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Pound
+- Charm
+- Encore
+- Sing
+
+Cleffa
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Pound
+- Charm
+- Encore
+- Sing
+
+
+=== TRAINER_YOUNG_COUPLE_R209 ===
+Name: MIKE & NAT
+Class: Young Couple
+Pic: Young Couple
 Gender: Male
-Music: Intense
-Double Battle: No
-AI: Check Bad Move
+Music: Girl
+Double Battle: Yes
+AI: Basic Trainer
 
-Magnemite
-Level: 28
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Pikachu
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Thunder Shock
+- Quick Attack
+- Tail Whip
+- Thunder Wave
 
-Loudred
-Level: 28
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Pikachu
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Thunder Shock
+- Quick Attack
+- Growl
+- Double Team
 
-Magnemite
-Level: 28
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-=== TRAINER_DALTON_4 ===
-Name: DALTON
-Class: Guitarist
-Pic: Guitarist
-Gender: Male
-Music: Intense
-Double Battle: No
-AI: Check Bad Move
+=== TRAINER_TWINS_TERI_TIA_R210 ===
+Name: TERI & TIA
+Class: Twins
+Pic: Twins
+Gender: Female
+Music: Twins
+Double Battle: Yes
+AI: Basic Trainer
 
-Magneton
-Level: 31
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Pichu
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Thunder Shock
+- Charm
+- Tail Whip
+- Sweet Kiss
 
-Loudred
-Level: 31
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Pichu
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Thunder Shock
+- Charm
+- Tail Whip
+- Sweet Kiss
 
-Magneton
-Level: 31
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_DALTON_5 ===
-Name: DALTON
-Class: Guitarist
-Pic: Guitarist
-Gender: Male
-Music: Intense
-Double Battle: No
-AI: Check Bad Move
-
-Magneton
-Level: 34
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Exploud
-Level: 34
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Magneton
-Level: 34
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_COLE ===
 Name: COLE
@@ -3714,73 +3726,109 @@ Wingull
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_BERNIE_2 ===
-Name: BERNIE
-Class: Kindler
-Pic: Kindler
+=== TRAINER_BREEDER_KAHLIL_R210 ===
+Name: KAHLIL
+Class: Pkmn Breeder
+Pic: Pokemon Breeder M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Happiny
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Pound
+- Charm
+- Copycat
+- Refresh
+
+Elekid
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Thunder Shock
+- Quick Attack
+- Leer
+- Swift
+
+
+=== TRAINER_BREEDER_AMBER_R210 ===
+Name: AMBER
+Class: Pkmn Breeder
+Pic: Pokemon Breeder F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+Mime Jr.
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Confusion
+- Barrier
+- Copycat
+- Meditate
+
+Bonsly
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Rock Throw
+- Flail
+- Low Kick
+- Copycat
+
+
+=== TRAINER_BELLE_AND_PA_R210 ===
+Name: BELLE & PA
+Class: Sr And Jr
+Pic: Sr And Jr
+Gender: Female
+Music: Girl
+Double Battle: Yes
+AI: Basic Trainer
+
+Ponyta
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Ember
+- Stomp
+- Tail Whip
+- Growl
+
+Marill
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Bubble Beam
+- Defense Curl
+- Rollout
+- Aqua Jet
+
+
+=== TRAINER_RANCHER_MARCO_R210 ===
+Name: MARCO
+Class: Hiker
+Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Slugma
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Stunky
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Poison Gas
+- Scratch
+- Focus Energy
+- Smokescreen
 
-Wingull
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Ponyta
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Ember
+- Stomp
+- Tail Whip
+- Growl
 
-=== TRAINER_BERNIE_3 ===
-Name: BERNIE
-Class: Kindler
-Pic: Kindler
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Check Bad Move
-
-Slugma
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Pelipper
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-=== TRAINER_BERNIE_4 ===
-Name: BERNIE
-Class: Kindler
-Pic: Kindler
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Check Bad Move
-
-Slugma
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Pelipper
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_BERNIE_5 ===
-Name: BERNIE
-Class: Kindler
-Pic: Kindler
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Check Bad Move
-
-Magcargo
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Pelipper
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_DREW ===
 Name: DREW
@@ -4022,60 +4070,80 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Growl
 
 
-=== TRAINER_BRENT ===
-Name: BRENT
-Class: Bug Maniac
-Pic: Bug Maniac
+=== TRAINER_PSYCHIC_VALERIUS_LT ===
+Name: VALERIUS
+Class: Psychic
+Pic: Psychic M
 Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+Abra
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Teleport
+
+Duskull
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Astonish
+- Disable
+- Pursuit
+- Confuse Ray
+
+
+=== TRAINER_CHANNELER_MOLLY_LT ===
+Name: MOLLY
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Surskit
-Level: 26
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Gastly
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Lick
+- Mean Look
+- Curse
+- Night Shade
 
-=== TRAINER_DONALD ===
-Name: DONALD
-Class: Bug Maniac
-Pic: Bug Maniac
-Gender: Male
-Music: Suspicious
+Haunter
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Night Shade
+- Confuse Ray
+- Curse
+- Shadow Punch
+
+
+=== TRAINER_LASS_CATHERINE_LT ===
+Name: CATHERINE
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Wurmple
-Level: 24
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Gastly
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Lick
+- Confuse Ray
+- Hypnosis
+- Night Shade
 
-Silcoon
-Level: 24
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Drifloon
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Astonish
+- Gust
+- Focus Energy
+- Payback
 
-Beautifly
-Level: 24
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_TAYLOR ===
-Name: TAYLOR
-Class: Bug Maniac
-Pic: Bug Maniac
-Gender: Male
-Music: Suspicious
-Double Battle: No
-AI: Check Bad Move
-
-Wurmple
-Level: 27
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Cascoon
-Level: 27
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Dustox
-Level: 27
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_JEFFREY_1 ===
 Name: JEFFREY
@@ -4098,22 +4166,23 @@ Surskit
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DEREK ===
-Name: DEREK
-Class: Bug Maniac
-Pic: Bug Maniac
-Gender: Male
+=== TRAINER_CHANNELER_REINA_LT ===
+Name: REINA
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Female
 Music: Suspicious
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Dustox
-Level: 16
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Haunter
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Night Shade
+- Confuse Ray
+- Curse
+- Shadow Punch
 
-Beautifly
-Level: 16
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_BARRY_3_TURTWIG ===
 Name: BARRY
@@ -4149,107 +4218,127 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Withdraw
 
 
-=== TRAINER_JEFFREY_3 ===
-Name: JEFFREY
-Class: Bug Maniac
-Pic: Bug Maniac
+=== TRAINER_BREEDER_ALBERT_R209 ===
+Name: ALBERT
+Class: Pkmn Breeder
+Pic: Pokemon Breeder M
 Gender: Male
-Music: Suspicious
+Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Surskit
-Level: 34
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Surskit
-Level: 34
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Masquerain
-Level: 34
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-=== TRAINER_JEFFREY_4 ===
-Name: JEFFREY
-Class: Bug Maniac
-Pic: Bug Maniac
-Gender: Male
-Music: Suspicious
-Double Battle: No
-AI: Check Bad Move
-
-Surskit
-Level: 36
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Wurmple
-Level: 36
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Surskit
-Level: 36
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Masquerain
-Level: 36
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_JEFFREY_5 ===
-Name: JEFFREY
-Class: Bug Maniac
-Pic: Bug Maniac
-Gender: Male
-Music: Suspicious
-Double Battle: No
-AI: Check Bad Move
-
-Surskit
-Level: 38
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Dustox
-Level: 38
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Surskit
-Level: 38
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Masquerain @ Silver Powder
-Level: 38
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Beautifly
-Level: 38
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-=== TRAINER_EDWARD ===
-Name: EDWARD
-Class: Psychic
-Pic: Psychic M
-Gender: Male
-Music: Intense
-Double Battle: No
-AI: Check Bad Move
-
-Abra
-Level: 15
+Bidoof
+Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Hidden Power
+- Tackle
+- Growl
+- Defense Curl
+- Rollout
 
-=== TRAINER_PRESTON ===
-Name: PRESTON
+Buizel
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Aqua Jet
+- Growl
+- Water Sport
+- Quick Attack
+
+
+=== TRAINER_BREEDER_JENNIFER_R209 ===
+Name: JENNIFER
+Class: Pkmn Breeder
+Pic: Pokemon Breeder F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+Mime Jr.
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Confusion
+- Barrier
+- Copycat
+- Tickle
+
+Roselia
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Absorb
+- Stun Spore
+- Mega Drain
+- Growth
+
+
+=== TRAINER_COWGIRL_SHELLEY_R209 ===
+Name: SHELLEY
+Class: Beauty
+Pic: Beauty
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+Ponyta
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Ember
+- Stomp
+- Tail Whip
+- Growl
+
+
+=== TRAINER_PSYCHIC_LINDSAY_LT ===
+Name: LINDSAY
 Class: Psychic
 Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Kirlia
-Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Chingling
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Confusion
+- Growl
+- Astonish
+- Yawn
+
+Kadabra
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Confusion
+- Disable
+- Psybeam
+- Reflect
+
+
+=== TRAINER_CAFE_COLLECTOR_R210 ===
+Name: JORDAN
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+Staravia
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Wing Attack
+- Quick Attack
+- Double Team
+- Endeavor
+
+Buizel
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Aqua Jet
+- Pursuit
+- Sonic Boom
+- Growl
+
 
 === TRAINER_VIRGIL ===
 Name: VIRGIL
@@ -4328,73 +4417,85 @@ Solrock
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_CAMERON_2 ===
-Name: CAMERON
-Class: Psychic
-Pic: Psychic M
+=== TRAINER_JOGGER_WYATT_R210 ===
+Name: WYATT
+Class: Triathlete
+Pic: Running Triathlete M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Machop
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Low Kick
+- Leer
+- Focus Energy
+- Karate Chop
+
+
+=== TRAINER_BOY_GRASS_R210 ===
+Name: TYLER
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Croagunk
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Poison Sting
+- Mud Slap
+- Astonish
+- Taunt
+
+
+=== TRAINER_BLACK_BELT_DEREK_R215 ===
+Name: DEREK
+Class: Black Belt
+Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Kadabra
-Level: 33
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Machoke
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Karate Chop
+- Low Kick
+- Seismic Toss
+- Focus Energy
 
-Solrock
-Level: 33
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-=== TRAINER_CAMERON_3 ===
-Name: CAMERON
-Class: Psychic
-Pic: Psychic M
+=== TRAINER_BLACK_BELT_GREGORY_R215 ===
+Name: GREGORY
+Class: Black Belt
+Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Kadabra
-Level: 38
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Meditite
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Confusion
+- Detect
+- Force Palm
+- Meditate
 
-Solrock
-Level: 38
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Machop
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Karate Chop
+- Seismic Toss
+- Foresight
+- Revenge
 
-=== TRAINER_CAMERON_4 ===
-Name: CAMERON
-Class: Psychic
-Pic: Psychic M
-Gender: Male
-Music: Intense
-Double Battle: No
-AI: Check Bad Move
-
-Kadabra
-Level: 41
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Solrock
-Level: 41
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_CAMERON_5 ===
-Name: CAMERON
-Class: Psychic
-Pic: Psychic M
-Gender: Male
-Music: Intense
-Double Battle: No
-AI: Check Bad Move
-
-Solrock
-Level: 45
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Alakazam
-Level: 45
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_JACLYN ===
 Name: JACLYN
@@ -4504,73 +4605,85 @@ Lunatone
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_JACKI_2 ===
-Name: JACKI
-Class: Psychic
-Pic: Psychic F
-Gender: Female
+=== TRAINER_BLACK_BELT_NATHANIEL_R215 ===
+Name: NATHANIEL
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Kadabra
-Level: 34
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Machoke
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Karate Chop
+- Seismic Toss
+- Revenge
+- Vital Throw
 
-Lunatone
-Level: 34
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-=== TRAINER_JACKI_3 ===
-Name: JACKI
-Class: Psychic
-Pic: Psychic F
-Gender: Female
-Music: Intense
+=== TRAINER_RUIN_MANIAC_CALVIN_R215 ===
+Name: CALVIN
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Kadabra
-Level: 37
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Bronzor
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Confusion
+- Confuse Ray
+- Extrasensory
+- Iron Defense
 
-Lunatone
-Level: 37
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Geodude
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Rock Throw
+- Magnitude
+- Defense Curl
+- Rollout
 
-=== TRAINER_JACKI_4 ===
-Name: JACKI
-Class: Psychic
-Pic: Psychic F
-Gender: Female
-Music: Intense
+
+=== TRAINER_JOGGER_CRAIG_R215 ===
+Name: CRAIG
+Class: Triathlete
+Pic: Running Triathlete M
+Gender: Male
+Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Kadabra
-Level: 40
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Staravia
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Wing Attack
+- Quick Attack
+- Double Team
+- Endeavor
 
-Lunatone
-Level: 40
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-=== TRAINER_JACKI_5 ===
-Name: JACKI
-Class: Psychic
-Pic: Psychic F
-Gender: Female
-Music: Intense
+=== TRAINER_JOGGER_SCOTT_R215 ===
+Name: SCOTT
+Class: Triathlete
+Pic: Running Triathlete M
+Gender: Male
+Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Lunatone
-Level: 43
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Staravia
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Wing Attack
+- Quick Attack
+- Endeavor
+- Aerial Ace
 
-Alakazam
-Level: 43
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_WALTER_1 ===
 Name: WALTER
@@ -4615,100 +4728,101 @@ Zangoose
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_WALTER_2 ===
-Name: WALTER
-Class: Gentleman
-Pic: Gentleman
+=== TRAINER_ACE_TRAINER_DENNIS_R215 ===
+Name: DENNIS
+Class: Cooltrainer
+Pic: Cooltrainer M
 Gender: Male
-Music: Rich
+Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Manectric
-Level: 34
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-=== TRAINER_WALTER_3 ===
-Name: WALTER
-Class: Gentleman
-Pic: Gentleman
-Gender: Male
-Music: Rich
-Double Battle: No
-AI: Check Bad Move
-
-Linoone
-Level: 36
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Headbutt
+Gligar
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Wing Attack
 - Sand Attack
-- Odor Sleuth
-- Fury Swipes
+- Slash
+- Poison Sting
 
-Manectric
-Level: 36
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Quick Attack
-- Spark
-- Odor Sleuth
-- Roar
+Buizel
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Aqua Jet
+- Pursuit
+- Swift
+- Sonic Boom
 
-=== TRAINER_WALTER_4 ===
-Name: WALTER
-Class: Gentleman
-Pic: Gentleman
-Gender: Male
-Music: Rich
+
+=== TRAINER_ACE_TRAINER_ALEXIA_R215 ===
+Name: ALEXIA
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Linoone
-Level: 39
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Headbutt
-- Sand Attack
-- Odor Sleuth
-- Fury Swipes
+Roselia
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Mega Drain
+- Stun Spore
+- Magical Leaf
+- Growth
 
-Manectric
-Level: 39
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Quick Attack
-- Spark
-- Odor Sleuth
+Ponyta
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Ember
+- Stomp
+- Flame Wheel
+- Tail Whip
 
-=== TRAINER_WALTER_5 ===
-Name: WALTER
-Class: Gentleman
-Pic: Gentleman
+
+=== TRAINER_ACE_TRAINER_ERNEST_R215 ===
+Name: ERNEST
+Class: Cooltrainer
+Pic: Cooltrainer M
 Gender: Male
-Music: Rich
+Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Linoone
-Level: 41
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Headbutt
-- Sand Attack
-- Odor Sleuth
-- Fury Swipes
+Machoke
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Karate Chop
+- Seismic Toss
+- Revenge
+- Vital Throw
 
-Golduck
-Level: 41
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Fury Swipes
-- Disable
+Kadabra
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Confusion
-- Psych Up
+- Disable
+- Psybeam
+- Reflect
 
-Manectric
-Level: 41
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Quick Attack
-- Spark
-- Odor Sleuth
-- Roar
+
+=== TRAINER_CHANNELER_KARINA_LT ===
+Name: KARINA
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Female
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+Gastly
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Lick
+- Confuse Ray
+- Night Shade
+- Hypnosis
+
 
 === TRAINER_SIDNEY ===
 Name: SIDNEY

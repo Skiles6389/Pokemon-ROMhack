@@ -48,15 +48,15 @@
       "x": 12,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_HEARTHOME_CITY",
-      "dest_warp_id": "14"
+      "dest_map": "MAP_ROUTE209",
+      "dest_warp_id": "0"
     },
     {
       "x": 13,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_HEARTHOME_CITY",
-      "dest_warp_id": "14"
+      "dest_map": "MAP_ROUTE209",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
