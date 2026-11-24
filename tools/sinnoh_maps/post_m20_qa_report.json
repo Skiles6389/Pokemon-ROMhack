@@ -1,0 +1,514 @@
+{
+  "fail": 0,
+  "warn": 0,
+  "findings": [],
+  "land": {
+    "TwinleafTown": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 96,
+      "walkable_blocked": 16,
+      "notes": [],
+      "samples": [
+        [
+          7,
+          1,
+          477
+        ],
+        [
+          8,
+          1,
+          476
+        ],
+        [
+          9,
+          1,
+          477
+        ],
+        [
+          10,
+          1,
+          476
+        ],
+        [
+          21,
+          1,
+          477
+        ],
+        [
+          22,
+          1,
+          476
+        ],
+        [
+          23,
+          1,
+          477
+        ],
+        [
+          24,
+          1,
+          476
+        ]
+      ]
+    },
+    "Route201": {
+      "status": "PASS",
+      "size": "64x32",
+      "plat_size": "64x32",
+      "mismatch": 49,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "SandgemTown": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 205,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "Route202": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 25,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "JubilifeCity": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 561,
+      "walkable_blocked": 5,
+      "notes": [],
+      "samples": [
+        [
+          61,
+          53,
+          477
+        ],
+        [
+          61,
+          54,
+          469
+        ],
+        [
+          61,
+          55,
+          477
+        ],
+        [
+          61,
+          56,
+          469
+        ],
+        [
+          61,
+          57,
+          477
+        ]
+      ]
+    },
+    "Route203": {
+      "status": "PASS",
+      "size": "64x32",
+      "plat_size": "64x32",
+      "mismatch": 20,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "OreburghCity": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 2840,
+      "walkable_blocked": 1,
+      "notes": [
+        "collision diverge 2840/4096 (69.3%) [informational]"
+      ],
+      "samples": [
+        [
+          50,
+          20,
+          538
+        ]
+      ]
+    },
+    "OreburghGate_1F": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 870,
+      "walkable_blocked": 0,
+      "notes": [
+        "collision diverge 870/1024 (85.0%) [informational]"
+      ],
+      "samples": []
+    },
+    "OreburghGate_B1F": {
+      "status": "PASS",
+      "size": "64x32",
+      "plat_size": "64x32",
+      "mismatch": 1369,
+      "walkable_blocked": 0,
+      "notes": [
+        "collision diverge 1369/2048 (66.8%) [informational]"
+      ],
+      "samples": []
+    },
+    "OreburghMine_B1F": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 809,
+      "walkable_blocked": 0,
+      "notes": [
+        "collision diverge 809/1024 (79.0%) [informational]"
+      ],
+      "samples": []
+    },
+    "OreburghMine_B2F": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 671,
+      "walkable_blocked": 0,
+      "notes": [
+        "collision diverge 671/1024 (65.5%) [informational]"
+      ],
+      "samples": []
+    },
+    "Route204_South": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 11,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "Route204_North": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 16,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "RavagedPath": {
+      "status": "PASS",
+      "size": "32x64",
+      "plat_size": "32x64",
+      "mismatch": 688,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "FloaromaTown": {
+      "status": "PASS",
+      "size": "32x64",
+      "plat_size": "32x64",
+      "mismatch": 125,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "FloaromaMeadow": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 555,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "Route205_South": {
+      "status": "PASS",
+      "size": "32x96",
+      "plat_size": "32x96",
+      "mismatch": 42,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "ValleyWindworks_Exterior": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 37,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "EternaForest": {
+      "status": "PASS",
+      "size": "96x96",
+      "plat_size": "96x96",
+      "mismatch": 101,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "Route205_North": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 37,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "EternaCity": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 258,
+      "walkable_blocked": 2,
+      "notes": [],
+      "samples": [
+        [
+          20,
+          5,
+          538
+        ],
+        [
+          20,
+          6,
+          538
+        ]
+      ]
+    },
+    "Route206": {
+      "status": "PASS",
+      "size": "32x128",
+      "plat_size": "32x128",
+      "mismatch": 147,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "Route207": {
+      "status": "PASS",
+      "size": "64x32",
+      "plat_size": "64x32",
+      "mismatch": 140,
+      "walkable_blocked": 3,
+      "notes": [],
+      "samples": [
+        [
+          59,
+          12,
+          121
+        ],
+        [
+          60,
+          12,
+          121
+        ],
+        [
+          60,
+          13,
+          121
+        ]
+      ]
+    },
+    "MtCoronet_1F_South": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 649,
+      "walkable_blocked": 0,
+      "notes": [
+        "collision diverge 649/1024 (63.4%) [informational]"
+      ],
+      "samples": []
+    },
+    "Route208": {
+      "status": "PASS",
+      "size": "64x32",
+      "plat_size": "64x32",
+      "mismatch": 194,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "HearthomeCity": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 419,
+      "walkable_blocked": 2,
+      "notes": [],
+      "samples": [
+        [
+          8,
+          53,
+          538
+        ],
+        [
+          12,
+          56,
+          538
+        ]
+      ]
+    },
+    "Route209": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 452,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "SolaceonTown": {
+      "status": "PASS",
+      "size": "64x32",
+      "plat_size": "64x32",
+      "mismatch": 277,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "Route210_South": {
+      "status": "PASS",
+      "size": "32x96",
+      "plat_size": "32x96",
+      "mismatch": 150,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "Route215": {
+      "status": "PASS",
+      "size": "96x32",
+      "plat_size": "96x32",
+      "mismatch": 504,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "VeilstoneCity": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 558,
+      "walkable_blocked": 15,
+      "notes": [],
+      "samples": [
+        [
+          8,
+          21,
+          538
+        ],
+        [
+          32,
+          25,
+          538
+        ],
+        [
+          32,
+          26,
+          538
+        ],
+        [
+          55,
+          38,
+          121
+        ],
+        [
+          59,
+          38,
+          121
+        ],
+        [
+          55,
+          42,
+          121
+        ],
+        [
+          57,
+          42,
+          121
+        ],
+        [
+          58,
+          42,
+          121
+        ]
+      ]
+    },
+    "Route214": {
+      "status": "PASS",
+      "size": "32x96",
+      "plat_size": "32x96",
+      "mismatch": 518,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "ValorLakefront": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 908,
+      "walkable_blocked": 1,
+      "notes": [],
+      "samples": [
+        [
+          37,
+          53,
+          538
+        ]
+      ]
+    },
+    "Route213": {
+      "status": "PASS",
+      "size": "96x64",
+      "plat_size": "96x64",
+      "mismatch": 1047,
+      "walkable_blocked": 3,
+      "notes": [],
+      "samples": [
+        [
+          8,
+          11,
+          538
+        ],
+        [
+          69,
+          16,
+          538
+        ],
+        [
+          69,
+          17,
+          538
+        ]
+      ]
+    },
+    "PastoriaCity": {
+      "status": "PASS",
+      "size": "64x64",
+      "plat_size": "64x64",
+      "mismatch": 807,
+      "walkable_blocked": 1,
+      "notes": [],
+      "samples": [
+        [
+          4,
+          45,
+          538
+        ]
+      ]
+    }
+  }
+}

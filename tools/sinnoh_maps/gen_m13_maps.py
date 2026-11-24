@@ -260,8 +260,9 @@ def main():
     mt[26][20] = 0x0A7
     write_layout("Route204_North", 32, 32, "gTileset_General", "gTileset_Petalburg", pack(mt))
 
-    # --- Ravaged Path: 435 (N) + 374 (S), 32x64 cave ---
-    aN, aS = load_attrs(435), load_attrs(374)
+    # --- Ravaged Path: MAP_435 (N) + MAP_436 (S), 32x64 cave ---
+    # (Post-M20 QA: was incorrectly using land 374 for the south half.)
+    aN, aS = load_attrs(435), load_attrs(436)
     g = []
     for y in range(32):
         g.append([aN[y * 32 + x] for x in range(32)])
@@ -275,30 +276,30 @@ def main():
     mt[44][28] = CAVE_ENTRANCE
     write_layout("RavagedPath", 32, 64, "gTileset_General", "gTileset_Cave", pack(mt))
 
-    # --- Floaroma Town: land 29 (south 32) + land 25-ish north; use 29+31 pattern ---
-    # Floaroma is 32x64 at (160,608). South chunk (y32-63) = land 29 works for buildings.
-    # North chunk: find neighbor north of 29
-    a29 = load_attrs(29)
-    # Prefer land 25 as north flower fields (open + grass) — verify meadow warps
-    aN = load_attrs(25)
+    # --- Floaroma Town: MAP_033 (N) + MAP_032 (S), 32x64 at (160,608) ---
+    # (Post-M20 QA: was incorrectly using MAP_025+029 Route 207/206 chunks.)
+    aN, aS = load_attrs(33), load_attrs(32)
     g = []
     for y in range(32):
         g.append([aN[y * 32 + x] for x in range(32)])
     for y in range(32):
-        g.append([a29[y * 32 + x] for x in range(32)])
+        g.append([aS[y * 32 + x] for x in range(32)])
     mt = attrs_to_metatile_grid(g)
-    # Building doors (local to origin 160,608):
-    # PC (16,58), Mart (24,49), Flower shop (20,43), SE house (24,58), Mid house (11,46)
+    # Land 033 south edge is solid (altitude seam) — carve corridor to south half
+    open_path(mt, [(x, y) for x in range(14, 20) for y in range(26, 34)])
+    # Connections
+    open_path(mt, [(x, 63) for x in range(14, 18)])  # south to R204N
+    open_path(mt, [(20, 4), (21, 4), (20, 5), (21, 5)])  # north meadow
+    open_path(mt, [(2, 33), (3, 33), (2, 34), (3, 34)])  # west meadow entrance
+    open_path(mt, [(31, y) for y in range(50, 55)])  # east gate to Route 205 (M14)
+    for dx, dy in ((16, 58), (24, 49), (20, 43), (24, 58), (11, 46)):
+        open_path(mt, [(dx, dy + 1), (dx - 1, dy + 1), (dx + 1, dy + 1)])
+    # Building doors (local to origin 160,608) — stamp last so door metatiles stick
     stamp_building(mt, 16, 58, "center")
     stamp_building(mt, 24, 49, "mart")
     stamp_building(mt, 20, 43, "shop")
     stamp_building(mt, 24, 58, "house")
     stamp_building(mt, 11, 46, "house")
-    # Connections
-    open_path(mt, [(x, 63) for x in range(14, 18)])  # south to R204N
-    open_path(mt, [(20, 4), (21, 4), (20, 5), (21, 5)])  # north meadow
-    open_path(mt, [(2, 33), (3, 33)])  # west meadow entrance
-    open_path(mt, [(31, y) for y in range(48, 52)])  # east gate to Route 205 (M14)
     write_layout("FloaromaTown", 32, 64, "gTileset_General", "gTileset_Petalburg", pack(mt))
 
     # --- Floaroma Meadow: approximate 64x64 from collision of a grassy cave-like outdoor ---
