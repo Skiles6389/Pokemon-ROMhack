@@ -100,7 +100,8 @@
     "gMapGroup_IndoorM31Champion",
     "gMapGroup_IndoorM32PostgameFight",
     "gMapGroup_IndoorM33SurvivalResort",
-    "gMapGroup_IndoorM34Stark"
+    "gMapGroup_IndoorM34Stark",
+    "gMapGroup_IndoorM35Temple"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1545,5 +1546,14 @@
     "StarkMountain_Room1",
     "StarkMountain_Room2",
     "StarkMountain_HeatranRoom"
+  ],
+  "gMapGroup_IndoorM35Temple": [
+    "SnowpointTemple_1F",
+    "SnowpointTemple_B1F",
+    "SnowpointTemple_B2F",
+    "SnowpointTemple_B3F",
+    "SnowpointTemple_B4F",
+    "SnowpointTemple_B5F",
+    "AcuityCavern"
   ]
 }

@@ -11347,6 +11347,83 @@
       "border_filepath": "data/layouts/StarkMountain_HeatranRoom/border.bin",
       "blockdata_filepath": "data/layouts/StarkMountain_HeatranRoom/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SNOWPOINT_TEMPLE_1F",
+      "name": "SnowpointTemple_1F_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SnowpointTemple_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SnowpointTemple_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SNOWPOINT_TEMPLE_B1F",
+      "name": "SnowpointTemple_B1F_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SnowpointTemple_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/SnowpointTemple_B1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SNOWPOINT_TEMPLE_B2F",
+      "name": "SnowpointTemple_B2F_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SnowpointTemple_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/SnowpointTemple_B2F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SNOWPOINT_TEMPLE_B3F",
+      "name": "SnowpointTemple_B3F_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SnowpointTemple_B3F/border.bin",
+      "blockdata_filepath": "data/layouts/SnowpointTemple_B3F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SNOWPOINT_TEMPLE_B4F",
+      "name": "SnowpointTemple_B4F_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SnowpointTemple_B4F/border.bin",
+      "blockdata_filepath": "data/layouts/SnowpointTemple_B4F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SNOWPOINT_TEMPLE_B5F",
+      "name": "SnowpointTemple_B5F_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SnowpointTemple_B5F/border.bin",
+      "blockdata_filepath": "data/layouts/SnowpointTemple_B5F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ACUITY_CAVERN",
+      "name": "AcuityCavern_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/AcuityCavern/border.bin",
+      "blockdata_filepath": "data/layouts/AcuityCavern/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }
