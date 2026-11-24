@@ -81,7 +81,8 @@
     "gMapGroup_IndoorOreburgh",
     "gMapGroup_IndoorFloaroma",
     "gMapGroup_IndoorEterna",
-    "gMapGroup_IndoorM16"
+    "gMapGroup_IndoorM16",
+    "gMapGroup_IndoorHearthome"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -161,7 +162,8 @@
     "EternaCity",
     "Route206",
     "Route207",
-    "Route208"
+    "Route208",
+    "HearthomeCity"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1259,5 +1261,20 @@
     "Route206_CyclingRoadSouthGate",
     "Route208_BerryMastersHouse",
     "Route208_HearthomeGate"
+  ],
+  "gMapGroup_IndoorHearthome": [
+    "HearthomeCity_PokemonCenter_1F",
+    "HearthomeCity_PokemonCenter_2F",
+    "HearthomeCity_Mart",
+    "HearthomeCity_BebesHouse",
+    "HearthomeCity_PokemonFanClub",
+    "HearthomeCity_ForeignBuilding",
+    "HearthomeCity_ContestLobby",
+    "HearthomeCity_PoffinHouse",
+    "HearthomeCity_Gym",
+    "HearthomeCity_AmitySquareWestGate",
+    "HearthomeCity_AmitySquareEastGate",
+    "HearthomeCity_Route209Gate",
+    "HearthomeCity_Route212Gate"
   ]
 }

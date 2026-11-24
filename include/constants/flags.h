@@ -700,10 +700,10 @@
 #define FLAG_ITEM_ROUTE207_POKE_BALL  0x283 // Sinnoh M16
 #define FLAG_ITEM_ROUTE208_ETHER  0x284 // Sinnoh M16
 #define FLAG_ITEM_MT_CORONET_PROTEIN  0x285 // Sinnoh M16
-#define FLAG_UNUSED_0x286  0x286 // Unused Flag
-#define FLAG_UNUSED_0x287  0x287 // Unused Flag
-#define FLAG_UNUSED_0x288  0x288 // Unused Flag
-#define FLAG_UNUSED_0x289  0x289 // Unused Flag
+#define FLAG_GOT_BEBE_EEVEE  0x286 // Sinnoh M17
+#define FLAG_RECEIVED_HEARTHOME_GYM_TM  0x287 // Sinnoh M17
+#define FLAG_HIDE_HEARTHOME_BARRY  0x288 // Sinnoh M17; set after rival battle
+#define FLAG_HIDE_HEARTHOME_FANTINA  0x289 // Sinnoh M17; cleared after badge (cameo)
 #define FLAG_UNUSED_0x28A  0x28A // Unused Flag
 #define FLAG_UNUSED_0x28B  0x28B // Unused Flag
 #define FLAG_UNUSED_0x28C  0x28C // Unused Flag

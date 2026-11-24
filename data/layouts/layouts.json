@@ -9730,6 +9730,28 @@
       "border_filepath": "data/layouts/Route208/border.bin",
       "blockdata_filepath": "data/layouts/Route208/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HEARTHOME_CITY",
+      "name": "HearthomeCity_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HearthomeCity/border.bin",
+      "blockdata_filepath": "data/layouts/HearthomeCity/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HEARTHOME_CITY_GYM",
+      "name": "HearthomeCity_Gym_Layout",
+      "width": 20,
+      "height": 30,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_RustboroGym",
+      "border_filepath": "data/layouts/HearthomeCity_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/HearthomeCity_Gym/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

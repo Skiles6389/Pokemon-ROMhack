@@ -49,45 +49,17 @@
       "x": 12,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE208",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_HEARTHOME_CITY",
+      "dest_warp_id": "12"
     },
     {
       "x": 13,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE208",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_HEARTHOME_CITY",
+      "dest_warp_id": "13"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 4,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Route208_HearthomeGate_EventScript_HearthomeClosed"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 4,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Route208_HearthomeGate_EventScript_HearthomeClosed"
-    },
-    {
-      "type": "trigger",
-      "x": 12,
-      "y": 4,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Route208_HearthomeGate_EventScript_HearthomeClosed"
-    }
-  ],
+  "coord_events": [],
   "bg_events": []
 }

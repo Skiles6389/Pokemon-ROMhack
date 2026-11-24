@@ -1730,6 +1730,14 @@
     {
       "id": "MAPSEC_HEARTHOME_GATE",
       "name": "HEARTHOME GATE"
+    },
+    {
+      "id": "MAPSEC_HEARTHOME_CITY",
+      "name": "HEARTHOME CITY"
+    },
+    {
+      "id": "MAPSEC_ROUTE_209_GATE",
+      "name": "ROUTE 209 GATE"
     }
   ]
 }

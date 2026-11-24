@@ -233,8 +233,10 @@
 #define TRAINER_NOB_2 TRAINER_AROMA_LADY_HANNAH_R208
 #define TRAINER_ARTIST_WILLIAM_R208                    185 // Sinnoh M16: was TRAINER_NOB_3
 #define TRAINER_NOB_3 TRAINER_ARTIST_WILLIAM_R208
-#define TRAINER_NOB_4                       186
-#define TRAINER_NOB_5                       187
+#define TRAINER_LEADER_FANTINA                       186 // Sinnoh M17: was TRAINER_NOB_4
+#define TRAINER_NOB_4 TRAINER_LEADER_FANTINA
+#define TRAINER_LASS_MOLLY_HEARTHOME                       187 // Sinnoh M17: was TRAINER_NOB_5
+#define TRAINER_NOB_5 TRAINER_LASS_MOLLY_HEARTHOME
 #define TRAINER_YUJI                        188
 #define TRAINER_DAISUKE                     189
 #define TRAINER_ATSUSHI                     190
@@ -266,16 +268,21 @@
 #define TRAINER_ETHAN_1                     216
 #define TRAINER_AUTUMN                      217
 #define TRAINER_TRAVIS                      218
-#define TRAINER_ETHAN_2                     219
-#define TRAINER_ETHAN_3                     220
-#define TRAINER_ETHAN_4                     221
-#define TRAINER_ETHAN_5                     222
+#define TRAINER_SCHOOL_KID_KARINA_HEARTHOME                     219 // Sinnoh M17: was TRAINER_ETHAN_2
+#define TRAINER_ETHAN_2 TRAINER_SCHOOL_KID_KARINA_HEARTHOME
+#define TRAINER_ACE_TRAINER_BRYCE_HEARTHOME                     220 // Sinnoh M17: was TRAINER_ETHAN_3
+#define TRAINER_ETHAN_3 TRAINER_ACE_TRAINER_BRYCE_HEARTHOME
+#define TRAINER_BARRY_3_CHIMCHAR                     221 // Sinnoh M17: was TRAINER_ETHAN_4
+#define TRAINER_ETHAN_4 TRAINER_BARRY_3_CHIMCHAR
+#define TRAINER_BARRY_3_PIPLUP                     222 // Sinnoh M17: was TRAINER_ETHAN_5
+#define TRAINER_ETHAN_5 TRAINER_BARRY_3_PIPLUP
 #define TRAINER_BRENT                       223
 #define TRAINER_DONALD                      224
 #define TRAINER_TAYLOR                      225
 #define TRAINER_JEFFREY_1                   226
 #define TRAINER_DEREK                       227
-#define TRAINER_JEFFREY_2                   228
+#define TRAINER_BARRY_3_TURTWIG                   228 // Sinnoh M17: was TRAINER_JEFFREY_2
+#define TRAINER_JEFFREY_2 TRAINER_BARRY_3_TURTWIG
 #define TRAINER_JEFFREY_3                   229
 #define TRAINER_JEFFREY_4                   230
 #define TRAINER_JEFFREY_5                   231
