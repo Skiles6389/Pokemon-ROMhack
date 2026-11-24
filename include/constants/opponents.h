@@ -1006,25 +1006,20 @@
 
 #define TRAINER_POKE_KID_DANIELLE                    867 // Sinnoh v0.7
 
-#define TRAINER_TWINS_EMMA_AND_LIL                    868 // Sinnoh v0.7
 
-#define TRAINER_YOUNG_COUPLE_TY_AND_SUE                    869 // Sinnoh v0.7
 
 #define TRAINER_NINJA_BOY_FABIAN                    870 // Sinnoh v0.7
 
 #define TRAINER_NINJA_BOY_BRENNAN                    871 // Sinnoh v0.7
 
-#define TRAINER_TWINS_TERI_AND_TIA                    872 // Sinnoh v0.7
 
 #define TRAINER_NINJA_BOY_BRUCE                    873 // Sinnoh v0.7
 
-#define TRAINER_BELLE_AND_PA_AVA_AND_MATT                    874 // Sinnoh v0.7
 
 #define TRAINER_ACE_TRAINER_MAYA                    875 // Sinnoh v0.7
 
 #define TRAINER_PI_CARLOS                    876 // Sinnoh v0.7
 
-#define TRAINER_SWIMMER_SHELTIN                    877 // Sinnoh v0.7
 
 #define TRAINER_GALACTIC_GRUNT_LAKE_VERITY_1                    878 // Sinnoh v0.7
 

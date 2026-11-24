@@ -269,19 +269,3 @@ Route209_EventScript_PokeKidDanielle_After:
 	.string "Keep moving. Every route has a\n"
 	.string "lesson if you look for it.$"
 
-Route209_EventScript_YoungCoupleTyAndSue::
-	trainerbattle_single TRAINER_YOUNG_COUPLE_TY_AND_SUE, Route209_EventScript_YoungCoupleTyAndSue_Intro, Route209_EventScript_YoungCoupleTyAndSue_Defeat
-	msgbox Route209_EventScript_YoungCoupleTyAndSue_After, MSGBOX_AUTOCLOSE
-	end
-
-Route209_EventScript_YoungCoupleTyAndSue_Intro:
-	.string "Hold up! A battle will tell me how\n"
-	.string "far you have come.$"
-
-Route209_EventScript_YoungCoupleTyAndSue_Defeat:
-	.string "That was cleaner than I expected.$"
-
-Route209_EventScript_YoungCoupleTyAndSue_After:
-	.string "Keep moving. Every route has a\n"
-	.string "lesson if you look for it.$"
-

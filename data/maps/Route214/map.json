@@ -319,14 +319,14 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 8,
+      "x": 9,
       "y": 30,
       "elevation": 0,
       "dest_map": "MAP_RUIN_MANIAC_CAVE_LONG",
       "dest_warp_id": "0"
     },
     {
-      "x": 10,
+      "x": 9,
       "y": 30,
       "elevation": 0,
       "dest_map": "MAP_MANIAC_TUNNEL",

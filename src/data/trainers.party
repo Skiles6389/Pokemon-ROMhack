@@ -17685,43 +17685,7 @@ Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
 
-=== TRAINER_TWINS_EMMA_AND_LIL ===
-Name: EMMA & LIL
-Class: Twins
-Pic: Twins
-Gender: Female
-Music: Twins
-Double Battle: Yes
-AI: Check Bad Move
 
-Pachirisu
-Level: 20
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-
-Pachirisu
-Level: 20
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-
-=== TRAINER_YOUNG_COUPLE_TY_AND_SUE ===
-Name: SUE
-Class: Young Couple
-Pic: Young Couple
-Gender: Male
-Music: Male
-Double Battle: Yes
-AI: Check Bad Move
-
-Pachirisu
-Level: 20
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-
-Pachirisu
-Level: 20
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
 
 === TRAINER_NINJA_BOY_FABIAN ===
 Name: FABIAN
@@ -17761,24 +17725,6 @@ Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
 
-=== TRAINER_TWINS_TERI_AND_TIA ===
-Name: TIA
-Class: Twins
-Pic: Twins
-Gender: Female
-Music: Girl
-Double Battle: Yes
-AI: Check Bad Move
-
-Pachirisu
-Level: 20
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-
-Pachirisu
-Level: 20
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
 
 === TRAINER_NINJA_BOY_BRUCE ===
 Name: BRUCE
@@ -17799,24 +17745,6 @@ Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
 
-=== TRAINER_BELLE_AND_PA_AVA_AND_MATT ===
-Name: AVA & MATT
-Class: Sr And Jr
-Pic: Sr And Jr
-Gender: Female
-Music: Girl
-Double Battle: Yes
-AI: Check Bad Move
-
-Pachirisu
-Level: 20
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-
-Pachirisu
-Level: 20
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
 
 === TRAINER_ACE_TRAINER_MAYA ===
 Name: MAYA
@@ -17856,24 +17784,6 @@ Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
 
-=== TRAINER_SWIMMER_SHELTIN ===
-Name: SHELTIN
-Class: Swimmer M
-Pic: Swimmer M
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Remoraid
-Level: 20
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-
-Wingull
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
 
 === TRAINER_GALACTIC_GRUNT_LAKE_VERITY_1 ===
 Name: 1

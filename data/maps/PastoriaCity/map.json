@@ -337,6 +337,13 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE213_PASTORIA_GATE",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 35,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_PASTORIA_CITY_GREAT_MARSH_GATE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

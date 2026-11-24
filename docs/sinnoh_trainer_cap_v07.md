@@ -6,7 +6,7 @@
 |--------|------:|------|
 | `TRAINER_FLAGS_START` | `0x500` | First defeated-trainer flag |
 | `MAX_TRAINERS_COUNT_EMERALD` | **1024** | Flag allocation ceiling |
-| `TRAINERS_COUNT_EMERALD` | live (`max ID + 1`) | `gTrainers` / party table length |
+| `TRAINERS_COUNT_EMERALD` | **882** | `gTrainers` / party table length |
 | `TRAINER_FLAGS_END` | `0x8FF` | Last trainer flag |
 | `SYSTEM_FLAGS` | `0x900` | First system flag (shifts with the cap) |
 
@@ -21,3 +21,21 @@
 - Rematch / Vs. Seeker / Trainer Hill tables are separate enums and do not index `MAX_TRAINERS_COUNT`.
 
 Do not raise the cap without re-checking `sizeof(struct SaveBlock1)` against `SECTOR_DATA_SIZE * 4`.
+
+## v0.7 trainer IDs in use
+
+- `TRAINER_VETERAN_GRANT` = 864
+- `TRAINER_HIKER_ALEXANDER` = 865
+- `TRAINER_JOGGER_RAUL` = 866
+- `TRAINER_POKE_KID_DANIELLE` = 867
+- `TRAINER_NINJA_BOY_FABIAN` = 870
+- `TRAINER_NINJA_BOY_BRENNAN` = 871
+- `TRAINER_NINJA_BOY_BRUCE` = 873
+- `TRAINER_ACE_TRAINER_MAYA` = 875
+- `TRAINER_PI_CARLOS` = 876
+- `TRAINER_GALACTIC_GRUNT_LAKE_VERITY_1` = 878
+- `TRAINER_GALACTIC_GRUNT_LAKE_VERITY_3` = 879
+- `TRAINER_GALACTIC_GRUNT_LAKE_VERITY_2` = 880
+- `TRAINER_GALACTIC_GRUNT_LAKE_VERITY_4` = 881
+
+Holes in 868–877 are unused reserved slots under TRAINERS_COUNT=882; safe for flags.

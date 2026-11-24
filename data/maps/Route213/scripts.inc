@@ -232,19 +232,3 @@ Route213_EventScript_PlatNpc9_Text:
 	.string "These roads keep surprising me.\n"
 	.string "Every corner hides another path.$"
 
-Route213_EventScript_SwimmerSheltin::
-	trainerbattle_single TRAINER_SWIMMER_SHELTIN, Route213_EventScript_SwimmerSheltin_Intro, Route213_EventScript_SwimmerSheltin_Defeat
-	msgbox Route213_EventScript_SwimmerSheltin_After, MSGBOX_AUTOCLOSE
-	end
-
-Route213_EventScript_SwimmerSheltin_Intro:
-	.string "Hold up! A battle will tell me how\n"
-	.string "far you have come.$"
-
-Route213_EventScript_SwimmerSheltin_Defeat:
-	.string "That was cleaner than I expected.$"
-
-Route213_EventScript_SwimmerSheltin_After:
-	.string "Keep moving. Every route has a\n"
-	.string "lesson if you look for it.$"
-

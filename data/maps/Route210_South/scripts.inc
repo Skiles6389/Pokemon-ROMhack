@@ -302,19 +302,3 @@ Route210_South_EventScript_NinjaBoyBruce_After:
 	.string "Keep moving. Every route has a\n"
 	.string "lesson if you look for it.$"
 
-Route210_South_EventScript_BelleAndPaAvaAndMatt::
-	trainerbattle_single TRAINER_BELLE_AND_PA_AVA_AND_MATT, Route210_South_EventScript_BelleAndPaAvaAndMatt_Intro, Route210_South_EventScript_BelleAndPaAvaAndMatt_Defeat
-	msgbox Route210_South_EventScript_BelleAndPaAvaAndMatt_After, MSGBOX_AUTOCLOSE
-	end
-
-Route210_South_EventScript_BelleAndPaAvaAndMatt_Intro:
-	.string "Hold up! A battle will tell me how\n"
-	.string "far you have come.$"
-
-Route210_South_EventScript_BelleAndPaAvaAndMatt_Defeat:
-	.string "That was cleaner than I expected.$"
-
-Route210_South_EventScript_BelleAndPaAvaAndMatt_After:
-	.string "Keep moving. Every route has a\n"
-	.string "lesson if you look for it.$"
-

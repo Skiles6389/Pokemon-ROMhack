@@ -388,3 +388,59 @@ Route201_Text_DawnLater:
 Route201_Text_LucasLater:
 	.string "LUCAS: The lab is east of here.\n"
 	.string "The Professor is expecting you.$"
+
+Route201_EventScript_PlatNpc0::
+	msgbox Route201_EventScript_PlatNpc0_Text, MSGBOX_NPC
+	end
+
+Route201_EventScript_PlatNpc0_Text:
+	.string "The grass ahead still has plenty\n"
+	.string "to teach a new trainer.$"
+
+Route201_EventScript_PlatNpc1::
+	msgbox Route201_EventScript_PlatNpc1_Text, MSGBOX_NPC
+	end
+
+Route201_EventScript_PlatNpc1_Text:
+	.string "The grass ahead still has plenty\n"
+	.string "to teach a new trainer.$"
+
+Route201_EventScript_PlatNpc2::
+	msgbox Route201_EventScript_PlatNpc2_Text, MSGBOX_NPC
+	end
+
+Route201_EventScript_PlatNpc2_Text:
+	.string "The grass ahead still has plenty\n"
+	.string "to teach a new trainer.$"
+
+Route201_EventScript_PlatNpc3::
+	msgbox Route201_EventScript_PlatNpc3_Text, MSGBOX_NPC
+	end
+
+Route201_EventScript_PlatNpc3_Text:
+	.string "The grass ahead still has plenty\n"
+	.string "to teach a new trainer.$"
+
+Route201_EventScript_PlatNpc4::
+	msgbox Route201_EventScript_PlatNpc4_Text, MSGBOX_NPC
+	end
+
+Route201_EventScript_PlatNpc4_Text:
+	.string "Routes like this one link every\n"
+	.string "town in Sinnoh together.$"
+
+Route201_EventScript_PlatNpc5::
+	msgbox Route201_EventScript_PlatNpc5_Text, MSGBOX_NPC
+	end
+
+Route201_EventScript_PlatNpc5_Text:
+	.string "Routes like this one link every\n"
+	.string "town in Sinnoh together.$"
+
+Route201_EventScript_PlatNpc6::
+	msgbox Route201_EventScript_PlatNpc6_Text, MSGBOX_NPC
+	end
+
+Route201_EventScript_PlatNpc6_Text:
+	.string "Routes like this one link every\n"
+	.string "town in Sinnoh together.$"
