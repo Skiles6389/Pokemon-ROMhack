@@ -42,3 +42,19 @@ EVs: 252 Atk / 252 SpA / 6 SpD
 - Protect
 - Solar Beam
 - Dragon Claw
+
+=== PARTNER_CHERYL ===
+Name: CHERYL
+Class: Pkmn Trainer 1
+Pic: Leaf
+Gender: Female
+Music: Female
+AI: Basic Trainer
+
+Chansey (F)
+Level: 15
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Soft-Boiled
+- Egg Bomb
+- Refresh
+- Defense Curl

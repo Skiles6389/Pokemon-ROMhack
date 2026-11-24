@@ -1,0 +1,266 @@
+{
+  "id": "MAP_ETERNA_CITY",
+  "name": "EternaCity",
+  "layout": "LAYOUT_ETERNA_CITY",
+  "music": "MUS_PL_JUBILIFE",
+  "night_music": "MUS_PL_JUBILIFE_NIGHT",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_ETERNA_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE205_NORTH",
+      "offset": 0,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "x": 23,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EternaCity_EventScript_Cynthia",
+      "flag": "FLAG_HIDE_ETERNA_CITY_CYNTHIA",
+      "local_id": "LOCALID_ETERNA_CITY_CYNTHIA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+      "x": 24,
+      "y": 51,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EternaCity_EventScript_Gardenia",
+      "flag": "FLAG_HIDE_ETERNA_CITY_GARDENIA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "x": 16,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EternaCity_EventScript_GalacticGrunt1",
+      "flag": "FLAG_HIDE_ETERNA_CITY_GALACTIC"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "x": 18,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EternaCity_EventScript_GalacticGrunt2",
+      "flag": "FLAG_HIDE_ETERNA_CITY_GALACTIC"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 16,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_HIDE_ETERNA_CITY_GALACTIC_CUT_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 17,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_HIDE_ETERNA_CITY_GALACTIC_CUT_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 18,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_HIDE_ETERNA_CITY_GALACTIC_CUT_3"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 30,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EternaCity_EventScript_SuperRepel",
+      "flag": "FLAG_ITEM_ETERNA_CITY_SUPER_REPEL"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 17,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_TEAM_GALACTIC_ETERNA_BUILDING_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 28,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_CITY_HERB_SHOP",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 18,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_CITY_UNDERGROUND_MAN_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_CITY_BIKE_SHOP",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 39,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_CITY_EAST_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 36,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_CITY_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 36,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_CITY_CONDO",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 50,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_CITY_SOUTH_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 24,
+      "y": 50,
+      "elevation": 0,
+      "dest_map": "MAP_ETERNA_CITY_GYM",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 57,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EternaCity_EventScript_CyclingRoadGate"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 57,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EternaCity_EventScript_CyclingRoadGate"
+    },
+    {
+      "type": "trigger",
+      "x": 60,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EternaCity_EventScript_Route211Gate"
+    },
+    {
+      "type": "trigger",
+      "x": 60,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EternaCity_EventScript_Route211Gate"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 24,
+      "y": 51,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EternaCity_EventScript_GymSign"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EternaCity_EventScript_CitySign"
+    }
+  ]
+}

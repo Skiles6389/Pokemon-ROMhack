@@ -672,24 +672,24 @@
 #define FLAG_ITEM_ROUTE205_SUPER_POTION  0x267
 #define FLAG_ITEM_ROUTE205_REPEL         0x268
 #define FLAG_ITEM_WINDWORKS_POTION       0x269
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
-#define FLAG_UNUSED_0x26B  0x26B // Unused Flag
-#define FLAG_UNUSED_0x26C  0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
-#define FLAG_UNUSED_0x271  0x271 // Unused Flag
-#define FLAG_UNUSED_0x272  0x272 // Unused Flag
-#define FLAG_UNUSED_0x273  0x273 // Unused Flag
-#define FLAG_UNUSED_0x274  0x274 // Unused Flag
-#define FLAG_UNUSED_0x275  0x275 // Unused Flag
-#define FLAG_UNUSED_0x276  0x276 // Unused Flag
-#define FLAG_UNUSED_0x277  0x277 // Unused Flag
-#define FLAG_UNUSED_0x278  0x278 // Unused Flag
-#define FLAG_UNUSED_0x279  0x279 // Unused Flag
-#define FLAG_UNUSED_0x27A  0x27A // Unused Flag
-#define FLAG_UNUSED_0x27B  0x27B // Unused Flag
+#define FLAG_HIDE_ETERNA_FOREST_CHERYL  0x26A // Sinnoh M15
+#define FLAG_HIDE_ETERNA_CITY_CYNTHIA  0x26B // Sinnoh M15
+#define FLAG_HIDE_ETERNA_CITY_GALACTIC  0x26C // Sinnoh M15
+#define FLAG_HIDE_ETERNA_CITY_GARDENIA  0x26D // Sinnoh M15; set after greeting or unused
+#define FLAG_ETERNA_BUILDING_CLEARED  0x26E // Sinnoh M15
+#define FLAG_HIDE_BIKE_SHOP_OWNER  0x26F // Sinnoh M15; set by default until Jupiter
+#define FLAG_HIDE_ETERNA_BUILDING_RICKSHAW  0x270 // Sinnoh M15; set by default until Jupiter
+#define FLAG_RECEIVED_ETERNA_GYM_TM  0x271 // Sinnoh M15
+#define FLAG_HIDE_ETERNA_FOREST_CUT_1  0x272 // Sinnoh M15
+#define FLAG_HIDE_ETERNA_FOREST_CUT_2  0x273 // Sinnoh M15
+#define FLAG_HIDE_ETERNA_CITY_GALACTIC_CUT_1  0x274 // Sinnoh M15
+#define FLAG_HIDE_ETERNA_CITY_GALACTIC_CUT_2  0x275 // Sinnoh M15
+#define FLAG_HIDE_ETERNA_CITY_GALACTIC_CUT_3  0x276 // Sinnoh M15
+#define FLAG_ITEM_ETERNA_FOREST_POTION  0x277 // Sinnoh M15
+#define FLAG_ITEM_ETERNA_FOREST_ETHER  0x278 // Sinnoh M15
+#define FLAG_ITEM_ETERNA_FOREST_ANTIDOTE  0x279 // Sinnoh M15
+#define FLAG_ITEM_ETERNA_CITY_SUPER_REPEL  0x27A // Sinnoh M15
+#define FLAG_ITEM_ROUTE205_NORTH_POTION  0x27B // Sinnoh M15
 #define FLAG_UNUSED_0x27C  0x27C // Unused Flag
 #define FLAG_UNUSED_0x27D  0x27D // Unused Flag
 #define FLAG_UNUSED_0x27E  0x27E // Unused Flag

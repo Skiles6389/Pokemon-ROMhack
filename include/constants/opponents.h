@@ -44,17 +44,25 @@
 #define TRAINER_ROSE_1                       37
 #define TRAINER_FELIX                        38
 #define TRAINER_VIOLET                       39
-#define TRAINER_ROSE_2                       40
-#define TRAINER_ROSE_3                       41
-#define TRAINER_ROSE_4                       42
-#define TRAINER_ROSE_5                       43
+#define TRAINER_LEADER_GARDENIA                       40 // Sinnoh M15: was TRAINER_ROSE_2
+#define TRAINER_ROSE_2 TRAINER_LEADER_GARDENIA
+#define TRAINER_COMMANDER_JUPITER                       41 // Sinnoh M15: was TRAINER_ROSE_3
+#define TRAINER_ROSE_3 TRAINER_COMMANDER_JUPITER
+#define TRAINER_BUG_CATCHER_JACK                       42 // Sinnoh M15: was TRAINER_ROSE_4
+#define TRAINER_ROSE_4 TRAINER_BUG_CATCHER_JACK
+#define TRAINER_BUG_CATCHER_PHILLIP                       43 // Sinnoh M15: was TRAINER_ROSE_5
+#define TRAINER_ROSE_5 TRAINER_BUG_CATCHER_PHILLIP
 #define TRAINER_DUSTY_1                      44
 #define TRAINER_CHIP                         45
 #define TRAINER_FOSTER                       46
-#define TRAINER_DUSTY_2                      47
-#define TRAINER_DUSTY_3                      48
-#define TRAINER_DUSTY_4                      49
-#define TRAINER_DUSTY_5                      50
+#define TRAINER_BUG_CATCHER_DONALD                      47 // Sinnoh M15: was TRAINER_DUSTY_2
+#define TRAINER_DUSTY_2 TRAINER_BUG_CATCHER_DONALD
+#define TRAINER_PSYCHIC_KODY                      48 // Sinnoh M15: was TRAINER_DUSTY_3
+#define TRAINER_DUSTY_3 TRAINER_PSYCHIC_KODY
+#define TRAINER_PSYCHIC_LINDSEY                      49 // Sinnoh M15: was TRAINER_DUSTY_4
+#define TRAINER_DUSTY_4 TRAINER_PSYCHIC_LINDSEY
+#define TRAINER_PSYCHIC_ELIJAH                      50 // Sinnoh M15: was TRAINER_DUSTY_5
+#define TRAINER_DUSTY_5 TRAINER_PSYCHIC_ELIJAH
 #define TRAINER_GABBY_AND_TY_1               51
 #define TRAINER_GABBY_AND_TY_2               52
 #define TRAINER_GABBY_AND_TY_3               53
@@ -64,17 +72,25 @@
 #define TRAINER_LOLA_1                       57
 #define TRAINER_AUSTINA                      58
 #define TRAINER_GWEN                         59
-#define TRAINER_LOLA_2                       60
-#define TRAINER_LOLA_3                       61
-#define TRAINER_LOLA_4                       62
-#define TRAINER_LOLA_5                       63
+#define TRAINER_PSYCHIC_RACHAEL                       60 // Sinnoh M15: was TRAINER_LOLA_2
+#define TRAINER_LOLA_2 TRAINER_PSYCHIC_RACHAEL
+#define TRAINER_LASS_BRIANA                       61 // Sinnoh M15: was TRAINER_LOLA_3
+#define TRAINER_LOLA_3 TRAINER_LASS_BRIANA
+#define TRAINER_LASS_CAROLINE                       62 // Sinnoh M15: was TRAINER_LOLA_4
+#define TRAINER_LOLA_4 TRAINER_LASS_CAROLINE
+#define TRAINER_AROMA_LADY_JENNA                       63 // Sinnoh M15: was TRAINER_LOLA_5
+#define TRAINER_LOLA_5 TRAINER_AROMA_LADY_JENNA
 #define TRAINER_RICKY_1                      64
 #define TRAINER_SIMON                        65
 #define TRAINER_CHARLIE                      66
-#define TRAINER_RICKY_2                      67
-#define TRAINER_RICKY_3                      68
-#define TRAINER_RICKY_4                      69
-#define TRAINER_RICKY_5                      70
+#define TRAINER_AROMA_LADY_ANGELA                      67 // Sinnoh M15: was TRAINER_RICKY_2
+#define TRAINER_RICKY_2 TRAINER_AROMA_LADY_ANGELA
+#define TRAINER_FISHER_ANDREW_R205N                      68 // Sinnoh M15: was TRAINER_RICKY_3
+#define TRAINER_RICKY_3 TRAINER_FISHER_ANDREW_R205N
+#define TRAINER_FISHERMAN_JOSEPH                      69 // Sinnoh M15: was TRAINER_RICKY_4
+#define TRAINER_RICKY_4 TRAINER_FISHERMAN_JOSEPH
+#define TRAINER_FISHERMAN_ZACHARY                      70 // Sinnoh M15: was TRAINER_RICKY_5
+#define TRAINER_RICKY_5 TRAINER_FISHERMAN_ZACHARY
 #define TRAINER_RANDALL                      71
 #define TRAINER_PARKER                       72
 #define TRAINER_GEORGE                       73
@@ -88,10 +104,14 @@
 #define TRAINER_SAMUEL                       81
 #define TRAINER_VITO                         82
 #define TRAINER_OWEN                         83
-#define TRAINER_WILTON_2                     84
-#define TRAINER_WILTON_3                     85
-#define TRAINER_WILTON_4                     86
-#define TRAINER_WILTON_5                     87
+#define TRAINER_SCIENTIST_TRAVON                     84 // Sinnoh M15: was TRAINER_WILTON_2
+#define TRAINER_WILTON_2 TRAINER_SCIENTIST_TRAVON
+#define TRAINER_GALACTIC_GRUNT_ETERNA_1F_1                     85 // Sinnoh M15: was TRAINER_WILTON_3
+#define TRAINER_WILTON_3 TRAINER_GALACTIC_GRUNT_ETERNA_1F_1
+#define TRAINER_GALACTIC_GRUNT_ETERNA_1F_2                     86 // Sinnoh M15: was TRAINER_WILTON_4
+#define TRAINER_WILTON_4 TRAINER_GALACTIC_GRUNT_ETERNA_1F_2
+#define TRAINER_GALACTIC_GRUNT_ETERNA_2F_1                     87 // Sinnoh M15: was TRAINER_WILTON_5
+#define TRAINER_WILTON_5 TRAINER_GALACTIC_GRUNT_ETERNA_2F_1
 #define TRAINER_WARREN                       88
 #define TRAINER_MARY                         89
 #define TRAINER_ALEXIA                       90
@@ -105,8 +125,10 @@
 #define TRAINER_MICHELLE                     98
 #define TRAINER_CAROLINE                     99
 #define TRAINER_JULIE                       100
-#define TRAINER_BROOKE_2                    101
-#define TRAINER_BROOKE_3                    102
+#define TRAINER_GALACTIC_GRUNT_ETERNA_2F_2                    101 // Sinnoh M15: was TRAINER_BROOKE_2
+#define TRAINER_BROOKE_2 TRAINER_GALACTIC_GRUNT_ETERNA_2F_2
+#define TRAINER_GALACTIC_GRUNT_ETERNA_3F                    102 // Sinnoh M15: was TRAINER_BROOKE_3
+#define TRAINER_BROOKE_3 TRAINER_GALACTIC_GRUNT_ETERNA_3F
 #define TRAINER_BROOKE_4                    103
 #define TRAINER_BROOKE_5                    104
 #define TRAINER_PATRICIA                    105

@@ -53,7 +53,7 @@ const struct FieldMoveInfo gFieldMoveInfo[FIELD_MOVES_COUNT] =
         .unlockType = BADGE_UNLOCK,
         .moveID = MOVE_CUT,
         .partyMsgID = PARTY_MSG_NOTHING_TO_CUT,
-        .arg = IS_FRLG ? FLAG_TO_BADGE(FLAG_BADGE02_GET) : FLAG_TO_BADGE(FLAG_BADGE01_GET),
+        .arg = FLAG_TO_BADGE(FLAG_BADGE02_GET), // Sinnoh: Forest Badge unlocks Cut
     },
 
     [FIELD_MOVE_FLASH] =
