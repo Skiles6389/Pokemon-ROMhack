@@ -53,7 +53,7 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 |------------|----------:|---------------------------:|-------|
 | v0.7 baseline | 6,160,744 (5.875 MiB) | ~4.38 MiB | Before M21 |
 | After M21 | 6,119,168 (5.836 MiB) | ~4.41 MiB | Used ~41 KiB (under 280 KiB) |
-| After M22 | | | |
+| After M22 | 6,101,056 (5.818 MiB) | ~4.32 MiB | Used ~18 KiB (under 280 KiB) |
 | After M23 | | | |
 
 ## Large assets log
@@ -67,3 +67,9 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 - Drop unreferenced Hoenn town interiors / unused contest halls already mirrored by Sinnoh.
 - Cull unused FRLG map groups if unreferenced by warps/tests.
 - Prefer shared indoor layouts (`House1`, `Shop`, `PokemonCenter`) over unique footprints.
+
+### Measured after M22
+
+- Free trailing 0xFF: **6,101,056 bytes (5.818 MiB)**
+- Delta from M21 (~6,119,168): ~18 KiB used — under M22 allowance.
+- Maps: Route210_North, CelesticTown (+ houses/cave stub/PC); Surf HM via Celestic grandma (Defog-gated).
