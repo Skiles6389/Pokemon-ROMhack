@@ -737,6 +737,7 @@
 #define FLAG_HIDE_PASTORIA_WAKE_CAMEO  0x2A8 // Sinnoh M20; cleared after Fen Badge
 #define FLAG_PASTORIA_GALACTIC_CHASE  0x2A9 // Sinnoh M20; set when grunt flees
 #define FLAG_VISITED_PASTORIA_CITY  0x2AA // Sinnoh M20; Fly
+#define FLAG_RECEIVED_CANALAVE_GYM_TM  0x2AC // Sinnoh M23 Byron TM
 #define FLAG_GOT_PASTORIA_HM_DEFOG  0x2AB // Sinnoh M20; reserved for Defog NPC
 #define FLAG_ITEM_ETERNAFOREST_V06_0  0x2AC // was FLAG_UNUSED_0x2AC // Unused Flag
 #define FLAG_ITEM_ETERNAFOREST_V06_1  0x2AD // was FLAG_UNUSED_0x2AD // Unused Flag

@@ -1089,7 +1089,21 @@
 
 #define TRAINER_BLACK_BELT_ADAM                    911 // Sinnoh M22
 
-#define TRAINERS_COUNT_EMERALD     912
+#define TRAINER_GUITARIST_TONY                    912 // Sinnoh M23
+
+#define TRAINER_SAILOR_SKYLER                    913 // Sinnoh M23
+
+#define TRAINER_FISHERMAN_MIGUEL                    914 // Sinnoh M23
+
+#define TRAINER_FISHERMAN_LUC                    915 // Sinnoh M23
+
+#define TRAINER_LEADER_BYRON                    916 // Sinnoh M23
+
+#define TRAINER_WORKER_ALAN_CANALAVE                    917 // Sinnoh M23
+
+#define TRAINER_SAILOR_JONAH_CANALAVE                    918 // Sinnoh M23
+
+#define TRAINERS_COUNT_EMERALD     919
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG
