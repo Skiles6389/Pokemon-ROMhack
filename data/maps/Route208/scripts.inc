@@ -229,11 +229,20 @@ Route208_EventScript_PlatNpc8_Text:
 	.string "These roads keep surprising me.\n"
 	.string "Every corner hides another path.$"
 
-Route208_EventScript_V06Traveler1::
-	msgbox Route208_EventScript_V06Traveler1_Text, MSGBOX_NPC
+
+Route208_EventScript_HikerAlexander::
+	trainerbattle_single TRAINER_HIKER_ALEXANDER, Route208_EventScript_HikerAlexander_Intro, Route208_EventScript_HikerAlexander_Defeat
+	msgbox Route208_EventScript_HikerAlexander_After, MSGBOX_AUTOCLOSE
 	end
 
-Route208_EventScript_V06Traveler1_Text:
-	.string "I was hoping for a battle, but I\n"
-	.string "will save my strength for later.$"
+Route208_EventScript_HikerAlexander_Intro:
+	.string "Hold up! A battle will tell me how\n"
+	.string "far you have come.$"
+
+Route208_EventScript_HikerAlexander_Defeat:
+	.string "That was cleaner than I expected.$"
+
+Route208_EventScript_HikerAlexander_After:
+	.string "Keep moving. Every route has a\n"
+	.string "lesson if you look for it.$"
 

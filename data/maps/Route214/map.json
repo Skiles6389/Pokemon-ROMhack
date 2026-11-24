@@ -281,6 +281,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_POTION",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE214_V06_4"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
+      "x": 22,
+      "y": 36,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Route214_EventScript_PiCarlos",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -303,6 +316,20 @@
       "y": 30,
       "elevation": 0,
       "dest_map": "MAP_RUIN_MANIAC_CAVE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 30,
+      "elevation": 0,
+      "dest_map": "MAP_RUIN_MANIAC_CAVE_LONG",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 30,
+      "elevation": 0,
+      "dest_map": "MAP_MANIAC_TUNNEL",
       "dest_warp_id": "0"
     }
   ],

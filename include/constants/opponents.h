@@ -998,7 +998,43 @@
  // Rematch / Vs. Seeker / Trainer Hill tables are separate enums and unaffected.
  // Partner IDs use TRAINER_PARTNER(p) = MAX_TRAINERS_COUNT + p (still u16-safe).
 
-#define TRAINERS_COUNT_EMERALD     896
+#define TRAINER_VETERAN_GRANT                    864 // Sinnoh v0.7
+
+#define TRAINER_HIKER_ALEXANDER                    865 // Sinnoh v0.7
+
+#define TRAINER_JOGGER_RAUL                    866 // Sinnoh v0.7
+
+#define TRAINER_POKE_KID_DANIELLE                    867 // Sinnoh v0.7
+
+#define TRAINER_TWINS_EMMA_AND_LIL                    868 // Sinnoh v0.7
+
+#define TRAINER_YOUNG_COUPLE_TY_AND_SUE                    869 // Sinnoh v0.7
+
+#define TRAINER_NINJA_BOY_FABIAN                    870 // Sinnoh v0.7
+
+#define TRAINER_NINJA_BOY_BRENNAN                    871 // Sinnoh v0.7
+
+#define TRAINER_TWINS_TERI_AND_TIA                    872 // Sinnoh v0.7
+
+#define TRAINER_NINJA_BOY_BRUCE                    873 // Sinnoh v0.7
+
+#define TRAINER_BELLE_AND_PA_AVA_AND_MATT                    874 // Sinnoh v0.7
+
+#define TRAINER_ACE_TRAINER_MAYA                    875 // Sinnoh v0.7
+
+#define TRAINER_PI_CARLOS                    876 // Sinnoh v0.7
+
+#define TRAINER_SWIMMER_SHELTIN                    877 // Sinnoh v0.7
+
+#define TRAINER_GALACTIC_GRUNT_LAKE_VERITY_1                    878 // Sinnoh v0.7
+
+#define TRAINER_GALACTIC_GRUNT_LAKE_VERITY_3                    879 // Sinnoh v0.7
+
+#define TRAINER_GALACTIC_GRUNT_LAKE_VERITY_2                    880 // Sinnoh v0.7
+
+#define TRAINER_GALACTIC_GRUNT_LAKE_VERITY_4                    881 // Sinnoh v0.7
+
+#define TRAINERS_COUNT_EMERALD     882
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG

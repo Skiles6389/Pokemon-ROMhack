@@ -1243,7 +1243,7 @@
 #define FLAG_ITEM_ROUTE213_V06_3  0x4A3 // was FLAG_UNUSED_0x4A3 // Unused Flag
 #define FLAG_ITEM_ROUTE213_V06_4  0x4A4 // was FLAG_UNUSED_0x4A4 // Unused Flag
 #define FLAG_ITEM_PASTORIACITY_V06_0  0x4A5 // was FLAG_UNUSED_0x4A5 // Unused Flag
-#define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
+#define FLAG_LAKE_VALOR_DRAINED                                    0x4A6 // Sinnoh: Lake Valor drained state
 #define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
 #define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
 #define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag

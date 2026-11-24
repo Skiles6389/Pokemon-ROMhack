@@ -252,19 +252,69 @@ Route210_South_EventScript_PlatNpc15_Text:
 	.string "These roads keep surprising me.\n"
 	.string "Every corner hides another path.$"
 
-Route210_South_EventScript_V06Traveler0::
-	msgbox Route210_South_EventScript_V06Traveler0_Text, MSGBOX_NPC
+
+
+Route210_South_EventScript_NinjaBoyFabian::
+	trainerbattle_single TRAINER_NINJA_BOY_FABIAN, Route210_South_EventScript_NinjaBoyFabian_Intro, Route210_South_EventScript_NinjaBoyFabian_Defeat
+	msgbox Route210_South_EventScript_NinjaBoyFabian_After, MSGBOX_AUTOCLOSE
 	end
 
-Route210_South_EventScript_V06Traveler0_Text:
-	.string "I was hoping for a battle, but I\n"
-	.string "will save my strength for later.$"
+Route210_South_EventScript_NinjaBoyFabian_Intro:
+	.string "Hold up! A battle will tell me how\n"
+	.string "far you have come.$"
 
-Route210_South_EventScript_V06Traveler1::
-	msgbox Route210_South_EventScript_V06Traveler1_Text, MSGBOX_NPC
+Route210_South_EventScript_NinjaBoyFabian_Defeat:
+	.string "That was cleaner than I expected.$"
+
+Route210_South_EventScript_NinjaBoyFabian_After:
+	.string "Keep moving. Every route has a\n"
+	.string "lesson if you look for it.$"
+
+Route210_South_EventScript_NinjaBoyBrennan::
+	trainerbattle_single TRAINER_NINJA_BOY_BRENNAN, Route210_South_EventScript_NinjaBoyBrennan_Intro, Route210_South_EventScript_NinjaBoyBrennan_Defeat
+	msgbox Route210_South_EventScript_NinjaBoyBrennan_After, MSGBOX_AUTOCLOSE
 	end
 
-Route210_South_EventScript_V06Traveler1_Text:
-	.string "I was hoping for a battle, but I\n"
-	.string "will save my strength for later.$"
+Route210_South_EventScript_NinjaBoyBrennan_Intro:
+	.string "Hold up! A battle will tell me how\n"
+	.string "far you have come.$"
+
+Route210_South_EventScript_NinjaBoyBrennan_Defeat:
+	.string "That was cleaner than I expected.$"
+
+Route210_South_EventScript_NinjaBoyBrennan_After:
+	.string "Keep moving. Every route has a\n"
+	.string "lesson if you look for it.$"
+
+Route210_South_EventScript_NinjaBoyBruce::
+	trainerbattle_single TRAINER_NINJA_BOY_BRUCE, Route210_South_EventScript_NinjaBoyBruce_Intro, Route210_South_EventScript_NinjaBoyBruce_Defeat
+	msgbox Route210_South_EventScript_NinjaBoyBruce_After, MSGBOX_AUTOCLOSE
+	end
+
+Route210_South_EventScript_NinjaBoyBruce_Intro:
+	.string "Hold up! A battle will tell me how\n"
+	.string "far you have come.$"
+
+Route210_South_EventScript_NinjaBoyBruce_Defeat:
+	.string "That was cleaner than I expected.$"
+
+Route210_South_EventScript_NinjaBoyBruce_After:
+	.string "Keep moving. Every route has a\n"
+	.string "lesson if you look for it.$"
+
+Route210_South_EventScript_BelleAndPaAvaAndMatt::
+	trainerbattle_single TRAINER_BELLE_AND_PA_AVA_AND_MATT, Route210_South_EventScript_BelleAndPaAvaAndMatt_Intro, Route210_South_EventScript_BelleAndPaAvaAndMatt_Defeat
+	msgbox Route210_South_EventScript_BelleAndPaAvaAndMatt_After, MSGBOX_AUTOCLOSE
+	end
+
+Route210_South_EventScript_BelleAndPaAvaAndMatt_Intro:
+	.string "Hold up! A battle will tell me how\n"
+	.string "far you have come.$"
+
+Route210_South_EventScript_BelleAndPaAvaAndMatt_Defeat:
+	.string "That was cleaner than I expected.$"
+
+Route210_South_EventScript_BelleAndPaAvaAndMatt_After:
+	.string "Keep moving. Every route has a\n"
+	.string "lesson if you look for it.$"
 

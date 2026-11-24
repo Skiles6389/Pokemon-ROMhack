@@ -306,6 +306,76 @@
       "elevation": 0,
       "dest_map": "MAP_WAYWARD_CAVE_1F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 105,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE206_CYCLING_ROAD_SOUTH_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 15,
+      "y": 105,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE206_CYCLING_ROAD_SOUTH_GATE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 12,
+      "y": 105,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE206_CYCLING_ROAD_SOUTH_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 105,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE206_CYCLING_ROAD_SOUTH_GATE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 16,
+      "y": 105,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE206_CYCLING_ROAD_SOUTH_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 105,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE206_CYCLING_ROAD_SOUTH_GATE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 14,
+      "y": 112,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE206_CYCLING_ROAD_SOUTH_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 15,
+      "y": 112,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE206_CYCLING_ROAD_SOUTH_GATE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 13,
+      "y": 112,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE206_CYCLING_ROAD_SOUTH_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 112,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE206_CYCLING_ROAD_SOUTH_GATE",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
