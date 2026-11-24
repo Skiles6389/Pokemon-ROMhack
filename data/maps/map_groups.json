@@ -88,7 +88,8 @@
     "gMapGroup_IndoorM20",
     "gMapGroup_IndoorV06",
     "gMapGroup_IndoorM21",
-    "gMapGroup_IndoorM22"
+    "gMapGroup_IndoorM22",
+    "gMapGroup_IndoorM23"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -183,7 +184,10 @@
     "Route212_South",
     "GreatMarsh",
     "Route210_North",
-    "CelesticTown"
+    "CelesticTown",
+    "Route218",
+    "CanalaveCity",
+    "IronIsland"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1393,5 +1397,15 @@
     "Route210_WilmaHouse",
     "Celestic_Cave_Stub",
     "Celestic_PokemonCenter_1F"
+  ],
+  "gMapGroup_IndoorM23": [
+    "Route218_CanalaveGate",
+    "CanalaveCity_Gym",
+    "CanalaveCity_PokemonCenter_1F",
+    "CanalaveCity_Mart",
+    "CanalaveCity_Library",
+    "CanalaveCity_House1",
+    "IronIsland_House",
+    "IronIsland_1F_Stub"
   ]
 }

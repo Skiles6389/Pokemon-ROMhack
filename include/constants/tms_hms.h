@@ -54,7 +54,8 @@
     F(OVERHEAT) \
     F(PAYBACK) \
     F(DRAIN_PUNCH) \
-    F(BRINE)
+    F(BRINE) \
+    F(FLASH_CANNON)
 
 #define FOREACH_HM(F) \
     F(CUT) \

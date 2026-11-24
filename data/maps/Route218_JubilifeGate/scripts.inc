@@ -6,6 +6,5 @@ Route218_JubilifeGate_EventScript_Attendant::
 	end
 
 Route218_JubilifeGate_Text_Attendant:
-	.string "This spot is still settling in.\n"
-	.string "The door you used will take you\l"
-	.string "straight back outside.$"
+	.string "West gate to Route 218.\n"
+	.string "Surf the channel toward Canalave.$"

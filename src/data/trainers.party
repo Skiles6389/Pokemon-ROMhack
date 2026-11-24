@@ -18406,3 +18406,131 @@ Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
 
+=== TRAINER_GUITARIST_TONY ===
+Name: Tony
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Starly
+Level: 28
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+Bidoof
+Level: 28
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+=== TRAINER_SAILOR_SKYLER ===
+Name: Skyler
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Wingull
+Level: 28
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+Mantyke
+Level: 27
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+=== TRAINER_FISHERMAN_MIGUEL ===
+Name: Miguel
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Finneon
+Level: 28
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+Magikarp
+Level: 28
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+=== TRAINER_FISHERMAN_LUC ===
+Name: Luc
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Finneon
+Level: 28
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+Magikarp
+Level: 28
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+=== TRAINER_LEADER_BYRON ===
+Name: Byron
+Class: Leader
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Bronzor
+Level: 37
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+Steelix
+Level: 40
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+Bastiodon
+Level: 41
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+=== TRAINER_WORKER_ALAN_CANALAVE ===
+Name: Alan
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Onix
+Level: 33
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+
+=== TRAINER_SAILOR_JONAH_CANALAVE ===
+Name: Jonah
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Pelipper
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+

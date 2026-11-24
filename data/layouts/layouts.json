@@ -10104,6 +10104,94 @@
       "border_filepath": "data/layouts/Celestic_Cave_Stub/border.bin",
       "blockdata_filepath": "data/layouts/Celestic_Cave_Stub/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE218",
+      "name": "Route218_Layout",
+      "width": 64,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route218/border.bin",
+      "blockdata_filepath": "data/layouts/Route218/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CANALAVE_CITY",
+      "name": "CanalaveCity_Layout",
+      "width": 32,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/CanalaveCity/border.bin",
+      "blockdata_filepath": "data/layouts/CanalaveCity/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_IRON_ISLAND",
+      "name": "IronIsland_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/IronIsland/border.bin",
+      "blockdata_filepath": "data/layouts/IronIsland/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CANALAVE_CITY_HOUSE1",
+      "name": "CanalaveCity_House1_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/CanalaveCity_House1/border.bin",
+      "blockdata_filepath": "data/layouts/CanalaveCity_House1/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CANALAVE_CITY_LIBRARY",
+      "name": "CanalaveCity_Library_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/CanalaveCity_Library/border.bin",
+      "blockdata_filepath": "data/layouts/CanalaveCity_Library/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CANALAVE_CITY_MART",
+      "name": "CanalaveCity_Mart_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/CanalaveCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/CanalaveCity_Mart/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_IRON_ISLAND_HOUSE",
+      "name": "IronIsland_House_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/IronIsland_House/border.bin",
+      "blockdata_filepath": "data/layouts/IronIsland_House/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_IRON_ISLAND_1F_STUB",
+      "name": "IronIsland_1F_Stub_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/IronIsland_1F_Stub/border.bin",
+      "blockdata_filepath": "data/layouts/IronIsland_1F_Stub/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }
