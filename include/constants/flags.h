@@ -704,17 +704,17 @@
 #define FLAG_RECEIVED_HEARTHOME_GYM_TM  0x287 // Sinnoh M17
 #define FLAG_HIDE_HEARTHOME_BARRY  0x288 // Sinnoh M17; set after rival battle
 #define FLAG_HIDE_HEARTHOME_FANTINA  0x289 // Sinnoh M17; cleared after badge (cameo)
-#define FLAG_UNUSED_0x28A  0x28A // Unused Flag
-#define FLAG_UNUSED_0x28B  0x28B // Unused Flag
-#define FLAG_UNUSED_0x28C  0x28C // Unused Flag
-#define FLAG_UNUSED_0x28D  0x28D // Unused Flag
-#define FLAG_UNUSED_0x28E  0x28E // Unused Flag
-#define FLAG_UNUSED_0x28F  0x28F // Unused Flag
-#define FLAG_UNUSED_0x290  0x290 // Unused Flag
-#define FLAG_UNUSED_0x291  0x291 // Unused Flag
-#define FLAG_UNUSED_0x292  0x292 // Unused Flag
-#define FLAG_UNUSED_0x293  0x293 // Unused Flag
-#define FLAG_UNUSED_0x294  0x294 // Unused Flag
+#define FLAG_GOT_LOST_TOWER_CLEANSE_TAG  0x28A // Sinnoh M18
+#define FLAG_GOT_HM04_STRENGTH_LOST_TOWER  0x28B // Sinnoh M18
+#define FLAG_GOT_TM_PAYBACK_R215  0x28C // Sinnoh M18
+#define FLAG_ITEM_ROUTE209_GREAT_BALL  0x28D // Sinnoh M18
+#define FLAG_ITEM_ROUTE209_HYPER_POTION  0x28E // Sinnoh M18
+#define FLAG_ITEM_ROUTE209_CALCIUM  0x28F // Sinnoh M18
+#define FLAG_ITEM_ROUTE209_ETHER  0x290 // Sinnoh M18
+#define FLAG_HIDE_ROUTE210_CYNTHIA  0x291 // Sinnoh M18; hidden until story needs her
+#define FLAG_ITEM_ROUTE210_HYPER_POTION  0x292 // Sinnoh M18
+#define FLAG_ITEM_ROUTE215_ETHER  0x293 // Sinnoh M18
+#define FLAG_ITEM_ROUTE215_HYPER_POTION  0x294 // Sinnoh M18
 #define FLAG_UNUSED_0x295  0x295 // Unused Flag
 #define FLAG_UNUSED_0x296  0x296 // Unused Flag
 #define FLAG_UNUSED_0x297  0x297 // Unused Flag

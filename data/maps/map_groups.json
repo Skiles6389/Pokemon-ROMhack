@@ -82,7 +82,8 @@
     "gMapGroup_IndoorFloaroma",
     "gMapGroup_IndoorEterna",
     "gMapGroup_IndoorM16",
-    "gMapGroup_IndoorHearthome"
+    "gMapGroup_IndoorHearthome",
+    "gMapGroup_IndoorM18"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -163,7 +164,11 @@
     "Route206",
     "Route207",
     "Route208",
-    "HearthomeCity"
+    "HearthomeCity",
+    "Route209",
+    "SolaceonTown",
+    "Route210_South",
+    "Route215"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1276,5 +1281,23 @@
     "HearthomeCity_AmitySquareEastGate",
     "HearthomeCity_Route209Gate",
     "HearthomeCity_Route212Gate"
+  ],
+  "gMapGroup_IndoorM18": [
+    "LostTower_1F",
+    "LostTower_2F",
+    "LostTower_3F",
+    "LostTower_4F",
+    "LostTower_5F",
+    "SolaceonTown_PokemonCenter_1F",
+    "SolaceonTown_PokemonCenter_2F",
+    "SolaceonTown_Mart",
+    "SolaceonTown_PokemonDayCare",
+    "SolaceonTown_NewsPress",
+    "SolaceonTown_NorthHouse",
+    "SolaceonTown_NortheastHouse",
+    "SolaceonTown_EastHouse",
+    "SolaceonRuins_ExteriorGate",
+    "Route210_CafeCabin",
+    "Route215_VeilstoneGate"
   ]
 }

@@ -9752,6 +9752,116 @@
       "border_filepath": "data/layouts/HearthomeCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/HearthomeCity_Gym/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE209",
+      "name": "Route209_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route209/border.bin",
+      "blockdata_filepath": "data/layouts/Route209/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SOLACEON_TOWN",
+      "name": "SolaceonTown_Layout",
+      "width": 64,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/SolaceonTown/border.bin",
+      "blockdata_filepath": "data/layouts/SolaceonTown/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE210_SOUTH",
+      "name": "Route210_South_Layout",
+      "width": 32,
+      "height": 96,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route210_South/border.bin",
+      "blockdata_filepath": "data/layouts/Route210_South/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE215",
+      "name": "Route215_Layout",
+      "width": 96,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route215/border.bin",
+      "blockdata_filepath": "data/layouts/Route215/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_LOST_TOWER_1_F",
+      "name": "LostTower_1F_Layout",
+      "width": 16,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/LostTower_1F/border.bin",
+      "blockdata_filepath": "data/layouts/LostTower_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_LOST_TOWER_2_F",
+      "name": "LostTower_2F_Layout",
+      "width": 16,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/LostTower_2F/border.bin",
+      "blockdata_filepath": "data/layouts/LostTower_2F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_LOST_TOWER_3_F",
+      "name": "LostTower_3F_Layout",
+      "width": 16,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/LostTower_3F/border.bin",
+      "blockdata_filepath": "data/layouts/LostTower_3F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_LOST_TOWER_4_F",
+      "name": "LostTower_4F_Layout",
+      "width": 16,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/LostTower_4F/border.bin",
+      "blockdata_filepath": "data/layouts/LostTower_4F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_LOST_TOWER_5_F",
+      "name": "LostTower_5F_Layout",
+      "width": 16,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/LostTower_5F/border.bin",
+      "blockdata_filepath": "data/layouts/LostTower_5F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE210_CAFE_CABIN",
+      "name": "Route210_CafeCabin_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/Route210_CafeCabin/border.bin",
+      "blockdata_filepath": "data/layouts/Route210_CafeCabin/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }
