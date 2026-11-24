@@ -1263,15 +1263,15 @@
 #define FLAG_DEFEATED_HEATRAN_STARK  0x4A7 // Sinnoh M34 Heatran at Stark
 #define FLAG_DEFEATED_REGIGIGAS_TEMPLE  0x4A8 // Sinnoh M35 Regigigas at Snowpoint Temple
 #define FLAG_DEFEATED_UXIE_ACUITY  0x4A9 // Sinnoh M35 Uxie at Acuity Cavern
-#define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
-#define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
-#define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag
-#define FLAG_UNUSED_0x4BD                                           0x4BD // Unused Flag
-#define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
-#define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag
-#define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
-#define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag
-#define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
+#define FLAG_HIDE_ROUTE202_ASSISTANT                                0x4BA // Sinnoh: Dawn/Lucas leaves after catch tutorial
+#define FLAG_HIDE_SANDGEM_ASSISTANT                                 0x4BB // Sinnoh: Dawn/Lucas leaves after Sandgem tour
+#define FLAG_HIDE_LAKE_VALOR_SATURN                                 0x4BC // Sinnoh: Saturn leaves Lake Valor after defeat
+#define FLAG_HIDE_LAKE_VALOR_GRUNTS                                 0x4BD // Sinnoh: Galactic grunts leave Lake Valor with Saturn
+#define FLAG_HIDE_LAKE_ACUITY_JUPITER                               0x4BE // Sinnoh: Jupiter leaves Lake Acuity after defeat
+#define FLAG_HIDE_SPEAR_PILLAR_CYRUS                                0x4BF // Sinnoh: Cyrus leaves Spear Pillar after defeat
+#define FLAG_HIDE_SPEAR_PILLAR_DISTORTED_CYRUS                      0x4C0 // Sinnoh: Cyrus leaves Distorted Spear Pillar
+#define FLAG_GOT_ROUTE210_SECRET_POTION                             0x4C1 // Sinnoh: Cafe Cabin tonic for Route 210 Psyduck
+#define FLAG_HIDE_ROUTE210_PSYDUCKS                                 0x4C2 // Sinnoh: Psyduck leave after Secret Potion
 #define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
 #define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag
 #define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag

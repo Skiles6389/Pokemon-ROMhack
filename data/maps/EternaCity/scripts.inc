@@ -14,15 +14,24 @@ EternaCity_EventScript_Cynthia::
 	giveitem ITEM_HM_CUT
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_HM_CUT
-	setflag FLAG_HIDE_ETERNA_CITY_CYNTHIA
 	setvar VAR_ETERNA_CITY_STATE, 2
 	msgbox EternaCity_Text_CynthiaGiveCut, MSGBOX_DEFAULT
 	closemessage
-	fadescreen FADE_TO_BLACK
+	applymovement LOCALID_ETERNA_CITY_CYNTHIA, EternaCity_Movement_CynthiaLeave
+	waitmovement 0
 	removeobject LOCALID_ETERNA_CITY_CYNTHIA
-	fadescreen FADE_FROM_BLACK
+	setflag FLAG_HIDE_ETERNA_CITY_CYNTHIA
 	release
 	end
+
+EternaCity_Movement_CynthiaLeave:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
 
 EternaCity_EventScript_CynthiaDone::
 	msgbox EternaCity_Text_CynthiaAfterGift, MSGBOX_DEFAULT

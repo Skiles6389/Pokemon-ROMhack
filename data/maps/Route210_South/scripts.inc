@@ -49,7 +49,33 @@ Route210_South_EventScript_GrassBoy::
 Route210_South_EventScript_Psyduck::
 	lock
 	faceplayer
+	goto_if_set FLAG_GOT_ROUTE210_SECRET_POTION, Route210_South_EventScript_AskUseSecretPotion
 	msgbox Route210_South_Text_PsyduckHeadache, MSGBOX_DEFAULT
+	release
+	end
+
+Route210_South_EventScript_AskUseSecretPotion::
+	msgbox Route210_South_Text_AskUseSecretPotion, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route210_South_EventScript_DontUseSecretPotion
+	msgbox Route210_South_Text_UsedSecretPotion, MSGBOX_DEFAULT
+	closemessage
+	playmoncry SPECIES_PSYDUCK, CRY_MODE_NORMAL
+	waitmoncry
+	applymovement LOCALID_R210_PSYDUCK_1, Route210_South_Movement_Psyduck1Leave
+	applymovement LOCALID_R210_PSYDUCK_2, Route210_South_Movement_Psyduck2Leave
+	applymovement LOCALID_R210_PSYDUCK_3, Route210_South_Movement_Psyduck3Leave
+	applymovement LOCALID_R210_PSYDUCK_4, Route210_South_Movement_Psyduck4Leave
+	waitmovement 0
+	removeobject LOCALID_R210_PSYDUCK_1
+	removeobject LOCALID_R210_PSYDUCK_2
+	removeobject LOCALID_R210_PSYDUCK_3
+	removeobject LOCALID_R210_PSYDUCK_4
+	setflag FLAG_HIDE_ROUTE210_PSYDUCKS
+	setvar VAR_ROUTE210_STATE, 1
+	release
+	end
+
+Route210_South_EventScript_DontUseSecretPotion::
 	release
 	end
 
@@ -64,6 +90,50 @@ Route210_South_EventScript_PsyduckBlock::
 
 Route210_South_Movement_PushSouth:
 	walk_down
+	step_end
+
+Route210_South_Movement_Psyduck1Leave:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Route210_South_Movement_Psyduck2Leave:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Route210_South_Movement_Psyduck3Leave:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Route210_South_Movement_Psyduck4Leave:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	step_end
 
 Route210_South_EventScript_Cynthia::
@@ -193,6 +263,14 @@ Route210_South_Text_GrassBoyDefeat:
 Route210_South_Text_GrassBoyAfter:
 	.string "Ninja lessons can wait.$"
 
+Route210_South_Text_AskUseSecretPotion:
+	.string "The PSYDUCK look miserable.\n"
+	.string "Use the Cafe Cabin tonic?$"
+
+Route210_South_Text_UsedSecretPotion:
+	.string "{PLAYER} gave the tonic to the PSYDUCK!\p"
+	.string "PSYDUCK: Psy! Psyyaaa!$"
+
 Route210_South_Text_PsyduckHeadache:
 	.string "PSYDUCK: Psyyaaa...\p"
 	.string "It clutches its head.\n"
@@ -201,11 +279,11 @@ Route210_South_Text_PsyduckHeadache:
 Route210_South_Text_PsyduckBlock:
 	.string "The PSYDUCK have splitting headaches\n"
 	.string "and won't budge!\p"
-	.string "You'll need a SecretPotion later.$"
+	.string "Ask at the Cafe Cabin for a tonic.$"
 
 Route210_South_Text_CynthiaHint:
 	.string "Those PSYDUCK need special medicine.\n"
-	.string "Keep exploring--help will come.$"
+	.string "The Cafe Cabin nearby should help.$"
 
 Route210_South_Text_CafeSign:
 	.string "CAFE CABIN\n"

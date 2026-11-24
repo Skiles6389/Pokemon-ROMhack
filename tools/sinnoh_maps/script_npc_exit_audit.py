@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Script audit: story NPCs that should leave must removeobject + set hide flag.
+"""Script audit: every Platinum story NPC that gets removed must exit in our scripts.
 
-Heuristic for Sinnoh maps:
-  - object_events with FLAG_HIDE_* that are cleared during story must later
-    setflag the same hide flag and removeobject the local id
-  - Scripts that end story scenes with only msgbox/release and leave a named
-    rival/assistant/grunt/cynthia/looker on the map are flagged
+Source of truth: tools/sinnoh_maps/platinum_story_npc_exits.json
+(built from pret/pokeplatinum RemoveObject + FLAG_HIDE_* on story maps).
+
+For each non-deferred exit entry, require in data/maps/<map>/scripts.inc:
+  - setflag <flag>
+  - removeobject <local_id>  (unless path_blocker cleared only via remote setflag)
+  - applymovement <local_id> when walk=true
 """
 from __future__ import annotations
 
@@ -16,102 +18,131 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 MAPS = REPO / "data" / "maps"
-
-# Sinnoh outdoor + key story maps (from map_groups towns/routes + known indoors)
-SINNOH_HINTS = (
-    "Twinleaf", "Sandgem", "Jubilife", "Oreburgh", "Floaroma", "Eterna",
-    "Hearthome", "Solaceon", "Veilstone", "Pastoria", "Canalave", "Snowpoint",
-    "Sunyshore", "FightArea", "Survival", "Resort", "Celestic", "Valor",
-    "Acuity", "SpearPillar", "Distortion", "Galactic", "Lake", "Route20",
-    "Route21", "Route22", "IronIsland", "VictoryRoad_Sinnoh", "PokemonLeague",
-    "Stark", "GreatMarsh", "ValleyWindworks", "Ravaged", "MtCoronet",
-)
-
-STORY_GFX = (
-    "RIVAL", "BARRY", "ASSISTANT", "ROWAN", "CYNTHIA", "LOOKER",
-    "GALACTIC", "GRUNT", "MARS", "JUPITER", "SATURN", "CYRUS",
-    "GARDENIA", "WAKE", "FANTINA", "MAYLENE", "BYRON", "CANDICE", "VOLKNER",
-)
+CATALOG = REPO / "tools" / "sinnoh_maps" / "platinum_story_npc_exits.json"
 
 
-def is_sinnoh(name: str) -> bool:
-    return any(h in name for h in SINNOH_HINTS)
+def load_catalog() -> list[dict]:
+    return json.loads(CATALOG.read_text())["exits"]
 
 
-def audit_map(folder: Path) -> list[dict]:
+def script_text(map_name: str) -> str | None:
+    p = MAPS / map_name / "scripts.inc"
+    return p.read_text() if p.exists() else None
+
+
+def map_has_local_id(map_name: str, local_id: str) -> bool:
+    mj = MAPS / map_name / "map.json"
+    if not mj.exists():
+        return False
+    objs = json.loads(mj.read_text()).get("object_events") or []
+    if any(o.get("local_id") == local_id for o in objs):
+        return True
+    # Some maps use .equ in scripts.inc instead of map.json local_id
+    text = script_text(map_name) or ""
+    return bool(re.search(rf"\.equ\s+{re.escape(local_id)}\b|LOCALID_\w*{re.escape(local_id.split('_')[-1])}", text))
+
+
+def audit_exit(entry: dict) -> dict | None:
+    if entry.get("deferred"):
+        return {
+            "map": entry["map"],
+            "role": entry.get("role"),
+            "flag": entry.get("flag"),
+            "status": "DEFERRED",
+            "reason": entry.get("reason") or "stub map",
+        }
+
+    map_name = entry["map"]
+    flag = entry["flag"]
+    local_id = entry.get("local_id")
+    walk = bool(entry.get("walk"))
+    role = entry.get("role") or ""
+    text = script_text(map_name)
+    if text is None:
+        return {
+            "map": map_name,
+            "role": role,
+            "flag": flag,
+            "local_id": local_id,
+            "status": "FAIL",
+            "issue": "missing scripts.inc",
+        }
+
     issues = []
-    scripts = folder / "scripts.inc"
-    mj = folder / "map.json"
-    if not scripts.exists() or not mj.exists():
-        return issues
-    text = scripts.read_text()
-    data = json.loads(mj.read_text())
-    objs = data.get("object_events") or []
+    if f"setflag {flag}" not in text:
+        # Path blockers / remote clears: allow setflag in any Sinnoh scripts.inc
+        if role == "path_blocker" or entry.get("note"):
+            found_elsewhere = False
+            for folder in MAPS.iterdir():
+                sc = folder / "scripts.inc"
+                if sc.exists() and f"setflag {flag}" in sc.read_text():
+                    found_elsewhere = True
+                    break
+            if not found_elsewhere:
+                issues.append(f"missing setflag {flag}")
+        else:
+            issues.append(f"missing setflag {flag}")
 
-    # Map local object index → flag / script / gfx
-    for idx, obj in enumerate(objs):
-        flag = str(obj.get("flag") or "0")
-        script = obj.get("script") or ""
-        gfx = obj.get("graphics_id") or ""
-        if "ITEM_BALL" in gfx.upper() or "POKEBALL" in gfx.upper():
-            continue  # item pickups use item flags, not NPC exits
-        if flag in ("0", "") and not any(s in gfx.upper() for s in STORY_GFX):
-            continue
-        if not script or script == "NULL":
-            continue
-        # Find script body (rough)
-        m = re.search(rf"^{re.escape(script)}::\n(.*?)(?=^\w|\Z)", text, re.M | re.S)
-        body = m.group(1) if m else ""
-        if not body:
-            continue
-        # Permanent town NPCs that only talk — not exits
-        if "applymovement" not in body and "trainerbattle" not in body:
-            continue
-        # Story-ish if it sets vars/flags or has movement
-        storyish = bool(re.search(r"setflag |setvar |applymovement |trainerbattle", body))
-        if not storyish:
-            continue
-        has_remove = "removeobject" in body
-        hide_sets = re.findall(r"setflag (FLAG_HIDE_\w+)", body)
-        # Whole-map script may remove this LOCALID even if talk script doesn't
-        if has_remove or (flag.startswith("FLAG_HIDE_") and f"setflag {flag}" in text):
-            continue
-        if flag.startswith("FLAG_HIDE_") and flag not in hide_sets:
-            if f"clearflag {flag}" in text or "applymovement" in body:
-                issues.append({
-                    "map": folder.name,
-                    "object_index": idx,
-                    "script": script,
-                    "flag": flag,
-                    "gfx": gfx,
-                    "issue": "story script lacks setflag hide + removeobject for this NPC",
-                })
-        elif any(s in gfx.upper() for s in STORY_GFX) and "applymovement" in body and not has_remove:
-            issues.append({
-                "map": folder.name,
-                "object_index": idx,
-                "script": script,
-                "flag": flag,
-                "gfx": gfx,
-                "issue": "story NPC movement without removeobject",
-            })
-    return issues
+    if local_id:
+        if f"removeobject {local_id}" not in text:
+            if role == "path_blocker":
+                pass  # remote flag hide is enough
+            else:
+                issues.append(f"missing removeobject {local_id}")
+        if walk and f"applymovement {local_id}" not in text:
+            issues.append(f"missing applymovement walk-off for {local_id}")
+        if not entry.get("optional_local_id") and not map_has_local_id(map_name, local_id):
+            # Still OK if scripts reference the symbol (map.json or .equ)
+            if local_id not in text:
+                issues.append(f"local_id {local_id} not present in map/scripts")
+
+    if issues:
+        return {
+            "map": map_name,
+            "role": role,
+            "flag": flag,
+            "local_id": local_id,
+            "status": "FAIL",
+            "issue": "; ".join(issues),
+        }
+    return {
+        "map": map_name,
+        "role": role,
+        "flag": flag,
+        "local_id": local_id,
+        "status": "PASS",
+    }
 
 
 def main() -> int:
-    all_issues = []
-    for folder in sorted(MAPS.iterdir()):
-        if not folder.is_dir() or not is_sinnoh(folder.name):
-            continue
-        all_issues.extend(audit_map(folder))
+    results = [audit_exit(e) for e in load_catalog()]
+    results = [r for r in results if r]
+    fails = [r for r in results if r["status"] == "FAIL"]
+    deferred = [r for r in results if r["status"] == "DEFERRED"]
+    passed = [r for r in results if r["status"] == "PASS"]
     out = REPO / "tools/sinnoh_maps/script_npc_exit_audit_report.json"
-    out.write_text(json.dumps({"issues": all_issues, "count": len(all_issues)}, indent=2) + "\n")
-    for i in all_issues[:60]:
-        print(f"FAIL {i['map']}: {i['script']} ({i['gfx']}) — {i['issue']}")
-    if len(all_issues) > 60:
-        print(f"... {len(all_issues) - 60} more")
-    print(f"=== script NPC exit audit: {len(all_issues)} issues → {out} ===")
-    return 1 if all_issues else 0
+    out.write_text(
+        json.dumps(
+            {
+                "results": results,
+                "pass": len(passed),
+                "fail": len(fails),
+                "deferred": len(deferred),
+                "count_fail": len(fails),
+            },
+            indent=2,
+        )
+        + "\n"
+    )
+    for r in fails:
+        print(f"FAIL {r['map']}: {r.get('local_id') or r.get('role')} ({r.get('flag')}) — {r['issue']}")
+    for r in deferred:
+        print(f"DEFER {r['map']}: {r.get('role')} — {r.get('reason')}")
+    print(
+        f"=== script NPC exit audit: {len(fails)} FAIL / {len(passed)} PASS / "
+        f"{len(deferred)} DEFERRED → {out} ==="
+    )
+    return 1 if fails else 0
 
 
 if __name__ == "__main__":

@@ -73,11 +73,20 @@ SandgemTown_EventScript_AssistantFree::
 	checkplayergender
 	goto_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_LucasFree
 	msgbox SandgemTown_Text_DawnFree, MSGBOX_DEFAULT
-	release
+	goto SandgemTown_EventScript_AssistantLeaveFromTalk
 	end
 
 SandgemTown_EventScript_LucasFree::
 	msgbox SandgemTown_Text_LucasFree, MSGBOX_DEFAULT
+	goto SandgemTown_EventScript_AssistantLeaveFromTalk
+	end
+
+SandgemTown_EventScript_AssistantLeaveFromTalk::
+	closemessage
+	applymovement LOCALID_SANDGEM_ASSISTANT, SandgemTown_Movement_AssistantLeave
+	waitmovement 0
+	removeobject LOCALID_SANDGEM_ASSISTANT
+	setflag FLAG_HIDE_SANDGEM_ASSISTANT
 	release
 	end
 
@@ -132,8 +141,34 @@ SandgemTown_EventScript_BarryBump::
 	removeobject LOCALID_SANDGEM_BARRY
 	setflag FLAG_HIDE_SANDGEM_BARRY
 	setvar VAR_SANDGEM_STATE, 4
+	checkplayergender
+	goto_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_LucasTourDone
+	msgbox SandgemTown_Text_DawnTourDone, MSGBOX_DEFAULT
+	goto SandgemTown_EventScript_AssistantLeave
+	end
+
+SandgemTown_EventScript_LucasTourDone::
+	msgbox SandgemTown_Text_LucasTourDone, MSGBOX_DEFAULT
+	goto SandgemTown_EventScript_AssistantLeave
+	end
+
+SandgemTown_EventScript_AssistantLeave::
+	closemessage
+	applymovement LOCALID_SANDGEM_ASSISTANT, SandgemTown_Movement_AssistantLeave
+	waitmovement 0
+	removeobject LOCALID_SANDGEM_ASSISTANT
+	setflag FLAG_HIDE_SANDGEM_ASSISTANT
 	releaseall
 	end
+
+SandgemTown_Movement_AssistantLeave:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
 
 SandgemTown_EventScript_Barry::
 	msgbox SandgemTown_Text_BarryLater, MSGBOX_NPC
@@ -274,6 +309,14 @@ SandgemTown_Text_DawnFree:
 SandgemTown_Text_LucasFree:
 	.string "LUCAS: I'll be around the lab.\n"
 	.string "The Center and the Mart are yours.$"
+
+SandgemTown_Text_DawnTourDone:
+	.string "DAWN: That's the tour!\n"
+	.string "I'm heading back to the lab. See you!$"
+
+SandgemTown_Text_LucasTourDone:
+	.string "LUCAS: That's the tour!\n"
+	.string "I'm heading back to the lab. See you!$"
 
 SandgemTown_Text_Boy:
 	.string "Everybody in town ends up at the\n"

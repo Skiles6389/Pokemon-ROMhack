@@ -164,7 +164,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route210_South_EventScript_Psyduck",
-      "flag": "0",
+      "flag": "FLAG_HIDE_ROUTE210_PSYDUCKS",
       "local_id": "LOCALID_R210_PSYDUCK_1"
     },
     {
@@ -178,7 +178,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route210_South_EventScript_Psyduck",
-      "flag": "0",
+      "flag": "FLAG_HIDE_ROUTE210_PSYDUCKS",
       "local_id": "LOCALID_R210_PSYDUCK_2"
     },
     {
@@ -192,7 +192,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route210_South_EventScript_Psyduck",
-      "flag": "0",
+      "flag": "FLAG_HIDE_ROUTE210_PSYDUCKS",
       "local_id": "LOCALID_R210_PSYDUCK_3"
     },
     {
@@ -206,7 +206,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route210_South_EventScript_Psyduck",
-      "flag": "0",
+      "flag": "FLAG_HIDE_ROUTE210_PSYDUCKS",
       "local_id": "LOCALID_R210_PSYDUCK_4"
     },
     {

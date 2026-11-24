@@ -80,7 +80,10 @@ ValleyWindworks_Interior_EventScript_MarsBattle::
 	trainerbattle_no_intro TRAINER_COMMANDER_MARS, ValleyWindworks_Interior_Text_MarsDefeat
 	msgbox ValleyWindworks_Interior_Text_MarsAfter, MSGBOX_DEFAULT
 	closemessage
-	fadescreen FADE_TO_BLACK
+	applymovement LOCALID_WINDWORKS_MARS, ValleyWindworks_Interior_Movement_MarsLeave
+	applymovement LOCALID_WINDWORKS_GRUNT2, ValleyWindworks_Interior_Movement_GruntLeave
+	applymovement LOCALID_WINDWORKS_GRUNT3, ValleyWindworks_Interior_Movement_GruntLeave
+	waitmovement 0
 	removeobject LOCALID_WINDWORKS_MARS
 	removeobject LOCALID_WINDWORKS_GRUNT2
 	removeobject LOCALID_WINDWORKS_GRUNT3
@@ -94,7 +97,6 @@ ValleyWindworks_Interior_EventScript_MarsBattle::
 	addobject LOCALID_WINDWORKS_DAUGHTER
 	setobjectxy LOCALID_WINDWORKS_DAUGHTER, 11, 8
 	setobjectxy LOCALID_WINDWORKS_SCIENTIST, 12, 8
-	fadescreen FADE_FROM_BLACK
 	fadedefaultbgm
 	applymovement LOCALID_WINDWORKS_DAUGHTER, ValleyWindworks_Interior_Movement_DaughterRun
 	waitmovement 0
@@ -104,6 +106,24 @@ ValleyWindworks_Interior_EventScript_MarsBattle::
 	closemessage
 	releaseall
 	end
+
+ValleyWindworks_Interior_Movement_MarsLeave:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+ValleyWindworks_Interior_Movement_GruntLeave:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 ValleyWindworks_Interior_Movement_DaughterRun:
 	walk_right

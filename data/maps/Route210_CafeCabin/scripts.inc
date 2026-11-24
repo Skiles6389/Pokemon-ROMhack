@@ -4,6 +4,20 @@ Route210_CafeCabin_MapScripts::
 Route210_CafeCabin_EventScript_Waitress::
 	lock
 	faceplayer
+	goto_if_set FLAG_GOT_ROUTE210_SECRET_POTION, Route210_CafeCabin_EventScript_WaitressAfterTonic
+	goto_if_set FLAG_HIDE_ROUTE210_PSYDUCKS, Route210_CafeCabin_EventScript_WaitressShop
+	msgbox Route210_CafeCabin_Text_WaitressOfferTonic, MSGBOX_DEFAULT
+	setflag FLAG_GOT_ROUTE210_SECRET_POTION
+	msgbox Route210_CafeCabin_Text_WaitressGaveTonic, MSGBOX_DEFAULT
+	goto Route210_CafeCabin_EventScript_WaitressShop
+	end
+
+Route210_CafeCabin_EventScript_WaitressAfterTonic::
+	msgbox Route210_CafeCabin_Text_WaitressUseTonic, MSGBOX_DEFAULT
+	goto Route210_CafeCabin_EventScript_WaitressShop
+	end
+
+Route210_CafeCabin_EventScript_WaitressShop::
 	msgbox Route210_CafeCabin_Text_WaitressAsk, MSGBOX_DEFAULT
 	pokemart Route210_CafeCabin_Pokemart
 	msgbox Route210_CafeCabin_Text_WaitressBye, MSGBOX_DEFAULT
@@ -25,6 +39,18 @@ Route210_CafeCabin_Pokemart:
 	.2byte ITEM_NONE
 	release
 	end
+
+Route210_CafeCabin_Text_WaitressOfferTonic:
+	.string "Those PSYDUCK outside look awful.\n"
+	.string "I mixed a special tonic for them.\p"
+	.string "Here--take it to them!$"
+
+Route210_CafeCabin_Text_WaitressGaveTonic:
+	.string "{PLAYER} received the Cafe tonic!$"
+
+Route210_CafeCabin_Text_WaitressUseTonic:
+	.string "Give that tonic to the PSYDUCK\n"
+	.string "blocking the path north of here.$"
 
 Route210_CafeCabin_Text_WaitressAsk:
 	.string "Welcome! Fresh Moomoo Milk today.\n"

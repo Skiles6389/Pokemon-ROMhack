@@ -36,8 +36,22 @@ LakeAcuity_EventScript_Jupiter::
 LakeAcuity_EventScript_JupiterDefeated::
 	setflag FLAG_DEFEATED_JUPITER_LAKE_ACUITY
 	msgbox LakeAcuity_Text_JupiterAfter, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_LAKE_ACUITY_JUPITER, LakeAcuity_Movement_JupiterLeave
+	waitmovement 0
+	removeobject LOCALID_LAKE_ACUITY_JUPITER
+	setflag FLAG_HIDE_LAKE_ACUITY_JUPITER
 	release
 	end
+
+LakeAcuity_Movement_JupiterLeave:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 LakeAcuity_EventScript_JupiterAfter::
 	msgbox LakeAcuity_Text_JupiterAfter, MSGBOX_DEFAULT

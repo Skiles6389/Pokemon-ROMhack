@@ -39,10 +39,23 @@ EternaForest_EventScript_CherylLeaveTrigger::
 	lockall
 	destroyfollowernpc
 	msgbox EternaForest_Text_CherylParting, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ETERNA_FOREST_CHERYL, EternaForest_Movement_CherylLeave
+	waitmovement 0
+	removeobject LOCALID_ETERNA_FOREST_CHERYL
 	setvar VAR_ETERNA_FOREST_CHERYL_STATE, 2
 	setflag FLAG_HIDE_ETERNA_FOREST_CHERYL
 	releaseall
 	end
+
+EternaForest_Movement_CherylLeave:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 EternaForest_EventScript_CherylFollowing::
 	msgbox EternaForest_Text_CherylFollowChat, MSGBOX_NPC
