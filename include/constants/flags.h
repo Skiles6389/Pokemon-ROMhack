@@ -1261,8 +1261,8 @@
 #define FLAG_ITEM_PASTORIACITY_V06_0  0x4A5 // was FLAG_UNUSED_0x4A5 // Unused Flag
 #define FLAG_LAKE_VALOR_DRAINED                                    0x4A6 // Sinnoh: Lake Valor drained state
 #define FLAG_DEFEATED_HEATRAN_STARK  0x4A7 // Sinnoh M34 Heatran at Stark
-#define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
-#define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
+#define FLAG_DEFEATED_REGIGIGAS_TEMPLE  0x4A8 // Sinnoh M35 Regigigas at Snowpoint Temple
+#define FLAG_DEFEATED_UXIE_ACUITY  0x4A9 // Sinnoh M35 Uxie at Acuity Cavern
 #define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
 #define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
 #define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
