@@ -104,7 +104,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SpearPillar_EventScript_Cyrus",
-      "flag": "0"
+      "flag": "FLAG_HIDE_SPEAR_PILLAR_CYRUS",
+      "local_id": "LOCALID_SPEAR_PILLAR_CYRUS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",

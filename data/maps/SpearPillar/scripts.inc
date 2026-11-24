@@ -12,8 +12,22 @@ SpearPillar_EventScript_Cyrus::
 SpearPillar_EventScript_CyrusDefeated::
 	setflag FLAG_DEFEATED_CYRUS_SPEAR_PILLAR
 	msgbox SpearPillar_Text_CyrusAfter, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SPEAR_PILLAR_CYRUS, SpearPillar_Movement_CyrusLeave
+	waitmovement 0
+	removeobject LOCALID_SPEAR_PILLAR_CYRUS
+	setflag FLAG_HIDE_SPEAR_PILLAR_CYRUS
 	release
 	end
+
+SpearPillar_Movement_CyrusLeave:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 SpearPillar_EventScript_CyrusAfter::
 	msgbox SpearPillar_Text_CyrusAfter, MSGBOX_DEFAULT

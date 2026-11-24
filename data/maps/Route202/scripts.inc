@@ -42,8 +42,34 @@ Route202_EventScript_LucasBalls::
 Route202_EventScript_GiveBalls::
 	giveitem ITEM_POKE_BALL, 5
 	setvar VAR_ROUTE202_STATE, 2
+	checkplayergender
+	goto_if_eq VAR_RESULT, FEMALE, Route202_EventScript_LucasPart
+	msgbox Route202_Text_DawnAfter, MSGBOX_DEFAULT
+	goto Route202_EventScript_AssistantLeave
+	end
+
+Route202_EventScript_LucasPart::
+	msgbox Route202_Text_LucasAfter, MSGBOX_DEFAULT
+	goto Route202_EventScript_AssistantLeave
+	end
+
+Route202_EventScript_AssistantLeave::
+	closemessage
+	applymovement LOCALID_ROUTE202_ASSISTANT, Route202_Movement_AssistantLeave
+	waitmovement 0
+	removeobject LOCALID_ROUTE202_ASSISTANT
+	setflag FLAG_HIDE_ROUTE202_ASSISTANT
 	releaseall
 	end
+
+Route202_Movement_AssistantLeave:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
 
 Route202_EventScript_Assistant::
 	lock
@@ -61,14 +87,24 @@ Route202_EventScript_LucasWait::
 	end
 
 Route202_EventScript_AssistantAfter::
+	@ Should already be gone; safety if flag was cleared
 	checkplayergender
 	goto_if_eq VAR_RESULT, FEMALE, Route202_EventScript_LucasAfter
 	msgbox Route202_Text_DawnAfter, MSGBOX_DEFAULT
-	release
+	goto Route202_EventScript_AssistantLeaveFromTalk
 	end
 
 Route202_EventScript_LucasAfter::
 	msgbox Route202_Text_LucasAfter, MSGBOX_DEFAULT
+	goto Route202_EventScript_AssistantLeaveFromTalk
+	end
+
+Route202_EventScript_AssistantLeaveFromTalk::
+	closemessage
+	applymovement LOCALID_ROUTE202_ASSISTANT, Route202_Movement_AssistantLeave
+	waitmovement 0
+	removeobject LOCALID_ROUTE202_ASSISTANT
+	setflag FLAG_HIDE_ROUTE202_ASSISTANT
 	release
 	end
 

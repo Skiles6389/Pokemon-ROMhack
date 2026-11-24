@@ -29,17 +29,26 @@ TeamGalacticEternaBuilding_4F_EventScript_JupiterBattle::
 	trainerbattle_no_intro TRAINER_COMMANDER_JUPITER, TeamGalacticEternaBuilding_4F_Text_JupiterDefeat
 	msgbox TeamGalacticEternaBuilding_4F_Text_JupiterAfter, MSGBOX_DEFAULT
 	closemessage
-	fadescreen FADE_TO_BLACK
+	applymovement LOCALID_GALACTIC_JUPITER, TeamGalacticEternaBuilding_4F_Movement_JupiterLeave
+	waitmovement 0
+	removeobject LOCALID_GALACTIC_JUPITER
 	setflag FLAG_ETERNA_BUILDING_CLEARED
 	setflag FLAG_HIDE_ETERNA_CITY_GALACTIC
 	clearflag FLAG_HIDE_ETERNA_BUILDING_RICKSHAW
 	clearflag FLAG_HIDE_BIKE_SHOP_OWNER
-	removeobject LOCALID_GALACTIC_JUPITER
-	fadescreen FADE_FROM_BLACK
 	fadedefaultbgm
 	msgbox TeamGalacticEternaBuilding_4F_Text_Rickshaw, MSGBOX_DEFAULT
 	releaseall
 	end
+
+TeamGalacticEternaBuilding_4F_Movement_JupiterLeave:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 TeamGalacticEternaBuilding_4F_EventScript_Rickshaw::
 	msgbox TeamGalacticEternaBuilding_4F_Text_RickshawChat, MSGBOX_NPC

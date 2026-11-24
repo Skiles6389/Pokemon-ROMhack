@@ -1,4 +1,379 @@
 {
-  "issues": [],
-  "count": 0
+  "results": [
+    {
+      "map": "Route201",
+      "role": "Barry",
+      "flag": "FLAG_HIDE_ROUTE201_BARRY",
+      "local_id": "LOCALID_ROUTE201_BARRY",
+      "status": "PASS"
+    },
+    {
+      "map": "Route201",
+      "role": "Rowan",
+      "flag": "FLAG_HIDE_ROUTE201_ROWAN",
+      "local_id": "LOCALID_ROUTE201_ROWAN",
+      "status": "PASS"
+    },
+    {
+      "map": "Route201",
+      "role": "Dawn/Lucas",
+      "flag": "FLAG_HIDE_ROUTE201_ASSISTANT",
+      "local_id": "LOCALID_ROUTE201_ASSISTANT",
+      "status": "PASS"
+    },
+    {
+      "map": "Route201",
+      "role": "path_blocker",
+      "flag": "FLAG_HIDE_ROUTE201_TRAVELER",
+      "local_id": "LOCALID_ROUTE201_TRAVELER",
+      "status": "PASS"
+    },
+    {
+      "map": "Route202",
+      "role": "Dawn/Lucas",
+      "flag": "FLAG_HIDE_ROUTE202_ASSISTANT",
+      "local_id": "LOCALID_ROUTE202_ASSISTANT",
+      "status": "PASS"
+    },
+    {
+      "map": "Route203",
+      "role": "Barry",
+      "flag": "FLAG_HIDE_ROUTE203_BARRY",
+      "local_id": "LOCALID_ROUTE203_BARRY",
+      "status": "PASS"
+    },
+    {
+      "map": "SandgemTown",
+      "role": "Barry",
+      "flag": "FLAG_HIDE_SANDGEM_BARRY",
+      "local_id": "LOCALID_SANDGEM_BARRY",
+      "status": "PASS"
+    },
+    {
+      "map": "SandgemTown",
+      "role": "Dawn/Lucas",
+      "flag": "FLAG_HIDE_SANDGEM_ASSISTANT",
+      "local_id": "LOCALID_SANDGEM_ASSISTANT",
+      "status": "PASS"
+    },
+    {
+      "map": "SandgemTown_PokemonLab",
+      "role": "Dawn/Lucas",
+      "flag": "FLAG_HIDE_SANDGEM_LAB_ASSISTANT",
+      "local_id": "LOCALID_SANDGEM_LAB_ASSISTANT",
+      "status": "PASS"
+    },
+    {
+      "map": "JubilifeCity",
+      "role": "Galactic",
+      "flag": "FLAG_HIDE_JUBILIFE_GRUNTS",
+      "local_id": "LOCALID_JUBILIFE_GRUNT",
+      "status": "PASS"
+    },
+    {
+      "map": "JubilifeCity",
+      "role": "Galactic",
+      "flag": "FLAG_HIDE_JUBILIFE_GRUNTS",
+      "local_id": "LOCALID_JUBILIFE_GRUNT_2",
+      "status": "PASS"
+    },
+    {
+      "map": "JubilifeCity",
+      "role": "Dawn/Lucas",
+      "flag": "FLAG_HIDE_JUBILIFE_ASSISTANT",
+      "local_id": "LOCALID_JUBILIFE_ASSISTANT",
+      "status": "PASS"
+    },
+    {
+      "map": "JubilifeCity",
+      "role": "Barry",
+      "flag": "FLAG_HIDE_JUBILIFE_BARRY",
+      "local_id": "LOCALID_JUBILIFE_BARRY",
+      "status": "PASS"
+    },
+    {
+      "map": "OreburghCity",
+      "role": "Barry",
+      "flag": "FLAG_HIDE_OREBURGH_BARRY",
+      "local_id": "LOCALID_OREBURGH_BARRY",
+      "status": "PASS"
+    },
+    {
+      "map": "OreburghMine_B2F",
+      "role": "Roark",
+      "flag": "FLAG_HIDE_OREBURGH_MINE_ROARK",
+      "local_id": "LOCALID_OREBURGH_MINE_ROARK",
+      "status": "PASS"
+    },
+    {
+      "map": "FloaromaMeadow",
+      "role": "Galactic",
+      "flag": "FLAG_HIDE_FLOAROMA_MEADOW_GRUNTS",
+      "local_id": "LOCALID_FLOAROMA_GRUNT_WEST",
+      "status": "PASS"
+    },
+    {
+      "map": "ValleyWindworks_Exterior",
+      "role": "Galactic",
+      "flag": "FLAG_HIDE_WINDWORKS_DOOR_GRUNT",
+      "local_id": "LOCALID_WINDWORKS_DOOR_GRUNT",
+      "status": "PASS"
+    },
+    {
+      "map": "ValleyWindworks_Interior",
+      "role": "Mars",
+      "flag": "FLAG_HIDE_WINDWORKS_INTERIOR_GALACTIC",
+      "local_id": "LOCALID_WINDWORKS_MARS",
+      "status": "PASS"
+    },
+    {
+      "map": "ValleyWindworks_Interior",
+      "role": "Galactic",
+      "flag": "FLAG_HIDE_WINDWORKS_INTERIOR_GALACTIC",
+      "local_id": "LOCALID_WINDWORKS_GRUNT2",
+      "status": "PASS"
+    },
+    {
+      "map": "ValleyWindworks_Interior",
+      "role": "Galactic",
+      "flag": "FLAG_HIDE_WINDWORKS_INTERIOR_GALACTIC",
+      "local_id": "LOCALID_WINDWORKS_GRUNT3",
+      "status": "PASS"
+    },
+    {
+      "map": "Route205_South",
+      "role": "path_blocker",
+      "flag": "FLAG_HIDE_ROUTE205_FOREST_GRUNTS",
+      "local_id": "LOCALID_R205_GRUNT_WEST",
+      "status": "PASS"
+    },
+    {
+      "map": "Route205_South",
+      "role": "path_blocker",
+      "flag": "FLAG_HIDE_ROUTE205_FOREST_GRUNTS",
+      "local_id": "LOCALID_R205_GRUNT_EAST",
+      "status": "PASS"
+    },
+    {
+      "map": "Route205_South",
+      "role": "path_blocker",
+      "flag": "FLAG_HIDE_ROUTE205_LITTLE_GIRL",
+      "local_id": "LOCALID_R205_LITTLE_GIRL",
+      "status": "PASS"
+    },
+    {
+      "map": "EternaForest",
+      "role": "Cheryl",
+      "flag": "FLAG_HIDE_ETERNA_FOREST_CHERYL",
+      "local_id": "LOCALID_ETERNA_FOREST_CHERYL",
+      "status": "PASS"
+    },
+    {
+      "map": "EternaCity",
+      "role": "Cynthia",
+      "flag": "FLAG_HIDE_ETERNA_CITY_CYNTHIA",
+      "local_id": "LOCALID_ETERNA_CITY_CYNTHIA",
+      "status": "PASS"
+    },
+    {
+      "map": "EternaCity",
+      "role": "path_blocker",
+      "flag": "FLAG_HIDE_ETERNA_CITY_GALACTIC",
+      "local_id": "LOCALID_ETERNA_CITY_GRUNT1",
+      "status": "PASS"
+    },
+    {
+      "map": "EternaCity",
+      "role": "path_blocker",
+      "flag": "FLAG_HIDE_ETERNA_CITY_GALACTIC",
+      "local_id": "LOCALID_ETERNA_CITY_GRUNT2",
+      "status": "PASS"
+    },
+    {
+      "map": "TeamGalacticEternaBuilding_4F",
+      "role": "Jupiter",
+      "flag": "FLAG_ETERNA_BUILDING_CLEARED",
+      "local_id": "LOCALID_GALACTIC_JUPITER",
+      "status": "PASS"
+    },
+    {
+      "map": "Route207",
+      "role": "Dawn/Lucas",
+      "flag": "FLAG_HIDE_ROUTE207_COUNTERPART",
+      "local_id": "LOCALID_ROUTE207_COUNTERPART",
+      "status": "PASS"
+    },
+    {
+      "map": "HearthomeCity",
+      "role": "Barry",
+      "flag": "FLAG_HIDE_HEARTHOME_BARRY",
+      "local_id": "LOCALID_HEARTHOME_BARRY",
+      "status": "PASS"
+    },
+    {
+      "map": "Route210_South",
+      "role": "Cynthia",
+      "flag": "FLAG_HIDE_ROUTE210_CYNTHIA",
+      "local_id": "LOCALID_R210_CYNTHIA",
+      "status": "PASS"
+    },
+    {
+      "map": "VeilstoneCity",
+      "role": "Dawn/Lucas",
+      "flag": "FLAG_HIDE_VEILSTONE_COUNTERPART",
+      "local_id": "LOCALID_VEILSTONE_COUNTERPART",
+      "status": "PASS"
+    },
+    {
+      "map": "VeilstoneCity",
+      "role": "Galactic",
+      "flag": "FLAG_HIDE_VEILSTONE_WAREHOUSE_GRUNTS",
+      "local_id": "LOCALID_VEILSTONE_GRUNT_1",
+      "status": "PASS"
+    },
+    {
+      "map": "VeilstoneCity",
+      "role": "Galactic",
+      "flag": "FLAG_HIDE_VEILSTONE_WAREHOUSE_GRUNTS",
+      "local_id": "LOCALID_VEILSTONE_GRUNT_2",
+      "status": "PASS"
+    },
+    {
+      "map": "PastoriaCity",
+      "role": "Barry",
+      "flag": "FLAG_HIDE_PASTORIA_BARRY",
+      "local_id": "LOCALID_PASTORIA_BARRY",
+      "status": "PASS"
+    },
+    {
+      "map": "PastoriaCity",
+      "role": "Galactic",
+      "flag": "FLAG_HIDE_PASTORIA_GALACTIC_GRUNT",
+      "local_id": "LOCALID_PASTORIA_GRUNT",
+      "status": "PASS"
+    },
+    {
+      "map": "LakeVerity",
+      "role": "Cyrus",
+      "flag": "FLAG_HIDE_LAKE_VERITY_CYRUS",
+      "local_id": "LOCALID_LAKE_CYRUS",
+      "status": "PASS"
+    },
+    {
+      "map": "LakeVerity",
+      "role": "Barry",
+      "flag": "FLAG_HIDE_LAKE_VERITY_BARRY",
+      "local_id": "LOCALID_LAKE_BARRY",
+      "status": "PASS"
+    },
+    {
+      "map": "LakeVerity",
+      "role": "Rowan",
+      "flag": "FLAG_HIDE_LAKE_VERITY_ROWAN",
+      "local_id": "LOCALID_LAKE_ROWAN",
+      "status": "PASS"
+    },
+    {
+      "map": "LakeVerity",
+      "role": "Dawn/Lucas",
+      "flag": "FLAG_HIDE_LAKE_VERITY_ASSISTANT",
+      "local_id": "LOCALID_LAKE_ASSISTANT",
+      "status": "PASS"
+    },
+    {
+      "map": "LakeValor_Drained",
+      "role": "Saturn",
+      "flag": "FLAG_HIDE_LAKE_VALOR_SATURN",
+      "local_id": "LOCALID_LAKE_VALOR_SATURN",
+      "status": "PASS"
+    },
+    {
+      "map": "LakeValor_Drained",
+      "role": "Galactic",
+      "flag": "FLAG_HIDE_LAKE_VALOR_GRUNTS",
+      "local_id": "LOCALID_LAKE_VALOR_GRUNT1",
+      "status": "PASS"
+    },
+    {
+      "map": "LakeValor_Drained",
+      "role": "Galactic",
+      "flag": "FLAG_HIDE_LAKE_VALOR_GRUNTS",
+      "local_id": "LOCALID_LAKE_VALOR_GRUNT2",
+      "status": "PASS"
+    },
+    {
+      "map": "LakeValor_Drained",
+      "role": "Galactic",
+      "flag": "FLAG_HIDE_LAKE_VALOR_GRUNTS",
+      "local_id": "LOCALID_LAKE_VALOR_GRUNT3",
+      "status": "PASS"
+    },
+    {
+      "map": "LakeAcuity",
+      "role": "Jupiter",
+      "flag": "FLAG_HIDE_LAKE_ACUITY_JUPITER",
+      "local_id": "LOCALID_LAKE_ACUITY_JUPITER",
+      "status": "PASS"
+    },
+    {
+      "map": "MtCoronet_1F_South",
+      "role": "Cyrus",
+      "flag": "FLAG_HIDE_MT_CORONET_CYRUS",
+      "local_id": "LOCALID_MT_CORONET_CYRUS",
+      "status": "PASS"
+    },
+    {
+      "map": "SpearPillar",
+      "role": "Cyrus",
+      "flag": "FLAG_HIDE_SPEAR_PILLAR_CYRUS",
+      "local_id": "LOCALID_SPEAR_PILLAR_CYRUS",
+      "status": "PASS"
+    },
+    {
+      "map": "SpearPillar_Distorted",
+      "role": "Cyrus",
+      "flag": "FLAG_HIDE_SPEAR_PILLAR_DISTORTED_CYRUS",
+      "local_id": "LOCALID_SPEAR_PILLAR_DIST_CYRUS",
+      "status": "PASS"
+    },
+    {
+      "map": "CelesticTown",
+      "role": "Cynthia",
+      "flag": "FLAG_HIDE_CELESTIC_TOWN_CYNTHIA",
+      "status": "DEFERRED",
+      "reason": "map is PlatNpc stub; no story NPCs yet"
+    },
+    {
+      "map": "CelesticTown",
+      "role": "Galactic",
+      "flag": "FLAG_HIDE_CELESTIC_TOWN_GRUNT_M",
+      "status": "DEFERRED",
+      "reason": "map is PlatNpc stub"
+    },
+    {
+      "map": "CanalaveCity",
+      "role": "Barry",
+      "flag": "FLAG_HIDE_CANALAVE_CITY_RIVAL_BRIDGE",
+      "status": "DEFERRED",
+      "reason": "map is PlatNpc stub"
+    },
+    {
+      "map": "CanalaveCity",
+      "role": "Dawn/Lucas",
+      "flag": "FLAG_HIDE_CANALAVE_CITY_COUNTERPART",
+      "status": "DEFERRED",
+      "reason": "map is PlatNpc stub"
+    },
+    {
+      "map": "CanalaveCity",
+      "role": "Rowan",
+      "flag": "FLAG_HIDE_CANALAVE_CITY_PROF_ROWAN",
+      "status": "DEFERRED",
+      "reason": "map is PlatNpc stub"
+    }
+  ],
+  "pass": 48,
+  "fail": 0,
+  "deferred": 5,
+  "count_fail": 0
 }

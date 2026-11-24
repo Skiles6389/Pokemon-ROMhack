@@ -59,10 +59,29 @@ SpearPillar_Distorted_EventScript_Cyrus::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_CYRUS_SPEAR_PILLAR, SpearPillar_Distorted_EventScript_CyrusAfterDist
-	trainerbattle_single TRAINER_LEADER_CYRUS_DISTORTED, SpearPillar_Distorted_Text_CyrusIntro, SpearPillar_Distorted_Text_CyrusDefeat
-	msgbox SpearPillar_Distorted_Text_CyrusAfter, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_LEADER_CYRUS_DISTORTED, SpearPillar_Distorted_Text_CyrusIntro, SpearPillar_Distorted_Text_CyrusDefeat, SpearPillar_Distorted_EventScript_CyrusDefeated
 	release
 	end
+
+SpearPillar_Distorted_EventScript_CyrusDefeated::
+	setflag FLAG_DEFEATED_CYRUS_SPEAR_PILLAR
+	msgbox SpearPillar_Distorted_Text_CyrusAfter, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SPEAR_PILLAR_DIST_CYRUS, SpearPillar_Distorted_Movement_CyrusLeave
+	waitmovement 0
+	removeobject LOCALID_SPEAR_PILLAR_DIST_CYRUS
+	setflag FLAG_HIDE_SPEAR_PILLAR_DISTORTED_CYRUS
+	release
+	end
+
+SpearPillar_Distorted_Movement_CyrusLeave:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 SpearPillar_Distorted_EventScript_CyrusAfterDist::
 	msgbox SpearPillar_Distorted_Text_CyrusAfter, MSGBOX_DEFAULT

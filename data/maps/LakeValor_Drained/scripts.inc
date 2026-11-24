@@ -276,8 +276,29 @@ LakeValor_Drained_EventScript_Saturn::
 LakeValor_Drained_EventScript_SaturnDefeated::
 	setflag FLAG_DEFEATED_SATURN_LAKE_VALOR
 	msgbox LakeValor_Drained_Text_SaturnAfter, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_LAKE_VALOR_SATURN, LakeValor_Drained_Movement_CommanderLeave
+	applymovement LOCALID_LAKE_VALOR_GRUNT1, LakeValor_Drained_Movement_CommanderLeave
+	applymovement LOCALID_LAKE_VALOR_GRUNT2, LakeValor_Drained_Movement_CommanderLeave
+	applymovement LOCALID_LAKE_VALOR_GRUNT3, LakeValor_Drained_Movement_CommanderLeave
+	waitmovement 0
+	removeobject LOCALID_LAKE_VALOR_SATURN
+	removeobject LOCALID_LAKE_VALOR_GRUNT1
+	removeobject LOCALID_LAKE_VALOR_GRUNT2
+	removeobject LOCALID_LAKE_VALOR_GRUNT3
+	setflag FLAG_HIDE_LAKE_VALOR_SATURN
+	setflag FLAG_HIDE_LAKE_VALOR_GRUNTS
 	release
 	end
+
+LakeValor_Drained_Movement_CommanderLeave:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 LakeValor_Drained_EventScript_SaturnAfter::
 	msgbox LakeValor_Drained_Text_SaturnAfter, MSGBOX_DEFAULT

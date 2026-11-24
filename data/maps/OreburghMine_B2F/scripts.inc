@@ -7,13 +7,22 @@ OreburghMine_B2F_EventScript_Roark::
 	faceplayer
 	msgbox OreburghMine_B2F_Text_Roark, MSGBOX_DEFAULT
 	closemessage
-	fadescreen FADE_TO_BLACK
+	applymovement LOCALID_OREBURGH_MINE_ROARK, OreburghMine_B2F_Movement_RoarkLeave
+	waitmovement 0
 	removeobject LOCALID_OREBURGH_MINE_ROARK
 	setflag FLAG_HIDE_OREBURGH_MINE_ROARK
 	setvar VAR_OREBURGH_STATE, 2
-	fadescreen FADE_FROM_BLACK
 	release
 	end
+
+OreburghMine_B2F_Movement_RoarkLeave:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
 
 OreburghMine_B2F_EventScript_Colin::
 	trainerbattle_single TRAINER_WORKER_COLIN, OreburghMine_B2F_Text_ColinIntro, OreburghMine_B2F_Text_ColinDefeat
