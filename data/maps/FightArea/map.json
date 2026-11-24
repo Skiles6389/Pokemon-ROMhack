@@ -483,15 +483,15 @@
       "x": 46,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_FIGHT_AREA",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_BATTLE_FRONTIER_GATE_SINNOH",
+      "dest_warp_id": "3"
     },
     {
       "x": 47,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_FIGHT_AREA",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_BATTLE_FRONTIER_GATE_SINNOH",
+      "dest_warp_id": "3"
     },
     {
       "x": 46,

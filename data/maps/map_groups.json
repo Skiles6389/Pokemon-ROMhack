@@ -103,7 +103,8 @@
     "gMapGroup_IndoorM34Stark",
     "gMapGroup_IndoorM35Temple",
     "gMapGroup_IndoorM36IronIsland",
-    "gMapGroup_IndoorM37Canalave"
+    "gMapGroup_IndoorM37Canalave",
+    "gMapGroup_IndoorM38FrontierGate"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1575,5 +1576,8 @@
     "CanalaveCity_House4",
     "CanalaveCity_HarborInn",
     "CanalaveCity_EldritchHouse"
+  ],
+  "gMapGroup_IndoorM38FrontierGate": [
+    "BattleFrontier_Gate_Sinnoh"
   ]
 }
