@@ -399,6 +399,14 @@
       "y": 19,
       "respawn_map": "MAP_ETERNA_CITY_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_ETERNA_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_HEARTHOME_CITY",
+      "map": "MAP_HEARTHOME_CITY",
+      "x": 17,
+      "y": 26,
+      "respawn_map": "MAP_HEARTHOME_CITY_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_HEARTHOME_NURSE"
     }
   ]
 }

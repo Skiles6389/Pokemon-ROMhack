@@ -193,11 +193,11 @@ def render(
 
 def main():
     out = Path("/opt/cursor/artifacts")
-    # M16 verification shots (Emerald tiles only — no live ROM dump / DS assets)
-    render("Route206", out / "m16_route206_cycling_road.png", cam_x=8, cam_y=20, view_w=16, view_h=12)
-    render("Route207", out / "m16_route207_dawn_lucas.png", cam_x=44, cam_y=2, view_w=16, view_h=12)
-    render("MtCoronet_1F_South", out / "m16_mt_coronet_cyrus.png", cam_x=8, cam_y=12, view_w=16, view_h=12)
-    render("Route208", out / "m16_route208_berry_master.png", cam_x=48, cam_y=6, view_w=16, view_h=12)
+    # M17 verification shots (Emerald tiles only — no live ROM dump / DS assets)
+    render("HearthomeCity", out / "m17_hearthome_city.png", cam_x=12, cam_y=16, view_w=20, view_h=14)
+    render("HearthomeCity", out / "m17_hearthome_bebes_house.png", cam_x=14, cam_y=18, view_w=16, view_h=12)
+    render("HearthomeCity_Gym", out / "m17_hearthome_gym_fantina.png", cam_x=2, cam_y=0, view_w=16, view_h=14)
+    render("HearthomeCity", out / "m17_hearthome_barry_east_exit.png", cam_x=48, cam_y=48, view_w=16, view_h=12)
 
 
 if __name__ == "__main__":
