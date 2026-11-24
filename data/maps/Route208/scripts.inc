@@ -229,18 +229,11 @@ Route208_EventScript_PlatNpc8_Text:
 	.string "These roads keep surprising me.\n"
 	.string "Every corner hides another path.$"
 
-Route208_EventScript_V06Trainer1::
-	trainerbattle_single TRAINER_ROUTE208_V06_1, Route208_EventScript_V06Trainer1_Intro, Route208_EventScript_V06Trainer1_Defeat
-	msgbox Route208_EventScript_V06Trainer1_After, MSGBOX_AUTOCLOSE
+Route208_EventScript_V06Traveler1::
+	msgbox Route208_EventScript_V06Traveler1_Text, MSGBOX_NPC
 	end
 
-Route208_EventScript_V06Trainer1_Intro:
-	.string "A quick match will wake us both up!$"
-
-Route208_EventScript_V06Trainer1_Defeat:
-	.string "You were ready for that.$"
-
-Route208_EventScript_V06Trainer1_After:
-	.string "Keep going. The next landmark is\n"
-	.string "closer than it looks.$"
+Route208_EventScript_V06Traveler1_Text:
+	.string "I was hoping for a battle, but I\n"
+	.string "will save my strength for later.$"
 

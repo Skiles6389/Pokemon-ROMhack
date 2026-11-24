@@ -70,6 +70,16 @@ DOCUMENTED_ORIGIN = {
     "ValorLakefront": (21 * 32, 23 * 32),
     "Route213": (20 * 32, 25 * 32),
     "PastoriaCity": (18 * 32, 25 * 32),
+    "Route206": (288, 576),
+    "Route207": (288, 704),
+    "JubilifeCity": (128, 736),
+    "OreburghCity": (256, 736),
+    "EternaCity": (288, 512),
+    "HearthomeCity": (448, 672),
+    "SandgemTown": (160, 832),
+    "Route203": (192, 736),
+    "Route208": (384, 704),
+
 }
 
 # Emerald map folder -> Platinum maps/ folder

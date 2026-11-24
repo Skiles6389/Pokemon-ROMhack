@@ -235,33 +235,19 @@ Route209_EventScript_PlatNpc11_Text:
 	.string "These roads keep surprising me.\n"
 	.string "Every corner hides another path.$"
 
-Route209_EventScript_V06Trainer4::
-	trainerbattle_single TRAINER_ROUTE209_V06_4, Route209_EventScript_V06Trainer4_Intro, Route209_EventScript_V06Trainer4_Defeat
-	msgbox Route209_EventScript_V06Trainer4_After, MSGBOX_AUTOCLOSE
+Route209_EventScript_V06Traveler4::
+	msgbox Route209_EventScript_V06Traveler4_Text, MSGBOX_NPC
 	end
 
-Route209_EventScript_V06Trainer4_Intro:
-	.string "A quick match will wake us both up!$"
+Route209_EventScript_V06Traveler4_Text:
+	.string "I was hoping for a battle, but I\n"
+	.string "will save my strength for later.$"
 
-Route209_EventScript_V06Trainer4_Defeat:
-	.string "You were ready for that.$"
-
-Route209_EventScript_V06Trainer4_After:
-	.string "Keep going. The next landmark is\n"
-	.string "closer than it looks.$"
-
-Route209_EventScript_V06Trainer5::
-	trainerbattle_single TRAINER_ROUTE209_V06_5, Route209_EventScript_V06Trainer5_Intro, Route209_EventScript_V06Trainer5_Defeat
-	msgbox Route209_EventScript_V06Trainer5_After, MSGBOX_AUTOCLOSE
+Route209_EventScript_V06Traveler5::
+	msgbox Route209_EventScript_V06Traveler5_Text, MSGBOX_NPC
 	end
 
-Route209_EventScript_V06Trainer5_Intro:
-	.string "A quick match will wake us both up!$"
-
-Route209_EventScript_V06Trainer5_Defeat:
-	.string "You were ready for that.$"
-
-Route209_EventScript_V06Trainer5_After:
-	.string "Keep going. The next landmark is\n"
-	.string "closer than it looks.$"
+Route209_EventScript_V06Traveler5_Text:
+	.string "I was hoping for a battle, but I\n"
+	.string "will save my strength for later.$"
 

@@ -61,6 +61,12 @@ TwinleafTown_PlayersHouse_1F_EventScript_MomGivesShoes::
 	releaseall
 	end
 
+TwinleafTown_PlayersHouse_1F_EventScript_MomShoesAlready::
+	msgbox TwinleafTown_PlayersHouse_1F_Text_MomAfterShoes, MSGBOX_DEFAULT
+	setvar VAR_TWINLEAF_STATE, 2
+	releaseall
+	end
+
 TwinleafTown_PlayersHouse_1F_Movement_BarryRushIn:
 	walk_fast_up
 	walk_fast_left

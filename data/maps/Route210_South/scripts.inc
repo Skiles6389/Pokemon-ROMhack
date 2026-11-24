@@ -252,33 +252,19 @@ Route210_South_EventScript_PlatNpc15_Text:
 	.string "These roads keep surprising me.\n"
 	.string "Every corner hides another path.$"
 
-Route210_South_EventScript_V06Trainer0::
-	trainerbattle_single TRAINER_ROUTE210_SOUTH_V06_0, Route210_South_EventScript_V06Trainer0_Intro, Route210_South_EventScript_V06Trainer0_Defeat
-	msgbox Route210_South_EventScript_V06Trainer0_After, MSGBOX_AUTOCLOSE
+Route210_South_EventScript_V06Traveler0::
+	msgbox Route210_South_EventScript_V06Traveler0_Text, MSGBOX_NPC
 	end
 
-Route210_South_EventScript_V06Trainer0_Intro:
-	.string "A quick match will wake us both up!$"
+Route210_South_EventScript_V06Traveler0_Text:
+	.string "I was hoping for a battle, but I\n"
+	.string "will save my strength for later.$"
 
-Route210_South_EventScript_V06Trainer0_Defeat:
-	.string "You were ready for that.$"
-
-Route210_South_EventScript_V06Trainer0_After:
-	.string "Keep going. The next landmark is\n"
-	.string "closer than it looks.$"
-
-Route210_South_EventScript_V06Trainer1::
-	trainerbattle_single TRAINER_ROUTE210_SOUTH_V06_1, Route210_South_EventScript_V06Trainer1_Intro, Route210_South_EventScript_V06Trainer1_Defeat
-	msgbox Route210_South_EventScript_V06Trainer1_After, MSGBOX_AUTOCLOSE
+Route210_South_EventScript_V06Traveler1::
+	msgbox Route210_South_EventScript_V06Traveler1_Text, MSGBOX_NPC
 	end
 
-Route210_South_EventScript_V06Trainer1_Intro:
-	.string "A quick match will wake us both up!$"
-
-Route210_South_EventScript_V06Trainer1_Defeat:
-	.string "You were ready for that.$"
-
-Route210_South_EventScript_V06Trainer1_After:
-	.string "Keep going. The next landmark is\n"
-	.string "closer than it looks.$"
+Route210_South_EventScript_V06Traveler1_Text:
+	.string "I was hoping for a battle, but I\n"
+	.string "will save my strength for later.$"
 
