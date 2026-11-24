@@ -99,7 +99,8 @@
     "gMapGroup_IndoorM30EliteFour",
     "gMapGroup_IndoorM31Champion",
     "gMapGroup_IndoorM32PostgameFight",
-    "gMapGroup_IndoorM33SurvivalResort"
+    "gMapGroup_IndoorM33SurvivalResort",
+    "gMapGroup_IndoorM34Stark"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -222,7 +223,8 @@
     "Route228",
     "Route229",
     "Route230",
-    "ResortArea"
+    "ResortArea",
+    "StarkMountain_Outside"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1538,5 +1540,10 @@
     "ResortArea_Villa",
     "ResortArea_RibbonSyndicate",
     "Route228_RockPeakRuins"
+  ],
+  "gMapGroup_IndoorM34Stark": [
+    "StarkMountain_Room1",
+    "StarkMountain_Room2",
+    "StarkMountain_HeatranRoom"
   ]
 }

@@ -11303,6 +11303,50 @@
       "border_filepath": "data/layouts/Route228_RockPeakRuins/border.bin",
       "blockdata_filepath": "data/layouts/Route228_RockPeakRuins/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_STARK_MOUNTAIN_OUTSIDE",
+      "name": "StarkMountain_Outside_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/StarkMountain_Outside/border.bin",
+      "blockdata_filepath": "data/layouts/StarkMountain_Outside/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_STARK_MOUNTAIN_ROOM1",
+      "name": "StarkMountain_Room1_Layout",
+      "width": 64,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StarkMountain_Room1/border.bin",
+      "blockdata_filepath": "data/layouts/StarkMountain_Room1/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_STARK_MOUNTAIN_ROOM2",
+      "name": "StarkMountain_Room2_Layout",
+      "width": 96,
+      "height": 96,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StarkMountain_Room2/border.bin",
+      "blockdata_filepath": "data/layouts/StarkMountain_Room2/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_STARK_MOUNTAIN_HEATRAN_ROOM",
+      "name": "StarkMountain_HeatranRoom_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/StarkMountain_HeatranRoom/border.bin",
+      "blockdata_filepath": "data/layouts/StarkMountain_HeatranRoom/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

@@ -171,6 +171,11 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "Route229": [[134, 135], [None, 142]],
     "Route230": [[136, 137, 138]],
     "ResortArea": [[135], [142]],
+    "StarkMountain_Outside": [[172]],
+    "StarkMountain_Room1": [[454, 455]],
+    "StarkMountain_Room2": [[456, 457, 458], [459, 460, 461], [462, 463, 464]],
+    "StarkMountain_HeatranRoom": [[465]],
+
 
 
 

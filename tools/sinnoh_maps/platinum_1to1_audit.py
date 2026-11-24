@@ -113,6 +113,11 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "Route229": [[134, 135], [None, 142]],
     "Route230": [[136, 137, 138]],
     "ResortArea": [[135], [142]],
+    "StarkMountain_Outside": [[172]],
+    "StarkMountain_Room1": [[454, 455]],
+    "StarkMountain_Room2": [[456, 457, 458], [459, 460, 461], [462, 463, 464]],
+    "StarkMountain_HeatranRoom": [[465]],
+
 
 
 
@@ -192,6 +197,10 @@ DOCUMENTED_ORIGIN = {
     "Route229": (768, 416),
     "Route230": (672, 416),
     "ResortArea": (800, 416),
+    "StarkMountain_Outside": (736, 224),
+    "StarkMountain_Room1": (0, 0),
+    "StarkMountain_Room2": (0, 0),
+    "StarkMountain_HeatranRoom": (0, 0),
 
     "PokemonLeague_Sinnoh_CynthiasRoom": (0, 0),
     "PokemonLeague_Sinnoh_HallOfFame": (0, 0),
@@ -302,6 +311,10 @@ PLAT_NAME = {
     "Route229": "route_229",
     "Route230": "route_230",
     "ResortArea": "resort_area",
+    "StarkMountain_Outside": "stark_mountain_outside",
+    "StarkMountain_Room1": "stark_mountain_room_1",
+    "StarkMountain_Room2": "stark_mountain_room_2",
+    "StarkMountain_HeatranRoom": "stark_mountain_room_3",
 
     "PokemonLeague_Sinnoh_CynthiasRoom": "pokemon_league_champion_room",
     "PokemonLeague_Sinnoh_HallOfFame": "pokemon_league_hall_of_fame",

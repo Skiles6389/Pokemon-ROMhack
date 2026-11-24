@@ -859,6 +859,42 @@
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
+    },
+    "StarkMountain_Outside": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "StarkMountain_Room1": {
+      "status": "PASS",
+      "size": "64x32",
+      "plat_size": "64x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "StarkMountain_Room2": {
+      "status": "PASS",
+      "size": "96x96",
+      "plat_size": "96x96",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "StarkMountain_HeatranRoom": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
     }
   }
 }
