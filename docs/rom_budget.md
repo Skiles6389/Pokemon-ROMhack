@@ -55,6 +55,7 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 | After M21 | 6,119,168 (5.836 MiB) | ~4.41 MiB | Used ~41 KiB (under 280 KiB) |
 | After M22 | 6,101,056 (5.818 MiB) | ~4.32 MiB | Used ~18 KiB (under 280 KiB) |
 | After M23 | 6,080,464 (5.799 MiB) | ~4.37 MiB | Used ~20 KiB from M22 (under 320 KiB) |
+| After M24 | 6,036,264 (5.757 MiB) | ~4.26 MiB | Used ~43 KiB from M23 (under 350 KiB) |
 
 ## Large assets log
 
@@ -79,3 +80,9 @@ Sum of milestone allowances ≈ 3.58 MiB; contingency fills the rest of the ~4.3
 - Free trailing 0xFF: **6,080,464 bytes (5.799 MiB)**
 - Delta from M22 (~6,101,056): ~20 KiB used — under M23 allowance.
 - Maps: Route218, CanalaveCity, IronIsland (EXACT); Byron Gym (Mine Badge + TM Flash Cannon).
+
+### Measured after M24
+
+- Free trailing 0xFF: **6,036,264 bytes (5.757 MiB)**
+- Maps: Route211_East, Route216, Route217, LakeValor_Drained (EXACT); Fantina already present.
+- Snowpoint road soft-closed on Route 217.

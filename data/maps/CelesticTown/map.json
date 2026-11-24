@@ -19,6 +19,11 @@
       "map": "MAP_ROUTE210_NORTH",
       "offset": 0,
       "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE211_EAST",
+      "offset": 0,
+      "direction": "left"
     }
   ],
   "object_events": [

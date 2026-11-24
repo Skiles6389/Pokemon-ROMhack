@@ -10192,6 +10192,83 @@
       "border_filepath": "data/layouts/IronIsland_1F_Stub/border.bin",
       "blockdata_filepath": "data/layouts/IronIsland_1F_Stub/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE211_EAST",
+      "name": "Route211_East_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route211_East/border.bin",
+      "blockdata_filepath": "data/layouts/Route211_East/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_MT_CORONET_NORTH_STUB",
+      "name": "MtCoronet_NorthStub_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtCoronet_NorthStub/border.bin",
+      "blockdata_filepath": "data/layouts/MtCoronet_NorthStub/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE216",
+      "name": "Route216_Layout",
+      "width": 96,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/Route216/border.bin",
+      "blockdata_filepath": "data/layouts/Route216/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE216_HOUSE",
+      "name": "Route216_House_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route216_House/border.bin",
+      "blockdata_filepath": "data/layouts/Route216_House/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE217",
+      "name": "Route217_Layout",
+      "width": 32,
+      "height": 128,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/Route217/border.bin",
+      "blockdata_filepath": "data/layouts/Route217/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE217_HOUSE",
+      "name": "Route217_House_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route217_House/border.bin",
+      "blockdata_filepath": "data/layouts/Route217_House/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_LAKE_VALOR_DRAINED",
+      "name": "LakeValor_Drained_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/LakeValor_Drained/border.bin",
+      "blockdata_filepath": "data/layouts/LakeValor_Drained/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }
