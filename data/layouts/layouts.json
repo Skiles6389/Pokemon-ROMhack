@@ -3280,6 +3280,19 @@
       "layout_version": "emerald"
     },
     {
+      "id": "LAYOUT_POKEMON_LEAGUE_HALL_OF_FAME",
+      "name": "PokemonLeague_HallOfFame_Layout",
+      "width": 11,
+      "height": 13,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_HallOfFame",
+      "border_filepath": "data/layouts/PokemonLeague_HallOfFame_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_HallOfFame_Frlg/map.bin",
+      "layout_version": "frlg"
+    },
+    {
       "id": "LAYOUT_LILYCOVE_CITY_COVE_LILY_MOTEL_1F",
       "name": "LilycoveCity_CoveLilyMotel_1F_Layout",
       "width": 12,
@@ -7167,17 +7180,15 @@
       "layout_version": "frlg"
     },
     {
-      "id": "LAYOUT_POKEMON_LEAGUE_HALL_OF_FAME",
-      "name": "PokemonLeague_HallOfFame_Layout",
-      "width": 11,
-      "height": 13,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_HallOfFame",
-      "border_filepath": "data/layouts/PokemonLeague_HallOfFame_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/PokemonLeague_HallOfFame_Frlg/map.bin",
-      "layout_version": "frlg"
+      "id": "LAYOUT_POKEMON_LEAGUE_SINNOH_HALL_OF_FAME",
+      "name": "PokemonLeague_Sinnoh_HallOfFame_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/PokemonLeague_Sinnoh_HallOfFame/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_Sinnoh_HallOfFame/map.bin",
+      "layout_version": "emerald"
     },
     {
       "id": "LAYOUT_ROUTE21_SOUTH",
@@ -10939,6 +10950,28 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/PokemonLeague_Elevator_ToLucian/border.bin",
       "blockdata_filepath": "data/layouts/PokemonLeague_Elevator_ToLucian/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_SINNOH_CYNTHIAS_ROOM",
+      "name": "PokemonLeague_Sinnoh_CynthiasRoom_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/PokemonLeague_Sinnoh_CynthiasRoom/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_Sinnoh_CynthiasRoom/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_SINNOH_HALLWAY_TO_HO_F",
+      "name": "PokemonLeague_Sinnoh_HallwayToHoF_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/PokemonLeague_Sinnoh_HallwayToHoF/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_Sinnoh_HallwayToHoF/map.bin",
       "layout_version": "emerald"
     }
   ]

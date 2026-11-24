@@ -97,6 +97,9 @@ LAND_TABLE: dict[str, list[list[int | None]]] = {
     "PokemonLeague_Elevator_ToLucian": [[307]],
     "PokemonLeague_Elevator_ToCynthia": [[308]],
     "CanalaveCity_Gym": [[225]],
+    "PokemonLeague_Sinnoh_CynthiasRoom": [[264]],
+    "PokemonLeague_Sinnoh_HallOfFame": [[265]],
+    "PokemonLeague_Sinnoh_HallwayToHoF": [[309]],
 
 }
 
@@ -161,6 +164,9 @@ DOCUMENTED_ORIGIN = {
     "PokemonLeague_Elevator_ToLucian": (0, 0),
     "PokemonLeague_Elevator_ToCynthia": (0, 0),
     "CanalaveCity_Gym": (0, 0),
+    "PokemonLeague_Sinnoh_CynthiasRoom": (0, 0),
+    "PokemonLeague_Sinnoh_HallOfFame": (0, 0),
+    "PokemonLeague_Sinnoh_HallwayToHoF": (0, 0),
 
     "Route206": (288, 576),
     "Route207": (288, 704),
@@ -254,6 +260,9 @@ PLAT_NAME = {
     "PokemonLeague_Elevator_ToLucian": "pokemon_league_elevator_to_lucian_room",
     "PokemonLeague_Elevator_ToCynthia": "pokemon_league_elevator_to_champion_room",
     "CanalaveCity_Gym": "canalave_city_gym",
+    "PokemonLeague_Sinnoh_CynthiasRoom": "pokemon_league_champion_room",
+    "PokemonLeague_Sinnoh_HallOfFame": "pokemon_league_hall_of_fame",
+    "PokemonLeague_Sinnoh_HallwayToHoF": "pokemon_league_hallway_to_hall_of_fame",
 
     "GreatMarsh": "great_marsh_1",  # events sample; geometry from GreatMarsh_DP lands
     "VerityLakefront": "verity_lakefront",

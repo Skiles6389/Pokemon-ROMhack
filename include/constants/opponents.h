@@ -1267,7 +1267,9 @@
 
 #define TRAINER_ELITE_FOUR_LUCIAN                    1000 // Sinnoh E4
 
-#define TRAINERS_COUNT_EMERALD     1001
+#define TRAINER_CHAMPION_CYNTHIA                    1001 // Sinnoh Champion
+
+#define TRAINERS_COUNT_EMERALD     1002
 #define MAX_TRAINERS_COUNT_EMERALD 1024
 
 #if IS_FRLG

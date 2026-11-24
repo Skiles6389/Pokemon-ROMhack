@@ -747,6 +747,7 @@
 #define FLAG_DEFEATED_ELITE_FOUR_BERTHA  0x2B8 // Sinnoh M29 Elite Four Bertha
 #define FLAG_DEFEATED_ELITE_FOUR_FLINT  0x2B9 // Sinnoh M29 Elite Four Flint
 #define FLAG_DEFEATED_ELITE_FOUR_LUCIAN  0x2BA // Sinnoh M29 Elite Four Lucian
+#define FLAG_DEFEATED_CHAMPION_CYNTHIA  0x2BB // Sinnoh M30 Champion Cynthia
 #define FLAG_DEFEATED_CYRUS_SPEAR_PILLAR  0x2B1 // Sinnoh M26 Cyrus at Spear Pillar
 #define FLAG_DEFEATED_JUPITER_LAKE_ACUITY  0x2AF // Sinnoh M25 Jupiter at Lake Acuity
 #define FLAG_RECEIVED_SNOWPOINT_GYM_TM  0x2AE // Sinnoh M25 Candice TM

@@ -715,6 +715,33 @@
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
+    },
+    "PokemonLeague_Sinnoh_CynthiasRoom": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "PokemonLeague_Sinnoh_HallOfFame": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
+    },
+    "PokemonLeague_Sinnoh_HallwayToHoF": {
+      "status": "PASS",
+      "size": "32x32",
+      "plat_size": "32x32",
+      "mismatch": 0,
+      "walkable_blocked": 0,
+      "notes": [],
+      "samples": []
     }
   }
 }
