@@ -48,8 +48,8 @@
       "name": "DistortionWorld_1F",
       "status": "PASS",
       "strip_rate": 0.0,
-      "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
+      "solid_id_walkable_coll": 9,
+      "plat_opened": 9,
       "plat_blocked": 0,
       "plat_total": 4096,
       "issues": []
