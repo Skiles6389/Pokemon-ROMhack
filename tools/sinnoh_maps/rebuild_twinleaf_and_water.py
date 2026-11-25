@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Rebuild Twinleaf Town to Platinum geometry + re-pack water elev on all Sinnoh maps.
+"""Rebuild Twinleaf Town with COMPLETE Emerald house stamps + fenced gardens.
 
-Fixes:
-- Water elev 3→1 (vanilla Emerald) so ponds are not walkable without Surf
-- Twinleaf tree ring uses complete 2x2 trees (no rock/cliff leftovers)
-- Paths from Platinum walkway attrs; houses stamped at door warps
-- Corner flower beds (tall-grass stand-in) inside tree clearings
+- Houses: exact Littleroot stamps (roof ridge through door row)
+- Gardens: Petalburg fence ring + tall-grass flowers (not roof slabs)
+- Paths: Platinum walkways + spine between doors; no path adjacent to water
+- Water elev re-pack on all Sinnoh maps
 """
 from __future__ import annotations
 
@@ -17,6 +16,15 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO))
 
+from tools.sinnoh_maps.emerald_building_stamps import (  # noqa: E402
+    DOOR_MAT,
+    GARDEN_FENCED,
+    HOUSE_PETALBURG_A,
+    HOUSE_PETALBURG_WIDE,
+    MAILBOX,
+    stamp_at,
+    stamp_with_clear,
+)
 from tools.sinnoh_maps.platinum_1to1_audit import LAND_TABLE  # noqa: E402
 from tools.sinnoh_maps.sinnoh_build_lib import (  # noqa: E402
     LAYOUTS,
@@ -30,71 +38,14 @@ from tools.sinnoh_maps.sinnoh_build_lib import (  # noqa: E402
     WATER_METATILES,
     encode_map_cell,
     grid_from_chunks,
-    paint_paths_from_attrs,
-    pack,
     load_attrs,
+    pack,
+    paint_paths_from_attrs,
+    path_metatile_for_neighbors,
 )
-
-# Authentic Littleroot/Petalburg house (roof ridge 0x208.. + door 0x248 + mat 0x201)
-# Lifted from stock Emerald LittlerootTown map.bin.
-HOUSE = [
-    [0x208, 0x209, 0x209, 0x209, 0x20A],
-    [0x210, 0x211, 0x211, 0x211, 0x212],
-    [0x218, 0x219, 0x219, 0x219, 0x21A],
-    [0x222, 0x232, 0x230, 0x240, 0x221],
-    [0x22A, 0x23A, 0x238, 0x248, 0x229],
-]
-# Larger player/rival house (extra mid column, same roof ridge)
-HOUSE_LARGE = [
-    [0x208, 0x209, 0x209, 0x209, 0x209, 0x20A],
-    [0x210, 0x211, 0x211, 0x211, 0x211, 0x212],
-    [0x218, 0x219, 0x219, 0x219, 0x219, 0x21A],
-    [0x222, 0x232, 0x230, 0x240, 0x230, 0x221],
-    [0x22A, 0x23A, 0x238, 0x248, 0x238, 0x229],
-]
-# Petalburg fence ring (Littleroot garden / lab fence tiles)
-FENCE_TL, FENCE_T, FENCE_TR = 0x214, 0x215, 0x216
-FENCE_BL, FENCE_B, FENCE_BR = 0x21E, 0x20F, 0x21F
-DOOR_MAT = 0x201
-MAILBOX = 0x003
-
-
-
-def stamp_facade(grid, door_x: int, door_y: int, facade) -> None:
-    door_dx = next(i for i, mt in enumerate(facade[-1]) if mt == 0x248)
-    top = door_y - (len(facade) - 1)
-    left = door_x - door_dx
-    h, w = len(grid), len(grid[0])
-    for dy, row in enumerate(facade):
-        for dx, mt in enumerate(row):
-            x, y = left + dx, top + dy
-            if 0 <= y < h and 0 <= x < w:
-                grid[y][x] = mt
-    # Door mat + mailbox (Littleroot style)
-    if door_y + 1 < h:
-        grid[door_y + 1][door_x] = DOOR_MAT
-    mx = door_x + 1 if door_x + 1 < w else door_x - 1
-    if 0 <= mx < w and grid[door_y][mx] == MT_GRASS:
-        grid[door_y][mx] = MAILBOX
-
-
-def clear_house_footprint(grid, collision, door_x: int, door_y: int, facade) -> None:
-    """Grass under facade so trees/rocks don't stick through roofs."""
-    door_dx = next(i for i, mt in enumerate(facade[-1]) if mt == 0x248)
-    top = door_y - (len(facade) - 1)
-    left = door_x - door_dx
-    h, w = len(grid), len(grid[0])
-    for dy in range(len(facade) + 2):
-        for dx in range(len(facade[0])):
-            x, y = left + dx, top + dy
-            if 0 <= y < h and 0 <= x < w:
-                if grid[y][x] in set(MT_TREE) | {MT_ROCK}:
-                    grid[y][x] = MT_GRASS
-                    collision[y][x] = 0
 
 
 def repair_incomplete_trees(grid, collision) -> None:
-    """Ensure every tree tile belongs to a complete TL/TR/BL/BR quad; else grass."""
     h, w = len(grid), len(grid[0])
     expect = {MT_TREE[0]: (0, 0), MT_TREE[1]: (-1, 0), MT_TREE[2]: (0, -1), MT_TREE[3]: (-1, -1)}
     TREE = set(MT_TREE)
@@ -109,7 +60,6 @@ def repair_incomplete_trees(grid, collision) -> None:
             and grid[tly + 1][tlx + 1] == MT_TREE[3]
         )
 
-    orphans = []
     for y in range(h):
         for x in range(w):
             mt = grid[y][x]
@@ -117,92 +67,17 @@ def repair_incomplete_trees(grid, collision) -> None:
                 continue
             dx, dy = expect[mt]
             if not is_complete(x + dx, y + dy):
-                orphans.append((x, y))
-    for x, y in orphans:
-        if grid[y][x] in TREE:
-            grid[y][x] = MT_GRASS
-            collision[y][x] = 0
-
-
-def paint_fenced_gardens(grid, collision) -> None:
-    """Fenced flower beds (Petalburg fence + tall-grass flowers) in NW/NE clearings."""
-    # (fence_left, fence_top, inner_w, inner_h)
-    gardens = [
-        (4, 3, 2, 2),   # NW clearing
-        (23, 3, 2, 2),  # NE clearing
-    ]
-    h, w = len(grid), len(grid[0])
-    for left, top, iw, ih in gardens:
-        right, bot = left + iw + 1, top + ih + 1
-        if right >= w or bot >= h:
-            continue
-        # Top / bottom fence rows
-        for x in range(left, right + 1):
-            for y, mt_l, mt_m, mt_r in (
-                (top, FENCE_TL, FENCE_T, FENCE_TR),
-                (bot, FENCE_BL, FENCE_B, FENCE_BR),
-            ):
-                if x == left:
-                    grid[y][x] = mt_l
-                elif x == right:
-                    grid[y][x] = mt_r
-                else:
-                    grid[y][x] = mt_m
-                collision[y][x] = 1
-        # Side fences + flower fill
-        for y in range(top + 1, bot):
-            grid[y][left] = 0x214
-            grid[y][right] = 0x216
-            collision[y][left] = collision[y][right] = 1
-            for x in range(left + 1, right):
-                grid[y][x] = MT_TALL
+                grid[y][x] = MT_GRASS
                 collision[y][x] = 0
 
 
-def connect_house_paths(grid, warps) -> None:
-    """Ensure dirt-path runs from each door mat into a mid-town spine."""
-    from tools.sinnoh_maps.sinnoh_build_lib import path_metatile_for_neighbors
-
+def scrub_rocks_to_trees_or_grass(grid, collision) -> None:
     h, w = len(grid), len(grid[0])
+    TREE = set(MT_TREE)
     PATH = {
         0x1D0, 0x1D1, 0x1D2, 0x1D8, 0x1D9, 0x1DA, 0x1E0, 0x1E1, 0x1E2,
         0x1E4, 0x1E5, 0x1E6, 0x1E7,
     }
-    path_cells = {(x, y) for y in range(h) for x in range(w) if grid[y][x] in PATH}
-    spine_y = 13
-    for warp in warps:
-        dx, dy = int(warp["x"]), int(warp["y"])
-        y0, y1 = sorted((min(h - 1, dy + 2), spine_y))
-        for y in range(y0, y1 + 1):
-            if grid[y][dx] in (MT_GRASS, MT_TALL) or grid[y][dx] in PATH:
-                path_cells.add((dx, y))
-        path_cells.add((dx, spine_y))
-    xs = [int(w_["x"]) for w_ in warps]
-    if xs:
-        for x in range(min(xs), max(xs) + 1):
-            if grid[spine_y][x] in (MT_GRASS, MT_TALL) or grid[spine_y][x] in PATH:
-                path_cells.add((x, spine_y))
-    for x, y in list(path_cells):
-        if not (0 <= x < w and 0 <= y < h):
-            continue
-        if grid[y][x] >= 0x200 or grid[y][x] == MT_WATER or grid[y][x] in set(MT_TREE):
-            continue
-        if grid[y][x] in (DOOR_MAT, MAILBOX):
-            continue
-        n = (x, y - 1) in path_cells
-        s = (x, y + 1) in path_cells
-        ww = (x - 1, y) in path_cells
-        e = (x + 1, y) in path_cells
-        grid[y][x] = path_metatile_for_neighbors(n, s, ww, e)
-
-
-def scrub_rocks_to_trees_or_grass(grid, collision) -> None:
-    """Replace outdoor rock leftovers with non-overlapping 2x2 trees, else grass.
-
-    Never overwrite an existing tree tile — overlapping stamps caused orphan halves.
-    """
-    h, w = len(grid), len(grid[0])
-    TREE = set(MT_TREE)
 
     def try_tree(tx, ty) -> bool:
         if tx < 0 or ty < 0 or tx + 1 >= w or ty + 1 >= h:
@@ -210,13 +85,10 @@ def scrub_rocks_to_trees_or_grass(grid, collision) -> None:
         cells = [(tx, ty), (tx + 1, ty), (tx, ty + 1), (tx + 1, ty + 1)]
         for cx, cy in cells:
             mt = grid[cy][cx]
-            if mt in TREE or mt == MT_WATER or mt >= 0x200:
+            if mt in TREE or mt == MT_WATER or mt >= 0x200 or mt in PATH:
                 return False
-            # Only convert rock/grass/tall — not paths
-            if mt not in (MT_ROCK, MT_GRASS, MT_TALL) and mt not in TREE:
-                if mt in (0x1D0, 0x1D1, 0x1D2, 0x1D8, 0x1D9, 0x1DA, 0x1E0, 0x1E1, 0x1E2, 0x1E4, 0x1E5, 0x1E6, 0x1E7):
-                    return False
-        # Prefer quads that still contain at least one rock leftover
+            if mt not in (MT_ROCK, MT_GRASS, MT_TALL):
+                return False
         if not any(grid[cy][cx] == MT_ROCK for cx, cy in cells):
             return False
         grid[ty][tx] = MT_TREE[0]
@@ -227,7 +99,6 @@ def scrub_rocks_to_trees_or_grass(grid, collision) -> None:
             collision[cy][cx] = 1
         return True
 
-    # Multi-pass greedy on remaining rocks only
     for _ in range(8):
         rocks = [(x, y) for y in range(h) for x in range(w) if grid[y][x] == MT_ROCK]
         if not rocks:
@@ -242,12 +113,96 @@ def scrub_rocks_to_trees_or_grass(grid, collision) -> None:
                     break
         if not progressed:
             break
-    # Any rock still left → grass (slightly opens Platinum solid; no cliff tiles)
     for y in range(h):
         for x in range(w):
             if grid[y][x] == MT_ROCK:
                 grid[y][x] = MT_GRASS
                 collision[y][x] = 0
+
+
+def paint_fenced_gardens(grid, collision) -> None:
+    """Fenced flower beds in NW/NE clearings — fence + flowers, never a roof slab."""
+    # Place so gardens sit in grass clearings inside the tree ring
+    # Keep clear of house roofs (rival wide roof starts ~y=7,x=6; house1 at x=17)
+    # Garden is 5×3 — stay at x<=5 / x>=25
+    spots = [(1, 2), (26, 2)]
+    for left, top in spots:
+        # Clear footprint to grass first
+        sh, sw = len(GARDEN_FENCED["tiles"]), len(GARDEN_FENCED["tiles"][0])
+        for dy in range(sh):
+            for dx in range(sw):
+                x, y = left + dx, top + dy
+                if 0 <= y < len(grid) and 0 <= x < len(grid[0]):
+                    if grid[y][x] in set(MT_TREE) | {MT_ROCK}:
+                        grid[y][x] = MT_GRASS
+                        collision[y][x] = 0
+        stamp_at(grid, left, top, {**GARDEN_FENCED, "door_dx": 0, "door_dy": 0}, fill_mat=False)
+        # Fence collision; flowers walkable
+        for dy, row in enumerate(GARDEN_FENCED["tiles"]):
+            for dx, mt in enumerate(row):
+                x, y = left + dx, top + dy
+                if not (0 <= y < len(grid) and 0 <= x < len(grid[0])):
+                    continue
+                collision[y][x] = 0 if mt == MT_TALL or mt == 0x00D else 1
+
+
+def connect_house_paths(grid, warps) -> None:
+    """Littleroot-style dirt trails (0x1CE/0x1CF) — higher contrast than 0x1D9 sidewalk."""
+    h, w = len(grid), len(grid[0])
+    PATH = {
+        0x1CE, 0x1CF, 0x1D0, 0x1D1, 0x1D2, 0x1D8, 0x1D9, 0x1DA,
+        0x1E0, 0x1E1, 0x1E2, 0x1E4, 0x1E5, 0x1E6, 0x1E7,
+    }
+    DIRT_A, DIRT_B = 0x1CE, 0x1CF
+    path_cells = {(x, y) for y in range(h) for x in range(w) if grid[y][x] in PATH}
+    spine_y = 13
+    for warp in warps:
+        dx, dy = int(warp["x"]), int(warp["y"])
+        y0, y1 = sorted((min(h - 1, dy + 2), spine_y))
+        for y in range(y0, y1 + 1):
+            if grid[y][dx] in (MT_GRASS, MT_TALL) or grid[y][dx] in PATH:
+                path_cells.add((dx, y))
+                # 2-wide trail for visibility
+                if dx + 1 < w and grid[y][dx + 1] in {MT_GRASS, MT_TALL} | PATH:
+                    path_cells.add((dx + 1, y))
+        path_cells.add((dx, spine_y))
+    xs = [int(w_["x"]) for w_ in warps]
+    if xs:
+        for x in range(min(xs), max(xs) + 1):
+            if grid[spine_y][x] in (MT_GRASS, MT_TALL) or grid[spine_y][x] in PATH:
+                path_cells.add((x, spine_y))
+            if spine_y + 1 < h and grid[spine_y + 1][x] in {MT_GRASS, MT_TALL} | PATH:
+                path_cells.add((x, spine_y + 1))
+
+    def near_water(x, y) -> bool:
+        for dy in (-1, 0, 1):
+            for dx in (-1, 0, 1):
+                nx, ny = x + dx, y + dy
+                if 0 <= nx < w and 0 <= ny < h and grid[ny][nx] in WATER_METATILES:
+                    return True
+        return False
+
+    for x, y in list(path_cells):
+        if not (0 <= x < w and 0 <= y < h):
+            continue
+        if near_water(x, y):
+            if grid[y][x] in PATH or grid[y][x] == 0x121:
+                grid[y][x] = MT_GRASS
+            continue  # no path/sand blob by the pond
+        if grid[y][x] >= 0x200 or grid[y][x] == MT_WATER or grid[y][x] in set(MT_TREE):
+            continue
+        if grid[y][x] in (DOOR_MAT, MAILBOX):
+            continue
+        # Alternate 1CE/1CF like Littleroot dirt strips
+        grid[y][x] = DIRT_A if (x + y) % 2 == 0 else DIRT_B
+
+    # Scrub any remaining sand (0x121) within 2 tiles of water
+    for y in range(h):
+        for x in range(w):
+            if grid[y][x] != 0x121:
+                continue
+            if near_water(x, y):
+                grid[y][x] = MT_GRASS
 
 
 def rebuild_twinleaf() -> None:
@@ -258,18 +213,15 @@ def rebuild_twinleaf() -> None:
 
     mj = json.loads((MAPS / "TwinleafTown" / "map.json").read_text())
     warps = mj.get("warp_events") or []
-    # Platinum: large houses = player + rival; two small NPC houses
     for warp in warps:
         dx, dy = int(warp["x"]), int(warp["y"])
         dest = warp.get("dest_map") or ""
         large = "PLAYERSHOUSE" in dest or "RIVALSHOUSE" in dest
-        facade = HOUSE_LARGE if large else HOUSE
-        clear_house_footprint(grid, collision, dx, dy, facade)
-        stamp_facade(grid, dx, dy, facade)
+        stamp = HOUSE_PETALBURG_WIDE if large else HOUSE_PETALBURG_A
+        stamp_with_clear(grid, collision, dx, dy, stamp, MT_GRASS, pad=1)
 
     scrub_rocks_to_trees_or_grass(grid, collision)
     repair_incomplete_trees(grid, collision)
-    # Re-assert water cells from Platinum (pond)
     for y in range(height):
         for x in range(width):
             if grid[y][x] == MT_WATER:
@@ -277,20 +229,24 @@ def rebuild_twinleaf() -> None:
 
     paint_fenced_gardens(grid, collision)
     connect_house_paths(grid, warps)
-    # Re-assert door mats after path paint (paths may claim the cell south of the door)
+    # Re-assert door mats
     for warp in warps:
         dx, dy = int(warp["x"]), int(warp["y"])
         if dy + 1 < height and grid[dy + 1][dx] not in set(MT_TREE) and grid[dy + 1][dx] < 0x208:
             grid[dy + 1][dx] = DOOR_MAT
+        # Mailbox beside door on grass
+        for mx in (dx + 1, dx - 1):
+            if 0 <= mx < width and grid[dy][mx] == MT_GRASS:
+                grid[dy][mx] = MAILBOX
+                break
 
     repair_incomplete_trees(grid, collision)
 
-    # Sync collision for buildings / fences
-    FENCE = {FENCE_TL, FENCE_T, FENCE_TR, FENCE_BL, FENCE_B, FENCE_BR, 0x214, 0x216}
+    FENCE = {0x214, 0x215, 0x216, 0x21C, 0x21D, 0x21E}
     for y in range(height):
         for x in range(width):
             mt = grid[y][x]
-            if mt in WATER_METATILES or mt in (DOOR_MAT, MAILBOX):
+            if mt in WATER_METATILES or mt in (DOOR_MAT, MAILBOX) or mt in (MT_TALL, 0x00D):
                 collision[y][x] = 0
             elif mt >= 0x200 or mt in set(MT_TREE) or mt == MT_ROCK or mt in FENCE:
                 collision[y][x] = 1
@@ -298,7 +254,6 @@ def rebuild_twinleaf() -> None:
     blob = pack(grid, collision)
     folder = LAYOUTS / "TwinleafTown"
     (folder / "map.bin").write_bytes(blob)
-    # Tree-border border.bin
     border = bytearray(8)
     for i, mt in enumerate(MT_TREE):
         struct.pack_into("<H", border, i * 2, encode_map_cell(mt, collision=1))
@@ -310,7 +265,6 @@ def rebuild_twinleaf() -> None:
 
 
 def reencode_water_all_sinnoh() -> int:
-    """Re-pack every Sinnoh layout cell so water uses elev=1."""
     layouts = json.loads(LAYOUTS_JSON.read_text())["layouts"]
     fixed = 0
     for name in sorted(LAND_TABLE):
@@ -339,8 +293,6 @@ def reencode_water_all_sinnoh() -> int:
 
 
 def main() -> int:
-    if not (REPO / "tools/sinnoh_maps").exists():
-        return 1
     rebuild_twinleaf()
     reencode_water_all_sinnoh()
     return 0

@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
-"""Rebuild Jubilife City as a paved Platinum-style city with Emerald PC/Mart doors.
+"""Rebuild Jubilife City: Platinum street layout + COMPLETE Emerald building stamps.
 
-Chris's playtest: Jubilife was dirt-path + tree fragments, mangled PC (no enterable
-door). Platinum Jubilife is grey pavement with TV / Pokétch / School / Center /
-Mart / condos.
-
-Uses land chunks [[18,16],[17,15]] (64×64). Emerald tiles only (Rustboro secondary
-already wired on LAYOUT_JUBILIFE_CITY):
-  - Walkable → Rustboro sidewalk 0x2BB
-  - Edge solids → complete 2×2 trees
-  - Warps get authentic Rustboro PC/Mart/house/civic facades (door 0x061/0x041/0x22F)
+- Walkable Platinum cells → Rustboro sidewalk 0x2BB
+- Edge solids only → complete 2×2 trees (few trees, borders only)
+- Interior solids → sidewalk (plaza/streets; buildings stamped on top)
+- Every building is a full contiguous stamp from Rustboro/Oldale (see
+  emerald_building_stamps.py) with door warp on the door metatile
 """
 from __future__ import annotations
 
@@ -20,6 +16,14 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO))
 
+from tools.sinnoh_maps.emerald_building_stamps import (  # noqa: E402
+    CIVIC_RUSTBORO,
+    CIVIC_RUSTBORO_WIDE,
+    HOUSE_RUSTBORO,
+    MART_RUSTBORO,
+    PC_RUSTBORO,
+    stamp_with_clear,
+)
 from tools.sinnoh_maps.platinum_1to1_audit import LAND_TABLE  # noqa: E402
 from tools.sinnoh_maps.sinnoh_build_lib import (  # noqa: E402
     LAYOUTS,
@@ -34,82 +38,20 @@ from tools.sinnoh_maps.sinnoh_build_lib import (  # noqa: E402
     stitch,
 )
 
-# Rustboro city sidewalk (walkable secondary) — Jubilife uses gTileset_Rustboro
 MT_CITY_PAVE = 0x2BB
-# Placeholder for Platinum interior solids before stamps; leftover lots become
-# tree parks so the paved street cross stays readable (0x231 wall strip looks wrong).
-MT_CITY_LOT = 0x2C3
-# Authentic Rustboro Pokémon Center (door 0x061) — from RustboroCity map.bin
-PC_FACADE = [
-    [0x256, 0x25E, 0x25F, 0x257],
-    [0x050, 0x051, 0x052, 0x053],
-    [0x058, 0x059, 0x05A, 0x05B],
-    [0x266, 0x061, 0x062, 0x27E],
-]
-PC_DOOR_DX = 1
-# Authentic Rustboro Mart (door 0x041)
-MART_FACADE = [
-    [0x030, 0x031, 0x032, 0x033],
-    [0x038, 0x039, 0x03A, 0x03B],
-    [0x266, 0x041, 0x042, 0x27F],
-]
-MART_DOOR_DX = 1
-# Rustboro school / flat style (door 0x22F on bottom row only)
-HOUSE_FACADE = [
-    [0x220, 0x221, 0x221, 0x221, 0x222],
-    [0x228, 0x229, 0x229, 0x229, 0x22A],
-    [0x230, 0x231, 0x231, 0x227, 0x233],
-    [0x238, 0x23A, 0x23A, 0x23A, 0x23B],
-    [0x240, 0x241, 0x241, 0x22F, 0x243],
-]
-HOUSE_DOOR_DX = 3
-# Wider civic (TV / Pokétch / Condo / Terminal / School)
-CIVIC_FACADE = [
-    [0x220, 0x221, 0x221, 0x221, 0x221, 0x222],
-    [0x228, 0x229, 0x229, 0x229, 0x229, 0x22A],
-    [0x230, 0x231, 0x231, 0x227, 0x231, 0x233],
-    [0x238, 0x23A, 0x23A, 0x23A, 0x23A, 0x23B],
-    [0x240, 0x241, 0x241, 0x22F, 0x241, 0x243],
-]
-CIVIC_DOOR_DX = 3
+MT_CITY_PLAZA = 0x2C3  # accent plaza squares
+DOOR_METATILES = {0x061, 0x041, 0x22F, 0x248, 0x20E, 0x287, 0x062, 0x042}
 
-DOOR_METATILES = {0x061, 0x041, 0x22F, 0x248, 0x20E, 0x287}
-
-# Building stamp classification by dest_map substring
 BUILDING_KIND = [
     ("POKEMON_CENTER", "center"),
     ("MART", "mart"),
-    ("POKETCH", "civic"),
+    ("POKETCH", "civic_wide"),
     ("TRAINERS_SCHOOL", "civic"),
-    ("TV_", "civic"),
+    ("TV_", "civic_wide"),
     ("CONDO", "civic"),
-    ("GLOBAL_TERMINAL", "civic"),
+    ("GLOBAL_TERMINAL", "civic_wide"),
     ("HOUSE", "house"),
 ]
-
-
-def stamp(grid, door_x: int, door_y: int, facade, door_dx: int) -> None:
-    top = door_y - (len(facade) - 1)
-    left = door_x - door_dx
-    h, w = len(grid), len(grid[0])
-    for dy, row in enumerate(facade):
-        for dx, mt in enumerate(row):
-            x, y = left + dx, top + dy
-            if 0 <= y < h and 0 <= x < w:
-                grid[y][x] = mt
-
-
-def clear_footprint(grid, collision, door_x, door_y, facade, door_dx, pad=1) -> None:
-    top = door_y - (len(facade) - 1) - pad
-    left = door_x - door_dx - pad
-    h, w = len(grid), len(grid[0])
-    fh, fw = len(facade) + pad * 2 + 1, len(facade[0]) + pad * 2
-    for dy in range(fh):
-        for dx in range(fw):
-            x, y = left + dx, top + dy
-            if 0 <= y < h and 0 <= x < w:
-                grid[y][x] = MT_CITY_PAVE
-                collision[y][x] = 0
 
 
 def kind_for_dest(dest: str) -> str | None:
@@ -122,39 +64,30 @@ def kind_for_dest(dest: str) -> str | None:
 
 
 def facade_for(kind: str):
-    if kind == "center":
-        return PC_FACADE, PC_DOOR_DX
-    if kind == "mart":
-        return MART_FACADE, MART_DOOR_DX
-    if kind == "civic":
-        return CIVIC_FACADE, CIVIC_DOOR_DX
-    return HOUSE_FACADE, HOUSE_DOOR_DX
+    return {
+        "center": PC_RUSTBORO,
+        "mart": MART_RUSTBORO,
+        "civic": CIVIC_RUSTBORO,
+        "civic_wide": CIVIC_RUSTBORO_WIDE,
+        "house": HOUSE_RUSTBORO,
+    }[kind]
 
 
 def sync_collision(grid, collision) -> None:
-    """Match Twinleaf/vanilla: buildings+trees solid; doors keep solid bit (engine
-    warp-door behavior); pavement/water walkable.
-    """
-    h, w = len(grid), len(grid[0])
     TREE = set(MT_TREE)
+    h, w = len(grid), len(grid[0])
     for y in range(h):
         for x in range(w):
             mt = grid[y][x]
-            if mt in WATER_METATILES:
+            if mt in WATER_METATILES or mt in (MT_CITY_PAVE, MT_CITY_PLAZA):
                 collision[y][x] = 0
-            elif mt == MT_CITY_PAVE:
-                collision[y][x] = 0
-            elif mt == MT_CITY_LOT:
-                collision[y][x] = 1
             elif mt in TREE or mt == MT_ROCK or mt == 0x139:
                 collision[y][x] = 1
             elif mt >= 0x200:
-                # Secondary facade body (incl. door 0x22F) — solid like vanilla Rustboro
                 collision[y][x] = 1
-            elif mt in (0x061, 0x041, 0x050, 0x051, 0x052, 0x053, 0x058, 0x059, 0x05A, 0x05B,
-                        0x060, 0x062, 0x063, 0x030, 0x031, 0x032, 0x033, 0x038, 0x039, 0x03A, 0x03B,
-                        0x048, 0x049, 0x04A, 0x04B):
-                # General PC/Mart body + door — solid like vanilla (warp-door MB)
+            elif mt in DOOR_METATILES or (0x028 <= mt <= 0x063) or mt in (
+                0x256, 0x257, 0x25E, 0x25F, 0x266, 0x27E, 0x27F, 0x325, 0x326, 0x267,
+            ):
                 collision[y][x] = 1
             else:
                 collision[y][x] = 0
@@ -167,8 +100,7 @@ def rebuild() -> None:
     assert (w, h) == (64, 64), (w, h)
 
     solid = [[bool(plat_collision(attr[y][x])) for x in range(w)] for y in range(h)]
-    # Trees on edge-ring solids; interior solids keep as LOT fill so Platinum
-    # street corridors (walkable) stay visible instead of a flat paved square.
+    # Trees ONLY on outer margin (Chris: few trees, borders only)
     edge = [[False] * w for _ in range(h)]
     margin = 2
     for y in range(h):
@@ -177,6 +109,7 @@ def rebuild() -> None:
                 edge[y][x] = True
     tree_grid = place_complete_trees([row[:] for row in edge])
 
+    # Entire interior (walkable + former building solids) → pavement so streets read
     grid = [[MT_CITY_PAVE for _ in range(w)] for _ in range(h)]
     collision = [[0] * w for _ in range(h)]
     for y in range(h):
@@ -184,76 +117,62 @@ def rebuild() -> None:
             if edge[y][x] and tree_grid[y][x] in set(MT_TREE) | {MT_ROCK}:
                 grid[y][x] = tree_grid[y][x]
                 collision[y][x] = 1
-            elif solid[y][x]:
-                grid[y][x] = MT_CITY_LOT
-                collision[y][x] = 1
-            else:
-                grid[y][x] = MT_CITY_PAVE
-                collision[y][x] = 0
+
+    # Plaza accent: 4×4 of 0x2C3 near map center (fountain plaza stand-in)
+    for y in range(28, 36):
+        for x in range(28, 36):
+            if grid[y][x] == MT_CITY_PAVE:
+                grid[y][x] = MT_CITY_PLAZA
 
     mj_path = MAPS / "JubilifeCity" / "map.json"
     mj = json.loads(mj_path.read_text())
-    warps = mj.get("warp_events") or []
-
-    # Drop bogus corner warps (0,0)/(1,0) condo duplicates
     warps = [
-        w for w in warps
-        if not (w["x"] <= 1 and w["y"] <= 1 and "CONDO" in w.get("dest_map", ""))
+        wp for wp in (mj.get("warp_events") or [])
+        if not (wp["x"] <= 1 and wp["y"] <= 1 and "CONDO" in wp.get("dest_map", ""))
     ]
+    # Dedupe Pokétch double door — keep leftmost
+    seen_poketch = False
+    filtered = []
+    for wp in sorted(warps, key=lambda z: (z["y"], z["x"])):
+        dest = wp.get("dest_map", "")
+        if "POKETCH" in dest:
+            if seen_poketch:
+                continue
+            seen_poketch = True
+        filtered.append(wp)
+    warps = filtered
 
-    # Ensure approach tiles south of each door are walkable pavement
-    for warp in warps:
-        if "GATE" in warp.get("dest_map", ""):
-            continue
-        x, y = warp["x"], warp["y"]
-        for ay in range(y, min(h, y + 3)):
-            for ax in range(max(0, x - 2), min(w, x + 3)):
-                if grid[ay][ax] in set(MT_TREE) | {MT_ROCK}:
-                    grid[ay][ax] = MT_CITY_PAVE
-                    collision[ay][ax] = 0
-
-    # Stamp larger civics first so smaller houses can overwrite overlaps cleanly
     ordered = sorted(
         warps,
-        key=lambda w: (
-            0 if kind_for_dest(w.get("dest_map", "")) == "civic" else
-            1 if kind_for_dest(w.get("dest_map", "")) in ("center", "mart") else 2
+        key=lambda wp: (
+            0 if kind_for_dest(wp.get("dest_map", "")) in ("civic_wide", "civic") else
+            1 if kind_for_dest(wp.get("dest_map", "")) in ("center", "mart") else 2
         ),
     )
     stamped = 0
     for warp in ordered:
-        dest = warp.get("dest_map", "")
-        kind = kind_for_dest(dest)
+        kind = kind_for_dest(warp.get("dest_map", ""))
         if kind is None:
             continue
-        facade, door_dx = facade_for(kind)
-        clear_footprint(grid, collision, warp["x"], warp["y"], facade, door_dx)
-        stamp(grid, warp["x"], warp["y"], facade, door_dx)
+        stamp = facade_for(kind)
+        stamp_with_clear(grid, collision, warp["x"], warp["y"], stamp, MT_CITY_PAVE, pad=1)
         stamped += 1
 
-    # Leftover Platinum building solids → complete 2×2 tree parks (not wall strips)
-    lot_mask = [
-        [grid[y][x] == MT_CITY_LOT for x in range(w)]
-        for y in range(h)
-    ]
-    park = place_complete_trees([row[:] for row in lot_mask])
-    TREE = set(MT_TREE)
-    for y in range(h):
-        for x in range(w):
-            if not lot_mask[y][x]:
-                continue
-            if park[y][x] in TREE:
-                grid[y][x] = park[y][x]
-                collision[y][x] = 1
-            else:
-                # Gaps between tree quads → pavement alley
-                grid[y][x] = MT_CITY_PAVE
-                collision[y][x] = 0
+    # Ensure gate corridors open
+    for x in range(44, 48):
+        for y in range(0, 3):
+            grid[y][x] = MT_CITY_PAVE
+            collision[y][x] = 0
+    for y in range(20, 26):
+        for x in range(0, 3):
+            grid[y][x] = MT_CITY_PAVE
+            collision[y][x] = 0
 
-    # Scrub orphan tree halves / leftover rocks from park fill
+    # Scrub any orphan tree halves on the border
+    TREE = set(MT_TREE)
     expect = {MT_TREE[0]: (0, 0), MT_TREE[1]: (-1, 0), MT_TREE[2]: (0, -1), MT_TREE[3]: (-1, -1)}
 
-    def tree_complete(tlx: int, tly: int) -> bool:
+    def complete(tlx, tly):
         if tlx < 0 or tly < 0 or tlx + 1 >= w or tly + 1 >= h:
             return False
         return (
@@ -269,30 +188,15 @@ def rebuild() -> None:
             if mt == MT_ROCK:
                 grid[y][x] = MT_CITY_PAVE
                 collision[y][x] = 0
-                continue
-            if mt not in TREE:
-                continue
-            dx, dy = expect[mt]
-            if not tree_complete(x + dx, y + dy):
-                grid[y][x] = MT_CITY_PAVE
-                collision[y][x] = 0
-
-    # Open north exit (Route 204) and west gate corridor
-    for x in range(44, 48):
-        for y in range(0, 3):
-            grid[y][x] = MT_CITY_PAVE
-            collision[y][x] = 0
-    for y in range(20, 26):
-        for x in range(0, 3):
-            grid[y][x] = MT_CITY_PAVE
-            collision[y][x] = 0
+            elif mt in TREE:
+                dx, dy = expect[mt]
+                if not complete(x + dx, y + dy):
+                    grid[y][x] = MT_CITY_PAVE
+                    collision[y][x] = 0
 
     sync_collision(grid, collision)
+    (LAYOUTS / "JubilifeCity" / "map.bin").write_bytes(pack(grid, collision))
 
-    blob = pack(grid, collision)
-    (LAYOUTS / "JubilifeCity" / "map.bin").write_bytes(blob)
-
-    # Keep layout tilesets: General + Rustboro
     layouts = json.loads(LAYOUTS_JSON.read_text())
     for L in layouts["layouts"]:
         if L.get("id") == "LAYOUT_JUBILIFE_CITY":
@@ -305,8 +209,9 @@ def rebuild() -> None:
     mj_path.write_text(json.dumps(mj, indent=2) + "\n")
 
     doors = sum(1 for y in range(h) for x in range(w) if grid[y][x] in DOOR_METATILES)
-    pave = sum(1 for y in range(h) for x in range(w) if grid[y][x] == MT_CITY_PAVE)
-    print(f"Jubilife rebuilt: {stamped} buildings stamped, {doors} door tiles, {pave} pavement cells")
+    trees = sum(1 for y in range(h) for x in range(w) if grid[y][x] in TREE)
+    pave = sum(1 for y in range(h) for x in range(w) if grid[y][x] in (MT_CITY_PAVE, MT_CITY_PLAZA))
+    print(f"Jubilife rebuilt: {stamped} complete stamps, {doors} doors, {pave} pave, {trees} tree tiles")
 
 
 if __name__ == "__main__":

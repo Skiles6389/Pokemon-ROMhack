@@ -412,22 +412,20 @@
     },
     {
       "name": "JubilifeCity",
-      "status": "WARN",
+      "status": "PASS",
       "incomplete_trees": 0,
-      "isolated_rocks": 4,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 0,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 3441,
+      "em_paths": 1929,
       "em_sand": 0,
       "plat_paths": 0,
       "path_coverage": null,
       "signs": 8,
-      "issues": [
-        "isolated cliff/rock tiles: 4"
-      ]
+      "issues": []
     },
     {
       "name": "LakeAcuity",
@@ -1653,10 +1651,10 @@
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 57,
+      "em_paths": 62,
       "em_sand": 0,
       "plat_paths": 44,
-      "path_coverage": 1.295,
+      "path_coverage": 1.409,
       "signs": 3,
       "issues": []
     },
@@ -1832,6 +1830,6 @@
     }
   ],
   "fail": 0,
-  "warn": 71,
-  "pass": 28
+  "warn": 70,
+  "pass": 29
 }

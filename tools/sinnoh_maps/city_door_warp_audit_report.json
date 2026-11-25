@@ -831,7 +831,7 @@
       "status": "PASS",
       "issues": [],
       "grass_frac": 0.0,
-      "pave_frac": 1.0,
+      "pave_frac": 0.999,
       "bad_building_tiles": 0,
       "unreachable_warps": 0,
       "non_enterable_doors": 0,

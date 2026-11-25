@@ -235,11 +235,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 1866,
+      "plat_opened": 347,
       "plat_blocked": 14,
       "plat_total": 4096,
       "issues": [
-        "Platinum solids opened 1866/4096 (45.6%)"
+        "Platinum solids opened 347/4096 (8.5%)"
       ]
     },
     {
@@ -921,8 +921,8 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 34,
-      "plat_blocked": 62,
+      "plat_opened": 43,
+      "plat_blocked": 77,
       "plat_total": 1024,
       "issues": []
     },

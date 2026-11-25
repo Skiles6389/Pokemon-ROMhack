@@ -1,0 +1,130 @@
+{
+  "fail": 0,
+  "pass": 18,
+  "skip": 0,
+  "results": [
+    {
+      "name": "CanalaveCity",
+      "status": "PASS",
+      "checked": 9,
+      "issues": []
+    },
+    {
+      "name": "CelesticTown",
+      "status": "PASS",
+      "checked": 5,
+      "issues": []
+    },
+    {
+      "name": "EternaCity",
+      "status": "PASS",
+      "checked": 9,
+      "issues": []
+    },
+    {
+      "name": "FightArea",
+      "status": "PASS",
+      "checked": 4,
+      "issues": []
+    },
+    {
+      "name": "FloaromaTown",
+      "status": "PASS",
+      "checked": 5,
+      "issues": []
+    },
+    {
+      "name": "HearthomeCity",
+      "status": "PASS",
+      "checked": 10,
+      "issues": []
+    },
+    {
+      "name": "JubilifeCity",
+      "status": "PASS",
+      "checked": 9,
+      "issues": []
+    },
+    {
+      "name": "OreburghCity",
+      "status": "PASS",
+      "checked": 10,
+      "issues": []
+    },
+    {
+      "name": "PastoriaCity",
+      "status": "PASS",
+      "checked": 8,
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Exterior",
+      "status": "PASS",
+      "checked": 2,
+      "issues": []
+    },
+    {
+      "name": "ResortArea",
+      "status": "PASS",
+      "checked": 4,
+      "issues": []
+    },
+    {
+      "name": "SandgemTown",
+      "status": "PASS",
+      "checked": 5,
+      "issues": []
+    },
+    {
+      "name": "SnowpointCity",
+      "status": "PASS",
+      "checked": 5,
+      "issues": []
+    },
+    {
+      "name": "SolaceonTown",
+      "status": "PASS",
+      "checked": 7,
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity",
+      "status": "PASS",
+      "checked": 12,
+      "issues": []
+    },
+    {
+      "name": "SurvivalArea",
+      "status": "PASS",
+      "checked": 4,
+      "issues": []
+    },
+    {
+      "name": "TwinleafTown",
+      "status": "PASS",
+      "checked": 4,
+      "issues": []
+    },
+    {
+      "name": "VeilstoneCity",
+      "status": "PASS",
+      "checked": 12,
+      "issues": []
+    }
+  ],
+  "stamp_catalog": [
+    "littleroot_house_a",
+    "littleroot_house_b",
+    "littleroot_house_wide",
+    "oldale_house",
+    "oldale_pc",
+    "oldale_mart",
+    "rustboro_pc",
+    "rustboro_mart",
+    "rustboro_house",
+    "rustboro_civic",
+    "rustboro_civic_wide",
+    "mauville_gym",
+    "fenced_flower_garden"
+  ]
+}

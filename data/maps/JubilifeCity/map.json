@@ -247,11 +247,39 @@
   ],
   "warp_events": [
     {
-      "x": 52,
-      "y": 40,
+      "x": 13,
+      "y": 15,
       "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY_POKEMON_CENTER_1F",
+      "dest_map": "MAP_JUBILIFE_CITY_POKETCH_COMPANY",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 36,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_JUBILIFE_TV_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 52,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_JUBILIFE_CITY_CONDO_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE218_JUBILIFE_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE218_JUBILIFE_GATE",
+      "dest_warp_id": "1"
     },
     {
       "x": 51,
@@ -268,17 +296,10 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 17,
-      "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY_POKETCH_COMPANY",
-      "dest_warp_id": "0"
-    },
-    {
       "x": 52,
-      "y": 19,
+      "y": 40,
       "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY_CONDO_1F",
+      "dest_map": "MAP_JUBILIFE_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
@@ -289,10 +310,10 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 36,
-      "y": 15,
+      "x": 12,
+      "y": 52,
       "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_TV_1F",
+      "dest_map": "MAP_JUBILIFE_CITY_SOUTHWEST_HOUSE",
       "dest_warp_id": "0"
     },
     {
@@ -301,34 +322,6 @@
       "elevation": 0,
       "dest_map": "MAP_JUBILIFE_CITY_SOUTH_HOUSE",
       "dest_warp_id": "0"
-    },
-    {
-      "x": 13,
-      "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY_POKETCH_COMPANY",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 12,
-      "y": 52,
-      "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY_SOUTHWEST_HOUSE",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 0,
-      "y": 22,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE218_JUBILIFE_GATE",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 0,
-      "y": 23,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE218_JUBILIFE_GATE",
-      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
