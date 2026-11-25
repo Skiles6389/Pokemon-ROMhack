@@ -1,6 +1,6 @@
 {
-  "fail": 3,
-  "pass": 188,
+  "fail": 0,
+  "pass": 191,
   "results": [
     {
       "name": "AcuityLakefront",
@@ -764,24 +764,18 @@
     },
     {
       "name": "SunyshoreCity_Gym_Room1",
-      "status": "FAIL",
-      "issues": [
-        "indoor warps blocked: 1"
-      ]
+      "status": "PASS",
+      "issues": []
     },
     {
       "name": "SunyshoreCity_Gym_Room2",
-      "status": "FAIL",
-      "issues": [
-        "indoor warps blocked: 1"
-      ]
+      "status": "PASS",
+      "issues": []
     },
     {
       "name": "SunyshoreCity_Gym_VolknersRoom",
-      "status": "FAIL",
-      "issues": [
-        "indoor warps blocked: 2"
-      ]
+      "status": "PASS",
+      "issues": []
     },
     {
       "name": "SunyshoreCity_LighthouseElevator",
