@@ -229,20 +229,58 @@ static void InitBackupMapLayoutConnections(const struct MapHeader *mapHeader)
     }
 }
 
+// Only the current map's primary + secondary tilesets are in VRAM, so the strip of a
+// connected map that is copied in here is drawn with the CURRENT map's tiles.  A
+// connected-map metatile that belongs to a different tileset would show the wrong
+// graphics (a garbage strip along the seam, e.g. Jubilife seen from Route 202).
+// Such metatiles are swapped for a border metatile the current tilesets can draw;
+// the collision/elevation bits are kept so movement at the seam is unchanged.
+static bool32 IsMetatileDrawableWith(const struct MapLayout *from, const struct MapLayout *cur, u16 metatileId)
+{
+    if (metatileId < GetNumMetatilesInPrimary(from))
+        return from->primaryTileset == cur->primaryTileset;
+    return from->secondaryTileset == cur->secondaryTileset && from->primaryTileset == cur->primaryTileset;
+}
+
+static u16 GetSeamFallbackMetatile(const struct MapLayout *from, const struct MapLayout *cur)
+{
+    u16 id;
+
+    if (from->border != NULL)
+    {
+        id = UNPACK_METATILE(from->border[0]);
+        if (IsMetatileDrawableWith(from, cur, id))
+            return id;
+    }
+    return UNPACK_METATILE(cur->border[0]);
+}
+
 static void FillConnection(s32 x, s32 y, const struct MapHeader *connectedMapHeader, s32 x2, s32 y2, s32 width, s32 height)
 {
-    s32 i;
+    s32 i, j;
     const u16 *src;
     u16 *dest;
     s32 mapWidth;
+    const struct MapLayout *from = connectedMapHeader->mapLayout;
+    const struct MapLayout *cur = gMapHeader.mapLayout;
+    bool32 sameTilesets = (from->primaryTileset == cur->primaryTileset && from->secondaryTileset == cur->secondaryTileset);
+    u16 fallback = sameTilesets ? 0 : GetSeamFallbackMetatile(from, cur);
 
-    mapWidth = connectedMapHeader->mapLayout->width;
-    src = &connectedMapHeader->mapLayout->map[mapWidth * y2 + x2];
+    mapWidth = from->width;
+    src = &from->map[mapWidth * y2 + x2];
     dest = &gBackupMapLayout.map[gBackupMapLayout.width * y + x];
 
     for (i = 0; i < height; i++)
     {
         CpuCopy16(src, dest, width * 2);
+        if (!sameTilesets)
+        {
+            for (j = 0; j < width; j++)
+            {
+                if (!IsMetatileDrawableWith(from, cur, UNPACK_METATILE(dest[j])))
+                    dest[j] = (dest[j] & ~MAPGRID_METATILE_ID_MASK) | PACK_METATILE(fallback);
+            }
+        }
         dest += gBackupMapLayout.width;
         src += mapWidth;
     }

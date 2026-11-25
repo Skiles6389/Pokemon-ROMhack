@@ -37,6 +37,14 @@ Outputs (not committed when large):
 4. **Early-game playtest (static)**: Twinleaf → Route201 → Verity → Sandgem →
    Route202 → Jubilife PC/Mart → Route203 → Oreburgh — door enterability,
    walk-into-solid/water asserts, catch-tutorial wiring.
+4b. **Tileset consistency** (`tileset_consistency_check.py`): every metatile id, tile
+   and palette of the early-game maps is valid for the map's primary/secondary
+   tilesets (13 BG palettes), connection seams are drawable with the current
+   tilesets, and secondary metatiles never used in vanilla are flagged.
+4c. **Sign / script audit** (`sign_script_audit.py`): sign/NPC/trigger scripts exist,
+   terminate, release locks, have `$`-terminated text and step_end movements; no
+   object uses an FRLG-only `OBJ_EVENT_GFX_*` (NULL graphics info -> crash).
+   Runtime counterpart: `tools/qa/sign_freeze_probe.py` (headless mGBA, QA ROM).
 5. **mGBA smoke**: boots `pokeemerald.gba` with HLE BIOS (no Nintendo BIOS)
    under `xvfb-run` / timeout; runs `make check TESTS=…` for catch-tutorial.
 6. **Story battle audit** (`story_battle_audit.py`): Barry 1 must continue on

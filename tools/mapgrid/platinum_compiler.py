@@ -17,7 +17,7 @@ Characters
 
 Styles (``@style``): ``mauville`` (default; General + Mauville), ``petalburg``
 (General + Petalburg: white rail fences) and ``rustboro`` (General + Rustboro:
-paved city, gray road autotile, iron fences, lamps).  ``@bldg x0 y0 x1 y1 KIND
+paved city, diagonal-brick roads, iron fences, lamps).  ``@bldg x0 y0 x1 y1 KIND
 [door_x door_y DEST WARPID ...]`` places a stretchable Emerald facade (Rustboro
 ``civic`` / ``gray``) over a rectangle, with zero or more doors on its bottom row.
 
@@ -56,8 +56,10 @@ STYLES = {
     "petalburg": dict(path=[[0x118, 0x119, 0x11A], [0x120, 0x121, 0x122], [0x128, 0x129, 0x12A]],
                       fence_h=0x03E, fence_l=0x045, fence_r=0x047, exit=None, pave=GRASS,
                       secondary="gTileset_Petalburg"),
-    # Rustboro secondary: pave 0x2BB, gray road autotile, iron fence, lamp post
-    "rustboro": dict(path=[[0x2F8, 0x2F9, 0x2FA], [0x300, 0x301, 0x302], [0x308, 0x309, 0x30A]],
+    # Rustboro secondary: pave 0x2BB, diagonal-brick road 0x2C3, iron fence, lamp post.
+    # (The pale-blue 0x2F8-0x30A set is a 2-wide lane frame in vanilla Rustboro; its
+    # centre 0x301 is never used there and wide fills of it read as static/snow.)
+    "rustboro": dict(path=[[0x2C3, 0x2C3, 0x2C3], [0x2C3, 0x2C3, 0x2C3], [0x2C3, 0x2C3, 0x2C3]],
                      fence_h=0x2FC, fence_l=0x319, fence_r=0x319, exit=0x282, pave=0x2BB,
                      lamp=(0x212, 0x21A), secondary="gTileset_Rustboro"),
 }

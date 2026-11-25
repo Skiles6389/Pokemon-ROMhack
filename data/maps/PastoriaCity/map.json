@@ -70,7 +70,7 @@
       "local_id": "LOCALID_PASTORIA_WAKE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
       "x": 2,
       "y": 46,
       "elevation": 3,
