@@ -9515,7 +9515,7 @@
       "id": "LAYOUT_VERITY_LAKEFRONT",
       "name": "VerityLakefront_Layout",
       "width": 32,
-      "height": 13,
+      "height": 18,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/VerityLakefront/border.bin",
