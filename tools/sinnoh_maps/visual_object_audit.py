@@ -63,6 +63,12 @@ COMPLETE = [MT_TREE_TL, MT_TREE_TR, MT_TREE_BL, MT_TREE_BR]
 LEDGE = {0x0D5, 0x0D6}
 FENCE_LIKE = {0x00A, 0x00B, 0x00C}
 CLIFF_ROCK = {MT_ROCK, 0x07C, 0x091, 0x139}
+# Path autotiles used by tools/mapgrid/platinum_compiler.py styles, counted only
+# on layouts built with that style's secondary (Petalburg = Sandgem dirt road),
+# and only for the plain-ground fallback (Platinum has no path attrs there).
+STYLE_PATHS = {
+    "gTileset_Petalburg": {0x118, 0x119, 0x11A, 0x120, 0x121, 0x122, 0x128, 0x129, 0x12A},
+}
 
 
 def load_cells(name: str):
@@ -208,6 +214,8 @@ def audit_one(name: str) -> dict:
     )
     snow = is_snow_layout(meta, name)
     em_paths = sum(1 for row in cells for mt, _, _ in row if mt in PATH_METATILES)
+    style_ids = STYLE_PATHS.get(meta.get("secondary_tileset", ""), set())
+    em_style_paths = sum(1 for row in cells for mt, _, _ in row if mt in style_ids)
     em_sand = sum(1 for row in cells for mt, _, _ in row if mt == MT_SAND)
     em_water = sum(1 for row in cells for mt, _, _ in row if mt in WATER_METATILES)
 
@@ -336,7 +344,7 @@ def audit_one(name: str) -> dict:
                             plain += 1
         except FileNotFoundError:
             plain = 0
-        if plain >= 40 and em_paths < max(8, plain // 8):
+        if plain >= 40 and em_paths + em_style_paths < max(8, plain // 8):
             issues.append(
                 f"missing paths: Platinum plain-ground fallback {plain} cells → "
                 f"Emerald path {em_paths}"

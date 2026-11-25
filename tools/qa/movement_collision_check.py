@@ -75,6 +75,20 @@ REQUIRED_SCENES: list[tuple[str, str, int, int]] = [
     # Route201 BarryMeet lead-up on clear west corridor
     ("Route201", "Route201_Movement_BarryLeadsWest", 3, 22),
     ("Route201", "Route201_Movement_PlayerFollowsWest", 4, 22),
+    # m51 Sandgem tour / Barry bump, Route 202 assistant exit, Jubilife scenes
+    ("SandgemTown", "SandgemTown_Movement_AssistantToLab", 8, 13),
+    ("SandgemTown", "SandgemTown_Movement_ToMart", 7, 11),
+    ("SandgemTown", "SandgemTown_Movement_ToMart", 8, 11),
+    ("SandgemTown", "SandgemTown_Movement_BarryIn", 26, 12),
+    ("SandgemTown", "SandgemTown_Movement_BarryLeave", 27, 12),
+    ("Route202", "Route202_Movement_AssistantLeave", 14, 27),
+    ("JubilifeCity", "JubilifeCity_Movement_CounterpartGreet", 46, 52),
+    ("JubilifeCity", "JubilifeCity_Movement_CounterpartReturn", 46, 59),
+    ("JubilifeCity", "JubilifeCity_Movement_GruntLeave", 46, 3),
+    ("JubilifeCity", "JubilifeCity_Movement_Grunt2Leave", 46, 4),
+    ("JubilifeCity", "JubilifeCity_Movement_AssistantLeave", 47, 4),
+    ("JubilifeCity", "JubilifeCity_Movement_BarryIn", 46, 11),
+    ("JubilifeCity", "JubilifeCity_Movement_BarryLeave", 46, 9),
 ]
 
 

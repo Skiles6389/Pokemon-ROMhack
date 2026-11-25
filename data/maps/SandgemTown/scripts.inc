@@ -352,59 +352,26 @@ SandgemTown_Text_Route219Sign:
 	.string "SOUTH: ROUTE 219\n"
 	.string "Beach overlook - the surf path is\l"
 	.string "not open from this side yet.$"
-SandgemTown_EventScript_PlatNpc1::
-	msgbox SandgemTown_EventScript_PlatNpc1_Text, MSGBOX_NPC
+SandgemTown_EventScript_CounterpartHouseSign::
+	msgbox SandgemTown_EventScript_CounterpartHouseSign_Text, MSGBOX_SIGN
 	end
 
-SandgemTown_EventScript_PlatNpc1_Text:
-	.string "These roads keep surprising me.\n"
-	.string "Every corner hides another path.$"
+SandgemTown_EventScript_CounterpartHouseSign_Text:
+	.string "A field researcher lives here.\n"
+	.string "Please wipe your shoes.$"
 
-SandgemTown_EventScript_PlatNpc3::
-	msgbox SandgemTown_EventScript_PlatNpc3_Text, MSGBOX_NPC
+SandgemTown_EventScript_TownSign::
+	msgbox SandgemTown_EventScript_TownSign_Text, MSGBOX_SIGN
 	end
 
-SandgemTown_EventScript_PlatNpc3_Text:
-	.string "These roads keep surprising me.\n"
-	.string "Every corner hides another path.$"
+SandgemTown_EventScript_TownSign_Text:
+	.string "SANDGEM TOWN\n"
+	.string "Small town, big questions.$"
 
-SandgemTown_EventScript_PlatNpc5::
-	msgbox SandgemTown_EventScript_PlatNpc5_Text, MSGBOX_NPC
+SandgemTown_EventScript_Breeder::
+	msgbox SandgemTown_EventScript_Breeder_Text, MSGBOX_NPC
 	end
 
-SandgemTown_EventScript_PlatNpc5_Text:
-	.string "These roads keep surprising me.\n"
-	.string "Every corner hides another path.$"
-
-SandgemTown_EventScript_PlatNpc6::
-	msgbox SandgemTown_EventScript_PlatNpc6_Text, MSGBOX_NPC
-	end
-
-SandgemTown_EventScript_PlatNpc6_Text:
-	.string "These roads keep surprising me.\n"
-	.string "Every corner hides another path.$"
-
-SandgemTown_EventScript_PlatNpc7::
-	msgbox SandgemTown_EventScript_PlatNpc7_Text, MSGBOX_NPC
-	end
-
-SandgemTown_EventScript_PlatNpc7_Text:
-	.string "These roads keep surprising me.\n"
-	.string "Every corner hides another path.$"
-
-SandgemTown_EventScript_PlatNpc12::
-	msgbox SandgemTown_EventScript_PlatNpc12_Text, MSGBOX_NPC
-	end
-
-SandgemTown_EventScript_PlatNpc12_Text:
-	.string "These roads keep surprising me.\n"
-	.string "Every corner hides another path.$"
-
-SandgemTown_EventScript_PlatNpc13::
-	msgbox SandgemTown_EventScript_PlatNpc13_Text, MSGBOX_NPC
-	end
-
-SandgemTown_EventScript_PlatNpc13_Text:
-	.string "These roads keep surprising me.\n"
-	.string "Every corner hides another path.$"
-
+SandgemTown_EventScript_Breeder_Text:
+	.string "I watch the beach each morning.\n"
+	.string "Every tide brings a new visitor.$"

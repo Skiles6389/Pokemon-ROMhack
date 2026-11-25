@@ -1283,9 +1283,9 @@
 #define FLAG_HIDDEN_ITEM_TWINLEAF_TOWN_ODD_KEYSTONE                 0x4CB // Sinnoh m50: Platinum item (was FLAG_UNUSED_0x4CB)
 #define FLAG_HIDDEN_ITEM_VERITY_LAKEFRONT_TINY_MUSHROOM             0x4CC // Sinnoh m50: Platinum item (was FLAG_UNUSED_0x4CC)
 #define FLAG_ITEM_LAKE_VERITY_TM38                                  0x4CD // Sinnoh m50: Platinum item (was FLAG_UNUSED_0x4CD)
-#define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
-#define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
-#define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
+#define FLAG_ITEM_ROUTE202_POTION                                   0x4CE // Sinnoh m51: Platinum item (was FLAG_UNUSED_0x4CE)
+#define FLAG_HIDDEN_ITEM_JUBILIFE_CITY_STARDUST                     0x4CF // Sinnoh m51: Platinum hidden item (was FLAG_UNUSED_0x4CF)
+#define FLAG_HIDE_JUBILIFE_COUNTERPART                              0x4D0 // Sinnoh m51: Dawn/Lucas leaves after Jubilife arrival (was FLAG_UNUSED_0x4D0)
 #define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
 #define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
 #define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag

@@ -1,0 +1,56 @@
+# SandgemTown — Platinum-exact layout
+# Shapes derived from the Platinum layout; tiles are Emerald General + secondary metatiles.
+# Legend: T tree . grass , tall grass = path/road ~ water L ledge F fence f flowers : sand P pave
+#         S sign K shrub l lamp W walk-in exit; letters = building doors (@stamp); @bldg = stretched facade
+@compiler platinum
+@name SandgemTown
+@layout LAYOUT_SANDGEM_TOWN
+@width 32
+@height 32
+@style petalburg
+@primary gTileset_General
+@connection left MAP_ROUTE201 0
+@connection up MAP_ROUTE202 0
+@stamp B PC_OLDALE MAP_SANDGEM_TOWN_POKEMON_CENTER_1F 0
+@stamp A MART_OLDALE MAP_SANDGEM_TOWN_MART 0
+@stamp C BIRCH_LAB_W8 MAP_SANDGEM_TOWN_POKEMON_LAB 0
+@stamp E OLDALE_HOUSE MAP_SANDGEM_TOWN_HOUSE1 0
+@stamp D PETALBURG_HOUSE_B MAP_SANDGEM_TOWN_HOUSE2 0
+@sign SandgemTown_EventScript_CenterSign
+@sign SandgemTown_EventScript_MartSign
+@sign SandgemTown_EventScript_LabSign
+@sign SandgemTown_EventScript_CounterpartHouseSign
+@sign SandgemTown_EventScript_TownSign
+@grid
+TTTTTTTTTTTTTTTTTTTTTTTT......TT
+TTTTTTTTTTTTTTTTTTTTTTTT......TT
+TTTTTTTTTTTTTTTTTTTTf.........TT
+TTTTTTTTTTTTTTTTTTTTf........fTT
+TTTTTTTTTTTTTTTTTTTT.........fTT
+TTTTTTTTTTTTTTTTTTTT........ffTT
+TTTTTT########FFFFFF..===.KKKKTT
+TTTTTT########F#####..===.TTTTTT
+TTTTTT########F#####..===.####TT
+TTTTTT########F#####..===.####TT
+......##C##....##B##S.===S#A##TT
+.....S.===.......=....===..=..TT
+...===========================TT
+...===========================TT
+...===========================TT
+...........===................TT
+TTTTTT.....===..............::TT
+TTTTTT.....===...........:::::TT
+TTTTTT.....===.#####..::::::::TT
+TTTTTT####.===.#####.:::::::::TT
+TTTTTT####.===.#####.:::::::::TT
+TTTTTT####.===.#####.:::::::::TT
+TTTTTT#E##.===S#D###..S:::::::TT
+TTTTTT.=...===..=......:::::::TT
+TTTTTT==============..::::::::TT
+TTTTTT==============..::::::::TT
+TTTTTT==============.:::::TTTTTT
+TTTTTTFFFFFFFFFFFFFF::::::TTTTTT
+TTTTTTTTTTTTTTTTTTTT::::::TTTTTT
+TTTTTTTTTTTTTTTTTTTT::::::TTTTTT
+TTTTTTTTTTTTTTTTTTTT::::::TTTTTT
+TTTTTTTTTTTTTTTTTTTT::::::TTTTTT

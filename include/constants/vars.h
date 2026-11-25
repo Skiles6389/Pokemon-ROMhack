@@ -273,7 +273,7 @@
 #define VAR_VEILSTONE_CITY_STATE                         0x40FB // Sinnoh M19: 0 counterpart pending, 1 warehouse standoff, 2 grunts beaten
 #define VAR_PASTORIA_CITY_STATE                          0x40FC // Sinnoh M20: 0 Barry, 1 gym open, 2 chase ready, 3 chase done
 #define VAR_RUIN_MANIAC_STAGE                            0x40FD // 0=short,1=long,2=tunnel
-#define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
+#define VAR_JUBILIFE_ARRIVAL_STATE                       0x40FE // Sinnoh m51: 0 = Dawn/Lucas greets at south entrance (was VAR_UNUSED_0x40FE)
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
 
 #define VARS_END                                         0x40FF
