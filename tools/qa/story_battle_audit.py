@@ -33,6 +33,11 @@ CONTINUE_ON_LOSS = {
             r"fadescreen\s+FADE_FROM_BLACK",
             r"setflag\s+FLAG_HIDE_ROUTE201_BARRY",
             r"setvar\s+VAR_ROUTE201_STATE,\s*4",
+            r"specialvar\s+VAR_RESULT,\s*GetBattleOutcome",
+            r"B_OUTCOME_WON",
+            r"B_OUTCOME_LOST",
+            r"Route201_Text_BarryAfterWin",
+            r"Route201_Text_BarryAfterLoss",
         ],
         "forbid": [
             r"map_script_2\s+VAR_ROUTE201_STATE,\s*3,\s*Route201_EventScript_BarryRematch",
@@ -139,7 +144,10 @@ def main() -> int:
         "issues": fails,
         "results": reports,
         "outcomes": {
-            "Barry_1_Route201": {"win": "AfterBattle (hide Barry, state=4)", "lose": "same AfterBattle + heal"},
+            "Barry_1_Route201": {
+                "win": "AfterBattle → BarryAfterWin + leave (state=4)",
+                "lose": "AfterBattle → BarryAfterLoss + heal + leave (state=4)",
+            },
             "Barry_2_Route203": {"win": "AfterBattle", "lose": "whiteout; rematch via trigger"},
             "Barry_3_Hearthome": {"win": "AfterBarry", "lose": "whiteout; rematch via trigger"},
             "Barry_4_Pastoria_Canalave": {"win": "AfterBarry", "lose": "whiteout"},

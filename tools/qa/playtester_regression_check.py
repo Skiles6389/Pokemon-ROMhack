@@ -4,12 +4,15 @@
 1) Trainer party gender vs species genderRatio (static parties only)
 2) Ledge metatiles 0x0D5/0x0D6 must have collision=1
 3) Sandgem / Jubilife Pokémon Center outdoor warps enterable
+4) Barry1 AfterBattle branches on GetBattleOutcome (win vs loss lines)
+5) Scripted applymovement vs map collision (movement_collision_check)
 """
 from __future__ import annotations
 
 import json
 import re
 import struct
+import subprocess
 import sys
 from pathlib import Path
 
@@ -83,10 +86,39 @@ def check_center_doors() -> None:
             FAILS.append(f"door audit FAIL: {name}: {r.get('issues', r)[:2]}")
 
 
+def check_barry1_outcome_dialogue() -> None:
+    text = (REPO / "data/maps/Route201/scripts.inc").read_text(errors="replace")
+    for needle in (
+        "specialvar VAR_RESULT, GetBattleOutcome",
+        "B_OUTCOME_WON",
+        "B_OUTCOME_LOST",
+        "Route201_Text_BarryAfterWin",
+        "Route201_Text_BarryAfterLoss",
+    ):
+        if needle not in text:
+            FAILS.append(f"Barry1 AfterBattle missing {needle}")
+
+
+def check_movement_collision() -> None:
+    script = REPO / "tools/qa/movement_collision_check.py"
+    proc = subprocess.run(
+        [sys.executable, str(script)],
+        cwd=str(REPO),
+        capture_output=True,
+        text=True,
+    )
+    if proc.returncode != 0:
+        FAILS.append("movement_collision_check failed")
+        for line in (proc.stdout + proc.stderr).splitlines()[:20]:
+            FAILS.append(f"  mov: {line}")
+
+
 def main() -> int:
     check_trainer_genders()
     check_ledges()
     check_center_doors()
+    check_barry1_outcome_dialogue()
+    check_movement_collision()
     if FAILS:
         print(f"FAIL ({len(FAILS)}):")
         for f in FAILS[:40]:

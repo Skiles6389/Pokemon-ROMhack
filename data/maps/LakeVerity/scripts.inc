@@ -365,7 +365,13 @@ LakeVerity_Movement_BarryToCase:
 	face_up
 	step_end
 
+@ Barry is at (50,14) after the Starly/case beat; x=50 hits rock south of y=17.
+@ Sidestep onto the open x=48 column, then exit south off the map.
 LakeVerity_Movement_BarryLeaves:
+	walk_left
+	walk_left
+	walk_down
+	walk_down
 	walk_down
 	walk_down
 	walk_down
