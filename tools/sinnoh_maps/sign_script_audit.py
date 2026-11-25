@@ -18,6 +18,8 @@ Static checks (FAIL) for every bg_event sign, object_event and coord_event scrip
                      Emerald build (#if IS_FRLG in object_event_graphics_info_pointers.h).
                      The pointer is NULL, so the NPC's animation reads garbage and the
                      game crashes/reboots the first time it walks (Jubilife m51 freeze).
+                     This check also runs globally over every map built into the
+                     Emerald ROM (layout_version "emerald"), not just the listed maps.
 
 Usage: python3 tools/sinnoh_maps/sign_script_audit.py [Map ...] [--json OUT]
 """
@@ -225,12 +227,45 @@ def audit_map(name: str) -> dict:
             "counts": {k: sum(1 for e in entries if e[0] == k) for k in ("sign", "object", "coord")}}
 
 
+def emerald_maps() -> list[str]:
+    """Maps whose layout is built into the Emerald ROM (mapjson skips frlg layouts)."""
+    lv = {l["id"]: l.get("layout_version") or "emerald"
+          for l in json.loads((REPO / "data/layouts/layouts.json").read_text())["layouts"] if l.get("id")}
+    out = []
+    for mj in sorted((REPO / "data/maps").glob("*/map.json")):
+        if lv.get(json.loads(mj.read_text()).get("layout")) == "emerald":
+            out.append(mj.parent.name)
+    return out
+
+
+def global_null_gfx() -> dict:
+    """null_gfx over every Emerald-built map (object_events and its scripts)."""
+    bad = compiled_out_gfx()
+    issues = []
+    for name in emerald_maps():
+        d = REPO / "data/maps" / name
+        for o in json.loads((d / "map.json").read_text()).get("object_events") or []:
+            if o.get("graphics_id") in bad:
+                issues.append(f"{name}@({o['x']},{o['y']}) {o['graphics_id']}")
+        for inc in d.glob("*.inc"):
+            if inc.name == "events.inc":
+                continue  # generated from map.json
+            for g in sorted(set(re.findall(r"OBJ_EVENT_GFX_\w+", inc.read_text(errors="replace"))) & bad):
+                issues.append(f"{name}/{inc.name} uses {g}")
+    return {"map": "(all Emerald maps)", "status": "FAIL" if issues else "PASS",
+            "scripts": [{"kind": "object", "pos": None, "script": None, "issues": [f"null_gfx: {i}" for i in issues]}] if issues else [],
+            "sign_warnings": [], "counts": {"sign": 0, "object": len(issues), "coord": 0}}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("maps", nargs="*", default=DEFAULT_MAPS)
     ap.add_argument("--json", type=Path)
+    ap.add_argument("--no-global-gfx", action="store_true", help="skip the repo-wide null_gfx scan")
     a = ap.parse_args()
     res = [audit_map(m) for m in a.maps]
+    if not a.no_global_gfx:
+        res.append(global_null_gfx())
     for r in res:
         c = r["counts"]
         print(f"{r['status']:4}  {r['map']:16} signs={c['sign']} objects={c['object']} coords={c['coord']}")

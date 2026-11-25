@@ -109,7 +109,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
+      "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
       "x": 80,
       "y": 50,
       "elevation": 3,
@@ -122,7 +122,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
+      "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
       "x": 40,
       "y": 60,
       "elevation": 3,
