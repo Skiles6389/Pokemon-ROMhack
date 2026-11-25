@@ -1,0 +1,781 @@
+{
+  "fail": 0,
+  "pass": 86,
+  "results": [
+    {
+      "name": "AcuityLakefront",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Fallarbor",
+      "samples": []
+    },
+    {
+      "name": "CanalaveCity",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Rustboro",
+      "samples": []
+    },
+    {
+      "name": "CelesticTown",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "DistortionWorld_1F",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "DistortionWorld_B1F",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "DistortionWorld_B2F",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "DistortionWorld_B3F",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "DistortionWorld_B4F",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "DistortionWorld_B5F",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "DistortionWorld_B6F",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "DistortionWorld_B7F",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "DistortionWorld_GiratinaRoom",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "DistortionWorld_TurnbackCaveRoom",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "EternaCity",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Rustboro",
+      "samples": []
+    },
+    {
+      "name": "EternaForest",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "FightArea",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Rustboro",
+      "samples": []
+    },
+    {
+      "name": "FloaromaMeadow",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "FloaromaTown",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "GreatMarsh",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "HearthomeCity",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Rustboro",
+      "samples": []
+    },
+    {
+      "name": "IronIsland",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Fallarbor",
+      "samples": []
+    },
+    {
+      "name": "JubilifeCity",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Rustboro",
+      "samples": []
+    },
+    {
+      "name": "LakeAcuity",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Pacifidlog",
+      "samples": []
+    },
+    {
+      "name": "LakeValor_Drained",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Pacifidlog",
+      "samples": []
+    },
+    {
+      "name": "MtCoronet_1F_South",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "OreburghCity",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Rustboro",
+      "samples": []
+    },
+    {
+      "name": "OreburghGate_1F",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "OreburghGate_B1F",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "OreburghMine_B1F",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "OreburghMine_B2F",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "PastoriaCity",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Rustboro",
+      "samples": []
+    },
+    {
+      "name": "PokemonLeague_Exterior",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Rustboro",
+      "samples": []
+    },
+    {
+      "name": "RavagedPath",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "ResortArea",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route201",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route202",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route203",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route204_North",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route204_South",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route205_North",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route205_South",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route206",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route207",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route208",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route209",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route210_North",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route210_South",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route211_East",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route212_North",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route212_South",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route213",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route214",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route215",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route216",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Fallarbor",
+      "samples": []
+    },
+    {
+      "name": "Route217",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Fallarbor",
+      "samples": []
+    },
+    {
+      "name": "Route218",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route222",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Dewford",
+      "samples": []
+    },
+    {
+      "name": "Route223",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Dewford",
+      "samples": []
+    },
+    {
+      "name": "Route224",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route225",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route226",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route227",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route228",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route229",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "Route230",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "SandgemTown",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "SnowpointCity",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Rustboro",
+      "samples": []
+    },
+    {
+      "name": "SolaceonTown",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "SpearPillar",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Fortree",
+      "samples": []
+    },
+    {
+      "name": "SpearPillar_Distorted",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Fortree",
+      "samples": []
+    },
+    {
+      "name": "StarkMountain_HeatranRoom",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "StarkMountain_Outside",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "StarkMountain_Room1",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "StarkMountain_Room2",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "SunyshoreCity",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Rustboro",
+      "samples": []
+    },
+    {
+      "name": "SurvivalArea",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "TwinleafTown",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "ValleyWindworks_Exterior",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "ValorLakefront",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Petalburg",
+      "samples": []
+    },
+    {
+      "name": "VeilstoneCity",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Rustboro",
+      "samples": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_1F",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_2F",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_B1F",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_Room1",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_Room2",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_Room3",
+      "status": "PASS",
+      "issues": [],
+      "bad_cells": 0,
+      "bad_ids": {},
+      "secondary": "gTileset_Cave",
+      "samples": []
+    }
+  ],
+  "threshold": 0.5
+}

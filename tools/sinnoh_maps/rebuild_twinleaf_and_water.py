@@ -41,7 +41,6 @@ from tools.sinnoh_maps.sinnoh_build_lib import (  # noqa: E402
     load_attrs,
     pack,
     paint_paths_from_attrs,
-    path_metatile_for_neighbors,
 )
 
 
@@ -124,55 +123,91 @@ def paint_fenced_gardens(grid, collision) -> None:
     """Fenced flower beds in NW/NE clearings — fence + flowers, never a roof slab."""
     # Place so gardens sit in grass clearings inside the tree ring
     # Keep clear of house roofs (rival wide roof starts ~y=7,x=6; house1 at x=17)
-    # Garden is 5×3 — stay at x<=5 / x>=25
+    # Garden is 5×4 — stay clear of rival wide roof (~y=7,x=6)
     spots = [(1, 2), (26, 2)]
     for left, top in spots:
-        # Clear footprint to grass first
+        # Clear footprint to grass first (wipe old roof-slab gardens + trees)
         sh, sw = len(GARDEN_FENCED["tiles"]), len(GARDEN_FENCED["tiles"][0])
-        for dy in range(sh):
-            for dx in range(sw):
+        for dy in range(sh + 1):
+            for dx in range(sw + 1):
                 x, y = left + dx, top + dy
                 if 0 <= y < len(grid) and 0 <= x < len(grid[0]):
-                    if grid[y][x] in set(MT_TREE) | {MT_ROCK}:
+                    mt = grid[y][x]
+                    if mt in set(MT_TREE) | {MT_ROCK} or mt >= 0x200:
                         grid[y][x] = MT_GRASS
                         collision[y][x] = 0
         stamp_at(grid, left, top, {**GARDEN_FENCED, "door_dx": 0, "door_dy": 0}, fill_mat=False)
-        # Fence collision; flowers walkable
+        # Signposts solid; flowers/grass/shrubs walkable
         for dy, row in enumerate(GARDEN_FENCED["tiles"]):
             for dx, mt in enumerate(row):
                 x, y = left + dx, top + dy
                 if not (0 <= y < len(grid) and 0 <= x < len(grid[0])):
                     continue
-                collision[y][x] = 0 if mt == MT_TALL or mt == 0x00D else 1
+                collision[y][x] = 1 if mt == MAILBOX else 0
+
+
+# Emerald General sand-on-grass autotiles ( visibly tan, not green dirt 0x1D0 )
+SAND_TABLE = (
+    (0x118, 0x119, 0x11A),
+    (0x120, 0x121, 0x122),
+    (0x128, 0x129, 0x12A),
+)
+SAND_IDS = {mt for row in SAND_TABLE for mt in row}
+OLD_PATH = {
+    0x1CE, 0x1CF, 0x1D0, 0x1D1, 0x1D2, 0x1D8, 0x1D9, 0x1DA,
+    0x1E0, 0x1E1, 0x1E2, 0x1E4, 0x1E5, 0x1E6, 0x1E7,
+}
+
+
+def sand_metatile_for_neighbors(n: bool, s: bool, w: bool, e: bool) -> int:
+    if not n and not s:
+        row = 1
+    elif not n:
+        row = 0
+    elif not s:
+        row = 2
+    else:
+        row = 1
+    if not w and not e:
+        col = 1
+    elif not w:
+        col = 0
+    elif not e:
+        col = 2
+    else:
+        col = 1
+    return SAND_TABLE[row][col]
 
 
 def connect_house_paths(grid, warps) -> None:
-    """Littleroot-style dirt trails (0x1CE/0x1CF) — higher contrast than 0x1D9 sidewalk."""
+    """Cross-shaped Emerald sand paths (0x118–0x12A) between houses."""
     h, w = len(grid), len(grid[0])
-    PATH = {
-        0x1CE, 0x1CF, 0x1D0, 0x1D1, 0x1D2, 0x1D8, 0x1D9, 0x1DA,
-        0x1E0, 0x1E1, 0x1E2, 0x1E4, 0x1E5, 0x1E6, 0x1E7,
-    }
-    DIRT_A, DIRT_B = 0x1CE, 0x1CF
-    path_cells = {(x, y) for y in range(h) for x in range(w) if grid[y][x] in PATH}
+    # Clear old green dirt / faint path so sand rebuilds cleanly
+    for y in range(h):
+        for x in range(w):
+            if grid[y][x] in OLD_PATH | SAND_IDS:
+                grid[y][x] = MT_GRASS
+
+    path_cells: set[tuple[int, int]] = set()
     spine_y = 13
     for warp in warps:
         dx, dy = int(warp["x"]), int(warp["y"])
         y0, y1 = sorted((min(h - 1, dy + 2), spine_y))
         for y in range(y0, y1 + 1):
-            if grid[y][dx] in (MT_GRASS, MT_TALL) or grid[y][dx] in PATH:
-                path_cells.add((dx, y))
-                # 2-wide trail for visibility
-                if dx + 1 < w and grid[y][dx + 1] in {MT_GRASS, MT_TALL} | PATH:
-                    path_cells.add((dx + 1, y))
+            for ox in (0, 1):
+                xx = dx + ox
+                if 0 <= xx < w and grid[y][xx] in {MT_GRASS, MT_TALL} | SAND_IDS | OLD_PATH:
+                    path_cells.add((xx, y))
         path_cells.add((dx, spine_y))
+        if dx + 1 < w:
+            path_cells.add((dx + 1, spine_y))
     xs = [int(w_["x"]) for w_ in warps]
     if xs:
         for x in range(min(xs), max(xs) + 1):
-            if grid[spine_y][x] in (MT_GRASS, MT_TALL) or grid[spine_y][x] in PATH:
-                path_cells.add((x, spine_y))
-            if spine_y + 1 < h and grid[spine_y + 1][x] in {MT_GRASS, MT_TALL} | PATH:
-                path_cells.add((x, spine_y + 1))
+            for oy in (0, 1):
+                yy = spine_y + oy
+                if yy < h and grid[yy][x] in {MT_GRASS, MT_TALL} | SAND_IDS | OLD_PATH:
+                    path_cells.add((x, yy))
 
     def near_water(x, y) -> bool:
         for dy in (-1, 0, 1):
@@ -186,22 +221,22 @@ def connect_house_paths(grid, warps) -> None:
         if not (0 <= x < w and 0 <= y < h):
             continue
         if near_water(x, y):
-            if grid[y][x] in PATH or grid[y][x] == 0x121:
+            if grid[y][x] in SAND_IDS | OLD_PATH | {0x121}:
                 grid[y][x] = MT_GRASS
-            continue  # no path/sand blob by the pond
+            continue
         if grid[y][x] >= 0x200 or grid[y][x] == MT_WATER or grid[y][x] in set(MT_TREE):
             continue
         if grid[y][x] in (DOOR_MAT, MAILBOX):
             continue
-        # Alternate 1CE/1CF like Littleroot dirt strips
-        grid[y][x] = DIRT_A if (x + y) % 2 == 0 else DIRT_B
+        n = (x, y - 1) in path_cells and not near_water(x, y - 1)
+        s = (x, y + 1) in path_cells and not near_water(x, y + 1)
+        ww = (x - 1, y) in path_cells and not near_water(x - 1, y)
+        e = (x + 1, y) in path_cells and not near_water(x + 1, y)
+        grid[y][x] = sand_metatile_for_neighbors(n, s, ww, e)
 
-    # Scrub any remaining sand (0x121) within 2 tiles of water
     for y in range(h):
         for x in range(w):
-            if grid[y][x] != 0x121:
-                continue
-            if near_water(x, y):
+            if grid[y][x] in SAND_IDS | {0x121} and near_water(x, y):
                 grid[y][x] = MT_GRASS
 
 

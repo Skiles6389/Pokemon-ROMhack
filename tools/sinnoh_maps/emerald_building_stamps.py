@@ -187,18 +187,20 @@ GYM_MAUVILLE = {
     ],
 }
 
-# Fenced flower garden from LittlerootTown fence ring (rows 13–15)
-# Top/sides use real fence posts; interior = tall-grass flowers (0x00D), not roof tiles
+# Corner garden: signposts as posts + flower beds (0x004) + shrubs on grass.
+# Must NOT use Petalburg roof/lab tiles (0x208–0x24B building range) — those read as
+# "roof slabs with plants". All IDs here are General-primary (safe on any secondary).
 GARDEN_FENCED = {
     "name": "fenced_flower_garden",
-    "source": "LittlerootTown",
+    "source": "General_flowers+signs",
     "door_mt": None,
     "door_dx": 0,
     "door_dy": 0,
     "tiles": [
-        [0x214, 0x215, 0x215, 0x215, 0x216],
-        [0x214, 0x00D, 0x00D, 0x00D, 0x216],
-        [0x21E, 0x00D, 0x00D, 0x00D, 0x21F],
+        [0x003, 0x004, 0x004, 0x004, 0x003],
+        [0x004, 0x00D, 0x001, 0x00D, 0x004],
+        [0x004, 0x00D, 0x00E, 0x00D, 0x004],
+        [0x003, 0x004, 0x004, 0x004, 0x003],
     ],
 }
 

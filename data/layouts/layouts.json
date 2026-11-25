@@ -9484,7 +9484,7 @@
       "width": 64,
       "height": 64,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/OreburghCity/border.bin",
       "blockdata_filepath": "data/layouts/OreburghCity/map.bin",
       "layout_version": "emerald"
@@ -9638,7 +9638,7 @@
       "width": 64,
       "height": 64,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/EternaCity/border.bin",
       "blockdata_filepath": "data/layouts/EternaCity/map.bin",
       "layout_version": "emerald"
@@ -9748,7 +9748,7 @@
       "width": 64,
       "height": 64,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/HearthomeCity/border.bin",
       "blockdata_filepath": "data/layouts/HearthomeCity/map.bin",
       "layout_version": "emerald"
@@ -9880,7 +9880,7 @@
       "width": 64,
       "height": 64,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/VeilstoneCity/border.bin",
       "blockdata_filepath": "data/layouts/VeilstoneCity/map.bin",
       "layout_version": "emerald"
@@ -9946,7 +9946,7 @@
       "width": 64,
       "height": 64,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/PastoriaCity/border.bin",
       "blockdata_filepath": "data/layouts/PastoriaCity/map.bin",
       "layout_version": "emerald"
@@ -10133,7 +10133,7 @@
       "width": 32,
       "height": 64,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/CanalaveCity/border.bin",
       "blockdata_filepath": "data/layouts/CanalaveCity/map.bin",
       "layout_version": "emerald"
@@ -10287,7 +10287,7 @@
       "width": 32,
       "height": 64,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Fallarbor",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/SnowpointCity/border.bin",
       "blockdata_filepath": "data/layouts/SnowpointCity/map.bin",
       "layout_version": "emerald"
@@ -10595,7 +10595,7 @@
       "width": 64,
       "height": 64,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/SunyshoreCity/border.bin",
       "blockdata_filepath": "data/layouts/SunyshoreCity/map.bin",
       "layout_version": "emerald"
@@ -10771,7 +10771,7 @@
       "width": 32,
       "height": 64,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Fortree",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/PokemonLeague_Exterior/border.bin",
       "blockdata_filepath": "data/layouts/PokemonLeague_Exterior/map.bin",
       "layout_version": "emerald"
@@ -11024,7 +11024,7 @@
       "width": 64,
       "height": 32,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/FightArea/border.bin",
       "blockdata_filepath": "data/layouts/FightArea/map.bin",
       "layout_version": "emerald"

@@ -47,12 +47,12 @@ LAYOUTS = {
 
 PETALBURG_TOWNS = {
     "TwinleafTown", "SandgemTown", "FloaromaTown", "SolaceonTown",
-    "CelesticTown", "SurvivalArea", "ResortArea", "FightArea",
+    "CelesticTown", "SurvivalArea", "ResortArea",
 }
 RUSTBORO_CITIES = {
     "JubilifeCity", "OreburghCity", "EternaCity", "HearthomeCity",
     "VeilstoneCity", "PastoriaCity", "CanalaveCity", "SnowpointCity",
-    "SunyshoreCity", "PokemonLeague_Exterior",
+    "SunyshoreCity", "PokemonLeague_Exterior", "FightArea",
 }
 
 MT_CITY_PAVE = 0x2BB

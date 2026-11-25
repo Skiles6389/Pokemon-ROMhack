@@ -20,6 +20,7 @@ from tools.sinnoh_maps.emerald_building_stamps import (  # noqa: E402
     CIVIC_RUSTBORO,
     CIVIC_RUSTBORO_WIDE,
     HOUSE_RUSTBORO,
+    MAILBOX,
     MART_RUSTBORO,
     PC_RUSTBORO,
     stamp_with_clear,
@@ -120,9 +121,13 @@ def rebuild() -> None:
                 grid[y][x] = tree_grid[y][x]
                 collision[y][x] = 1
 
-    # Plaza accent: 4×4 of 0x2C3 near map center (fountain plaza stand-in)
-    for y in range(28, 36):
-        for x in range(28, 36):
+    # Cross-street sidewalk accents (Platinum avenue feel) before buildings
+    for y in range(20, 44):
+        for x in (31, 32):
+            if grid[y][x] == MT_CITY_PAVE:
+                grid[y][x] = MT_CITY_PLAZA
+    for x in range(20, 44):
+        for y in (31, 32):
             if grid[y][x] == MT_CITY_PAVE:
                 grid[y][x] = MT_CITY_PLAZA
 
@@ -169,6 +174,70 @@ def rebuild() -> None:
         for x in range(0, 3):
             grid[y][x] = MT_CITY_PAVE
             collision[y][x] = 0
+
+    # Central plaza + fountain (after stamps so civic pads don't wipe it)
+    for y in range(26, 38):
+        for x in range(26, 38):
+            if grid[y][x] in (MT_CITY_PAVE, MT_CITY_PLAZA):
+                grid[y][x] = MT_CITY_PLAZA
+                collision[y][x] = 0
+    for y in range(30, 34):
+        for x in range(30, 34):
+            # Fountain rim uses plaza; keep center walkable accent
+            grid[y][x] = MT_CITY_PLAZA if (x in (30, 33) or y in (30, 33)) else 0x2C3
+            collision[y][x] = 0
+
+    # Emerald city decor: flower patches + lamp/sign posts (general tileset)
+    FLOWER = 0x004  # pink flower bed
+    BUSH = 0x00D
+    SHRUB = 0x00E
+    for left, top in (
+        (22, 24), (38, 24), (22, 38), (38, 38), (24, 30), (36, 30),
+        (28, 22), (34, 22), (28, 40), (34, 40), (18, 31), (44, 31),
+    ):
+        for dy in range(2):
+            for dx in range(2):
+                x, y = left + dx, top + dy
+                if 0 <= x < w and 0 <= y < h and grid[y][x] in (MT_CITY_PAVE, MT_CITY_PLAZA):
+                    grid[y][x] = (FLOWER, BUSH, SHRUB, FLOWER)[(dx + 2 * dy) % 4]
+                    collision[y][x] = 0
+    # Sidewalk strips from plaza toward each stamped door
+    for warp in warps:
+        kind = kind_for_dest(warp.get("dest_map", ""))
+        if kind is None:
+            continue
+        dx, dy = int(warp["x"]), int(warp["y"])
+        # Walk south from door toward plaza row if north of plaza
+        if dy < 30:
+            for y in range(dy + 2, min(31, dy + 8)):
+                for ox in (0, 1):
+                    x = dx + ox
+                    if 0 <= x < w and grid[y][x] == MT_CITY_PAVE:
+                        grid[y][x] = MT_CITY_PLAZA
+        elif dy > 34:
+            for y in range(max(33, dy - 8), dy):
+                for ox in (0, 1):
+                    x = dx + ox
+                    if 0 <= x < w and grid[y][x] == MT_CITY_PAVE:
+                        grid[y][x] = MT_CITY_PLAZA
+        # Lamp/sign posts near major doors
+        if kind in ("civic", "civic_wide", "center", "mart"):
+            for mx, my in ((dx + 3, dy + 1), (dx - 3, dy + 1), (dx + 4, dy + 2)):
+                if 0 <= mx < w and 0 <= my < h and grid[my][mx] in (MT_CITY_PAVE, MT_CITY_PLAZA):
+                    grid[my][mx] = MAILBOX
+                    collision[my][mx] = 1
+                    break
+    # Avenue lamp posts along plaza cross
+    for x in (24, 28, 35, 39):
+        for y in (31, 32):
+            if grid[y][x] in (MT_CITY_PAVE, MT_CITY_PLAZA):
+                grid[y][x] = MAILBOX
+                collision[y][x] = 1
+    for y in (24, 28, 35, 39):
+        for x in (31, 32):
+            if grid[y][x] in (MT_CITY_PAVE, MT_CITY_PLAZA):
+                grid[y][x] = MAILBOX
+                collision[y][x] = 1
 
     # Scrub any orphan tree halves on the border
     TREE = set(MT_TREE)
