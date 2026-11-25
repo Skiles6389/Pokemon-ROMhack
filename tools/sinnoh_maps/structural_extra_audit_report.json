@@ -1,7 +1,7 @@
 {
   "fail": 0,
   "pass": 191,
-  "focus": "pass4",
+  "focus": "all",
   "results": [
     {
       "name": "AcuityLakefront",

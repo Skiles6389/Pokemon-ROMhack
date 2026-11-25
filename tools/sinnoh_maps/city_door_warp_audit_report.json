@@ -151,7 +151,7 @@
           "dest": "MAP_CELESTIC_NORTH_HOUSE",
           "kind": "building",
           "mt": "0x248",
-          "coll": 0,
+          "coll": 1,
           "reachable": true,
           "enterable": true,
           "issues": []
@@ -162,7 +162,7 @@
           "dest": "MAP_CELESTIC_NORTHWEST_HOUSE",
           "kind": "building",
           "mt": "0x248",
-          "coll": 0,
+          "coll": 1,
           "reachable": true,
           "enterable": true,
           "issues": []
@@ -173,7 +173,7 @@
           "dest": "MAP_CELESTIC_NORTHEAST_HOUSE",
           "kind": "building",
           "mt": "0x248",
-          "coll": 0,
+          "coll": 1,
           "reachable": true,
           "enterable": true,
           "issues": []
@@ -184,7 +184,7 @@
           "dest": "MAP_CELESTIC_SOUTHWEST_HOUSE",
           "kind": "building",
           "mt": "0x248",
-          "coll": 0,
+          "coll": 1,
           "reachable": true,
           "enterable": true,
           "issues": []
@@ -575,8 +575,8 @@
       "name": "HearthomeCity",
       "status": "PASS",
       "issues": [],
-      "grass_frac": 0.021,
-      "pave_frac": 0.979,
+      "grass_frac": 0.023,
+      "pave_frac": 0.977,
       "bad_building_tiles": 0,
       "unreachable_warps": 0,
       "non_enterable_doors": 0,
@@ -599,7 +599,7 @@
           "dest": "MAP_HEARTHOME_CITY_BEBES_HOUSE",
           "kind": "building",
           "mt": "0x22F",
-          "coll": 1,
+          "coll": 0,
           "reachable": true,
           "enterable": true,
           "issues": []
@@ -1638,7 +1638,7 @@
           "dest": "MAP_SOLACEON_TOWN_NEWS_PRESS",
           "kind": "building",
           "mt": "0x248",
-          "coll": 1,
+          "coll": 0,
           "reachable": true,
           "enterable": true,
           "issues": []
