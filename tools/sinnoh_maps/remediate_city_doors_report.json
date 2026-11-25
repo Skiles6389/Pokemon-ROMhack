@@ -1,0 +1,148 @@
+{
+  "results": [
+    {
+      "name": "CanalaveCity",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "CelesticTown",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "EternaCity",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "FightArea",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "FloaromaTown",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "HearthomeCity",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "JubilifeCity",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 2,
+      "trees_repaired": 0
+    },
+    {
+      "name": "OreburghCity",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "PastoriaCity",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "PokemonLeague_Exterior",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "ResortArea",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "SandgemTown",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "SnowpointCity",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "SolaceonTown",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "SunyshoreCity",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "SurvivalArea",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "TwinleafTown",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    },
+    {
+      "name": "VeilstoneCity",
+      "status": "OK",
+      "paved_cells": 0,
+      "stamped": 0,
+      "cleaned_tree_rock": 0,
+      "trees_repaired": 0
+    }
+  ]
+}

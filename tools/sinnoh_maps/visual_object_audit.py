@@ -196,14 +196,42 @@ def audit_one(name: str) -> dict:
 
     signs = 0
     mj = MAPS / name / "map.json"
+    warps = []
     if mj.exists():
         data = json.loads(mj.read_text())
         for bg in data.get("bg_events") or []:
             if bg.get("type") == "sign":
                 signs += 1
+        warps = data.get("warp_events") or []
 
     issues = []
     status = "PASS"
+
+    # Paved-city grass dominance + trees-inside-buildings (city visual checks)
+    from tools.sinnoh_maps.city_door_warp_audit import (  # local import avoids cycle at load
+        PAVED_CITIES,
+        TREE as _TREE,
+        CLIFF_ROCK as _CLIFF,
+        grass_dominant,
+        trees_in_building,
+        classify_warp,
+    )
+
+    if name in PAVED_CITIES:
+        heavy, gfrac, pfrac = grass_dominant(cells, w, h)
+        if heavy:
+            issues.append(
+                f"grass-dominant paved city: grass={gfrac:.0%} pave={pfrac:.0%}"
+            )
+            status = "FAIL"
+        bad_bldg = 0
+        for warp in warps:
+            kind = classify_warp(warp.get("dest_map") or "")
+            if kind in ("center", "mart", "gym", "building"):
+                bad_bldg += trees_in_building(cells, int(warp["x"]), int(warp["y"]))
+        if bad_bldg:
+            issues.append(f"trees/cliffs inside building facades: {bad_bldg}")
+            status = "FAIL"
     if incomplete > 0:
         issues.append(f"incomplete 2x2 trees: {incomplete}")
         status = "FAIL"
@@ -243,14 +271,16 @@ def audit_one(name: str) -> dict:
             )
             status = "FAIL"
         # Oversized path blob: Emerald paths >> Platinum (town sand rectangles etc.)
+        # Paved Platinum cities intentionally use sidewalk/path for most walkables.
         if not snow and covered > max(plat_paths * 3, plat_paths + 48):
             issues.append(
                 f"oversized paths: Emerald {covered} vs Platinum {plat_paths} "
                 f"({path_coverage:.1f}x)"
             )
-            # Extreme sand/path blobs (e.g. invented town rectangles) FAIL;
-            # moderate overshoot on caves/routes is WARN.
-            if covered > max(plat_paths * 5, plat_paths + 120):
+            if name in PAVED_CITIES:
+                if status == "PASS":
+                    status = "WARN"
+            elif covered > max(plat_paths * 5, plat_paths + 120):
                 status = "FAIL"
             elif status == "PASS":
                 status = "WARN"

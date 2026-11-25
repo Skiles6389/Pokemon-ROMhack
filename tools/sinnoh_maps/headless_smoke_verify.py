@@ -41,6 +41,7 @@ def run_audit() -> None:
     for name in (
         "collision_audit.py",
         "visual_object_audit.py",
+        "city_door_warp_audit.py",
         "script_npc_exit_audit.py",
         "catch_tutorial_verify.py",
     ):

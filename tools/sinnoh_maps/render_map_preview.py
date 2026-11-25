@@ -42,6 +42,11 @@ FALLBACK = {
     0x201: (168, 160, 152, 255),  # indoor floor
     0x20E: (96, 72, 56, 255),     # door
     0x21A: (88, 80, 96, 255),     # indoor wall
+    0x2BB: (168, 168, 176, 255),  # Rustboro city sidewalk
+    0x061: (96, 72, 56, 255),     # PC door
+    0x041: (96, 72, 56, 255),     # Mart door
+    0x22F: (96, 72, 56, 255),     # Rustboro house door
+    0x248: (96, 72, 56, 255),     # Petalburg house door
 }
 
 
@@ -163,6 +168,13 @@ def render_metatile(primary, secondary, mt_id: int) -> Image.Image:
     if painted == 0:
         color = FALLBACK.get(mt_id, (48, 96, 56, 255))
         return Image.new("RGBA", (16, 16), color)
+    # Secondary sidewalk/plaza tiles often have sparse opaque pixels; composite
+    # a FALLBACK underlay so previews don't look like grass-through-holes.
+    opaque = sum(1 for a in img.getchannel("A").getdata() if a > 0)
+    if opaque < 200 and mt_id in FALLBACK:
+        base = Image.new("RGBA", (16, 16), FALLBACK[mt_id])
+        base.paste(img, (0, 0), img)
+        return base
     return img
 
 

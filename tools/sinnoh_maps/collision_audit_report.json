@@ -12,13 +12,15 @@
     },
     {
       "name": "CanalaveCity",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 18,
-      "plat_blocked": 3,
+      "plat_opened": 299,
+      "plat_blocked": 32,
       "plat_total": 2048,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 299/2048 (14.6%)"
+      ]
     },
     {
       "name": "CanalaveCity_Gym",
@@ -32,13 +34,15 @@
     },
     {
       "name": "CelesticTown",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
-      "plat_blocked": 1,
+      "plat_opened": 174,
+      "plat_blocked": 15,
       "plat_total": 1024,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 174/1024 (17.0%)"
+      ]
     },
     {
       "name": "DistortionWorld_1F",
@@ -142,13 +146,15 @@
     },
     {
       "name": "EternaCity",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
-      "plat_blocked": 0,
+      "plat_opened": 454,
+      "plat_blocked": 21,
       "plat_total": 3072,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 454/3072 (14.8%)"
+      ]
     },
     {
       "name": "EternaForest",
@@ -162,13 +168,15 @@
     },
     {
       "name": "FightArea",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 2,
-      "plat_blocked": 0,
+      "plat_opened": 282,
+      "plat_blocked": 8,
       "plat_total": 2048,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 282/2048 (13.8%)"
+      ]
     },
     {
       "name": "FloaromaMeadow",
@@ -185,8 +193,8 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
-      "plat_blocked": 1,
+      "plat_opened": 110,
+      "plat_blocked": 16,
       "plat_total": 2048,
       "issues": []
     },
@@ -202,13 +210,15 @@
     },
     {
       "name": "HearthomeCity",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
-      "plat_blocked": 3,
+      "plat_opened": 400,
+      "plat_blocked": 12,
       "plat_total": 4096,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 400/4096 (9.8%)"
+      ]
     },
     {
       "name": "IronIsland",
@@ -222,13 +232,15 @@
     },
     {
       "name": "JubilifeCity",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 2,
-      "plat_blocked": 4,
+      "plat_opened": 1866,
+      "plat_blocked": 14,
       "plat_total": 4096,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 1866/4096 (45.6%)"
+      ]
     },
     {
       "name": "LakeAcuity",
@@ -262,13 +274,15 @@
     },
     {
       "name": "OreburghCity",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 13,
-      "plat_blocked": 0,
+      "plat_opened": 593,
+      "plat_blocked": 40,
       "plat_total": 3072,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 593/3072 (19.3%)"
+      ]
     },
     {
       "name": "OreburghGate_1F",
@@ -315,8 +329,8 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
-      "plat_blocked": 3,
+      "plat_opened": 240,
+      "plat_blocked": 23,
       "plat_total": 4096,
       "issues": []
     },
@@ -392,13 +406,15 @@
     },
     {
       "name": "PokemonLeague_Exterior",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 27,
-      "plat_blocked": 0,
+      "plat_opened": 268,
+      "plat_blocked": 25,
       "plat_total": 2048,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 268/2048 (13.1%)"
+      ]
     },
     {
       "name": "PokemonLeague_FlintsRoom",
@@ -462,13 +478,15 @@
     },
     {
       "name": "ResortArea",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
-      "plat_blocked": 0,
+      "plat_opened": 245,
+      "plat_blocked": 10,
       "plat_total": 2048,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 245/2048 (12.0%)"
+      ]
     },
     {
       "name": "Route201",
@@ -782,31 +800,35 @@
     },
     {
       "name": "SandgemTown",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 3,
+      "plat_opened": 127,
       "plat_blocked": 0,
       "plat_total": 1024,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 127/1024 (12.4%)"
+      ]
     },
     {
       "name": "SnowpointCity",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
-      "plat_blocked": 1,
+      "plat_opened": 261,
+      "plat_blocked": 8,
       "plat_total": 2048,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 261/2048 (12.7%)"
+      ]
     },
     {
       "name": "SolaceonTown",
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 36,
-      "plat_blocked": 0,
+      "plat_opened": 163,
+      "plat_blocked": 23,
       "plat_total": 2048,
       "issues": []
     },
@@ -872,23 +894,27 @@
     },
     {
       "name": "SunyshoreCity",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
-      "plat_blocked": 6,
+      "plat_opened": 941,
+      "plat_blocked": 18,
       "plat_total": 4096,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 941/4096 (23.0%)"
+      ]
     },
     {
       "name": "SurvivalArea",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 12,
-      "plat_blocked": 0,
+      "plat_opened": 347,
+      "plat_blocked": 12,
       "plat_total": 2048,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 347/2048 (16.9%)"
+      ]
     },
     {
       "name": "TwinleafTown",
@@ -922,13 +948,15 @@
     },
     {
       "name": "VeilstoneCity",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
-      "plat_blocked": 1,
+      "plat_opened": 610,
+      "plat_blocked": 23,
       "plat_total": 4096,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 610/4096 (14.9%)"
+      ]
     },
     {
       "name": "VictoryRoad_Sinnoh_1F",
@@ -992,5 +1020,5 @@
     }
   ],
   "fail": 0,
-  "warn": 0
+  "warn": 14
 }
