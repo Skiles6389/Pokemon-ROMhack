@@ -191,3 +191,9 @@ void Randomizer_RemapFindItemVar(void)
         RANDOMIZER_CTX_FIND_ITEM,
         CurrentMapKey() ^ original);
 }
+
+// Script special: VAR_0x8004 = base starter species → VAR_0x8005 = remapped (or same).
+void Randomizer_PreviewStarterSpecies(void)
+{
+    gSpecialVar_0x8005 = Randomizer_RemapStarterSpecies((enum Species)gSpecialVar_0x8004);
+}

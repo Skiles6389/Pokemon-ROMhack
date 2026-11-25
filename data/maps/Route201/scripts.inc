@@ -27,8 +27,12 @@ Route201_EventScript_SetDawnGfx::
 	return
 
 Route201_OnFrame:
-	map_script_2 VAR_ROUTE201_STATE, 2, Route201_EventScript_RowanArrives
 	.2byte 0
+
+@ Fired from east-path coord triggers only (var gate = state 2).
+Route201_EventScript_RowanArrivesTrigger::
+	goto Route201_EventScript_RowanArrives
+	end
 
 Route201_EventScript_BarryMeet::
 	lockall
@@ -46,9 +50,11 @@ Route201_EventScript_BarryMeet::
 	waitmovement 0
 	msgbox Route201_Text_BarryMeet, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_ROUTE201_BARRY, Route201_Movement_BarryLeads
+	@ Short lead-up: jog west toward Verity Lakefront (Platinum walk-up), then
+	@ land on the lakefront so the player walks into Lake Verity via the cave warp.
+	applymovement LOCALID_ROUTE201_BARRY, Route201_Movement_BarryLeadsWest
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Route201_Movement_PlayerFollows
+	applymovement OBJ_EVENT_ID_PLAYER, Route201_Movement_PlayerFollowsWest
 	waitmovement 0
 	removeobject LOCALID_ROUTE201_BARRY
 	setflag FLAG_HIDE_ROUTE201_BARRY
@@ -57,7 +63,7 @@ Route201_EventScript_BarryMeet::
 	clearflag FLAG_HIDE_LAKE_VERITY_ASSISTANT
 	clearflag FLAG_HIDE_LAKE_VERITY_BRIEFCASE
 	setvar VAR_ROUTE201_STATE, 1
-	warpsilent MAP_LAKE_VERITY, 46, 20
+	warpsilent MAP_VERITY_LAKEFRONT, 4, 8
 	waitstate
 	releaseall
 	end
@@ -284,6 +290,22 @@ Route201_Movement_PlayerFollows:
 	walk_fast_up
 	step_end
 
+Route201_Movement_BarryLeadsWest:
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	face_left
+	step_end
+
+Route201_Movement_PlayerFollowsWest:
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
+
 Route201_Movement_Approach:
 	walk_right
 	walk_right
@@ -326,8 +348,8 @@ Route201_Text_BarryMeet:
 	.string "BARRY: {PLAYER}! You made it!\p"
 	.string "The lake is just west of here.\n"
 	.string "I saw the Professor go that way.\p"
-	.string "Come on, I'll go with you.\n"
-	.string "Don't fall behind!$"
+	.string "We'll cut across the lakefront and\n"
+	.string "head straight in. Don't fall behind!$"
 
 Route201_Text_RowanConnectionDawn:
 	.string "ROWAN: Ah, {PLAYER}.\p"

@@ -433,6 +433,7 @@ gSpecials::
 	def_special StartPlayerDescendMirageTower, waitstate=1
 	def_special BufferTMHMMoveName
 	def_special Randomizer_RemapFindItemVar
+	def_special Randomizer_PreviewStarterSpecies
 	def_special IsWirelessAdapterConnected
 	def_special TryBecomeLinkLeader, waitstate=1
 	def_special TryJoinLinkGroup, waitstate=1

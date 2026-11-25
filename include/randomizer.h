@@ -28,5 +28,6 @@ bool32 Randomizer_IsItemAllowed(enum Item item);
 
 void CB2_InitRandomizerMenu(void);
 void Randomizer_RemapFindItemVar(void);
+void Randomizer_PreviewStarterSpecies(void);
 
 #endif // GUARD_RANDOMIZER_H

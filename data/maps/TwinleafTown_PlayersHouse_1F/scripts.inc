@@ -6,6 +6,8 @@ TwinleafTown_PlayersHouse_1F_EventScript_Mom::
 	faceplayer
 	goto_if_eq VAR_TWINLEAF_STATE, 0, TwinleafTown_PlayersHouse_1F_EventScript_MomMorning
 	goto_if_eq VAR_TWINLEAF_STATE, 1, TwinleafTown_PlayersHouse_1F_EventScript_MomBeforeShoes
+	@ After the opening, Mom heals the party whenever you talk to her.
+	goto_if_set FLAG_SYS_POKEMON_GET, TwinleafTown_PlayersHouse_1F_EventScript_MomHeal
 	msgbox TwinleafTown_PlayersHouse_1F_Text_MomAfterShoes, MSGBOX_DEFAULT
 	release
 	end
@@ -17,6 +19,15 @@ TwinleafTown_PlayersHouse_1F_EventScript_MomMorning::
 
 TwinleafTown_PlayersHouse_1F_EventScript_MomBeforeShoes::
 	msgbox TwinleafTown_PlayersHouse_1F_Text_MomBeforeShoes, MSGBOX_DEFAULT
+	release
+	end
+
+TwinleafTown_PlayersHouse_1F_EventScript_MomHeal::
+	msgbox TwinleafTown_PlayersHouse_1F_Text_MomHealOffer, MSGBOX_DEFAULT
+	closemessage
+	call Common_EventScript_OutOfCenterPartyHeal
+	incrementgamestat GAME_STAT_RESTED_AT_HOME
+	msgbox TwinleafTown_PlayersHouse_1F_Text_MomHealDone, MSGBOX_DEFAULT
 	release
 	end
 
@@ -134,3 +145,12 @@ TwinleafTown_PlayersHouse_1F_Text_MomHoldB:
 TwinleafTown_PlayersHouse_1F_Text_MomAfterShoes:
 	.string "MOM: I'll be here. The lake road\n"
 	.string "is the one that leaves town north.$"
+
+TwinleafTown_PlayersHouse_1F_Text_MomHealOffer:
+	.string "MOM: You look worn out.\n"
+	.string "Lie down for a minute. I'll watch\l"
+	.string "over your POKéMON.$"
+
+TwinleafTown_PlayersHouse_1F_Text_MomHealDone:
+	.string "MOM: Your team looks ready again.\n"
+	.string "Take care out there, honey.$"

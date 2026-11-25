@@ -73,9 +73,10 @@ SOLID_METATILES = set(MT_TREE) | {
     0x240, 0x241, 0x242, 0x248, 0x282, 0x283,
     0x29A, 0x2A2, 0x2F9,
 }
+# Ledges (0x0D5/0x0D6) MUST stay collision=1 so only JumpSouth works — not walkable.
 WALKABLE_METATILES = {
     MT_GRASS, MT_TALL, MT_WATER, MT_SAND, CAVE_FLOOR, IN_FLOOR, IN_DOOR,
-    MT_LEDGE_A, MT_LEDGE_B, 0x00E, 0x015, 0x048, 0x049, 0x201, 0x209, 0x20E,
+    0x00E, 0x015, 0x048, 0x049, 0x201, 0x209, 0x20E,
 } | PATH_METATILES
 # Calm + reflective + rough water — all need Surf elev packing (coll=0, elev=1).
 WATER_METATILES = {MT_WATER, 0x0A1, 0x14E, 0x14F}
@@ -496,9 +497,11 @@ def grid_from_chunks(chunks, *, cave=False, snow=False, indoor=False):
         for x in range(w):
             mt = grid[y][x]
             if mt in WATER_METATILES or mt in PATH_METATILES or mt in (
-                MT_LEDGE_A, MT_LEDGE_B, MT_TALL, MT_GRASS, MT_SAND, CAVE_FLOOR, IN_FLOOR, IN_DOOR
+                MT_TALL, MT_GRASS, MT_SAND, CAVE_FLOOR, IN_FLOOR, IN_DOOR
             ):
                 collision[y][x] = 0
+            elif mt in (MT_LEDGE_A, MT_LEDGE_B):
+                collision[y][x] = 1  # one-way jump only
             elif is_solid_metatile(mt):
                 collision[y][x] = 1
     return grid, w, h, collision
