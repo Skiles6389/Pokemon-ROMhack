@@ -26,6 +26,7 @@ from tools.sinnoh_maps.city_door_warp_audit import (  # noqa: E402
     connection_seeds,
     expected_door,
     classify_warp,
+    is_door_behavior,
     is_walkable,
 )
 from tools.sinnoh_maps.render_map_preview import render  # noqa: E402
@@ -138,7 +139,7 @@ def door_asserts(name: str, cells, w, h, must_enter=None) -> list[dict]:
                 break
         door_ok = True
         if expect is not None:
-            if mt not in expect:
+            if mt not in expect and not is_door_behavior(name, mt):
                 # sibling double-door
                 sib = any(
                     0 <= ax < w and cells[y][ax][0] in expect

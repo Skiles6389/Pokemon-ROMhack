@@ -1,32 +1,34 @@
-# VerityLakefront — dense forest approach to Lake Verity (Platinum-style).
-# Legend: T tree  . grass  , tall/shaded gap  : sand  f flower  F ledge
-#          S sign  W warp → Lake Verity
+# VerityLakefront — Platinum layout cropped to the playable clearing (x44..63, y40..57 of the zone)
+# Shapes derived from the Platinum layout; tiles are Emerald General/Mauville metatiles.
+# Legend: T tree . grass , tall grass = path ~ water L/</> ledges F fence b flower bed
+#         S sign/mailbox W walk-in exit warp; letters = building doors (@stamp)
+@compiler platinum
 @name VerityLakefront
 @layout LAYOUT_VERITY_LAKEFRONT
-@width 32
+@width 20
 @height 18
 @primary gTileset_General
-@secondary gTileset_Petalburg
-@connection right MAP_ROUTE201 -11
-@warp MAP_LAKE_VERITY 0
+@secondary gTileset_Mauville
+@connection right MAP_ROUTE201 -8
 @warp MAP_LAKE_VERITY 1
+@warp MAP_LAKE_VERITY 2
 @sign VerityLakefront_EventScript_Sign
 @grid
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTT,,TTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTT,,TTTTTTTTTTTTTTTTTTTTTTTTT
-TTTT.WW:S...TT..TTTTTTTTTTTTTTTT
-TTTT.....fFfTT..TTTTTTTTTTTTTTTT
-TTTT...f.fF.f.f.................
-TTTT.f....Ff.f..................
-TTTT...f..FFFFF.................
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTT
+TTTT##TTTTTTTTTTTTTT
+TTTTWWTTTTTTTTTTTTTT
+TTTT..TTTTTTTTTTTTTT
+TTTT==TTTTTTTTTTTTTT
+TT.S==..<...f.......
+TT......<.f...TTTT..
+TT......<.....TTTT..
+TT......<f..f.......
+TT......<.f.........
+TT......#LLLLLTTLLLL
+TTTT..........TT....
+TTTT................
+TTTTTT..............
+TTTTTT..............
+TTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTT

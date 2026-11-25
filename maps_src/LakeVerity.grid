@@ -1,0 +1,59 @@
+# LakeVerity — Platinum layout trimmed to the lake + clearing (x8..59, y14..57)
+# Shapes derived from the Platinum layout; tiles are Emerald General/Mauville metatiles.
+# Legend: T tree . grass , tall grass = path ~ water L/</> ledges F fence b flower bed
+#         S sign/mailbox W walk-in exit warp; letters = building doors (@stamp)
+@compiler platinum
+@name LakeVerity
+@layout LAYOUT_LAKE_VERITY
+@width 52
+@height 44
+@primary gTileset_General
+@secondary gTileset_Mauville
+@stamp A CAVE_MOUND MAP_VERITY_CAVERN_STUB 0
+@warp MAP_VERITY_LAKEFRONT 0
+@warp MAP_VERITY_LAKEFRONT 1
+@grid
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTT~~~~~~~~~~~~~~~~~~~~TTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTT~~~~~~~~~~~~~~~~~~~~TTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTT~~~~~~~~~~~~~~~~~~~~~~~~TTTTTTTTTTTTTTTT
+TTTTTTTTTTTT~~~~~~~~~~~~~~~~~~~~~~~~TTTTTTTTTTTTTTTT
+TTTTTTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~TTTTTTTTTTTTTT
+TTTTTTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~TTTTTTTTTTTTTT
+TTTTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TTTTTTTTTTTT
+TTTTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TTTTTTTTTTTT
+TTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TTTTTTTTTT
+TTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TTTTTTTTTT
+TTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TTTTTTTTTT
+TTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TTTTTTTTTT
+TTTTTT~~~~~~~~~~~~~~~RRRRRRR~~~~~~~~~~~~~~TTTTTTTTTT
+TTTTTT~~~~~~~~~~~~~~~RRRRRRR~~~~~~~~~~~~~~TTTTTTTTTT
+TTTTTT~~~~~~~~~~~~~~~RRRRRRR~~~~~~~~~~~~~~TTTTTTTTTT
+TTTTTT~~~~~~~~~~~~~~~RR###RR~~~~~~~~~~~~~~TTTTTTTTTT
+TTTTTT~~~~~~~~~~~~~~~RR#A#RR~~~~~~~~~~~~~~TTTTTTTTTT
+TTTTTT~~~~~~~~~~~~~~~.......~~~~~~~~~~~~~~TTTTTTTTTT
+TTTTTT~~~~~~~~~~~~~~~~.....~~~~~~~~~~~~~~~TTTTTTTTTT
+TTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TTTTTTTTTT
+TTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~....TTTTTT
+TTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~....TTTTTT
+TTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~......TTTT
+TTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~......TTTT
+TTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~,.....TTTT
+TTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~,,....TTTT
+TTTTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~,,,,....TTTT
+TTTTTTTT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.,,,....TTTT
+TTTT....TT~~~~~~~~~~~~~~~~~~~~~~~~~~~~.,,,,,..TTTTTT
+TTTT....TT~~~~~~~~~~~~~~~~~~~~~~~~~~~~.,,,,...TTTTTT
+TT,,,,,,....~~~~~~~~~~~~~~~~~~~~~~~~...,,,..TTTTTTTT
+TT,,,,,,,,,.~~~~~~~~~~~~~~~~~~~~~~~~........TTTTTTTT
+TT,,,,,,,,,.TT~~~~~~~~~~~~~~~~~~~~..........TTTTTTTT
+TT,,,,,,,,,.TT~~~~~~~~~~~~~~~~~~~~..........TTTTTTTT
+TT,,,,,,,,,,..TTTTTTTTTTTTTTTTTTTTTT......TTTTTTTTTT
+TT,,,,,,,,,,,.TTTTTTTTTTTTTTTTTTTTTT...=..TTTTTTTTTT
+TT,,,,,,,,,,,,,,,,,,TTTTTTTTTTTTTTTT..==..TTTTTTTTTT
+TT,,,,,,,,,,,,,,,,,,TTTTTTTTTTTTTTTT......TTTTTTTTTT
+TT,,,,,,,,,,,,,,,.TTTTTTTTTTTTTTTTTTTTWWTTTTTTTTTTTT
+TT,,,,,,,,,,,,,,..TTTTTTTTTTTTTTTTTTTT##TTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

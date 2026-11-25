@@ -54,9 +54,10 @@ Route201_EventScript_BarryMeet::
 	@ VerityLakefront east-path tile (seamless Route201 connection twin). Never
 	@ warp into trees — lakefront grass path opens to the Lake Verity gap.
 	fadescreen FADE_TO_BLACK
+	@ Barry stands one tile ahead (west) of the player so he really leads.
 	setobjectxy OBJ_EVENT_ID_PLAYER, 4, 22
-	setobjectxyperm LOCALID_ROUTE201_BARRY, 5, 22
-	addobject LOCALID_ROUTE201_BARRY
+	setobjectxyperm LOCALID_ROUTE201_BARRY, 3, 22
+	setobjectxy LOCALID_ROUTE201_BARRY, 3, 22
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	applymovement LOCALID_ROUTE201_BARRY, Common_Movement_FaceLeft
 	waitmovement 0
@@ -71,8 +72,9 @@ Route201_EventScript_BarryMeet::
 	clearflag FLAG_HIDE_LAKE_VERITY_ASSISTANT
 	clearflag FLAG_HIDE_LAKE_VERITY_BRIEFCASE
 	setvar VAR_ROUTE201_STATE, 1
-	@ Route201 (0,22) connects to VerityLakefront (31,11); land one tile in on grass.
-	warpsilent MAP_VERITY_LAKEFRONT, 30, 11
+	@ Route201 (0,22) connects to VerityLakefront (19,14) (left connection, offset 8);
+	@ land one tile in on the lakefront's lower grass clearing.
+	warpsilent MAP_VERITY_LAKEFRONT, 18, 14
 	waitstate
 	releaseall
 	end
@@ -317,7 +319,7 @@ Route201_Movement_PlayerFollows:
 	walk_fast_up
 	step_end
 
-@ From (5,22)/(4,22) on the clear west corridor → walk to the map edge.
+@ From (3,22)/(4,22) on the clear west corridor → walk to the map edge.
 Route201_Movement_BarryLeadsWest:
 	walk_fast_left
 	walk_fast_left
@@ -327,6 +329,7 @@ Route201_Movement_BarryLeadsWest:
 	face_left
 	step_end
 
+@ Player follows one tile behind Barry: (4,22) -> (0,22); Barry (3,22) walks off the edge.
 Route201_Movement_PlayerFollowsWest:
 	walk_fast_left
 	walk_fast_left
@@ -489,53 +492,38 @@ Route201_EventScript_PlatNpc0::
 	end
 
 Route201_EventScript_PlatNpc0_Text:
-	.string "The grass ahead still has plenty\n"
-	.string "to teach a new trainer.$"
+	.string "Wild POKéMON love the tall grass.\n"
+	.string "Step around it if you're in a hurry.$"
 
 Route201_EventScript_PlatNpc1::
 	msgbox Route201_EventScript_PlatNpc1_Text, MSGBOX_NPC
 	end
 
 Route201_EventScript_PlatNpc1_Text:
-	.string "The grass ahead still has plenty\n"
-	.string "to teach a new trainer.$"
+	.string "I come out here every morning.\n"
+	.string "The grass smells best after dew.$"
 
 Route201_EventScript_PlatNpc2::
 	msgbox Route201_EventScript_PlatNpc2_Text, MSGBOX_NPC
 	end
 
 Route201_EventScript_PlatNpc2_Text:
-	.string "The grass ahead still has plenty\n"
-	.string "to teach a new trainer.$"
+	.string "Sandgem's just past the trees.\n"
+	.string "You can smell the sea from here!$"
 
 Route201_EventScript_PlatNpc3::
 	msgbox Route201_EventScript_PlatNpc3_Text, MSGBOX_NPC
 	end
 
 Route201_EventScript_PlatNpc3_Text:
-	.string "The grass ahead still has plenty\n"
-	.string "to teach a new trainer.$"
+	.string "I keep pacing because I can't decide\n"
+	.string "which way to go first!$"
 
-Route201_EventScript_PlatNpc4::
-	msgbox Route201_EventScript_PlatNpc4_Text, MSGBOX_NPC
+Route201_EventScript_TrainerTips::
+	msgbox Route201_Text_TrainerTips, MSGBOX_SIGN
 	end
 
-Route201_EventScript_PlatNpc4_Text:
-	.string "Routes like this one link every\n"
-	.string "town in Sinnoh together.$"
-
-Route201_EventScript_PlatNpc5::
-	msgbox Route201_EventScript_PlatNpc5_Text, MSGBOX_NPC
-	end
-
-Route201_EventScript_PlatNpc5_Text:
-	.string "Routes like this one link every\n"
-	.string "town in Sinnoh together.$"
-
-Route201_EventScript_PlatNpc6::
-	msgbox Route201_EventScript_PlatNpc6_Text, MSGBOX_NPC
-	end
-
-Route201_EventScript_PlatNpc6_Text:
-	.string "Routes like this one link every\n"
-	.string "town in Sinnoh together.$"
+Route201_Text_TrainerTips:
+	.string "TRAINER TIPS\p"
+	.string "Jump down a ledge to take a shortcut.\n"
+	.string "You can't climb back up the same way!$"
