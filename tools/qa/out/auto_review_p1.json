@@ -1,0 +1,91 @@
+{
+  "results": [
+    {
+      "script": "visual_object_audit.py",
+      "exit": 1,
+      "fail": 3,
+      "warn": 67,
+      "fails": [
+        {
+          "name": "EternaForest",
+          "status": "FAIL",
+          "incomplete_trees": 6,
+          "isolated_rocks": 27,
+          "passable_water": 0,
+          "em_water": 0,
+          "em_ledges": 0,
+          "plat_ledges": 0,
+          "em_fences": 0,
+          "em_paths": 0,
+          "em_sand": 0,
+          "plat_paths": 0,
+          "path_coverage": null,
+          "signs": 2,
+          "issues": [
+            "incomplete 2x2 trees: 6",
+            "isolated cliff/rock tiles: 27"
+          ]
+        },
+        {
+          "name": "Route209",
+          "status": "FAIL",
+          "incomplete_trees": 3,
+          "isolated_rocks": 34,
+          "passable_water": 0,
+          "em_water": 379,
+          "em_ledges": 5,
+          "plat_ledges": 5,
+          "em_fences": 0,
+          "em_paths": 78,
+          "em_sand": 0,
+          "plat_paths": 56,
+          "path_coverage": 1.393,
+          "signs": 3,
+          "issues": [
+            "incomplete 2x2 trees: 3",
+            "isolated cliff/rock tiles: 34"
+          ]
+        },
+        {
+          "name": "Route215",
+          "status": "FAIL",
+          "incomplete_trees": 3,
+          "isolated_rocks": 50,
+          "passable_water": 0,
+          "em_water": 0,
+          "em_ledges": 34,
+          "plat_ledges": 34,
+          "em_fences": 0,
+          "em_paths": 158,
+          "em_sand": 0,
+          "plat_paths": 100,
+          "path_coverage": 1.58,
+          "signs": 2,
+          "issues": [
+            "incomplete 2x2 trees: 3",
+            "isolated cliff/rock tiles: 50"
+          ]
+        }
+      ],
+      "stdout_tail": "WARN Route226: isolated cliff/rock tiles: 66\nWARN Route227: isolated cliff/rock tiles: 74\nWARN Route228: isolated cliff/rock tiles: 77\nWARN Route229: isolated cliff/rock tiles: 51\nWARN Route230: isolated cliff/rock tiles: 28\nWARN SandgemTown: isolated cliff/rock tiles: 4\nWARN SnowpointCity: isolated cliff/rock tiles: 4\nWARN SolaceonTown: isolated cliff/rock tiles: 8\nWARN SpearPillar: isolated cliff/rock tiles: 46\nWARN SpearPillar_Distorted: isolated cliff/rock tiles: 54\nWARN StarkMountain_HeatranRoom: isolated cliff/rock tiles: 11\nWARN StarkMountain_Outside: isolated cliff/rock tiles: 27\nWARN StarkMountain_Room1: isolated cliff/rock tiles: 30\nWARN StarkMountain_Room2: isolated cliff/rock tiles: 8\nWARN SunyshoreCity: isolated cliff/rock tiles: 18; oversized paths: Emerald 1684 vs Platinum 330 (5.1x)\nWARN SurvivalArea: isolated cliff/rock tiles: 10\nWARN ValleyWindworks_Exterior: isolated cliff/rock tiles: 15\nWARN ValorLakefront: isolated cliff/rock tiles: 46\nWARN VeilstoneCity: isolated cliff/rock tiles: 21\nWARN VictoryRoad_Sinnoh_1F: isolated cliff/rock tiles: 10; oversized paths: Emerald 126 vs Platinum 36 (3.5x)\nWARN VictoryRoad_Sinnoh_2F: isolated cliff/rock tiles: 33\nWARN VictoryRoad_Sinnoh_B1F: isolated cliff/rock tiles: 2\nWARN VictoryRoad_Sinnoh_Room1: isolated cliff/rock tiles: 1\nWARN VictoryRoad_Sinnoh_Room2: isolated cliff/rock tiles: 52\n=== visual/object audit: 3 FAIL / 67 WARN / 99 \u2192 /agent/repos/Pokemon-ROMhack/tools/sinnoh_maps/visual_object_audit_report.json ===\n"
+    },
+    {
+      "script": "collision_audit.py",
+      "exit": 0,
+      "fail": 0,
+      "warn": 14,
+      "fails": [],
+      "stdout_tail": "WARN CanalaveCity: Platinum solids opened 238/2048 (11.6%)\nWARN CelesticTown: Platinum solids opened 158/1024 (15.4%)\nWARN EternaCity: Platinum solids opened 378/3072 (12.3%)\nWARN FightArea: Platinum solids opened 247/2048 (12.1%)\nWARN JubilifeCity: Platinum solids opened 1805/4096 (44.1%)\nWARN OreburghCity: Platinum solids opened 505/3072 (16.4%)\nWARN PokemonLeague_Exterior: Platinum solids opened 256/2048 (12.5%)\nWARN ResortArea: Platinum solids opened 226/2048 (11.0%)\nWARN SandgemTown: Platinum solids opened 113/1024 (11.0%)\nWARN SnowpointCity: Platinum solids opened 220/2048 (10.7%)\nWARN SunyshoreCity: Platinum solids opened 856/4096 (20.9%)\nWARN SurvivalArea: Platinum solids opened 338/2048 (16.5%)\nWARN TwinleafTown: Platinum solids opened 89/1024 (8.7%)\nWARN VeilstoneCity: Platinum solids opened 545/4096 (13.3%)\n=== collision audit: 0 FAIL, 14 WARN, 99 maps \u2192 /agent/repos/Pokemon-ROMhack/tools/sinnoh_maps/collision_audit_report.json ===\n"
+    },
+    {
+      "script": "city_door_warp_audit.py",
+      "exit": 0,
+      "fail": 0,
+      "warn": 0,
+      "fails": [],
+      "stdout_tail": "=== city/door/warp audit: 0 FAIL / 0 WARN / 18 \u2192 /agent/repos/Pokemon-ROMhack/tools/sinnoh_maps/city_door_warp_audit_report.json ===\n"
+    }
+  ],
+  "total_fail": 3,
+  "ok": false
+}

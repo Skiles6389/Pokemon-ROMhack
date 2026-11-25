@@ -15,11 +15,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 299,
-      "plat_blocked": 32,
+      "plat_opened": 236,
+      "plat_blocked": 97,
       "plat_total": 2048,
       "issues": [
-        "Platinum solids opened 299/2048 (14.6%)"
+        "Platinum solids opened 236/2048 (11.5%)"
       ]
     },
     {
@@ -37,11 +37,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 174,
-      "plat_blocked": 15,
+      "plat_opened": 158,
+      "plat_blocked": 31,
       "plat_total": 1024,
       "issues": [
-        "Platinum solids opened 174/1024 (17.0%)"
+        "Platinum solids opened 158/1024 (15.4%)"
       ]
     },
     {
@@ -149,11 +149,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 454,
-      "plat_blocked": 21,
+      "plat_opened": 370,
+      "plat_blocked": 70,
       "plat_total": 3072,
       "issues": [
-        "Platinum solids opened 454/3072 (14.8%)"
+        "Platinum solids opened 370/3072 (12.0%)"
       ]
     },
     {
@@ -161,7 +161,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
+      "plat_opened": 8,
       "plat_blocked": 0,
       "plat_total": 9216,
       "issues": []
@@ -171,11 +171,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 282,
-      "plat_blocked": 8,
+      "plat_opened": 247,
+      "plat_blocked": 24,
       "plat_total": 2048,
       "issues": [
-        "Platinum solids opened 282/2048 (13.8%)"
+        "Platinum solids opened 247/2048 (12.1%)"
       ]
     },
     {
@@ -193,8 +193,8 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 110,
-      "plat_blocked": 16,
+      "plat_opened": 87,
+      "plat_blocked": 55,
       "plat_total": 2048,
       "issues": []
     },
@@ -210,15 +210,13 @@
     },
     {
       "name": "HearthomeCity",
-      "status": "WARN",
+      "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 400,
-      "plat_blocked": 12,
+      "plat_opened": 316,
+      "plat_blocked": 81,
       "plat_total": 4096,
-      "issues": [
-        "Platinum solids opened 400/4096 (9.8%)"
-      ]
+      "issues": []
     },
     {
       "name": "IronIsland",
@@ -235,11 +233,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 347,
-      "plat_blocked": 14,
+      "plat_opened": 1805,
+      "plat_blocked": 28,
       "plat_total": 4096,
       "issues": [
-        "Platinum solids opened 347/4096 (8.5%)"
+        "Platinum solids opened 1805/4096 (44.1%)"
       ]
     },
     {
@@ -277,11 +275,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 593,
-      "plat_blocked": 40,
+      "plat_opened": 503,
+      "plat_blocked": 95,
       "plat_total": 3072,
       "issues": [
-        "Platinum solids opened 593/3072 (19.3%)"
+        "Platinum solids opened 503/3072 (16.4%)"
       ]
     },
     {
@@ -329,8 +327,8 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 240,
-      "plat_blocked": 23,
+      "plat_opened": 213,
+      "plat_blocked": 87,
       "plat_total": 4096,
       "issues": []
     },
@@ -409,11 +407,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 268,
-      "plat_blocked": 25,
+      "plat_opened": 251,
+      "plat_blocked": 28,
       "plat_total": 2048,
       "issues": [
-        "Platinum solids opened 268/2048 (13.1%)"
+        "Platinum solids opened 251/2048 (12.3%)"
       ]
     },
     {
@@ -471,8 +469,8 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
-      "plat_blocked": 1197,
+      "plat_opened": 1,
+      "plat_blocked": 1194,
       "plat_total": 2048,
       "issues": []
     },
@@ -481,11 +479,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 245,
-      "plat_blocked": 10,
+      "plat_opened": 226,
+      "plat_blocked": 12,
       "plat_total": 2048,
       "issues": [
-        "Platinum solids opened 245/2048 (12.0%)"
+        "Platinum solids opened 226/2048 (11.0%)"
       ]
     },
     {
@@ -593,7 +591,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 5,
+      "plat_opened": 9,
       "plat_blocked": 0,
       "plat_total": 3072,
       "issues": []
@@ -673,7 +671,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 34,
+      "plat_opened": 38,
       "plat_blocked": 0,
       "plat_total": 3072,
       "issues": []
@@ -693,7 +691,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
+      "plat_opened": 44,
       "plat_blocked": 0,
       "plat_total": 4096,
       "issues": []
@@ -773,7 +771,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
+      "plat_opened": 8,
       "plat_blocked": 0,
       "plat_total": 3072,
       "issues": []
@@ -803,11 +801,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 127,
-      "plat_blocked": 0,
+      "plat_opened": 113,
+      "plat_blocked": 13,
       "plat_total": 1024,
       "issues": [
-        "Platinum solids opened 127/1024 (12.4%)"
+        "Platinum solids opened 113/1024 (11.0%)"
       ]
     },
     {
@@ -815,20 +813,20 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 261,
-      "plat_blocked": 8,
+      "plat_opened": 220,
+      "plat_blocked": 35,
       "plat_total": 2048,
       "issues": [
-        "Platinum solids opened 261/2048 (12.7%)"
+        "Platinum solids opened 220/2048 (10.7%)"
       ]
     },
     {
       "name": "SolaceonTown",
       "status": "PASS",
       "strip_rate": 0.0,
-      "solid_id_walkable_coll": 0,
-      "plat_opened": 163,
-      "plat_blocked": 23,
+      "solid_id_walkable_coll": 1,
+      "plat_opened": 140,
+      "plat_blocked": 48,
       "plat_total": 2048,
       "issues": []
     },
@@ -896,12 +894,12 @@
       "name": "SunyshoreCity",
       "status": "WARN",
       "strip_rate": 0.0,
-      "solid_id_walkable_coll": 0,
-      "plat_opened": 941,
-      "plat_blocked": 18,
+      "solid_id_walkable_coll": 2,
+      "plat_opened": 857,
+      "plat_blocked": 39,
       "plat_total": 4096,
       "issues": [
-        "Platinum solids opened 941/4096 (23.0%)"
+        "Platinum solids opened 857/4096 (20.9%)"
       ]
     },
     {
@@ -909,22 +907,24 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 347,
-      "plat_blocked": 12,
+      "plat_opened": 338,
+      "plat_blocked": 21,
       "plat_total": 2048,
       "issues": [
-        "Platinum solids opened 347/2048 (16.9%)"
+        "Platinum solids opened 338/2048 (16.5%)"
       ]
     },
     {
       "name": "TwinleafTown",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 43,
-      "plat_blocked": 77,
+      "plat_opened": 89,
+      "plat_blocked": 53,
       "plat_total": 1024,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 89/1024 (8.7%)"
+      ]
     },
     {
       "name": "ValleyWindworks_Exterior",
@@ -941,7 +941,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
+      "plat_opened": 1,
       "plat_blocked": 0,
       "plat_total": 4096,
       "issues": []
@@ -951,11 +951,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 610,
-      "plat_blocked": 23,
+      "plat_opened": 542,
+      "plat_blocked": 107,
       "plat_total": 4096,
       "issues": [
-        "Platinum solids opened 610/4096 (14.9%)"
+        "Platinum solids opened 542/4096 (13.2%)"
       ]
     },
     {

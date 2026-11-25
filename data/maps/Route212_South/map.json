@@ -551,7 +551,7 @@
   "warp_events": [
     {
       "x": 69,
-      "y": 14,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_ROUTE212_HOUSE",
       "dest_warp_id": "0"

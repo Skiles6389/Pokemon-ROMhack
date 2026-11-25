@@ -90,3 +90,4 @@ baserom.bin
 *.mp3
 tools/platinum_music/**/__pycache__/
 tools/platinum_music/**/*.wav
+tools/qa/out/renders/

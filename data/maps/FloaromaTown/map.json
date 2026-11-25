@@ -196,7 +196,7 @@
     },
     {
       "x": 20,
-      "y": 4,
+      "y": 5,
       "elevation": 0,
       "dest_map": "MAP_FLOAROMA_MEADOW",
       "dest_warp_id": "0"
@@ -210,7 +210,7 @@
     },
     {
       "x": 2,
-      "y": 33,
+      "y": 34,
       "elevation": 0,
       "dest_map": "MAP_FLOAROMA_MEADOW",
       "dest_warp_id": "3"

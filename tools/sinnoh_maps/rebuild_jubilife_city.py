@@ -83,6 +83,8 @@ def sync_collision(grid, collision) -> None:
                 collision[y][x] = 0
             elif mt in TREE or mt == MT_ROCK or mt == 0x139:
                 collision[y][x] = 1
+            elif mt == 0x201:  # door mat — must be walkable for approach
+                collision[y][x] = 0
             elif mt >= 0x200:
                 collision[y][x] = 1
             elif mt in DOOR_METATILES or (0x028 <= mt <= 0x063) or mt in (

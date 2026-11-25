@@ -395,14 +395,14 @@
     },
     {
       "x": 21,
-      "y": 36,
+      "y": 37,
       "elevation": 0,
       "dest_map": "MAP_ROUTE228_NORTH_HOUSE",
       "dest_warp_id": "0"
     },
     {
       "x": 7,
-      "y": 66,
+      "y": 67,
       "elevation": 0,
       "dest_map": "MAP_ROUTE228_SOUTH_HOUSE",
       "dest_warp_id": "0"
