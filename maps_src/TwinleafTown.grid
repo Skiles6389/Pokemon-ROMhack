@@ -1,6 +1,6 @@
 # TwinleafTown — Platinum-style starter town (Emerald Petalburg houses).
-# Legend: T tree  . grass  , tall grass  = dirt path  ~ water  F fence
-#          f flower  S sign
+# Legend: T tree  . grass  f flower  b bush  = dirt path  ~ water  F fence
+#          S sign  (no tall-grass encounters in town)
 # Stamps: P player  V rival  A house1  B house2 (door anchors)
 @name TwinleafTown
 @layout LAYOUT_TWINLEAF_TOWN
@@ -29,8 +29,8 @@ TTTTTT........===.........TTTTTT
 TTTTTT........===.........TTTTTT
 TTTTTT........===.........TTTTTT
 TTTTTT...V...S===...A.....TTTTTT
-TTTTTT.,,,....====....,,,.TTTTTT
-TTTTTT.,,,....====....,,,.TTTTTT
+TTTTTT.fbf....====....fbf.TTTTTT
+TTTTTT.bff....====....ffb.TTTTTT
 TTTTTT.=========S========.TTTTTT
 TTTTTT.==================.TTTTTT
 TTTTTT........====........TTTTTT

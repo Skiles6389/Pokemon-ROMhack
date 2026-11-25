@@ -1,6 +1,7 @@
 # VerityLakefront — dense forest approach to Lake Verity (Platinum-style).
-# Legend: T tree  . grass  , tall/shaded gap  : sand  f flower  F ledge
+# Legend: T tree  . grass  , tall/shaded gap  : sand  f flower  L ledge
 #          S sign  W warp → Lake Verity
+# Tree bands use even row/col spans so 2×2 stamps never strand rock orphans.
 @name VerityLakefront
 @layout LAYOUT_VERITY_LAKEFRONT
 @width 32
@@ -18,13 +19,13 @@ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTT,,TTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTT,,TTTTTTTTTTTTTTTTTTTTTTTTT
-TTTT.WW:S...TT..TTTTTTTTTTTTTTTT
-TTTT.....fFfTT..TTTTTTTTTTTTTTTT
-TTTT...f.fF.f.f.................
-TTTT.f....Ff.f..................
-TTTT...f..FFFFF.................
+TTTTTT..TTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTT..TTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTWW:S..TT..................
+TTTTTT...fLfTT..................
+TTTTTT.f.fL.f.f.................
+TTTTTT.f..LLLLL.................
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

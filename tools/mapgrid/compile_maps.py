@@ -59,13 +59,83 @@ STAMP_BY_NAME.update(
 
 LEGEND_PATH = Path(__file__).with_name("legend.json")
 MT_FLOWER = 0x004
+MT_BUSH = 0x00E
 MT_SIGN = 0x003
-MT_FENCE = 0x215  # Petalburg secondary rail
 MT_VOID = 0x000
+
+# General wooden picket fence (Route110): left / mid / right.
+MT_FENCE_L, MT_FENCE_M, MT_FENCE_R = 0x148, 0x149, 0x14A
+FENCE_METATILES = {MT_FENCE_L, MT_FENCE_M, MT_FENCE_R}
+
+# Emerald General pond shoreline (brown bank) 3×3 + calm center.
+#   C8 C9 CA
+#   D0 D1 D2
+#   D8 D9 DA
+MT_POND_C = 0x0A1
+POND_TABLE = {
+    # (n, s, w, e) → metatile; True = neighbor is water
+    (False, True, False, True): 0x0C8,  # NW
+    (False, True, True, True): 0x0C9,  # N
+    (False, True, True, False): 0x0CA,  # NE
+    (True, True, False, True): 0x0D0,  # W
+    (True, True, True, True): MT_POND_C,  # center
+    (True, True, True, False): 0x0D2,  # E
+    (True, False, False, True): 0x0D8,  # SW
+    (True, False, True, True): 0x0D9,  # S
+    (True, False, True, False): 0x0DA,  # SE
+}
+WATER_METATILES = {MT_WATER, MT_POND_C} | set(POND_TABLE.values())
+
+# Families for self-test (chars must never emit these)
+ROCK_CLIFF_PAVE = {
+    MT_ROCK,
+    0x079,
+    0x214,
+    0x215,
+    0x216,
+    0x21C,
+    0x21D,
+    0x21E,
+    *range(0x157, 0x160),
+    *range(0x166, 0x170),
+    *range(0x172, 0x180),
+}
+TREE_METATILES = {MT_TREE_TL, MT_TREE_TR, MT_TREE_BL, MT_TREE_BR}
+LEDGE_METATILES = {MT_LEDGE_A, MT_LEDGE_B}
 
 
 def cell(mt: int, coll: int, elev: int = 3) -> int:
     return (mt & 0x3FF) | ((coll & 3) << 10) | ((elev & 0xF) << 12)
+
+
+def fence_metatile(n: bool, s: bool, w: bool, e: bool) -> int:
+    """Wooden picket: horizontal runs use L/M/R; vertical/lone use mid post."""
+    if w or e:
+        if w and e:
+            return MT_FENCE_M
+        if e and not w:
+            return MT_FENCE_L
+        return MT_FENCE_R
+    return MT_FENCE_M
+
+
+def water_metatile(n: bool, s: bool, w: bool, e: bool) -> int:
+    """Pond shoreline autotile from 4-neighbour water connectivity."""
+    key = (n, s, w, e)
+    if key in POND_TABLE:
+        return POND_TABLE[key]
+    # Thin corridors / 1-wide stubs
+    if not n and not s and not w and not e:
+        return MT_POND_C
+    if not n and s:
+        return 0x0C9 if (w or e) else 0x0C8
+    if n and not s:
+        return 0x0D9 if (w or e) else 0x0D8
+    if not w and e:
+        return 0x0D0
+    if w and not e:
+        return 0x0D2
+    return MT_POND_C
 
 
 def pack_grid(grid: list[list[int]]) -> bytes:
@@ -195,28 +265,33 @@ def compile_char_grid(gf: GridFile) -> tuple[list[list[int]], dict]:
                 walk[y][x] = True
                 continue
             if ch == "T":
-                grid[y][x] = cell(MT_ROCK, 1)  # placeholder; trees stamped next
+                # Placeholder grass under trees; stamped in pass 2 (never rock).
+                grid[y][x] = cell(MT_GRASS, 0)
                 walk[y][x] = False
             elif ch == ".":
                 grid[y][x] = cell(MT_GRASS, 0)
                 walk[y][x] = True
             elif ch == ",":
+                # Tall/shaded grass (wild encounters). Towns should prefer f/b.
                 grid[y][x] = cell(MT_TALL, 0)
                 walk[y][x] = True
             elif ch == "=":
                 grid[y][x] = cell(MT_PATH_C, 0)
                 walk[y][x] = True
             elif ch == "~":
-                grid[y][x] = cell(MT_WATER, 0, 1)
+                grid[y][x] = cell(MT_POND_C, 0, 1)
                 walk[y][x] = False
             elif ch == "L":
                 grid[y][x] = cell(MT_LEDGE_A if (x & 1) == 0 else MT_LEDGE_B, 1, 0)
                 walk[y][x] = False
             elif ch == "F":
-                grid[y][x] = cell(MT_FENCE, 1)
+                grid[y][x] = cell(MT_FENCE_M, 1)
                 walk[y][x] = False
             elif ch == "f":
                 grid[y][x] = cell(MT_FLOWER, 0)
+                walk[y][x] = True
+            elif ch == "b":
+                grid[y][x] = cell(MT_BUSH, 0)
                 walk[y][x] = True
             elif ch == "S":
                 grid[y][x] = cell(MT_SIGN, 1)
@@ -241,35 +316,43 @@ def compile_char_grid(gf: GridFile) -> tuple[list[list[int]], dict]:
                 grid[y][x] = cell(MT_GRASS, 0)
                 walk[y][x] = True
 
-    # Pass 2: tree 2×2 autotile on even alignments where all 4 are T
+    # Pass 2: tree 2×2 autotile — top-to-bottom greedy (not even-only).
+    # Even-first locking strands odd T rows above a lower tree band as rock;
+    # scanning TL positions in row-major order covers carved edges cleanly.
+    # Leftover lone T → bush (never rock/cliff).
     tree_mask = [[chars[y][x] == "T" for x in range(w)] for y in range(h)]
     covered = [[False] * w for _ in range(h)]
-    for y in range(0, h - 1, 2):
-        for x in range(0, w - 1, 2):
+
+    def stamp_tree(tx: int, ty: int) -> None:
+        grid[ty][tx] = cell(MT_TREE_TL, 1)
+        grid[ty][tx + 1] = cell(MT_TREE_TR, 1)
+        grid[ty + 1][tx] = cell(MT_TREE_BL, 1)
+        grid[ty + 1][tx + 1] = cell(MT_TREE_BR, 1)
+        for dy in (0, 1):
+            for dx in (0, 1):
+                covered[ty + dy][tx + dx] = True
+                walk[ty + dy][tx + dx] = False
+
+    for y in range(h - 1):
+        for x in range(w - 1):
+            if covered[y][x] or covered[y][x + 1] or covered[y + 1][x] or covered[y + 1][x + 1]:
+                continue
             if (
                 tree_mask[y][x]
                 and tree_mask[y][x + 1]
                 and tree_mask[y + 1][x]
                 and tree_mask[y + 1][x + 1]
             ):
-                grid[y][x] = cell(MT_TREE_TL, 1)
-                grid[y][x + 1] = cell(MT_TREE_TR, 1)
-                grid[y + 1][x] = cell(MT_TREE_BL, 1)
-                grid[y + 1][x + 1] = cell(MT_TREE_BR, 1)
-                for dy in (0, 1):
-                    for dx in (0, 1):
-                        covered[y + dy][x + dx] = True
-                        walk[y + dy][x + dx] = False
-    # Orphan T → rock (no fragment trees)
+                stamp_tree(x, y)
+
     orphans = 0
     for y in range(h):
         for x in range(w):
             if tree_mask[y][x] and not covered[y][x]:
-                grid[y][x] = cell(MT_ROCK, 1)
+                grid[y][x] = cell(MT_BUSH, 1)
                 walk[y][x] = False
                 orphans += 1
-
-    # Pass 3: path autotile
+    # Pass 3a: path autotile
     def is_path(x: int, y: int) -> bool:
         if not (0 <= x < w and 0 <= y < h):
             return False
@@ -286,6 +369,40 @@ def compile_char_grid(gf: GridFile) -> tuple[list[list[int]], dict]:
             mt = path_metatile_for_neighbors(n, s, ww, e)
             grid[y][x] = cell(mt, 0)
             walk[y][x] = True
+
+    # Pass 3b: wooden picket fence autotile
+    def is_fence(x: int, y: int) -> bool:
+        return 0 <= x < w and 0 <= y < h and chars[y][x] == "F"
+
+    for y in range(h):
+        for x in range(w):
+            if chars[y][x] != "F":
+                continue
+            mt = fence_metatile(
+                is_fence(x, y - 1),
+                is_fence(x, y + 1),
+                is_fence(x - 1, y),
+                is_fence(x + 1, y),
+            )
+            grid[y][x] = cell(mt, 1)
+            walk[y][x] = False
+
+    # Pass 3c: water / pond shoreline autotile
+    def is_water(x: int, y: int) -> bool:
+        return 0 <= x < w and 0 <= y < h and chars[y][x] == "~"
+
+    for y in range(h):
+        for x in range(w):
+            if chars[y][x] != "~":
+                continue
+            mt = water_metatile(
+                is_water(x, y - 1),
+                is_water(x, y + 1),
+                is_water(x - 1, y),
+                is_water(x + 1, y),
+            )
+            grid[y][x] = cell(mt, 0, 1)
+            walk[y][x] = False
 
     # Pass 4: place building stamps (door on anchor)
     warp_events: list[dict] = []
@@ -449,9 +566,69 @@ def validate(
         if not walk[y][x]:
             fails.append(f"warp ({x},{y}) not walkable")
 
-    # Orphan T cells are converted to rock (solid, no half-tree fragments).
-    # Count is informational only — odd carved edges are expected.
+    # Char-class → metatile family self-check
+    fails.extend(assert_metatile_families(gf, grid, meta["chars"]))
 
+    # Dense T runs must form complete 2×2 stamps (no bush fallbacks).
+    if meta["orphans"]:
+        fails.append(
+            f"{meta['orphans']} orphan T cells (could not form 2×2 tree); "
+            "align tree runs to even width/height"
+        )
+
+    return fails
+
+
+def assert_metatile_families(
+    gf: GridFile, grid: list[list[int]], chars: list[list[str]]
+) -> list[str]:
+    """Every char class must land in its expected metatile family."""
+    fails: list[str] = []
+    w, h = gf.width, gf.height
+    stamp_chars = {s["char"] for s in gf.stamps}
+
+    for y in range(h):
+        for x in range(w):
+            ch = chars[y][x]
+            if ch in stamp_chars:
+                continue
+            mt = grid[y][x] & 0x3FF
+            if ch == "T":
+                if mt not in TREE_METATILES and mt != MT_BUSH:
+                    fails.append(
+                        f"T at ({x},{y}) → 0x{mt:03X} (want tree/bush, not rock/cliff)"
+                    )
+                if mt in ROCK_CLIFF_PAVE:
+                    fails.append(f"T at ({x},{y}) produced rock/cliff/pave 0x{mt:03X}")
+            elif ch == "F":
+                if mt not in FENCE_METATILES:
+                    fails.append(f"F at ({x},{y}) → 0x{mt:03X} (want picket fence)")
+                if mt in ROCK_CLIFF_PAVE or mt in {0x215, 0x214, 0x216}:
+                    fails.append(f"F at ({x},{y}) produced paving/stone 0x{mt:03X}")
+            elif ch == "L":
+                if mt not in LEDGE_METATILES:
+                    fails.append(f"L at ({x},{y}) → 0x{mt:03X} (want south ledge)")
+            elif ch == "~":
+                if mt not in WATER_METATILES:
+                    fails.append(f"~ at ({x},{y}) → 0x{mt:03X} (want pond/water)")
+            elif ch == ",":
+                if mt != MT_TALL:
+                    fails.append(f", at ({x},{y}) → 0x{mt:03X} (want tall grass)")
+            elif ch == "f":
+                if mt != MT_FLOWER:
+                    fails.append(f"f at ({x},{y}) → 0x{mt:03X} (want flower)")
+            elif ch == "b":
+                if mt != MT_BUSH:
+                    fails.append(f"b at ({x},{y}) → 0x{mt:03X} (want bush)")
+            elif ch == ":":
+                if mt != MT_SAND:
+                    fails.append(f": at ({x},{y}) → 0x{mt:03X} (want sand)")
+            elif ch == "S":
+                if mt != MT_SIGN:
+                    fails.append(f"S at ({x},{y}) → 0x{mt:03X} (want sign)")
+    # Cap noise
+    if len(fails) > 40:
+        return fails[:40] + [f"... +{len(fails) - 40} more family fails"]
     return fails
 
 
@@ -565,6 +742,30 @@ def compile_one(path: Path, *, check_only: bool = False) -> int:
     return 0
 
 
+def run_self_test(grids: list[Path]) -> int:
+    """Compile in-memory and assert every char maps to the right metatile family."""
+    rc = 0
+    for path in grids:
+        gf = parse_grid(path)
+        grid, meta = compile_char_grid(gf)
+        fails = assert_metatile_families(gf, grid, meta["chars"])
+        fails += validate(gf, grid, meta)
+        # validate already includes family asserts — dedupe
+        fails = list(dict.fromkeys(fails))
+        if fails:
+            print(f"SELFTEST FAIL {gf.name}:")
+            for f in fails:
+                print(" -", f)
+            rc = 1
+        else:
+            print(
+                f"SELFTEST OK {gf.name} "
+                f"orphans={meta['orphans']} "
+                f"(tree/fence/ledge/water families clean)"
+            )
+    return rc
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument(
@@ -574,11 +775,18 @@ def main() -> int:
         help="Grid files (default: maps_src/*.grid)",
     )
     ap.add_argument("--check", action="store_true", help="Validate only")
+    ap.add_argument(
+        "--self-test",
+        action="store_true",
+        help="Assert char→metatile families (no write)",
+    )
     args = ap.parse_args()
     grids = args.grids or sorted((REPO / "maps_src").glob("*.grid"))
     if not grids:
         print("No .grid files found", file=sys.stderr)
         return 1
+    if args.self_test:
+        return run_self_test(grids)
     rc = 0
     for g in grids:
         rc |= compile_one(g, check_only=args.check)

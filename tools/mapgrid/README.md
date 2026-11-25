@@ -16,20 +16,27 @@ python3 tools/mapgrid/compile_maps.py maps_src/VerityLakefront.grid --check
 
 | Char | Meaning |
 |------|---------|
-| `T` | Tree (2×2 autotiled stamps; orphans → rock) |
+| `T` | Tree (2×2 even+greedy autotile; lone → bush, never rock) |
 | `.` | Grass |
-| `,` | Tall grass / shaded gap |
+| `,` | Tall grass / shaded forest gap (encounters; avoid in towns) |
 | `=` | Dirt path (3×3 autotiled) |
 | `:` | Sand |
-| `~` | Water (surfable) |
-| `L` | South ledge |
-| `F` | Fence / brown ledge |
+| `~` | Water / pond (shoreline autotiled, surfable) |
+| `L` | South-jump ledge (`0x0D5`/`0x0D6`) |
+| `F` | Wooden picket fence (`0x148`/`0x149`/`0x14A`) |
 | `f` | Flowers |
+| `b` | Decorative bush (towns) |
 | `S` | Sign (emits bg event; `@sign` scripts in order) |
 | `W` | Warp (`@warp` dests in order) |
 | `R` `#` | Rock / solid |
 | `_` | Paved/grass |
 | `P`/`V`/… | Stamp door anchors (`@stamp CHAR NAME DEST_MAP ID`) |
+
+Self-test (char → metatile family) runs during compile and via:
+
+```bash
+python3 tools/mapgrid/compile_maps.py --self-test
+```
 
 ## Header directives
 
