@@ -1286,8 +1286,8 @@
 #define FLAG_ITEM_ROUTE202_POTION                                   0x4CE // Sinnoh m51: Platinum item (was FLAG_UNUSED_0x4CE)
 #define FLAG_HIDDEN_ITEM_JUBILIFE_CITY_STARDUST                     0x4CF // Sinnoh m51: Platinum hidden item (was FLAG_UNUSED_0x4CF)
 #define FLAG_HIDE_JUBILIFE_COUNTERPART                              0x4D0 // Sinnoh m51: Dawn/Lucas leaves after Jubilife arrival (was FLAG_UNUSED_0x4D0)
-#define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
-#define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
+#define FLAG_HIDE_VERITY_LAKEFRONT_BARRY                            0x4D1 // Sinnoh m51: Barry waits at the lake entrance (was FLAG_UNUSED_0x4D1)
+#define FLAG_VERITY_LAKEFRONT_BARRY_MET                             0x4D2 // Sinnoh m51: lake-entrance meetup done (was FLAG_UNUSED_0x4D2)
 #define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
 #define FLAG_UNUSED_0x4D4                                           0x4D4 // Unused Flag
 #define FLAG_UNUSED_0x4D5                                           0x4D5 // Unused Flag

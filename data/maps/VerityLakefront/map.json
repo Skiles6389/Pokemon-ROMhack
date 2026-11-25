@@ -21,7 +21,22 @@
       "direction": "right"
     }
   ],
-  "object_events": [],
+  "object_events": [
+    {
+      "local_id": "LOCALID_VERITY_LAKEFRONT_BARRY",
+      "graphics_id": "OBJ_EVENT_GFX_BOY_3",
+      "x": 5,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VerityLakefront_EventScript_Barry",
+      "flag": "FLAG_HIDE_VERITY_LAKEFRONT_BARRY"
+    }
+  ],
   "warp_events": [
     {
       "x": 4,
@@ -42,8 +57,8 @@
     {
       "type": "trigger",
       "x": 4,
-      "y": 4,
-      "elevation": 0,
+      "y": 6,
+      "elevation": 3,
       "var": "VAR_ROUTE201_STATE",
       "var_value": "1",
       "script": "VerityLakefront_EventScript_LakeEntrance"
@@ -51,8 +66,8 @@
     {
       "type": "trigger",
       "x": 5,
-      "y": 4,
-      "elevation": 0,
+      "y": 6,
+      "elevation": 3,
       "var": "VAR_ROUTE201_STATE",
       "var_value": "1",
       "script": "VerityLakefront_EventScript_LakeEntrance"
