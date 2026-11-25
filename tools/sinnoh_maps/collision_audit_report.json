@@ -5,7 +5,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
+      "plat_opened": 2,
       "plat_blocked": 0,
       "plat_total": 4096,
       "issues": []
@@ -15,11 +15,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 236,
-      "plat_blocked": 97,
+      "plat_opened": 242,
+      "plat_blocked": 58,
       "plat_total": 2048,
       "issues": [
-        "Platinum solids opened 236/2048 (11.5%)"
+        "Platinum solids opened 242/2048 (11.8%)"
       ]
     },
     {
@@ -36,12 +36,12 @@
       "name": "CelesticTown",
       "status": "WARN",
       "strip_rate": 0.0,
-      "solid_id_walkable_coll": 0,
-      "plat_opened": 158,
-      "plat_blocked": 31,
+      "solid_id_walkable_coll": 4,
+      "plat_opened": 208,
+      "plat_blocked": 28,
       "plat_total": 1024,
       "issues": [
-        "Platinum solids opened 158/1024 (15.4%)"
+        "Platinum solids opened 208/1024 (20.3%)"
       ]
     },
     {
@@ -59,7 +59,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
+      "plat_opened": 1,
       "plat_blocked": 0,
       "plat_total": 2048,
       "issues": []
@@ -69,7 +69,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
+      "plat_opened": 2,
       "plat_blocked": 0,
       "plat_total": 4096,
       "issues": []
@@ -79,7 +79,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
+      "plat_opened": 14,
       "plat_blocked": 0,
       "plat_total": 4096,
       "issues": []
@@ -89,7 +89,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
+      "plat_opened": 9,
       "plat_blocked": 0,
       "plat_total": 4096,
       "issues": []
@@ -99,7 +99,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 2,
+      "plat_opened": 13,
       "plat_blocked": 0,
       "plat_total": 4096,
       "issues": []
@@ -109,7 +109,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
+      "plat_opened": 18,
       "plat_blocked": 0,
       "plat_total": 4096,
       "issues": []
@@ -149,11 +149,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 370,
-      "plat_blocked": 70,
+      "plat_opened": 395,
+      "plat_blocked": 34,
       "plat_total": 3072,
       "issues": [
-        "Platinum solids opened 370/3072 (12.0%)"
+        "Platinum solids opened 395/3072 (12.9%)"
       ]
     },
     {
@@ -171,11 +171,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 247,
+      "plat_opened": 257,
       "plat_blocked": 24,
       "plat_total": 2048,
       "issues": [
-        "Platinum solids opened 247/2048 (12.1%)"
+        "Platinum solids opened 257/2048 (12.5%)"
       ]
     },
     {
@@ -183,7 +183,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 42,
+      "plat_opened": 91,
       "plat_blocked": 7,
       "plat_total": 4096,
       "issues": []
@@ -193,7 +193,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 87,
+      "plat_opened": 93,
       "plat_blocked": 55,
       "plat_total": 2048,
       "issues": []
@@ -210,20 +210,22 @@
     },
     {
       "name": "HearthomeCity",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 316,
-      "plat_blocked": 81,
+      "plat_opened": 363,
+      "plat_blocked": 38,
       "plat_total": 4096,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 363/4096 (8.9%)"
+      ]
     },
     {
       "name": "IronIsland",
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 12,
+      "plat_opened": 73,
       "plat_blocked": 1,
       "plat_total": 1024,
       "issues": []
@@ -245,7 +247,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
+      "plat_opened": 2,
       "plat_blocked": 0,
       "plat_total": 4096,
       "issues": []
@@ -275,11 +277,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 503,
-      "plat_blocked": 95,
+      "plat_opened": 515,
+      "plat_blocked": 51,
       "plat_total": 3072,
       "issues": [
-        "Platinum solids opened 503/3072 (16.4%)"
+        "Platinum solids opened 515/3072 (16.8%)"
       ]
     },
     {
@@ -327,8 +329,8 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 213,
-      "plat_blocked": 87,
+      "plat_opened": 222,
+      "plat_blocked": 51,
       "plat_total": 4096,
       "issues": []
     },
@@ -407,11 +409,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 251,
-      "plat_blocked": 28,
+      "plat_opened": 299,
+      "plat_blocked": 25,
       "plat_total": 2048,
       "issues": [
-        "Platinum solids opened 251/2048 (12.3%)"
+        "Platinum solids opened 299/2048 (14.6%)"
       ]
     },
     {
@@ -479,11 +481,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 226,
+      "plat_opened": 246,
       "plat_blocked": 12,
       "plat_total": 2048,
       "issues": [
-        "Platinum solids opened 226/2048 (11.0%)"
+        "Platinum solids opened 246/2048 (12.0%)"
       ]
     },
     {
@@ -801,11 +803,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 113,
+      "plat_opened": 131,
       "plat_blocked": 13,
       "plat_total": 1024,
       "issues": [
-        "Platinum solids opened 113/1024 (11.0%)"
+        "Platinum solids opened 131/1024 (12.8%)"
       ]
     },
     {
@@ -813,22 +815,24 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 220,
-      "plat_blocked": 35,
+      "plat_opened": 235,
+      "plat_blocked": 14,
       "plat_total": 2048,
       "issues": [
-        "Platinum solids opened 220/2048 (10.7%)"
+        "Platinum solids opened 235/2048 (11.5%)"
       ]
     },
     {
       "name": "SolaceonTown",
-      "status": "PASS",
+      "status": "WARN",
       "strip_rate": 0.0,
-      "solid_id_walkable_coll": 1,
-      "plat_opened": 140,
+      "solid_id_walkable_coll": 0,
+      "plat_opened": 167,
       "plat_blocked": 48,
       "plat_total": 2048,
-      "issues": []
+      "issues": [
+        "Platinum solids opened 167/2048 (8.2%)"
+      ]
     },
     {
       "name": "SpearPillar",
@@ -895,11 +899,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 2,
-      "plat_opened": 857,
-      "plat_blocked": 39,
+      "plat_opened": 929,
+      "plat_blocked": 37,
       "plat_total": 4096,
       "issues": [
-        "Platinum solids opened 857/4096 (20.9%)"
+        "Platinum solids opened 929/4096 (22.7%)"
       ]
     },
     {
@@ -907,11 +911,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 338,
+      "plat_opened": 362,
       "plat_blocked": 21,
       "plat_total": 2048,
       "issues": [
-        "Platinum solids opened 338/2048 (16.5%)"
+        "Platinum solids opened 362/2048 (17.7%)"
       ]
     },
     {
@@ -931,7 +935,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
+      "plat_opened": 39,
       "plat_blocked": 0,
       "plat_total": 1024,
       "issues": []
@@ -951,11 +955,11 @@
       "status": "WARN",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 542,
-      "plat_blocked": 107,
+      "plat_opened": 582,
+      "plat_blocked": 51,
       "plat_total": 4096,
       "issues": [
-        "Platinum solids opened 542/4096 (13.2%)"
+        "Platinum solids opened 582/4096 (14.2%)"
       ]
     },
     {
@@ -1020,5 +1024,5 @@
     }
   ],
   "fail": 0,
-  "warn": 14
+  "warn": 16
 }

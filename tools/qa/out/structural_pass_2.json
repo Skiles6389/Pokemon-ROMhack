@@ -1,0 +1,57 @@
+{
+  "pass": 2,
+  "focus": "isolated rocks (towns), bad ledges, border trees, path gaps",
+  "found_fixed": {
+    "pass2_audit_FAIL": {
+      "before": 41,
+      "after": 0,
+      "notes": "town rock clear; outdoor border-tree threshold; routes restored"
+    },
+    "visual_FAIL": {
+      "before": 1,
+      "after": 0,
+      "notes": "Celestic paths/rocks; Sunyshore trees"
+    },
+    "collision_FAIL": {
+      "before": 2,
+      "after": 0,
+      "notes": "restored route map.bins after over-clear"
+    },
+    "building_FAIL": {
+      "before": 1,
+      "after": 0
+    }
+  },
+  "final_counts": {
+    "building": {
+      "fail": 0,
+      "pass": 18,
+      "warn": 0
+    },
+    "visual": {
+      "fail": 0,
+      "pass": 43,
+      "warn": 56
+    },
+    "collision": {
+      "fail": 0,
+      "pass": 0,
+      "warn": 16
+    },
+    "city_door": {
+      "fail": 0,
+      "pass": 18,
+      "warn": 0
+    },
+    "extra": {
+      "fail": 0,
+      "pass": 191,
+      "warn": 0
+    },
+    "pass2": {
+      "fail": 0,
+      "pass": 191,
+      "warn": 0
+    }
+  }
+}
