@@ -34,9 +34,10 @@ JubilifeCity_EventScript_AfterGrunt::
 	msgbox JubilifeCity_Text_GruntsLeave, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_JUBILIFE_GRUNT, JubilifeCity_Movement_GruntLeave
-	applymovement LOCALID_JUBILIFE_GRUNT_2, JubilifeCity_Movement_Grunt2Leave
 	waitmovement 0
 	removeobject LOCALID_JUBILIFE_GRUNT
+	applymovement LOCALID_JUBILIFE_GRUNT_2, JubilifeCity_Movement_Grunt2Leave
+	waitmovement 0
 	removeobject LOCALID_JUBILIFE_GRUNT_2
 	setflag FLAG_HIDE_JUBILIFE_GRUNTS
 	checkplayergender
@@ -113,14 +114,6 @@ JubilifeCity_EventScript_PoketchDone::
 	release
 	end
 
-JubilifeCity_EventScript_Woman::
-	msgbox JubilifeCity_Text_Woman, MSGBOX_NPC
-	end
-
-JubilifeCity_EventScript_Boy::
-	msgbox JubilifeCity_Text_Boy, MSGBOX_NPC
-	end
-
 JubilifeCity_EventScript_CitySign::
 	msgbox JubilifeCity_Text_CitySign, MSGBOX_SIGN
 	end
@@ -137,12 +130,7 @@ JubilifeCity_EventScript_TvSign::
 	msgbox JubilifeCity_Text_TvSign, MSGBOX_SIGN
 	end
 
-JubilifeCity_EventScript_LockedHouse::
-	msgbox JubilifeCity_Text_LockedHouse, MSGBOX_SIGN
-	end
-
 JubilifeCity_Movement_GruntLeave:
-	walk_fast_up
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
@@ -156,7 +144,6 @@ JubilifeCity_Movement_Grunt2Leave:
 	step_end
 
 JubilifeCity_Movement_AssistantLeave:
-	walk_fast_up
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
@@ -241,7 +228,7 @@ JubilifeCity_Text_BarryLater:
 	.string "Hurry up!$"
 
 JubilifeCity_Text_PoketchIntro:
-	.string "The costume is the campaign.\n"
+	.string "A useful gadget for the road.\n"
 	.string "Every new TRAINER gets a POKéTCH.$"
 
 JubilifeCity_Text_ReceivedPoketch:
@@ -255,13 +242,7 @@ JubilifeCity_Text_PoketchDone:
 	.string "More apps are on the workbench.\n"
 	.string "Enjoy the clock for now!$"
 
-JubilifeCity_Text_Woman:
-	.string "The Center is west. The Mart is\n"
-	.string "east. The school is farther east.$"
 
-JubilifeCity_Text_Boy:
-	.string "JUBILIFE TV is locked today.\n"
-	.string "The POKéTCH building is open.$"
 
 JubilifeCity_Text_CitySign:
 	.string "JUBILIFE CITY\n"
@@ -273,75 +254,229 @@ JubilifeCity_Text_Route203Sign:
 
 JubilifeCity_Text_Route218Sign:
 	.string "WEST: ROUTE 218\n"
-	.string "The gate is still shut.$"
+	.string "The shore waits beyond the gate.$"
 
 JubilifeCity_Text_TvSign:
 	.string "JUBILIFE TV\n"
-	.string "The studio doors are locked.$"
+	.string "New ideas are always on the air.$"
 
-JubilifeCity_Text_LockedHouse:
-	.string "The door is locked.$"
-JubilifeCity_EventScript_PlatNpc0::
-	msgbox JubilifeCity_EventScript_PlatNpc0_Text, MSGBOX_NPC
+JubilifeCity_EventScript_NorthSign::
+	msgbox JubilifeCity_EventScript_NorthSign_Text, MSGBOX_SIGN
 	end
 
-JubilifeCity_EventScript_PlatNpc0_Text:
-	.string "These roads keep surprising me.\n"
-	.string "Every corner hides another path.$"
+JubilifeCity_EventScript_NorthSign_Text:
+	.string "NORTH: ROUTE 204\n"
+	.string "Leave room for returning travelers.$"
 
-JubilifeCity_EventScript_PlatNpc1::
-	msgbox JubilifeCity_EventScript_PlatNpc1_Text, MSGBOX_NPC
+JubilifeCity_EventScript_PoketchSign::
+	msgbox JubilifeCity_EventScript_PoketchSign_Text, MSGBOX_SIGN
 	end
 
-JubilifeCity_EventScript_PlatNpc1_Text:
-	.string "These roads keep surprising me.\n"
-	.string "Every corner hides another path.$"
+JubilifeCity_EventScript_PoketchSign_Text:
+	.string "POKéTCH COMPANY\n"
+	.string "Time for another bright idea.$"
 
-JubilifeCity_EventScript_PlatNpc2::
-	msgbox JubilifeCity_EventScript_PlatNpc2_Text, MSGBOX_NPC
+JubilifeCity_EventScript_CondoSign::
+	msgbox JubilifeCity_EventScript_CondoSign_Text, MSGBOX_SIGN
 	end
 
-JubilifeCity_EventScript_PlatNpc2_Text:
-	.string "These roads keep surprising me.\n"
-	.string "Every corner hides another path.$"
+JubilifeCity_EventScript_CondoSign_Text:
+	.string "JUBILIFE RESIDENCES\n"
+	.string "A home above the busy streets.$"
 
-JubilifeCity_EventScript_PlatNpc3::
-	msgbox JubilifeCity_EventScript_PlatNpc3_Text, MSGBOX_NPC
+JubilifeCity_EventScript_SchoolSign::
+	msgbox JubilifeCity_EventScript_SchoolSign_Text, MSGBOX_SIGN
 	end
 
-JubilifeCity_EventScript_PlatNpc3_Text:
-	.string "These roads keep surprising me.\n"
-	.string "Every corner hides another path.$"
+JubilifeCity_EventScript_SchoolSign_Text:
+	.string "TRAINERS' SCHOOL\n"
+	.string "Try a lesson before the long road.$"
 
-JubilifeCity_EventScript_PlatNpc4::
-	msgbox JubilifeCity_EventScript_PlatNpc4_Text, MSGBOX_NPC
+JubilifeCity_EventScript_GtsSign::
+	msgbox JubilifeCity_EventScript_GtsSign_Text, MSGBOX_SIGN
 	end
 
-JubilifeCity_EventScript_PlatNpc4_Text:
-	.string "These roads keep surprising me.\n"
-	.string "Every corner hides another path.$"
+JubilifeCity_EventScript_GtsSign_Text:
+	.string "GLOBAL TERMINAL\n"
+	.string "Every journey starts somewhere.$"
 
-JubilifeCity_EventScript_PlatNpc5::
-	msgbox JubilifeCity_EventScript_PlatNpc5_Text, MSGBOX_NPC
+JubilifeCity_EventScript_AceTrainerF::
+	msgbox JubilifeCity_EventScript_AceTrainerF_Text, MSGBOX_NPC
 	end
 
-JubilifeCity_EventScript_PlatNpc5_Text:
-	.string "These roads keep surprising me.\n"
-	.string "Every corner hides another path.$"
+JubilifeCity_EventScript_AceTrainerF_Text:
+	.string "I take the side streets.\n"
+	.string "There is always something to notice.$"
 
-JubilifeCity_EventScript_PlatNpc6::
-	msgbox JubilifeCity_EventScript_PlatNpc6_Text, MSGBOX_NPC
+JubilifeCity_EventScript_AceTrainerM1::
+	msgbox JubilifeCity_EventScript_AceTrainerM1_Text, MSGBOX_NPC
 	end
 
-JubilifeCity_EventScript_PlatNpc6_Text:
-	.string "These roads keep surprising me.\n"
-	.string "Every corner hides another path.$"
+JubilifeCity_EventScript_AceTrainerM1_Text:
+	.string "A busy city makes a fine place\n"
+	.string "to practice keeping your focus.$"
 
-JubilifeCity_EventScript_PlatNpc7::
-	msgbox JubilifeCity_EventScript_PlatNpc7_Text, MSGBOX_NPC
+JubilifeCity_EventScript_SchoolKid1::
+	msgbox JubilifeCity_EventScript_SchoolKid1_Text, MSGBOX_NPC
 	end
 
-JubilifeCity_EventScript_PlatNpc7_Text:
-	.string "These roads keep surprising me.\n"
-	.string "Every corner hides another path.$"
+JubilifeCity_EventScript_SchoolKid1_Text:
+	.string "I sketch the streets in my notebook.\n"
+	.string "It helps me find my way home.$"
 
+JubilifeCity_EventScript_Twin::
+	msgbox JubilifeCity_EventScript_Twin_Text, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_Twin_Text:
+	.string "These flower beds are my favorites.\n"
+	.string "I stop here on the way to school.$"
+
+JubilifeCity_EventScript_Expert1::
+	msgbox JubilifeCity_EventScript_Expert1_Text, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_Expert1_Text:
+	.string "The city grew around these roads.\n"
+	.string "Some footsteps are older than mine.$"
+
+JubilifeCity_EventScript_SchoolKid2::
+	msgbox JubilifeCity_EventScript_SchoolKid2_Text, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_SchoolKid2_Text:
+	.string "One more lap before class!\n"
+	.string "Walking helps me remember lessons.$"
+
+JubilifeCity_EventScript_Expert2::
+	msgbox JubilifeCity_EventScript_Expert2_Text, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_Expert2_Text:
+	.string "My team enjoys the city lights.\n"
+	.string "I prefer the quiet early hours.$"
+
+JubilifeCity_EventScript_AceTrainerM2::
+	msgbox JubilifeCity_EventScript_AceTrainerM2_Text, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_AceTrainerM2_Text:
+	.string "North, south, east, west...\n"
+	.string "Each road asks a different question.$"
+
+JubilifeCity_EventScript_AceTrainerM3::
+	msgbox JubilifeCity_EventScript_AceTrainerM3_Text, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_AceTrainerM3_Text:
+	.string "I rest here before heading out.\n"
+	.string "A calm start makes a good journey.$"
+
+JubilifeCity_EventScript_Clown1::
+	msgbox JubilifeCity_EventScript_Clown1_Text, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_Clown1_Text:
+	.string "A wristwatch and a bright idea!\n"
+	.string "That is my whole sales pitch.$"
+
+JubilifeCity_EventScript_Clown2::
+	msgbox JubilifeCity_EventScript_Clown2_Text, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_Clown2_Text:
+	.string "I practice my jokes between crowds.\n"
+	.string "The lamp never laughs.$"
+
+JubilifeCity_EventScript_Clown3::
+	msgbox JubilifeCity_EventScript_Clown3_Text, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_Clown3_Text:
+	.string "My shoes squeak louder than traffic.\n"
+	.string "That is useful in a big city.$"
+
+JubilifeCity_EventScript_GameKid1::
+	msgbox JubilifeCity_EventScript_GameKid1_Text, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_GameKid1_Text:
+	.string "We are comparing our team notes.\n"
+	.string "My friend always spots what I miss.$"
+
+JubilifeCity_EventScript_GameKid2::
+	msgbox JubilifeCity_EventScript_GameKid2_Text, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_GameKid2_Text:
+	.string "We trade ideas before we travel.\n"
+	.string "Two notebooks beat one.$"
+
+JubilifeCity_EventScript_Collector::
+	msgbox JubilifeCity_EventScript_Collector_Text, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_Collector_Text:
+	.string "I save little souvenirs from trips.\n"
+	.string "A pebble can hold a big memory.$"
+
+JubilifeCity_EventScript_Looker::
+	msgbox JubilifeCity_EventScript_Looker_Text, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_Looker_Text:
+	.string "I am learning the neighborhood.\n"
+	.string "Good directions save a lot of shoes.$"
+
+JubilifeCity_EventScript_Counterpart::
+	msgbox JubilifeCity_EventScript_Counterpart_Text, MSGBOX_NPC
+	end
+
+JubilifeCity_EventScript_Counterpart_Text:
+	.string "The school is west of the Center.\n"
+	.string "Take your time exploring the city.$"
+
+JubilifeCity_EventScript_FirstArrival::
+	lockall
+	call SandgemTown_EventScript_SetAssistantGfx
+	applymovement LOCALID_JUBILIFE_COUNTERPART, JubilifeCity_Movement_CounterpartGreet
+	waitmovement 0
+	applymovement LOCALID_JUBILIFE_COUNTERPART, Common_Movement_FacePlayer
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox JubilifeCity_Text_CounterpartArrival, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_JUBILIFE_COUNTERPART, JubilifeCity_Movement_CounterpartReturn
+	waitmovement 0
+	setvar VAR_JUBILIFE_ARRIVAL_STATE, 1
+	removeobject LOCALID_JUBILIFE_COUNTERPART
+	setflag FLAG_HIDE_JUBILIFE_COUNTERPART
+	releaseall
+	end
+
+JubilifeCity_Movement_CounterpartGreet:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+JubilifeCity_Movement_CounterpartReturn:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+JubilifeCity_Text_CounterpartArrival:
+	.string "Welcome to JUBILIFE CITY!\p"
+	.string "The professor asked me to go ahead\n"
+	.string "and check the north side of town.\p"
+	.string "Look around first. The TRAINERS'\n"
+	.string "SCHOOL and the Center are close by.$"

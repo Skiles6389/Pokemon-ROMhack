@@ -75,14 +75,14 @@
       "y": 12,
       "elevation": 0,
       "dest_map": "MAP_JUBILIFE_CITY",
-      "dest_warp_id": "2"
+      "dest_warp_id": "6"
     },
     {
       "x": 7,
       "y": 12,
       "elevation": 0,
       "dest_map": "MAP_JUBILIFE_CITY",
-      "dest_warp_id": "2"
+      "dest_warp_id": "6"
     }
   ],
   "coord_events": [],

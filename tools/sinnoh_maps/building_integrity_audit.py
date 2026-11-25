@@ -48,6 +48,51 @@ def load_grid(name: str):
     return grid, w, h
 
 
+# Rustboro flat-roof facades stretched to a Platinum footprint by
+# tools/mapgrid/platinum_compiler.py (@bldg). They are not fixed-size catalog
+# stamps, so validate the rectangle instead: base row with both end caps, a
+# wall/roof column at each cap, and the door-top tile above every door.
+FACADE_DOORS = {
+    # door: (door_top, base_left, base_mid, base_right, left_col, right_col)
+    0x22F: (0x227, 0x240, 0x241, 0x243, {0x238, 0x230, 0x228, 0x220}, {0x23B, 0x233, 0x22B, 0x223, 0x222, 0x22A}),
+    0x21F: (0x217, 0x21C, 0x21D, 0x21E, {0x214, 0x22C, 0x236, 0x224}, {0x216, 0x22E, 0x237, 0x226}),
+}
+
+
+def match_stretched_facade(grid, w, h, door_x, door_y) -> list[str] | None:
+    """None = not a stretched facade door; [] = valid facade; else issues."""
+    spec = FACADE_DOORS.get(grid[door_y][door_x])
+    if not spec:
+        return None
+    door_top, bl, bm, br, lcol, rcol = spec
+    row = grid[door_y]
+    x0 = door_x
+    while x0 > 0 and row[x0] != bl:
+        if row[x0] not in (bm, grid[door_y][door_x]):
+            return [f"facade base broken at ({x0},{door_y}) 0x{row[x0]:03X}"]
+        x0 -= 1
+    x1 = door_x
+    while x1 < w - 1 and row[x1] != br:
+        if row[x1] not in (bm, grid[door_y][door_x]):
+            return [f"facade base broken at ({x1},{door_y}) 0x{row[x1]:03X}"]
+        x1 += 1
+    if row[x0] != bl or row[x1] != br or x1 - x0 < 3:
+        return [f"facade at door ({door_x},{door_y}) has no base end caps"]
+    issues = []
+    for cx, allowed in ((x0, lcol), (x1, rcol)):
+        y = door_y - 1
+        n = 0
+        while y >= 0 and grid[y][cx] in allowed:
+            y -= 1
+            n += 1
+        if n < 2:
+            issues.append(f"facade edge column x={cx} above ({door_x},{door_y}) incomplete")
+    above = grid[door_y - 1][door_x] if door_y > 0 else -1
+    if n >= 3 and above != door_top and above not in (0x231, 0x22D):
+        issues.append(f"facade door ({door_x},{door_y}) missing door-top tile (got 0x{above:03X})")
+    return issues
+
+
 def match_stamp(grid, w, h, door_x, door_y, stamp) -> tuple[int, list[str]]:
     """Return (mismatch_count, issue messages). Empty issues = perfect match."""
     tiles = stamp["tiles"]
@@ -169,6 +214,13 @@ def audit_map(name: str) -> dict:
         seen_doors.add(key)
         checked += 1
         door_mt = grid[y][door_x]
+        facade = match_stretched_facade(grid, w, h, door_x, y)
+        if facade == []:
+            continue
+        if facade:
+            for msg in facade:
+                issues.append(f"({door_x},{y}) {dest}: {msg}")
+            continue
         if door_mt not in DOOR_MTS and not (
             door_x > 0 and grid[y][door_x - 1] in DOOR_MTS
         ) and not (door_x + 1 < w and grid[y][door_x + 1] in DOOR_MTS):

@@ -277,6 +277,26 @@ VERDANTURF_HOUSE_4 = {
     ],
 }
 
+
+# Birch's lab (LittlerootTown door (7,16), Petalburg secondary) re-ordered to an
+# 8-wide facade with the door third from the left, matching Sandgem's Platinum
+# lab footprint (door 2 tiles in from the west wall). Columns: west wall, door
+# bay (3), plain wall bay, chimney bay (2), east wall.
+BIRCH_LAB_W8 = {
+    "name": "birch_lab_w8",
+    "source": "LittlerootTown(reordered)",
+    "door_mt": 0x249,
+    "door_dx": 2,
+    "door_dy": 4,
+    "tiles": [
+        [0x20C, 0x20D, 0x20D, 0x20D, 0x20D, 0x242, 0x243, 0x20E],
+        [0x214, 0x215, 0x215, 0x215, 0x215, 0x24A, 0x24B, 0x216],
+        [0x214, 0x215, 0x215, 0x215, 0x215, 0x215, 0x215, 0x216],
+        [0x21E, 0x22C, 0x241, 0x22D, 0x20F, 0x20F, 0x20F, 0x21F],
+        [0x226, 0x234, 0x249, 0x235, 0x217, 0x217, 0x217, 0x227],
+    ],
+}
+
 DOOR_MAT = 0x201
 MAILBOX = 0x003
 
@@ -301,6 +321,7 @@ ALL_STAMPS = [
     PC_OLDALE, MART_OLDALE, PC_RUSTBORO, MART_RUSTBORO,
     HOUSE_RUSTBORO, CIVIC_RUSTBORO, CIVIC_RUSTBORO_WIDE, GYM_MAUVILLE, GARDEN_FENCED,
     GENERAL_HOUSE_4, GENERAL_HOUSE_5T, MAUVILLE_HOUSE_4, MAUVILLE_HOUSE_5T, VERDANTURF_HOUSE_4,
+    BIRCH_LAB_W8,
 ]
 
 

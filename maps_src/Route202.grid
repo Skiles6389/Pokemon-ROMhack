@@ -1,0 +1,48 @@
+# Route202 — Platinum-exact layout (east edge closed: no Platinum neighbour in our world)
+# Shapes derived from the Platinum layout; tiles are Emerald General + secondary metatiles.
+# Legend: T tree . grass , tall grass = path/road ~ water L ledge F fence f flowers : sand P pave
+#         S sign K shrub l lamp W walk-in exit; letters = building doors (@stamp); @bldg = stretched facade
+@compiler platinum
+@name Route202
+@layout LAYOUT_ROUTE202
+@width 32
+@height 32
+@primary gTileset_General
+@connection up MAP_JUBILIFE_CITY -32
+@connection down MAP_SANDGEM_TOWN 0
+@sign Route202_EventScript_JubilifeSign
+@sign Route202_EventScript_TrainerTips
+@sign Route202_EventScript_SandgemSign
+@grid
+TTTTTTTTTT........TTTTTTTTTTTTTT
+TTTTTTTTTT...===..TTTTTTTTTTTTTT
+TTTTTTTTTT...===..TTTTTTTTTTTTTT
+TTTTTTTTTT...===..TTTTTTTTTTTTTT
+TT,,,,,,.....===S..,,,,,..ffffTT
+TT,,,,,,.==========,,,,,======TT
+TT.,,,,,.==========,,,,,======TT
+TT,,,,,,.==========,,,,,======TT
+TT,,,,,,.===.......,,,,,...===TT
+TT,,,,,,.===.TTTTTTTT......===TT
+TTTTTTTTLLLLLTTTTTTTTLLLLLL===TT
+TTTTTTTT.....TTTTTTTT,,,,,,,,,TT
+TTTTTT.......TTTTTTTT,,,,,,,,,TT
+TTTTTT...===.ff..TTTT,,,,,,,,,TT
+TTfff....===.....TTTT,,,,,,,,,TT
+TTff.....===.....TTTT,,,,,,,,,TT
+TT.......===..S..TTTT,,,,,,,,,TT
+TT.......===.....TTTT,,,,,,,,,TT
+TT.......===.....TTTT==,,,,,,,TT
+TT,,,,TT.==============,,,,,,,TT
+TT,,,,TT.================,,,,,TT
+TT,,,,TT.================...,,TT
+TT,,,,TT.===..................TT
+TT,,,,TTLLLLLTTTTTTTTLLLLLLLLLTT
+TT,,,,TT.....TTTTTTTT.........TT
+TT,,,,,,.===..,,,,,,...S......TT
+TT,,,,,,.=====,,,,,,========..TT
+TT,,,,,,.=====,,,,,,========.fTT
+TT,,,,,,.=====,,,,,,========ffTT
+TT,,,,,,......,,,,,,.....===..TT
+TTTTTTTTTTTTTTTTTTTTTTTT.===..TT
+TTTTTTTTTTTTTTTTTTTTTTTT......TT

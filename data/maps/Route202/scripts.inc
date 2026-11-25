@@ -66,7 +66,22 @@ Route202_EventScript_AssistantLeave::
 	releaseall
 	end
 
+@ m51: north via the west tall-grass column (rows 23-24 are ledges/trees elsewhere)
 Route202_Movement_AssistantLeave:
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
 	walk_up
 	walk_up
 	walk_up
@@ -201,3 +216,27 @@ Route202_Text_LoganAfter:
 Route202_Text_JubilifeSign:
 	.string "NORTH: JUBILIFE CITY\n"
 	.string "A city that stays up late.$"
+
+Route202_EventScript_Youngster::
+	msgbox Route202_EventScript_Youngster_Text, MSGBOX_NPC
+	end
+
+Route202_EventScript_Youngster_Text:
+	.string "I count my steps through the grass.\n"
+	.string "The wild ones never keep count.$"
+
+Route202_EventScript_TrainerTips::
+	msgbox Route202_EventScript_TrainerTips_Text, MSGBOX_SIGN
+	end
+
+Route202_EventScript_TrainerTips_Text:
+	.string "Keep a spare POKé BALL handy.\n"
+	.string "A good chance can appear suddenly.$"
+
+Route202_EventScript_SandgemSign::
+	msgbox Route202_EventScript_SandgemSign_Text, MSGBOX_SIGN
+	end
+
+Route202_EventScript_SandgemSign_Text:
+	.string "SOUTH: SANDGEM TOWN\n"
+	.string "The shore is just beyond the lab.$"

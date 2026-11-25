@@ -13,6 +13,13 @@ Characters
   W walk-in forest exit warp (dark tile, @warp order)
   # R solid (becomes tree, or ledge corner beside a ledge)
   stamp letters: building door anchors declared with @stamp
+  P paved ground (city styles)  K shrub (solid)  l lamp post (solid; head drawn above)
+
+Styles (``@style``): ``mauville`` (default; General + Mauville), ``petalburg``
+(General + Petalburg: white rail fences) and ``rustboro`` (General + Rustboro:
+paved city, gray road autotile, iron fences, lamps).  ``@bldg x0 y0 x1 y1 KIND
+[door_x door_y DEST WARPID ...]`` places a stretchable Emerald facade (Rustboro
+``civic`` / ``gray``) over a rectangle, with zero or more doors on its bottom row.
 
 Outputs: data/layouts/<Map>/map.bin + border.bin, the layouts.json entry,
 and map.json connections / warp_events / sign bg_events (object events,
@@ -40,6 +47,21 @@ FENCE_L = 0x288          # post on the left half (left side of an enclosure)
 FENCE_R = 0x28A          # post on the right half (right side of an enclosure)
 BED = (0x20A, 0x20C, 0x20B, 0x20D, 0x20E, 0x20F)
 SHORE_S = 0x002
+# per-style metatiles (General primary ids unless noted)
+STYLES = {
+    "mauville": dict(path=[[0x118, 0x119, 0x11A], [0x120, 0x121, 0x122], [0x128, 0x129, 0x12A]],
+                     fence_h=FENCE_H, fence_l=FENCE_L, fence_r=FENCE_R, exit=EXIT_DARK, pave=GRASS,
+                     secondary="gTileset_Mauville"),
+    # Route 110 white rail (General primary 0x03E/0x045/0x047)
+    "petalburg": dict(path=[[0x118, 0x119, 0x11A], [0x120, 0x121, 0x122], [0x128, 0x129, 0x12A]],
+                      fence_h=0x03E, fence_l=0x045, fence_r=0x047, exit=None, pave=GRASS,
+                      secondary="gTileset_Petalburg"),
+    # Rustboro secondary: pave 0x2BB, gray road autotile, iron fence, lamp post
+    "rustboro": dict(path=[[0x2F8, 0x2F9, 0x2FA], [0x300, 0x301, 0x302], [0x308, 0x309, 0x30A]],
+                     fence_h=0x2FC, fence_l=0x319, fence_r=0x319, exit=0x282, pave=0x2BB,
+                     lamp=(0x212, 0x21A), secondary="gTileset_Rustboro"),
+}
+
 SHRUB = 0x016          # solid round shrub (beside buildings)
 TREE_BORDER = (0x1D4, 0x1D5, 0x1DC, 0x1DD)
 
@@ -62,6 +84,18 @@ STAMPS = {
     "MAUVILLE_HOUSE4": _from_catalog(_ebs.MAUVILLE_HOUSE_4),
     "MAUVILLE_HOUSE5T": _from_catalog(_ebs.MAUVILLE_HOUSE_5T),
     "VERDANTURF_HOUSE4": _from_catalog(_ebs.VERDANTURF_HOUSE_4),
+    # Petalburg secondary (Littleroot/Oldale)
+    "PETALBURG_HOUSE_A": _from_catalog(_ebs.HOUSE_PETALBURG_A),
+    "PETALBURG_HOUSE_B": _from_catalog(_ebs.HOUSE_PETALBURG_B),
+    "OLDALE_HOUSE": _from_catalog(_ebs.HOUSE_OLDALE),
+    "PC_OLDALE": _from_catalog(_ebs.PC_OLDALE),
+    "MART_OLDALE": _from_catalog(_ebs.MART_OLDALE),
+    "BIRCH_LAB_W8": _from_catalog(_ebs.BIRCH_LAB_W8),
+    # Rustboro secondary
+    "PC_RUSTBORO": _from_catalog(_ebs.PC_RUSTBORO),
+    "MART_RUSTBORO": _from_catalog(_ebs.MART_RUSTBORO),
+    "HOUSE_RUSTBORO": _from_catalog(_ebs.HOUSE_RUSTBORO),
+    "CIVIC_RUSTBORO": _from_catalog(_ebs.CIVIC_RUSTBORO),
     # Rock mound with a cave mouth (door 0x0A7, MB_NON_ANIMATED_DOOR), General primary
     "CAVE_MOUND": dict(dx=3, dy=4, door=0x0A7, t=[
         [0x068, 0x069, 0x069, 0x069, 0x069, 0x069, 0x06A],
@@ -71,7 +105,38 @@ STAMPS = {
         [0x078, 0x079, 0x079, 0x0A7, 0x079, 0x079, 0x07A]]),
 }
 
-WALKABLE = set(".,=f:W")
+WALKABLE = set(".,=f:WP")
+
+
+def stretch_facade(kind: str, w: int, h: int, doors: list[int]) -> list[list[int]]:
+    """Rustboro flat-roof facades stretched to w x h; doors = bottom-row x offsets."""
+    if kind == "civic":  # beige civic block (Rustboro school / flats)
+        tops = [[0x220] + [0x221] * (w - 3) + [0x222, 0x223],
+                [0x228] + [0x229] * (w - 3) + [0x22A, 0x22B],
+                [0x230] + [0x231] * (w - 2) + [0x233]]
+        wall = [0x238] + [(0x23A if i % 2 == 0 else 0x239) for i in range(w - 2)] + [0x23B]
+        base = [0x240] + [0x241] * (w - 2) + [0x243]
+        door_top, door = 0x227, 0x22F
+    elif kind == "gray":  # gray stone block (Rustboro flats / houses)
+        tops = [[0x224] + [0x225] * (w - 2) + [0x226],
+                [0x236] + [0x23E] * (w - 2) + [0x237],
+                [0x22C] + [0x22D] * (w - 2) + [0x22E]]
+        wall = [0x214] + [(0x242 if i % 2 == 0 else 0x215) for i in range(w - 2)] + [0x216]
+        base = [0x21C] + [0x21D] * (w - 2) + [0x21E]
+        door_top, door = 0x217, 0x21F
+    else:
+        raise SystemExit(f"unknown facade {kind}")
+    assert w >= 4 and h >= 3, (kind, w, h)
+    ntop = 3 if h >= 4 else 2
+    rows = [list(r) for r in tops[:ntop]]
+    while len(rows) < h - 1:
+        rows.append(list(wall))
+    rows.append(list(base))
+    for dx in doors:
+        rows[-1][dx] = door
+        if h - 1 > ntop:
+            rows[-2][dx] = door_top
+    return rows
 
 
 def parse(path: Path):
@@ -95,6 +160,14 @@ def parse(path: Path):
             hdr["warps"].append(dict(dest=p[1], wid=p[2]))
         elif k == "sign":
             hdr["signs"].append(p[1])
+        elif k == "bldg":
+            v = p[1:]
+            doors = [dict(x=int(v[5 + 4 * i]), y=int(v[6 + 4 * i]), dest=v[7 + 4 * i], wid=v[8 + 4 * i])
+                     for i in range((len(v) - 5) // 4)]
+            hdr.setdefault("bldgs", []).append(dict(x0=int(v[0]), y0=int(v[1]), x1=int(v[2]), y1=int(v[3]),
+                                                    kind=v[4], doors=doors))
+        elif k == "order":
+            hdr.setdefault("order", []).append(p[1])
         elif k == "connection":
             hdr["conns"].append(dict(direction=p[1], map=p[2], offset=int(p[3])))
         else:
@@ -208,6 +281,25 @@ def compile_grid(path: Path):
                         ch[Y][X] = "@" if not door else "%"
                 warps.append(dict(x=x, y=y, elevation=0, dest_map=s["dest"], dest_warp_id=str(s["wid"])))
         assert found == 1, f"{path}: stamp {s['char']} found {found} times"
+    sty = STYLES[hdr.get("style", "mauville")]
+    # 1b) stretchable facades (@bldg)
+    for b in hdr.get("bldgs", []):
+        bw, bh = b["x1"] - b["x0"] + 1, b["y1"] - b["y0"] + 1
+        dxs = [d["x"] - b["x0"] for d in b["doors"]]
+        for d in b["doors"]:
+            assert d["y"] == b["y1"], (path, b)
+        t = stretch_facade(b["kind"], bw, bh, dxs)
+        for sy in range(bh):
+            for sx in range(bw):
+                X, Y = b["x0"] + sx, b["y0"] + sy
+                door = sy == bh - 1 and sx in dxs
+                M[Y][X] = t[sy][sx]
+                C[Y][X] = 0 if door else 1
+                E[Y][X] = 0 if door else 3
+                done[Y][X] = True
+                ch[Y][X] = "%" if door else "@"
+        for d in b["doors"]:
+            warps.append(dict(x=d["x"], y=d["y"], elevation=0, dest_map=d["dest"], dest_warp_id=str(d["wid"])))
     # leftover solids: ledge corner beside a ledge, dark forest beside a walk-in
     # exit, shrub beside a building, else tree
     for y in range(H):
@@ -267,8 +359,18 @@ def compile_grid(path: Path):
             c = ch[y][x]
             if c in ". ":
                 M[y][x] = GRASS
+            elif c == "P":
+                M[y][x] = sty["pave"]
+            elif c == "l":
+                head, pole = sty.get("lamp", (None, SHRUB))
+                M[y][x] = pole
+                C[y][x] = 1
+                if head and inb(x, y - 1) and ch[y - 1][x] == "P" and not done[y - 1][x]:
+                    M[y - 1][x] = head
+                    done[y - 1][x] = True
             elif c == "W":
-                M[y][x] = EXIT_DARK
+                assert sty["exit"], f"{path}: W exits need the mauville style"
+                M[y][x] = sty["exit"]
             elif c == "X":
                 M[y][x] = EXIT_DARK
                 C[y][x] = 1
@@ -290,10 +392,10 @@ def compile_grid(path: Path):
             elif c == "F":
                 horiz = (inb(x - 1, y) and ch[y][x - 1] == "F") or (inb(x + 1, y) and ch[y][x + 1] == "F")
                 if horiz:
-                    M[y][x] = FENCE_H
+                    M[y][x] = sty["fence_h"]
                 else:
-                    inside_left = inb(x - 1, y) and ch[y][x - 1] == "b"
-                    M[y][x] = FENCE_R if inside_left else FENCE_L
+                    inside_left = inb(x - 1, y) and ch[y][x - 1] in ("b" if sty is STYLES["mauville"] else "b.,=fP:")
+                    M[y][x] = sty["fence_r"] if inside_left else sty["fence_l"]
                 C[y][x] = 1
             elif c == "=":
                 n, s_, w, e = pathc(x, y - 1), pathc(x, y + 1), pathc(x - 1, y), pathc(x + 1, y)
@@ -303,7 +405,7 @@ def compile_grid(path: Path):
                     row = 1
                 if not w and not e:
                     col = 1
-                M[y][x] = [[0x118, 0x119, 0x11A], [0x120, 0x121, 0x122], [0x128, 0x129, 0x12A]][row][col]
+                M[y][x] = sty["path"][row][col]
             elif c == "L":
                 left = inb(x - 1, y) and ch[y][x - 1] == "L"
                 right = inb(x + 1, y) and ch[y][x + 1] == "L"
@@ -364,6 +466,21 @@ def compile_grid(path: Path):
             elif ch[y][x] == "S":
                 signs.append((x, y))
     assert wi == len(hdr["warps"]), f"{path}: {wi} W tiles vs {len(hdr['warps'])} @warp lines"
+    if hdr.get("order"):
+        # keep warp ids stable for interiors: @order lists dest maps in warp-id order
+        # (a map listed twice takes its first two warps in row-major order)
+        want = list(hdr["order"])
+        rest = []
+        ordered = [None] * len(want)
+        for w_ in warps:
+            for i, d in enumerate(want):
+                if d == w_["dest_map"] and ordered[i] is None:
+                    ordered[i] = w_
+                    break
+            else:
+                rest.append(w_)
+        assert None not in ordered, f"{path}: @order entry without a warp"
+        warps = ordered + rest
     assert len(signs) == len(hdr["signs"]), f"{path}: {len(signs)} S tiles vs {len(hdr['signs'])} @sign lines"
     bg = [dict(type="sign", x=x, y=y, elevation=0, player_facing_dir="BG_EVENT_PLAYER_FACING_ANY", script=s)
           for (x, y), s in zip(signs, hdr["signs"])]
@@ -383,7 +500,7 @@ def validate(res) -> list[str]:
     for w in res["warps"]:
         if not walk[w["y"]][w["x"]]:
             fails.append(f"warp at {w['x']},{w['y']} not walkable")
-    if res["stats"]["singles"]:
+    if res["stats"]["singles"] and not res["hdr"].get("allow_singles"):
         fails.append(f"{res['stats']['singles']} single tree tiles (bush fallback)")
     # every walkable tile reachable from a warp or a connection edge
     seeds = [(w["x"], w["y"]) for w in res["warps"]]
@@ -443,7 +560,7 @@ def write(res) -> None:
         ent = dict(id=hdr["layout"], name=name + "_Layout", layout_version="emerald")
         J["layouts"].append(ent)
     ent.update(width=W, height=H, primary_tileset=hdr.get("primary", "gTileset_General"),
-               secondary_tileset=hdr.get("secondary", "gTileset_Mauville"),
+               secondary_tileset=hdr.get("secondary", STYLES[hdr.get("style", "mauville")]["secondary"]),
                border_filepath=f"data/layouts/{name}/border.bin",
                blockdata_filepath=f"data/layouts/{name}/map.bin")
     lj.write_text(json.dumps(J, indent=2) + "\n")

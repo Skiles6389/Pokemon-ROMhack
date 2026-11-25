@@ -25,6 +25,10 @@ from tools.sinnoh_maps.sinnoh_build_lib import (  # noqa: E402
 )
 
 LAYOUTS = REPO / "data" / "layouts"
+# Rustboro: road autotile 0x2F8-0x30A, facade doors 0x21F/0x22F, dark gate doorway 0x282.
+SECONDARY_WALKABLE = {
+    "gTileset_Rustboro": {0x2F8, 0x2F9, 0x2FA, 0x300, 0x301, 0x302, 0x308, 0x309, 0x30A, 0x21F, 0x22F, 0x282},
+}
 LAYOUTS_JSON = {L["name"].replace("_Layout", ""): L for L in json.loads((LAYOUTS / "layouts.json").read_text())["layouts"]}
 
 
@@ -44,13 +48,15 @@ def audit_one(name: str) -> dict:
     hi = sum(1 for i in range(n) if struct.unpack_from("<H", data, i * 2)[0] & 0xFC00)
     strip_rate = 1.0 - hi / n
 
-    # Engine collision vs metatile-ID heuristic
+    # Engine collision vs metatile-ID heuristic. Secondary-specific walkables the
+    # global heuristic can't know about (same IDs are walls in other secondaries).
+    sec_walk = SECONDARY_WALKABLE.get(meta.get("secondary_tileset", ""), set())
     solid_id_walkable_coll = 0
     walkable_bad_elev = 0
     for i in range(n):
         v = struct.unpack_from("<H", data, i * 2)[0]
         mt, coll, elev = v & 0x3FF, (v >> 10) & 3, (v >> 12) & 0xF
-        if is_solid_metatile(mt) and coll == 0:
+        if is_solid_metatile(mt) and coll == 0 and mt not in sec_walk:
             solid_id_walkable_coll += 1
         if coll == 0 and elev == 0 and mt not in (0,):
             walkable_bad_elev += 1
