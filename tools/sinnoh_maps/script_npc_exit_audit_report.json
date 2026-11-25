@@ -405,10 +405,36 @@
       "flag": "FLAG_HIDE_CANALAVE_CITY_PROF_ROWAN",
       "local_id": "LOCALID_CANALAVE_CITY_PROF_ROWAN",
       "status": "PASS"
+    },
+    {
+      "map": "LakeVerity",
+      "role": "Team Galactic (Mars revisit)",
+      "check": "appears_too_early",
+      "hide_flag": "FLAG_HIDE_LAKE_VERITY_TEAM_GALACTIC",
+      "status": "PASS",
+      "issue": null
+    },
+    {
+      "map": "LakeAcuity",
+      "role": "Commander Jupiter",
+      "check": "appears_too_early",
+      "hide_flag": "FLAG_HIDE_LAKE_ACUITY_JUPITER",
+      "status": "PASS",
+      "issue": null
+    },
+    {
+      "map": "LakeValor_Drained",
+      "role": "Saturn + Galactic",
+      "check": "appears_too_early",
+      "hide_flag": null,
+      "status": "PASS",
+      "issue": null
     }
   ],
-  "pass": 58,
+  "pass": 61,
   "fail": 0,
   "deferred": 0,
-  "count_fail": 0
+  "count_fail": 0,
+  "appear_too_early_pass": 3,
+  "appear_too_early_fail": 0
 }

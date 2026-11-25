@@ -1267,7 +1267,7 @@
 #define FLAG_HIDE_SANDGEM_ASSISTANT                                 0x4BB // Sinnoh: Dawn/Lucas leaves after Sandgem tour
 #define FLAG_HIDE_LAKE_VALOR_SATURN                                 0x4BC // Sinnoh: Saturn leaves Lake Valor after defeat
 #define FLAG_HIDE_LAKE_VALOR_GRUNTS                                 0x4BD // Sinnoh: Galactic grunts leave Lake Valor with Saturn
-#define FLAG_HIDE_LAKE_ACUITY_JUPITER                               0x4BE // Sinnoh: Jupiter leaves Lake Acuity after defeat
+#define FLAG_HIDE_LAKE_ACUITY_JUPITER                               0x4BE // Sinnoh: Jupiter hidden until lakes arc; set again after defeat
 #define FLAG_HIDE_SPEAR_PILLAR_CYRUS                                0x4BF // Sinnoh: Cyrus leaves Spear Pillar after defeat
 #define FLAG_HIDE_SPEAR_PILLAR_DISTORTED_CYRUS                      0x4C0 // Sinnoh: Cyrus leaves Distorted Spear Pillar
 #define FLAG_GOT_ROUTE210_SECRET_POTION                             0x4C1 // Sinnoh: Cafe Cabin tonic for Route 210 Psyduck
@@ -1279,7 +1279,7 @@
 #define FLAG_HIDE_CANALAVE_CITY_PROF_ROWAN                          0x4C7 // Sinnoh: Rowan leaves Canalave street
 #define FLAG_HIDE_SPEAR_PILLAR_SUPPORT                              0x4C8 // Sinnoh: Mars/Jupiter/Barry/grunts leave with Cyrus
 #define FLAG_HIDE_SPEAR_PILLAR_LOOKER                               0x4C9 // Sinnoh: Looker leaves after Distorted scene
-#define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
+#define FLAG_HIDE_LAKE_VERITY_TEAM_GALACTIC                         0x4CA // Sinnoh: Mars/grunts hidden until after Saturn at Valor
 #define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
 #define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
 #define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag

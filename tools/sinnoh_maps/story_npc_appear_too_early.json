@@ -1,0 +1,33 @@
+{
+  "_comment": "Galactic/commander (and similar) objects that must stay hidden until a later story beat. appear_after_flag must be clearflag'd somewhere; hide_flag must be setflag'd on new game.",
+  "entries": [
+    {
+      "map": "LakeVerity",
+      "role": "Team Galactic (Mars revisit)",
+      "graphics": ["OBJ_EVENT_GFX_MAGMA_MEMBER_M", "OBJ_EVENT_GFX_MAGMA_MEMBER_F", "OBJ_EVENT_GFX_MAXIE", "OBJ_EVENT_GFX_ARCHIE"],
+      "script_substr": ["GALACTIC", "MARS"],
+      "hide_flag": "FLAG_HIDE_LAKE_VERITY_TEAM_GALACTIC",
+      "appear_after_clearflag": "FLAG_HIDE_LAKE_VERITY_TEAM_GALACTIC",
+      "appear_after_note": "Cleared after Saturn at Lake Valor (Platinum lakes arc)"
+    },
+    {
+      "map": "LakeAcuity",
+      "role": "Commander Jupiter",
+      "graphics": ["OBJ_EVENT_GFX_ARCHIE", "OBJ_EVENT_GFX_MAXIE"],
+      "script_substr": ["JUPITER"],
+      "hide_flag": "FLAG_HIDE_LAKE_ACUITY_JUPITER",
+      "appear_after_clearflag": "FLAG_HIDE_LAKE_ACUITY_JUPITER",
+      "appear_after_note": "Cleared after Saturn; set again when Jupiter leaves"
+    },
+    {
+      "map": "LakeValor_Drained",
+      "role": "Saturn + Galactic",
+      "graphics": ["OBJ_EVENT_GFX_AQUA_MEMBER_M", "OBJ_EVENT_GFX_AQUA_MEMBER_F", "OBJ_EVENT_GFX_MAXIE", "OBJ_EVENT_GFX_ARCHIE"],
+      "script_substr": ["SATURN", "Grunt", "GALACTIC"],
+      "hide_flag": null,
+      "map_gated_by": "FLAG_LAKE_VALOR_DRAINED",
+      "map_gated_note": "Drained map only reachable after Byron (Canalave) sets FLAG_LAKE_VALOR_DRAINED",
+      "exit_hide_flags": ["FLAG_HIDE_LAKE_VALOR_SATURN", "FLAG_HIDE_LAKE_VALOR_GRUNTS"]
+    }
+  ]
+}

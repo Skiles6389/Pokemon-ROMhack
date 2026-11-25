@@ -284,6 +284,10 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_LAKE_VERITY_ROWAN
 	setflag FLAG_HIDE_LAKE_VERITY_ASSISTANT
 	setflag FLAG_HIDE_LAKE_VERITY_BRIEFCASE
+	@ Mars/grunts at Lake Verity appear only after Saturn at Lake Valor (Platinum).
+	setflag FLAG_HIDE_LAKE_VERITY_TEAM_GALACTIC
+	@ Jupiter at Lake Acuity appears after the lakes arc unlocks (cleared after Saturn).
+	setflag FLAG_HIDE_LAKE_ACUITY_JUPITER
 	setflag FLAG_HIDE_SANDGEM_BARRY
 	setflag FLAG_HIDE_SANDGEM_LAB_ASSISTANT
 	setflag FLAG_HIDE_JUBILIFE_BARRY
