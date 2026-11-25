@@ -524,7 +524,10 @@ void StartWallyTutorialBattle(void)
 
 void StartRoute202CatchTutorial(void)
 {
-    CreateMaleMon(&gParties[B_TRAINER_OPPONENT_A][0], SPECIES_BIDOOF, 2);
+    // Fixed species/level — never remapped by wild randomizer or level scaling.
+    // Level matches Wally's Ralts so a Tackle-only Zigzagoon cannot OHKO if attacks run.
+    ZeroEnemyPartyMons();
+    CreateMaleMon(&gParties[B_TRAINER_OPPONENT_A][0], SPECIES_BIDOOF, 5);
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_ReturnToFieldContinueScriptPlayMapMusic;
     gBattleTypeFlags = BATTLE_TYPE_CATCH_TUTORIAL;
@@ -537,7 +540,7 @@ static const u8 sText_CatchTutorialOldMan[] = _("The old man");
 static const u8 sText_WhatWillDawnDo[] = _("What will\nDAWN do?");
 static const u8 sText_WhatWillLucasDo[] = _("What will\nLUCAS do?");
 
-static bool8 IsRoute202CatchTutorial(void)
+bool8 IsRoute202CatchTutorial(void)
 {
     return VarGet(VAR_ROUTE202_STATE) == 1;
 }

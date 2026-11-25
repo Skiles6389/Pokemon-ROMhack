@@ -87,6 +87,7 @@ void BattleSetup_StartBattlePikeWildBattle(void);
 void BattleSetup_StartRoamerBattle(void);
 void StartWallyTutorialBattle(void);
 void StartRoute202CatchTutorial(void);
+bool8 IsRoute202CatchTutorial(void);
 u16 GetCatchTutorialTrainerPic(void);
 const u8 *GetCatchTutorialTrainerName(void);
 const u8 *GetCatchTutorialActionPrompt(void);

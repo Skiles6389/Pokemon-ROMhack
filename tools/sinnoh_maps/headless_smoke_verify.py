@@ -42,6 +42,7 @@ def run_audit() -> None:
         "collision_audit.py",
         "visual_object_audit.py",
         "script_npc_exit_audit.py",
+        "catch_tutorial_verify.py",
     ):
         script = REPO / "tools" / "sinnoh_maps" / name
         if not script.exists():
