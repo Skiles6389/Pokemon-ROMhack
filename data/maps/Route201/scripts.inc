@@ -27,8 +27,12 @@ Route201_EventScript_SetDawnGfx::
 	return
 
 Route201_OnFrame:
-	map_script_2 VAR_ROUTE201_STATE, 2, Route201_EventScript_RowanArrives
 	.2byte 0
+
+@ Fired from east-path coord triggers only (var gate = state 2).
+Route201_EventScript_RowanArrivesTrigger::
+	goto Route201_EventScript_RowanArrives
+	end
 
 Route201_EventScript_BarryMeet::
 	lockall
@@ -46,9 +50,19 @@ Route201_EventScript_BarryMeet::
 	waitmovement 0
 	msgbox Route201_Text_BarryMeet, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_ROUTE201_BARRY, Route201_Movement_BarryLeads
+	@ Lead onto the clear west corridor (x→0,y=22), then land on the matching
+	@ VerityLakefront east-path tile (seamless Route201 connection twin). Never
+	@ warp into trees — lakefront path runs to the Lake Verity cave mouth.
+	fadescreen FADE_TO_BLACK
+	setobjectxy OBJ_EVENT_ID_PLAYER, 4, 22
+	setobjectxyperm LOCALID_ROUTE201_BARRY, 5, 22
+	addobject LOCALID_ROUTE201_BARRY
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	applymovement LOCALID_ROUTE201_BARRY, Common_Movement_FaceLeft
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Route201_Movement_PlayerFollows
+	fadescreen FADE_FROM_BLACK
+	applymovement LOCALID_ROUTE201_BARRY, Route201_Movement_BarryLeadsWest
+	applymovement OBJ_EVENT_ID_PLAYER, Route201_Movement_PlayerFollowsWest
 	waitmovement 0
 	removeobject LOCALID_ROUTE201_BARRY
 	setflag FLAG_HIDE_ROUTE201_BARRY
@@ -57,7 +71,8 @@ Route201_EventScript_BarryMeet::
 	clearflag FLAG_HIDE_LAKE_VERITY_ASSISTANT
 	clearflag FLAG_HIDE_LAKE_VERITY_BRIEFCASE
 	setvar VAR_ROUTE201_STATE, 1
-	warpsilent MAP_LAKE_VERITY, 46, 20
+	@ Route201 (0,22) connects to VerityLakefront (31,11); land one tile in on grass.
+	warpsilent MAP_VERITY_LAKEFRONT, 30, 11
 	waitstate
 	releaseall
 	end
@@ -68,23 +83,24 @@ Route201_EventScript_PlayerStepLeft:
 	return
 
 Route201_EventScript_RowanArrives::
-	@ State 2: player walked back from Lake Verity; Rowan notes the connection, then Barry battles.
+	@ State 2: east-path meetup. Fixed clear corridor (y=12, x=42+) — never through trees.
 	lockall
-	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	@ Place the group east of the player on the same path row, then walk them over.
-	copyvar VAR_TEMP_2, VAR_TEMP_0
-	addvar VAR_TEMP_2, 5
-	setobjectxyperm LOCALID_ROUTE201_ROWAN, VAR_TEMP_2, VAR_TEMP_1
-	addvar VAR_TEMP_2, 1
-	setobjectxyperm LOCALID_ROUTE201_ASSISTANT, VAR_TEMP_2, VAR_TEMP_1
-	addvar VAR_TEMP_2, 1
-	setobjectxyperm LOCALID_ROUTE201_BARRY, VAR_TEMP_2, VAR_TEMP_1
+	fadescreen FADE_TO_BLACK
+	@ Snap the player onto the clear path tile in front of the group.
+	setobjectxy OBJ_EVENT_ID_PLAYER, 42, 12
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	@ Spawn on grass/path east of the player (coll=0 the whole way to the map edge).
+	setobjectxyperm LOCALID_ROUTE201_ROWAN, 47, 12
+	setobjectxyperm LOCALID_ROUTE201_ASSISTANT, 48, 12
+	setobjectxyperm LOCALID_ROUTE201_BARRY, 49, 12
 	clearflag FLAG_HIDE_ROUTE201_ROWAN
 	clearflag FLAG_HIDE_ROUTE201_ASSISTANT
 	clearflag FLAG_HIDE_ROUTE201_BARRY
 	addobject LOCALID_ROUTE201_ROWAN
 	addobject LOCALID_ROUTE201_ASSISTANT
 	addobject LOCALID_ROUTE201_BARRY
+	fadescreen FADE_FROM_BLACK
 	applymovement LOCALID_ROUTE201_ROWAN, Route201_Movement_RowanApproach
 	applymovement LOCALID_ROUTE201_ASSISTANT, Route201_Movement_AssistantApproach
 	applymovement LOCALID_ROUTE201_BARRY, Route201_Movement_BarryApproachMeetup
@@ -145,11 +161,28 @@ Route201_EventScript_BattleTurtwig::
 	end
 
 Route201_EventScript_AfterBattle::
-	@ Same post-script for win and loss (Platinum). Heal so a loss is not a softlock.
+	@ Story continues on win OR loss; dialogue must match the real outcome.
 	clearflag FLAG_TEMP_5
 	special HealPlayerParty
 	fadescreen FADE_FROM_BLACK
-	msgbox Route201_Text_BarryAfter, MSGBOX_DEFAULT
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route201_EventScript_AfterBattleWon
+	goto_if_eq VAR_RESULT, B_OUTCOME_LOST, Route201_EventScript_AfterBattleLost
+	@ Drew / other — keep story moving with the loss-side line.
+	goto Route201_EventScript_AfterBattleLost
+	end
+
+Route201_EventScript_AfterBattleWon::
+	msgbox Route201_Text_BarryAfterWin, MSGBOX_DEFAULT
+	goto Route201_EventScript_AfterBattleContinue
+	end
+
+Route201_EventScript_AfterBattleLost::
+	msgbox Route201_Text_BarryAfterLoss, MSGBOX_DEFAULT
+	goto Route201_EventScript_AfterBattleContinue
+	end
+
+Route201_EventScript_AfterBattleContinue::
 	closemessage
 	applymovement LOCALID_ROUTE201_BARRY, Route201_Movement_PartyLeavesEast
 	applymovement LOCALID_ROUTE201_ASSISTANT, Route201_Movement_PartyLeavesEast
@@ -284,12 +317,30 @@ Route201_Movement_PlayerFollows:
 	walk_fast_up
 	step_end
 
+@ From (5,22)/(4,22) on the clear west corridor → walk to the map edge.
+Route201_Movement_BarryLeadsWest:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	face_left
+	step_end
+
+Route201_Movement_PlayerFollowsWest:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
+
 Route201_Movement_Approach:
 	walk_right
 	walk_right
 	face_right
 	step_end
 
+@ Approach: (47/48/49,12) → three steps west on open path toward player at (42,12).
 Route201_Movement_RowanApproach:
 	walk_left
 	walk_left
@@ -313,21 +364,32 @@ Route201_Movement_BarryApproachMeetup:
 	face_left
 	step_end
 
+@ Leave east along y=12 clear corridor (x=42..63 open) — enough steps to exit the map.
 Route201_Movement_PartyLeavesEast:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
 	step_end
 
 Route201_Text_BarryMeet:
 	.string "BARRY: {PLAYER}! You made it!\p"
 	.string "The lake is just west of here.\n"
 	.string "I saw the Professor go that way.\p"
-	.string "Come on, I'll go with you.\n"
-	.string "Don't fall behind!$"
+	.string "We'll cut across the lakefront and\n"
+	.string "head straight in. Don't fall behind!$"
 
 Route201_Text_RowanConnectionDawn:
 	.string "ROWAN: Ah, {PLAYER}.\p"
@@ -362,11 +424,17 @@ Route201_Text_BarryRematch:
 	.string "BARRY: You're back! I still haven't\n"
 	.string "lost for real. One more time!$"
 
-Route201_Text_BarryAfter:
+Route201_Text_BarryAfterWin:
 	.string "BARRY: Augh! Fine! Next time I'll\n"
 	.string "be way stronger.\p"
 	.string "Sandgem is east of here.\n"
 	.string "Visit the lab--and race you there!$"
+
+Route201_Text_BarryAfterLoss:
+	.string "BARRY: Hah! Told you I had the\n"
+	.string "advantage!\p"
+	.string "Don't look so sour. Sandgem is east.\n"
+	.string "Visit the lab--I'll still race you!$"
 
 Route201_Text_GrassUnsafe:
 	.string "The tall grass rustles.\p"

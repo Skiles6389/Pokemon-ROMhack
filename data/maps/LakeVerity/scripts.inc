@@ -112,33 +112,45 @@ LakeVerity_EventScript_ChooseStarter::
 	end
 
 LakeVerity_EventScript_ConfirmTurtwig::
-	showmonpic SPECIES_TURTWIG, 10, 3
-	msgbox LakeVerity_Text_ConfirmTurtwig, MSGBOX_YESNO
+	setvar VAR_0x8004, SPECIES_TURTWIG
+	special Randomizer_PreviewStarterSpecies
+	showmonpic VAR_0x8005, 10, 3
+	playmoncry VAR_0x8005, CRY_MODE_NORMAL
+	waitmoncry
+	bufferspeciesname STR_VAR_1, VAR_0x8005
+	msgbox LakeVerity_Text_ConfirmStarter, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, LakeVerity_EventScript_DeclineStarter
 	hidemonpic
-	bufferspeciesname STR_VAR_1, SPECIES_TURTWIG
 	givemon SPECIES_TURTWIG, 5, ITEM_NONE
 	setvar VAR_ROUTE201_BARRY_MON, BARRY_MON_CHIMCHAR
 	goto LakeVerity_EventScript_GotStarter
 	end
 
 LakeVerity_EventScript_ConfirmChimchar::
-	showmonpic SPECIES_CHIMCHAR, 10, 3
-	msgbox LakeVerity_Text_ConfirmChimchar, MSGBOX_YESNO
+	setvar VAR_0x8004, SPECIES_CHIMCHAR
+	special Randomizer_PreviewStarterSpecies
+	showmonpic VAR_0x8005, 10, 3
+	playmoncry VAR_0x8005, CRY_MODE_NORMAL
+	waitmoncry
+	bufferspeciesname STR_VAR_1, VAR_0x8005
+	msgbox LakeVerity_Text_ConfirmStarter, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, LakeVerity_EventScript_DeclineStarter
 	hidemonpic
-	bufferspeciesname STR_VAR_1, SPECIES_CHIMCHAR
 	givemon SPECIES_CHIMCHAR, 5, ITEM_NONE
 	setvar VAR_ROUTE201_BARRY_MON, BARRY_MON_PIPLUP
 	goto LakeVerity_EventScript_GotStarter
 	end
 
 LakeVerity_EventScript_ConfirmPiplup::
-	showmonpic SPECIES_PIPLUP, 10, 3
-	msgbox LakeVerity_Text_ConfirmPiplup, MSGBOX_YESNO
+	setvar VAR_0x8004, SPECIES_PIPLUP
+	special Randomizer_PreviewStarterSpecies
+	showmonpic VAR_0x8005, 10, 3
+	playmoncry VAR_0x8005, CRY_MODE_NORMAL
+	waitmoncry
+	bufferspeciesname STR_VAR_1, VAR_0x8005
+	msgbox LakeVerity_Text_ConfirmStarter, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, LakeVerity_EventScript_DeclineStarter
 	hidemonpic
-	bufferspeciesname STR_VAR_1, SPECIES_PIPLUP
 	givemon SPECIES_PIPLUP, 5, ITEM_NONE
 	setvar VAR_ROUTE201_BARRY_MON, BARRY_MON_TURTWIG
 	goto LakeVerity_EventScript_GotStarter
@@ -353,7 +365,13 @@ LakeVerity_Movement_BarryToCase:
 	face_up
 	step_end
 
+@ Barry is at (50,14) after the Starly/case beat; x=50 hits rock south of y=17.
+@ Sidestep onto the open x=48 column, then exit south off the map.
 LakeVerity_Movement_BarryLeaves:
+	walk_left
+	walk_left
+	walk_down
+	walk_down
 	walk_down
 	walk_down
 	walk_down
@@ -463,17 +481,9 @@ LakeVerity_Text_MenuChimchar:
 LakeVerity_Text_MenuPiplup:
 	.string "PIPLUP$"
 
-LakeVerity_Text_ConfirmTurtwig:
-	.string "The Grass-type TURTWIG looks ready.\n"
-	.string "Take this one?$"
-
-LakeVerity_Text_ConfirmChimchar:
-	.string "The Fire-type CHIMCHAR won't stay\n"
-	.string "still. Take this one?$"
-
-LakeVerity_Text_ConfirmPiplup:
-	.string "The Water-type PIPLUP stands proud.\n"
-	.string "Take this one?$"
+LakeVerity_Text_ConfirmStarter:
+	.string "It's {STR_VAR_1}!\n"
+	.string "Take this POKéMON?$"
 
 LakeVerity_Text_TakeYourTime:
 	.string "BARRY: Pick one already!\n"

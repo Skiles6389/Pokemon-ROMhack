@@ -161,13 +161,19 @@ SandgemTown_EventScript_AssistantLeave::
 	releaseall
 	end
 
+@ After the mart stop (~x=26,y=11), leave on grass — never walk_up into the mart facade.
 SandgemTown_Movement_AssistantLeave:
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 SandgemTown_EventScript_Barry::
@@ -344,7 +350,8 @@ SandgemTown_Text_Route202Sign:
 
 SandgemTown_Text_Route219Sign:
 	.string "SOUTH: ROUTE 219\n"
-	.string "The beach path is closed for now.$"
+	.string "Beach overlook - the surf path is\l"
+	.string "not open from this side yet.$"
 SandgemTown_EventScript_PlatNpc1::
 	msgbox SandgemTown_EventScript_PlatNpc1_Text, MSGBOX_NPC
 	end

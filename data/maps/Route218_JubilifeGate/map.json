@@ -36,14 +36,14 @@
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_JUBILIFE_CITY",
-      "dest_warp_id": "10"
+      "dest_warp_id": "3"
     },
     {
       "x": 2,
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_JUBILIFE_CITY",
-      "dest_warp_id": "11"
+      "dest_warp_id": "3"
     },
     {
       "x": 12,

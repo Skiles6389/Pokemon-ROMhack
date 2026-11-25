@@ -6,5 +6,4 @@ VerityLakefront_EventScript_Sign::
 	end
 
 VerityLakefront_Text_Sign:
-	.string "NORTH: LAKE VERITY\n"
-	.string "Please keep the shoreline quiet.$"
+	.string "Lake Verity ahead.$"

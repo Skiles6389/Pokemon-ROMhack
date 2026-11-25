@@ -51,7 +51,7 @@ ROUTE = [
 
 
 def check_barry1_continue_on_loss() -> list[str]:
-    """Win AND lose must share AfterBattle; no OnFrame rematch softlock."""
+    """Win AND lose must share AfterBattle; distinct outcome lines; no rematch softlock."""
     fails: list[str] = []
     text = (MAPS / "Route201" / "scripts.inc").read_text()
     for needle in (
@@ -62,6 +62,11 @@ def check_barry1_continue_on_loss() -> list[str]:
         "fadescreen FADE_FROM_BLACK",
         "setflag FLAG_HIDE_ROUTE201_BARRY",
         "setvar VAR_ROUTE201_STATE, 4",
+        "specialvar VAR_RESULT, GetBattleOutcome",
+        "B_OUTCOME_WON",
+        "B_OUTCOME_LOST",
+        "Route201_Text_BarryAfterWin",
+        "Route201_Text_BarryAfterLoss",
     ):
         if needle not in text:
             fails.append(f"Barry1 missing {needle}")

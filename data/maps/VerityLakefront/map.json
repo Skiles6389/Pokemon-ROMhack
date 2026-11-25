@@ -16,11 +16,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_LAKE_VERITY",
-      "offset": -30,
-      "direction": "up"
-    },
-    {
       "map": "MAP_ROUTE201",
       "offset": -11,
       "direction": "right"
@@ -29,26 +24,26 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 0,
-      "y": 2,
+      "x": 5,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_LAKE_VERITY",
       "dest_warp_id": "0"
     },
     {
-      "x": 1,
-      "y": 2,
+      "x": 6,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_LAKE_VERITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
-      "x": 15,
-      "y": 3,
+      "x": 8,
+      "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "VerityLakefront_EventScript_Sign"

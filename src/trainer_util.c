@@ -45,20 +45,23 @@ static void CustomTrainerPartyAssignMoves(struct Pokemon *mon, const struct Trai
 u32 GeneratePersonalityForGender(u32 gender, u32 species, u32 genderRng)
 {
     const struct SpeciesInfo *speciesInfo = &gSpeciesInfo[species];
+    // Soft recovery: never crash on gender mismatch (trainer randomizer can remap a
+    // forced-(M) mon onto Regieleki etc.). Demo/debug must keep playing.
     if (gender == MON_MALE)
     {
-        assertf(speciesInfo->genderRatio < MON_FEMALE, "species %d cannot be male", species);
+        if (speciesInfo->genderRatio >= MON_FEMALE)
+            return genderRng & 0xFF; // genderless / female-only
         return speciesInfo->genderRatio + (genderRng % (256 - speciesInfo->genderRatio));
     }
     if (gender == MON_FEMALE)
     {
-        assertf(speciesInfo->genderRatio != MON_MALE && speciesInfo->genderRatio != MON_GENDERLESS, "species %d cannot be female", species);
+        if (speciesInfo->genderRatio == MON_MALE || speciesInfo->genderRatio == MON_GENDERLESS)
+            return genderRng & 0xFF;
         return genderRng % speciesInfo->genderRatio;
     }
     if (gender == MON_GENDERLESS)
-        assertf(speciesInfo->genderRatio == MON_GENDERLESS, "species %d cannot be genderless", species);
-    else
-        errorf("GeneratePersonalityForGender called with invalid gender value %d", gender);
+        return 0;
+    errorf("GeneratePersonalityForGender called with invalid gender value %d", gender);
     return 0;
 }
 
@@ -133,14 +136,32 @@ void GenerateMonFromTrainerMon(struct Pokemon *mon, const struct TrainerMon *tra
     bool32 remapped = (species != trainerMon->species);
     u32 personality = (LocalRandom32(&trainer->localRngState) & 0xFFFFDF00) + 0x1000;
     u32 genderValue = LocalRandom32(&trainer->localRngState);
-    if (trainerMon->gender == TRAINER_MON_RANDOM_GENDER)
+    // Remapped species may be genderless / opposite-locked vs the party template's
+    // forced (M)/(F). Drop to random gender so GeneratePersonalityForGender never asserts.
+    u32 forcedGender = remapped ? TRAINER_MON_RANDOM_GENDER : trainerMon->gender;
+    if (forcedGender == TRAINER_MON_RANDOM_GENDER)
+    {
         genderValue = genderValue & 0x000000FF;
-    else if (trainerMon->gender == TRAINER_MON_MALE)
-        genderValue = GeneratePersonalityForGender(MON_MALE, species, genderValue);
-    else if (trainerMon->gender == TRAINER_MON_FEMALE)
-        genderValue = GeneratePersonalityForGender(MON_FEMALE, species, genderValue);
+    }
+    else if (forcedGender == TRAINER_MON_MALE)
+    {
+        if (gSpeciesInfo[species].genderRatio >= MON_FEMALE)
+            genderValue = genderValue & 0x000000FF;
+        else
+            genderValue = GeneratePersonalityForGender(MON_MALE, species, genderValue);
+    }
+    else if (forcedGender == TRAINER_MON_FEMALE)
+    {
+        if (gSpeciesInfo[species].genderRatio == MON_MALE
+            || gSpeciesInfo[species].genderRatio == MON_GENDERLESS)
+            genderValue = genderValue & 0x000000FF;
+        else
+            genderValue = GeneratePersonalityForGender(MON_FEMALE, species, genderValue);
+    }
     else
+    {
         errorf("Unkwown trainer mon gender value %d", trainerMon->gender);
+    }
     personality |= genderValue;
     ModifyPersonalityForNature(&personality, trainerMon->nature);
     CreateMon(mon, species, trainerMon->lvl, personality, trainer->otID);
