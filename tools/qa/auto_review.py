@@ -14,6 +14,8 @@ AUDITS = [
     ("visual_object_audit.py", "visual"),
     ("collision_audit.py", "collision"),
     ("city_door_warp_audit.py", "city_door_warp"),
+    ("tileset_consistency_check.py", "tileset_consistency"),
+    ("sign_script_audit.py", "sign_script"),
 ]
 
 
@@ -28,10 +30,11 @@ def run_audit(script: str) -> dict:
     if report_path.exists():
         data = json.loads(report_path.read_text())
     fails = [x for x in data.get("results", []) if x.get("status") == "FAIL"]
+    fail = data.get("fail", len(fails)) if data else int(r.returncode != 0)  # report-less audits: exit code
     return {
         "script": script,
         "exit": r.returncode,
-        "fail": data.get("fail", len(fails)),
+        "fail": fail,
         "warn": data.get("warn", 0),
         "fails": fails[:40],
         "stdout_tail": (r.stdout or "")[-1500:],

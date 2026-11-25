@@ -25,7 +25,8 @@ from tools.sinnoh_maps.sinnoh_build_lib import (  # noqa: E402
 )
 
 LAYOUTS = REPO / "data" / "layouts"
-# Rustboro: road autotile 0x2F8-0x30A, facade doors 0x21F/0x22F, dark gate doorway 0x282.
+# Rustboro: legacy pale-blue lane 0x2F8-0x30A (m52 roads use 0x2C3, walkable via sinnoh_build_lib),
+# facade doors 0x21F/0x22F, dark gate doorway 0x282.
 SECONDARY_WALKABLE = {
     "gTileset_Rustboro": {0x2F8, 0x2F9, 0x2FA, 0x300, 0x301, 0x302, 0x308, 0x309, 0x30A, 0x21F, 0x22F, 0x282},
 }

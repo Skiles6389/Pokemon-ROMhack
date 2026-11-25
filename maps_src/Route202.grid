@@ -8,6 +8,9 @@
 @width 32
 @height 32
 @primary gTileset_General
+# Route 202 only uses General (primary) metatiles; Rustboro secondary so the Jubilife
+# strip seen from the route is drawn with the right tiles (tileset_consistency_check seam).
+@secondary gTileset_Rustboro
 @connection up MAP_JUBILIFE_CITY -32
 @connection down MAP_SANDGEM_TOWN 0
 @sign Route202_EventScript_JubilifeSign
