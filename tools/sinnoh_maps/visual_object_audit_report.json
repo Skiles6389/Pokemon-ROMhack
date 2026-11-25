@@ -2,9 +2,9 @@
   "results": [
     {
       "name": "AcuityLakefront",
-      "status": "WARN",
+      "status": "PASS",
       "incomplete_trees": 0,
-      "isolated_rocks": 2,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 64,
       "em_ledges": 0,
@@ -15,28 +15,25 @@
       "plat_paths": 311,
       "path_coverage": 1.174,
       "signs": 0,
-      "issues": [
-        "isolated cliff/rock tiles: 2"
-      ]
+      "issues": []
     },
     {
       "name": "CanalaveCity",
       "status": "WARN",
       "incomplete_trees": 0,
-      "isolated_rocks": 3,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 167,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 1111,
+      "em_paths": 1027,
       "em_sand": 0,
       "plat_paths": 30,
-      "path_coverage": 37.033,
+      "path_coverage": 34.233,
       "signs": 0,
       "issues": [
-        "isolated cliff/rock tiles: 3",
-        "oversized paths: Emerald 1111 vs Platinum 30 (37.0x)"
+        "oversized paths: Emerald 1027 vs Platinum 30 (34.2x)"
       ]
     },
     {
@@ -58,22 +55,20 @@
     },
     {
       "name": "CelesticTown",
-      "status": "WARN",
+      "status": "PASS",
       "incomplete_trees": 0,
-      "isolated_rocks": 6,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 33,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 43,
+      "em_paths": 1,
       "em_sand": 0,
       "plat_paths": 1,
-      "path_coverage": 43.0,
+      "path_coverage": 1.0,
       "signs": 0,
-      "issues": [
-        "isolated cliff/rock tiles: 6"
-      ]
+      "issues": []
     },
     {
       "name": "DistortionWorld_1F",
@@ -94,6 +89,23 @@
     },
     {
       "name": "DistortionWorld_B1F",
+      "status": "PASS",
+      "incomplete_trees": 0,
+      "isolated_rocks": 0,
+      "passable_water": 0,
+      "em_water": 0,
+      "em_ledges": 0,
+      "plat_ledges": 0,
+      "em_fences": 0,
+      "em_paths": 0,
+      "em_sand": 0,
+      "plat_paths": 0,
+      "path_coverage": null,
+      "signs": 0,
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_B2F",
       "status": "WARN",
       "incomplete_trees": 0,
       "isolated_rocks": 1,
@@ -112,31 +124,12 @@
       ]
     },
     {
-      "name": "DistortionWorld_B2F",
-      "status": "WARN",
-      "incomplete_trees": 0,
-      "isolated_rocks": 2,
-      "passable_water": 0,
-      "em_water": 0,
-      "em_ledges": 0,
-      "plat_ledges": 0,
-      "em_fences": 0,
-      "em_paths": 0,
-      "em_sand": 0,
-      "plat_paths": 0,
-      "path_coverage": null,
-      "signs": 0,
-      "issues": [
-        "isolated cliff/rock tiles: 2"
-      ]
-    },
-    {
       "name": "DistortionWorld_B3F",
       "status": "WARN",
       "incomplete_trees": 0,
-      "isolated_rocks": 14,
+      "isolated_rocks": 1,
       "passable_water": 0,
-      "em_water": 2773,
+      "em_water": 2772,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
@@ -146,14 +139,14 @@
       "path_coverage": null,
       "signs": 0,
       "issues": [
-        "isolated cliff/rock tiles: 14"
+        "isolated cliff/rock tiles: 1"
       ]
     },
     {
       "name": "DistortionWorld_B4F",
-      "status": "WARN",
+      "status": "PASS",
       "incomplete_trees": 0,
-      "isolated_rocks": 9,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 30,
       "em_ledges": 0,
@@ -164,15 +157,13 @@
       "plat_paths": 0,
       "path_coverage": null,
       "signs": 0,
-      "issues": [
-        "isolated cliff/rock tiles: 9"
-      ]
+      "issues": []
     },
     {
       "name": "DistortionWorld_B5F",
-      "status": "WARN",
+      "status": "PASS",
       "incomplete_trees": 0,
-      "isolated_rocks": 11,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 119,
       "em_ledges": 2,
@@ -183,15 +174,13 @@
       "plat_paths": 0,
       "path_coverage": null,
       "signs": 0,
-      "issues": [
-        "isolated cliff/rock tiles: 11"
-      ]
+      "issues": []
     },
     {
       "name": "DistortionWorld_B6F",
       "status": "WARN",
       "incomplete_trees": 0,
-      "isolated_rocks": 7,
+      "isolated_rocks": 1,
       "passable_water": 0,
       "em_water": 0,
       "em_ledges": 0,
@@ -203,7 +192,7 @@
       "path_coverage": null,
       "signs": 0,
       "issues": [
-        "isolated cliff/rock tiles: 7"
+        "isolated cliff/rock tiles: 1"
       ]
     },
     {
@@ -259,22 +248,20 @@
     },
     {
       "name": "EternaCity",
-      "status": "WARN",
+      "status": "PASS",
       "incomplete_trees": 0,
-      "isolated_rocks": 15,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 103,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 2690,
+      "em_paths": 2604,
       "em_sand": 0,
       "plat_paths": 0,
       "path_coverage": null,
       "signs": 2,
-      "issues": [
-        "isolated cliff/rock tiles: 15"
-      ]
+      "issues": []
     },
     {
       "name": "EternaForest",
@@ -299,27 +286,26 @@
       "name": "FightArea",
       "status": "WARN",
       "incomplete_trees": 0,
-      "isolated_rocks": 8,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 254,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 871,
+      "em_paths": 796,
       "em_sand": 0,
       "plat_paths": 14,
-      "path_coverage": 62.214,
+      "path_coverage": 56.857,
       "signs": 0,
       "issues": [
-        "isolated cliff/rock tiles: 8",
-        "oversized paths: Emerald 871 vs Platinum 14 (62.2x)"
+        "oversized paths: Emerald 796 vs Platinum 14 (56.9x)"
       ]
     },
     {
       "name": "FloaromaMeadow",
       "status": "WARN",
       "incomplete_trees": 0,
-      "isolated_rocks": 10,
+      "isolated_rocks": 4,
       "passable_water": 0,
       "em_water": 0,
       "em_ledges": 42,
@@ -331,27 +317,25 @@
       "path_coverage": null,
       "signs": 0,
       "issues": [
-        "isolated cliff/rock tiles: 10"
+        "isolated cliff/rock tiles: 4"
       ]
     },
     {
       "name": "FloaromaTown",
-      "status": "WARN",
+      "status": "PASS",
       "incomplete_trees": 0,
-      "isolated_rocks": 6,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 0,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 1586,
+      "em_paths": 1494,
       "em_sand": 0,
       "plat_paths": 0,
       "path_coverage": null,
       "signs": 3,
-      "issues": [
-        "isolated cliff/rock tiles: 6"
-      ]
+      "issues": []
     },
     {
       "name": "GreatMarsh",
@@ -376,26 +360,26 @@
       "name": "HearthomeCity",
       "status": "WARN",
       "incomplete_trees": 0,
-      "isolated_rocks": 24,
+      "isolated_rocks": 4,
       "passable_water": 0,
       "em_water": 0,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 2056,
+      "em_paths": 1955,
       "em_sand": 0,
       "plat_paths": 0,
       "path_coverage": null,
       "signs": 3,
       "issues": [
-        "isolated cliff/rock tiles: 24"
+        "isolated cliff/rock tiles: 4"
       ]
     },
     {
       "name": "IronIsland",
       "status": "WARN",
       "incomplete_trees": 0,
-      "isolated_rocks": 21,
+      "isolated_rocks": 4,
       "passable_water": 0,
       "em_water": 141,
       "em_ledges": 4,
@@ -407,7 +391,7 @@
       "path_coverage": 1.25,
       "signs": 0,
       "issues": [
-        "isolated cliff/rock tiles: 21"
+        "isolated cliff/rock tiles: 4"
       ]
     },
     {
@@ -420,7 +404,7 @@
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 1929,
+      "em_paths": 3371,
       "em_sand": 0,
       "plat_paths": 0,
       "path_coverage": null,
@@ -429,9 +413,9 @@
     },
     {
       "name": "LakeAcuity",
-      "status": "WARN",
+      "status": "PASS",
       "incomplete_trees": 0,
-      "isolated_rocks": 2,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 800,
       "em_ledges": 0,
@@ -442,9 +426,7 @@
       "plat_paths": 62,
       "path_coverage": 1.177,
       "signs": 0,
-      "issues": [
-        "isolated cliff/rock tiles: 2"
-      ]
+      "issues": []
     },
     {
       "name": "LakeValor_Drained",
@@ -452,7 +434,7 @@
       "incomplete_trees": 0,
       "isolated_rocks": 66,
       "passable_water": 0,
-      "em_water": 149,
+      "em_water": 148,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
@@ -484,22 +466,20 @@
     },
     {
       "name": "OreburghCity",
-      "status": "WARN",
+      "status": "PASS",
       "incomplete_trees": 0,
-      "isolated_rocks": 4,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 0,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 2833,
+      "em_paths": 2738,
       "em_sand": 0,
       "plat_paths": 0,
       "path_coverage": null,
       "signs": 9,
-      "issues": [
-        "isolated cliff/rock tiles: 4"
-      ]
+      "issues": []
     },
     {
       "name": "OreburghGate_1F",
@@ -524,7 +504,7 @@
       "incomplete_trees": 0,
       "isolated_rocks": 0,
       "passable_water": 0,
-      "em_water": 376,
+      "em_water": 375,
       "em_ledges": 0,
       "plat_ledges": 8,
       "em_fences": 0,
@@ -571,22 +551,20 @@
     },
     {
       "name": "PastoriaCity",
-      "status": "WARN",
+      "status": "PASS",
       "incomplete_trees": 0,
-      "isolated_rocks": 5,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 621,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 1270,
+      "em_paths": 1217,
       "em_sand": 0,
       "plat_paths": 0,
       "path_coverage": null,
       "signs": 3,
-      "issues": [
-        "isolated cliff/rock tiles: 5"
-      ]
+      "issues": []
     },
     {
       "name": "PokemonLeague_AaronsRoom",
@@ -711,19 +689,19 @@
       "name": "PokemonLeague_Exterior",
       "status": "WARN",
       "incomplete_trees": 0,
-      "isolated_rocks": 18,
+      "isolated_rocks": 6,
       "passable_water": 0,
       "em_water": 401,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 631,
+      "em_paths": 619,
       "em_sand": 0,
       "plat_paths": 0,
       "path_coverage": null,
       "signs": 0,
       "issues": [
-        "isolated cliff/rock tiles: 18"
+        "isolated cliff/rock tiles: 6"
       ]
     },
     {
@@ -832,20 +810,19 @@
       "name": "ResortArea",
       "status": "WARN",
       "incomplete_trees": 0,
-      "isolated_rocks": 6,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 112,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 1278,
+      "em_paths": 1238,
       "em_sand": 0,
       "plat_paths": 21,
-      "path_coverage": 60.857,
+      "path_coverage": 58.952,
       "signs": 0,
       "issues": [
-        "isolated cliff/rock tiles: 6",
-        "oversized paths: Emerald 1278 vs Platinum 21 (60.9x)"
+        "oversized paths: Emerald 1238 vs Platinum 21 (59.0x)"
       ]
     },
     {
@@ -943,7 +920,7 @@
       "incomplete_trees": 0,
       "isolated_rocks": 12,
       "passable_water": 0,
-      "em_water": 190,
+      "em_water": 189,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
@@ -1152,7 +1129,7 @@
       "incomplete_trees": 0,
       "isolated_rocks": 130,
       "passable_water": 0,
-      "em_water": 2242,
+      "em_water": 2240,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
@@ -1247,7 +1224,7 @@
       "incomplete_trees": 0,
       "isolated_rocks": 17,
       "passable_water": 0,
-      "em_water": 592,
+      "em_water": 591,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
@@ -1343,7 +1320,7 @@
       "isolated_rocks": 66,
       "passable_water": 0,
       "em_water": 553,
-      "em_ledges": 28,
+      "em_ledges": 27,
       "plat_ledges": 28,
       "em_fences": 0,
       "em_paths": 29,
@@ -1362,7 +1339,7 @@
       "isolated_rocks": 74,
       "passable_water": 0,
       "em_water": 369,
-      "em_ledges": 62,
+      "em_ledges": 53,
       "plat_ledges": 62,
       "em_fences": 0,
       "em_paths": 89,
@@ -1433,59 +1410,55 @@
     },
     {
       "name": "SandgemTown",
-      "status": "WARN",
+      "status": "PASS",
       "incomplete_trees": 0,
-      "isolated_rocks": 4,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 0,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 505,
+      "em_paths": 455,
       "em_sand": 107,
       "plat_paths": 0,
       "path_coverage": null,
       "signs": 5,
-      "issues": [
-        "isolated cliff/rock tiles: 4"
-      ]
+      "issues": []
     },
     {
       "name": "SnowpointCity",
-      "status": "WARN",
+      "status": "PASS",
       "incomplete_trees": 0,
-      "isolated_rocks": 4,
+      "isolated_rocks": 0,
       "passable_water": 0,
-      "em_water": 227,
+      "em_water": 219,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 285,
-      "em_sand": 687,
+      "em_paths": 269,
+      "em_sand": 655,
       "plat_paths": 693,
-      "path_coverage": 1.403,
+      "path_coverage": 1.333,
       "signs": 0,
-      "issues": [
-        "isolated cliff/rock tiles: 4"
-      ]
+      "issues": []
     },
     {
       "name": "SolaceonTown",
       "status": "WARN",
       "incomplete_trees": 0,
-      "isolated_rocks": 8,
+      "isolated_rocks": 2,
       "passable_water": 0,
       "em_water": 12,
-      "em_ledges": 36,
+      "em_ledges": 33,
       "plat_ledges": 36,
       "em_fences": 0,
-      "em_paths": 1190,
+      "em_paths": 1083,
       "em_sand": 0,
       "plat_paths": 0,
       "path_coverage": null,
       "signs": 4,
       "issues": [
-        "isolated cliff/rock tiles: 8"
+        "isolated cliff/rock tiles: 2"
       ]
     },
     {
@@ -1606,40 +1579,37 @@
       "name": "SunyshoreCity",
       "status": "WARN",
       "incomplete_trees": 0,
-      "isolated_rocks": 18,
+      "isolated_rocks": 0,
       "passable_water": 0,
-      "em_water": 937,
+      "em_water": 929,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 1784,
+      "em_paths": 1700,
       "em_sand": 51,
       "plat_paths": 330,
-      "path_coverage": 5.406,
+      "path_coverage": 5.152,
       "signs": 0,
       "issues": [
-        "isolated cliff/rock tiles: 18",
-        "oversized paths: Emerald 1784 vs Platinum 330 (5.4x)"
+        "oversized paths: Emerald 1700 vs Platinum 330 (5.2x)"
       ]
     },
     {
       "name": "SurvivalArea",
-      "status": "WARN",
+      "status": "PASS",
       "incomplete_trees": 0,
-      "isolated_rocks": 10,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 0,
       "em_ledges": 12,
       "plat_ledges": 12,
       "em_fences": 0,
-      "em_paths": 956,
+      "em_paths": 920,
       "em_sand": 0,
       "plat_paths": 0,
       "path_coverage": null,
       "signs": 0,
-      "issues": [
-        "isolated cliff/rock tiles: 10"
-      ]
+      "issues": []
     },
     {
       "name": "TwinleafTown",
@@ -1651,10 +1621,10 @@
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 62,
+      "em_paths": 77,
       "em_sand": 0,
       "plat_paths": 44,
-      "path_coverage": 1.409,
+      "path_coverage": 1.75,
       "signs": 3,
       "issues": []
     },
@@ -1662,7 +1632,7 @@
       "name": "ValleyWindworks_Exterior",
       "status": "WARN",
       "incomplete_trees": 0,
-      "isolated_rocks": 15,
+      "isolated_rocks": 2,
       "passable_water": 0,
       "em_water": 141,
       "em_ledges": 0,
@@ -1674,7 +1644,7 @@
       "path_coverage": null,
       "signs": 2,
       "issues": [
-        "isolated cliff/rock tiles: 15"
+        "isolated cliff/rock tiles: 2"
       ]
     },
     {
@@ -1698,22 +1668,20 @@
     },
     {
       "name": "VeilstoneCity",
-      "status": "WARN",
+      "status": "PASS",
       "incomplete_trees": 0,
-      "isolated_rocks": 21,
+      "isolated_rocks": 0,
       "passable_water": 0,
       "em_water": 170,
       "em_ledges": 0,
       "plat_ledges": 0,
       "em_fences": 0,
-      "em_paths": 2363,
+      "em_paths": 2278,
       "em_sand": 0,
       "plat_paths": 0,
       "path_coverage": null,
       "signs": 7,
-      "issues": [
-        "isolated cliff/rock tiles: 21"
-      ]
+      "issues": []
     },
     {
       "name": "VictoryRoad_Sinnoh_1F",
@@ -1722,7 +1690,7 @@
       "isolated_rocks": 10,
       "passable_water": 0,
       "em_water": 0,
-      "em_ledges": 36,
+      "em_ledges": 35,
       "plat_ledges": 36,
       "em_fences": 0,
       "em_paths": 126,
@@ -1760,7 +1728,7 @@
       "incomplete_trees": 0,
       "isolated_rocks": 2,
       "passable_water": 0,
-      "em_water": 485,
+      "em_water": 484,
       "em_ledges": 7,
       "plat_ledges": 7,
       "em_fences": 0,
@@ -1830,6 +1798,6 @@
     }
   ],
   "fail": 0,
-  "warn": 70,
-  "pass": 29
+  "warn": 56,
+  "pass": 43
 }

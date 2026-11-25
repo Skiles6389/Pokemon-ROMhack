@@ -1,0 +1,59 @@
+{
+  "pass": 1,
+  "focus": "trees/paths/door-mats/warps/elev/building-coll/NPC-on-warp/items/seams",
+  "found_fixed": {
+    "visual_FAIL": {
+      "before": 2,
+      "after": 0
+    },
+    "collision_FAIL": {
+      "before": 1,
+      "after": 0
+    },
+    "city_door_FAIL": {
+      "before": 4,
+      "after": 0
+    },
+    "structural_extra_FAIL": {
+      "before": 88,
+      "after": 0
+    },
+    "building_FAIL": {
+      "before": 0,
+      "after": 0
+    }
+  },
+  "final_counts": {
+    "building": {
+      "fail": 0,
+      "pass": 18,
+      "warn": 0
+    },
+    "visual": {
+      "fail": 0,
+      "pass": 29,
+      "warn": 70
+    },
+    "collision": {
+      "fail": 0,
+      "pass": 0,
+      "warn": 14
+    },
+    "city_door": {
+      "fail": 0,
+      "pass": 18,
+      "warn": 0
+    },
+    "extra": {
+      "fail": 0,
+      "pass": 191,
+      "warn": 0
+    },
+    "npc_exit": {
+      "fail": 0,
+      "pass": 61,
+      "warn": 0
+    }
+  },
+  "notes": "Door-mat coll=0; pave walkable; meadow warps off walls; 1CE paths; elev pack; NPC nudges; ledge/item/seam fixes"
+}

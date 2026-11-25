@@ -45,6 +45,8 @@ MT_PATH_TABLE = (
 )
 PATH_METATILES = {mt for row in MT_PATH_TABLE for mt in row} | {
     0x1E4, 0x1E5, 0x1E6, 0x1E7, 0x003, 0x004,
+    # Littleroot-style dirt strips (Twinleaf / early towns)
+    0x1CE, 0x1CF,
     # Emerald city sidewalk / plaza (Rustboro / Lilycove) — paved cities
     0x2BB, 0x2C3, 0x22B, 0x233,
 }

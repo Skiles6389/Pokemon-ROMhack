@@ -1,0 +1,961 @@
+{
+  "fail": 0,
+  "pass": 191,
+  "results": [
+    {
+      "name": "AcuityLakefront",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "CanalaveCity",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "CanalaveCity_EldritchHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "CanalaveCity_Gym",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "CanalaveCity_HarborInn",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "CanalaveCity_House1",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "CanalaveCity_House2",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "CanalaveCity_House3",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "CanalaveCity_House4",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "CanalaveCity_Library",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "CanalaveCity_Library_1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "CanalaveCity_Library_2F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "CanalaveCity_Library_3F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "CanalaveCity_Mart",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "CelesticTown",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Celestic_Cave_Stub",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Celestic_NorthHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Celestic_NortheastHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Celestic_NorthwestHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Celestic_SouthwestHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_B1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_B2F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_B3F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_B4F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_B5F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_B6F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_B7F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_GiratinaRoom",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "DistortionWorld_TurnbackCaveRoom",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "EternaCity",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "EternaCity_Gym",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "EternaForest",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "FightArea",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "FightArea_Mart",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "FightArea_MiddleHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "FightArea_PokemonCenter_1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "FightArea_SouthHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "FloaromaMeadow",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "FloaromaTown",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "GreatMarsh",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "HearthomeCity",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "HearthomeCity_Gym",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "IronIsland",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "IronIsland_1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "IronIsland_1F_Stub",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "IronIsland_B1F_East",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "IronIsland_B1F_West",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "IronIsland_B2F_East",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "IronIsland_B2F_West",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "IronIsland_B3F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "IronIsland_House",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "JubilifeCity",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "LakeAcuity",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "LakeValor_Drained",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "LakeVerity",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "LostTower_1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "LostTower_2F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "LostTower_3F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "LostTower_4F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "LostTower_5F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "MtCoronet_1F_South",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "MtCoronet_NorthStub",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "MtCoronet_UpperStub",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "OreburghCity",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "OreburghGate_1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "OreburghGate_B1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "OreburghMine_B1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "OreburghMine_B2F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PastoriaCity",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PastoriaCity_GreatMarshGate",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PastoriaCity_Gym",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_AaronsRoom",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_BerthasRoom",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToAaron",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToBertha",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToCynthia",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToFlint",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Elevator_ToLucian",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Exterior",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_FlintsRoom",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_LuciansRoom",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_NorthPC",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Sinnoh_CynthiasRoom",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Sinnoh_HallOfFame",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_Sinnoh_HallwayToHoF",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "PokemonLeague_SouthPC",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "RavagedPath",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "ResortArea",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "ResortArea_House",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "ResortArea_PokemonCenter_1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "ResortArea_RibbonSyndicate",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "ResortArea_Villa",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route201",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route202",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route203",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route204_North",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route204_South",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route205_North",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route205_South",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route206",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route207",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route208",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route209",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route210_CafeCabin",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route210_North",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route210_South",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route210_WilmaHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route211_East",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route212_House",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route212_North",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route212_South",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route213",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route214",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route215",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route216",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route216_House",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route217",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route217_House",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route218",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route222",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route222_EastHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route222_Gate_ToSunyshore",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route222_WestHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route223",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route224",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route225",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route225_House",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route226",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route226_House",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route227",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route227_House",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route228",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route228_NorthHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route228_RockPeakRuins",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route228_SouthHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route229",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "Route230",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SandgemTown",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SnowpointCity",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SnowpointCity_House1",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SnowpointCity_House2",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SnowpointCity_Mart",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SolaceonTown",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SpearPillar",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SpearPillar_Distorted",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "StarkMountain_HeatranRoom",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "StarkMountain_Outside",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "StarkMountain_Room1",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "StarkMountain_Room2",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity_EastHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity_Gym_Room1",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity_Gym_Room2",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity_Gym_VolknersRoom",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity_LighthouseElevator",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity_Market",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity_MarketB",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity_Mart",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity_NortheastHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity_NorthwestHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity_PokemonCenter_1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity_UnusedHouse1",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity_UnusedHouse2",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SunyshoreCity_WestHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SurvivalArea",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SurvivalArea_Mart",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SurvivalArea_NorthHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SurvivalArea_PokemonCenter_1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "SurvivalArea_SouthHouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "TwinleafTown",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "TwinleafTown_PlayersHouse_1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "TwinleafTown_PlayersHouse_2F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "TwinleafTown_RivalsHouse_1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "TwinleafTown_RivalsHouse_2F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "ValleyWindworks_Exterior",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "ValleyWindworks_Interior",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "ValorLakefront",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "VeilstoneCity",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "VeilstoneCity_GalacticHQ_1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "VeilstoneCity_GalacticHQ_2F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "VeilstoneCity_GalacticHQ_Cyrus",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "VeilstoneCity_GalacticWarehouse",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "VeilstoneCity_Gym",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "VerityLakefront",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_2F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_B1F",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_Room1",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_Room2",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "name": "VictoryRoad_Sinnoh_Room3",
+      "status": "PASS",
+      "issues": []
+    }
+  ]
+}

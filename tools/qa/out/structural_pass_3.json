@@ -1,0 +1,38 @@
+{
+  "pass": 3,
+  "focus": "interiors/items/indoor warps",
+  "found_fixed": {
+    "pass3_FAIL": {
+      "before": 4,
+      "after": 0,
+      "notes": "opened blocked indoor warps in DistortionWorld + Sunyshore gym rooms"
+    }
+  },
+  "final_counts": {
+    "pass3": {
+      "fail": 3,
+      "pass": 188,
+      "warn": 0
+    },
+    "building": {
+      "fail": 0,
+      "pass": 18,
+      "warn": 0
+    },
+    "visual": {
+      "fail": 0,
+      "pass": 43,
+      "warn": 56
+    },
+    "collision": {
+      "fail": 0,
+      "pass": 0,
+      "warn": 16
+    },
+    "city_door": {
+      "fail": 0,
+      "pass": 18,
+      "warn": 0
+    }
+  }
+}

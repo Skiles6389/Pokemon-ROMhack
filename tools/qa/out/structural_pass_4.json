@@ -1,0 +1,16 @@
+{
+  "pass": 4,
+  "focus": "NPC corridors + connection seams",
+  "found_fixed": {
+    "pass4_FAIL": {
+      "before": 18,
+      "after": 0
+    }
+  },
+  "final_counts": {
+    "pass4": {
+      "fail": 0,
+      "pass": 191
+    }
+  }
+}

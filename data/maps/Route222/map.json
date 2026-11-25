@@ -446,7 +446,7 @@
   "warp_events": [
     {
       "x": 89,
-      "y": 22,
+      "y": 23,
       "elevation": 0,
       "dest_map": "MAP_ROUTE222_GATE_TO_SUNYSHORE",
       "dest_warp_id": "0"
