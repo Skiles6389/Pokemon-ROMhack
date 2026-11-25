@@ -35,31 +35,47 @@ from tools.sinnoh_maps.sinnoh_build_lib import (  # noqa: E402
     load_attrs,
 )
 
-# Twinleaf house facade (Emerald Petalburg secondary) — door 0x248
+# Authentic Littleroot/Petalburg house (roof ridge 0x208.. + door 0x248 + mat 0x201)
+# Lifted from stock Emerald LittlerootTown map.bin.
 HOUSE = [
+    [0x208, 0x209, 0x209, 0x209, 0x20A],
     [0x210, 0x211, 0x211, 0x211, 0x212],
     [0x218, 0x219, 0x219, 0x219, 0x21A],
     [0x222, 0x232, 0x230, 0x240, 0x221],
     [0x22A, 0x23A, 0x238, 0x248, 0x229],
 ]
-# Larger player/rival house (5x5-ish using same tiles with extra mid column)
+# Larger player/rival house (extra mid column, same roof ridge)
 HOUSE_LARGE = [
+    [0x208, 0x209, 0x209, 0x209, 0x209, 0x20A],
     [0x210, 0x211, 0x211, 0x211, 0x211, 0x212],
     [0x218, 0x219, 0x219, 0x219, 0x219, 0x21A],
     [0x222, 0x232, 0x230, 0x240, 0x230, 0x221],
     [0x22A, 0x23A, 0x238, 0x248, 0x238, 0x229],
 ]
+# Petalburg fence ring (Littleroot garden / lab fence tiles)
+FENCE_TL, FENCE_T, FENCE_TR = 0x214, 0x215, 0x216
+FENCE_BL, FENCE_B, FENCE_BR = 0x21E, 0x20F, 0x21F
+DOOR_MAT = 0x201
+MAILBOX = 0x003
+
 
 
 def stamp_facade(grid, door_x: int, door_y: int, facade) -> None:
     door_dx = next(i for i, mt in enumerate(facade[-1]) if mt == 0x248)
     top = door_y - (len(facade) - 1)
     left = door_x - door_dx
+    h, w = len(grid), len(grid[0])
     for dy, row in enumerate(facade):
         for dx, mt in enumerate(row):
             x, y = left + dx, top + dy
-            if 0 <= y < len(grid) and 0 <= x < len(grid[0]):
+            if 0 <= y < h and 0 <= x < w:
                 grid[y][x] = mt
+    # Door mat + mailbox (Littleroot style)
+    if door_y + 1 < h:
+        grid[door_y + 1][door_x] = DOOR_MAT
+    mx = door_x + 1 if door_x + 1 < w else door_x - 1
+    if 0 <= mx < w and grid[door_y][mx] == MT_GRASS:
+        grid[door_y][mx] = MAILBOX
 
 
 def clear_house_footprint(grid, collision, door_x: int, door_y: int, facade) -> None:
@@ -68,7 +84,7 @@ def clear_house_footprint(grid, collision, door_x: int, door_y: int, facade) -> 
     top = door_y - (len(facade) - 1)
     left = door_x - door_dx
     h, w = len(grid), len(grid[0])
-    for dy in range(len(facade) + 1):
+    for dy in range(len(facade) + 2):
         for dx in range(len(facade[0])):
             x, y = left + dx, top + dy
             if 0 <= y < h and 0 <= x < w:
@@ -108,19 +124,76 @@ def repair_incomplete_trees(grid, collision) -> None:
             collision[y][x] = 0
 
 
-def paint_flower_beds(grid, collision) -> None:
-    """Emerald tall-grass patches as flower-bed stand-ins in Twinleaf NW/NE clearings."""
-    beds = [
-        # top-left garden (near player house)
-        [(5, 4), (6, 4), (5, 5), (6, 5)],
-        # top-right garden
-        [(24, 4), (25, 4), (24, 5), (25, 5)],
+def paint_fenced_gardens(grid, collision) -> None:
+    """Fenced flower beds (Petalburg fence + tall-grass flowers) in NW/NE clearings."""
+    # (fence_left, fence_top, inner_w, inner_h)
+    gardens = [
+        (4, 3, 2, 2),   # NW clearing
+        (23, 3, 2, 2),  # NE clearing
     ]
-    for bed in beds:
-        for x, y in bed:
-            if grid[y][x] == MT_GRASS:
+    h, w = len(grid), len(grid[0])
+    for left, top, iw, ih in gardens:
+        right, bot = left + iw + 1, top + ih + 1
+        if right >= w or bot >= h:
+            continue
+        # Top / bottom fence rows
+        for x in range(left, right + 1):
+            for y, mt_l, mt_m, mt_r in (
+                (top, FENCE_TL, FENCE_T, FENCE_TR),
+                (bot, FENCE_BL, FENCE_B, FENCE_BR),
+            ):
+                if x == left:
+                    grid[y][x] = mt_l
+                elif x == right:
+                    grid[y][x] = mt_r
+                else:
+                    grid[y][x] = mt_m
+                collision[y][x] = 1
+        # Side fences + flower fill
+        for y in range(top + 1, bot):
+            grid[y][left] = 0x214
+            grid[y][right] = 0x216
+            collision[y][left] = collision[y][right] = 1
+            for x in range(left + 1, right):
                 grid[y][x] = MT_TALL
                 collision[y][x] = 0
+
+
+def connect_house_paths(grid, warps) -> None:
+    """Ensure dirt-path runs from each door mat into a mid-town spine."""
+    from tools.sinnoh_maps.sinnoh_build_lib import path_metatile_for_neighbors
+
+    h, w = len(grid), len(grid[0])
+    PATH = {
+        0x1D0, 0x1D1, 0x1D2, 0x1D8, 0x1D9, 0x1DA, 0x1E0, 0x1E1, 0x1E2,
+        0x1E4, 0x1E5, 0x1E6, 0x1E7,
+    }
+    path_cells = {(x, y) for y in range(h) for x in range(w) if grid[y][x] in PATH}
+    spine_y = 13
+    for warp in warps:
+        dx, dy = int(warp["x"]), int(warp["y"])
+        y0, y1 = sorted((min(h - 1, dy + 2), spine_y))
+        for y in range(y0, y1 + 1):
+            if grid[y][dx] in (MT_GRASS, MT_TALL) or grid[y][dx] in PATH:
+                path_cells.add((dx, y))
+        path_cells.add((dx, spine_y))
+    xs = [int(w_["x"]) for w_ in warps]
+    if xs:
+        for x in range(min(xs), max(xs) + 1):
+            if grid[spine_y][x] in (MT_GRASS, MT_TALL) or grid[spine_y][x] in PATH:
+                path_cells.add((x, spine_y))
+    for x, y in list(path_cells):
+        if not (0 <= x < w and 0 <= y < h):
+            continue
+        if grid[y][x] >= 0x200 or grid[y][x] == MT_WATER or grid[y][x] in set(MT_TREE):
+            continue
+        if grid[y][x] in (DOOR_MAT, MAILBOX):
+            continue
+        n = (x, y - 1) in path_cells
+        s = (x, y + 1) in path_cells
+        ww = (x - 1, y) in path_cells
+        e = (x + 1, y) in path_cells
+        grid[y][x] = path_metatile_for_neighbors(n, s, ww, e)
 
 
 def scrub_rocks_to_trees_or_grass(grid, collision) -> None:
@@ -202,15 +275,24 @@ def rebuild_twinleaf() -> None:
             if grid[y][x] == MT_WATER:
                 collision[y][x] = 0
 
-    paint_flower_beds(grid, collision)
+    paint_fenced_gardens(grid, collision)
+    connect_house_paths(grid, warps)
+    # Re-assert door mats after path paint (paths may claim the cell south of the door)
+    for warp in warps:
+        dx, dy = int(warp["x"]), int(warp["y"])
+        if dy + 1 < height and grid[dy + 1][dx] not in set(MT_TREE) and grid[dy + 1][dx] < 0x208:
+            grid[dy + 1][dx] = DOOR_MAT
 
-    # Sync collision for buildings
+    repair_incomplete_trees(grid, collision)
+
+    # Sync collision for buildings / fences
+    FENCE = {FENCE_TL, FENCE_T, FENCE_TR, FENCE_BL, FENCE_B, FENCE_BR, 0x214, 0x216}
     for y in range(height):
         for x in range(width):
             mt = grid[y][x]
-            if mt in WATER_METATILES:
+            if mt in WATER_METATILES or mt in (DOOR_MAT, MAILBOX):
                 collision[y][x] = 0
-            elif mt >= 0x200 or mt in set(MT_TREE) or mt == MT_ROCK:
+            elif mt >= 0x200 or mt in set(MT_TREE) or mt == MT_ROCK or mt in FENCE:
                 collision[y][x] = 1
 
     blob = pack(grid, collision)

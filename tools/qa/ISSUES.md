@@ -39,8 +39,19 @@ Other story Barry fights (R203 / Hearthome / Pastoria / Canalave) converted to `
 Scanner also sees vanilla Hoenn towns (Rustboro, Lilycove, …) with incomplete trees /
 water packs — those are upstream Emerald maps, not remade for Sinnoh.
 
-### Known visual preview caveat
+### Renderer fix (CRITICAL)
 
-Raw Emerald secondary sidewalk (`0x2BB`) tiles are sparse in the PNG tileset; contact
-sheets use **classified** Emerald map.bin colors so pavement/doors/buildings stay
-readable. In-game Rustboro tileset graphics apply as usual.
+`render_map_preview.py` treated each metatile as **8 bytes / 4 tiles**. Emerald uses
+**16 bytes / 8 tiles** (bottom+top). That scrambled every metatile (pink checkerboard
+trees, broken houses). Fixed to match Porymap: 8-tile metatiles, primary/secondary
+tile+metatile split at 512, pals 0–5 primary / 6–15 secondary, h/vflip, bottom then
+top with color 0 transparent.
+
+Acceptance: stock Littleroot / Oldale / Route101 / Rustboro / Lilycove render correctly.
+
+### Layout follow-ups after real visual review
+
+| Map | Issue | Fix |
+|-----|-------|-----|
+| Twinleaf | Houses missing roof ridge; no fences/paths | Littleroot-authentic facade + fenced gardens + dirt spine |
+| Jubilife | Flat pave, floating buildings | Platinum walkable→sidewalk; leftover solids→tree parks |

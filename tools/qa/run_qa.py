@@ -35,8 +35,13 @@ def main() -> int:
     ap.add_argument("--skip-renders", action="store_true")
     ap.add_argument("--priority-only", action="store_true",
                     help="Only render PRIORITY early-game maps (faster)")
-    ap.add_argument("--copy-artifacts", type=Path, default=Path("/opt/cursor/artifacts"),
-                    help="Copy key contact sheets / playtest shots here for the PR")
+    ap.add_argument(
+        "--copy-artifacts",
+        type=Path,
+        default=None,
+        help="Optional dir for PR screenshots (default: skip; never required). "
+             "Does not fall back to /opt/cursor — use --out for local renders.",
+    )
     args = ap.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
 
@@ -101,33 +106,27 @@ def main() -> int:
     }
     (args.out / "report.json").write_text(json.dumps(summary, indent=2) + "\n")
 
-    # Copy key artifacts for the PR description
-    if args.copy_artifacts:
-        args.copy_artifacts.mkdir(parents=True, exist_ok=True)
-        for src_name, dst_name in [
-            ("contact/early_game_montage.png", "qa_early_game_montage.png"),
-            ("contact/JubilifeCity_contact.png", "qa_jubilife_contact.png"),
-            ("contact/TwinleafTown_contact.png", "qa_twinleaf_contact.png"),
-            ("playtest/jubilife.png", "qa_playtest_jubilife.png"),
-            ("playtest/twinleaf_new_game_twinleaf.png", "qa_playtest_twinleaf.png"),
-            ("report.json", "qa_report.json"),
-        ]:
-            # playtest labels use label field
-            pass
-        copies = [
-            (args.out / "contact/early_game_montage.png", "qa_early_game_montage.png"),
-            (args.out / "contact/JubilifeCity_contact.png", "qa_jubilife_contact.png"),
-            (args.out / "contact/TwinleafTown_contact.png", "qa_twinleaf_contact.png"),
-            (args.out / "playtest/jubilife.png", "qa_playtest_jubilife.png"),
-            (args.out / "playtest/new_game_twinleaf.png", "qa_playtest_twinleaf.png"),
-            (args.out / "playtest/sandgem.png", "qa_playtest_sandgem.png"),
-            (args.out / "playtest/oreburgh.png", "qa_playtest_oreburgh.png"),
-            (args.out / "report.json", "qa_report.json"),
-        ]
-        for src, dst in copies:
-            if src.exists():
-                shutil.copy2(src, args.copy_artifacts / dst)
-                print("copied", dst)
+    # Optional PR artifact copy — never crash if the destination is unwritable
+    if args.copy_artifacts is not None:
+        try:
+            args.copy_artifacts.mkdir(parents=True, exist_ok=True)
+            copies = [
+                (args.out / "contact/early_game_montage.png", "qa_early_game_montage.png"),
+                (args.out / "contact/JubilifeCity_contact.png", "qa_jubilife_contact.png"),
+                (args.out / "contact/TwinleafTown_contact.png", "qa_twinleaf_contact.png"),
+                (args.out / "renders/TwinleafTown.png", "render_twinleaf.png"),
+                (args.out / "renders/JubilifeCity.png", "render_jubilife.png"),
+                (args.out / "renders/SandgemTown.png", "render_sandgem.png"),
+                (args.out / "playtest/jubilife.png", "qa_playtest_jubilife.png"),
+                (args.out / "playtest/new_game_twinleaf.png", "qa_playtest_twinleaf.png"),
+                (args.out / "report.json", "qa_report.json"),
+            ]
+            for src, dst in copies:
+                if src.exists():
+                    shutil.copy2(src, args.copy_artifacts / dst)
+                    print("copied", dst)
+        except OSError as e:
+            print(f"WARN: --copy-artifacts skipped ({e}); outputs remain under {args.out}")
 
     print(json.dumps({k: summary[k] for k in (
         "auto_review_fail", "playtest_fail", "playtest_pass"

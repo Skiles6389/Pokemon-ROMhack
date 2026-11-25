@@ -36,6 +36,9 @@ from tools.sinnoh_maps.sinnoh_build_lib import (  # noqa: E402
 
 # Rustboro city sidewalk (walkable secondary) — Jubilife uses gTileset_Rustboro
 MT_CITY_PAVE = 0x2BB
+# Placeholder for Platinum interior solids before stamps; leftover lots become
+# tree parks so the paved street cross stays readable (0x231 wall strip looks wrong).
+MT_CITY_LOT = 0x2C3
 # Authentic Rustboro Pokémon Center (door 0x061) — from RustboroCity map.bin
 PC_FACADE = [
     [0x256, 0x25E, 0x25F, 0x257],
@@ -141,6 +144,8 @@ def sync_collision(grid, collision) -> None:
                 collision[y][x] = 0
             elif mt == MT_CITY_PAVE:
                 collision[y][x] = 0
+            elif mt == MT_CITY_LOT:
+                collision[y][x] = 1
             elif mt in TREE or mt == MT_ROCK or mt == 0x139:
                 collision[y][x] = 1
             elif mt >= 0x200:
@@ -162,7 +167,8 @@ def rebuild() -> None:
     assert (w, h) == (64, 64), (w, h)
 
     solid = [[bool(plat_collision(attr[y][x])) for x in range(w)] for y in range(h)]
-    # Trees only for edge-ring solids; interior solids become pavement (buildings stamped later)
+    # Trees on edge-ring solids; interior solids keep as LOT fill so Platinum
+    # street corridors (walkable) stay visible instead of a flat paved square.
     edge = [[False] * w for _ in range(h)]
     margin = 2
     for y in range(h):
@@ -178,6 +184,12 @@ def rebuild() -> None:
             if edge[y][x] and tree_grid[y][x] in set(MT_TREE) | {MT_ROCK}:
                 grid[y][x] = tree_grid[y][x]
                 collision[y][x] = 1
+            elif solid[y][x]:
+                grid[y][x] = MT_CITY_LOT
+                collision[y][x] = 1
+            else:
+                grid[y][x] = MT_CITY_PAVE
+                collision[y][x] = 0
 
     mj_path = MAPS / "JubilifeCity" / "map.json"
     mj = json.loads(mj_path.read_text())
@@ -218,6 +230,52 @@ def rebuild() -> None:
         clear_footprint(grid, collision, warp["x"], warp["y"], facade, door_dx)
         stamp(grid, warp["x"], warp["y"], facade, door_dx)
         stamped += 1
+
+    # Leftover Platinum building solids → complete 2×2 tree parks (not wall strips)
+    lot_mask = [
+        [grid[y][x] == MT_CITY_LOT for x in range(w)]
+        for y in range(h)
+    ]
+    park = place_complete_trees([row[:] for row in lot_mask])
+    TREE = set(MT_TREE)
+    for y in range(h):
+        for x in range(w):
+            if not lot_mask[y][x]:
+                continue
+            if park[y][x] in TREE:
+                grid[y][x] = park[y][x]
+                collision[y][x] = 1
+            else:
+                # Gaps between tree quads → pavement alley
+                grid[y][x] = MT_CITY_PAVE
+                collision[y][x] = 0
+
+    # Scrub orphan tree halves / leftover rocks from park fill
+    expect = {MT_TREE[0]: (0, 0), MT_TREE[1]: (-1, 0), MT_TREE[2]: (0, -1), MT_TREE[3]: (-1, -1)}
+
+    def tree_complete(tlx: int, tly: int) -> bool:
+        if tlx < 0 or tly < 0 or tlx + 1 >= w or tly + 1 >= h:
+            return False
+        return (
+            grid[tly][tlx] == MT_TREE[0]
+            and grid[tly][tlx + 1] == MT_TREE[1]
+            and grid[tly + 1][tlx] == MT_TREE[2]
+            and grid[tly + 1][tlx + 1] == MT_TREE[3]
+        )
+
+    for y in range(h):
+        for x in range(w):
+            mt = grid[y][x]
+            if mt == MT_ROCK:
+                grid[y][x] = MT_CITY_PAVE
+                collision[y][x] = 0
+                continue
+            if mt not in TREE:
+                continue
+            dx, dy = expect[mt]
+            if not tree_complete(x + dx, y + dy):
+                grid[y][x] = MT_CITY_PAVE
+                collision[y][x] = 0
 
     # Open north exit (Route 204) and west gate corridor
     for x in range(44, 48):

@@ -1,64 +1,43 @@
 #!/usr/bin/env python3
-"""Render a map.bin preview using Emerald tileset PNGs (no ROM dump / DS assets)."""
+"""Render a map.bin preview using Emerald tileset PNGs (no ROM dump / DS assets).
+
+Matches Porymap / in-game metatile drawing:
+  - Primary metatiles 0..511, secondary metatiles 512.. (local = id - 512)
+  - Primary tiles 0..511, secondary tiles 512.. (local = tid - 512)
+  - Each metatile = 8 little-endian u16s (16 bytes): bottom TL/TR/BL/BR then top
+  - Tile word: bits 0-9 tile, 10 hflip, 11 vflip, 12-15 palette
+  - Palettes 0-5 from primary tileset, 6-15 from secondary
+  - Color index 0 is transparent; bottom layer then top layer composite
+"""
 from __future__ import annotations
 
+import argparse
 import json
 import struct
+from functools import lru_cache
 from pathlib import Path
 
 from PIL import Image
 
 REPO = Path(__file__).resolve().parents[2]
 
-# Fallback fills for metatiles whose quadrant defs are empty in the tileset
-# (Emerald tree halves often store graphics in only 2 of 4 metatiles).
-FALLBACK = {
-    0x001: (88, 168, 72, 255),    # grass
-    0x00D: (56, 120, 48, 255),    # tall grass
-    0x00E: (72, 140, 64, 255),    # moss
-    0x079: (120, 112, 96, 255),   # rock
-    0x0D5: (96, 88, 72, 255),     # ledge
-    0x0D6: (96, 88, 72, 255),
-    0x121: (200, 184, 120, 255),  # sand
-    0x170: (64, 120, 200, 255),   # water
-    0x1D4: (24, 88, 40, 255),     # tree TL
-    0x1D5: (28, 96, 44, 255),     # tree TR
-    0x1DC: (20, 72, 32, 255),     # tree BL
-    0x1DD: (32, 104, 48, 255),    # tree BR
-    # Dirt path 3x3 + soft grass edges
-    0x1D0: (176, 144, 88, 255),
-    0x1D1: (184, 152, 96, 255),
-    0x1D2: (176, 144, 88, 255),
-    0x1D8: (168, 136, 80, 255),
-    0x1D9: (192, 160, 104, 255),
-    0x1DA: (168, 136, 80, 255),
-    0x1E0: (160, 128, 72, 255),
-    0x1E1: (176, 144, 88, 255),
-    0x1E2: (160, 128, 72, 255),
-    0x1E4: (120, 160, 80, 255),
-    0x1E5: (120, 160, 80, 255),
-    0x1E6: (120, 160, 80, 255),
-    0x1E7: (120, 160, 80, 255),
-    0x201: (168, 160, 152, 255),  # indoor floor
-    0x20E: (96, 72, 56, 255),     # door
-    0x21A: (88, 80, 96, 255),     # indoor wall
-    0x2BB: (168, 168, 176, 255),  # Rustboro city sidewalk
-    0x061: (96, 72, 56, 255),     # PC door
-    0x041: (96, 72, 56, 255),     # Mart door
-    0x22F: (96, 72, 56, 255),     # Rustboro house door
-    0x248: (96, 72, 56, 255),     # Petalburg house door
-}
+NUM_TILES_IN_PRIMARY = 512
+NUM_METATILES_IN_PRIMARY = 512
+NUM_TILES_PER_METATILE = 8  # bottom 4 + top 4
+TILE_BYTES = NUM_TILES_PER_METATILE * 2  # 16
+QUAD_POS = ((0, 0), (8, 0), (0, 8), (8, 8))  # TL, TR, BL, BR
 
 
-def parse_jasc_pal(path: Path):
+def parse_jasc_pal(path: Path) -> list[tuple[int, int, int, int]]:
     lines = path.read_text().strip().splitlines()
-    colors = []
+    colors: list[tuple[int, int, int, int]] = []
     for line in lines[3:]:
         parts = line.split()
         if len(parts) >= 3:
             colors.append((int(parts[0]), int(parts[1]), int(parts[2]), 255))
     while len(colors) < 16:
         colors.append((0, 0, 0, 0))
+    # Palette index 0 is always transparent for overworld tiles
     colors[0] = (0, 0, 0, 0)
     return colors
 
@@ -73,7 +52,7 @@ def ts_path(name: str) -> Path:
     raise FileNotFoundError(name)
 
 
-def load_one(path: Path):
+def load_one(path: Path) -> dict:
     tiles_img = Image.open(path / "tiles.png")
     if tiles_img.mode != "P":
         tiles_img = tiles_img.convert("P")
@@ -85,13 +64,13 @@ def load_one(path: Path):
     for i in range(16):
         pf = pal_dir / f"{i:02d}.pal"
         pals.append(parse_jasc_pal(pf) if pf.exists() else [(0, 0, 0, 0)] * 16)
-    metatiles = (path / "metatiles.bin").read_bytes()
-    n = len(metatiles) // 8
-    metas = []
+    raw = (path / "metatiles.bin").read_bytes()
+    n = len(raw) // TILE_BYTES
+    metas: list[list[tuple[int, int, int, int]]] = []
     for i in range(n):
         entries = []
-        for j in range(4):
-            v = struct.unpack_from("<H", metatiles, i * 8 + j * 2)[0]
+        for j in range(NUM_TILES_PER_METATILE):
+            v = struct.unpack_from("<H", raw, i * TILE_BYTES + j * 2)[0]
             tid = v & 0x3FF
             hflip = (v >> 10) & 1
             vflip = (v >> 11) & 1
@@ -105,17 +84,41 @@ def load_one(path: Path):
         "width": tiles_img.width,
         "metas": metas,
         "pals": pals,
+        "path": path,
     }
 
 
-def get_colored_tile(ts, tid_local, hflip, vflip, pal_idx):
+def resolve_tile_sheet(primary: dict, secondary: dict, tid: int) -> tuple[dict, int]:
+    if tid < NUM_TILES_IN_PRIMARY:
+        return primary, tid
+    return secondary, tid - NUM_TILES_IN_PRIMARY
+
+
+def resolve_palette(
+    primary: dict, secondary: dict, pal_idx: int
+) -> list[tuple[int, int, int, int]]:
+    """VRAM layout: primary owns pals 0-5, secondary owns 6-15."""
+    if pal_idx < 6:
+        return primary["pals"][pal_idx]
+    return secondary["pals"][pal_idx % 16]
+
+
+def get_colored_tile(
+    primary: dict,
+    secondary: dict,
+    tid: int,
+    hflip: int,
+    vflip: int,
+    pal_idx: int,
+) -> Image.Image:
+    ts, local = resolve_tile_sheet(primary, secondary, tid)
     tw, th, w = ts["tw"], ts["th"], ts["width"]
     max_tid = tw * th
-    if tid_local >= max_tid:
+    if local < 0 or local >= max_tid:
         return Image.new("RGBA", (8, 8), (0, 0, 0, 0))
-    x0 = (tid_local % tw) * 8
-    y0 = (tid_local // tw) * 8
-    pal = ts["pals"][pal_idx % 16]
+    x0 = (local % tw) * 8
+    y0 = (local // tw) * 8
+    pal = resolve_palette(primary, secondary, pal_idx)
     pixels = []
     for py in range(8):
         for px in range(8):
@@ -130,52 +133,49 @@ def get_colored_tile(ts, tid_local, hflip, vflip, pal_idx):
     return tile
 
 
-def render_metatile(primary, secondary, mt_id: int) -> Image.Image:
-    """Render one 16x16 metatile; fall back to solid color if defs are empty."""
-    img = Image.new("RGBA", (16, 16), (0, 0, 0, 0))
-    if mt_id < 0x200:
+def blit_quad(
+    dst: Image.Image,
+    primary: dict,
+    secondary: dict,
+    entries: list[tuple[int, int, int, int]],
+) -> None:
+    for (tid, hf, vf, pal), (ox, oy) in zip(entries, QUAD_POS):
+        tile = get_colored_tile(primary, secondary, tid, hf, vf, pal)
+        dst.paste(tile, (ox, oy), tile)
+
+
+def render_metatile(primary: dict, secondary: dict, mt_id: int) -> Image.Image:
+    """Render one 16×16 metatile (bottom then top, color 0 transparent)."""
+    if mt_id < NUM_METATILES_IN_PRIMARY:
         ts = primary
-        other = secondary
         local = mt_id
     else:
         ts = secondary
-        other = primary
-        local = mt_id - 0x200
-    if local >= len(ts["metas"]):
-        color = FALLBACK.get(mt_id, (48, 96, 56, 255))
-        return Image.new("RGBA", (16, 16), color)
-
+        local = mt_id - NUM_METATILES_IN_PRIMARY
+    img = Image.new("RGBA", (16, 16), (0, 0, 0, 0))
+    if local < 0 or local >= len(ts["metas"]):
+        return img
     entries = ts["metas"][local]
-    positions = [(0, 0), (8, 0), (0, 8), (8, 8)]
-    painted = 0
-    for (tid, hf, vf, pal), (ox, oy) in zip(entries, positions):
-        # Tile IDs 0-511 = primary sheet, 512-1023 = secondary sheet
-        if tid < 512:
-            src = primary if mt_id < 0x200 else (primary if tid < 512 else secondary)
-            # When rendering secondary metatile with tid<512, it's primary tiles
-            src = primary
-            local_tid = tid
-        else:
-            src = secondary
-            local_tid = tid - 512
-        tile = get_colored_tile(src, local_tid, hf, vf, pal)
-        # Count non-transparent pixels
-        alphas = tile.getchannel("A").getdata()
-        if any(a > 0 for a in alphas):
-            painted += 1
-        img.paste(tile, (ox, oy), tile)
-
-    if painted == 0:
-        color = FALLBACK.get(mt_id, (48, 96, 56, 255))
-        return Image.new("RGBA", (16, 16), color)
-    # Secondary sidewalk/plaza tiles often have sparse opaque pixels; composite
-    # a FALLBACK underlay so previews don't look like grass-through-holes.
-    opaque = sum(1 for a in img.getchannel("A").getdata() if a > 0)
-    if opaque < 200 and mt_id in FALLBACK:
-        base = Image.new("RGBA", (16, 16), FALLBACK[mt_id])
-        base.paste(img, (0, 0), img)
-        return base
+    # Bottom layer (tiles 0-3), then top layer (tiles 4-7)
+    blit_quad(img, primary, secondary, entries[0:4])
+    blit_quad(img, primary, secondary, entries[4:8])
     return img
+
+
+@lru_cache(maxsize=8)
+def load_tilesets(primary_name: str, secondary_name: str) -> tuple[dict, dict]:
+    return load_one(ts_path(primary_name)), load_one(ts_path(secondary_name))
+
+
+def find_layout(layout_name: str) -> dict:
+    layouts = json.loads((REPO / "data/layouts/layouts.json").read_text())["layouts"]
+    for L in layouts:
+        if L["name"] == layout_name or L["name"] == layout_name + "_Layout":
+            return L
+    for L in layouts:
+        if L["name"].startswith(layout_name) or layout_name in L["name"]:
+            return L
+    raise KeyError(layout_name)
 
 
 def render(
@@ -186,28 +186,27 @@ def render(
     view_w: int = 15,
     view_h: int = 10,
     scale: int = 2,
-):
-    layouts = json.loads((REPO / "data/layouts/layouts.json").read_text())
-    layout = next(
-        L
-        for L in layouts["layouts"]
-        if L["name"].startswith(layout_name)
-        or layout_name in L["name"]
-    )
-    w, h = layout["width"], layout["height"]
+    *,
+    bgcolor: tuple[int, int, int, int] = (0, 0, 0, 255),
+) -> Path:
+    layout = find_layout(layout_name)
+    w, h = int(layout["width"]), int(layout["height"])
     data = (REPO / layout["blockdata_filepath"]).read_bytes()
-    primary = load_one(ts_path(layout["primary_tileset"]))
-    secondary = load_one(ts_path(layout["secondary_tileset"]))
+    primary, secondary = load_tilesets(layout["primary_tileset"], layout["secondary_tileset"])
 
     vw = min(view_w, w - cam_x)
     vh = min(view_h, h - cam_y)
-    img = Image.new("RGBA", (vw * 16, vh * 16), (40, 72, 48, 255))
+    img = Image.new("RGBA", (vw * 16, vh * 16), bgcolor)
 
+    cache: dict[int, Image.Image] = {}
     for ly in range(vh):
         for lx in range(vw):
             mx, my = cam_x + lx, cam_y + ly
             mt = struct.unpack_from("<H", data, (my * w + mx) * 2)[0] & 0x3FF
-            tile = render_metatile(primary, secondary, mt)
+            tile = cache.get(mt)
+            if tile is None:
+                tile = render_metatile(primary, secondary, mt)
+                cache[mt] = tile
             img.paste(tile, (lx * 16, ly * 16), tile)
 
     if scale != 1:
@@ -215,17 +214,27 @@ def render(
     out_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(out_path)
     print("wrote", out_path, img.size)
+    return out_path
 
 
-def main():
-    out = Path("/opt/cursor/artifacts")
-    # M20 verification shots (Emerald tiles only — no live ROM dump / DS assets)
-    render("Route214", out / "m20_route214_valor_lakefront.png", cam_x=8, cam_y=0, view_w=20, view_h=16, scale=2)
-    # Composite-ish Valor plaza view
-    render("ValorLakefront", out / "m20_valor_lakefront_resort.png", cam_x=16, cam_y=36, view_w=24, view_h=18, scale=2)
-    render("PastoriaCity", out / "m20_pastoria_city.png", cam_x=8, cam_y=8, view_w=24, view_h=18, scale=2)
-    render("PastoriaCity_Gym", out / "m20_pastoria_gym_crasher_wake.png", cam_x=4, cam_y=0, view_w=16, view_h=16, scale=2)
-    render("PastoriaCity", out / "m20_galactic_chase_trigger.png", cam_x=28, cam_y=4, view_w=20, view_h=14, scale=2)
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("maps", nargs="*", help="Layout names (default: Emerald acceptance set)")
+    ap.add_argument("--out", type=Path, default=Path("/tmp/sinnoh_qa/renders"))
+    ap.add_argument("--scale", type=int, default=2)
+    ap.add_argument("--full", action="store_true", help="Render full map extents")
+    args = ap.parse_args()
+    names = args.maps or [
+        "LittlerootTown", "OldaleTown", "Route101", "RustboroCity", "LilycoveCity",
+    ]
+    args.out.mkdir(parents=True, exist_ok=True)
+    for name in names:
+        layout = find_layout(name)
+        w, h = int(layout["width"]), int(layout["height"])
+        if args.full:
+            render(name, args.out / f"{name}.png", 0, 0, w, h, args.scale)
+        else:
+            render(name, args.out / f"{name}.png", 0, 0, min(w, 40), min(h, 40), args.scale)
 
 
 if __name__ == "__main__":
