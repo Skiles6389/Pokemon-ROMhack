@@ -267,6 +267,38 @@ def classify_warp(dest: str) -> str | None:
     return "other"
 
 
+DOOR_BEHAVIORS = {0x60, 0x69}  # MB_NON_ANIMATED_DOOR, MB_ANIMATED_DOOR
+
+
+def _ts_dir(name: str) -> Path | None:
+    short = name.replace("gTileset_", "")
+    folder = "".join(("_" + c.lower() if c.isupper() else c) for c in short).lstrip("_")
+    for root in (REPO / "data/tilesets/primary", REPO / "data/tilesets/secondary"):
+        if (root / folder).exists():
+            return root / folder
+    return None
+
+
+def is_door_behavior(map_name: str, mt: int) -> bool:
+    """True when metatile `mt` is a door/cave mouth in this map's own tilesets.
+
+    Lets houses from other Emerald tilesets (e.g. Mauville/Verdanturf doors
+    0x2AC / 0x3A1) pass without hard-coding ids that differ per tileset.
+    """
+    meta = LAYOUTS_JSON.get(map_name)
+    if not meta:
+        return False
+    ts = meta["primary_tileset"] if mt < 0x200 else meta["secondary_tileset"]
+    d = _ts_dir(ts)
+    if d is None or not (d / "metatile_attributes.bin").exists():
+        return False
+    data = (d / "metatile_attributes.bin").read_bytes()
+    i = (mt if mt < 0x200 else mt - 0x200) * 2
+    if i + 2 > len(data):
+        return False
+    return (struct.unpack_from("<H", data, i)[0] & 0xFF) in DOOR_BEHAVIORS
+
+
 def expected_door(kind: str) -> set[int] | None:
     if kind == "center":
         return {0x061, 0x062}
@@ -351,7 +383,7 @@ def audit_one(name: str) -> dict:
         expect = expected_door(kind)
         door_ok = True
         if expect is not None:
-            if mt not in expect:
+            if mt not in expect and not is_door_behavior(name, mt):
                 # Double-door sibling: adjacent cell may hold the real door tile
                 sibling_door = False
                 for ax, ay in ((x - 1, y), (x + 1, y)):

@@ -1,51 +1,52 @@
-# TwinleafTown — Platinum-style starter town (Emerald Petalburg houses).
-# Legend: T tree  . grass  , tall grass  = dirt path  ~ water  F fence
-#          f flower  S sign
-# Stamps: P player  V rival  A house1  B house2 (door anchors)
+# TwinleafTown — Platinum-exact layout
+# Shapes derived from the Platinum layout; tiles are Emerald General/Mauville metatiles.
+# Legend: T tree . grass , tall grass = path ~ water L/</> ledges F fence b flower bed
+#         S sign/mailbox W walk-in exit warp; letters = building doors (@stamp)
+@compiler platinum
 @name TwinleafTown
 @layout LAYOUT_TWINLEAF_TOWN
 @width 32
 @height 32
 @primary gTileset_General
-@secondary gTileset_Petalburg
+@secondary gTileset_Mauville
 @connection up MAP_ROUTE201 0
-@stamp P PLAYER_HOUSE MAP_TWINLEAF_TOWN_PLAYERSHOUSE_1F 0
-@stamp V RIVAL_HOUSE MAP_TWINLEAF_TOWN_RIVALSHOUSE_1F 0
-@stamp A HOUSE_A MAP_TWINLEAF_TOWN_HOUSE1 0
-@stamp B HOUSE_A MAP_TWINLEAF_TOWN_HOUSE2 0
+@stamp B GEN_HOUSE5T MAP_TWINLEAF_TOWN_PLAYERSHOUSE_1F 0
+@stamp A MAUVILLE_HOUSE5T MAP_TWINLEAF_TOWN_RIVALSHOUSE_1F 0
+@stamp C VERDANTURF_HOUSE4 MAP_TWINLEAF_TOWN_HOUSE1 0
+@stamp D GEN_HOUSE4 MAP_TWINLEAF_TOWN_HOUSE2 0
 @sign TwinleafTown_EventScript_RivalsHouseSign
 @sign TwinleafTown_EventScript_TownSign
 @sign TwinleafTown_EventScript_PlayersHouseSign
 @grid
-TTTTTTTTTTTT........TTTTTTTTTTTT
-TTTTTTTTTTTT........TTTTTTTTTTTT
-TTTTTT....................TTTTTT
-TTTTTT....................TTTTTT
-TTTTTTFffffF..====..FffffFTTTTTT
-TTTTTTFffffF..====..FffffFTTTTTT
+TTTTTTFFFFFF........FFFFFFTTTTTT
+TTTTTTFbbbbF........FbbbbFTTTTTT
+TTTTTTFbbbbF..====..FbbbbFTTTTTT
 TTTTTTFFFFFF..====..FFFFFFTTTTTT
-TTTTTT........===.........TTTTTT
-TTTTTT........===.........TTTTTT
-TTTTTT........===.........TTTTTT
-TTTTTT........===.........TTTTTT
-TTTTTT...V...S===...A.....TTTTTT
-TTTTTT.,,,....====....,,,.TTTTTT
-TTTTTT.,,,....====....,,,.TTTTTT
-TTTTTT.=========S========.TTTTTT
-TTTTTT.==================.TTTTTT
 TTTTTT........====........TTTTTT
-TTTTTT........===.........TTTTTT
-TTTTTT........===.........TTTTTT
-TTTTTT........===.........TTTTTT
-TTTTTT........===.........TTTTTT
-TTTTTT....B...==S...P.....TTTTTT
-TTTTTT.==================.TTTTTT
+TTTTTT........====........TTTTTT
+TTTTTT........====........TTTTTT
+TTTTTT..#####.====........TTTTTT
+TTTTTT..#####.====.####...TTTTTT
+TTTTTT..#####.====.####...TTTTTT
+TTTTTT..######====.####...TTTTTT
+TTTTTT..#A###S====.#C##...TTTTTT
+TTTTTT........====..=.....TTTTTT
+TTTTTT.......===========..TTTTTT
+TTTTTT.....=====S=======..TTTTTT
+TTTTTT..================..TTTTTT
+TTTTTT........====........TTTTTT
+TTTTTT........====.#####..TTTTTT
+TTTTTT...####.====.#####..TTTTTT
+TTTTTT...####.====.#####..TTTTTT
+TTTTTT...####.====######..TTTTTT
+TTTTTT...#D##.====S#B###..TTTTTT
+TTTTTT....=...====..=.....TTTTTT
+TTTTTT..=============.....TTTTTT
+TTTTTT..=============.....TTTTTT
+TTTTTT..===========.......TTTTTT
 TTTTTT....................TTTTTT
 TTTTTT......~~~~~~~~......TTTTTT
-TTTTTT......~~~~~~~~......TTTTTT
-TTTTTT......~~~~~~~~......TTTTTT
-TTTTTT....................TTTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTT~~~~~~~~TTTTTTTTTTTT
+TTTTTTTTTTTT~~~~~~~~TTTTTTTTTTTT
+TTTTTTTTTTTT~~~~~~~~TTTTTTTTTTTT
+TTTTTTTTTTTT~~~~~~~~TTTTTTTTTTTT

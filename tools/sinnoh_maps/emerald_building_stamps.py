@@ -204,6 +204,79 @@ GARDEN_FENCED = {
     ],
 }
 
+# --- General / Mauville houses used by the Platinum-shape maps (maps_src) ---
+# General red-roof house (General primary; door 0x021). 4x4 and a 5x5 tall-roof
+# variant (roof mid row doubled) for Platinum's 5x5 footprints.
+GENERAL_HOUSE_4 = {
+    "name": "general_house_4",
+    "source": "General primary (Petalburg-style house)",
+    "door_mt": 0x021,
+    "door_dx": 1,
+    "door_dy": 3,
+    "tiles": [
+        [0x008, 0x009, 0x009, 0x00A],
+        [0x010, 0x011, 0x011, 0x012],
+        [0x018, 0x019, 0x00B, 0x01A],
+        [0x020, 0x021, 0x013, 0x022],
+    ],
+}
+GENERAL_HOUSE_5T = {
+    "name": "general_house_5t",
+    "source": "General primary (Petalburg-style house, tall roof)",
+    "door_mt": 0x021,
+    "door_dx": 1,
+    "door_dy": 4,
+    "tiles": [
+        [0x008, 0x009, 0x009, 0x009, 0x00A],
+        [0x010, 0x011, 0x011, 0x011, 0x012],
+        [0x010, 0x011, 0x011, 0x011, 0x012],
+        [0x018, 0x019, 0x00B, 0x00B, 0x01A],
+        [0x020, 0x021, 0x013, 0x013, 0x022],
+    ],
+}
+# Mauville pink-roof house (gTileset_Mauville; door 0x2AC) — from MauvilleCity.
+MAUVILLE_HOUSE_4 = {
+    "name": "mauville_house_4",
+    "source": "MauvilleCity",
+    "door_mt": 0x2AC,
+    "door_dx": 1,
+    "door_dy": 3,
+    "tiles": [
+        [0x283, 0x284, 0x284, 0x285],
+        [0x28B, 0x28C, 0x28C, 0x28D],
+        [0x293, 0x2A4, 0x26F, 0x295],
+        [0x29B, 0x2AC, 0x277, 0x29D],
+    ],
+}
+MAUVILLE_HOUSE_5T = {
+    "name": "mauville_house_5t",
+    "source": "MauvilleCity (5-wide house, roof stripe row doubled)",
+    "door_mt": 0x2AC,
+    "door_dx": 1,
+    "door_dy": 4,
+    "tiles": [
+        [0x283, 0x284, 0x284, 0x284, 0x285],
+        [0x28B, 0x28C, 0x28C, 0x28C, 0x28D],
+        [0x28B, 0x28C, 0x28C, 0x28C, 0x28D],
+        [0x2A0, 0x2A4, 0x2A1, 0x2A3, 0x2A2],
+        [0x2A8, 0x2AC, 0x2A9, 0x2AB, 0x2AA],
+    ],
+}
+# Verdanturf green-roof house (gTileset_Mauville; door 0x3A1) — from VerdanturfTown.
+VERDANTURF_HOUSE_4 = {
+    "name": "verdanturf_house_4",
+    "source": "VerdanturfTown",
+    "door_mt": 0x3A1,
+    "door_dx": 1,
+    "door_dy": 3,
+    "tiles": [
+        [0x388, 0x389, 0x389, 0x38A],
+        [0x390, 0x391, 0x391, 0x392],
+        [0x398, 0x399, 0x38B, 0x38C],
+        [0x3A0, 0x3A1, 0x393, 0x394],
+    ],
+}
+
 DOOR_MAT = 0x201
 MAILBOX = 0x003
 
@@ -227,6 +300,7 @@ ALL_STAMPS = [
     HOUSE_PETALBURG_A, HOUSE_PETALBURG_B, HOUSE_PETALBURG_WIDE, HOUSE_OLDALE,
     PC_OLDALE, MART_OLDALE, PC_RUSTBORO, MART_RUSTBORO,
     HOUSE_RUSTBORO, CIVIC_RUSTBORO, CIVIC_RUSTBORO_WIDE, GYM_MAUVILLE, GARDEN_FENCED,
+    GENERAL_HOUSE_4, GENERAL_HOUSE_5T, MAUVILLE_HOUSE_4, MAUVILLE_HOUSE_5T, VERDANTURF_HOUSE_4,
 ]
 
 

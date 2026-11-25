@@ -36,6 +36,7 @@ LakeVerity_EventScript_OpeningScene::
 	playbgm MUS_PL_ENCOUNTER_BARRY, FALSE
 	call LakeVerity_EventScript_SetAssistantGfx
 	goto_if_set FLAG_SYS_POKEMON_GET, LakeVerity_EventScript_ResumeAfterStarter
+	call LakeVerity_EventScript_LineUpPlayer
 	applymovement OBJ_EVENT_ID_PLAYER, LakeVerity_Movement_PlayerApproach
 	applymovement LOCALID_LAKE_BARRY, LakeVerity_Movement_BarryApproach
 	waitmovement 0
@@ -92,14 +93,6 @@ LakeVerity_EventScript_DoLeave::
 	msgbox LakeVerity_Text_OpenCase, MSGBOX_DEFAULT
 	closemessage
 	goto LakeVerity_EventScript_ChooseStarter
-	end
-
-LakeVerity_EventScript_ResumeAfterStarter::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
-	msgbox LakeVerity_Text_StarlyStillThere, MSGBOX_DEFAULT
-	closemessage
-	goto LakeVerity_EventScript_BattleStarly
 	end
 
 LakeVerity_EventScript_ChooseStarter::
@@ -198,11 +191,12 @@ LakeVerity_EventScript_LostToStarly::
 LakeVerity_EventScript_AfterStarly::
 	msgbox LakeVerity_Text_BarryAfterStarly, MSGBOX_DEFAULT
 	closemessage
-	@ Clear the tile south of the briefcase so Dawn/Lucas can walk up to it.
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
-	applymovement LOCALID_LAKE_BARRY, Common_Movement_WalkRight
+	@ Clear the tile south of the briefcase (45,23) so Dawn/Lucas can walk up to it:
+	@ player (45,24) -> (46,24); Barry stays at (44,24).
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
 	waitmovement 0
-	setobjectxyperm LOCALID_LAKE_ASSISTANT, 48, 21
+	@ Spawn below the visible area on the open x=45 column (rows 25..31 walkable).
+	setobjectxyperm LOCALID_LAKE_ASSISTANT, 45, 31
 	clearflag FLAG_HIDE_LAKE_VERITY_ASSISTANT
 	addobject LOCALID_LAKE_ASSISTANT
 	applymovement LOCALID_LAKE_ASSISTANT, LakeVerity_Movement_AssistantReturns
@@ -257,8 +251,8 @@ LakeVerity_EventScript_CyrusScene::
 	applymovement LOCALID_LAKE_BARRY, Common_Movement_ExclamationMark
 	waitmovement 0
 	playbgm MUS_PL_ENCOUNTER_GALACTIC, FALSE
-	@ Spawn Cyrus off-screen south of the clearing, then walk him into view.
-	setobjectxyperm LOCALID_LAKE_CYRUS, 47, 22
+	@ Spawn Cyrus off-screen south on the open x=45 column, then walk him up to (45,25).
+	setobjectxyperm LOCALID_LAKE_CYRUS, 45, 31
 	setobjectmovementtype LOCALID_LAKE_CYRUS, MOVEMENT_TYPE_FACE_UP
 	clearflag FLAG_HIDE_LAKE_VERITY_CYRUS
 	addobject LOCALID_LAKE_CYRUS
@@ -282,6 +276,34 @@ LakeVerity_EventScript_CyrusScene::
 	@ Lake opening complete - player keeps control and walks out on their own.
 	setvar VAR_ROUTE201_STATE, 2
 	releaseall
+	end
+
+@ The walk-in exit (38..39,40) steps the player north onto (38|39,39).
+@ Line up on x=39 before the scripted walk to the shore clearing:
+@ player -> (45,27), Barry (waiting at 38,38) -> (44,27).
+LakeVerity_EventScript_LineUpPlayer::
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	goto_if_ne VAR_TEMP_0, 38, LakeVerity_EventScript_LineUpDone
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+LakeVerity_EventScript_LineUpDone::
+	return
+
+@ After a loss to Starly: Barry is back at (38,38); walk up to the briefcase again.
+LakeVerity_EventScript_ResumeAfterStarter::
+	setobjectxy LOCALID_LAKE_BARRY, 38, 38
+	call LakeVerity_EventScript_LineUpPlayer
+	applymovement OBJ_EVENT_ID_PLAYER, LakeVerity_Movement_PlayerApproach
+	applymovement LOCALID_LAKE_BARRY, LakeVerity_Movement_BarryApproach
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, LakeVerity_Movement_PlayerToCase
+	applymovement LOCALID_LAKE_BARRY, LakeVerity_Movement_BarryToCase
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox LakeVerity_Text_StarlyStillThere, MSGBOX_DEFAULT
+	closemessage
+	goto LakeVerity_EventScript_BattleStarly
 	end
 
 LakeVerity_EventScript_Cyrus::
@@ -310,67 +332,114 @@ LakeVerity_EventScript_Briefcase::
 	msgbox LakeVerity_Text_BriefcaseIdle, MSGBOX_SIGN
 	end
 
-LakeVerity_EventScript_Sign::
-	msgbox LakeVerity_Text_Sign, MSGBOX_SIGN
+LakeVerity_EventScript_Mars::
+	msgbox LakeVerity_Text_Mars, MSGBOX_NPC
 	end
 
+LakeVerity_EventScript_GruntLookout::
+	msgbox LakeVerity_Text_GruntLookout, MSGBOX_NPC
+	end
+
+@ (39,39) -> (45,27): path x=39 north, row 33 east, (43,31), row 31 east, x=45 north
 LakeVerity_Movement_PlayerApproach:
 	walk_up
 	walk_up
 	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	face_up
 	step_end
 
+@ (38,38) -> (44,27), trailing two steps behind the player
 LakeVerity_Movement_BarryApproach:
+	delay_16
+	delay_16
 	walk_up
 	walk_up
-	face_left
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	face_up
 	step_end
 
+@ (45,25) -> (43,34): around the player/Barry and out of view down the path
 LakeVerity_Movement_RowanLeaves:
+	walk_right
 	walk_down
 	walk_down
 	walk_down
 	walk_down
+	walk_left
+	walk_down
+	walk_down
+	walk_left
+	walk_left
 	walk_down
 	walk_down
 	walk_down
 	step_end
 
+@ (46,24) -> (43,33), two steps behind Rowan
 LakeVerity_Movement_AssistantLeaves:
-	delay_8
+	delay_16
+	delay_16
 	walk_down
 	walk_down
 	walk_down
 	walk_down
 	walk_down
+	walk_left
+	walk_down
+	walk_down
+	walk_left
+	walk_left
 	walk_down
 	walk_down
 	step_end
 
+@ (45,27) -> (45,24); the briefcase sits at (45,23)
 LakeVerity_Movement_PlayerToCase:
-	walk_right
-	walk_right
 	walk_up
 	walk_up
 	walk_up
 	face_up
 	step_end
 
+@ (44,27) -> (44,24)
 LakeVerity_Movement_BarryToCase:
-	walk_right
-	walk_right
+	walk_up
 	walk_up
 	walk_up
 	face_up
 	step_end
 
-@ Barry is at (50,14) after the Starly/case beat; x=50 hits rock south of y=17.
-@ Sidestep onto the open x=48 column, then exit south off the map.
+@ (44,24) -> (44,31): open x=44 column, out of view
 LakeVerity_Movement_BarryLeaves:
-	walk_left
-	walk_left
-	walk_down
 	walk_down
 	walk_down
 	walk_down
@@ -380,6 +449,7 @@ LakeVerity_Movement_BarryLeaves:
 	walk_down
 	step_end
 
+@ (45,31) -> (45,25)
 LakeVerity_Movement_AssistantReturns:
 	walk_up
 	walk_up
@@ -390,11 +460,13 @@ LakeVerity_Movement_AssistantReturns:
 	face_up
 	step_end
 
+@ (45,25) -> (45,24), facing the briefcase
 LakeVerity_Movement_AssistantToCase:
 	walk_up
 	face_up
 	step_end
 
+@ (45,24) -> (45,31)
 LakeVerity_Movement_AssistantLeavesFinal:
 	walk_down
 	walk_down
@@ -405,8 +477,8 @@ LakeVerity_Movement_AssistantLeavesFinal:
 	walk_down
 	step_end
 
+@ (45,31) -> (45,25)
 LakeVerity_Movement_CyrusWalkIn:
-	walk_up
 	walk_up
 	walk_up
 	walk_up
@@ -416,9 +488,8 @@ LakeVerity_Movement_CyrusWalkIn:
 	face_up
 	step_end
 
+@ (45,25) -> (45,31)
 LakeVerity_Movement_CyrusWalkOut:
-	walk_down
-	walk_down
 	walk_down
 	walk_down
 	walk_down
@@ -560,9 +631,14 @@ LakeVerity_Text_BriefcaseIdle:
 	.string "A sturdy briefcase sits in the grass.\n"
 	.string "Something inside shifts faintly.$"
 
-LakeVerity_Text_Sign:
-	.string "LAKE VERITY\n"
-	.string "The water keeps its own counsel.$"
+LakeVerity_Text_Mars:
+	.string "MARS: You again? I'm busy staring\n"
+	.string "at a very boring lake.\p"
+	.string "Go bother someone else, kid.$"
+
+LakeVerity_Text_GruntLookout:
+	.string "I'm the lookout. Nobody gets past\n"
+	.string "without me noticing... probably.$"
 LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_1::
 	trainerbattle_single TRAINER_GALACTIC_GRUNT_LAKE_VERITY_1, LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_1_Intro, LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_1_Defeat
 	msgbox LakeVerity_EventScript_GALACTIC_GRUNT_LAKE_VERITY_1_After, MSGBOX_AUTOCLOSE

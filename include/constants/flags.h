@@ -1280,9 +1280,9 @@
 #define FLAG_HIDE_SPEAR_PILLAR_SUPPORT                              0x4C8 // Sinnoh: Mars/Jupiter/Barry/grunts leave with Cyrus
 #define FLAG_HIDE_SPEAR_PILLAR_LOOKER                               0x4C9 // Sinnoh: Looker leaves after Distorted scene
 #define FLAG_HIDE_LAKE_VERITY_TEAM_GALACTIC                         0x4CA // Sinnoh: Mars/grunts hidden until after Saturn at Valor
-#define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
-#define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
-#define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
+#define FLAG_HIDDEN_ITEM_TWINLEAF_TOWN_ODD_KEYSTONE                 0x4CB // Sinnoh m50: Platinum item (was FLAG_UNUSED_0x4CB)
+#define FLAG_HIDDEN_ITEM_VERITY_LAKEFRONT_TINY_MUSHROOM             0x4CC // Sinnoh m50: Platinum item (was FLAG_UNUSED_0x4CC)
+#define FLAG_ITEM_LAKE_VERITY_TM38                                  0x4CD // Sinnoh m50: Platinum item (was FLAG_UNUSED_0x4CD)
 #define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
 #define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
 #define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag

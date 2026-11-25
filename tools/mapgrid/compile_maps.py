@@ -545,6 +545,10 @@ def write_outputs(gf: GridFile, grid: list[list[int]], meta: dict) -> None:
 
 
 def compile_one(path: Path, *, check_only: bool = False) -> int:
+    if "@compiler platinum" in path.read_text():
+        from tools.mapgrid import platinum_compiler
+
+        return platinum_compiler.compile_one(path, check_only)
     gf = parse_grid(path)
     grid, meta = compile_char_grid(gf)
     fails = validate(gf, grid, meta)

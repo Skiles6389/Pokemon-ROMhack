@@ -44,6 +44,14 @@ LAYOUTS_JSON = {
     L["name"].replace("_Layout", ""): L
     for L in json.loads((LAYOUTS / "layouts.json").read_text())["layouts"]
 }
+# Emerald General 2x2 tree family: dense quad plus the vanilla edge variants
+# (open side / open below / water above) that Emerald routes use at forest edges.
+TREE_TL = {MT_TREE_TL, 0x1D6, 0x1FC}
+TREE_TR = {MT_TREE_TR, 0x1D7, 0x1FD}
+TREE_BL = {MT_TREE_BL, 0x1DE, 0x1E4, 0x1E6}
+TREE_BR = {MT_TREE_BR, 0x1DF, 0x1E5, 0x1E7}
+# Only the dense quad ids are audited as "tree tiles" (unchanged coverage);
+# a quad counts as complete when its corners are any member of the family.
 TREE = {MT_TREE_TL, MT_TREE_TR, MT_TREE_BL, MT_TREE_BR}
 TREE_EXPECT = {
     MT_TREE_TL: (0, 0),
@@ -79,10 +87,10 @@ def incomplete_trees(cells) -> int:
         if tlx < 0 or tly < 0 or tlx + 1 >= w or tly + 1 >= h:
             return False
         return (
-            cells[tly][tlx][0] == MT_TREE_TL
-            and cells[tly][tlx + 1][0] == MT_TREE_TR
-            and cells[tly + 1][tlx][0] == MT_TREE_BL
-            and cells[tly + 1][tlx + 1][0] == MT_TREE_BR
+            cells[tly][tlx][0] in TREE_TL
+            and cells[tly][tlx + 1][0] in TREE_TR
+            and cells[tly + 1][tlx][0] in TREE_BL
+            and cells[tly + 1][tlx + 1][0] in TREE_BR
         )
 
     bad = 0
@@ -95,6 +103,25 @@ def incomplete_trees(cells) -> int:
             if not is_complete(x + dx, y + dy):
                 bad += 1
     return bad
+
+
+def building_stamp_cells(cells) -> set[tuple[int, int]]:
+    """Cells covered by an exact Emerald building stamp (General house roofs and
+    walls reuse 0x00A-0x00C, which are not fences there)."""
+    from tools.sinnoh_maps.emerald_building_stamps import ALL_STAMPS
+
+    h, w = len(cells), len(cells[0])
+    covered: set[tuple[int, int]] = set()
+    for st in ALL_STAMPS:
+        t = st["tiles"]
+        th, tw = len(t), len(t[0])
+        for y in range(h - th + 1):
+            for x in range(w - tw + 1):
+                if cells[y][x][0] != t[0][0]:
+                    continue
+                if all(cells[y + a][x + b][0] == t[a][b] for a in range(th) for b in range(tw)):
+                    covered.update((x + b, y + a) for a in range(th) for b in range(tw))
+    return covered
 
 
 def isolated_rocks(cells) -> int:
@@ -174,7 +201,11 @@ def audit_one(name: str) -> dict:
     isolated = isolated_rocks(cells)
     bad_water = passable_water(cells)
     em_ledges = sum(1 for row in cells for mt, _, _ in row if mt in LEDGE)
-    em_fences = sum(1 for row in cells for mt, _, _ in row if mt in FENCE_LIKE)
+    in_stamp = building_stamp_cells(cells)
+    em_fences = sum(
+        1 for y, row in enumerate(cells) for x, (mt, _, _) in enumerate(row)
+        if mt in FENCE_LIKE and (x, y) not in in_stamp
+    )
     snow = is_snow_layout(meta, name)
     em_paths = sum(1 for row in cells for mt, _, _ in row if mt in PATH_METATILES)
     em_sand = sum(1 for row in cells for mt, _, _ in row if mt == MT_SAND)

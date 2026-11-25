@@ -9341,7 +9341,7 @@
       "width": 32,
       "height": 32,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/TwinleafTown/border.bin",
       "blockdata_filepath": "data/layouts/TwinleafTown/map.bin",
       "layout_version": "emerald"
@@ -9352,7 +9352,7 @@
       "width": 64,
       "height": 32,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Route201/border.bin",
       "blockdata_filepath": "data/layouts/Route201/map.bin",
       "layout_version": "emerald"
@@ -9371,10 +9371,10 @@
     {
       "id": "LAYOUT_LAKE_VERITY",
       "name": "LakeVerity_Layout",
-      "width": 64,
-      "height": 23,
+      "width": 52,
+      "height": 44,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/LakeVerity/border.bin",
       "blockdata_filepath": "data/layouts/LakeVerity/map.bin",
       "layout_version": "emerald"
@@ -9514,10 +9514,10 @@
     {
       "id": "LAYOUT_VERITY_LAKEFRONT",
       "name": "VerityLakefront_Layout",
-      "width": 32,
+      "width": 20,
       "height": 18,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/VerityLakefront/border.bin",
       "blockdata_filepath": "data/layouts/VerityLakefront/map.bin",
       "layout_version": "emerald"

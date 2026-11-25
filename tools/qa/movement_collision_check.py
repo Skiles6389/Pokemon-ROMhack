@@ -71,9 +71,9 @@ REQUIRED_SCENES: list[tuple[str, str, int, int]] = [
     # Sandgem assistant leave (m48 #9)
     ("SandgemTown", "SandgemTown_Movement_AssistantLeave", 26, 11),
     # Lake Verity Barry exit after Cyrus (post-Starly leave)
-    ("LakeVerity", "LakeVerity_Movement_BarryLeaves", 50, 14),
+    ("LakeVerity", "LakeVerity_Movement_BarryLeaves", 44, 24),
     # Route201 BarryMeet lead-up on clear west corridor
-    ("Route201", "Route201_Movement_BarryLeadsWest", 5, 22),
+    ("Route201", "Route201_Movement_BarryLeadsWest", 3, 22),
     ("Route201", "Route201_Movement_PlayerFollowsWest", 4, 22),
 ]
 
