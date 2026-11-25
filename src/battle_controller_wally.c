@@ -127,6 +127,15 @@ static void WallyBufferRunCommand(enum BattlerId battler)
 
 static void WallyHandleActions(enum BattlerId battler)
 {
+    // Dawn/Lucas Route 202 catch demo (and FRLG Old Man): throw a ball immediately.
+    // Wally still attacks twice first with a weak Zigzagoon; Dawn was using the player's
+    // starter and KOing Bidoof before the ball throw.
+    if (IsRoute202CatchTutorial() && gBattleStruct->wallyBattleState < 3)
+    {
+        gBattleStruct->wallyBattleState = 3;
+        gBattleStruct->wallyWaitFrames = B_WAIT_TIME_LONG;
+    }
+
     switch (gBattleStruct->wallyBattleState)
     {
     case 0:

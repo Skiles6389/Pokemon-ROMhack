@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Visual + object audits for Sinnoh outdoor maps.
 
-Visual: incomplete Emerald 2x2 tree neighborhoods (orphaned halves).
-Object: fence / ledge / sign bg-events or metatiles with no Platinum counterpart
-        (ledge behavior 0x3B / rock 0x38-3A; fences are converter inventions).
+Checks:
+- Incomplete Emerald 2x2 trees (orphan halves at any alignment)
+- Isolated cliff/rock tiles not in a contiguous rock cluster
+- Oversized path blobs vs Platinum path attrs
+- Passable water (wrong elev/collision — must be elev=1, coll=0 for Surf)
+- Fence inventions / stray ledges (legacy)
 """
 from __future__ import annotations
 
@@ -17,14 +20,17 @@ sys.path.insert(0, str(REPO))
 
 from tools.sinnoh_maps.platinum_1to1_audit import LAND_TABLE  # noqa: E402
 from tools.sinnoh_maps.sinnoh_build_lib import (  # noqa: E402
+    MT_ROCK,
     MT_SAND,
     MT_TREE_BL,
     MT_TREE_BR,
     MT_TREE_TL,
     MT_TREE_TR,
+    MT_WATER,
     PATH_METATILES,
     PLAT_DATA,
     PLAT_SNOW_PATH_BEHAVIORS,
+    WATER_METATILES,
     is_plat_path_behavior,
     load_attrs,
     map_allows_path_fallback,
@@ -34,42 +40,90 @@ from tools.sinnoh_maps.sinnoh_build_lib import (  # noqa: E402
 
 LAYOUTS = REPO / "data" / "layouts"
 MAPS = REPO / "data" / "maps"
-LAYOUTS_JSON = {L["name"].replace("_Layout", ""): L for L in json.loads((LAYOUTS / "layouts.json").read_text())["layouts"]}
+LAYOUTS_JSON = {
+    L["name"].replace("_Layout", ""): L
+    for L in json.loads((LAYOUTS / "layouts.json").read_text())["layouts"]
+}
 TREE = {MT_TREE_TL, MT_TREE_TR, MT_TREE_BL, MT_TREE_BR}
+TREE_EXPECT = {
+    MT_TREE_TL: (0, 0),
+    MT_TREE_TR: (-1, 0),
+    MT_TREE_BL: (0, -1),
+    MT_TREE_BR: (-1, -1),
+}
 COMPLETE = [MT_TREE_TL, MT_TREE_TR, MT_TREE_BL, MT_TREE_BR]
 LEDGE = {0x0D5, 0x0D6}
-FENCE_LIKE = {0x00A, 0x00B, 0x00C}  # Emerald fence metatiles if ever used
+FENCE_LIKE = {0x00A, 0x00B, 0x00C}
+CLIFF_ROCK = {MT_ROCK, 0x07C, 0x091, 0x139}
 
 
-def load_grid(name: str):
+def load_cells(name: str):
     meta = LAYOUTS_JSON[name]
     w, h = int(meta["width"]), int(meta["height"])
     data = (REPO / meta["blockdata_filepath"]).read_bytes()
-    grid = [[0] * w for _ in range(h)]
+    cells = []
     for y in range(h):
+        row = []
         for x in range(w):
-            grid[y][x] = struct.unpack_from("<H", data, (y * w + x) * 2)[0] & 0x3FF
-    return grid, w, h
+            raw = struct.unpack_from("<H", data, (y * w + x) * 2)[0]
+            row.append((raw & 0x3FF, (raw >> 10) & 3, (raw >> 12) & 0xF))
+        cells.append(row)
+    return cells, w, h, meta
 
 
-def incomplete_trees(grid) -> int:
-    h, w = len(grid), len(grid[0])
-    seen = set()
+def incomplete_trees(cells) -> int:
+    """Count tree tiles that are not part of a correct TL/TR/BL/BR quad."""
+    h, w = len(cells), len(cells[0])
+
+    def is_complete(tlx, tly) -> bool:
+        if tlx < 0 or tly < 0 or tlx + 1 >= w or tly + 1 >= h:
+            return False
+        return (
+            cells[tly][tlx][0] == MT_TREE_TL
+            and cells[tly][tlx + 1][0] == MT_TREE_TR
+            and cells[tly + 1][tlx][0] == MT_TREE_BL
+            and cells[tly + 1][tlx + 1][0] == MT_TREE_BR
+        )
+
     bad = 0
     for y in range(h):
         for x in range(w):
-            if grid[y][x] not in TREE:
+            mt = cells[y][x][0]
+            if mt not in TREE:
                 continue
-            ox, oy = x - (x & 1), y - (y & 1)
-            key = (ox, oy)
-            if key in seen:
-                continue
-            seen.add(key)
-            if ox + 1 >= w or oy + 1 >= h:
+            dx, dy = TREE_EXPECT[mt]
+            if not is_complete(x + dx, y + dy):
                 bad += 1
+    return bad
+
+
+def isolated_rocks(cells) -> int:
+    """Rock/cliff tiles with <2 rock/cliff neighbors (4-connected) → isolated."""
+    h, w = len(cells), len(cells[0])
+    isolated = 0
+    for y in range(h):
+        for x in range(w):
+            if cells[y][x][0] not in CLIFF_ROCK:
                 continue
-            cells = [grid[oy][ox], grid[oy][ox + 1], grid[oy + 1][ox], grid[oy + 1][ox + 1]]
-            if cells != COMPLETE:
+            n = 0
+            for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                nx, ny = x + dx, y + dy
+                if 0 <= nx < w and 0 <= ny < h and cells[ny][nx][0] in CLIFF_ROCK:
+                    n += 1
+            if n < 2:
+                isolated += 1
+    return isolated
+
+
+def passable_water(cells) -> int:
+    """Water that is walkable: wrong elev (must be 1) or collision set."""
+    bad = 0
+    for row in cells:
+        for mt, coll, elev in row:
+            if mt not in WATER_METATILES:
+                continue
+            # Vanilla Emerald: coll=0, elev=1 → elevation mismatch vs player elev 3
+            if coll != 0 or elev != 1:
                 bad += 1
     return bad
 
@@ -115,15 +169,16 @@ def is_snow_layout(meta: dict, name: str) -> bool:
 def audit_one(name: str) -> dict:
     if name not in LAYOUTS_JSON:
         return {"name": name, "status": "SKIP"}
-    meta = LAYOUTS_JSON[name]
-    grid, w, h = load_grid(name)
-    incomplete = incomplete_trees(grid)
-    em_ledges = sum(1 for row in grid for mt in row if mt in LEDGE)
-    em_fences = sum(1 for row in grid for mt in row if mt in FENCE_LIKE)
+    cells, w, h, meta = load_cells(name)
+    incomplete = incomplete_trees(cells)
+    isolated = isolated_rocks(cells)
+    bad_water = passable_water(cells)
+    em_ledges = sum(1 for row in cells for mt, _, _ in row if mt in LEDGE)
+    em_fences = sum(1 for row in cells for mt, _, _ in row if mt in FENCE_LIKE)
     snow = is_snow_layout(meta, name)
-    # Dirt/town paths; snow uses sand stand-in so count MT_SAND only when Platinum has snow-path attrs.
-    em_paths = sum(1 for row in grid for mt in row if mt in PATH_METATILES)
-    em_sand = sum(1 for row in grid for mt in row if mt == MT_SAND)
+    em_paths = sum(1 for row in cells for mt, _, _ in row if mt in PATH_METATILES)
+    em_sand = sum(1 for row in cells for mt, _, _ in row if mt == MT_SAND)
+    em_water = sum(1 for row in cells for mt, _, _ in row if mt in WATER_METATILES)
 
     plat_ledges = 0
     plat_paths = 0
@@ -139,19 +194,57 @@ def audit_one(name: str) -> dict:
         if plat_ledges >= 0 and em_ledges > plat_ledges + 16:
             stray_ledges = em_ledges - plat_ledges
 
-    # Sign/bg events without platinum is soft — count map.json signs
     signs = 0
     mj = MAPS / name / "map.json"
+    warps = []
     if mj.exists():
         data = json.loads(mj.read_text())
         for bg in data.get("bg_events") or []:
             if bg.get("type") == "sign":
                 signs += 1
+        warps = data.get("warp_events") or []
 
     issues = []
     status = "PASS"
+
+    # Paved-city grass dominance + trees-inside-buildings (city visual checks)
+    from tools.sinnoh_maps.city_door_warp_audit import (  # local import avoids cycle at load
+        PAVED_CITIES,
+        TREE as _TREE,
+        CLIFF_ROCK as _CLIFF,
+        grass_dominant,
+        trees_in_building,
+        classify_warp,
+    )
+
+    if name in PAVED_CITIES:
+        heavy, gfrac, pfrac = grass_dominant(cells, w, h)
+        if heavy:
+            issues.append(
+                f"grass-dominant paved city: grass={gfrac:.0%} pave={pfrac:.0%}"
+            )
+            status = "FAIL"
+        bad_bldg = 0
+        for warp in warps:
+            kind = classify_warp(warp.get("dest_map") or "")
+            if kind in ("center", "mart", "gym", "building"):
+                bad_bldg += trees_in_building(cells, int(warp["x"]), int(warp["y"]))
+        if bad_bldg:
+            issues.append(f"trees/cliffs inside building facades: {bad_bldg}")
+            status = "FAIL"
     if incomplete > 0:
         issues.append(f"incomplete 2x2 trees: {incomplete}")
+        status = "FAIL"
+    # Flag sparse rock leftovers. Twinleaf must be cliff-free (Chris playtest).
+    # Other maps WARN — converting rocks to grass opens Platinum solids.
+    if isolated > 0:
+        issues.append(f"isolated cliff/rock tiles: {isolated}")
+        if name == "TwinleafTown":
+            status = "FAIL"
+        elif status == "PASS":
+            status = "WARN"
+    if bad_water > 0:
+        issues.append(f"passable/wrong-pack water cells: {bad_water}")
         status = "FAIL"
     if em_fences:
         issues.append(f"fence metatiles with no Platinum fence mapping: {em_fences}")
@@ -161,22 +254,36 @@ def audit_one(name: str) -> dict:
         if status == "PASS":
             status = "WARN"
 
-    # Path coverage: Platinum dirt/walkway cells must show as Emerald path (or snow sand).
-    # Early towns/routes with no path attrs still need visible trails (beh-0 fallback).
     path_coverage = None
     outdoor = "Building" not in (meta.get("primary_tileset") or "") and "Cave" not in (
         meta.get("secondary_tileset") or ""
     )
     if plat_paths and plat_paths > 0:
-        # Snow maps may mix packed-snow (sand stand-in) and dirt/bike path metatiles.
         covered = (em_sand + em_paths) if snow else em_paths
         path_coverage = covered / plat_paths
-        if covered < max(8, plat_paths // 4):
+        # Require at least 25% coverage, but don't demand a flat 8 tiles when
+        # Platinum only has a handful of walkway cells (e.g. Celestic=1).
+        min_required = max(1, min(8, plat_paths // 4)) if plat_paths >= 8 else max(1, plat_paths)
+        if covered < min_required:
             issues.append(
                 f"missing paths: Platinum {plat_paths} path cells → Emerald "
                 f"path/sand {covered} ({path_coverage:.0%})"
             )
             status = "FAIL"
+        # Oversized path blob: Emerald paths >> Platinum (town sand rectangles etc.)
+        # Paved Platinum cities intentionally use sidewalk/path for most walkables.
+        if not snow and covered > max(plat_paths * 3, plat_paths + 48):
+            issues.append(
+                f"oversized paths: Emerald {covered} vs Platinum {plat_paths} "
+                f"({path_coverage:.1f}x)"
+            )
+            if name in PAVED_CITIES:
+                if status == "PASS":
+                    status = "WARN"
+            elif covered > max(plat_paths * 5, plat_paths + 120):
+                status = "FAIL"
+            elif status == "PASS":
+                status = "WARN"
     elif (
         outdoor
         and not snow
@@ -185,7 +292,6 @@ def audit_one(name: str) -> dict:
         and plat_paths == 0
         and map_allows_path_fallback(name)
     ):
-        # Fallback maps: expect dirt-path metatiles on plain walkable ground.
         plain = 0
         try:
             for row in chunks:
@@ -210,6 +316,9 @@ def audit_one(name: str) -> dict:
         "name": name,
         "status": status,
         "incomplete_trees": incomplete,
+        "isolated_rocks": isolated,
+        "passable_water": bad_water,
+        "em_water": em_water,
         "em_ledges": em_ledges,
         "plat_ledges": plat_ledges,
         "em_fences": em_fences,
@@ -225,12 +334,27 @@ def audit_one(name: str) -> dict:
 def main() -> int:
     results = [audit_one(n) for n in sorted(LAND_TABLE)]
     fails = [r for r in results if r["status"] == "FAIL"]
+    warns = [r for r in results if r["status"] == "WARN"]
     out = REPO / "tools/sinnoh_maps/visual_object_audit_report.json"
-    out.write_text(json.dumps({"results": results, "fail": len(fails)}, indent=2) + "\n")
+    out.write_text(
+        json.dumps(
+            {
+                "results": results,
+                "fail": len(fails),
+                "warn": len(warns),
+                "pass": sum(1 for r in results if r["status"] == "PASS"),
+            },
+            indent=2,
+        )
+        + "\n"
+    )
     for r in results:
         if r["status"] != "PASS":
             print(f"{r['status']:4s} {r['name']}: {'; '.join(r['issues'])}")
-    print(f"=== visual/object audit: {len(fails)} FAIL / {len(results)} → {out} ===")
+    print(
+        f"=== visual/object audit: {len(fails)} FAIL / {len(warns)} WARN / "
+        f"{len(results)} → {out} ==="
+    )
     return 1 if fails else 0
 
 

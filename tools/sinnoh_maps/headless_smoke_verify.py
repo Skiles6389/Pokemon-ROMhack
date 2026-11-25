@@ -41,8 +41,11 @@ def run_audit() -> None:
     for name in (
         "collision_audit.py",
         "visual_object_audit.py",
+        "city_door_warp_audit.py",
         "script_npc_exit_audit.py",
+        "catch_tutorial_verify.py",
     ):
+        # note: tools/qa/run_qa.py is the full visual+playtest harness (optional)
         script = REPO / "tools" / "sinnoh_maps" / name
         if not script.exists():
             continue
@@ -51,25 +54,45 @@ def run_audit() -> None:
         if name != "script_npc_exit_audit.py" and r.returncode != 0:
             raise SystemExit(f"FAIL: {name}")
         print(f"PASS {name}" if r.returncode == 0 else f"WARN {name} (advisory)")
+    story = REPO / "tools/qa/story_battle_audit.py"
+    if story.exists():
+        r = subprocess.run([sys.executable, str(story)], cwd=REPO)
+        if r.returncode != 0:
+            raise SystemExit("FAIL: story_battle_audit.py")
+        print("PASS story_battle_audit.py")
 
 
 def try_mgba_boot() -> None:
-    mgba = shutil.which("mgba") or shutil.which("mgba-qt")
+    mgba = (
+        shutil.which("mgba")
+        or shutil.which("mgba-qt")
+        or ("/usr/games/mgba" if Path("/usr/games/mgba").exists() else "")
+    )
     if not mgba:
         # Bundled rom-test binary is for TEST=1 suites, not free boot
         print("SKIP mgba boot (no mgba CLI on PATH; make check covers libmgba)")
         return
-    # Headless-ish: run briefly then kill — mgba --bios is optional; skip if no bios
+    # HLE BIOS (no Nintendo BIOS file). Prefer xvfb when available.
+    import os
+    xvfb = shutil.which("xvfb-run")
+    cmd = [mgba, "-C", "logLevel.gba.bios=0", "-l", "0", str(ROM)]
+    env = os.environ.copy()
+    env.setdefault("SDL_AUDIODRIVER", "dummy")
+    if xvfb:
+        cmd = [xvfb, "-a", "-s", "-screen 0 240x160x24"] + cmd
+    else:
+        env["SDL_VIDEODRIVER"] = "dummy"
     try:
         proc = subprocess.run(
-            [mgba, "-C", "logLevel.gba.bios=0", str(ROM)],
+            cmd,
             cwd=REPO,
+            env=env,
             timeout=3,
             capture_output=True,
         )
         print(f"PASS mgba short boot exit={proc.returncode}")
     except subprocess.TimeoutExpired:
-        print("PASS mgba short boot (timeout after 3s — engine alive)")
+        print("PASS mgba short boot (timeout after 3s — engine alive, HLE BIOS)")
 
 
 def run_randomizer_headless_tests() -> None:

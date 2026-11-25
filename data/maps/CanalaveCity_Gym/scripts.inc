@@ -16,6 +16,8 @@ CanalaveCity_Gym_EventScript_ByronDefeated::
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox CanalaveCity_Gym_Text_MineBadgeInfo, MSGBOX_DEFAULT
 	setflag FLAG_BADGE06_GET
+	@ Platinum: after Canalave/Byron the lakes plot opens (Valor drained).
+	setflag FLAG_LAKE_VALOR_DRAINED
 	goto CanalaveCity_Gym_EventScript_GiveTM
 	end
 

@@ -176,21 +176,21 @@
   "warp_events": [
     {
       "x": 15,
-      "y": 3,
+      "y": 4,
       "elevation": 0,
       "dest_map": "MAP_CELESTIC_NORTH_HOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 2,
-      "y": 3,
+      "x": 3,
+      "y": 4,
       "elevation": 0,
       "dest_map": "MAP_CELESTIC_NORTHWEST_HOUSE",
       "dest_warp_id": "0"
     },
     {
       "x": 25,
-      "y": 3,
+      "y": 4,
       "elevation": 0,
       "dest_map": "MAP_CELESTIC_NORTHEAST_HOUSE",
       "dest_warp_id": "0"

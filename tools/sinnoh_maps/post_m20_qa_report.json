@@ -7,25 +7,107 @@
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 47,
-      "walkable_blocked": 0,
+      "mismatch": 118,
+      "walkable_blocked": 31,
       "notes": [],
-      "samples": []
+      "samples": [
+        [
+          8,
+          1,
+          476
+        ],
+        [
+          9,
+          1,
+          477
+        ],
+        [
+          22,
+          1,
+          476
+        ],
+        [
+          23,
+          1,
+          477
+        ],
+        [
+          8,
+          2,
+          468
+        ],
+        [
+          9,
+          2,
+          469
+        ],
+        [
+          22,
+          2,
+          468
+        ],
+        [
+          23,
+          2,
+          469
+        ]
+      ]
     },
     "Route201": {
       "status": "PASS",
       "size": "64x32",
       "plat_size": "64x32",
-      "mismatch": 33,
-      "walkable_blocked": 0,
+      "mismatch": 51,
+      "walkable_blocked": 19,
       "notes": [],
-      "samples": []
+      "samples": [
+        [
+          50,
+          14,
+          468
+        ],
+        [
+          53,
+          14,
+          469
+        ],
+        [
+          50,
+          15,
+          476
+        ],
+        [
+          53,
+          15,
+          477
+        ],
+        [
+          50,
+          16,
+          468
+        ],
+        [
+          50,
+          17,
+          476
+        ],
+        [
+          53,
+          17,
+          477
+        ],
+        [
+          4,
+          18,
+          468
+        ]
+      ]
     },
     "SandgemTown": {
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 68,
+      "mismatch": 71,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -34,16 +116,57 @@
       "status": "PASS",
       "size": "32x32",
       "plat_size": "32x32",
-      "mismatch": 25,
-      "walkable_blocked": 0,
+      "mismatch": 85,
+      "walkable_blocked": 64,
       "notes": [],
-      "samples": []
+      "samples": [
+        [
+          12,
+          8,
+          468
+        ],
+        [
+          13,
+          8,
+          469
+        ],
+        [
+          14,
+          8,
+          468
+        ],
+        [
+          15,
+          8,
+          469
+        ],
+        [
+          16,
+          8,
+          468
+        ],
+        [
+          17,
+          8,
+          469
+        ],
+        [
+          18,
+          8,
+          468
+        ],
+        [
+          19,
+          8,
+          469
+        ]
+      ]
     },
     "JubilifeCity": {
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 514,
+      "mismatch": 516,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []
@@ -52,16 +175,57 @@
       "status": "PASS",
       "size": "64x32",
       "plat_size": "64x32",
-      "mismatch": 16,
-      "walkable_blocked": 0,
+      "mismatch": 124,
+      "walkable_blocked": 107,
       "notes": [],
-      "samples": []
+      "samples": [
+        [
+          29,
+          8,
+          469
+        ],
+        [
+          34,
+          8,
+          468
+        ],
+        [
+          29,
+          9,
+          477
+        ],
+        [
+          34,
+          9,
+          476
+        ],
+        [
+          35,
+          9,
+          477
+        ],
+        [
+          36,
+          9,
+          476
+        ],
+        [
+          37,
+          9,
+          477
+        ],
+        [
+          38,
+          9,
+          476
+        ]
+      ]
     },
     "OreburghCity": {
       "status": "PASS",
       "size": "64x64",
       "plat_size": "64x64",
-      "mismatch": 1034,
+      "mismatch": 1037,
       "walkable_blocked": 0,
       "notes": [],
       "samples": []

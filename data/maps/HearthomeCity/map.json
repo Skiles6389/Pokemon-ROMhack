@@ -496,7 +496,7 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 22,
+      "x": 25,
       "y": 25,
       "elevation": 0,
       "dest_map": "MAP_HEARTHOME_CITY_BEBES_HOUSE",
@@ -623,13 +623,6 @@
     },
     {
       "x": 38,
-      "y": 25,
-      "elevation": 0,
-      "dest_map": "MAP_HEARTHOME_CITY_NORTHEAST_HOUSE",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 39,
       "y": 25,
       "elevation": 0,
       "dest_map": "MAP_HEARTHOME_CITY_NORTHEAST_HOUSE",

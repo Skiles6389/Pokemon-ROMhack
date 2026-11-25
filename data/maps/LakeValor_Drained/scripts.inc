@@ -288,6 +288,9 @@ LakeValor_Drained_EventScript_SaturnDefeated::
 	removeobject LOCALID_LAKE_VALOR_GRUNT3
 	setflag FLAG_HIDE_LAKE_VALOR_SATURN
 	setflag FLAG_HIDE_LAKE_VALOR_GRUNTS
+	@ Platinum: Verity Galactic (Mars/grunts) and Acuity Jupiter unlock after Saturn.
+	clearflag FLAG_HIDE_LAKE_VERITY_TEAM_GALACTIC
+	clearflag FLAG_HIDE_LAKE_ACUITY_JUPITER
 	release
 	end
 

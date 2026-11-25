@@ -25,7 +25,11 @@ Route202_EventScript_LucasIntro::
 Route202_EventScript_DoCatch::
 	closemessage
 	setvar VAR_ROUTE202_STATE, 1
+	@ Mirror Emerald Wally: temp weak mon so the scripted controller never KOs with the starter.
+	special SavePlayerParty
+	special LoadWallyZigzagoon
 	special StartRoute202CatchTutorial
+	special LoadPlayerParty
 	lock
 	faceplayer
 	checkplayergender
