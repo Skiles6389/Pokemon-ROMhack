@@ -268,8 +268,8 @@ MAKEFLAGS += --no-print-directory
 # Delete files that weren't built properly
 .DELETE_ON_ERROR:
 
-RULES_NO_SCAN += libagbsyscall clean clean-assets tidy tidymodern tidycheck tidyrelease generated clean-generated clean-teachables clean-teachables_intermediates
-.PHONY: all rom agbcc modern compare check debug release
+RULES_NO_SCAN += libagbsyscall clean clean-assets tidy tidymodern tidycheck tidyrelease generated clean-generated clean-teachables clean-teachables_intermediates mapgrid
+.PHONY: all rom agbcc modern compare check debug release mapgrid
 .PHONY: $(RULES_NO_SCAN)
 
 infoshell = $(foreach line, $(shell $1 | sed "s/ /__SPACE__/g"), $(info $(subst __SPACE__, ,$(line))))
@@ -588,6 +588,11 @@ endif
 $(ROM): $(ELF)
 	$(OBJCOPY) -O binary $< $@
 	$(FIX) $@ -p --silent
+
+# ASCII map compiler (maps_src/*.grid → layout bins + map.json events).
+# Generated files are committed; `make` / `make rom` do NOT depend on this.
+mapgrid:
+	python3 tools/mapgrid/compile_maps.py
 
 emerald: all
 firered: all

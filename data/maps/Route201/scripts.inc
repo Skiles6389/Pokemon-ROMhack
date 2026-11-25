@@ -52,7 +52,7 @@ Route201_EventScript_BarryMeet::
 	closemessage
 	@ Lead onto the clear west corridor (x→0,y=22), then land on the matching
 	@ VerityLakefront east-path tile (seamless Route201 connection twin). Never
-	@ warp into trees — lakefront path runs to the Lake Verity cave mouth.
+	@ warp into trees — lakefront grass path opens to the Lake Verity gap.
 	fadescreen FADE_TO_BLACK
 	setobjectxy OBJ_EVENT_ID_PLAYER, 4, 22
 	setobjectxyperm LOCALID_ROUTE201_BARRY, 5, 22

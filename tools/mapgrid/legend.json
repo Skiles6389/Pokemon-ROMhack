@@ -1,0 +1,31 @@
+{
+  "chars": {
+    "T": { "kind": "tree", "walkable": false },
+    ".": { "kind": "grass", "metatile": 1, "collision": 0, "elevation": 3, "walkable": true },
+    ",": { "kind": "tall_grass", "metatile": 13, "collision": 0, "elevation": 3, "walkable": true },
+    "=": { "kind": "path", "walkable": true },
+    "~": { "kind": "water", "metatile": 368, "collision": 0, "elevation": 1, "walkable": false, "surfable": true },
+    "L": { "kind": "ledge", "walkable": false },
+    "F": { "kind": "fence", "metatile": 121, "collision": 1, "elevation": 3, "walkable": false },
+    "f": { "kind": "flower", "metatile": 4, "collision": 0, "elevation": 3, "walkable": true },
+    "S": { "kind": "sign", "metatile": 3, "collision": 1, "elevation": 3, "walkable": false },
+    "R": { "kind": "rock", "metatile": 121, "collision": 1, "elevation": 3, "walkable": false },
+    "#": { "kind": "solid", "metatile": 121, "collision": 1, "elevation": 3, "walkable": false },
+    "_": { "kind": "pave", "metatile": 1, "collision": 0, "elevation": 3, "walkable": true },
+    ":": { "kind": "sand", "metatile": 289, "collision": 0, "elevation": 3, "walkable": true },
+    "W": { "kind": "warp", "metatile": 1, "collision": 0, "elevation": 3, "walkable": true },
+    " ": { "kind": "grass", "metatile": 1, "collision": 0, "elevation": 3, "walkable": true }
+  },
+  "notes": {
+    "T": "Dense forest — compiler places 2x2 tree stamps via even-aligned autotiling",
+    "=": "Dirt/sand path — Emerald path 3x3 autotiled from 4-neighbour connectivity",
+    "~": "Water — surfable (elev 1); shoreline uses water metatile",
+    "L": "South-jump ledge (0x0D5/0x0D6)",
+    "F": "Wooden/brown fence or rock ledge barrier",
+    "f": "Flower tuft (General 0x004)",
+    "S": "Signpost — emits bg_sign_event (script from @sign)",
+    "W": "Warp tile — dest from @warp header lines (in order)",
+    "stamp anchors": "Single letters declared with @stamp CHAR STAMP_NAME DEST_MAP DEST_WARP_ID — door lands on CHAR",
+    ":": "Sand/dirt accent tile (General 0x121)"
+  }
+}
