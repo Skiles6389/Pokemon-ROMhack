@@ -71,7 +71,8 @@ WALKABLE_METATILES = {
     MT_GRASS, MT_TALL, MT_WATER, MT_SAND, CAVE_FLOOR, IN_FLOOR, IN_DOOR,
     MT_LEDGE_A, MT_LEDGE_B, 0x00E, 0x015, 0x048, 0x049, 0x201, 0x209, 0x20E,
 } | PATH_METATILES
-WATER_METATILES = {MT_WATER}
+# Calm + reflective + rough water — all need Surf elev packing (coll=0, elev=1).
+WATER_METATILES = {MT_WATER, 0x0A1, 0x14E, 0x14F}
 
 
 def is_plat_path_behavior(beh: int) -> bool:
@@ -279,8 +280,11 @@ def encode_map_cell(mt: int, *, collision: int | None = None) -> int:
         collision = 1 if is_solid_metatile(mt) else 0
     collision = 1 if collision else 0
     if mt in WATER_METATILES:
-        elev = 3
-        collision = 0  # Surf handles water; keep walk-block off for Surfing
+        # Match vanilla Emerald ocean/pond packing (Route103/104/105):
+        # collision=0 + elevation=1 → COLLISION_ELEVATION_MISMATCH vs player
+        # elev 3, which blocks walking and enables the Surf prompt.
+        elev = 1
+        collision = 0
     elif collision:
         elev = 0
     else:
@@ -314,32 +318,65 @@ def pack_reencode(blob: bytes) -> bytes:
 
 
 def place_complete_trees(solid: list[list[bool]], *, cave=False, indoor=False):
-    """Place full 2x2 Emerald trees on even-aligned solid blocks; rocks elsewhere.
+    """Place full 2x2 Emerald trees on solid blocks; avoid orphan halves.
 
-    Parity tiling of every solid cell produced unfinished tree halves wherever
-    Platinum solids were not a complete 2x2 (cliffs, fences, building footprints).
+    Pass 1: even-aligned solid quads → trees (or cave/indoor walls).
+    Pass 2 (outdoor): leftover solids try any TL that covers them, borrowing
+    adjacent solid/unused cells so town tree rings stay complete 2x2s.
+    Pass 3: still-unused outdoor leftovers stay solid via rock only when they
+    cannot form a tree (true cliff stubs); cave/indoor always use walls.
     """
     h, w = len(solid), len(solid[0])
     grid = [[0] * w for _ in range(h)]
     used = [[False] * w for _ in range(h)]
     wall = IN_WALL if indoor else (CAVE_WALL if cave else MT_ROCK)
 
+    def stamp_tree(tx: int, ty: int) -> None:
+        grid[ty][tx] = MT_TREE_TL
+        grid[ty][tx + 1] = MT_TREE_TR
+        grid[ty + 1][tx] = MT_TREE_BL
+        grid[ty + 1][tx + 1] = MT_TREE_BR
+        for dy in range(2):
+            for dx in range(2):
+                used[ty + dy][tx + dx] = True
+                solid[ty + dy][tx + dx] = True
+
+    def stamp_wall(tx: int, ty: int) -> None:
+        for dy in range(2):
+            for dx in range(2):
+                grid[ty + dy][tx + dx] = wall
+                used[ty + dy][tx + dx] = True
+
     for y in range(0, h - 1, 2):
         for x in range(0, w - 1, 2):
             if solid[y][x] and solid[y][x + 1] and solid[y + 1][x] and solid[y + 1][x + 1]:
                 if indoor or cave:
-                    for dy in range(2):
-                        for dx in range(2):
-                            grid[y + dy][x + dx] = wall
-                            used[y + dy][x + dx] = True
+                    stamp_wall(x, y)
                 else:
-                    grid[y][x] = MT_TREE_TL
-                    grid[y][x + 1] = MT_TREE_TR
-                    grid[y + 1][x] = MT_TREE_BL
-                    grid[y + 1][x + 1] = MT_TREE_BR
-                    for dy in range(2):
-                        for dx in range(2):
-                            used[y + dy][x + dx] = True
+                    stamp_tree(x, y)
+
+    if not indoor and not cave:
+        # Greedy non-overlapping: cover leftover solids with 2x2 trees.
+        # Require ≥3 of 4 cells already solid so we don't eat walk corridors.
+        changed = True
+        while changed:
+            changed = False
+            for y in range(h):
+                for x in range(w):
+                    if not solid[y][x] or used[y][x]:
+                        continue
+                    for tx, ty in ((x & ~1, y & ~1), (x, y), (x - 1, y), (x, y - 1), (x - 1, y - 1)):
+                        if tx < 0 or ty < 0 or tx + 1 >= w or ty + 1 >= h:
+                            continue
+                        cells = [(tx, ty), (tx + 1, ty), (tx, ty + 1), (tx + 1, ty + 1)]
+                        if any(used[cy][cx] for cx, cy in cells):
+                            continue
+                        solid_n = sum(1 for cx, cy in cells if solid[cy][cx])
+                        if solid_n < 3:
+                            continue
+                        stamp_tree(tx, ty)
+                        changed = True
+                        break
 
     for y in range(h):
         for x in range(w):

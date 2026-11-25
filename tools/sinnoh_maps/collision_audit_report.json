@@ -225,7 +225,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
+      "plat_opened": 2,
       "plat_blocked": 4,
       "plat_total": 4096,
       "issues": []
@@ -265,7 +265,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 10,
+      "plat_opened": 13,
       "plat_blocked": 0,
       "plat_total": 3072,
       "issues": []
@@ -475,8 +475,8 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 33,
-      "plat_blocked": 0,
+      "plat_opened": 32,
+      "plat_blocked": 19,
       "plat_total": 2048,
       "issues": []
     },
@@ -485,8 +485,8 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 25,
-      "plat_blocked": 0,
+      "plat_opened": 21,
+      "plat_blocked": 64,
       "plat_total": 1024,
       "issues": []
     },
@@ -495,8 +495,8 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 16,
-      "plat_blocked": 0,
+      "plat_opened": 17,
+      "plat_blocked": 107,
       "plat_total": 2048,
       "issues": []
     },
@@ -785,7 +785,7 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
+      "plat_opened": 3,
       "plat_blocked": 0,
       "plat_total": 1024,
       "issues": []
@@ -895,8 +895,8 @@
       "status": "PASS",
       "strip_rate": 0.0,
       "solid_id_walkable_coll": 0,
-      "plat_opened": 0,
-      "plat_blocked": 29,
+      "plat_opened": 34,
+      "plat_blocked": 62,
       "plat_total": 1024,
       "issues": []
     },
