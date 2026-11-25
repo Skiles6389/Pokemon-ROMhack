@@ -33,14 +33,14 @@
   "warp_events": [
     {
       "x": 3,
-      "y": 8,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_FLOAROMA_TOWN",
       "dest_warp_id": "3"
     },
     {
       "x": 4,
-      "y": 8,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_FLOAROMA_TOWN",
       "dest_warp_id": "3"

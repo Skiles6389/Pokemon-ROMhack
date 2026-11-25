@@ -50,10 +50,18 @@ Route201_EventScript_BarryMeet::
 	waitmovement 0
 	msgbox Route201_Text_BarryMeet, MSGBOX_DEFAULT
 	closemessage
-	@ Short lead-up: jog west toward Verity Lakefront (Platinum walk-up), then
-	@ land on the lakefront so the player walks into Lake Verity via the cave warp.
-	applymovement LOCALID_ROUTE201_BARRY, Route201_Movement_BarryLeadsWest
+	@ Lead onto the clear west corridor (x→0,y=22), then land on the matching
+	@ VerityLakefront east-path tile (seamless Route201 connection twin). Never
+	@ warp into trees — lakefront path runs to the Lake Verity cave mouth.
+	fadescreen FADE_TO_BLACK
+	setobjectxy OBJ_EVENT_ID_PLAYER, 4, 22
+	setobjectxyperm LOCALID_ROUTE201_BARRY, 5, 22
+	addobject LOCALID_ROUTE201_BARRY
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	applymovement LOCALID_ROUTE201_BARRY, Common_Movement_FaceLeft
 	waitmovement 0
+	fadescreen FADE_FROM_BLACK
+	applymovement LOCALID_ROUTE201_BARRY, Route201_Movement_BarryLeadsWest
 	applymovement OBJ_EVENT_ID_PLAYER, Route201_Movement_PlayerFollowsWest
 	waitmovement 0
 	removeobject LOCALID_ROUTE201_BARRY
@@ -63,7 +71,8 @@ Route201_EventScript_BarryMeet::
 	clearflag FLAG_HIDE_LAKE_VERITY_ASSISTANT
 	clearflag FLAG_HIDE_LAKE_VERITY_BRIEFCASE
 	setvar VAR_ROUTE201_STATE, 1
-	warpsilent MAP_VERITY_LAKEFRONT, 4, 8
+	@ Route201 (0,22) connects to VerityLakefront (31,11); land one tile in on grass.
+	warpsilent MAP_VERITY_LAKEFRONT, 30, 11
 	waitstate
 	releaseall
 	end
@@ -308,8 +317,9 @@ Route201_Movement_PlayerFollows:
 	walk_fast_up
 	step_end
 
+@ From (5,22)/(4,22) on the clear west corridor → walk to the map edge.
 Route201_Movement_BarryLeadsWest:
-	walk_fast_up
+	walk_fast_left
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
@@ -318,7 +328,7 @@ Route201_Movement_BarryLeadsWest:
 	step_end
 
 Route201_Movement_PlayerFollowsWest:
-	walk_fast_up
+	walk_fast_left
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left

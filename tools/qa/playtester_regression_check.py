@@ -6,6 +6,7 @@
 3) Sandgem / Jubilife Pokémon Center outdoor warps enterable
 4) Barry1 AfterBattle branches on GetBattleOutcome (win vs loss lines)
 5) Scripted applymovement vs map collision (movement_collision_check)
+6) Warp / warpsilent landings walkable + reachable exit (warp_landing_check)
 """
 from __future__ import annotations
 
@@ -113,12 +114,27 @@ def check_movement_collision() -> None:
             FAILS.append(f"  mov: {line}")
 
 
+def check_warp_landings() -> None:
+    script = REPO / "tools/qa/warp_landing_check.py"
+    proc = subprocess.run(
+        [sys.executable, str(script)],
+        cwd=str(REPO),
+        capture_output=True,
+        text=True,
+    )
+    if proc.returncode != 0:
+        FAILS.append("warp_landing_check failed")
+        for line in (proc.stdout + proc.stderr).splitlines()[:25]:
+            FAILS.append(f"  warp: {line}")
+
+
 def main() -> int:
     check_trainer_genders()
     check_ledges()
     check_center_doors()
     check_barry1_outcome_dialogue()
     check_movement_collision()
+    check_warp_landings()
     if FAILS:
         print(f"FAIL ({len(FAILS)}):")
         for f in FAILS[:40]:
