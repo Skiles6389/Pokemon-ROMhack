@@ -39,8 +39,26 @@ EternaCity_EventScript_CynthiaDone::
 	end
 
 EternaCity_EventScript_Gardenia::
-	msgbox EternaCity_Text_GardeniaCameo, MSGBOX_NPC
+	lock
+	faceplayer
+	msgbox EternaCity_Text_GardeniaCameo, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ETERNA_CITY_GARDENIA, EternaCity_Movement_GardeniaLeave
+	waitmovement 0
+	removeobject LOCALID_ETERNA_CITY_GARDENIA
+	setflag FLAG_HIDE_ETERNA_CITY_GARDENIA
+	release
 	end
+
+EternaCity_Movement_GardeniaLeave:
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
 
 EternaCity_EventScript_GalacticGrunt1::
 	goto_if_set FLAG_HIDE_ETERNA_CITY_GALACTIC, EternaCity_EventScript_GruntGone

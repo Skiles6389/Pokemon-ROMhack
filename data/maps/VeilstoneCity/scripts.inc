@@ -262,13 +262,33 @@ VeilstoneCity_EventScript_MayleneCameo::
 	faceplayer
 	goto_if_eq VAR_VEILSTONE_CITY_STATE, 2, VeilstoneCity_EventScript_MayleneAfter
 	msgbox VeilstoneCity_Text_MayleneCameo, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_VEILSTONE_MAYLENE, VeilstoneCity_Movement_MayleneLeave
+	waitmovement 0
+	removeobject LOCALID_VEILSTONE_MAYLENE
+	setflag FLAG_HIDE_VEILSTONE_MAYLENE
 	release
 	end
 
 VeilstoneCity_EventScript_MayleneAfter::
 	msgbox VeilstoneCity_Text_MayleneAfter, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_VEILSTONE_MAYLENE, VeilstoneCity_Movement_MayleneLeave
+	waitmovement 0
+	removeobject LOCALID_VEILSTONE_MAYLENE
+	setflag FLAG_HIDE_VEILSTONE_MAYLENE
 	release
 	end
+
+VeilstoneCity_Movement_MayleneLeave:
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 VeilstoneCity_Text_MayleneCameo:
 	.string "MAYLENE: You fought with heart in\n"
