@@ -32,12 +32,16 @@ CanalaveCity_EventScript_BattleTurtwig::
 	end
 
 CanalaveCity_EventScript_AfterBarry::
+	fadescreen FADE_FROM_BLACK
 	msgbox CanalaveCity_Text_BarryAfter, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_CANALAVE_CITY_RIVAL_BRIDGE, CanalaveCity_Movement_BarryLeave
 	waitmovement 0
 	removeobject LOCALID_CANALAVE_CITY_RIVAL_BRIDGE
 	setflag FLAG_HIDE_CANALAVE_CITY_RIVAL_BRIDGE
+	settrainerflag TRAINER_BARRY_4_CHIMCHAR
+	settrainerflag TRAINER_BARRY_4_PIPLUP
+	settrainerflag TRAINER_BARRY_4_TURTWIG
 	release
 	end
 

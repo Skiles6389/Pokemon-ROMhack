@@ -5,6 +5,18 @@ artifacts — not committed.
 
 ## Findings this pass
 
+### Softlock: Barry 1 (Route 201) win/lose — FIXED
+
+| Issue | Cause | Fix |
+|-------|-------|-----|
+| Lose → Barry still there, scene stuck | `continueScript=FALSE` → whiteout; state stayed `3` | `FLAG_TEMP_5` (`B_FLAG_NO_WHITEOUT`) + `trainerbattle_no_intro` → shared `AfterBattle` |
+| Rematch win → black screen | `OnFrame` `BarryRematch` while state=`3` re-entered battle / broken return | Removed rematch OnFrame; heal + `fadescreen FADE_FROM_BLACK` + hide Barry / state=`4` |
+| Could re-fight | Hide flag / trainer flags not set on both outcomes | `setflag FLAG_HIDE_ROUTE201_BARRY` + `settrainerflag` all Barry_1 variants |
+
+`tools/qa/story_battle_audit.py` + playtest `check_barry1` cover **win and lose** outcomes.
+
+Other story Barry fights (R203 / Hearthome / Pastoria / Canalave) converted to `trainerbattle_no_intro` + `goto After*` + fade (lose still whiteouts; rematch via trigger). Commanders / Cynthia already `no_intro` / single — audited OK.
+
 ### Fixed earlier on this milestone (still covered by harness)
 
 | Issue | Fix |

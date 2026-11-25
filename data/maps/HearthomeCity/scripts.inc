@@ -18,6 +18,9 @@ HearthomeCity_EventScript_BarryTrigger::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox HearthomeCity_Text_BarryIntro, MSGBOX_DEFAULT
+	closemessage
+	msgbox HearthomeCity_Text_BarryChallenge, MSGBOX_DEFAULT
+	closemessage
 	switch VAR_ROUTE201_BARRY_MON
 	case 0, HearthomeCity_EventScript_BattleChimchar
 	case 1, HearthomeCity_EventScript_BattlePiplup
@@ -37,24 +40,31 @@ HearthomeCity_EventScript_BarryAlreadyDone::
 	end
 
 HearthomeCity_EventScript_BattleChimchar::
-	trainerbattle LOCALID_HEARTHOME_BARRY, TRAINER_BARRY_3_CHIMCHAR, HearthomeCity_Text_BarryChallenge, HearthomeCity_Text_BarryDefeat, HearthomeCity_EventScript_AfterBarry, LOCALID_NONE, TRAINER_NONE, NULL, NULL, NULL, NULL, NULL, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE
+	trainerbattle_no_intro TRAINER_BARRY_3_CHIMCHAR, HearthomeCity_Text_BarryDefeat
+	goto HearthomeCity_EventScript_AfterBarry
 	end
 
 HearthomeCity_EventScript_BattlePiplup::
-	trainerbattle LOCALID_HEARTHOME_BARRY, TRAINER_BARRY_3_PIPLUP, HearthomeCity_Text_BarryChallenge, HearthomeCity_Text_BarryDefeat, HearthomeCity_EventScript_AfterBarry, LOCALID_NONE, TRAINER_NONE, NULL, NULL, NULL, NULL, NULL, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE
+	trainerbattle_no_intro TRAINER_BARRY_3_PIPLUP, HearthomeCity_Text_BarryDefeat
+	goto HearthomeCity_EventScript_AfterBarry
 	end
 
 HearthomeCity_EventScript_BattleTurtwig::
-	trainerbattle LOCALID_HEARTHOME_BARRY, TRAINER_BARRY_3_TURTWIG, HearthomeCity_Text_BarryChallenge, HearthomeCity_Text_BarryDefeat, HearthomeCity_EventScript_AfterBarry, LOCALID_NONE, TRAINER_NONE, NULL, NULL, NULL, NULL, NULL, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE
+	trainerbattle_no_intro TRAINER_BARRY_3_TURTWIG, HearthomeCity_Text_BarryDefeat
+	goto HearthomeCity_EventScript_AfterBarry
 	end
 
 HearthomeCity_EventScript_AfterBarry::
+	fadescreen FADE_FROM_BLACK
 	msgbox HearthomeCity_Text_BarryAfter, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_HEARTHOME_BARRY, HearthomeCity_Movement_BarryLeave
 	waitmovement 0
 	removeobject LOCALID_HEARTHOME_BARRY
 	setflag FLAG_HIDE_HEARTHOME_BARRY
+	settrainerflag TRAINER_BARRY_3_CHIMCHAR
+	settrainerflag TRAINER_BARRY_3_PIPLUP
+	settrainerflag TRAINER_BARRY_3_TURTWIG
 	setvar VAR_HEARTHOME_CITY_STATE, 1
 	releaseall
 	end

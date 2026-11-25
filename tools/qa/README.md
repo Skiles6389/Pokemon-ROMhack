@@ -39,6 +39,9 @@ Outputs (not committed when large):
    walk-into-solid/water asserts, catch-tutorial wiring.
 5. **mGBA smoke**: boots `pokeemerald.gba` with HLE BIOS (no Nintendo BIOS)
    under `xvfb-run` / timeout; runs `make check TESTS=…` for catch-tutorial.
+6. **Story battle audit** (`story_battle_audit.py`): Barry 1 must continue on
+   win **and** lose (shared AfterBattle, no OnFrame rematch); other rivals /
+   commanders / Cynthia checked for clean `trainerbattle_no_intro` win paths.
 
 ## CI / PR
 

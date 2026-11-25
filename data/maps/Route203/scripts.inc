@@ -36,6 +36,9 @@ Route203_EventScript_BarryTalk::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox Route203_Text_BarryIntro, MSGBOX_DEFAULT
+	closemessage
+	msgbox Route203_Text_BarryChallenge, MSGBOX_DEFAULT
+	closemessage
 	switch VAR_ROUTE201_BARRY_MON
 	case BARRY_MON_CHIMCHAR, Route203_EventScript_BattleChimchar
 	case BARRY_MON_PIPLUP, Route203_EventScript_BattlePiplup
@@ -43,18 +46,22 @@ Route203_EventScript_BarryTalk::
 	end
 
 Route203_EventScript_BattleChimchar::
-	trainerbattle LOCALID_ROUTE203_BARRY, TRAINER_BARRY_2_CHIMCHAR, Route203_Text_BarryChallenge, Route203_Text_BarryDefeat, Route203_EventScript_AfterBattle, LOCALID_NONE, TRAINER_NONE, NULL, NULL, NULL, NULL, NULL, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE
+	trainerbattle_no_intro TRAINER_BARRY_2_CHIMCHAR, Route203_Text_BarryDefeat
+	goto Route203_EventScript_AfterBattle
 	end
 
 Route203_EventScript_BattlePiplup::
-	trainerbattle LOCALID_ROUTE203_BARRY, TRAINER_BARRY_2_PIPLUP, Route203_Text_BarryChallenge, Route203_Text_BarryDefeat, Route203_EventScript_AfterBattle, LOCALID_NONE, TRAINER_NONE, NULL, NULL, NULL, NULL, NULL, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE
+	trainerbattle_no_intro TRAINER_BARRY_2_PIPLUP, Route203_Text_BarryDefeat
+	goto Route203_EventScript_AfterBattle
 	end
 
 Route203_EventScript_BattleTurtwig::
-	trainerbattle LOCALID_ROUTE203_BARRY, TRAINER_BARRY_2_TURTWIG, Route203_Text_BarryChallenge, Route203_Text_BarryDefeat, Route203_EventScript_AfterBattle, LOCALID_NONE, TRAINER_NONE, NULL, NULL, NULL, NULL, NULL, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE
+	trainerbattle_no_intro TRAINER_BARRY_2_TURTWIG, Route203_Text_BarryDefeat
+	goto Route203_EventScript_AfterBattle
 	end
 
 Route203_EventScript_AfterBattle::
+	fadescreen FADE_FROM_BLACK
 	msgbox Route203_Text_BarryAfter, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ROUTE203_BARRY, Route203_Movement_BarryLeaveLow
@@ -65,6 +72,9 @@ Route203_EventScript_AfterBattle::
 Route203_EventScript_BarryGone::
 	removeobject LOCALID_ROUTE203_BARRY
 	setflag FLAG_HIDE_ROUTE203_BARRY
+	settrainerflag TRAINER_BARRY_2_CHIMCHAR
+	settrainerflag TRAINER_BARRY_2_PIPLUP
+	settrainerflag TRAINER_BARRY_2_TURTWIG
 	setvar VAR_ROUTE203_STATE, 1
 	releaseall
 	end

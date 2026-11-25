@@ -65,6 +65,7 @@ def main() -> int:
         rc |= run(cmd)
 
     rc |= run([sys.executable, str(HERE / "auto_review.py"), "--out", str(args.out / "auto_review.json")])
+    rc |= run([sys.executable, str(HERE / "story_battle_audit.py"), "--out", str(args.out / "story_battle_audit.json")])
     rc |= run([sys.executable, str(HERE / "early_game_playtest.py"), "--out", str(args.out / "playtest")])
 
     mgba_rep = None

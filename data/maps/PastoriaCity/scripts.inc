@@ -17,6 +17,9 @@ PastoriaCity_EventScript_BarryTrigger::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	msgbox PastoriaCity_Text_BarryIntro, MSGBOX_DEFAULT
+	closemessage
+	msgbox PastoriaCity_Text_BarryChallenge, MSGBOX_DEFAULT
+	closemessage
 	switch VAR_ROUTE201_BARRY_MON
 	case 0, PastoriaCity_EventScript_BattleChimchar
 	case 1, PastoriaCity_EventScript_BattlePiplup
@@ -28,24 +31,31 @@ PastoriaCity_EventScript_BarryAlreadyDone::
 	end
 
 PastoriaCity_EventScript_BattleChimchar::
-	trainerbattle LOCALID_PASTORIA_BARRY, TRAINER_BARRY_4_CHIMCHAR, PastoriaCity_Text_BarryChallenge, PastoriaCity_Text_BarryDefeat, PastoriaCity_EventScript_AfterBarry, LOCALID_NONE, TRAINER_NONE, NULL, NULL, NULL, NULL, NULL, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE
+	trainerbattle_no_intro TRAINER_BARRY_4_CHIMCHAR, PastoriaCity_Text_BarryDefeat
+	goto PastoriaCity_EventScript_AfterBarry
 	end
 
 PastoriaCity_EventScript_BattlePiplup::
-	trainerbattle LOCALID_PASTORIA_BARRY, TRAINER_BARRY_4_PIPLUP, PastoriaCity_Text_BarryChallenge, PastoriaCity_Text_BarryDefeat, PastoriaCity_EventScript_AfterBarry, LOCALID_NONE, TRAINER_NONE, NULL, NULL, NULL, NULL, NULL, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE
+	trainerbattle_no_intro TRAINER_BARRY_4_PIPLUP, PastoriaCity_Text_BarryDefeat
+	goto PastoriaCity_EventScript_AfterBarry
 	end
 
 PastoriaCity_EventScript_BattleTurtwig::
-	trainerbattle LOCALID_PASTORIA_BARRY, TRAINER_BARRY_4_TURTWIG, PastoriaCity_Text_BarryChallenge, PastoriaCity_Text_BarryDefeat, PastoriaCity_EventScript_AfterBarry, LOCALID_NONE, TRAINER_NONE, NULL, NULL, NULL, NULL, NULL, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE
+	trainerbattle_no_intro TRAINER_BARRY_4_TURTWIG, PastoriaCity_Text_BarryDefeat
+	goto PastoriaCity_EventScript_AfterBarry
 	end
 
 PastoriaCity_EventScript_AfterBarry::
+	fadescreen FADE_FROM_BLACK
 	msgbox PastoriaCity_Text_BarryAfter, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_PASTORIA_BARRY, PastoriaCity_Movement_BarryLeave
 	waitmovement 0
 	removeobject LOCALID_PASTORIA_BARRY
 	setflag FLAG_HIDE_PASTORIA_BARRY
+	settrainerflag TRAINER_BARRY_4_CHIMCHAR
+	settrainerflag TRAINER_BARRY_4_PIPLUP
+	settrainerflag TRAINER_BARRY_4_TURTWIG
 	setvar VAR_PASTORIA_CITY_STATE, 1
 	releaseall
 	end

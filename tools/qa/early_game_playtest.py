@@ -40,7 +40,7 @@ MAPS = REPO / "data/maps"
 # Stops Chris wants exercised (debug-warp style checkpoints)
 ROUTE = [
     {"map": "TwinleafTown", "label": "new_game_twinleaf", "check_doors": True},
-    {"map": "Route201", "label": "route201", "check_doors": False},
+    {"map": "Route201", "label": "route201", "check_doors": False, "check_barry1": True},
     {"map": "LakeVerity", "label": "lake_verity_starter", "check_doors": False, "optional": True},
     {"map": "SandgemTown", "label": "sandgem", "check_doors": True},
     {"map": "Route202", "label": "route202_catch_tutorial", "check_catch": True},
@@ -48,6 +48,27 @@ ROUTE = [
     {"map": "Route203", "label": "route203", "check_doors": False},
     {"map": "OreburghCity", "label": "oreburgh", "check_doors": True},
 ]
+
+
+def check_barry1_continue_on_loss() -> list[str]:
+    """Win AND lose must share AfterBattle; no OnFrame rematch softlock."""
+    fails: list[str] = []
+    text = (MAPS / "Route201" / "scripts.inc").read_text()
+    for needle in (
+        "setflag FLAG_TEMP_5",
+        "trainerbattle_no_intro TRAINER_BARRY_1_",
+        "special HealPlayerParty",
+        "goto Route201_EventScript_AfterBattle",
+        "fadescreen FADE_FROM_BLACK",
+        "setflag FLAG_HIDE_ROUTE201_BARRY",
+        "setvar VAR_ROUTE201_STATE, 4",
+    ):
+        if needle not in text:
+            fails.append(f"Barry1 missing {needle}")
+    if "Route201_EventScript_BarryRematch" in text:
+        fails.append("Barry1 still has BarryRematch (lose→rematch black-screen)")
+    return fails
+
 
 
 def load_cells(name: str):
@@ -209,6 +230,13 @@ def run(out: Path) -> dict:
         if stop.get("check_catch"):
             for msg in check_catch_tutorial():
                 stop_rep["issues"].append(msg)
+        if stop.get("check_barry1"):
+            for msg in check_barry1_continue_on_loss():
+                stop_rep["issues"].append(msg)
+            stop_rep["outcomes"] = {
+                "win": "Route201_EventScript_AfterBattle (Barry/Rowan leave, state=4)",
+                "lose": "same AfterBattle + HealPlayerParty (FLAG_TEMP_5 / B_FLAG_NO_WHITEOUT)",
+            }
         if stop_rep["issues"]:
             stop_rep["status"] = "FAIL"
             report["fail"] += 1

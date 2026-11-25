@@ -54,6 +54,12 @@ def run_audit() -> None:
         if name != "script_npc_exit_audit.py" and r.returncode != 0:
             raise SystemExit(f"FAIL: {name}")
         print(f"PASS {name}" if r.returncode == 0 else f"WARN {name} (advisory)")
+    story = REPO / "tools/qa/story_battle_audit.py"
+    if story.exists():
+        r = subprocess.run([sys.executable, str(story)], cwd=REPO)
+        if r.returncode != 0:
+            raise SystemExit("FAIL: story_battle_audit.py")
+        print("PASS story_battle_audit.py")
 
 
 def try_mgba_boot() -> None:

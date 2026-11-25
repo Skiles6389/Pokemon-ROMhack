@@ -28,7 +28,6 @@ Route201_EventScript_SetDawnGfx::
 
 Route201_OnFrame:
 	map_script_2 VAR_ROUTE201_STATE, 2, Route201_EventScript_RowanArrives
-	map_script_2 VAR_ROUTE201_STATE, 3, Route201_EventScript_BarryRematch
 	.2byte 0
 
 Route201_EventScript_BarryMeet::
@@ -113,18 +112,17 @@ Route201_EventScript_BarryChallenges::
 	waitmovement 0
 	msgbox Route201_Text_BarryAdvantage, MSGBOX_DEFAULT
 	closemessage
+	msgbox Route201_Text_BarryIntro, MSGBOX_DEFAULT
+	closemessage
+	@ Advance off OnFrame state 2 before battle so a return never re-runs RowanArrives.
+	@ Platinum: win OR lose continues the same post-battle script (no rematch / no whiteout).
 	setvar VAR_ROUTE201_STATE, 3
 	goto Route201_EventScript_StartBattle
 	end
 
-Route201_EventScript_BarryRematch::
-	lockall
-	msgbox Route201_Text_BarryRematch, MSGBOX_DEFAULT
-	closemessage
-	goto Route201_EventScript_StartBattle
-	end
-
 Route201_EventScript_StartBattle::
+	@ FLAG_TEMP_5 == B_FLAG_NO_WHITEOUT → continue script after loss (cleared on map transition).
+	setflag FLAG_TEMP_5
 	switch VAR_ROUTE201_BARRY_MON
 	case BARRY_MON_CHIMCHAR, Route201_EventScript_BattleChimchar
 	case BARRY_MON_PIPLUP, Route201_EventScript_BattlePiplup
@@ -132,18 +130,25 @@ Route201_EventScript_StartBattle::
 	end
 
 Route201_EventScript_BattleChimchar::
-	trainerbattle LOCALID_ROUTE201_BARRY, TRAINER_BARRY_1_CHIMCHAR, Route201_Text_BarryIntro, Route201_Text_BarryLoss, Route201_EventScript_AfterBattle, LOCALID_NONE, TRAINER_NONE, NULL, NULL, NULL, NULL, NULL, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE
+	trainerbattle_no_intro TRAINER_BARRY_1_CHIMCHAR, Route201_Text_BarryLoss
+	goto Route201_EventScript_AfterBattle
 	end
 
 Route201_EventScript_BattlePiplup::
-	trainerbattle LOCALID_ROUTE201_BARRY, TRAINER_BARRY_1_PIPLUP, Route201_Text_BarryIntro, Route201_Text_BarryLoss, Route201_EventScript_AfterBattle, LOCALID_NONE, TRAINER_NONE, NULL, NULL, NULL, NULL, NULL, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE
+	trainerbattle_no_intro TRAINER_BARRY_1_PIPLUP, Route201_Text_BarryLoss
+	goto Route201_EventScript_AfterBattle
 	end
 
 Route201_EventScript_BattleTurtwig::
-	trainerbattle LOCALID_ROUTE201_BARRY, TRAINER_BARRY_1_TURTWIG, Route201_Text_BarryIntro, Route201_Text_BarryLoss, Route201_EventScript_AfterBattle, LOCALID_NONE, TRAINER_NONE, NULL, NULL, NULL, NULL, NULL, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE
+	trainerbattle_no_intro TRAINER_BARRY_1_TURTWIG, Route201_Text_BarryLoss
+	goto Route201_EventScript_AfterBattle
 	end
 
 Route201_EventScript_AfterBattle::
+	@ Same post-script for win and loss (Platinum). Heal so a loss is not a softlock.
+	clearflag FLAG_TEMP_5
+	special HealPlayerParty
+	fadescreen FADE_FROM_BLACK
 	msgbox Route201_Text_BarryAfter, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ROUTE201_BARRY, Route201_Movement_PartyLeavesEast
@@ -156,6 +161,9 @@ Route201_EventScript_AfterBattle::
 	setflag FLAG_HIDE_ROUTE201_BARRY
 	setflag FLAG_HIDE_ROUTE201_ASSISTANT
 	setflag FLAG_HIDE_ROUTE201_ROWAN
+	settrainerflag TRAINER_BARRY_1_CHIMCHAR
+	settrainerflag TRAINER_BARRY_1_PIPLUP
+	settrainerflag TRAINER_BARRY_1_TURTWIG
 	setvar VAR_ROUTE201_STATE, 4
 	setflag FLAG_HIDE_ROUTE201_TRAVELER
 	removeobject LOCALID_ROUTE201_TRAVELER
